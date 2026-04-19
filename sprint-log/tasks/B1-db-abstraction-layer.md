@@ -18,8 +18,10 @@ Every DB-touching module in OinkFarm currently uses raw `sqlite3` directly: `sql
 |---|---|---|---|---|---|
 | 1 | FORGE plan published | 🔥 FORGE | PUBLISHED | 18:03 CEST on 19 Apr 2026 | [TASK-B1-plan.md](../../raw-artifacts/forge/plans/TASK-B1-plan.md) |
 | 2 | OinkV audit | 👁️ OinkV | FINDINGS | 22:12 CEST on 19 Apr 2026 | [OINKV-AUDIT-PHASE-B-B1.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-PHASE-B-B1.md) |
-| 3 | Phase 0 proposal drafted | ⚒️ ANVIL | DRAFTED | 22:31 CEST on 19 Apr 2026 | [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) |
-| 4 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 22:34 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) |
+| 3 | Phase 0 proposal drafted | ⚒️ ANVIL | DRAFTED | 23:33 CEST on 19 Apr 2026 | [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) |
+| 4 | Phase 0 review | 🔍 VIGIL | ❌ REVISE | 23:43 CEST on 19 Apr 2026 | [B1-VIGIL-PHASE0-REVIEW.md](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE0-REVIEW.md) |
+| 5 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 22:34 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) |
+| 6 | Phase 0 review (R1) | 🛡️ GUARDIAN | ❌ CHANGES (R1) | 23:43 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW-R2.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) |
 
 ## Key Decisions
 
@@ -33,8 +35,9 @@ _None._
 
 - **FORGE plan:** [TASK-B1-plan.md](../../raw-artifacts/forge/plans/TASK-B1-plan.md) — 13.6 KB
 - **OinkV audit:** [OINKV-AUDIT-PHASE-B-B1.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-PHASE-B-B1.md) — 15.9 KB
-- **ANVIL proposal:** [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) — 11.8 KB
-- **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md)
+- **ANVIL proposal:** [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) — 20.9 KB
+- **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE0-REVIEW.md)
+- **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md)
 
 ## Lessons Learned
 
