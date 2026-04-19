@@ -1,12 +1,13 @@
 # raw-artifacts/anvil/markers/
 
-Merge, ready-for-review, and lifecycle markers. 16 file(s) copied from `/home/oinkv/anvil-workspace`.
+Merge, ready-for-review, and lifecycle markers. 17 file(s) copied from `/home/oinkv/anvil-workspace`.
 
 | File | Size | Last modified |
 |---|---|---|
 | [A1-CANARY-FALLBACK.md](A1-CANARY-FALLBACK.md) | 2.4 KB | 00:34 CEST on 19 Apr 2026 |
 | [A1-MERGED.marker](A1-MERGED.marker) | 2.8 KB | 01:48 CEST on 19 Apr 2026 |
 | [A1-ZERO-EVENT-ROOT-CAUSE.md](A1-ZERO-EVENT-ROOT-CAUSE.md) | 2.7 KB | 00:34 CEST on 19 Apr 2026 |
+| [A10-MERGED.marker](A10-MERGED.marker) | 1.7 KB | 20:29 CEST on 19 Apr 2026 |
 | [A11-MERGED.marker](A11-MERGED.marker) | 2.1 KB | 16:52 CEST on 19 Apr 2026 |
 | [A2-MERGED.marker](A2-MERGED.marker) | 1.4 KB | 02:40 CEST on 19 Apr 2026 |
 | [A3-MERGED.marker](A3-MERGED.marker) | 652 B | 00:06 CEST on 19 Apr 2026 |

@@ -1,0 +1,42 @@
+# A10 MERGED — 20260419T182923Z
+
+**Method:** append-only (INSERT missing trader + 912 imported signals) — drift-preserving
+**Executor:** Hermes cron, autonomous, post-council approval
+**Council:** OinkV ✅ + OinkDB ✅ (GH Issue #136)
+**PR:** https://github.com/QuantisDevelopment/oinkfarm/pull/135
+
+## Why append instead of cp-overwrite
+Test DB frozen at 18:24Z. Current prod had drifted: 3 signals closed (exit_price/is_win set),
+4 status transitions, 76 current_price updates. cp-overwrite would have rolled back live
+trader state. Append-only (zero ID collisions, prod max=1611, imports start=1612) achieves
+identical council-validated end state without rollback.
+
+## Pre-merge
+- Validated backup: /home/m/data/oinkfarm.db.a10-backup-20260419T160056Z
+- Validated backup SHA256: 4693933bd723fe64b56f4b03800a6a639da9110c7c5a4d03e211a46c321e4084 ✅
+- Drift-inclusive backup: /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z
+- Drift backup SHA256: 15175e70d26add8ac1749eb46edbbb4485e83757c758d288a1245179a45d7f84
+
+## Post-merge checks
+- Total signals: 1406 (target 1406)
+- Trader orphans: 0
+- Server orphans: 0
+- NULL remaining_pct: 0
+- NULL sl_type: 0
+- ACTIVE: 77 / PENDING: 10
+
+## Rollback (restores drift state + unwinds merge)
+```bash
+systemctl --user stop oink-sync
+cp /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z /home/m/data/oinkfarm.db
+systemctl --user start oink-sync
+```
+
+## Rollback (restores validated 494-row pre-backup — LOSES drift since 18:24Z)
+```bash
+systemctl --user stop oink-sync
+cp /home/m/data/oinkfarm.db.a10-backup-20260419T160056Z /home/m/data/oinkfarm.db
+systemctl --user start oink-sync
+```
+
+## Next: GUARDIAN canary dispatch
