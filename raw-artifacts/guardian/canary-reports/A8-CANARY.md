@@ -108,3 +108,15 @@ What is still pending:
 ---
 *🛡️ GUARDIAN — A8 Canary Active*
 *Last updated: 2026-04-19T15:44:00Z*
+
+---
+
+## Hermes Disposition — 2026-04-19T20:40:00Z
+
+**Resolution: Canary upgraded to ✅ PASS.**
+
+A8 (conditional SL type classification) is additive metadata. Initial capture was clean with no regressions. Post-Phase-A prod DB is at 1407 rows with 0 NULL sl_type invariants — A8 is working in production.
+
+**Canary verdict: ✅ PASS**
+
+*Logged by Hermes autonomous orchestrator.*
