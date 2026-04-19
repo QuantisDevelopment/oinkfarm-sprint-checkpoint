@@ -582,7 +582,8 @@ def crawl_plans() -> dict[str, list[dict[str, Any]]]:
 # --- Blockers ---
 
 def derive_blockers(agents: list[dict[str, Any]],
-                    cron: list[dict[str, Any]]) -> list[dict[str, Any]]:
+                    cron: list[dict[str, Any]],
+                    tasks: list[dict[str, Any]] | None = None) -> list[dict[str, Any]]:
     out: list[dict[str, Any]] = []
     for a in agents:
         for b in (a.get("heartbeat") or {}).get("blockers", []) or []:
@@ -593,10 +594,28 @@ def derive_blockers(agents: list[dict[str, Any]],
                 "current_task": a["heartbeat"].get("current_task"),
                 "current_phase": a["heartbeat"].get("current_phase"),
             })
+
+    # Build a set of task IDs that are fully resolved (DONE / CANARY PASS)
+    resolved_tasks: set[str] = set()
+    for t in (tasks or []):
+        tid = t.get("id")
+        status = (t.get("status") or "").upper()
+        canary = (t.get("canary_verdict") or "").upper()
+        if tid and (status == "DONE" or (status == "CANARY" and canary == "PASS")):
+            resolved_tasks.add(tid)
+        # Also treat MERGED with canary disposition-PASS as resolved
+        if tid and t.get("merge_commit") and canary == "PASS":
+            resolved_tasks.add(tid)
+
     for entry in cron[:3]:
         if not entry.get("blocker"):
             continue
         raw = entry["blocker"]
+        # Filter: skip blockers that reference a now-resolved task
+        # (e.g., "A10 POST-MERGE CANARY FAIL" is stale after A10 canary PASS disposition)
+        referenced_tasks = set(re.findall(r"\b([AB]\d{1,2})\b", raw))
+        if referenced_tasks and referenced_tasks.issubset(resolved_tasks):
+            continue  # all referenced tasks are resolved → blocker is stale
         cleaned = re.sub(r"^\s*\d+\.\s*", "", raw).replace("**", "").replace("`", "")
         parts = re.split(r"(?<=[.!?])\s+", cleaned)
         summary = next((p for p in parts if len(p) >= 20), cleaned)
@@ -636,7 +655,7 @@ def build(now: datetime | None = None) -> dict[str, Any]:
     agents = [crawl_agent(a, now) for a in AGENTS]
     cron = crawl_cron()
     plans = crawl_plans()
-    blockers = derive_blockers(agents, cron)
+    blockers = derive_blockers(agents, cron, tasks)
 
     wave_progress = []
     for w in WAVES:
