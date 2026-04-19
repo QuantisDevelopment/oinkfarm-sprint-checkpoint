@@ -23,7 +23,8 @@ Every DB-touching module in OinkFarm currently uses raw `sqlite3` directly: `sql
 | 5 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 22:34 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) |
 | 6 | Phase 0 review (R1) | 🛡️ GUARDIAN | ❌ CHANGES (R1) | 23:52 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW-R2.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) |
 | 7 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 00:01 CEST on 20 Apr 2026 | [B1-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/B1-PHASE0-APPROVED.marker) |
-| 8 | Phase 1 review | 🛡️ GUARDIAN | 9.80/10 | 00:34 CEST on 20 Apr 2026 | [B1-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE1-REVIEW.md) |
+| 8 | Phase 1 review | 🔍 VIGIL | 6.40/10 | 00:54 CEST on 20 Apr 2026 | [B1-VIGIL-PHASE1-REVIEW.md](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE1-REVIEW.md) |
+| 9 | Phase 1 review | 🛡️ GUARDIAN | 9.80/10 | 00:34 CEST on 20 Apr 2026 | [B1-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE1-REVIEW.md) |
 
 ## Key Decisions
 
@@ -38,7 +39,7 @@ _None._
 - **FORGE plan:** [TASK-B1-plan.md](../../raw-artifacts/forge/plans/TASK-B1-plan.md) — 13.6 KB
 - **OinkV audit:** [OINKV-AUDIT-PHASE-B-B1.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-PHASE-B-B1.md) — 15.9 KB
 - **ANVIL proposal:** [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) — 20.9 KB
-- **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE0-REVIEW.md)
+- **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE1-REVIEW.md)
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) · [Phase 1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE1-REVIEW.md)
 
 ## Lessons Learned
