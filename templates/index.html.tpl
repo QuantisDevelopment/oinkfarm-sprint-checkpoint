@@ -39,6 +39,15 @@
       </div>
     </div>
   </div>
+  <nav class="topnav" role="navigation" aria-label="Primary">
+    <div class="topnav-inner">
+      <a class="navlink navlink-active" href="#dashboard" data-nav="dashboard">Dashboard</a>
+      <a class="navlink" href="#events" data-nav="events">Events <span class="nav-count mono">{{ recent_events|length }}</span></a>
+      <a class="navlink" href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log/phases" target="_blank" rel="noopener">Phases</a>
+      <a class="navlink" href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log/tasks" target="_blank" rel="noopener">Tasks <span class="nav-count mono">{{ tasks|length }}</span></a>
+      <a class="navlink navlink-ghost" href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </nav>
 </header>
 
 <main class="container">
@@ -75,6 +84,27 @@
   </div>
   {% endfor %}
 </section>
+
+<!-- Recent events --------------------------------------------------------- -->
+{% if recent_events %}
+<section class="recent-events" id="events">
+  <div class="section-head">
+    <h2>Recent events</h2>
+    <a class="mono muted section-more" href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log/events" target="_blank" rel="noopener">full log ↗</a>
+  </div>
+  <ol class="events-feed">
+    {% for e in recent_events[:8] %}
+    <li class="event-row event-{{ e.type|lower }}">
+      <span class="event-emoji" title="{{ e.type }}">{{ e.emoji }}</span>
+      <span class="event-time mono muted">{{ e.ts | tstime }}</span>
+      <span class="event-task mono">{{ e.task }}</span>
+      <span class="event-type mono">{{ e.type }}</span>
+      <span class="event-desc">{{ e.desc }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
 
 <!-- Blockers --------------------------------------------------------------- -->
 <section class="blockers">

@@ -765,9 +765,12 @@ RAW = ROOT / "raw-artifacts"
 SPRINT_LOG = ROOT / "sprint-log"
 
 TASK_SLUGS = {
-    "A1": "signal-events-schema", "A2": "remaining-pct-model",
-    "A3": "auto-filled-at",       "A4": "partially-closed-status",
-    "A5": "confidence-scoring",   "A7": "update-new-detection",
+    "A1": "signal-events-schema",    "A2": "remaining-pct-model",
+    "A3": "auto-filled-at",          "A4": "partially-closed-status",
+    "A5": "confidence-scoring",      "A6": "ghost-closure-flag",
+    "A7": "update-new-detection",    "A8": "conditional-sl-type",
+    "A9": "denomination-multiplier", "A10": "database-merge",
+    "A11": "leverage-source-tracking","B1": "db-abstraction-layer",
 }
 TASK_NAMES = {
     "A1": "signal_events Table + 12 Event Type Instrumentation",
@@ -775,9 +778,34 @@ TASK_NAMES = {
     "A3": "Auto filled_at for MARKET Orders",
     "A4": "PARTIALLY_CLOSED Status for Partial TP Signals",
     "A5": "Parser-Type Confidence Scoring",
+    "A6": "Ghost Closure Confirmation Flag",
     "A7": "UPDATE→NEW Detection (Phantom Trade Prevention)",
+    "A8": "Conditional SL Type Field",
+    "A9": "Denomination Multiplier Table (1000x-prefixed symbols)",
+    "A10": "Database Merge (test → prod, council-approved)",
+    "A11": "Leverage Source Tracking",
+    "B1": "Database Abstraction Layer (sqlite3 → oink_db.py)",
 }
-TASK_WAVE = {"A1": 1, "A2": 1, "A3": 1, "A4": 2, "A5": 2, "A7": 2}
+TASK_WAVE = {"A1": 1, "A2": 1, "A3": 1,
+             "A4": 2, "A5": 2, "A7": 2,
+             "A6": 3, "A8": 3, "A9": 3, "A11": 3,
+             "A10": 4, "B1": "B1"}
+TASK_ONELINERS = {
+    "A6": "Emit a `GHOST_CLOSURE` lifecycle event + additive note tag "
+          "whenever the reconciler soft-closes a signal on `board_absent`; "
+          "purely additive, no financial field writes.",
+    "A8": "Add a `sl_type` column (`NONE` / `NUMERIC` / `MANUAL` / `BE` / "
+          "`CONDITIONAL`) to classify stop-loss origin at INSERT-time.",
+    "A9": "Normalize entry + SL prices for `1000*USDT` symbols by dividing "
+          "by 1000 at INSERT, and tag with `[A9: denomination_adjusted /1000]`.",
+    "A10": "Merge 912 test-DB signals into production with council-approved "
+           "append-only strategy, preserving drift on live rows.",
+    "A11": "Persist a `leverage_source` column (`EXPLICIT` / `DEFAULT` / NULL) "
+           "alongside the leverage value at micro-gate INSERT.",
+    "B1": "Thin wrapper module `oink_db.py` that makes every sqlite3 caller "
+          "backend-agnostic so Phase B can swap in PostgreSQL with zero "
+          "behaviour change.",
+}
 STATUS_BADGE = {
     "DONE": "✅ DONE", "CANARY": "🧪 CANARY", "PR_REVIEW": "👀 PR REVIEW",
     "CODE": "⚙️ CODING", "PROPOSAL_REVIEW": "📝 PROPOSAL REVIEW",
@@ -894,7 +922,8 @@ def emit_raw_artifacts(data: dict[str, Any]) -> dict[str, int]:
 # ---- Sprint-log helpers ------------------------------------------------------
 
 def _oneliner_from_plan(p: Path | None, task: str) -> str:
-    fallback = f"{TASK_NAMES.get(task, task)} — see plan for details."
+    fallback = TASK_ONELINERS.get(
+        task, f"{TASK_NAMES.get(task, task)} — see plan for details.")
     if not p or not p.exists():
         return fallback
     text = safe_read(p, limit=16000)
@@ -917,7 +946,11 @@ def _oneliner_from_plan(p: Path | None, task: str) -> str:
 
 def _find_oinkv_audit(task: str) -> Path | None:
     plans = FORGE / "plans"
-    cands = [plans / f"OINKV-AUDIT-WAVE2-{task}.md"]
+    cands = [
+        plans / f"OINKV-AUDIT-WAVE2-{task}.md",
+        plans / f"OINKV-AUDIT-WAVE3-{task}.md",
+        plans / f"OINKV-AUDIT-PHASE-B-{task}.md",
+    ]
     if task in ("A1", "A2", "A3"):
         cands.append(plans / "OINKV-AUDIT.md")
     for c in cands:
@@ -1139,20 +1172,82 @@ def _distill_lessons(tid: str, meta: dict[str, Any],
     if v > 1:
         out.append(f"- **VIGIL Phase 1 needed {v} rounds** — initial score "
                    f"below the tier threshold triggered fix-and-rescore loop.")
-    if merged_text and "CRITICAL" in merged_text and tid in ("A1","A2","A4","A7"):
+    if merged_text and "CRITICAL" in merged_text and tid in (
+            "A1", "A2", "A4", "A7", "A9", "A10"):
         out.append("- **Auto-escalation to 🔴 CRITICAL** via Financial Hotpath "
                    "rule — Phase 1 used the stricter ≥9.5 threshold.")
-    if tid == "A4":
-        out.append("- **Same-cycle closure path** (remaining_pct → 0 on TP-all-hit)"
-                   " avoided PARTIALLY_CLOSED limbo via one atomic UPDATE carrying"
-                   " `final_roi` + `closed_at` + `close_source`.")
-        out.append("- **E5 (`_calculate_pnl` filter)** was the non-obvious "
-                   "blast-radius save — GUARDIAN's R0 flagged that E3 would "
-                   "fetch PARTIALLY_CLOSED rows but PnL would silently be `None`.")
+    task_lessons = {
+        "A4": [
+            "- **Same-cycle closure path** (remaining_pct → 0 on TP-all-hit) "
+            "avoided PARTIALLY_CLOSED limbo via one atomic UPDATE carrying "
+            "`final_roi` + `closed_at` + `close_source`.",
+            "- **E5 (`_calculate_pnl` filter)** was the non-obvious "
+            "blast-radius save — GUARDIAN's R0 flagged that E3 would "
+            "fetch PARTIALLY_CLOSED rows but PnL would silently be `None`.",
+        ],
+        "A6": [
+            "- **Additive-metadata-only discipline** kept A6 out of the "
+            "Financial Hotpath registry — no financial-field writes, no DDL, "
+            "no close_source mutation.",
+            "- **`changes()` coupling** was the elegant TOCTOU fix: gate the "
+            "note UPDATE on the actual rowcount of the INSERT within the "
+            "same connection/transaction.",
+            "- **Entry-price discriminator with 5% tolerance** (mirroring A7) "
+            "handles the multi-ACTIVE-signal-per-symbol edge case cleanly.",
+        ],
+        "A8": [
+            "- **Additive DDL first, code deploy second** — migration SQL "
+            "applied before the code that reads it, so a rollback is a "
+            "simple code revert (the column is nullable).",
+            "- **CONDITIONAL classification** distinguishes Mike's "
+            "context-dependent SL from explicit numeric SLs without "
+            "breaking existing NUMERIC/MANUAL semantics.",
+            "- **Deferred dry_run_insert parity** (Hermes concern #2) as "
+            "tech debt — low risk, not a Phase 1 blocker.",
+        ],
+        "A9": [
+            "- **Normalize early, dedup after** — entry-price normalization "
+            "had to move to §3b (before all guards) so the snowflake dedup "
+            "probe at §4 + §4b matched stored values (GUARDIAN P2 fix).",
+            "- **SL normalization in §8a-A9** (before B11 deviation guard) "
+            "prevented valid 1000x signals with SL from being rejected by "
+            "the SL_DEVIATION guard (GUARDIAN P1 fix).",
+            "- **R2 delta review** converged all three reviewers (VIGIL "
+            "9.40 · GUARDIAN 9.80 · Hermes LGTM) after 2 rounds.",
+            "- **INSERT-time-only scope** deliberately left UPDATE and "
+            "CLOSURE normalization for A9.1 follow-up — avoided blast-"
+            "radius creep.",
+        ],
+        "A10": [
+            "- **Append-only beat cp-overwrite** — validated backup at "
+            "18:24Z had drifted (3 signals closed, 76 price updates) by "
+            "merge time; append-only preserved live trader state while "
+            "achieving identical council-validated end state.",
+            "- **Council governance** (OinkV + OinkDB ✅ via GH Issue #136) "
+            "was the first non-standard approval path in the sprint — "
+            "proved the Hermes+2-council pattern for Phase D gating.",
+            "- **Zero ID collisions by design** (prod max=1611, imports "
+            "start=1612) made the append-only method SQL-safe without a "
+            "preliminary ID rewrite.",
+            "- **Drift-inclusive backup** (`oinkfarm.db.a10-predrift-backup-"
+            "20260419T182923Z`) gave a 2-step rollback: drift state OR "
+            "pre-merge 494-row state.",
+        ],
+        "A11": [
+            "- **🟢 LIGHTWEIGHT path** skipped Phase 0 and GUARDIAN review "
+            "per SOUL.md §0 — shipped in one round with VIGIL PASS only.",
+            "- **Backfill `leverage IS NOT NULL → EXPLICIT`** cleanly "
+            "populated the new column for the 98 non-NULL historical rows.",
+            "- **ANVIL spot-check** (10 organic INSERTs post-deploy) "
+            "substituted for GUARDIAN canary on LIGHTWEIGHT tier.",
+        ],
+    }
+    if tid in task_lessons:
+        out.extend(task_lessons[tid])
     if meta.get("backfill"):
         out.append("- **Backfill pre-SELECT + abort-if-rowcount guard** caught "
                    "a data-quality anomaly without failing the migration.")
-    return out[:6] if out else ["_(Lessons distilled at wave close.)_"]
+    return out[:7] if out else ["_(Lessons distilled at wave close.)_"]
 
 def _render_task_page(task: dict[str, Any]) -> str:
     tid = task["id"]
@@ -1197,6 +1292,10 @@ def _render_task_page(task: dict[str, Any]) -> str:
         L.extend(f"- {d}" for d in decisions)
     elif status in ("PLANNED", "NOT_STARTED"):
         L.append("_(To be distilled once Phase 0 proposal is drafted.)_")
+    elif status == "DONE":
+        L.append("_(No structured decision list extractable from merge "
+                 "artifacts — see the MERGED marker + FORGE plan for "
+                 "decision trail.)_")
     else:
         L.append("_(Pending — will be distilled after merge.)_")
     L += ["", "## Deferrals (Follow-up Tasks)", ""]
@@ -1267,20 +1366,46 @@ def _render_task_page(task: dict[str, Any]) -> str:
           "[All raw artifacts](../../raw-artifacts/)*"]
     return "\n".join(L) + "\n"
 
-def _render_wave_page(n: int, tasks: list[dict[str, Any]]) -> str:
-    focus = {1: "Core schema & formula primitives — events, remaining_pct, "
-                "auto filled_at.",
-             2: "Lifecycle accuracy & phantom-trade prevention — partial "
-                "closes, confidence scoring, UPDATE→NEW dedup."}.get(n, "—")
+WAVE_FOCUS = {
+    1:   "Core schema & formula primitives — events, remaining_pct, auto filled_at.",
+    2:   "Lifecycle accuracy & phantom-trade prevention — partial closes, "
+         "confidence scoring, UPDATE→NEW dedup.",
+    3:   "Metadata enrichment & ghost closure — conditional SL classification, "
+         "denomination multiplier, leverage source, ghost-closure flag.",
+    4:   "Database merge — test → prod (912 imported signals), council-approved "
+         "append-only strategy.",
+    "B1":"Database abstraction layer (`oink_db.py`) — backend-agnostic wrapper "
+         "so Phase B can swap in PostgreSQL with zero behaviour change.",
+}
+WAVE_TASKS = {
+    1:    ["A1", "A2", "A3"],
+    2:    ["A4", "A7", "A5"],
+    3:    ["A6", "A8", "A9", "A11"],
+    4:    ["A10"],
+    "B1": ["B1"],
+}
+WAVE_ORDER = [1, 2, 3, 4, "B1"]
+
+def _wave_label(wid: Any) -> str:
+    return f"Wave {wid} (Phase A)" if isinstance(wid, int) else f"Wave {wid} (Phase B)"
+
+def _wave_slug(wid: Any) -> str:
+    return f"wave-{wid}" if isinstance(wid, int) else f"wave-{str(wid).lower()}"
+
+def _render_wave_page(wid: Any, tasks: list[dict[str, Any]]) -> str:
+    focus = WAVE_FOCUS.get(wid, "—")
     done = sum(1 for t in tasks if t["status"] == "DONE")
     in_flight = sum(1 for t in tasks
                     if t["status"] not in ("DONE", "PLANNED", "NOT_STARTED"))
     planned = sum(1 for t in tasks
                   if t["status"] in ("PLANNED", "NOT_STARTED"))
+    status_line = (f"**Status:** {done}/{len(tasks)} shipped · {in_flight} "
+                   f"in flight · {planned} planned")
+    if wid == "B1":
+        status_line = f"**Status:** 📝 IN-FLIGHT — B1 Phase 0 proposal drafted"
 
-    L = [f"# Wave {n} Retrospective\n", f"**Focus:** {focus}\n",
-         f"**Status:** {done}/{len(tasks)} shipped · {in_flight} in flight · "
-         f"{planned} planned\n", "## Tasks\n",
+    L = [f"# {_wave_label(wid)} Retrospective\n", f"**Focus:** {focus}\n",
+         status_line + "\n", "## Tasks\n",
          "| Task | Name | Tier | Status | Canary | Merge commit |",
          "|---|---|---|---|---|---|"]
     for t in tasks:
@@ -1296,14 +1421,15 @@ def _render_wave_page(n: int, tasks: list[dict[str, Any]]) -> str:
                  f"{t['tier_emoji']} {t['tier']} | "
                  f"{STATUS_BADGE.get(t['status'], t['status'])} | "
                  f"{t['canary']['verdict'] or '—'} | {commit} |")
-    # Timing
+
+    # Timing — first FORGE plan → last merge/canary
     L += ["", "## Timing", ""]
-    times = [(t["timeline"][0]["mtime"], t["timeline"][-1]["mtime"])
-             for t in tasks if t.get("timeline")]
-    if times:
+    starts = [t["timeline"][0]["mtime"] for t in tasks
+              if t.get("timeline") and t["timeline"][0].get("mtime")]
+    ends = [t["timeline"][-1]["mtime"] for t in tasks
+            if t.get("timeline") and t["timeline"][-1].get("mtime")]
+    if starts and ends:
         try:
-            starts = [x[0] for x in times if x[0]]
-            ends = [x[1] for x in times if x[1]]
             fd = datetime.fromisoformat(min(starts).replace("Z", "+00:00"))
             ld = datetime.fromisoformat(max(ends).replace("Z", "+00:00"))
             L += [f"- Wave start: "
@@ -1313,10 +1439,14 @@ def _render_wave_page(n: int, tasks: list[dict[str, Any]]) -> str:
                   f"- Elapsed: {(ld - fd).total_seconds() / 3600:.1f} h"]
         except Exception:
             L.append("- (Timing data unavailable.)")
+    else:
+        L.append("- (No timeline events yet.)")
+
     L += ["", "## Canary Outcomes", ""]
-    canaries = [f"- **{t['id']}**: {t['canary']['verdict']}"
+    canaries = [f"- **{t['id']}**: {CANARY_BADGE.get(t['canary']['verdict'], t['canary']['verdict'])}"
                 for t in tasks if t["canary"]["verdict"]]
     L.extend(canaries or ["_No canary verdicts yet._"])
+
     L += ["", "## Deferred Follow-ups", ""]
     fu_lines = []
     for t in tasks:
@@ -1325,51 +1455,579 @@ def _render_wave_page(n: int, tasks: list[dict[str, Any]]) -> str:
                             f"({_raw_link('anvil/followups', fu.name)})"
                             f" — {_extract_title(fu)}")
     L.extend(fu_lines or ["_None._"])
+
     L += ["", "## Lessons Learned", ""]
-    L.append("- Wave complete — see individual task pages for distilled lessons."
-             if all(t["status"] == "DONE" for t in tasks)
-             else "_(To be filled at wave close.)_")
+    wave_lessons = {
+        1: ["- **FORGE → ANVIL → VIGIL/GUARDIAN → Hermes** pattern cleared "
+            "three tasks in one overnight push (22:00–04:42 CEST).",
+            "- **A1 zero-event root cause** caught a silent production gap — "
+            "the 12 event types weren't firing at all. Canary fallback saved "
+            "the day.",
+            "- **A2 blended-PnL fix** landed first because every downstream "
+            "task depends on `remaining_pct` arithmetic being correct."],
+        2: ["- **Same-cycle closure** (A4) is the canonical example of "
+            "avoiding partial-state limbo — atomic UPDATE carries the whole "
+            "transition.",
+            "- **A7 UPDATE→NEW detection** uses the same entry-price "
+            "discriminator (5% tolerance) that A6 later reused for ghost "
+            "closure — good pattern emerging.",
+            "- **A5 confidence scoring** came out of Phase 0 clean — "
+            "additive column + INSERT-time logic, zero blast radius."],
+        3: ["- **Four tasks shipped in one wave** (A6, A8, A9, A11) without "
+            "stepping on each other — tier discipline (🟡 vs 🟢) kept GUARDIAN "
+            "load focused on A6/A8/A9.",
+            "- **A9's 2-round convergence** was the most complex — entry "
+            "normalization had to move to §3b AND the dedup probe had to "
+            "follow suit before GUARDIAN P1/P2 cleared.",
+            "- **A11 LIGHTWEIGHT path** proved the 🟢 lane: VIGIL-only, no "
+            "GUARDIAN, no canary, ANVIL spot-check — shipped cleanly in 1 "
+            "round."],
+        4: ["- **Council governance first run** — OinkV + OinkDB co-signed "
+            "via GH Issue #136. Pattern now reusable for Phase D gating.",
+            "- **Drift-aware merge** — the validated test backup had drifted "
+            "by merge time; append-only preserved the live trader state "
+            "without rollback.",
+            "- **Post-merge invariants clean** — 1406 signals, 0 orphans, 0 "
+            "NULL remaining_pct, 0 NULL sl_type. Production truth restored."],
+        "B1": ["- **Phase 0 in flight** — B1 proposal drafted and ready for "
+               "parallel VIGIL + GUARDIAN review. Once B1 lands, every DB-"
+               "touching module becomes backend-agnostic.",
+               "- **Intentionally minimal wrapper** — ~200-300 LOC, preserves "
+               "all SQL strings unchanged, zero behavioural changes. The "
+               "PostgreSQL migration (B2) layers on top.",
+               "- **Test fixtures deliberately untouched** — still use "
+               "`sqlite3.connect(\":memory:\")`. Test migration is a B2 "
+               "concern, not a B1 one."],
+    }
+    if wid in wave_lessons:
+        L.extend(wave_lessons[wid])
+    elif all(t["status"] == "DONE" for t in tasks):
+        L.append("- Wave complete — see individual task pages for distilled lessons.")
+    else:
+        L.append("_(To be filled at wave close.)_")
+
     L += ["", "---", "",
           "*[Sprint log index](../README.md) · "
           "[Live dashboard](https://quantisdevelopment.github.io/"
           "oinkfarm-sprint-checkpoint/)*"]
     return "\n".join(L) + "\n"
 
+# ---- Phase pages -------------------------------------------------------------
+
+def _render_phase_a(data: dict[str, Any]) -> str:
+    by_id = {t["id"]: t for t in data["tasks"]}
+    phase_a_tasks = [by_id[t] for t in [
+        "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11"
+    ] if t in by_id]
+    done = sum(1 for t in phase_a_tasks if t["status"] == "DONE")
+
+    # Collect phase start/end across all tasks
+    starts, ends = [], []
+    for t in phase_a_tasks:
+        if t.get("timeline"):
+            if t["timeline"][0].get("mtime"): starts.append(t["timeline"][0]["mtime"])
+            if t["timeline"][-1].get("mtime"): ends.append(t["timeline"][-1]["mtime"])
+
+    start_str = end_str = elapsed_str = "—"
+    if starts and ends:
+        try:
+            fd = datetime.fromisoformat(min(starts).replace("Z", "+00:00"))
+            ld = datetime.fromisoformat(max(ends).replace("Z", "+00:00"))
+            start_str = fd.astimezone(CEST).strftime("%H:%M CEST on %d %b %Y")
+            end_str = ld.astimezone(CEST).strftime("%H:%M CEST on %d %b %Y")
+            elapsed_str = f"{(ld - fd).total_seconds() / 3600:.1f} h wall-clock"
+        except Exception:
+            pass
+
+    L = [
+        "# Phase A — Data Truth — Complete Retrospective\n",
+        f"**Status:** ✅ COMPLETE — {done}/11 tasks shipped, canaries PASS "
+        "across the board  ",
+        f"**Started:** {start_str}  ",
+        f"**Finished:** {end_str}  ",
+        f"**Elapsed:** {elapsed_str}  ",
+        "**Repos touched:** `oinkfarm` · `oink-sync` · `signal-gateway`  ",
+        "**PRs merged:** 10 across 3 repos\n",
+        "## Goal\n",
+        "> Fix signal-data correctness on the SQLite foundation before any "
+        "infrastructure migration.\n",
+        "Phase A is the **data-truth gate** in the Arbiter-Oink HEAVY HYBRID "
+        "roadmap. Every downstream phase (B: infrastructure, C: observability, "
+        "D: algo) assumes the signal-data layer is correct. Phase A closed that "
+        "assumption.\n",
+        "## Before / After Metrics\n",
+        "| Metric | Before Phase A | After Phase A (prod) | Source |",
+        "|---|---|---|---|",
+        "| Signals in prod DB | ~495 | **1,407** | A10 merge (912 imported) |",
+        "| NULL `remaining_pct` | many | **0** | A10 invariant check |",
+        "| NULL `sl_type` | n/a (column didn't exist) | **0** | A8 backfill |",
+        "| Orphan signals (no trader) | 1 | **0** | A10 merge inserts missing trader |",
+        "| Server orphans | >0 | **0** | A10 invariant check |",
+        "| `signal_events` table | ❌ absent | ✅ **12 event types** | A1 |",
+        "| `remaining_pct` accuracy | blended PnL wrong | ✅ **correct** | A2 |",
+        "| `filled_at` for MARKET orders | sparse NULLs | ✅ **auto-populated** | A3 |",
+        "| `PARTIALLY_CLOSED` lifecycle | ❌ no limbo-free close path | ✅ **same-cycle closure** | A4 |",
+        "| Parser confidence scoring | absent | ✅ **regex/board/LLM weights** | A5 |",
+        "| Ghost closure audit trail | silent | ✅ **`GHOST_CLOSURE` event + note tag** | A6 |",
+        "| Phantom-trade UPDATE→NEW detection | absent | ✅ **dedup w/ 5% tolerance** | A7 |",
+        "| SL classification | absent | ✅ **`sl_type` column** | A8 |",
+        "| 1000x-prefixed symbols | un-normalized | ✅ **÷1000 at INSERT** | A9 |",
+        "| Leverage provenance | absent | ✅ **`leverage_source` column** | A11 |",
+        "\n",
+        "## Wave-by-Wave Breakdown\n",
+        "| Wave | Focus | Tasks | Elapsed | Outcome |",
+        "|---|---|---|---|---|",
+    ]
+    for wid in [1, 2, 3, 4]:
+        wave_tids = WAVE_TASKS[wid]
+        wave_tasks = [by_id[t] for t in wave_tids if t in by_id]
+        wstarts = [t["timeline"][0]["mtime"] for t in wave_tasks
+                   if t.get("timeline") and t["timeline"][0].get("mtime")]
+        wends = [t["timeline"][-1]["mtime"] for t in wave_tasks
+                 if t.get("timeline") and t["timeline"][-1].get("mtime")]
+        elapsed = "—"
+        if wstarts and wends:
+            try:
+                fd = datetime.fromisoformat(min(wstarts).replace("Z", "+00:00"))
+                ld = datetime.fromisoformat(max(wends).replace("Z", "+00:00"))
+                elapsed = f"{(ld - fd).total_seconds() / 3600:.1f} h"
+            except Exception:
+                pass
+        wdone = sum(1 for t in wave_tasks if t["status"] == "DONE")
+        task_links = " · ".join(
+            f"[{tid}](../tasks/{tid}-{TASK_SLUGS.get(tid, tid.lower())}.md)"
+            for tid in wave_tids)
+        L.append(f"| [Wave {wid}](../waves/wave-{wid}.md) | "
+                 f"{WAVE_FOCUS.get(wid, '—').split('—')[0].strip()} | "
+                 f"{task_links} | {elapsed} | {wdone}/{len(wave_tids)} shipped |")
+
+    L += ["\n## All 11 Tasks at a Glance\n",
+          "| Task | Name | Tier | Wave | Status | Canary | Merge commit |",
+          "|---|---|---|---|---|---|---|"]
+    for tid in ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11"]:
+        t = by_id.get(tid)
+        if not t: continue
+        slug = TASK_SLUGS.get(tid, tid.lower())
+        commit = "—"
+        if t["prs"] and t["prs"][0].get("merge_commit"):
+            c = t["prs"][0]["merge_commit"]
+            commit = (f"[`{c[:7]}`]"
+                      f"({t['prs'][0].get('commit_url') or t['prs'][0]['pr_url']})")
+        L.append(f"| [{tid}](../tasks/{tid}-{slug}.md) | "
+                 f"{TASK_NAMES.get(tid, tid)} | "
+                 f"{t['tier_emoji']} {t['tier']} | "
+                 f"{TASK_WAVE.get(tid, '—')} | "
+                 f"{STATUS_BADGE.get(t['status'], t['status'])} | "
+                 f"{t['canary']['verdict'] or '—'} | {commit} |")
+
+    L += ["\n## KPIs Improved\n",
+          "- **Data correctness:** blended PnL now arithmetically correct on "
+          "partial closes (A2 + A4).",
+          "- **Event coverage:** 12 lifecycle event types instrumented "
+          "(A1) — foundation for W1-W4 observability.",
+          "- **Provenance:** parser confidence (A5), leverage source (A11), "
+          "SL type (A8) all captured at INSERT-time.",
+          "- **Phantom-trade prevention:** UPDATE→NEW dedup (A7) + ghost-"
+          "closure flag (A6) close the silent-dup surface.",
+          "- **Denomination correctness:** 1000x-prefixed symbol normalization "
+          "(A9) fixes entry/SL for a ~7% subset of signals.",
+          "- **Production truth:** 912 test-DB signals merged to prod (A10) — "
+          "1,407 rows, 0 NULL invariants, 0 orphans.\n",
+          "## Governance Firsts\n",
+          "- **A10 council governance** (OinkV + OinkDB co-signed via GH "
+          "Issue #136) — first non-standard approval path; pattern now "
+          "reusable for Phase D gating.",
+          "- **VIGIL auto-escalation** (A9 🟢 → 🟡) triggered by Financial "
+          "Hotpath registry — proved the tier-discipline system works "
+          "without human intervention.",
+          "- **Hermes parallel review** (LGTM / CONCERNS / BLOCK) ran on "
+          "every 🟡/🔴 merge — caught 2 non-blocking concerns on A8 and "
+          "1 deferred on A9.\n",
+          "## Deferred to Follow-up (A{N}-F{M})\n"]
+    fu_lines = []
+    for tid in ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11"]:
+        for fu in _followups_for(tid):
+            fu_lines.append(f"- [{fu.name}]"
+                            f"({_raw_link('anvil/followups', fu.name)})"
+                            f" — {_extract_title(fu)}")
+    L.extend(fu_lines or ["_No explicit follow-ups filed; Hermes concerns on A8 "
+                          "(BE→MANUAL, dry_run_insert parity, test schema "
+                          "drift) and A9 (UPDATE/CLOSURE paths via A9.1) are "
+                          "tracked in the respective MERGED markers._"])
+    L += ["\n## What Phase A Did NOT Do\n",
+          "- Did **not** touch infrastructure: SQLite remains, monolith "
+          "remains, no Redis, no PostgreSQL.",
+          "- Did **not** introduce new data flows. All changes are additive "
+          "to existing pipelines.",
+          "- Did **not** enable Phase D (algo/execution). That is gated on "
+          "Phase B data-layer maturity + Phase C observability.\n",
+          "## Next\n",
+          "→ [Phase B](phase-b.md) — PostgreSQL + decomposed services. B1 "
+          "(database abstraction layer) is in flight.\n",
+          "---\n",
+          "*[Sprint log index](../README.md) · [Live dashboard]"
+          "(https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)*"]
+    return "\n".join(L) + "\n"
+
+
+def _load_static_template(name: str, **subs: str) -> str:
+    """Load a static sprint-log template and apply simple {{ var }} subs."""
+    p = TEMPLATES / "sprint-log" / name
+    text = safe_read(p)
+    for k, v in subs.items():
+        text = text.replace("{{ " + k + " }}", v)
+    return text or f"# {name}\n\n_(template missing)_\n"
+
+
+def _render_phase_b(data: dict[str, Any]) -> str:
+    by_id = {t["id"]: t for t in data["tasks"]}
+    b1 = by_id.get("B1")
+    b1_status = STATUS_BADGE.get(b1["status"], b1["status"]) if b1 else "—"
+    return _load_static_template("phase-b.md.tpl", b1_status=b1_status)
+
+
+def _render_phase_c() -> str:
+    return _load_static_template("phase-c.md.tpl")
+
+
+def _render_heavy_hybrid() -> str:
+    return _load_static_template("heavy-hybrid.md.tpl")
+
+
+# ---- Event log ---------------------------------------------------------------
+
+EVENT_META = {
+    "PLAN_PUBLISHED":  {"emoji": "🔥", "actor": "FORGE"},
+    "AUDIT_COMPLETE":  {"emoji": "👁️", "actor": "OinkV"},
+    "PROPOSAL_DRAFTED":{"emoji": "⚒️", "actor": "ANVIL"},
+    "VIGIL_VERDICT":   {"emoji": "🔍", "actor": "VIGIL"},
+    "GUARDIAN_VERDICT":{"emoji": "🛡️", "actor": "GUARDIAN"},
+    "HERMES_REVIEW":   {"emoji": "🪽", "actor": "Hermes"},
+    "MERGED":          {"emoji": "🚀", "actor": "ANVIL"},
+    "CANARY_PASS":     {"emoji": "✅", "actor": "GUARDIAN"},
+    "CANARY_FAIL":     {"emoji": "❌", "actor": "GUARDIAN"},
+    "CANARY_PENDING":  {"emoji": "⏳", "actor": "GUARDIAN"},
+    "DECISION":        {"emoji": "🧭", "actor": "Hermes"},
+    "AUTHORITY":       {"emoji": "🔓", "actor": "Mike"},
+}
+
+# Hard-coded notable events that aren't extractable from file mtimes
+CURATED_EVENTS: list[tuple[str, str, str, str, str | None]] = [
+    # (iso_utc, event_type, task_id_or_dash, description, relative_link)
+    ("2026-04-18T20:00:00+00:00", "AUTHORITY", "—",
+     "Mike grants Hermes \"full authority, push till done\" — enables "
+     "autonomous decision-making on Q-HH-1..6 without blocking review cycles.",
+     None),
+    ("2026-04-19T18:05:00+00:00", "DECISION", "—",
+     "Q-HH-1: Redis same-server initially — lowest-friction start, scale-out "
+     "deferred until QPS > 5k or RAM pressure.",
+     "../phases/heavy-hybrid.md"),
+    ("2026-04-19T18:06:00+00:00", "DECISION", "—",
+     "Q-HH-2: 48h retention + AOF everysec — covers 24h canary windows + "
+     "1 day replay; AOF bounds data loss to <1s.",
+     "../phases/heavy-hybrid.md"),
+    ("2026-04-19T18:07:00+00:00", "DECISION", "—",
+     "Q-HH-3: Docker Compose single-host — matches Redis \"same server\" "
+     "choice; multi-host prep deferred to B13+.",
+     "../phases/heavy-hybrid.md"),
+    ("2026-04-19T18:08:00+00:00", "DECISION", "B9",
+     "Q-HH-4: W1 enforcement at DB level (REVOKE UPDATE on origin table) — "
+     "stronger than application-level guard.",
+     "../phases/heavy-hybrid.md"),
+    ("2026-04-19T18:09:00+00:00", "DECISION", "C2",
+     "Q-HH-5: Confidence routing = soft flag in Phase B, hard reject in "
+     "Phase C — Phase C has 30d KPI history to set thresholds safely.",
+     "../phases/heavy-hybrid.md"),
+    ("2026-04-19T18:10:00+00:00", "DECISION", "—",
+     "Q-HH-6: Phase D gate = Hermes + 2-council (OinkV + GUARDIAN) — "
+     "mirrors A10 council pattern (OinkV + OinkDB) which already shipped.",
+     "../phases/heavy-hybrid.md"),
+    ("2026-04-19T18:24:00+00:00", "AUTHORITY", "A10",
+     "Mike approves A10 council-gated merge after OinkV + OinkDB co-sign "
+     "via GH Issue #136.",
+     "../tasks/A10-database-merge.md"),
+]
+
+
+def _event_desc_merged(task_id: str, marker: Path) -> str:
+    txt = safe_read(marker, limit=3000)
+    prs = parse_merged_marker(txt).get("prs") or []
+    if prs:
+        p = prs[0]
+        repo = p.get("repo") or TASK_REPO_HINT.get(task_id, "repo")
+        num = p.get("number")
+        sha = (p.get("merge_commit") or "")[:7]
+        return (f"Merged to `{repo}` via PR #{num}"
+                f"{f' (@{sha})' if sha else ''}.")
+    return f"Merge marker published for {task_id}."
+
+
+def _event_desc_review(task_id: str, agent: str, path: Path) -> str:
+    txt = safe_read(path, limit=4000)
+    score = extract_score(txt)
+    verdict = extract_verdict(txt) or "verdict"
+    phase = ("Phase 0" if "PHASE0" in path.name.upper()
+             else "Phase 1" if "PHASE1" in path.name.upper()
+             else "review")
+    rn = ""
+    rm = re.search(r"-R(\d+)-", path.name)
+    if rm:
+        rn = f" R{rm.group(1)}"
+    if score is not None:
+        return (f"{agent} {phase}{rn} {verdict} — "
+                f"**{score:.2f}/10** on `{task_id}`.")
+    return f"{agent} {phase}{rn} {verdict} on `{task_id}`."
+
+
+def _event_desc_hermes(task_id: str, path: Path) -> str:
+    v = extract_verdict(safe_read(path, limit=4000)) or "LGTM"
+    rn = ""
+    rm = re.search(r"-R(\d+)\.md$", path.name)
+    if rm:
+        rn = f" R{rm.group(1)}"
+    return f"Hermes parallel review{rn} — **{v}** on `{task_id}`."
+
+
+def _event_desc_canary(task_id: str, path: Path) -> str:
+    v = extract_canary_verdict(safe_read(path)) or "PENDING"
+    return f"GUARDIAN canary {v} on `{task_id}` (first 10 signals post-deploy)."
+
+
+def _collect_events(data: dict[str, Any]) -> list[dict[str, Any]]:
+    """Gather every significant sprint event as a flat list of dicts."""
+    events: list[dict[str, Any]] = []
+    by_id = {t["id"]: t for t in data["tasks"]}
+
+    for tid in TASKS:
+        t = by_id.get(tid)
+        if not t: continue
+        art = {k: Path(v) for k, v in t.get("artifacts", {}).items()}
+
+        # Plan
+        if "forge_plan" in art:
+            p = art["forge_plan"]
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": "PLAN_PUBLISHED", "task": tid,
+                "desc": f"FORGE plan published — {TASK_NAMES.get(tid, tid)}.",
+                "link": _raw_link("forge/plans", p.name),
+            })
+
+        # OinkV audit
+        audit = _find_oinkv_audit(tid)
+        if audit:
+            events.append({
+                "ts": iso(safe_mtime(audit)) or "",
+                "type": "AUDIT_COMPLETE", "task": tid,
+                "desc": f"OinkV audit published for `{tid}` plan.",
+                "link": _raw_link("forge/plans", audit.name),
+            })
+
+        # Proposal
+        if "proposal" in art:
+            p = art["proposal"]
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": "PROPOSAL_DRAFTED", "task": tid,
+                "desc": f"ANVIL Phase 0 proposal drafted for `{tid}`.",
+                "link": _raw_link("anvil/proposals", p.name),
+            })
+
+        # VIGIL reviews (phase 0 + all phase 1 rounds)
+        vigil_paths: list[Path] = []
+        if "vigil_phase0" in art: vigil_paths.append(art["vigil_phase0"])
+        if "vigil_phase1" in art: vigil_paths.append(art["vigil_phase1"])
+        for rn in (1, 2, 3):
+            rp = VIGIL / "reviews" / f"{tid}-VIGIL-PHASE1-R{rn}-REVIEW.md"
+            if rp.exists() and rp not in vigil_paths:
+                vigil_paths.append(rp)
+        for p in vigil_paths:
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": "VIGIL_VERDICT", "task": tid,
+                "desc": _event_desc_review(tid, "VIGIL", p),
+                "link": _raw_link("vigil/reviews", p.name),
+            })
+
+        # GUARDIAN reviews (all rounds)
+        guardian_paths: list[Path] = []
+        for rf in _find_review_revisions(GUARDIAN / "reviews", tid, "0", "GUARDIAN"):
+            guardian_paths.append(rf)
+        if "guardian_phase1" in art:
+            guardian_paths.append(art["guardian_phase1"])
+        for p in guardian_paths:
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": "GUARDIAN_VERDICT", "task": tid,
+                "desc": _event_desc_review(tid, "GUARDIAN", p),
+                "link": _raw_link("guardian/reviews", p.name),
+            })
+
+        # Hermes reviews (including -R2 etc.)
+        hermes_paths: list[Path] = []
+        if "hermes" in art: hermes_paths.append(art["hermes"])
+        for p in HERMES_WS.glob(f"{tid}-HERMES-REVIEW-R*.md"):
+            if p not in hermes_paths: hermes_paths.append(p)
+        for p in hermes_paths:
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": "HERMES_REVIEW", "task": tid,
+                "desc": _event_desc_hermes(tid, p),
+                "link": _raw_link("hermes", p.name),
+            })
+
+        # Merged
+        if "merged" in art:
+            p = art["merged"]
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": "MERGED", "task": tid,
+                "desc": _event_desc_merged(tid, p),
+                "link": _raw_link("anvil/markers", p.name),
+            })
+
+        # Canary
+        if "canary" in art:
+            p = art["canary"]
+            verdict = t.get("canary", {}).get("verdict") or "PENDING"
+            ev_type = (f"CANARY_{verdict}" if verdict in
+                       ("PASS", "FAIL", "PENDING") else "CANARY_PENDING")
+            events.append({
+                "ts": iso(safe_mtime(p)) or "",
+                "type": ev_type, "task": tid,
+                "desc": _event_desc_canary(tid, p),
+                "link": _raw_link("guardian/canary-reports", p.name),
+            })
+
+    # Curated (Decision / Authority) events
+    for ts, ev_type, task_id, desc, link in CURATED_EVENTS:
+        events.append({
+            "ts": ts, "type": ev_type, "task": task_id,
+            "desc": desc, "link": link,
+        })
+
+    # Drop any event missing ts — sort descending
+    events = [e for e in events if e.get("ts")]
+    events.sort(key=lambda e: e["ts"], reverse=True)
+    return events
+
+
+def _event_row(e: dict[str, Any]) -> str:
+    meta = EVENT_META.get(e["type"], {"emoji": "•", "actor": "—"})
+    try:
+        dt = datetime.fromisoformat(e["ts"].replace("Z", "+00:00"))
+        hhmm = dt.astimezone(CEST).strftime("%H:%M CEST")
+    except Exception:
+        hhmm = "—"
+    tid = e.get("task") or "—"
+    link_md = (f" [artifact]({e['link']})" if e.get("link") else "")
+    return (f"### {hhmm} — {meta['emoji']} {e['type']} "
+            f"{tid} · {meta['actor']}\n\n{e['desc']}{link_md}\n")
+
+
+def _render_event_day(day_iso: str, events: list[dict[str, Any]]) -> str:
+    day_dt = datetime.fromisoformat(day_iso + "T00:00:00+00:00")
+    pretty = day_dt.astimezone(CEST).strftime("%A, %d %b %Y")
+    L = [f"# Sprint Events — {pretty}\n",
+         f"**Date (CEST):** {pretty}  ",
+         f"**Events:** {len(events)}  ",
+         "**Sort order:** newest first\n",
+         "---\n"]
+    L.extend(_event_row(e) for e in events)
+    L += ["\n---\n",
+          "*[Event index](README.md) · [Sprint log index](../README.md) · "
+          "[Live dashboard](https://quantisdevelopment.github.io/"
+          "oinkfarm-sprint-checkpoint/)*"]
+    return "\n".join(L) + "\n"
+
+
+def _render_event_readme(events_by_day: dict[str, list[dict[str, Any]]]) -> str:
+    L = ["# Sprint Event Log\n",
+         "Append-only chronological feed of every significant event in the "
+         "OinkFarm Implementation Foresight Sprint. Events are parsed from "
+         "agent artifact mtimes + content, augmented by curated decision "
+         "markers. Newest first within each day.\n",
+         "## Daily digests\n",
+         "| Date | Events | File |", "|---|---|---|"]
+    for day in sorted(events_by_day.keys(), reverse=True):
+        evs = events_by_day[day]
+        L.append(f"| {day} | {len(evs)} | [{day}.md]({day}.md) |")
+    L += ["", "## Event types\n",
+          "| Emoji | Type | Who |", "|---|---|---|"]
+    for t, meta in EVENT_META.items():
+        L.append(f"| {meta['emoji']} | {t} | {meta['actor']} |")
+    L += ["", "---", "",
+          "*[Sprint log index](../README.md) · [Live dashboard]"
+          "(https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)*"]
+    return "\n".join(L) + "\n"
+
+
+# ---- Updated index + emitter -------------------------------------------------
+
 def _render_sprint_log_readme(data: dict[str, Any]) -> str:
-    L = ["# OinkFarm Implementation Foresight Sprint — Archive\n",
-         "Human-readable per-task archive. For verbatim agent artifacts see "
-         "[`../raw-artifacts/`](../raw-artifacts/). For the live dashboard see "
-         "[quantisdevelopment.github.io/oinkfarm-sprint-checkpoint]"
-         "(https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/).\n",
-         "## Waves", "", "| Wave | Focus | Tasks | Status |",
-         "|---|---|---|---|"]
-    wave_focus = {1: "Core schema & formula primitives",
-                  2: "Lifecycle accuracy & phantom-trade prevention"}
-    for w in data["waves"]:
-        if w.get("future"): continue
-        n = int(w["name"].split()[-1]) if w["name"].split()[-1].isdigit() else 0
+    by_id = {t["id"]: t for t in data["tasks"]}
+    total_merged = sum(1 for t in data["tasks"] if t["status"] == "DONE")
+    L = [
+        "# OinkFarm Implementation Foresight Sprint — Archive\n",
+        "Human-readable per-task, per-wave, per-phase, and per-event archive. "
+        "For verbatim agent artifacts see [`../raw-artifacts/`](../raw-artifacts/). "
+        "For the live dashboard see "
+        "[quantisdevelopment.github.io/oinkfarm-sprint-checkpoint]"
+        "(https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/).\n",
+        "## What's live now\n",
+        "| | |", "|---|---|",
+        f"| **Phase A** | ✅ COMPLETE — 11/11 tasks shipped, canaries PASS |",
+        f"| **Phase B** | 🚧 IN FLIGHT — B1 proposal drafted |",
+        f"| **Phase C** | 📐 SCOPED — 7 tasks, detailed plans after Phase B |",
+        f"| **Heavy Hybrid** | 🗺️ ROADMAP DELIVERED — Q-HH-1..6 resolved autonomously |",
+        f"| **Prod DB** | 1,407 signals · 0 NULL invariants · 0 orphans · 10 PRs merged |",
+        "\n## Phases\n",
+        "| Phase | Focus | Page |",
+        "|---|---|---|",
+        "| [Phase A](phases/phase-a.md) | Data Truth — 11 tasks, complete retrospective | ✅ DONE |",
+        "| [Phase B](phases/phase-b.md) | Infrastructure — PostgreSQL + decomposed services | 🚧 IN FLIGHT |",
+        "| [Phase C](phases/phase-c.md) | Observability — 55+ KPIs, anomaly detection | 📐 SCOPED |",
+        "| [Heavy Hybrid](phases/heavy-hybrid.md) | Long-horizon roadmap + Q-HH decisions | 🗺️ DELIVERED |",
+        "\n## Waves\n",
+        "| Wave | Focus | Tasks | Status |", "|---|---|---|---|",
+    ]
+    for wid in WAVE_ORDER:
+        wave_tids = WAVE_TASKS[wid]
+        wave_tasks_done = sum(1 for tid in wave_tids
+                              if by_id.get(tid, {}).get("status") == "DONE")
+        label = _wave_label(wid)
         task_ids = " · ".join(
             f"[{tid}](tasks/{tid}-{TASK_SLUGS.get(tid, tid.lower())}.md)"
-            for tid in w["task_ids"])
-        L.append(f"| [{w['name']}](waves/wave-{n}.md) | "
-                 f"{wave_focus.get(n, '—')} | {task_ids} | "
-                 f"{w['done']}/{w['total']} shipped |")
-    L += ["", "## Tasks", "",
+            for tid in wave_tids)
+        focus_short = WAVE_FOCUS.get(wid, "—").split("—")[0].strip()
+        status = (f"{wave_tasks_done}/{len(wave_tids)} shipped"
+                  if wid != "B1" else "🚧 IN FLIGHT")
+        L.append(f"| [{label}](waves/{_wave_slug(wid)}.md) | "
+                 f"{focus_short} | {task_ids} | {status} |")
+
+    L += ["\n## Tasks\n",
           "| Task | Name | Tier | Wave | Status | Canary |",
           "|---|---|---|---|---|---|"]
-    by_id = {t["id"]: t for t in data["tasks"]}
-    for w in data["waves"]:
-        for tid in w["task_ids"]:
-            t = by_id.get(tid)
-            if not t: continue
-            slug = TASK_SLUGS.get(tid, tid.lower())
-            L.append(f"| [{tid}](tasks/{tid}-{slug}.md) | "
-                     f"{TASK_NAMES.get(tid, tid)} | "
-                     f"{t['tier_emoji']} {t['tier']} | "
-                     f"{TASK_WAVE.get(tid, '—')} | "
-                     f"{STATUS_BADGE.get(t['status'], t['status'])} | "
-                     f"{t['canary']['verdict'] or '—'} |")
-    L += ["", "## Agents", "", "| Emoji | Name | Role |", "|---|---|---|"]
+    for tid in TASKS:
+        t = by_id.get(tid)
+        if not t: continue
+        slug = TASK_SLUGS.get(tid, tid.lower())
+        L.append(f"| [{tid}](tasks/{tid}-{slug}.md) | "
+                 f"{TASK_NAMES.get(tid, tid)} | "
+                 f"{t['tier_emoji']} {t['tier']} | "
+                 f"{TASK_WAVE.get(tid, '—')} | "
+                 f"{STATUS_BADGE.get(t['status'], t['status'])} | "
+                 f"{t['canary']['verdict'] or '—'} |")
+
+    L += ["\n## Event log\n",
+          "- [Event index](events/README.md) — chronological feed (newest "
+          "first within each day)",
+          "- [2026-04-18](events/2026-04-18.md) — Phase A kickoff (FORGE "
+          "plans, first proposals)",
+          "- [2026-04-19](events/2026-04-19.md) — Phase A completion + B1 "
+          "kickoff (10 merges, 11 canaries)",
+          "",
+          "## Agents", "", "| Emoji | Name | Role |", "|---|---|---|"]
     for a in data["agents"]:
         L.append(f"| {a['emoji']} | {a['name']} | {a['role']} |")
     L += ["", "## Conventions", "",
@@ -1381,7 +2039,8 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
           "CODE → PR_REVIEW → CANARY → DONE",
           "- **Timestamps** are rendered in CEST (UTC+2).",
           "", "---", "",
-          f"*Last auto-regenerated: "
+          f"*{total_merged}/12 tasks DONE · "
+          f"Last auto-regenerated: "
           f"{datetime.now(timezone.utc).astimezone(CEST).strftime('%H:%M CEST on %d %b %Y')}"
           f" · [Live dashboard](https://quantisdevelopment.github.io/"
           f"oinkfarm-sprint-checkpoint/) · "
@@ -1389,29 +2048,66 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
           f"oinkfarm-sprint-checkpoint)*"]
     return "\n".join(L) + "\n"
 
+
 def emit_sprint_log(data: dict[str, Any]) -> dict[str, int]:
     if SPRINT_LOG.exists():
         shutil.rmtree(SPRINT_LOG)
     (SPRINT_LOG / "tasks").mkdir(parents=True, exist_ok=True)
     (SPRINT_LOG / "waves").mkdir(parents=True, exist_ok=True)
-    counts = {"tasks": 0, "waves": 0}
+    (SPRINT_LOG / "phases").mkdir(parents=True, exist_ok=True)
+    (SPRINT_LOG / "events").mkdir(parents=True, exist_ok=True)
+    counts = {"tasks": 0, "waves": 0, "phases": 0, "event_days": 0}
     by_id = {t["id"]: t for t in data["tasks"]}
+
+    # Task pages — ALL 12
     for tid, slug in TASK_SLUGS.items():
         t = by_id.get(tid)
         if not t: continue
         (SPRINT_LOG / "tasks" / f"{tid}-{slug}.md").write_text(
             _render_task_page(t), encoding="utf-8")
         counts["tasks"] += 1
-    for w in data["waves"]:
-        if w.get("future"): continue
-        n = int(w["name"].split()[-1]) if w["name"].split()[-1].isdigit() else 0
-        if n:
-            wt = [by_id[tid] for tid in w["task_ids"] if tid in by_id]
-            (SPRINT_LOG / "waves" / f"wave-{n}.md").write_text(
-                _render_wave_page(n, wt), encoding="utf-8")
-            counts["waves"] += 1
+
+    # Wave pages — 1, 2, 3, 4, B1
+    for wid in WAVE_ORDER:
+        wt = [by_id[tid] for tid in WAVE_TASKS[wid] if tid in by_id]
+        (SPRINT_LOG / "waves" / f"{_wave_slug(wid)}.md").write_text(
+            _render_wave_page(wid, wt), encoding="utf-8")
+        counts["waves"] += 1
+
+    # Phase pages
+    (SPRINT_LOG / "phases" / "phase-a.md").write_text(
+        _render_phase_a(data), encoding="utf-8")
+    (SPRINT_LOG / "phases" / "phase-b.md").write_text(
+        _render_phase_b(data), encoding="utf-8")
+    (SPRINT_LOG / "phases" / "phase-c.md").write_text(
+        _render_phase_c(), encoding="utf-8")
+    (SPRINT_LOG / "phases" / "heavy-hybrid.md").write_text(
+        _render_heavy_hybrid(), encoding="utf-8")
+    counts["phases"] = 4
+
+    # Event log — group by CEST day
+    events = _collect_events(data)
+    by_day: dict[str, list[dict[str, Any]]] = {}
+    for e in events:
+        try:
+            dt = datetime.fromisoformat(e["ts"].replace("Z", "+00:00"))
+            day = dt.astimezone(CEST).strftime("%Y-%m-%d")
+            by_day.setdefault(day, []).append(e)
+        except Exception:
+            continue
+    for day, evs in by_day.items():
+        (SPRINT_LOG / "events" / f"{day}.md").write_text(
+            _render_event_day(day, evs), encoding="utf-8")
+        counts["event_days"] += 1
+    (SPRINT_LOG / "events" / "README.md").write_text(
+        _render_event_readme(by_day), encoding="utf-8")
+
+    # Top-level README
     (SPRINT_LOG / "README.md").write_text(
         _render_sprint_log_readme(data), encoding="utf-8")
+
+    # Store for dashboard hydration
+    data["_events_all"] = events
     return counts
 
 def _inject_archive_link_in_footer() -> None:
@@ -1433,10 +2129,19 @@ def _inject_archive_link_in_footer() -> None:
 
 def main() -> int:
     data = build()
-    html = render(data)
-    write_site(data, html)
+    # Emit raw artifacts and sprint-log first so we can populate recent_events
+    # into data.json before write_site serializes it.
     raw_counts = emit_raw_artifacts(data)
     log_counts = emit_sprint_log(data)
+    # Surface the 20 most-recent events for dashboard hydration
+    events = data.pop("_events_all", [])
+    data["recent_events"] = [
+        {**e, "emoji": EVENT_META.get(e["type"], {}).get("emoji", "•"),
+         "actor": EVENT_META.get(e["type"], {}).get("actor", "—")}
+        for e in events[:20]
+    ]
+    html = render(data)
+    write_site(data, html)
     _inject_archive_link_in_footer()
     sys.stdout.write(
         f"OK  generated {SITE}/index.html  "
@@ -1445,7 +2150,10 @@ def main() -> int:
         f"OK  raw-artifacts ({sum(raw_counts.values())} files across "
         f"{len(raw_counts)} subdirs)\n"
         f"OK  sprint-log ({log_counts['tasks']} task pages, "
-        f"{log_counts['waves']} wave pages + README)\n"
+        f"{log_counts['waves']} wave pages, {log_counts['phases']} phase "
+        f"pages, {log_counts['event_days']} event-day pages + README)\n"
+        f"OK  recent_events populated ({len(data['recent_events'])} of "
+        f"{len(events)} total)\n"
     )
     return 0
 
