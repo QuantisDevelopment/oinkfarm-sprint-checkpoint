@@ -2,9 +2,9 @@
 """OinkFarm Implementation Foresight Sprint — checkpoint dashboard generator.
 
 Crawls live agent workspaces (FORGE / ANVIL / VIGIL / GUARDIAN / Hermes / OinkV)
-and emits a static dashboard (HTML + JSON) under ./site/.
+and emits a static dashboard (HTML + JSON) under ./docs/ (GitHub Pages source).
 
-Read-only outside ./site/. Missing files are treated as "not yet"; never raises.
+Read-only outside ./docs/. Missing files are treated as "not yet"; never raises.
 """
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ ANVIL, FORGE = HOME / "anvil-workspace", HOME / "forge-workspace"
 VIGIL, GUARDIAN = HOME / "vigil-workspace", HOME / "guardian-workspace"
 HERMES_WS = HOME / "hermes-workspace"
 HERMES_CRON = HOME / ".hermes/cron/output/c5fe3ace64fd"
-SITE, STATIC, TEMPLATES = ROOT / "site", ROOT / "static", ROOT / "templates"
+SITE, STATIC, TEMPLATES = ROOT / "docs", ROOT / "static", ROOT / "templates"
 
 TASKS = ["A1", "A2", "A3", "A4", "A5", "A7"]
 TIERS = {"A1": "CRITICAL", "A2": "CRITICAL", "A3": "STANDARD",
