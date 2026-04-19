@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-19T21:05:57+00:00",
-  "generated_at_cest": "2026-04-19T23:05:57+02:00",
+  "generated_at_utc": "2026-04-19T21:16:22+00:00",
+  "generated_at_cest": "2026-04-19T23:16:22+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2992,7 +2992,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "50m ago",
+      "last_active_human": "1h ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3005,7 +3005,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-19T20:32:05+00:00",
-      "last_active_human": "33m ago",
+      "last_active_human": "44m ago",
       "light": "yellow",
       "heartbeat": {
         "current_task": "B1",
@@ -3021,7 +3021,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-19T16:27:09+00:00",
-      "last_active_human": "4h 38m ago",
+      "last_active_human": "4h 49m ago",
       "light": "red",
       "heartbeat": {}
     },
@@ -3032,8 +3032,8 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-19T20:41:59+00:00",
-      "last_active_human": "23m ago",
-      "light": "green",
+      "last_active_human": "34m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3042,8 +3042,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-19T21:02:35+00:00",
-      "last_active_human": "3m ago",
+      "last_active": "2026-04-19T21:16:21+00:00",
+      "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3054,12 +3054,21 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "50m ago",
+      "last_active_human": "1h ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-19T21:16:21+00:00",
+      "time_local": "2026-04-19T23:16+02:00",
+      "header": "SPRINT STATUS @ 23:15",
+      "actions": [],
+      "next": "If VIGIL APPROVE on B1 → write B1-PHASE0-APPROVED.marker (consolidated) + A2A ANVIL to start Phase 1 on branch anvil/B1-db-abstraction. — If VIGIL REQUEST_CHANGES → A2A ANVIL with concerns inlined, revision round 1. — If still silent at next tick (>30 min since Mike's nudge) → check journalctl for VIGIL LLM timeout, escalate only if FailoverError observed.",
+      "blocker": "none — you are already driving. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_23-16-21.md"
+    },
     {
       "time_utc": "2026-04-19T21:02:35+00:00",
       "time_local": "2026-04-19T23:02+02:00",
@@ -3574,15 +3583,6 @@
       "next": "On next cron — if OINKV-AUDIT-WAVE2.md exists → apply audit diffs via delegate_task (Wave 1 pattern); if Mike has approved A4/A7/A5 plans → dispatch ANVIL for A4 Phase 0 proposal.",
       "blocker": "🔔 **A4/A7/A5 plans in your queue** (`/home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md`). ANVIL is idle pending approval. OinkV second-opinion audit running in parallel — not blocking. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_11-10-04.md"
-    },
-    {
-      "time_utc": "2026-04-19T08:58:29+00:00",
-      "time_local": "2026-04-19T10:58+02:00",
-      "header": "Sprint status is steady. Wave 1 (A1/A2/A3) all merged and canary-PASS (verified from completion markers). Wave 2 OinkV audit dispatched at 10:18 CEST is still actively running (session last-active 27s ago, 38 min in, expected 20-30 min — slightly over but producing tokens continuously, not stalled). No blocker, next cron cycle will check for `OINKV-AUDIT-WAVE2.md` and proceed to diff-merge → ANVIL A4 Phase 0.",
-      "actions": [],
-      "next": "next cron will check for OINKV-AUDIT-WAVE2.md → apply diffs → dispatch ANVIL A4 Phase 0 (if Mike has approved plans by then)",
-      "blocker": "none — but Wave 2 plans (A4/A7/A5) still awaiting your approval in /home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md when convenient ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_10-58-29.md"
     }
   ],
   "plans": [
@@ -3764,21 +3764,27 @@
       "mtime": "2026-04-18T21:23:54+00:00"
     }
   ],
-  "blockers": [],
+  "blockers": [
+    {
+      "agent": "Hermes",
+      "agent_emoji": "🪽",
+      "raw": "none — you are already driving. ```",
+      "label": "none — you are already driving.",
+      "severity": "mike",
+      "current_task": null,
+      "current_phase": null
+    }
+  ],
   "last_cron": {
-    "time_utc": "2026-04-19T21:02:35+00:00",
-    "time_local": "2026-04-19T23:02+02:00",
-    "header": "SPRINT STATUS @ 22:58",
-    "actions": [
-      "Surveyed state — A1/A2/A3 shipped hours ago (canary PASS), plus A4/A5/A6/A7/A8/A9/A10/A11 all merged + canary-clean",
-      "Found B1 Phase 0 blocked: GUARDIAN APPROVED at 22:34, VIGIL had not been pinged",
-      "Dispatched VIGIL via openclaw agent (PID 101949, bg, 900s timeout) with proposal path, FORGE plan, hotpath callout, output paths"
-    ],
-    "next": "If VIGIL review lands with APPROVE → A2A ANVIL to begin B1 Phase 1 (code on oink-sync + canonical workspace). If REQUEST CHANGES → forward critique to ANVIL for proposal revision.",
-    "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_23-02-35.md"
+    "time_utc": "2026-04-19T21:16:21+00:00",
+    "time_local": "2026-04-19T23:16+02:00",
+    "header": "SPRINT STATUS @ 23:15",
+    "actions": [],
+    "next": "If VIGIL APPROVE on B1 → write B1-PHASE0-APPROVED.marker (consolidated) + A2A ANVIL to start Phase 1 on branch anvil/B1-db-abstraction. — If VIGIL REQUEST_CHANGES → A2A ANVIL with concerns inlined, revision round 1. — If still silent at next tick (>30 min since Mike's nudge) → check journalctl for VIGIL LLM timeout, escalate only if FailoverError observed.",
+    "blocker": "none — you are already driving. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_23-16-21.md"
   },
-  "commit": "916c50a0e0b7",
+  "commit": "38fa5d1356cc",
   "recent_events": [
     {
       "ts": "2026-04-19T20:41:59+00:00",
