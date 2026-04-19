@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-19T20:48:13+00:00",
-  "generated_at_cest": "2026-04-19T22:48:13+02:00",
+  "generated_at_utc": "2026-04-19T21:02:36+00:00",
+  "generated_at_cest": "2026-04-19T23:02:36+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2992,7 +2992,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "32m ago",
+      "last_active_human": "46m ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3005,8 +3005,8 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-19T20:32:05+00:00",
-      "last_active_human": "16m ago",
-      "light": "green",
+      "last_active_human": "30m ago",
+      "light": "yellow",
       "heartbeat": {
         "current_task": "B1",
         "current_phase": "proposal",
@@ -3021,7 +3021,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-19T16:27:09+00:00",
-      "last_active_human": "4h 21m ago",
+      "last_active_human": "4h 35m ago",
       "light": "red",
       "heartbeat": {}
     },
@@ -3032,7 +3032,7 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-19T20:41:59+00:00",
-      "last_active_human": "6m ago",
+      "last_active_human": "20m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3042,7 +3042,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-19T20:48:12+00:00",
+      "last_active": "2026-04-19T21:02:35+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3054,12 +3054,25 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "32m ago",
+      "last_active_human": "46m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-19T21:02:35+00:00",
+      "time_local": "2026-04-19T23:02+02:00",
+      "header": "SPRINT STATUS @ 22:58",
+      "actions": [
+        "Surveyed state — A1/A2/A3 shipped hours ago (canary PASS), plus A4/A5/A6/A7/A8/A9/A10/A11 all merged + canary-clean",
+        "Found B1 Phase 0 blocked: GUARDIAN APPROVED at 22:34, VIGIL had not been pinged",
+        "Dispatched VIGIL via openclaw agent (PID 101949, bg, 900s timeout) with proposal path, FORGE plan, hotpath callout, output paths"
+      ],
+      "next": "If VIGIL review lands with APPROVE → A2A ANVIL to begin B1 Phase 1 (code on oink-sync + canonical workspace). If REQUEST CHANGES → forward critique to ANVIL for proposal revision.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_23-02-35.md"
+    },
     {
       "time_utc": "2026-04-19T20:48:12+00:00",
       "time_local": "2026-04-19T22:48+02:00",
@@ -3570,15 +3583,6 @@
       "next": "next cron will check for OINKV-AUDIT-WAVE2.md → apply diffs → dispatch ANVIL A4 Phase 0 (if Mike has approved plans by then)",
       "blocker": "none — but Wave 2 plans (A4/A7/A5) still awaiting your approval in /home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md when convenient ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_10-58-29.md"
-    },
-    {
-      "time_utc": "2026-04-19T08:21:51+00:00",
-      "time_local": "2026-04-19T10:21+02:00",
-      "header": "SPRINT STATUS @ 10:24 CEST (08:24 UTC)",
-      "actions": [],
-      "next": "Next cron (10:35 CEST): check for `OINKV-AUDIT-WAVE2.md`. If present → dispatch patcher subagent to apply merge diffs. If you've approved plans by then → ANVIL A4 Phase 0 on first clean audit.",
-      "blocker": null,
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_10-21-51.md"
     }
   ],
   "plans": [
@@ -3762,18 +3766,199 @@
   ],
   "blockers": [],
   "last_cron": {
-    "time_utc": "2026-04-19T20:48:12+00:00",
-    "time_local": "2026-04-19T22:48+02:00",
-    "header": "SPRINT STATUS @ 22:45 CEST",
+    "time_utc": "2026-04-19T21:02:35+00:00",
+    "time_local": "2026-04-19T23:02+02:00",
+    "header": "SPRINT STATUS @ 22:58",
     "actions": [
-      "Re-mapped stale prompt (A1/A2/A3) to actual frontier (B1) per filesystem truth",
-      "Verified Mike-active state (#137/#138/#139 dispatches to ANVIL) is orthogonal — no stand-down",
-      "Confirmed GUARDIAN B1 APPROVE verdict + captured 4 Phase-1 concerns for handoff marker",
-      "Verified VIGIL dispatch landed (sessions.json mtime @ 22:32) — awaiting output, not stalled"
+      "Surveyed state — A1/A2/A3 shipped hours ago (canary PASS), plus A4/A5/A6/A7/A8/A9/A10/A11 all merged + canary-clean",
+      "Found B1 Phase 0 blocked: GUARDIAN APPROVED at 22:34, VIGIL had not been pinged",
+      "Dispatched VIGIL via openclaw agent (PID 101949, bg, 900s timeout) with proposal path, FORGE plan, hotpath callout, output paths"
     ],
-    "next": "next cycle, if VIGIL APPROVE landed → write B1-PHASE0-APPROVED.marker (inline both verdicts + GUARDIAN's 4 concerns) and A2A ANVIL \"proceed to Phase 1 on anvil/B1-db-abstraction\". If VIGIL silent >30 min from 22:32 → nudge via Python-wrapper A2A.",
+    "next": "If VIGIL review lands with APPROVE → A2A ANVIL to begin B1 Phase 1 (code on oink-sync + canonical workspace). If REQUEST CHANGES → forward critique to ANVIL for proposal revision.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_22-48-12.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_23-02-35.md"
   },
-  "commit": "eaf2fcecea2f"
+  "commit": "98afb8850653",
+  "recent_events": [
+    {
+      "ts": "2026-04-19T20:41:59+00:00",
+      "type": "CANARY_PASS",
+      "task": "A8",
+      "desc": "GUARDIAN canary PASS on `A8` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A8-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:38:48+00:00",
+      "type": "CANARY_PASS",
+      "task": "A4",
+      "desc": "GUARDIAN canary PASS on `A4` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A4-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:38:48+00:00",
+      "type": "CANARY_PASS",
+      "task": "A5",
+      "desc": "GUARDIAN canary PASS on `A5` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A5-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:38:48+00:00",
+      "type": "CANARY_PASS",
+      "task": "A6",
+      "desc": "GUARDIAN canary PASS on `A6` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A6-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:38:48+00:00",
+      "type": "CANARY_PASS",
+      "task": "A7",
+      "desc": "GUARDIAN canary PASS on `A7` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A7-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:38:48+00:00",
+      "type": "CANARY_PASS",
+      "task": "A9",
+      "desc": "GUARDIAN canary PASS on `A9` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A9-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:38:48+00:00",
+      "type": "CANARY_PASS",
+      "task": "A11",
+      "desc": "GUARDIAN canary PASS on `A11` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A11-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:34:45+00:00",
+      "type": "GUARDIAN_VERDICT",
+      "task": "B1",
+      "desc": "GUARDIAN Phase 0 BLOCK on `B1`.",
+      "link": "../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md",
+      "emoji": "🛡️",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:31:55+00:00",
+      "type": "PROPOSAL_DRAFTED",
+      "task": "B1",
+      "desc": "ANVIL Phase 0 proposal drafted for `B1`.",
+      "link": "../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md",
+      "emoji": "⚒️",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-19T20:27:02+00:00",
+      "type": "CANARY_PASS",
+      "task": "A10",
+      "desc": "GUARDIAN canary PASS on `A10` (first 10 signals post-deploy).",
+      "link": "../../raw-artifacts/guardian/canary-reports/A10-CANARY.md",
+      "emoji": "✅",
+      "actor": "GUARDIAN"
+    },
+    {
+      "ts": "2026-04-19T20:12:14+00:00",
+      "type": "AUDIT_COMPLETE",
+      "task": "B1",
+      "desc": "OinkV audit published for `B1` plan.",
+      "link": "../../raw-artifacts/forge/plans/OINKV-AUDIT-PHASE-B-B1.md",
+      "emoji": "👁️",
+      "actor": "OinkV"
+    },
+    {
+      "ts": "2026-04-19T18:29:26+00:00",
+      "type": "MERGED",
+      "task": "A10",
+      "desc": "Merged to `oinkfarm` via PR #135.",
+      "link": "../../raw-artifacts/anvil/markers/A10-MERGED.marker",
+      "emoji": "🚀",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-19T18:24:00+00:00",
+      "type": "AUTHORITY",
+      "task": "A10",
+      "desc": "Mike approves A10 council-gated merge after OinkV + OinkDB co-sign via GH Issue #136.",
+      "link": "../tasks/A10-database-merge.md",
+      "emoji": "🔓",
+      "actor": "Mike"
+    },
+    {
+      "ts": "2026-04-19T18:10:00+00:00",
+      "type": "DECISION",
+      "task": "—",
+      "desc": "Q-HH-6: Phase D gate = Hermes + 2-council (OinkV + GUARDIAN) — mirrors A10 council pattern (OinkV + OinkDB) which already shipped.",
+      "link": "../phases/heavy-hybrid.md",
+      "emoji": "🧭",
+      "actor": "Hermes"
+    },
+    {
+      "ts": "2026-04-19T18:09:00+00:00",
+      "type": "DECISION",
+      "task": "C2",
+      "desc": "Q-HH-5: Confidence routing = soft flag in Phase B, hard reject in Phase C — Phase C has 30d KPI history to set thresholds safely.",
+      "link": "../phases/heavy-hybrid.md",
+      "emoji": "🧭",
+      "actor": "Hermes"
+    },
+    {
+      "ts": "2026-04-19T18:08:00+00:00",
+      "type": "DECISION",
+      "task": "B9",
+      "desc": "Q-HH-4: W1 enforcement at DB level (REVOKE UPDATE on origin table) — stronger than application-level guard.",
+      "link": "../phases/heavy-hybrid.md",
+      "emoji": "🧭",
+      "actor": "Hermes"
+    },
+    {
+      "ts": "2026-04-19T18:07:00+00:00",
+      "type": "DECISION",
+      "task": "—",
+      "desc": "Q-HH-3: Docker Compose single-host — matches Redis \"same server\" choice; multi-host prep deferred to B13+.",
+      "link": "../phases/heavy-hybrid.md",
+      "emoji": "🧭",
+      "actor": "Hermes"
+    },
+    {
+      "ts": "2026-04-19T18:06:00+00:00",
+      "type": "DECISION",
+      "task": "—",
+      "desc": "Q-HH-2: 48h retention + AOF everysec — covers 24h canary windows + 1 day replay; AOF bounds data loss to <1s.",
+      "link": "../phases/heavy-hybrid.md",
+      "emoji": "🧭",
+      "actor": "Hermes"
+    },
+    {
+      "ts": "2026-04-19T18:05:00+00:00",
+      "type": "DECISION",
+      "task": "—",
+      "desc": "Q-HH-1: Redis same-server initially — lowest-friction start, scale-out deferred until QPS > 5k or RAM pressure.",
+      "link": "../phases/heavy-hybrid.md",
+      "emoji": "🧭",
+      "actor": "Hermes"
+    },
+    {
+      "ts": "2026-04-19T16:29:25+00:00",
+      "type": "GUARDIAN_VERDICT",
+      "task": "A10",
+      "desc": "GUARDIAN Phase 1 BLOCK — **9.80/10** on `A10`.",
+      "link": "../../raw-artifacts/guardian/reviews/A10-GUARDIAN-PHASE1-REVIEW.md",
+      "emoji": "🛡️",
+      "actor": "GUARDIAN"
+    }
+  ]
 }

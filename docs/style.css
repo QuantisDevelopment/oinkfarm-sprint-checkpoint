@@ -467,3 +467,88 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .panel { padding: 12px; }
   h1 { font-size: 1.1rem; }
 }
+
+/* ========================================================================= */
+/* Top-bar navigation (Dashboard / Events / Phases / Tasks / GitHub)         */
+/* ========================================================================= */
+.topnav {
+  border-top: 1px solid var(--border);
+  background: var(--bg-elev);
+}
+.topnav-inner {
+  max-width: 1240px; margin: 0 auto;
+  padding: 10px 24px; display: flex; gap: 6px; flex-wrap: wrap;
+  align-items: center;
+}
+.navlink {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 6px;
+  color: var(--fg-dim); text-decoration: none;
+  font-size: 0.82rem; font-weight: 500;
+  transition: background 120ms, color 120ms;
+}
+.navlink:hover { color: var(--fg); background: rgba(255,255,255,0.04); }
+.navlink-active {
+  color: var(--fg); background: rgba(255,255,255,0.08);
+}
+.navlink-ghost { margin-left: auto; color: var(--fg-dim); }
+.nav-count {
+  background: rgba(255,255,255,0.06);
+  padding: 1px 6px; border-radius: 10px;
+  font-size: 0.72rem; color: var(--fg-dim);
+}
+
+/* ========================================================================= */
+/* Recent events card — Linear/Vercel-polished dense feed                    */
+/* ========================================================================= */
+.recent-events {
+  margin: 24px 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elev);
+  padding: 14px 18px 16px;
+}
+.recent-events .section-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin: 0 0 10px;
+}
+.recent-events h2 {
+  font-size: 0.9rem; margin: 0;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--fg-dim); font-weight: 600;
+}
+.section-more { font-size: 0.78rem; text-decoration: none; }
+.section-more:hover { color: var(--fg); }
+
+.events-feed {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.event-row {
+  display: grid;
+  grid-template-columns: 22px 110px 44px 130px 1fr;
+  gap: 10px; align-items: center;
+  padding: 6px 4px;
+  border-bottom: 1px dashed rgba(255,255,255,0.04);
+  font-size: 0.85rem;
+}
+.event-row:last-child { border-bottom: none; }
+.event-emoji { font-size: 1rem; text-align: center; }
+.event-time  { font-size: 0.76rem; }
+.event-task  { font-weight: 600; color: var(--fg); }
+.event-type  { font-size: 0.72rem; color: var(--fg-dim); text-transform: uppercase; letter-spacing: 0.04em; }
+.event-desc  { color: var(--fg); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.event-canary_pass .event-emoji,
+.event-merged .event-emoji { color: var(--green); }
+.event-canary_fail .event-emoji { color: var(--red); }
+.event-canary_pending .event-emoji { color: var(--yellow); }
+
+@media (max-width: 900px) {
+  .event-row { grid-template-columns: 22px 90px 44px 1fr; }
+  .event-row .event-type { display: none; }
+}
+@media (max-width: 540px) {
+  .event-row { grid-template-columns: 22px 1fr; }
+  .event-row .event-time, .event-row .event-task, .event-row .event-type { display: none; }
+}

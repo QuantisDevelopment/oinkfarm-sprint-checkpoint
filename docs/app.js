@@ -68,6 +68,18 @@
   });
 
   // -----------------------------------------------------------------------
+  // Top-bar nav — Dashboard / Events in-page links, visual active state.
+  // Phases / Tasks / GitHub are external links handled by browser.
+  // -----------------------------------------------------------------------
+  var navlinks = document.querySelectorAll('.navlink[data-nav]');
+  navlinks.forEach(function (a) {
+    a.addEventListener('click', function () {
+      navlinks.forEach(function (n) { n.classList.remove('navlink-active'); });
+      a.classList.add('navlink-active');
+    });
+  });
+
+  // -----------------------------------------------------------------------
   // Persist open/closed state of each task timeline across refreshes.
   // -----------------------------------------------------------------------
   try {

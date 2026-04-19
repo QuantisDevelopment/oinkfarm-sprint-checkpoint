@@ -31,7 +31,7 @@ The `signal_events` table and `EventStore` class already exist (GH#22, commit `3
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
