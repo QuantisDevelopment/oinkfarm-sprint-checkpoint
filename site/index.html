@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OinkFarm Implementation Foresight Sprint</title>
+<meta name="description" content="Live checkpoint dashboard for the OinkFarm Implementation Foresight Sprint.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-generated="2026-04-19T10:03:49+00:00">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">🔥</div>
+      <div>
+        <h1>OinkFarm Implementation Foresight Sprint</h1>
+        <p class="subtitle">Wave 1 shipped · Wave 2 in-flight</p>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="clock-row">
+        <span class="clock-label">UTC</span>
+        <span class="mono" id="clock-utc">2026-04-19T10:03:49+00:00</span>
+      </div>
+      <div class="clock-row">
+        <span class="clock-label">CEST</span>
+        <span class="mono" id="clock-cest">2026-04-19T12:03:49+02:00</span>
+      </div>
+      <div class="clock-row muted">
+        <span class="clock-label">last regen</span>
+        <span class="mono" id="last-regen">Apr 19, 12:03 CEST</span>
+        <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
+          <span class="dot dot-green"></span> auto
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- Wave progress ---------------------------------------------------------- -->
+<section class="waves">
+  <div class="wave ">
+    <div class="wave-header">
+      <h3>Wave 1</h3>
+      <span class="wave-count mono">
+3/3      </span>
+    </div>
+    <div class="wave-bar">
+      <div class="wave-fill" style="width: 100%;"></div>
+    </div>
+    <div class="wave-chips">
+          <a href="#task-A1" class="chip chip-done" title="Done">
+            🔴 <span class="mono">A1</span>
+          </a>
+          <a href="#task-A2" class="chip chip-done" title="Done">
+            🔴 <span class="mono">A2</span>
+          </a>
+          <a href="#task-A3" class="chip chip-done" title="Done">
+            🟡 <span class="mono">A3</span>
+          </a>
+    </div>
+  </div>
+  <div class="wave ">
+    <div class="wave-header">
+      <h3>Wave 2</h3>
+      <span class="wave-count mono">
+0/3      </span>
+    </div>
+    <div class="wave-bar">
+      <div class="wave-fill" style="width: 0%;"></div>
+    </div>
+    <div class="wave-chips">
+          <a href="#task-A4" class="chip chip-code" title="Coding">
+            🟡 <span class="mono">A4</span>
+          </a>
+          <a href="#task-A7" class="chip chip-planned" title="Planned">
+            🔴 <span class="mono">A7</span>
+          </a>
+          <a href="#task-A5" class="chip chip-planned" title="Planned">
+            🟡 <span class="mono">A5</span>
+          </a>
+    </div>
+  </div>
+  <div class="wave wave-future">
+    <div class="wave-header">
+      <h3>Wave 3+</h3>
+      <span class="wave-count mono">
+future      </span>
+    </div>
+    <div class="wave-bar">
+      <div class="wave-fill" style="width: 0%;"></div>
+    </div>
+    <div class="wave-chips">
+<span class="chip chip-future mono">A6 · A8–A11 · A2.*</span>    </div>
+  </div>
+</section>
+
+<!-- Blockers --------------------------------------------------------------- -->
+<section class="blockers">
+    <div class="blockers-card severity-auto">
+      <div class="blockers-head">
+        <span class="warn-icon">!</span>
+        <h2>Active blockers</h2>
+        <span class="blocker-count">2</span>
+      </div>
+      <ul class="blocker-list">
+        <li>
+          <span class="blocker-agent">⚒️ ANVIL</span>
+          <span class="blocker-label">Proposal approval (VIGIL + GUARDIAN)</span>
+            <span class="blocker-task mono">on A4 · proposal_review</span>
+        </li>
+        <li>
+          <span class="blocker-agent">🪽 Hermes</span>
+          <span class="blocker-label">Wave 2 plan approval pending — per A4-A7-SUMMARY.md + now OINKV-AUDIT-WAVE2.md.</span>
+        </li>
+      </ul>
+    </div>
+</section>
+
+<!-- Tasks ------------------------------------------------------------------ -->
+<section class="tasks-section">
+  <div class="section-head">
+    <h2>Tasks</h2>
+    <span class="muted mono">most recent first</span>
+  </div>
+  <div class="tasks-grid">
+    <article class="task task-code" id="task-A4">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">A4</span>
+          <span class="badge badge-code">Coding</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 19, 11:51 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+          <div class="task-prs muted mono">target: oink-sync</div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(5 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>GUARDIAN Phase 0 review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 11:51 CEST
+                    · <span class="filepath">A4-GUARDIAN-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">VIGIL</span>
+                  <span>VIGIL Phase 0 review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 11:50 CEST
+                    · <span class="filepath">A4-VIGIL-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Phase 0 proposal written</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 11:42 CEST
+                    · <span class="filepath">A4-PROPOSAL.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">Orchestrator</span>
+                  <span>Phase 0 approved</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 11:40 CEST
+                    · <span class="filepath">A4-PHASE0-APPROVED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">FORGE</span>
+                  <span>FORGE plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 02:47 CEST
+                    · <span class="filepath">TASK-A4-plan.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-A5">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">A5</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 19, 11:42 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+          <div class="task-prs muted mono">target: signal-gateway</div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(1 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">FORGE</span>
+                  <span>FORGE plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 11:42 CEST
+                    · <span class="filepath">TASK-A5-plan.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-A7">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="CRITICAL">🔴</span>
+          <span class="task-id mono">A7</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 19, 11:40 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+          <div class="task-prs muted mono">target: signal-gateway</div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(1 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">FORGE</span>
+                  <span>FORGE plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 11:40 CEST
+                    · <span class="filepath">TASK-A7-plan.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-done" id="task-A2">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="CRITICAL">🔴</span>
+          <span class="task-id mono">A2</span>
+          <span class="badge badge-done">Done</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 19, 04:42 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">9.85</span></div>
+            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">9.50</span></div>
+            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pass">PASS</span></div>
+        </div>
+
+          <div class="task-prs">
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/5" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oink-sync</span>
+                <span class="pr-num mono">#5</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59" target="_blank" rel="noopener" title="merge commit">
+                  6b21a20
+                </a>
+          </div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(10 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>Canary complete</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 04:42 CEST
+                    · <span class="filepath">A2-CANARY-COMPLETE.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>Canary PASS</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 04:42 CEST
+                    · <span class="filepath">A2-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Merged</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 02:40 CEST
+                    · <span class="filepath">A2-MERGED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>GUARDIAN Phase 1 review — 9.50</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 02:26 CEST
+                    · <span class="filepath">A2-GUARDIAN-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">VIGIL</span>
+                  <span>VIGIL Phase 1 review — 9.85</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 02:19 CEST
+                    · <span class="filepath">A2-VIGIL-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">Orchestrator</span>
+                  <span>Phase 0 approved</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 02:04 CEST
+                    · <span class="filepath">A2-PHASE0-APPROVED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>GUARDIAN Phase 0 review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:56 CEST
+                    · <span class="filepath">A2-GUARDIAN-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">VIGIL</span>
+                  <span>VIGIL Phase 0 review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:54 CEST
+                    · <span class="filepath">A2-VIGIL-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Phase 0 proposal written</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:52 CEST
+                    · <span class="filepath">A2-PHASE0-PROPOSAL.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">FORGE</span>
+                  <span>FORGE plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:28 CEST
+                    · <span class="filepath">TASK-A2-plan.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-done" id="task-A1">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="CRITICAL">🔴</span>
+          <span class="task-id mono">A1</span>
+          <span class="badge badge-done">Done</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 19, 01:51 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">9.60</span></div>
+            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">9.80</span></div>
+            <div class="stat"><span class="stat-label">Hermes</span><span class="stat-value verdict-lgtm">LGTM</span></div>
+            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pass">PASS</span></div>
+        </div>
+
+          <div class="task-prs">
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/126" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oinkfarm</span>
+                <span class="pr-num mono">#126</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/5b242c567d0df4b8b25d3866e711f15d772e685a" target="_blank" rel="noopener" title="merge commit">
+                  5b242c5
+                </a>
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/4" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oink-sync</span>
+                <span class="pr-num mono">#4</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/3d60538acc0fb696b41da151d9062cd9896ad790" target="_blank" rel="noopener" title="merge commit">
+                  3d60538
+                </a>
+          </div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(12 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>Canary complete</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:51 CEST
+                    · <span class="filepath">A1-CANARY-COMPLETE.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>Canary PASS</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:51 CEST
+                    · <span class="filepath">A1-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Merged</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:48 CEST
+                    · <span class="filepath">A1-MERGED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-lgtm"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">Hermes</span>
+                  <span>Hermes sanity check — LGTM</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:47 CEST
+                    · <span class="filepath">A1-HERMES-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">VIGIL</span>
+                  <span>VIGIL Phase 1 review — 9.60</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:30 CEST
+                    · <span class="filepath">A1-VIGIL-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>GUARDIAN Phase 1 review — 9.80</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 01:19 CEST
+                    · <span class="filepath">A1-GUARDIAN-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">Orchestrator</span>
+                  <span>Phase 0 approved</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:20 CEST
+                    · <span class="filepath">A1-PHASE0-APPROVED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>GUARDIAN Phase 0 review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:14 CEST
+                    · <span class="filepath">A1-GUARDIAN-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">VIGIL</span>
+                  <span>VIGIL Phase 0 review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:13 CEST
+                    · <span class="filepath">A1-VIGIL-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Ready for proposal review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:11 CEST
+                    · <span class="filepath">A1-READY-FOR-REVIEW.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Phase 0 proposal written</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:10 CEST
+                    · <span class="filepath">A1-PHASE0-PROPOSAL.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">FORGE</span>
+                  <span>FORGE plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:27 CEST
+                    · <span class="filepath">TASK-A1-plan.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-done" id="task-A3">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">A3</span>
+          <span class="badge badge-done">Done</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 19, 00:08 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">9.85</span></div>
+            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">10.00</span></div>
+            <div class="stat"><span class="stat-label">Hermes</span><span class="stat-value verdict-lgtm">LGTM</span></div>
+            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pass">PASS</span></div>
+        </div>
+
+          <div class="task-prs">
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/125" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oinkfarm</span>
+                <span class="pr-num mono">#125</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/3b5453b7" target="_blank" rel="noopener" title="merge commit">
+                  3b5453b
+                </a>
+          </div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(10 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>Canary complete</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:08 CEST
+                    · <span class="filepath">A3-CANARY-COMPLETE.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>Canary PASS</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:08 CEST
+                    · <span class="filepath">A3-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Merged</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:06 CEST
+                    · <span class="filepath">A3-MERGED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-lgtm"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">Hermes</span>
+                  <span>Hermes sanity check — LGTM</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:05 CEST
+                    · <span class="filepath">A3-HERMES-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">GUARDIAN</span>
+                  <span>GUARDIAN Phase 1 review — 10.00</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 19, 00:00 CEST
+                    · <span class="filepath">A3-GUARDIAN-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">VIGIL</span>
+                  <span>VIGIL Phase 1 review — 9.85</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:54 CEST
+                    · <span class="filepath">A3-VIGIL-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">Orchestrator</span>
+                  <span>Phase 0 approved</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:44 CEST
+                    · <span class="filepath">A3-PHASE0-APPROVED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Ready for proposal review</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:32 CEST
+                    · <span class="filepath">A3-READY-FOR-REVIEW.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">ANVIL</span>
+                  <span>Phase 0 proposal written</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:32 CEST
+                    · <span class="filepath">A3-PHASE0-PROPOSAL.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">FORGE</span>
+                  <span>FORGE plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 23:28 CEST
+                    · <span class="filepath">TASK-A3-plan.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+  </div>
+</section>
+
+<!-- Agents + Narrative tabs ------------------------------------------------ -->
+<section class="two-col">
+
+  <!-- Agents ............................................................. -->
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Agents</h2>
+      <span class="muted mono">heartbeat mtime</span>
+    </div>
+    <div class="agent-list">
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">🔥</span>
+          <span class="agent-name">FORGE</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Technical Execution Planner</div>
+        <div class="agent-meta mono">
+            idle
+ · A        </div>
+        <div class="agent-meta mono muted">20m ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">⚒️</span>
+          <span class="agent-name">ANVIL</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Implementation Lead</div>
+        <div class="agent-meta mono">
+            task: A4
+ · proposal_review        </div>
+        <div class="agent-meta mono muted">20m ago</div>
+          <div class="agent-meta mono muted">branch: anvil/A4-partially-closed-status</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">🔍</span>
+          <span class="agent-name">VIGIL</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Code Review + Scoring</div>
+        <div class="agent-meta mono">
+            idle
+        </div>
+        <div class="agent-meta mono muted">12m ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">🛡️</span>
+          <span class="agent-name">GUARDIAN</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Data Integrity + Canary</div>
+        <div class="agent-meta mono">
+            idle
+        </div>
+        <div class="agent-meta mono muted">12m ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">🪽</span>
+          <span class="agent-name">Hermes</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Sprint Orchestrator</div>
+        <div class="agent-meta mono">
+            idle
+        </div>
+        <div class="agent-meta mono muted">15m ago</div>
+      </div>
+      <div class="agent agent-light-yellow">
+        <div class="agent-top">
+          <span class="agent-emoji">🐷</span>
+          <span class="agent-name">OinkV</span>
+          <span class="agent-light light-yellow" title="yellow"></span>
+        </div>
+        <div class="agent-meta muted">Plan Auditor</div>
+        <div class="agent-meta mono">
+            last audit
+        </div>
+        <div class="agent-meta mono muted">30m ago</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Narrative timeline ................................................. -->
+  <div class="panel">
+    <div class="panel-head tabs">
+      <div class="tab-row" role="tablist">
+        <button class="tab tab-active" data-tab="narrative" role="tab">Narrative</button>
+        <button class="tab" data-tab="plans" role="tab">Plans</button>
+        <button class="tab" data-tab="audits" role="tab">OinkV Audits</button>
+      </div>
+    </div>
+
+    <div class="tab-panel tab-panel-active" id="tab-narrative">
+      <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 11:48 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 11:48 CEST</div>
+            <ul class="narrative-actions">
+<li>Verified A1/A2/A3 merged+canary-complete (markers present), no zombie tasks</li><li>Detected A4-PROPOSAL.md landed 11:42 with A4-READY-FOR-REVIEW.marker but no VIGIL/GUARDIAN Phase 0 reviews yet</li><li>Dispatched both reviewers in parallel via python-wrapper+nohup pattern (prefill-safe imperative opener); task_ids 158e7acb (one agent) + 29b18175 (other), both status=running in task_runs</li><li>Dispatch messages pre-loaded the OinkV Wave 2 MUST-FIX concerns (backfill ~2 rows, 5 modification sites vs plan's 3, STATUS_CHANGED dedup, DQ-A4-2 skip-limbo decision) so reviewers focus on the right risks</li><li>Did NOT nudge ANVIL — it's between phases and the Phase 0 approval handoff comes next cycle</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Poll /home/oinkv/{vigil,guardian}-workspace/reviews/ for A4-*-PHASE0-REVIEW.md — If both APPROVE → write consolidated A4-PHASE0-APPROVED.marker (consolidated reviewer version, distinct from the Mike-scope marker) + A2A ANVIL to start Phase 1 on anvil/A4-partially-closed-status (oink-sync) — If either REQUEST_CHANGES → A2A ANVIL with critique paths for proposal revision</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 11:35 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 11:34 CEST</div>
+            <ul class="narrative-actions">
+<li>Detected OinkV Wave 2 audit stalled — gateway `FailoverError: LLM request timed out` after 61 min on dispatch bea1b26a (sqlite "succeeded" was misleading)</li><li>Fell back to 3 parallel Hermes delegate_task auditors (read-only); total ~9 min wall-clock</li><li>Consolidated OINKV-AUDIT-WAVE2.md written + COMPLETE marker + 3 per-plan sub-audits</li><li>Dispatched FORGE (task 29a978e5) to revise A7 + A5 plans per audit (A7: canonical file swap, line remap, event_store.py addition, `_log_rejection` kwarg, ticker_only Q-A7-1 resolution; A5: rebuild PARSER_CONFIDENCE_MAP from real producers, drop 3 phantom keys, add 4 missing real methods)</li><li>A4 flagged to Mike as READY with 1 decision gate: pre-backfill finds 2 real rows (IDs 1561, 1602) vs plan's expected 0</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cron verifies FORGE wrote `A4-A7-PLANS-REVISED.marker` + expects Mike approval to arrive; if revised plans land before Mike, I'll notify Mike the plans are now audit-clean and ready for his review</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> 1. **Wave 2 plan approval pending** — per A4-A7-SUMMARY.md + now OINKV-AUDIT-WAVE2.md. A4 can greenlight immediately subject to "include 2 extra partial-TP rows in backfill? (recommended: yes)". A7/A5 should wait for FORGE revision (in flight) — approving now = approving plans that won't compile against canonical micro-gate. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 11:10 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 09:09 UTC</div>
+            <ul class="narrative-actions">
+<li>Scanned all workspaces: no pending proposals/reviews/PRs to move forward</li><li>Confirmed OinkV Wave 2 audit is ACTIVELY running (session last wrote 09:09:25Z, currently on signal_events instrumentation code review, 26k session lines)</li><li>ANVIL HEARTBEAT confirms state: current_task=A4, phase=awaiting_plan_approval, blockers=[waiting_for_mike_plan_approval]</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On next cron — if OINKV-AUDIT-WAVE2.md exists → apply audit diffs via delegate_task (Wave 1 pattern); if Mike has approved A4/A7/A5 plans → dispatch ANVIL for A4 Phase 0 proposal.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> 🔔 **A4/A7/A5 plans in your queue** (`/home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md`). ANVIL is idle pending approval. OinkV second-opinion audit running in parallel — not blocking. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 10:58 CEST</div>
+            <div class="narrative-header">Sprint status is steady. Wave 1 (A1/A2/A3) all merged and canary-PASS (verified from completion markers). Wave 2 OinkV audit dispatched at 10:18 CEST is still actively running (session last-active 27s ago, 38 min in, expected 20-30 min — slightly over but producing tokens continuously, not stalled). No blocker, next cron cycle will check for `OINKV-AUDIT-WAVE2.md` and proceed to diff-merge → ANVIL A4 Phase 0.</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cron will check for OINKV-AUDIT-WAVE2.md → apply diffs → dispatch ANVIL A4 Phase 0 (if Mike has approved plans by then)</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> none — but Wave 2 plans (A4/A7/A5) still awaiting your approval in /home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md when convenient ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 10:21 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 10:24 CEST (08:24 UTC)</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Next cron (10:35 CEST): check for `OINKV-AUDIT-WAVE2.md`. If present → dispatch patcher subagent to apply merge diffs. If you've approved plans by then → ANVIL A4 Phase 0 on first clean audit.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 09:50 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 09:49 CEST (2026-04-19)</div>
+            <ul class="narrative-actions">
+<li>Verified all three A1/A2/A3 MERGED markers + canary-complete markers</li><li>Confirmed FORGE A4-A7-PLANS-READY.marker + 3 plan files present</li><li>Confirmed ANVIL is correctly idle (not stuck on a review loop) — genuine plan-gate block</li><li>No A2A nudge needed: FORGE is done, ANVIL is waiting on human gate</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 09:14 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 07:13 UTC</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> A2A ANVIL → "A4/A7/A5 plans approved. Proceed with A4 Phase 0 per /home/oinkv/forge-workspace/plans/TASK-A4-plan.md; follow A4 → A7 → A5 order." Then resume normal review/merge/canary loop.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 09:03 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 09:02</div>
+            <ul class="narrative-actions">
+<li>Verified all Wave 1 artifacts (merges, canaries, markers) — clean</li><li>Read FORGE A4-A7-SUMMARY; plans are complete and internally consistent</li><li>Confirmed ANVIL is correctly blocked (not silent) waiting on plan approval</li><li>No nudges needed — this is the approved escalation gate</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> If approval received, A2A ANVIL to start A4 Phase 0 proposal. If still pending next cycle (>30min), re-surface with same ask.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> FORGE recommends order **A4 → A7 → A5** (not original A4/A5/A7): • **A4** 🟡 PARTIALLY_CLOSED status (oink-sync lifecycle.py) — 0.5d, LOW risk • **A7** 🔴 UPDATE→NEW phantom-trade guard (signal-gateway micro-gate) — 1d, MEDIUM risk (needs A4 first so partial-closes are visible to the guard) • **A5** 🟡 Confidence scoring per parser — 0.5d, LOW risk, independent</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 08:52 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 08:51 UTC</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> on Mike approval → A2A ANVIL "Mike approved plans. Begin A4 Phase 0 proposal per `plans/TASK-A4-plan.md`." Without approval → continue polling; re-nudge Mike every 6h.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 08:40 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 06:40 UTC</div>
+            <ul class="narrative-actions">
+<li>Scanned all 4 agent workspaces + PR state — no intermediate artifacts to dispatch</li><li>Confirmed all Wave-1 tasks closed cleanly (no fix-forward pending)</li><li>Confirmed FORGE auto-triggered plan production (Wave-2) without prompt</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> If plans still un-approved → silent (no autonomous move possible) — If Mike approves A4 → A2A ANVIL to start A4 Phase 0 proposal on oink-sync</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> FORGE plans for A4 (PARTIALLY_CLOSED, 🟡), A7 (UPDATE→NEW phantom-trade guard, 🔴), A5 (confidence scoring, 🟡) need your approval. Files: /home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md  (start here) /home/oinkv/forge-workspace/plans/TASK-A4-plan.md /home/oinkv/forge-workspace/plans/TASK-A7-plan.md /home/oinkv/forge-workspace/plans/TASK-A5-plan.md FORGE recommends A4 → A7 → A5 (A7 depends on A4's PARTIALLY_CLOSED status). A7 is 🔴 CRITICAL (phantom-trade guard). Approve/revise and I'll dispatch ANVIL on the next tick. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 08:28 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 08:28 CEST (06:28 UTC)</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> If plans remain unapproved at next cycle, no productive auto-action remains — will stay silent unless Mike approves or new artifacts appear.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 08:15 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 08:13 CEST (Sun)</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On approval signal (marker or heartbeat change), A2A ANVIL → start A4 Phase 0 proposal per `/home/oinkv/forge-workspace/plans/TASK-A4-plan.md`.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 07:51 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 07:50 CEST (05:50 UTC)</div>
+            <ul class="narrative-actions">
+<li>Scanned all 4 workspaces — no new artifacts in past ~3h (last activity: A2 canary 02:40 CEST)</li><li>Confirmed FORGE plans shipped 00:55 UTC and sat unapproved for ~5h</li><li>Confirmed ANVIL HEARTBEAT explicitly blocked on "waiting_for_mike_plan_approval" — not a silent stall, not nudgeable</li><li>No open PRs on oink-sync / QuantisFarm; no pending reviews for VIGIL/GUARDIAN</li><li>Held off nudging ANVIL — the approval gate is genuine per AGENTS.md</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> once Mike approves plans, next tick will A2A ANVIL to begin A4 Phase 0 proposal.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> FORGE's Wave 2 plans are ready and the team is idle pending your sign-off.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 07:26 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 07:25 CEST</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> SILENT until Mike approves plans OR new artifact appears. If still blocked at +12h total, will ping Mike again with plan summaries inlined.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> Approve/edit/reject A4/A7/A5 plans to unblock ANVIL. Order FORGE recommends: A4 → A7 → A5. Plans + summary at /home/oinkv/forge-workspace/plans/. A reply of "approved, start A4" is enough — I'll dispatch ANVIL immediately. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 07:12 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 07:11 UTC</div>
+            <ul class="narrative-actions">
+<li>Verified all 3 Wave 1 canaries PASS via marker files + canary reports</li><li>Confirmed no open PRs, no pending reviews, no stale `running` task rows</li><li>No dispatches — everything is gated on Mike's Wave 2 plan approval</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On approval, A2A ANVIL with approved task list in order A4 → A7 → A5 to begin A4 Phase 0 proposal. No dispatch until then.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> Approve FORGE's Wave 2 plans (A4/A7/A5). Total estimated effort 2 days across both repos. Open question Q-A7-1 (include ticker_only matches in phantom-trade suppression?) — FORGE recommends yes with 48h monitoring. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 07:01 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 06:59 UTC (08:59 CEST)</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> dispatch ANVIL to start A4 Phase 0 proposal (oink-sync lifecycle.py, PARTIALLY_CLOSED status, 🟡 STANDARD)</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> 55 plan delivery, ~3.5h since 03:23 heartbeat): → Approve FORGE plans at /home/oinkv/forge-workspace/plans/ (TASK-A4-plan.md, TASK-A7-plan.md, TASK-A5-plan.md; summary: A4-A7-SUMMARY.md) → Order rationale: A4 first (adds PARTIALLY_CLOSED status → A7 phantom-trade guard needs it in its status check); A7 second (🔴 CRITICAL — micro-gate entry de-dup); A5 last (independent, 🟡, confidence scoring) → Open design questions in plans: Q-A7-1 (include ticker_only matches in suppression? FORGE recommends yes + 48h monitoring) → Estimated total effort: 2 days ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 06:49 CEST</div>
+            <div class="narrative-header">**SPRINT STATUS @ 06:48 CEST (Sun 19 Apr 2026)**</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 06:37 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 06:36</div>
+            <ul class="narrative-actions">
+<li>Scanned markers/reviews/canaries — A1/A2/A3 all green (VIGIL+GUARDIAN+Hermes converged, canaries PASS with FET #1159 preserved, natural TP_HIT validated on signal 1602)</li><li>Verified FORGE delivered A4/A7/A5 plans (`/home/oinkv/forge-workspace/plans/`) and wrote `A4-A7-PLANS-READY.marker` at 02:55 UTC</li><li>Confirmed ANVIL HEARTBEAT stuck on `awaiting_plan_approval` / blocker `waiting_for_mike_plan_approval` (3.5h)</li><li>No agents to dispatch — correctly blocked on human gate, not on orchestrator</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On Mike's "approved, ship A4 first," A2A ANVIL to start A4 Phase 0 proposal (oink-sync `lifecycle.py`, 🟡 STANDARD). Otherwise hold.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 06:26 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 06:25</div>
+            <ul class="narrative-actions">
+<li>Scanned all 4 workspaces + FORGE plans</li><li>Confirmed A1-MERGED (01:48), A2-MERGED (02:40), A3-MERGED (00:06); canaries PASS for all three</li><li>Confirmed FORGE A4/A7/A5 plans delivered 02:55 (sitting ~3.5h)</li><li>No open PRs, no pending reviews, no ANVIL A4 proposal yet — waiting on approval gate</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Once Mike approves the wave-2 order, A2A ANVIL to start A4 Phase 0 proposal (lifecycle.py PARTIALLY_CLOSED).</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 06:15 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 06:13 UTC</div>
+            <ul class="narrative-actions">
+<li>Verified all 3 canary markers + reviewer approvals on disk</li><li>Confirmed FORGE delivered A4/A7/A5 plans at 02:55 UTC (3h18m ago) and set A4-A7-PLANS-READY.marker</li><li>Confirmed ANVIL HEARTBEAT pinned at `current_phase: awaiting_plan_approval`, blocker `waiting_for_mike_plan_approval`</li><li>No new agent activity since 04:42 UTC (steady state, not silent-fail)</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Once Mike approves (or signals preferred order), next cron will A2A ANVIL to start Phase 0 proposal on whichever task is head-of-queue.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> Proposed order: **A4 → A7 → A5** (FORGE changed from original A4/A5/A7 because A7's pre-INSERT status check must include PARTIALLY_CLOSED; shipping A7 before A4 leaves a duplicate-suppression gap). • A4 🟡 PARTIALLY_CLOSED status (oink-sync lifecycle.py, ~0.5d, LOW risk, no migration) • A7 🔴 UPDATE→NEW phantom-trade guard (signal-gateway micro-gate, ~1d, MEDIUM risk — 5% entry threshold, needs 48h watch) • A5 🟡 Confidence scoring per parser (signal-gateway, ~0.5d, LOW risk, confidence column already exists) Open design Qs FORGE still has pending (NB: A1/A2/A3 shipped without formal answers — may be closeable): DQ-A1-1 schema cols field/old_value/new_value/source_msg_id (A1 shipped — likely answered implicitly, please confirm) DQ-A1-2 reconciler GHOST_CLOSURE source (deferred to A6?) DQ-A2-1 retroactive PnL recalc for pre-A2 signals DQ-A2-2 per-provider close_pct config (FORGE now proposes as A12) DQ-A3-1 also set fill_price for MARKET orders Single ask: **reply "approve A4→A7→A5" (+ any DQ answers you want folded in) and the next cycle kicks ANVIL into A4 Phase 0.** ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 05:39 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 05:38 UTC</div>
+            <ul class="narrative-actions">
+<li>Verified all three Wave 1 MERGED markers + GUARDIAN canary reports PASS.</li><li>Confirmed FORGE plans exist and are complete; verified A4 plan's technical grounding (status CHECK constraint, lifecycle.py locations, no migration needed).</li><li>Confirmed no ANVIL proposals for A4/A5/A7 exist yet (correct — gate closed).</li><li>No nudges sent; no agents silent-past-SLA; nothing to unblock autonomously.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> on next cycle, if plans approved → A2A ANVIL "plans approved, proceed with A4 Phase 0 proposal (order A4→A7→A5)." Otherwise hold.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 05:27 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 05:27 GMT+2</div>
+            <ul class="narrative-actions">
+<li>Scanned all agent workspaces — no new markers since A2 canary at 04:42</li><li>Verified A2 canary PASS (GUARDIAN report: FET #1159 intact, signal #1602 PHA natural TP_HIT validated, baselines stable)</li><li>Confirmed FORGE plans ready: TASK-A4/A5/A7-plan.md + A4-A7-SUMMARY.md in /home/oinkv/forge-workspace/plans/</li><li>Confirmed ANVIL parked on "waiting_for_mike_plan_approval" (HEARTBEAT stale since 01:23, but blocker is genuine — plans weren't ready until 02:55)</li><li>Verified no prior Mike-notification dispatched — this is first surface of the approval request</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> If Mike approves, A2A ANVIL to start A4 Phase 0 proposal on order A4 → A7 → A5. If Mike wants revisions, A2A FORGE. Otherwise re-poll next cycle.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 05:04 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 05:03 CEST</div>
+            <ul class="narrative-actions">
+<li>Verified A2 canary PASS marker, all 5 checks green, baselines stable (SC-2 12.09%, KPI-R1 20.76%, 0 NULL remaining_pct)</li><li>Confirmed no new activity from ANVIL/FORGE since 03:23 re-ping</li><li>Scanned task_runs: no pending/failed dispatches; no zombies</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> if Mike approves A4→A7→A5, A2A ANVIL to start A4 Phase 0 proposal (plan path + concerns distillation). Otherwise hold and monitor A2 T+24h checkpoint (2026-04-20T00:40Z).</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 04:53 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 04:51 UTC</div>
+            <ul class="narrative-actions">
+<li>A2 canary ✅ PASS confirmed (GUARDIAN closed at 04:42Z — natural TP_HIT on signal #1602 PHA validated remaining_pct 100→75, baselines stable, FET #1159 untouched). This is the only state change since last cron.</li><li>Verified no new proposals/reviews/PRs; ANVIL correctly idle at `awaiting_plan_approval`; no agents silent or stuck.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On next cycle, if Mike has approved FORGE's plans → A2A ANVIL to start A4 Phase 0 proposal. Otherwise remain silent.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> Approve FORGE's A4→A7→A5 plan bundle (`/home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md`) + answer Q-A7-1 (include `ticker_only` matches in phantom-trade suppression set — FORGE recommends YES + 48h monitoring). Nothing else moves until this clears. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 04:40 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 04:40</div>
+            <ul class="narrative-actions">
+<li>Verified PHA #1602 TP2 event id=47 @ 02:34Z: close_pct=25, remaining_pct=75→rich payload landed (A2 checks #3/#4 satisfied).</li><li>Confirmed FET #1159 legacy row pristine; SC-2/SC-4/KPI-R1/KPI-R4 stable at 490/20.76%/80%.</li><li>Dispatched GUARDIAN to flip A2-CANARY.md verdict ⏳ PENDING → ✅ PASS and write A2-CANARY-COMPLETE.marker.</li><li>Confirmed FORGE dropped A4/A7/A5 plans (68KB total) + A4-A7-PLANS-READY.marker at 02:55Z — order A4→A7→A5.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Next cycle polls A2-CANARY-COMPLETE.marker + awaits Mike's A4/A7/A5 approval. If approved, A2A ANVIL to start A4 Phase 0 proposal.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> **A4/A7/A5 plans ready for approval** — /home/oinkv/forge-workspace/plans/A4-A7-SUMMARY.md (recommended order A4→A7→A5; A4=🟡/small lifecycle.py, A7=🔴/phantom-trade guard, A5=🟡/confidence scoring). ANVIL is idle pending your greenlight. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 04:03 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 02:02 UTC</div>
+            <ul class="narrative-actions">
+<li>Scanned all artefacts — no stuck reviews, no open PRs requiring merge action,</li><li>Confirmed ANVIL is correctly idle (not silent) — blocker is human approval gate,</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> A2A ANVIL "Mike approved A4→A7→A5 plan order.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 03:36 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 01:34 UTC (Sun 2026-04-19)</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> If Mike approves plans, next cron will A2A ANVIL to start A4 Phase 0 proposal. Otherwise re-verify A2 canary at T+4h (04:40 UTC) and escalate if GUARDIAN hasn't posted an update.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 03:24 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 03:24 CEST</div>
+            <ul class="narrative-actions">
+<li>Confirmed A1+A2+A3 merged; A2 canary ⏳ PENDING (weekend low-vol, 0 natural TP-hits yet, schema/baselines clean — fallback kicks in at T+24h = 2026-04-20T00:40Z, no data drift detected)</li><li>Verified FORGE shipped A4/A7/A5 plans (marker 02:55Z, order A4→A7→A5, ~2 day total estimate)</li><li>Nudged ANVIL — HEARTBEAT was stale since 00:41Z, still blocked on FORGE; got it updated to `awaiting_plan_approval` and ANVIL confirmed receipt of the three plan files</li><li>Did NOT let ANVIL start A4 Phase 0 yet — plans explicitly need Mike's sign-off first (per FORGE's ready marker)</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Poll for Mike's plan approval signal (or new FORGE/ANVIL/GUARDIAN artifact). If A2 canary still <3 TP-hits at 04:40Z (T+4h), note it; no intervention required until T+24h.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 03:07 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 01:06 UTC (Sun Apr 19)</div>
+            <ul class="narrative-actions">
+<li>Scanned proposals/reviews/canaries — A1/A2/A3 all show both reviewers PASS (≥9.55) and merged</li><li>Confirmed FORGE delivered wave-2 plans (A4/A7/A5) at 02:55 CEST with summary + 3 TASK-*.md files</li><li>Confirmed ANVIL HEARTBEAT still reads "waiting_for_FORGE_A4_plan" — it hasn't seen the new marker yet</li><li>A2 canary schema + baselines clean (FET #1159 final_roi=3.37 preserved, 490 signals backfilled to remaining_pct=100)</li><li>No TP_HIT events since 00:39Z deploy; GUARDIAN's low-volume fallback does not trigger until T+24h</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 02:54 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 00:53 UTC</div>
+            <ul class="narrative-actions">
+<li>Scanned state across all 4 workspaces — confirmed A1/A2/A3 all MERGED with markers</li><li>Verified FORGE shipped TASK-A4-plan.md (17KB), TASK-A5-plan.md (15KB), TASK-A7-plan.md (17KB) + summary</li><li>Confirmed no open PRs pending review; no review requests in flight</li><li>A2 canary read — 5/5 pre-checks clean (schema activated, FET #1159 preserved, SC-2/KPI-R1/R4 within noise)</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On next cycle, if Mike has approved A4/A5/A7 plans → A2A ANVIL to start A4 Phase 0 proposal. Otherwise hold. Continue monitoring A2 canary at T+4h (04:40Z) for first natural TP-hit.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 02:42 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 00:42Z</div>
+            <ul class="narrative-actions">
+<li>Merged PR #5 on oink-sync (A2, commit 6b21a207) — VIGIL 9.85 / GUARDIAN 9.55, both ≥9.5 🔴 threshold</li><li>Deployed A2: restarted oink-sync.service; verified 'A2: added remaining_pct column to signals' in log; 490/490 signals backfilled to 100.0; FET #1159 unchanged at 3.37</li><li>Dispatched GUARDIAN → A2 canary (write to /home/oinkv/guardian-workspace/canary-reports/A2-CANARY.md)</li><li>Dispatched ANVIL → stand down for A4 until FORGE plan arrives; wrote A2-MERGED.marker, cleared A2-PR-OPEN/READY markers</li><li>Dispatched FORGE → produce TASK-A4/A5/A7-plan.md + A4-A7-SUMMARY.md for Mike's approval</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle — poll GUARDIAN A2-CANARY report, poll FORGE A4-A7-PLANS-READY marker, then A2A Mike with summary when ready for approval.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 02:25 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 00:25 UTC</div>
+            <ul class="narrative-actions">
+<li>Scanned artifacts: confirmed A2 PR #5 OPEN on oink-sync, VIGIL Phase 1 complete (9.85/10), GUARDIAN Phase 1 missing.</li><li>Dispatched A2A nudge to GUARDIAN requesting Phase 1 review (5-dim data scoring, FET #1159 re-verify, verdict → A2-GUARDIAN-PHASE1-REVIEW.md). Running in background; turn will complete autonomously.</li><li>Included VIGIL's SHOULD-FIX items (docstring, proposal §5 table, log formatting — all documentation only) so GUARDIAN can evaluate alignment.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On next tick, check for A2-GUARDIAN-PHASE1-REVIEW.md. If PASS (≥9.5) → A2A ANVIL to merge PR #5 + trigger GUARDIAN canary. If REVISE → A2A ANVIL with fix list. If still silent >30min past dispatch → escalate to Mike.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 02:10 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 02:05</div>
+            <ul class="narrative-actions">
+<li>Detected both A2 Phase 0 reviews complete (VIGIL + GUARDIAN both APPROVE)</li><li>Wrote consolidated A2-PHASE0-APPROVED.marker with MUST-FIX × 3 / SHOULD-FIX × 3 / SUGGESTION × 2 distilled from both reviews</li><li>Back-filled missing A2-VIGIL-PHASE0-COMPLETE.marker for state-machine consistency</li><li>Fire-and-forget A2A to ANVIL with Phase 1 instructions (branch: anvil/A2-remaining-pct-blended-pnl, repo: oink-sync); dispatch verified running in task_runs (task 16853653, 02:04:59)</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Next tick — check for A2-PR-OPEN.marker / new oink-sync branch; if PR opened, kick off parallel Hermes-level review + VIGIL/GUARDIAN Phase 1 code reviews.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 01:50 CEST</div>
+            <div class="narrative-header">Sprint status output:</div>
+            <ul class="narrative-actions">
+<li>Hermes-level review written to /home/oinkv/hermes-workspace/A1-HERMES-REVIEW.md (verdict LGTM, 35/35 tests green, wrapper-layer `commit=True` validated as architecturally superior, scope-bleed nit flagged re: dbe33d4 in PR #4)</li><li>Merged oinkfarm PR #126 (squash, branch deleted, commit 5b242c56) + oink-sync PR #4 (squash, branch deleted, commit 3d60538a) with review-attributed bodies</li><li>Wrote /home/oinkv/anvil-workspace/A1-MERGED.marker (consolidated VIGIL 9.60 + GUARDIAN 9.80 + HERMES LGTM record)</li><li>Dispatched GUARDIAN A1 canary (first try hit "assistant message prefill" model reject; retry `1b69e16a` running per task_runs)</li><li>Dispatched ANVIL to ack merge + start A2 Phase 0 proposal in parallel (task `b9105e5c` running)</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Next cron tick — scan for /home/oinkv/guardian-workspace/canary-reports/A1-CANARY-COMPLETE.marker and /home/oinkv/anvil-workspace/proposals/A2-READY-FOR-REVIEW.marker. If GUARDIAN canary PASS + A2 proposal ready → A2A VIGIL+GUARDIAN Phase 0 review. If canary FAIL → pause A2, investigate rollback, escalate to Mike.</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 01:26 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 01:22Z</div>
+            <ul class="narrative-actions">
+<li>Verified A3 canary + merge complete; no action needed</li><li>Confirmed A1 Phase 1 review verdicts; cross-checked MUST-FIX exists on disk</li><li>A2A → ANVIL (background, PID 3955689): revise both branches with PRICE_ALERT addition + optional test rename, push, then A2A VIGIL for Round 2</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> If ANVIL has pushed new commits to anvil/A1-signal-events-extension on both repos → check for VIGIL/GUARDIAN Round 2 reviews — If both Round 2 approve (≥9.5 / ≥9.5) → Hermes-level review, then merge PR #126 and PR #4 via gh CLI, dispatch GUARDIAN canary — If ANVIL silent >30min past nudge → follow up</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 01:11 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 23:11 UTC</div>
+            <ul class="narrative-actions">
+<li>Verified state: 3 markers (A1 approved, A3 merged, A3 canary PASS-backfill) consistent with ANVIL heartbeat</li><li>Confirmed ANVIL active via gateway lane logs (tool exec @ 23:10Z)</li><li>Sent lightweight status nudge to ANVIL (queued; 60s CLI timeout is cosmetic, gateway processed)</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next tick — scan for (a) pushed anvil/A1-* branch, (b) PR opened on oinkfarm or oink-sync, (c) A3 first live signal post-market-open for GUARDIAN canary. If PR opens → dispatch Hermes code review + A2A VIGIL+GUARDIAN.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> none. ```</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 00:56 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 22:55Z</div>
+            <ul class="narrative-actions">
+<li>Verified A3 MERGED + canary PASS (backfill) / PENDING (live, expected for weekend)</li><li>Verified A1 Phase 0 APPROVED and ANVIL actively in Phase 1 (<30 min since last write)</li><li>No stale reviews, no open A1 PR yet, no REQUEST_CHANGES loops</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> if no A1 PR on oinkfarm/oink-sync within ~2h, nudge ANVIL for ETA; otherwise when PR opens → dispatch Hermes-level review + A2A VIGIL/GUARDIAN</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 00:44 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 00:43 (local) / 22:43Z</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle, poll for A1 branch push / PR open. If PR</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 00:32 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 22:32Z (Sat)</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle — check for pushed A1 branch / open PR → if present dispatch Hermes review + A2A VIGIL/GUARDIAN Phase 1; if ANVIL silent >30min w/o push, nudge</div>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 19, 00:21 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 00:17 UTC</div>
+            <ul class="narrative-actions">
+<li>Detected VIGIL (00:11) + GUARDIAN (00:15) both APPROVED A1 Phase 0; ANVIL heartbeat stale from 00:07 (unaware)</li><li>Wrote /home/oinkv/anvil-workspace/proposals/A1-PHASE0-APPROVED.marker consolidating verdicts + reviewer concerns</li><li>A2A-dispatched ANVIL to start Phase 1 with concrete guidance: (1) Day 1 = zero-event bug diagnosis first, (2) tight try/except scope around event INSERT only, (3) vendored-from marker comment, (4) followup files for DQ-2/DQ-3, (5) canary fallback + AUTOINCREMENT rollback note</li><li>Verified A3 canary state — backfill 8/8 clean, no metric regression; next checkpoint 22h out, not due</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle, scan for A1 feature branch + ANVIL heartbeat transition to `implementation`; if PR opens on oinkfarm/oink-sync with `anvil/A1-*`, dispatch Hermes code review + A2A VIGIL/GUARDIAN Phase 1.</div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="tab-panel" id="tab-plans">
+      <ul class="file-list">
+        <li>
+          <span class="mono file-name">TASK-A1-plan.md</span>
+          <span class="file-title">Task A.1: signal_events Table + 12 Event Type Instrumentation</span>
+          <span class="mono muted file-size">22.3 KB</span>
+          <span class="mono muted file-mtime">Apr 18, 23:27 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">TASK-A2-plan.md</span>
+          <span class="file-title">Task A.2: remaining_pct Model + Blended PnL Fix</span>
+          <span class="mono muted file-size">20.0 KB</span>
+          <span class="mono muted file-mtime">Apr 18, 23:28 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">TASK-A3-plan.md</span>
+          <span class="file-title">Task A.3: Auto filled_at for MARKET Orders</span>
+          <span class="mono muted file-size">12.8 KB</span>
+          <span class="mono muted file-mtime">Apr 18, 23:28 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">TASK-A4-plan.md</span>
+          <span class="file-title">Task A.4: PARTIALLY_CLOSED Status for Partial TP Signals</span>
+          <span class="mono muted file-size">17.0 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 02:47 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">TASK-A5-plan.md</span>
+          <span class="file-title">Task A.5: Parser-Type Confidence Scoring</span>
+          <span class="mono muted file-size">17.7 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 11:42 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">TASK-A7-plan.md</span>
+          <span class="file-title">Task A7: UPDATE→NEW Detection (Phantom Trade Prevention)</span>
+          <span class="mono muted file-size">22.1 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 11:40 CEST</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-panel" id="tab-audits">
+      <ul class="file-list">
+        <li>
+          <span class="mono file-name">OINKV-AUDIT-WAVE2-A4.md</span>
+          <span class="file-title">OINKV-AUDIT-WAVE2-A4 (Hermes fallback — OinkV LLM timeout)</span>
+          <span class="mono muted file-size">11.0 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 11:30 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">OINKV-AUDIT-WAVE2-A5.md</span>
+          <span class="file-title">OINKV Staleness Audit — TASK-A5-plan.md</span>
+          <span class="mono muted file-size">18.9 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 11:32 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">OINKV-AUDIT-WAVE2-A7.md</span>
+          <span class="file-title">OinkV Engineering Audit — FORGE Plan A7 (Wave 2)</span>
+          <span class="mono muted file-size">21.8 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 11:31 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">OINKV-AUDIT-WAVE2.md</span>
+          <span class="file-title">OINKV-AUDIT-WAVE2 (Hermes fallback — OinkV LLM timeout)</span>
+          <span class="mono muted file-size">4.2 KB</span>
+          <span class="mono muted file-mtime">Apr 19, 11:33 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">OINKV-AUDIT.md</span>
+          <span class="file-title">OinkV Engineering Audit — FORGE Plans A1/A2/A3</span>
+          <span class="mono muted file-size">23.4 KB</span>
+          <span class="mono muted file-mtime">Apr 18, 23:23 CEST</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner mono muted">
+    <div>
+checkpoint@—    </div>
+    <div>
+        Last orchestrator cycle: Apr 19, 11:48 CEST
+    </div>
+    <div>
+      generated Apr 19, 12:03 CEST
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
