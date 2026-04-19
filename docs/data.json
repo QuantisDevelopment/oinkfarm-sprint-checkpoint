@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-19T17:44:23+00:00",
-  "generated_at_cest": "2026-04-19T19:44:23+02:00",
+  "generated_at_utc": "2026-04-19T17:57:11+00:00",
+  "generated_at_cest": "2026-04-19T19:57:11+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -1618,7 +1618,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-19T17:33:21+00:00",
-      "last_active_human": "11m ago",
+      "last_active_human": "23m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -1631,7 +1631,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-19T16:36:28+00:00",
-      "last_active_human": "1h 7m ago",
+      "last_active_human": "1h 20m ago",
       "light": "yellow",
       "heartbeat": {
         "current_task": "A10",
@@ -1649,7 +1649,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-19T16:27:09+00:00",
-      "last_active_human": "1h 17m ago",
+      "last_active_human": "1h 30m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -1660,7 +1660,7 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-19T16:29:28+00:00",
-      "last_active_human": "1h 14m ago",
+      "last_active_human": "1h 27m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -1670,8 +1670,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-19T17:44:22+00:00",
-      "last_active_human": "0s ago",
+      "last_active": "2026-04-19T17:57:10+00:00",
+      "last_active_human": "1s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -1682,12 +1682,21 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-19T16:06:29+00:00",
-      "last_active_human": "1h 37m ago",
+      "last_active_human": "1h 50m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-19T17:57:10+00:00",
+      "time_local": "2026-04-19T19:57+02:00",
+      "header": "SPRINT STATUS @ 19:54 UTC",
+      "actions": [],
+      "next": "Next cycle will check for Mike's A10 ship-it, FORGE plan approvals, or A8 24h canary result; then dispatch ANVIL→B1 or A10 follow-up accordingly.",
+      "blocker": "1. 🔴 A10 SHIP-IT — PR #135, both reviewers PASS ≥9.5 threshold. Commands ready in /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker. Blocks all of Phase B. 2. 📋 FORGE plan approvals — B1-B5 (Wave 1, critical path), B6-B9/B12 (Wave 2-4, DRAFT pending OinkV audit), Phase C + Heavy Hybrid Roadmap. See /home/oinkv/forge-workspace/PHASE-B-PLANS-READY.marker and HEAVY-HYBRID-ROADMAP-READY.marker.",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_19-57-10.md"
+    },
     {
       "time_utc": "2026-04-19T17:44:22+00:00",
       "time_local": "2026-04-19T19:44+02:00",
@@ -2192,15 +2201,6 @@
       "next": "once Mike approves plans, next tick will A2A ANVIL to begin A4 Phase 0 proposal.",
       "blocker": "FORGE's Wave 2 plans are ready and the team is idle pending your sign-off.",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_07-51-02.md"
-    },
-    {
-      "time_utc": "2026-04-19T05:26:07+00:00",
-      "time_local": "2026-04-19T07:26+02:00",
-      "header": "SPRINT STATUS @ 07:25 CEST",
-      "actions": [],
-      "next": "SILENT until Mike approves plans OR new artifact appears. If still blocked at +12h total, will ping Mike again with plan summaries inlined.",
-      "blocker": "Approve/edit/reject A4/A7/A5 plans to unblock ANVIL. Order FORGE recommends: A4 → A7 → A5. Plans + summary at /home/oinkv/forge-workspace/plans/. A reply of \"approved, start A4\" is enough — I'll dispatch ANVIL immediately. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_07-26-07.md"
     }
   ],
   "plans": [
@@ -2367,21 +2367,21 @@
     {
       "agent": "Hermes",
       "agent_emoji": "🪽",
-      "raw": "A10 DB merge needs \"ship it\" — 912 rows import, 494→1406 signals, backup SHA256 verified, rollback one-liner ready. PR #135. See /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker. Also: FORGE Phase B/Heavy Hybrid plans ready for your approval (6 design Qs Q-HH-1..6 in HEAVY-HYBRID-ROADMAP). ```",
-      "label": "A10 DB merge needs \"ship it\" — 912 rows import, 494→1406 signals, backup SHA256 verified, rollback one-liner ready.",
+      "raw": "1. 🔴 A10 SHIP-IT — PR #135, both reviewers PASS ≥9.5 threshold. Commands ready in /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker. Blocks all of Phase B. 2. 📋 FORGE plan approvals — B1-B5 (Wave 1, critical path), B6-B9/B12 (Wave 2-4, DRAFT pending OinkV audit), Phase C + Heavy Hybrid Roadmap. See /home/oinkv/forge-workspace/PHASE-B-PLANS-READY.marker and HEAVY-HYBRID-ROADMAP-READY.marker.",
+      "label": "🔴 A10 SHIP-IT — PR #135, both reviewers PASS ≥9.5 threshold.",
       "severity": "mike",
       "current_task": null,
       "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-19T17:44:22+00:00",
-    "time_local": "2026-04-19T19:44+02:00",
-    "header": "All signals are clear. Sprint status synthesized:",
+    "time_utc": "2026-04-19T17:57:10+00:00",
+    "time_local": "2026-04-19T19:57+02:00",
+    "header": "SPRINT STATUS @ 19:54 UTC",
     "actions": [],
-    "next": "On next cycle, if A10 merged → dispatch GUARDIAN canary + A2A ANVIL to start B1 Phase 0.",
-    "blocker": "A10 DB merge needs \"ship it\" — 912 rows import, 494→1406 signals, backup SHA256 verified, rollback one-liner ready. PR #135. See /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker. Also: FORGE Phase B/Heavy Hybrid plans ready for your approval (6 design Qs Q-HH-1..6 in HEAVY-HYBRID-ROADMAP). ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_19-44-22.md"
+    "next": "Next cycle will check for Mike's A10 ship-it, FORGE plan approvals, or A8 24h canary result; then dispatch ANVIL→B1 or A10 follow-up accordingly.",
+    "blocker": "1. 🔴 A10 SHIP-IT — PR #135, both reviewers PASS ≥9.5 threshold. Commands ready in /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker. Blocks all of Phase B. 2. 📋 FORGE plan approvals — B1-B5 (Wave 1, critical path), B6-B9/B12 (Wave 2-4, DRAFT pending OinkV audit), Phase C + Heavy Hybrid Roadmap. See /home/oinkv/forge-workspace/PHASE-B-PLANS-READY.marker and HEAVY-HYBRID-ROADMAP-READY.marker.",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_19-57-10.md"
   },
-  "commit": "104c99d7629f"
+  "commit": "d465944d297a"
 }
