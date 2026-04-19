@@ -2,7 +2,7 @@
 
 **Tier:** 🔴 CRITICAL  
 **Wave:** B1  
-**Status:** ⚙️ CODING — Phase 0 approved, implementation in progress  
+**Status:** 🧪 CANARY — Merged, canary in flight  
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** —  
@@ -25,6 +25,8 @@ Every DB-touching module in OinkFarm currently uses raw `sqlite3` directly: `sql
 | 7 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 00:01 CEST on 20 Apr 2026 | [B1-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/B1-PHASE0-APPROVED.marker) |
 | 8 | Phase 1 review | 🔍 VIGIL | 9.55/10 | 01:11 CEST on 20 Apr 2026 | [B1-VIGIL-PHASE1-REVIEW.md](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE1-REVIEW.md) |
 | 9 | Phase 1 review | 🛡️ GUARDIAN | 9.80/10 | 00:34 CEST on 20 Apr 2026 | [B1-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE1-REVIEW.md) |
+| 10 | Merged | ⚒️ ANVIL | MERGED | 01:20 CEST on 20 Apr 2026 | [B1-MERGED.marker](../../raw-artifacts/anvil/markers/B1-MERGED.marker) |
+| 11 | Canary | 🛡️ GUARDIAN | ⏳ PENDING | 01:23 CEST on 20 Apr 2026 | [B1-CANARY.md](../../raw-artifacts/guardian/canary-reports/B1-CANARY.md) |
 
 ## Key Decisions
 
@@ -41,6 +43,7 @@ _None._
 - **ANVIL proposal:** [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) — 20.9 KB
 - **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE1-REVIEW.md)
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) · [Phase 1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE1-REVIEW.md)
+- **Canary report:** [B1-CANARY.md](../../raw-artifacts/guardian/canary-reports/B1-CANARY.md) — PENDING
 
 ## Lessons Learned
 
