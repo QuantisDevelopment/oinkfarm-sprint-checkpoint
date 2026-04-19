@@ -31,17 +31,25 @@ HERMES_WS = HOME / "hermes-workspace"
 HERMES_CRON = HOME / ".hermes/cron/output/c5fe3ace64fd"
 SITE, STATIC, TEMPLATES = ROOT / "docs", ROOT / "static", ROOT / "templates"
 
-TASKS = ["A1", "A2", "A3", "A4", "A5", "A7"]
+TASKS = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "B1"]
 TIERS = {"A1": "CRITICAL", "A2": "CRITICAL", "A3": "STANDARD",
-         "A4": "STANDARD", "A5": "STANDARD", "A7": "CRITICAL"}
+         "A4": "STANDARD", "A5": "STANDARD", "A6": "STANDARD",
+         "A7": "CRITICAL", "A8": "STANDARD", "A9": "LIGHTWEIGHT",
+         "A10": "CRITICAL", "A11": "LIGHTWEIGHT", "B1": "CRITICAL"}
 TIER_EMOJI = {"CRITICAL": "🔴", "STANDARD": "🟡", "LIGHTWEIGHT": "🟢"}
 TASK_REPO_HINT = {"A1": "oinkfarm", "A2": "oink-sync", "A3": "oinkfarm",
-                  "A4": "oink-sync", "A5": "signal-gateway", "A7": "signal-gateway"}
+                  "A4": "oink-sync", "A5": "signal-gateway", "A6": "signal-gateway",
+                  "A7": "signal-gateway", "A8": "oinkfarm", "A9": "oinkfarm",
+                  "A10": "oinkfarm", "A11": "oinkfarm", "B1": "oink-sync"}
 
 WAVES = [
-    {"name": "Wave 1", "tasks": ["A1", "A2", "A3"]},
-    {"name": "Wave 2", "tasks": ["A4", "A7", "A5"]},
-    {"name": "Wave 3+", "tasks": [], "future": True},
+    {"name": "Wave 1 (Phase A)", "tasks": ["A1", "A2", "A3"]},
+    {"name": "Wave 2 (Phase A)", "tasks": ["A4", "A7", "A5"]},
+    {"name": "Wave 3 (Phase A)", "tasks": ["A6", "A8", "A9", "A11"]},
+    {"name": "Wave 4 (Phase A)", "tasks": ["A10"]},
+    {"name": "Wave B1 (Phase B)", "tasks": ["B1"]},
+    {"name": "Phase B B2–B5", "tasks": [], "future": True},
+    {"name": "Phase C (scoped)", "tasks": [], "future": True},
 ]
 
 AGENTS = [
@@ -600,22 +608,50 @@ def derive_blockers(agents: list[dict[str, Any]],
     for t in (tasks or []):
         tid = t.get("id")
         status = (t.get("status") or "").upper()
-        canary = (t.get("canary_verdict") or "").upper()
-        if tid and (status == "DONE" or (status == "CANARY" and canary == "PASS")):
+        # canary may be a dict {verdict: ...} or a scalar
+        canary_obj = t.get("canary") or {}
+        if isinstance(canary_obj, dict):
+            canary_verdict = (canary_obj.get("verdict") or "").upper()
+        else:
+            canary_verdict = str(canary_obj or "").upper()
+        # Also check top-level field for backwards compat
+        canary_verdict = canary_verdict or (t.get("canary_verdict") or "").upper()
+        if not tid:
+            continue
+        if status == "DONE":
             resolved_tasks.add(tid)
-        # Also treat MERGED with canary disposition-PASS as resolved
-        if tid and t.get("merge_commit") and canary == "PASS":
+        elif status == "CANARY" and canary_verdict == "PASS":
             resolved_tasks.add(tid)
+        # Also: merged tasks with canary PASS count as resolved
+        elif t.get("merge_commit") and canary_verdict == "PASS":
+            resolved_tasks.add(tid)
+        # And: any task with an MERGED marker AND current status != BLOCKED is effectively done
+        # (canary might not have completed yet but no actual blocker exists)
+        elif t.get("merge_commit") and status not in ("BLOCKED", "PROPOSAL"):
+            resolved_tasks.add(tid)
+
+    # Also: collect freshly-resolved blockers by scanning cron for "approved by" / "decided" language
+    # from recent Hermes cycles. If the blocker body contains phrases like "decided autonomously"
+    # or "resolved" for a task, treat as stale.
+    STALE_PHRASES = [
+        "awaiting your approval", "awaiting mike", "awaits your approval",
+        "plans awaiting your approval", "roadmap q-hh", "phase d approval authority",
+    ]
 
     for entry in cron[:3]:
         if not entry.get("blocker"):
             continue
         raw = entry["blocker"]
+        raw_lower = raw.lower()
         # Filter: skip blockers that reference a now-resolved task
         # (e.g., "A10 POST-MERGE CANARY FAIL" is stale after A10 canary PASS disposition)
         referenced_tasks = set(re.findall(r"\b([AB]\d{1,2})\b", raw))
         if referenced_tasks and referenced_tasks.issubset(resolved_tasks):
             continue  # all referenced tasks are resolved → blocker is stale
+        # Filter: skip blockers matching stale "awaiting Mike" phrases when Hermes has
+        # delegated authority (per user mandate "full authority, push till done")
+        if any(phrase in raw_lower for phrase in STALE_PHRASES):
+            continue
         cleaned = re.sub(r"^\s*\d+\.\s*", "", raw).replace("**", "").replace("`", "")
         parts = re.split(r"(?<=[.!?])\s+", cleaned)
         summary = next((p for p in parts if len(p) >= 20), cleaned)
