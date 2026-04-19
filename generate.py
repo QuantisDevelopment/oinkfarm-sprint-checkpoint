@@ -216,6 +216,11 @@ def extract_verdict(text: str) -> str | None:
 def extract_canary_verdict(text: str) -> str | None:
     if not text:
         return None
+    # Prefer explicit Hermes disposition (overrides body text)
+    if re.search(r"(?im)Hermes Disposition[\s\S]*?Canary verdict:\s*✅?\s*PASS", text) or \
+       re.search(r"(?im)Resolution:\s*Canary upgraded to\s*✅?\s*PASS", text) or \
+       re.search(r"(?im)^\s*\*\*Verdict:\s*✅?\s*PASS", text):
+        return "PASS"
     low = text.lower()
     if re.search(r"canary\s*status[^\n]*fail", low): return "FAIL"
     if re.search(r"canary\s*status[^\n]*warn", low): return "WARN"

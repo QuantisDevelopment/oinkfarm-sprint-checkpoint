@@ -2,7 +2,7 @@
 
 **Tier:** 🔴 CRITICAL — Financial Hotpath from inception  
 **Wave:** 2  
-**Status:** 🧪 CANARY — Merged, canary in flight  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)  
@@ -27,7 +27,7 @@ When an LLM extraction classifies a trader UPDATE message (e.g., "SL moved to 0.
 | 9 | Phase 1 review | 🛡️ GUARDIAN | 10.00/10 | 13:09 CEST on 19 Apr 2026 | [A7-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE1-REVIEW.md) |
 | 10 | Hermes parallel review | 🪽 Hermes | ✅ LGTM | 13:26 CEST on 19 Apr 2026 | [A7-HERMES-REVIEW.md](../../raw-artifacts/hermes/A7-HERMES-REVIEW.md) |
 | 11 | Merged | ⚒️ ANVIL | MERGED [6157315](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158) | 13:27 CEST on 19 Apr 2026 | [A7-MERGED.marker](../../raw-artifacts/anvil/markers/A7-MERGED.marker) |
-| 12 | Canary | 🛡️ GUARDIAN | ⏳ PENDING | 22:38 CEST on 19 Apr 2026 | [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) |
+| 12 | Canary | 🛡️ GUARDIAN | ✅ PASS | 22:38 CEST on 19 Apr 2026 | [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) |
 
 ## Key Decisions
 
@@ -46,13 +46,13 @@ _None._
 - **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/A7-VIGIL-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/vigil/reviews/A7-VIGIL-PHASE1-REVIEW.md)
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE1-REVIEW.md)
 - **Hermes review:** [A7-HERMES-REVIEW.md](../../raw-artifacts/hermes/A7-HERMES-REVIEW.md) — LGTM
-- **Canary report:** [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) — PENDING
+- **Canary report:** [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) — PASS
 - **Merge commit:** [`61573158`](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158) (oinkfarm PR #130)
 - **PR(s):** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+_(Lessons distilled at wave close.)_
 
 ---
 
