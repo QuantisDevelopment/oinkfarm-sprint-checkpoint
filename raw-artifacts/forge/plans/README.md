@@ -1,6 +1,6 @@
 # raw-artifacts/forge/plans/
 
-FORGE technical plans, A-group summaries, OinkV audits. 32 file(s) copied from `/home/oinkv/forge-workspace/plans`.
+FORGE technical plans, A-group summaries, OinkV audits. 33 file(s) copied from `/home/oinkv/forge-workspace/plans`.
 
 | File | Size | Last modified |
 |---|---|---|
@@ -9,6 +9,7 @@ FORGE technical plans, A-group summaries, OinkV audits. 32 file(s) copied from `
 | [A4-A7-SUMMARY.md](A4-A7-SUMMARY.md) | 5.1 KB | 02:54 CEST on 19 Apr 2026 |
 | [A6-A11-PLANS-READY.marker](A6-A11-PLANS-READY.marker) | 1.5 KB | 14:27 CEST on 19 Apr 2026 |
 | [A6-A11-SUMMARY.md](A6-A11-SUMMARY.md) | 4.9 KB | 14:25 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-DISPATCHED.marker](OINKV-AUDIT-PHASE-B-DISPATCHED.marker) | 1.1 KB | 20:53 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-WAVE2-A4.md](OINKV-AUDIT-WAVE2-A4.md) | 13.1 KB | 12:10 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-WAVE2-A5.md](OINKV-AUDIT-WAVE2-A5.md) | 18.9 KB | 11:32 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-WAVE2-A7.md](OINKV-AUDIT-WAVE2-A7.md) | 21.8 KB | 11:31 CEST on 19 Apr 2026 |

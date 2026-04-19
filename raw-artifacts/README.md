@@ -2,13 +2,13 @@
 
 Verbatim copies of every agent artifact produced during the OinkFarm Implementation Foresight Sprint. Files are copied (not symlinked), so this directory is self-contained for audit.
 
-**Total files:** 141
+**Total files:** 142
 
 ## Directory Map
 
 | Path | Contents | Count |
 |---|---|---|
-| [forge/plans/](forge/plans/) | FORGE technical plans, A-group summaries, OinkV audits | 32 |
+| [forge/plans/](forge/plans/) | FORGE technical plans, A-group summaries, OinkV audits | 33 |
 | [anvil/proposals/](anvil/proposals/) | ANVIL Phase 0 proposals + approval markers | 22 |
 | [anvil/markers/](anvil/markers/) | Merge, ready-for-review, and lifecycle markers | 17 |
 | [anvil/followups/](anvil/followups/) | Deferred follow-up tasks (A{N}-F{M}) | 5 |
