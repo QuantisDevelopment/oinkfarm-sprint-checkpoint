@@ -1,12 +1,14 @@
 # raw-artifacts/anvil/proposals/
 
-ANVIL Phase 0 proposals + approval markers. 18 file(s) copied from `/home/oinkv/anvil-workspace/proposals`.
+ANVIL Phase 0 proposals + approval markers. 22 file(s) copied from `/home/oinkv/anvil-workspace/proposals`.
 
 | File | Size | Last modified |
 |---|---|---|
 | [A1-PHASE0-APPROVED.marker](A1-PHASE0-APPROVED.marker) | 2.6 KB | 00:20 CEST on 19 Apr 2026 |
 | [A1-PHASE0-PROPOSAL.md](A1-PHASE0-PROPOSAL.md) | 14.2 KB | 00:10 CEST on 19 Apr 2026 |
 | [A1-READY-FOR-REVIEW.marker](A1-READY-FOR-REVIEW.marker) | 161 B | 00:11 CEST on 19 Apr 2026 |
+| [A11-PHASE0-APPROVED.marker](A11-PHASE0-APPROVED.marker) | 959 B | 16:36 CEST on 19 Apr 2026 |
+| [A11-PHASE0-PROPOSAL.md](A11-PHASE0-PROPOSAL.md) | 3.0 KB | 16:26 CEST on 19 Apr 2026 |
 | [A2-PHASE0-APPROVED.marker](A2-PHASE0-APPROVED.marker) | 5.4 KB | 02:04 CEST on 19 Apr 2026 |
 | [A2-PHASE0-PROPOSAL.md](A2-PHASE0-PROPOSAL.md) | 13.6 KB | 01:52 CEST on 19 Apr 2026 |
 | [A3-PHASE0-APPROVED.marker](A3-PHASE0-APPROVED.marker) | 1.8 KB | 23:44 CEST on 18 Apr 2026 |
@@ -22,3 +24,5 @@ ANVIL Phase 0 proposals + approval markers. 18 file(s) copied from `/home/oinkv/
 | [A6-PHASE0-PROPOSAL.md](A6-PHASE0-PROPOSAL.md) | 14.9 KB | 14:43 CEST on 19 Apr 2026 |
 | [A7-PHASE0-APPROVED.marker](A7-PHASE0-APPROVED.marker) | 4.7 KB | 12:55 CEST on 19 Apr 2026 |
 | [A7-PHASE0-PROPOSAL.md](A7-PHASE0-PROPOSAL.md) | 14.7 KB | 12:48 CEST on 19 Apr 2026 |
+| [A8-PHASE0-APPROVED.marker](A8-PHASE0-APPROVED.marker) | 3.4 KB | 17:06 CEST on 19 Apr 2026 |
+| [A8-PHASE0-PROPOSAL.md](A8-PHASE0-PROPOSAL.md) | 6.0 KB | 16:56 CEST on 19 Apr 2026 |

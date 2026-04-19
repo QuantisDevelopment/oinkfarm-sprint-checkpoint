@@ -1,0 +1,30 @@
+# Wave 3 OinkV Audit — COMPLETE marker
+
+audit_method: Hermes-subagent fallback (3 parallel delegate_task)
+audit_reason: OinkV Wave 2 hit FailoverError: LLM request timed out — avoiding repeat
+completed_at: 2026-04-19T15:30:00Z
+wall_clock_total: ~9 min 4 sec (3 parallel subagents)
+
+## Files Produced
+
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE3.md (consolidated, 4.5 KB)
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE3-A8.md (13.7 KB)
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE3-A9.md (22.1 KB)
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE3-A11.md (15 KB)
+
+## Verdict Summary
+
+- A8: READY-WITH-MINOR-EDITS (5 minor, 0 critical)
+- A9: READY (1 doc-only critical in A6-A11-SUMMARY.md, 6 minor, 7 confirmed)
+- A11: READY-WITH-MINOR-EDITS (6 minor, 0 critical)
+
+## Action Items for FORGE
+
+1. Patch A6-A11-SUMMARY.md §"FORGE Design Decisions" to match TASK-A9-plan.md §0 (INSERT-time normalization, not comparison-time).
+
+## Audit Subagent Costs
+
+- Task 0 (A8): 33 API calls, 7m 16s duration, 1.46M in / 26.8K out
+- Task 1 (A9): 25 API calls, 9m 3s duration, 1.09M in / 31.8K out
+- Task 2 (A11): 25 API calls, 7m 37s duration, 703K in / 27.8K out
+- Total: 83 API calls, ~3.25M input tokens

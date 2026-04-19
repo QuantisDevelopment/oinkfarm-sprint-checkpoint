@@ -1,0 +1,39 @@
+# A6 Merge & Deploy Marker
+task: A6 — Ghost Closure Confirmation Flag
+merge_sha: 1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef
+merged_at: 2026-04-19T13:17:42Z (15:17 CEST)
+pr: https://github.com/bandtincorporated8/signal-gateway/pull/20
+repo: bandtincorporated8/signal-gateway
+tier: 🟡 STANDARD
+
+## Reviewer Scores
+- VIGIL Phase 1: 9.15 ✅ PASS (1 round)
+- GUARDIAN Phase 1: 9.70 ✅ PASS (1 round)
+- Hermes Level: ✅ LGTM (independent verification)
+
+## Review Rounds
+- Phase 0: R0 (VIGIL ✅ + GUARDIAN 🔄) → R1 (both ✅) — 2 rounds
+- Phase 1: R1 — 1 round (clean first pass)
+
+## Files Deployed
+- signal_router.py (+85 lines): GHOST_CLOSURE event emission in _route_board_update() CLOSE branch on board_absent soft_close
+- tests/test_a6_ghost_closure.py (+414 lines): 9 unit tests (all passing + 23 existing reconciler tests unaffected)
+
+## Design Summary
+- Additive metadata only: writes signal_events rows + appends `[A6: ghost_closure absent_count=N]` note tag
+- No DDL, no schema changes, no financial field writes
+- Entry-price discriminator with 5% tolerance (matches A7 pattern)
+- Idempotent: WHERE NOT EXISTS + changes() coupling for note dedup (TOCTOU-free)
+- close_source IS NULL guard on note append (don't overwrite confirmed-close notes)
+- close_source NEVER modified (provisional design — confirmed closures only mark status)
+- try/except non-fatal wrapper: notification flow never blocked
+- Single connection/transaction for event INSERT + note UPDATE
+
+## Canary Protocol
+- Trigger: next organic board_absent soft_close in prod → GHOST_CLOSURE event emitted
+- GUARDIAN monitors first 10 occurrences for field-by-field validation
+- Expected: PENDING until organic event materializes (may take hours/days)
+
+## Next Task
+- A8: Conditional SL type (READY_FOR_MIKE per FORGE HEARTBEAT)
+- A9, A10, A11 also queued — dependent on Mike's prioritization

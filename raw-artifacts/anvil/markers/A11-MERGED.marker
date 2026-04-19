@@ -1,0 +1,51 @@
+# A11 Merge & Deploy Marker
+
+task: A11 — Leverage Source Tracking
+tier: 🟢 LIGHTWEIGHT
+
+merge_timestamp: 2026-04-19T14:51:52Z (16:51 CEST)
+
+oinkfarm_pr: https://github.com/QuantisDevelopment/oinkfarm/pull/133
+oinkfarm_merge_sha: 45a6931d44364fa68c9fd96779c58b20d69e01ae
+branch: anvil/A11-leverage-source-tracking (deleted on merge)
+
+oinkfarm_changes:
+  - scripts/micro-gate-v3.py (+8/-2)
+  - scripts/migrations/a11_leverage_source.sql (+8, new)
+  - tests/test_a11_leverage_source.py (+214, new)
+  - 6 existing test files updated with leverage_source column
+
+review_rounds: 1
+
+final_scores:
+  VIGIL Phase 0: ✅ APPROVE (voluntary — LIGHTWEIGHT skips Phase 0 per SOUL.md §0)
+  VIGIL Phase 1: ✅ PASS (no numeric threshold for LIGHTWEIGHT)
+  GUARDIAN: NOT REQUIRED (🟢 LIGHTWEIGHT tier)
+  Hermes Level: NOT REQUIRED (LIGHTWEIGHT skip per orchestrator skill)
+
+reviews:
+  - /home/oinkv/vigil-workspace/reviews/A11-VIGIL-PHASE0-REVIEW.md
+  - /home/oinkv/vigil-workspace/reviews/A11-VIGIL-PHASE1-REVIEW.md
+
+test_status:
+  oinkfarm: 90/90 pass (214 new lines of tests through real _process_signal())
+  pre-existing failures: 5 unchanged (unrelated mutation_guard + wg_alert_override)
+
+deploy_required: YES
+  - cp /home/oinkv/.openclaw/workspace/scripts/micro-gate-v3.py /home/oinkv/signal-gateway/scripts/micro-gate-v3.py
+  - Run migration: sqlite3 <db> < scripts/migrations/a11_leverage_source.sql
+  - sudo systemctl restart signal-gateway
+
+backfill_required: YES (per plan §2 — backfill SHOULD test)
+  - UPDATE signals SET leverage_source = 'EXPLICIT' WHERE leverage IS NOT NULL;
+  - (NULL leverage rows stay as-is; NULL leverage_source is equivalent to "not provided")
+  - Expected rowcount: 98 rows (non-NULL leverage per plan distribution)
+
+canary_required: NO
+  - 🟢 LIGHTWEIGHT tier — GUARDIAN does not run canary
+  - ANVIL spot-checks next 10 INSERTs post-deploy for correct leverage_source population
+
+next_actions:
+  - ANVIL: deploy micro-gate-v3.py to signal-gateway, run migration + backfill, restart service
+  - ANVIL: spot-check first 10 organic signals post-deploy
+  - ANVIL: start next task Phase 0 (A8 or A10 per FORGE wave ordering — see A6-A11-SUMMARY.md)

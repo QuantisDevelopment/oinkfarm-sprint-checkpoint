@@ -1,0 +1,48 @@
+# A9 Merge & Deploy Marker
+
+task: A9 — Denomination Multiplier Table (1000x-prefixed symbols)
+tier: 🟡 STANDARD (auto-escalated from 🟢 LIGHTWEIGHT by VIGIL for financial hotpath touch)
+
+merge_timestamp: 2026-04-19T14:20:00Z (approximate; see PR metadata)
+
+oink_sync_pr: https://github.com/QuantisDevelopment/oink-sync/pull/8
+oink_sync_merge_sha: 2719648
+oink_sync_changes: scripts/models.py (+2), oink_sync/resolver.py (+29), tests/test_denomination.py (+124 new)
+
+oinkfarm_pr: https://github.com/bandtincorporated8/oinkfarm/pull/132
+oinkfarm_merge_sha: e7cfdb8e
+oinkfarm_changes: scripts/micro-gate-v3.py (+38/-5), tests/test_denomination_gate.py (+500 new), 4 test stubs updated to 5-tuple
+
+review_rounds: 2
+
+final_scores:
+  VIGIL: 9.40/10 PASS (R2)
+  GUARDIAN: 9.80/10 PASS (R2)
+  HERMES: ✅ LGTM (R2 delta)
+
+r1_round_blockers_resolved:
+  - GUARDIAN P1: SL_DEVIATION rejection on valid 1000x signals with SL — fixed by moving entry normalization to §3b (before all guards) and SL normalization to §8a-A9 (before B11 deviation guard)
+  - GUARDIAN P2: snowflake dedup probe mismatch — fixed by normalizing entry_price before the dedup lookup so probe matches stored
+  - HERMES R1 H1: cross-channel dedup probes un-normalized entry — same fix as GUARDIAN P2 (both dedup probes at §4 and §4b now run after §3b normalization)
+  - HERMES R1 H4: oink-sync docstring drift — fixed in commit dc35867
+
+deferred_to_followup:
+  - HERMES H2/H3: UPDATE and CLOSURE paths lack A9 normalization — scope-consistent with plan (INSERT-time only), schedule as A9.1 follow-up
+  - HERMES H5: e2e test coverage partially mitigated by new tests through real _process_signal() in R2
+
+test_status:
+  oink-sync: 89/89 pass (23 new denomination tests)
+  oinkfarm tests/test_denomination_gate.py: 15/15 pass (includes P1/P2 e2e repro tests)
+  oinkfarm pre-existing failures: 5 unchanged on parent commit (unrelated to A9)
+
+reviews:
+  - /home/oinkv/vigil-workspace/reviews/A9-VIGIL-PHASE1-REVIEW.md (R2 PASS 9.40)
+  - /home/oinkv/guardian-workspace/reviews/A9-GUARDIAN-PHASE1-REVIEW.md (R2 PASS 9.80)
+  - /home/oinkv/hermes-workspace/A9-HERMES-REVIEW.md (R1 🟡 CONCERNS on pre-R2 tip)
+  - /home/oinkv/hermes-workspace/A9-HERMES-REVIEW-R2.md (R2 ✅ LGTM delta review)
+
+next_actions:
+  - ANVIL: deploy scripts/micro-gate-v3.py to signal-gateway path, restart service
+  - ANVIL: no DB backfill required (INSERT-time only; historical rows remain un-normalized by design, per plan)
+  - ANVIL: follow up with A9.1 scoping or fold into Wave 3 queue (A11 is next per FORGE order)
+  - GUARDIAN: canary on first 10 1000*USDT signals — verify `[A9: denomination_adjusted /1000]` tag + entry_price < 1e-4 on normalized rows

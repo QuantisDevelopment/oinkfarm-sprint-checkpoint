@@ -1,0 +1,44 @@
+# Wave 3 A10 OinkV Audit — COMPLETE
+
+**Audit timestamp:** 2026-04-19T17:58Z (orchestrator cycle while A8 canary active)
+**Method:** Hermes-subagent fallback (OinkV LLM-timeout avoidance)
+**Rationale for running during Mike's approval gate:** Per `oinkfarm-sprint-orchestrator` skill §"Human-Gate Blocked ≠ Idle", the A10 staleness audit is orthogonal to Mike's decision and gives him decision-context for free.
+
+**Report:** /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE3-A10.md (28KB, 407 lines)
+
+## Headline Verdict: REVISE-REQUIRED
+
+The plan is architecturally sound but was drafted against a 50-column schema snapshot. Wave 3 merges (A8, A9, A11) have since moved the target to 52 columns + retroactive A9 price normalization.
+
+## 🔴 CRITICAL findings (3 — all block implementation)
+
+1. **Schema staleness** — Plan §1/§3 assume new DB = 50 cols. Reality = 52 (A11 `leverage_source`, A8 `sl_type` both added today). ALTER TABLE on old DB must add all three, not just `remaining_pct`.
+2. **A9 denomination normalization gap** — Old DB's 1000PEPE/1000SHIB/etc entry/SL/TP values are on the pre-A9 scale. Merging as-is produces incoherent memecoin analytics. Plan must apply A9 normalization to old DB copy before dedup.
+3. **Non-atomic swap** — Plan §4d step 8 uses `cp` for production DB replacement. Must be: WAL checkpoint → `cp` to `.new` → atomic `mv`.
+
+## 🟡 MINOR findings (8 — non-blocking but should be fixed before implementation)
+
+- PENDING→CLOSED_MANUAL wrong status (should be CANCELLED)
+- Server FK should match on `discord_id`, not auto-increment id
+- Signal count drift: plan says 493, actual 494
+- Missing test coverage for sl_type / leverage_source / A9 normalization in post-merge tests
+- Dependencies list §0 omits A6/A8/A9/A11
+- No explicit `signal_events` handling statement
+- Backup procedure missing WAL checkpoint step
+- `close_source` values need disambiguation (`board_absent` vs manual)
+
+## 🟢 CONFIRMED (arithmetic, policy, intent)
+
+- Row arithmetic: 1,165 + 493 − 514 = 1,144 ✅
+- Dedup policy (new wins on overlap) ✅
+- Rollback plan (once atomicity fix applied) ✅
+- Mike two-gate approval structure ✅
+- FK remap intent ✅
+- Exclusion of price_history + audit_log ✅
+
+## Next Actions
+
+1. **FORGE:** Revise TASK-A10-plan.md per the 3 🔴 CRITICAL items. Tag as v2. Bump base SHA to post-A8 HEAD (`46154543`).
+2. **Mike:** Decide whether A10 proceeds after FORGE revises, or stays deferred until after A12+.
+3. **ANVIL:** Remains blocked on A10 regardless — do not start until (a) FORGE v2 plan lands AND (b) Mike approval marker lands.
+4. **Orchestrator:** Continue A8 canary monitoring; A9 canary passive; emit next status when A8 canary transitions from PENDING → PASS/WARN/FAIL.

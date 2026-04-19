@@ -1,11 +1,15 @@
 # raw-artifacts/vigil/reviews/
 
-VIGIL Phase 0 + Phase 1 code reviews (5-dim scored). 14 file(s) copied from `/home/oinkv/vigil-workspace/reviews`.
+VIGIL Phase 0 + Phase 1 code reviews (5-dim scored). 21 file(s) copied from `/home/oinkv/vigil-workspace/reviews`.
 
 | File | Size | Last modified |
 |---|---|---|
 | [A1-VIGIL-PHASE0-REVIEW.md](A1-VIGIL-PHASE0-REVIEW.md) | 7.3 KB | 00:13 CEST on 19 Apr 2026 |
 | [A1-VIGIL-PHASE1-REVIEW.md](A1-VIGIL-PHASE1-REVIEW.md) | 4.5 KB | 01:30 CEST on 19 Apr 2026 |
+| [A10-VIGIL-PHASE1-R1-REVIEW.md](A10-VIGIL-PHASE1-R1-REVIEW.md) | 6.6 KB | 18:09 CEST on 19 Apr 2026 |
+| [A10-VIGIL-PHASE1-R2-REVIEW.md](A10-VIGIL-PHASE1-R2-REVIEW.md) | 4.3 KB | 18:27 CEST on 19 Apr 2026 |
+| [A11-VIGIL-PHASE0-REVIEW.md](A11-VIGIL-PHASE0-REVIEW.md) | 2.0 KB | 16:27 CEST on 19 Apr 2026 |
+| [A11-VIGIL-PHASE1-REVIEW.md](A11-VIGIL-PHASE1-REVIEW.md) | 2.5 KB | 16:51 CEST on 19 Apr 2026 |
 | [A2-VIGIL-PHASE0-REVIEW.md](A2-VIGIL-PHASE0-REVIEW.md) | 6.0 KB | 01:54 CEST on 19 Apr 2026 |
 | [A2-VIGIL-PHASE1-REVIEW.md](A2-VIGIL-PHASE1-REVIEW.md) | 6.1 KB | 02:19 CEST on 19 Apr 2026 |
 | [A3-VIGIL-REVIEW.md](A3-VIGIL-REVIEW.md) | 5.8 KB | 23:54 CEST on 18 Apr 2026 |
@@ -18,3 +22,6 @@ VIGIL Phase 0 + Phase 1 code reviews (5-dim scored). 14 file(s) copied from `/ho
 | [A6-VIGIL-PHASE1-REVIEW.md](A6-VIGIL-PHASE1-REVIEW.md) | 5.6 KB | 15:04 CEST on 19 Apr 2026 |
 | [A7-VIGIL-PHASE0-REVIEW.md](A7-VIGIL-PHASE0-REVIEW.md) | 2.4 KB | 12:52 CEST on 19 Apr 2026 |
 | [A7-VIGIL-PHASE1-REVIEW.md](A7-VIGIL-PHASE1-REVIEW.md) | 4.5 KB | 13:11 CEST on 19 Apr 2026 |
+| [A8-VIGIL-PHASE0-REVIEW.md](A8-VIGIL-PHASE0-REVIEW.md) | 2.7 KB | 16:58 CEST on 19 Apr 2026 |
+| [A8-VIGIL-PHASE1-R1-REVIEW.md](A8-VIGIL-PHASE1-R1-REVIEW.md) | 4.0 KB | 17:17 CEST on 19 Apr 2026 |
+| [A9-VIGIL-PHASE1-REVIEW.md](A9-VIGIL-PHASE1-REVIEW.md) | 5.0 KB | 16:06 CEST on 19 Apr 2026 |

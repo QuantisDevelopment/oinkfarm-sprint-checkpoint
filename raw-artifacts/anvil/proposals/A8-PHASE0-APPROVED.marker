@@ -1,0 +1,50 @@
+# A8 Phase 0 — APPROVED by both reviewers
+
+**Task:** A8 — Conditional SL Type Field
+**Tier:** 🟡 STANDARD
+**Proposal:** /home/oinkv/anvil-workspace/proposals/A8-PHASE0-PROPOSAL.md
+**Approval timestamp:** 2026-04-19T17:05:00+02:00 (consolidated by orchestrator)
+
+## Reviewer Verdicts
+
+| Reviewer | Verdict | Review file | Timestamp |
+|---|---|---|---|
+| VIGIL | ✅ APPROVE | /home/oinkv/vigil-workspace/reviews/A8-VIGIL-PHASE0-REVIEW.md | 2026-04-19T16:58 |
+| GUARDIAN | ✅ APPROVE | /home/oinkv/guardian-workspace/reviews/A8-GUARDIAN-PHASE0-REVIEW.md | 2026-04-19T16:59:30 (recovered from journalctl — GUARDIAN LLM timeout prevented file-write) |
+
+Both verdicts converge on APPROVE. No MUST-FIX items. Ready for Phase 1.
+
+## Concerns to bake into Phase 1 (distilled from both reviews)
+
+**VIGIL (non-blocking):**
+1. Placement: sl_type logic goes AFTER Section 8c (A15 SL guard) completes, BEFORE Section 9 (TP safety check) — so sl_type reads final stop_loss and sl_note after all SL processing (numeric extraction, A15 NULL-clearing). Proposal already states this (Key Decision #2).
+2. Post-A11 column count: INSERT will go 29→30 columns. Confirm placeholder count and bound-value count match during implementation.
+3. `test_lifecycle_events.py` schema update is OPTIONAL (OinkV MINOR-A8-4) — include for forward-compat but not merge-blocking.
+
+**GUARDIAN (non-blocking but explicit):**
+1. Deploy ORDER: run DDL migration FIRST, then code deploy (additive-first discipline). Do NOT rely on rollback as primary safety net.
+2. Test location: `.openclaw/workspace/tests/` (not `signal-gateway/tests/`) — proposal already correct (Key Decision #4).
+3. `_ALLOWED_UPDATE_COLS` must include `sl_type` AND `_process_update()` must set `sl_type='MANUAL'` when stop_loss changes — proposal correct (Key Decision #3).
+4. Mark oink-sync schema tweak as OPTIONAL — proposal correct (Key Decision #5).
+5. Shared `_CONDITIONAL_SL_KEYWORDS` constant — proposal correct (Key Decision #1).
+6. Record backfill rowcounts (pre + post) — proposal's acceptance criterion #4 captures this.
+
+**Nothing blocking. All reviewer concerns already acknowledged in the proposal's Key Decisions.**
+
+## Phase 1 Checklist for ANVIL
+
+- [ ] Create branch `anvil/A8-conditional-sl-type` from `origin/master` (post-A11 baseline)
+- [ ] Extract `_CONDITIONAL_SL_KEYWORDS` module-level tuple, reference from existing notes-tag block (line 764) and new sl_type block
+- [ ] Add `sl_type` classification block AFTER Section 8c (A15 guard ~line 787), BEFORE Section 9 (TP safety ~line 826)
+- [ ] Modify `_process_update()` to set `sl_type='MANUAL'` alongside stop_loss changes; add `"sl_type"` to `_ALLOWED_UPDATE_COLS`
+- [ ] Create migration: `scripts/migrations/a8_sl_type.sql` (ALTER TABLE + 2-step backfill)
+- [ ] Write 8 tests in `tests/test_a8_sl_type.py` (6 MUST, 2 SHOULD) — through real `_process_signal()`
+- [ ] Verify INSERT column count = 30, placeholder count = 30, bound values count = 30 (match)
+- [ ] Optional: add `sl_type TEXT DEFAULT 'FIXED'` to `test_lifecycle_events.py` in-memory schema
+- [ ] Run pytest — ensure 90+/all pass (no new regressions)
+- [ ] Open PR to QuantisDevelopment/oinkfarm
+- [ ] A2A VIGIL + GUARDIAN for Phase 1 review
+
+## Financial Hotpath
+
+Not touched. sl_type is classification metadata. `calculate_blended_pnl()`, `_check_sl_tp()`, `update_sl()`, `close_signal()` all untouched. Standard tier review (≥9.0 threshold) applies.

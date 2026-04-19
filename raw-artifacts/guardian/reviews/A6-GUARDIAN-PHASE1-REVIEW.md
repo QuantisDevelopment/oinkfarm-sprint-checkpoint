@@ -1,179 +1,159 @@
-# 🛡️ GUARDIAN Phase 1 Review — Task A6: Ghost Closure Confirmation Flag
+# 🛡️ GUARDIAN Phase 1 Review — A6: Ghost Closure Confirmation Flag
 
 | Field | Value |
-|-------|-------|
-| **Branch** | `anvil/A6-ghost-closure-flag` |
-| **Commits** | `c6cb99e1b7f5c5ac79f1cc39c1438719bfcae8c8` |
-| **Change Tier** | 🟡 STANDARD |
-| **Review Round** | Round 1 |
-| **Review Date** | 2026-04-19 |
-| **PR** | `#20` |
-
----
+|---|---|
+| Branch | `anvil/A6-ghost-closure-flag` |
+| Commit | `c6cb99e` |
+| Repo | `bandtincorporated8/signal-gateway` |
+| Change Tier | 🟡 STANDARD |
+| Review Round | Round 1 |
+| Review Date | 2026-04-19 |
+| PR | `#20` |
 
 ## Dimension Scores
 
 | # | Dimension | Weight | Score | Notes |
-|---|-----------|--------|-------|-------|
-| 1 | Schema Correctness | 25% | **10** | No DDL, no column changes, no constraint changes. A6 uses existing `signal_events` schema and existing `signals.notes` / `close_source` fields correctly. `GHOST_CLOSURE` already exists in the lifecycle event catalog. |
-| 2 | Formula Accuracy | 25% | **10** | No financial formula or PnL math changed. The new logic writes additive audit metadata only. FET #1159 remains unchanged in production: `CLOSED_WIN`, `final_roi=3.37`, `remaining_pct=100.0`. |
-| 3 | Data Migration Safety | 20% | **10** | No migration, no backfill, no destructive update. Write path is additive and transaction-scoped. `close_source` is intentionally left unchanged for provisional ghost closures, which is the correct safety boundary. |
-| 4 | Query Performance | 10% | **9** | The new lookup is small and operationally acceptable at current scale, but it does introduce a new `signals JOIN traders` query on each soft-close path, with candidate filtering and `ORDER BY s.id DESC` and no new supporting index. Low risk today, slight deduction for added lookup cost. |
-| 5 | Regression Risk | 20% | **9** | The two critical Phase 0 safety concerns are implemented correctly: entry-discriminated lookup and idempotent note coupling via `changes()`. Diff inspection confirms the instrumentation is in the actual `elif kind == "CLOSE"` branch. 9/9 A6 tests, 23/23 reconciler tests, and 281/281 full-suite tests passed. Minor deduction because the dedicated A6 test file mirrors the inline DB logic through a helper rather than exercising the full async router path end-to-end. |
-| | **OVERALL** | 100% | **9.70** | |
+|---|---|---:|---:|---|
+| 1 | Schema Correctness | 25% | 10 | No DDL, no schema mutation, no new columns, no migration logic. `GHOST_CLOSURE` writes into the existing `signal_events` model only. |
+| 2 | Formula Accuracy | 25% | 10 | No PnL, ROI, leverage, TP, SL, or lifecycle formula changes. FET #1159 remains intact. |
+| 3 | Data Migration Safety | 20% | 10 | Zero backfill, zero destructive writes, zero schema touch. `close_source` is preserved and not overwritten. Rollback is trivial: git revert and optional delete of additive `GHOST_CLOSURE` rows if ever needed. |
+| 4 | Query Performance | 10% | 10 | One bounded lookup on soft-close path only: `signals JOIN traders`, filtered by trader/ticker/direction/status and resolved by short Python tolerance scan. Low write volume, no new contention pattern, timeout=2 is non-fatal. |
+| 5 | Regression Risk | 20% | 9 | Implementation satisfies all Phase 0 blockers and required checks. 9/9 A6 tests pass, 23/23 reconciler tests pass. Minor deduction: the dedicated A6 test file mirrors the inline DB path via helper instead of driving the full async router path end-to-end. Data semantics are still well covered. |
+|  | **OVERALL** | 100% | **9.80** | |
 
-**Score calculation:** `(10 × 0.25) + (10 × 0.25) + (10 × 0.20) + (9 × 0.10) + (9 × 0.20) = 9.70`
+**Weighted score:** `(10×0.25) + (10×0.25) + (10×0.20) + (10×0.10) + (9×0.20) = 9.80`
 
----
+## Verification Checklist
 
-## Review Evidence
+### 1. Event INSERT + note UPDATE in ONE transaction
+**VERIFIED ✅**
+- Diff confirms both operations occur inside a single `with _sq3.connect(_DB, timeout=2) as _a6conn:` block in `signal_router.py`.
+- INSERT executes first, then `SELECT changes()` gates the note UPDATE.
+- Exception handling wraps the whole block and logs warning without crashing the hot path.
 
-### Diff scope reviewed
-```text
-scripts/signal_gateway/signal_router.py
-tests/test_a6_ghost_closure.py
+### 2. WARNING-path observability for no-match cases
+**VERIFIED ✅**
+- Warning log exists:
+  - `"[router] A6: ghost_closure — no entry-matched signal for %s/%s/%s entry=%.4f (candidates=%d)"`
+- The log carries trader, ticker, direction, entry, and candidate count, which is sufficient for post-deploy audit.
+
+### 3. `close_source` preserved unchanged for provisional ghost closures
+**VERIFIED ✅**
+- No `close_source` write exists anywhere in the A6 diff.
+- The note UPDATE is explicitly guarded with `WHERE id = ? AND close_source IS NULL`, which preserves confirmed-close rows.
+
+### 4. 5% entry tolerance applied exactly as proposed
+**VERIFIED ✅**
+- Matching logic in `signal_router.py`:
+  - `_a6_dev = abs(_a6_db_entry - _a6_action_entry) / _a6_action_entry`
+  - `if _a6_dev <= 0.05:`
+- This is the proposed exact tolerance behavior.
+
+### 5. Tests cover BOTH multi-match selection and no-match skip branches
+**VERIFIED ✅**
+- `test_entry_discriminator_selects_correct_signal` covers multi-match resolution.
+- `test_entry_outside_tolerance_skips_ghost_closure` covers no-match skip.
+- `test_ghost_close_skipped_when_no_active_signal` adds an additional no-eligible-row branch.
+
+## Test Evidence
+
+### Requested test suites
+```bash
+python3 -m pytest tests/test_a6_ghost_closure.py -v
+python3 -m pytest tests/test_reconciler.py -v
 ```
 
-```text
-2 files changed, 499 insertions(+), 0 deletions(-)
-```
+### Results
+- `tests/test_a6_ghost_closure.py`: **9 / 9 passed**
+- `tests/test_reconciler.py`: **23 / 23 passed**
 
-### Code verification
-Confirmed in `signal_router.py`:
-- A6 logic sits inside the real `elif kind == "CLOSE":` branch
-- guarded by `detail.get("soft_close") is True`
-- entry discriminator uses `abs(db_entry - action_entry) / action_entry <= 0.05`
-- event INSERT and note UPDATE run inside one sqlite connection/transaction
-- note append occurs only when `SELECT changes()` indicates first insert succeeded
-- no `close_source` mutation exists in the diff
-- WARNING path includes trader, ticker, direction, entry, and candidate count
+### Notable covered behaviors
+- event emitted on board-absent soft close
+- note tag appended exactly once
+- idempotent repeat absent cycles
+- confirmed non-soft closes do not get tagged
+- no-match path skips writes
+- `PARTIALLY_CLOSED` is eligible
+- multi-position selection uses entry discrimination correctly
+- outside-tolerance case skips cleanly
 
-### Test verification
-```text
-python3 -m pytest -q tests/test_a6_ghost_closure.py
-Result: 9 passed
+## Diff Review Notes
 
-python3 -m pytest -q tests/test_reconciler.py
-Result: 23 passed
+Primary implementation added to:
+- `scripts/signal_gateway/signal_router.py`
+- `tests/test_a6_ghost_closure.py`
 
-python3 -m pytest -q
-Result: 281 passed, 1 pre-existing warning
-```
+Confirmed implementation properties:
+- gated on `detail.soft_close is True`
+- signal lookup includes `status IN ('ACTIVE', 'PARTIALLY_CLOSED')`
+- lookup ordered `ORDER BY s.id DESC`, then resolved with entry-price tolerance
+- idempotent event write via `INSERT ... WHERE NOT EXISTS`
+- note append coupled to successful first insert via `SELECT changes()`
+- note tag format: `[A6: ghost_closure absent_count=N]`
+- exception path logs warning and preserves router continuity
 
-### Reference record re-check
-```text
-SELECT id,ticker,direction,entry_price,exit_price,leverage,final_roi,status,remaining_pct
-FROM signals WHERE id=1159;
+## FET #1159 Reference Case
 
-1159 | FET | LONG | 0.2285 | 0.2285 | NULL | 3.37 | CLOSED_WIN | 100.0
-```
+**Reference query result:**
 
----
+| id | ticker | direction | entry_price | exit_price | leverage | final_roi | status | remaining_pct |
+|---:|---|---|---:|---:|---|---:|---|---:|
+| 1159 | FET | LONG | 0.2285 | 0.2285 | NULL | 3.37 | CLOSED_WIN | 100.0 |
+
+**Assessment:** ✅ unchanged
+
+A6 is additive metadata only and does not alter lifecycle math, ROI computation, remaining_pct handling, or close-state formulas.
 
 ## Pre-Deploy Baseline Snapshot
 
-| Metric | Current Value | Source |
-|--------|---------------|--------|
-| SC-1 (signal_events total) | 305 | production DB @ review time |
-| SC-2 (False closures) | 11.8841% | rolling 30-day query @ review time |
-| SC-4 (Signal count) | 493 | `SELECT COUNT(*) FROM signals` @ review time |
-| KPI-R1 (Breakeven %) | 20.4167% | 7-day rolling query @ review time |
-| KPI-R4 (NULL leverage %) | 80.1217% | full-table query @ review time |
-| KPI-R5 (NULL filled_at, FILLED MARKET) | 0 | production DB @ same review window |
-| KPI-R3 (duplicate discord_message_id groups) | 14 | production DB @ same review window |
+| Metric | Current Value |
+|---|---:|
+| SC-1 total signal_events | 312 |
+| SC-1 distinct signals with events | 25 |
+| SC-2 false closure rate | 11.8841% |
+| SC-4 total signals | 493 |
+| KPI-R1 breakeven 7d | 20.4167% |
+| KPI-R4 NULL leverage | 80.1217% |
+| KPI-R5 FILLED MARKET with NULL filled_at | 0 |
+| KPI-R3 duplicate discord_message_id groups | 14 |
 
-**Expected A6 post-deploy effect:** no immediate shift in SC-2, KPI-R1, KPI-R4, KPI-R5, or KPI-R3. The primary observable change is future appearance of `GHOST_CLOSURE` events plus matching note tags after organic board-absent soft closes.
-
----
+Expected A6 impact: no change to SC-2, KPI-R1, KPI-R4, KPI-R5, or KPI-R3. Only additive audit metadata should appear on future organic ghost-closure events.
 
 ## Issues Found
 
 | # | Severity | Dimension | Description | Evidence |
-|---|----------|-----------|-------------|----------|
-| 1 | P3 | Query Performance | Soft-close path adds a new `signals JOIN traders` lookup with candidate scan + `ORDER BY s.id DESC`, without a new dedicated index | Diff review of `signal_router.py` |
-| 2 | P3 | Regression Risk | The dedicated A6 tests validate a mirrored helper instead of driving the full async `_route_board_update()` path end-to-end | `tests/test_a6_ghost_closure.py` review |
+|---|---|---|---|---|
+| 1 | P3 | Regression Risk | Dedicated A6 tests mirror the inline DB logic with a helper rather than invoking the full async router path end-to-end. | `tests/test_a6_ghost_closure.py` structure |
 
-**No P1/P2 issues found.**
-
----
-
-## Formula Verification
-
-**No financial formula changes in A6.**
-
-**Reference case: FET #1159**
-- Entry price: **0.2285**
-- Exit price: **0.2285**
-- Direction: **LONG**
-- Leverage: **NULL**
-- Stored ROI: **3.37%**
-- Status: **CLOSED_WIN**
-- Remaining %: **100.0**
-- Match: ✅ unchanged
-
-**Assessment:** A6 adds ghost-closure audit metadata only. It does not touch lifecycle PnL, blended ROI, leverage handling, or closure-price math. The production reference row remains intact.
-
----
+**No P1 or P2 issues found.**
 
 ## What’s Done Well
 
-1. **Phase 0 blockers were resolved correctly.** The write target is no longer ambiguous because the lookup is entry-discriminated instead of newest-row wins.
-2. **Idempotency is implemented at the right boundary.** Coupling note append to successful first insert prevents duplicate audit tags across repeated absent cycles.
-3. **Transaction safety is correct.** Event and note writes share one sqlite transaction.
-4. **Observability is good.** The no-match WARNING includes enough data for post-deploy audit investigation.
-5. **Scope discipline is strong.** No schema churn, no backfill, no `close_source` overreach, no financial hotpath changes.
-
----
+- Phase 0 ambiguity around multi-position matching is properly resolved.
+- Idempotency boundary is correct: note append only occurs when the event insert is new.
+- `close_source` remains untouched, preserving the provisional nature of the marker.
+- Warning-path observability is strong enough for field debugging.
+- Scope is disciplined: no DDL, no migration, no financial hotpath mutation.
 
 ## Verdict
 
-**✅ PASS**
+**PASS ✅**
 
-- Overall score: **9.70** vs threshold **≥9.0** (🟡 STANDARD)
-- Data-safety blockers from Phase 0 are resolved in the implementation.
-- The change is additive, rollback-friendly, and appropriately bounded to audit metadata.
-- Minor deductions are advisory only, not blockers.
+- Overall score: **9.80 / 10**
+- Threshold for 🟡 STANDARD: **≥ 9.0**
+- No blocking data-safety issues remain.
+- Safe to merge from GUARDIAN’s data perspective.
 
-**Deployment readiness:** Yes.
+## Post-Deploy Verification Note
 
----
+No formal canary is required. This task is additive metadata only.
 
-## Canary Focus (Post-Deploy)
-
-When ANVIL deploys A6, GUARDIAN should verify:
-
-1. **First organic ghost closure**
-   ```sql
-   SELECT se.signal_id, se.payload, se.created_at, s.ticker, s.notes
-   FROM signal_events se
-   JOIN signals s ON se.signal_id = s.id
-   WHERE se.event_type='GHOST_CLOSURE'
-   ORDER BY se.created_at DESC
-   LIMIT 10;
-   ```
-   Expect at least one row with valid `absent_count`, trader, ticker, direction, and matching note tag.
-
-2. **Idempotency under repeated absent cycles**
-   ```sql
-   SELECT signal_id, COUNT(*)
-   FROM signal_events
-   WHERE event_type='GHOST_CLOSURE'
-   GROUP BY signal_id
-   HAVING COUNT(*) > 1;
-   ```
-   Expect zero rows.
-
-3. **Confirmed-close protection**
-   ```sql
-   SELECT id, notes, close_source
-   FROM signals
-   WHERE notes LIKE '%[A6: ghost_closure %' AND close_source IS NOT NULL;
-   ```
-   Expect empty or manually explainable result set.
-
-4. **No broader KPI regression**
-   - SC-2, KPI-R1, KPI-R4, KPI-R5 should remain stable post-deploy.
+Recommended lightweight verification after deployment:
+1. wait for first organic board-absent soft close
+2. confirm exactly one `GHOST_CLOSURE` event on the matched signal
+3. confirm exactly one `[A6: ghost_closure ...]` note tag
+4. confirm no `close_source` overwrite occurred
 
 ---
 
-*🛡️ GUARDIAN — Phase 1 Pre-Deploy Review (🟡 STANDARD)*
+*🛡️ GUARDIAN — Data Safety / Formula Accuracy / Migration / Performance / Regression Review*

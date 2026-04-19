@@ -123,7 +123,7 @@ Allowed-insert canary count:
 | # | Suppression source | Rejection log | signal_events | quarantine | existing row unchanged | no new row | Verdict |
 |---|--------------------|---------------|---------------|------------|------------------------|------------|---------|
 | 1 | Organic production suppression, Eric / VVV / LONG, msg `1495402373475209276` | ✅ matching A7 line | ✅ event `signal_events.id=296` on signal `#1610` | ✅ quarantine `id=17` | ✅ existing `ACTIVE` row `#1610` preserved | ✅ no duplicate insert | PASS |
-| 2 | Awaiting validated production suppression | — | — | — | — | — | Pending |
+| 2 | Organic production suppression, Eric / VVV / LONG, msg `1495405514262184036` | ✅ matching A7 line | ✅ event `signal_events.id=304` on signal `#1610` | ✅ quarantine `id=18` | ✅ existing `ACTIVE` row `#1610` preserved | ✅ no duplicate insert | PASS |
 | 3 | Awaiting validated production suppression | — | — | — | — | — | Pending |
 | 4 | Awaiting validated production suppression | — | — | — | — | — | Pending |
 | 5 | Awaiting validated production suppression | — | — | — | — | — | Pending |
@@ -160,6 +160,29 @@ This is a clean canary pass for suppression sample #1:
 
 Synthetic `Tester / signal #100` noise is still present in the rejection log, but it is now clearly separable from at least one real production suppression.
 
+## Second Validated Production Suppression
+
+A second real production suppression has now been observed and validated.
+
+### Evidence bundle
+- Rejection log line at `2026-04-19T12:48:04.426832+00:00`
+- Trader / ticker / direction: **Eric / VVV / LONG**
+- Existing protected row: **signal #1610** (`ACTIVE`, entry `9.4141`)
+- Suppressed incoming entry: **9.3849**
+- Price diff: **0.31%**
+- `signal_events`: **UPDATE_DETECTED id=304** linked to signal `#1610`
+- `quarantine`: **A7_UPDATE_DETECTED id=18**
+- Post-check row state: still only one live `ACTIVE` row for Eric/VVV/LONG, no duplicate insert
+
+### Validation result
+This is a second clean canary pass for suppression sample #2:
+1. existing signal unchanged, ✅
+2. no new signal row inserted, ✅
+3. `signal_events` contains `UPDATE_DETECTED`, ✅
+4. `quarantine` contains `A7_UPDATE_DETECTED`, ✅
+5. rejection log contains matching line, ✅
+6. payload points to the existing active row, ✅
+
 ## Current Canary Verdict
 
 **PENDING, ADVANCING**
@@ -167,8 +190,8 @@ Synthetic `Tester / signal #100` noise is still present in the rejection log, bu
 Reason:
 1. Merge is confirmed.
 2. Standard SC/KPI monitoring is stable.
-3. **1 / 10** validated production suppressions now passes the full artifact check.
-4. Synthetic `Tester` noise still exists in the live rejection log, but it is no longer the only A7 pattern in production.
+3. **2 / 10** validated production suppressions now pass the full artifact check.
+4. Synthetic `Tester` noise still exists in the live rejection log, but real production suppressions are now clearly present alongside it.
 5. No allowed-insert spot-check sample has appeared yet, so the secondary path remains unverified.
 
 ---

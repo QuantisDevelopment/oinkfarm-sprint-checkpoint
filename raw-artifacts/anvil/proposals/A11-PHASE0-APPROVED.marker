@@ -1,0 +1,17 @@
+# A11 Phase 0 APPROVED
+Task: A11 — Leverage Source Tracking
+Tier: 🟢 LIGHTWEIGHT
+VIGIL verdict: APPROVE (2026-04-19T16:30)
+GUARDIAN: Not required (LIGHTWEIGHT skips Phase 0 per SOUL.md §0)
+Approved by: Mike's cron orchestrator — both required reviewers clear
+Next: ANVIL proceeds to Phase 1 code on branch `anvil/A11-leverage-source-tracking`
+Approved at: 2026-04-19T16:35:00+02:00
+
+Review artifacts:
+- /home/oinkv/vigil-workspace/reviews/A11-VIGIL-PHASE0-REVIEW.md
+- /home/oinkv/vigil-workspace/reviews/A11-VIGIL-PHASE0-COMPLETE.marker
+
+Non-blocking suggestions from VIGIL to address during Phase 1:
+1. INSERT line reference is stale in plan (855 → actual ~922) — ANVIL greps anyway.
+2. Leverage distribution table is stale — aggregate 395/493 NULL still exact.
+3. VERIFY `ext.get("leverage")` is read BEFORE the normalization block mutates the local variable. Source determination must use raw extraction payload, not post-normalization float.

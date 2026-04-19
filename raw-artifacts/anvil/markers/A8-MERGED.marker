@@ -1,0 +1,41 @@
+# A8 — MERGED
+
+**Task:** A8 — Conditional SL Type Field
+**Tier:** 🟡 STANDARD
+**Merge commit:** 46154543 feat(A8): sl_type column + conditional SL classification (#134)
+**Merged at:** 2026-04-19T15:27:19Z (by orchestrator)
+**PR:** https://github.com/QuantisDevelopment/oinkfarm/pull/134
+**Branch:** anvil/A8-conditional-sl-type (deleted)
+
+## Review Scores
+
+| Reviewer | Round | Score | Verdict | Review File |
+|---|---|---|---|---|
+| VIGIL Phase 1 | R1 | **9.40** | ✅ PASS | /home/oinkv/vigil-workspace/reviews/A8-VIGIL-PHASE1-R1-REVIEW.md |
+| GUARDIAN Phase 1 | R1 | **9.50** | ✅ PASS | /home/oinkv/guardian-workspace/reviews/A8-GUARDIAN-PHASE1-REVIEW.md |
+| Hermes (parallel) | — | — | ✅ LGTM | /home/oinkv/hermes-workspace/A8-HERMES-REVIEW.md |
+
+Overall: All three reviewers converged. STANDARD threshold (≥9.0) cleared on both weighted reviews.
+
+## Branch State Notes
+
+- Branch was rebased onto post-A11 master (origin/master = 45a6931d after A11 #133 squash) to drop orphan commit 2945ada0 (A11's pre-squash history) per orchestrator nudge.
+- Rebased SHA: 19f475db (then squash-merged to master as 46154543).
+- PR state at merge: CLEAN + MERGEABLE, 9 files changed, +741/-20 lines (only A8 files after rebase).
+
+## Next Steps for ANVIL
+
+1. Run migration SQL against production: `scripts/migrations/a8_sl_type.sql` (DDL first, then code deploy per additive-first discipline).
+2. Record backfill row counts pre + post (expected: 28 rows to sl_type='NONE', 0 to 'CONDITIONAL' per OinkV audit; confirm exact counts).
+3. Write backfill log to /home/oinkv/anvil-workspace/A8-BACKFILL-LOG.md.
+4. Notify GUARDIAN for canary — monitor first 10 signals post-deploy, validate sl_type classification correctness.
+5. A10 is 🔴 CRITICAL and GATED on Mike approval (A10-APPROVE + A10-DEPLOY). Do NOT proceed to A10 Phase 0 until Mike clears it.
+6. A8 is the last task in Wave 3 before A10. If Mike has not yet approved A10, ANVIL goes idle after A8 canary passes.
+
+## Phase 1 Hermes Concerns (non-blocking, follow-up)
+
+Per /home/oinkv/hermes-workspace/A8-HERMES-REVIEW.md:
+1. BE→MANUAL path not directly tested (numeric-SL MANUAL is tested; BE branch at line 1093–1096 is a one-line assignment, low risk).
+2. `dry_run_insert` path doesn't surface sl_type column (dry-run parity drift — informational).
+3. Multi-file test schema drift debt (each Axxx task updates schema in 6+ test files; consider consolidating via conftest fixture — tech debt, not a blocker).
+4. Cosmetic stale comment in test_micro_gate_filled_at.py saying "29 columns" where assertion is 30 — VIGIL flagged same.

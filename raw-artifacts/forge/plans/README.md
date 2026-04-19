@@ -1,6 +1,6 @@
 # raw-artifacts/forge/plans/
 
-FORGE technical plans, A-group summaries, OinkV audits. 23 file(s) copied from `/home/oinkv/forge-workspace/plans`.
+FORGE technical plans, A-group summaries, OinkV audits. 32 file(s) copied from `/home/oinkv/forge-workspace/plans`.
 
 | File | Size | Last modified |
 |---|---|---|
@@ -15,9 +15,18 @@ FORGE technical plans, A-group summaries, OinkV audits. 23 file(s) copied from `
 | [OINKV-AUDIT-WAVE2-COMPLETE.marker](OINKV-AUDIT-WAVE2-COMPLETE.marker) | 1.0 KB | 11:33 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-WAVE2-DISPATCHED.marker](OINKV-AUDIT-WAVE2-DISPATCHED.marker) | 1.0 KB | 10:21 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-WAVE2.md](OINKV-AUDIT-WAVE2.md) | 4.5 KB | 12:10 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-A10-COMPLETE.marker](OINKV-AUDIT-WAVE3-A10-COMPLETE.marker) | 2.7 KB | 18:06 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-A10.md](OINKV-AUDIT-WAVE3-A10.md) | 27.5 KB | 18:05 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-A11.md](OINKV-AUDIT-WAVE3-A11.md) | 14.8 KB | 15:28 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-A8.md](OINKV-AUDIT-WAVE3-A8.md) | 13.3 KB | 15:28 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-A9.md](OINKV-AUDIT-WAVE3-A9.md) | 21.6 KB | 15:29 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-COMPLETE.marker](OINKV-AUDIT-WAVE3-COMPLETE.marker) | 1.2 KB | 15:31 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3-DISPATCHED.marker](OINKV-AUDIT-WAVE3-DISPATCHED.marker) | 909 B | 15:20 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE3.md](OINKV-AUDIT-WAVE3.md) | 4.4 KB | 15:31 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT.md](OINKV-AUDIT.md) | 23.4 KB | 23:23 CEST on 18 Apr 2026 |
 | [TASK-A1-plan.md](TASK-A1-plan.md) | 22.3 KB | 23:27 CEST on 18 Apr 2026 |
-| [TASK-A10-plan.md](TASK-A10-plan.md) | 11.3 KB | 14:25 CEST on 19 Apr 2026 |
+| [TASK-A10-plan-v2-DELTA.md](TASK-A10-plan-v2-DELTA.md) | 5.1 KB | 18:12 CEST on 19 Apr 2026 |
+| [TASK-A10-plan.md](TASK-A10-plan.md) | 20.9 KB | 18:11 CEST on 19 Apr 2026 |
 | [TASK-A11-plan.md](TASK-A11-plan.md) | 6.7 KB | 14:23 CEST on 19 Apr 2026 |
 | [TASK-A2-plan.md](TASK-A2-plan.md) | 20.0 KB | 23:28 CEST on 18 Apr 2026 |
 | [TASK-A3-plan.md](TASK-A3-plan.md) | 12.8 KB | 23:28 CEST on 18 Apr 2026 |

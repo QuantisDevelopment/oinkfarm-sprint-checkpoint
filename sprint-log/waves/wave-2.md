@@ -15,8 +15,8 @@
 ## Timing
 
 - Wave start: 02:47 CEST on 19 Apr 2026
-- Last activity: 14:38 CEST on 19 Apr 2026
-- Elapsed: 11.9 h
+- Last activity: 15:15 CEST on 19 Apr 2026
+- Elapsed: 12.5 h
 
 ## Canary Outcomes
 
