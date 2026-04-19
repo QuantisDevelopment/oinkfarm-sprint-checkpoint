@@ -27,7 +27,7 @@ MARKET orders are filled immediately at insertion, but the `filled_at` timestamp
 | 9 | Hermes parallel review | 🪽 Hermes | ✅ LGTM | 00:05 CEST on 19 Apr 2026 | [A3-HERMES-REVIEW.md](../../raw-artifacts/hermes/A3-HERMES-REVIEW.md) |
 | 10 | Merged | ⚒️ ANVIL | MERGED [3b5453b](https://github.com/QuantisDevelopment/oinkfarm/commit/3b5453b7) | 00:06 CEST on 19 Apr 2026 | [A3-MERGED.marker](../../raw-artifacts/anvil/markers/A3-MERGED.marker) |
 | 11 | Backfill | ⚒️ ANVIL | executed | 00:08 CEST on 19 Apr 2026 | [A3-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A3-BACKFILL-LOG.md) |
-| 12 | Canary | 🛡️ GUARDIAN | ✅ PASS | 00:08 CEST on 19 Apr 2026 | [A3-CANARY.md](../../raw-artifacts/guardian/canary-reports/A3-CANARY.md) |
+| 12 | Canary | 🛡️ GUARDIAN | ✅ PASS | 00:07 CEST on 20 Apr 2026 | [A3-CANARY.md](../../raw-artifacts/guardian/canary-reports/A3-CANARY.md) |
 
 ## Key Decisions
 
