@@ -2,7 +2,7 @@
 
 **Tier:** 🔴 CRITICAL  
 **Wave:** B1  
-**Status:** 📝 PROPOSAL — Proposal drafted  
+**Status:** ⚙️ CODING — Phase 0 approved, implementation in progress  
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** —  
@@ -21,7 +21,8 @@ Every DB-touching module in OinkFarm currently uses raw `sqlite3` directly: `sql
 | 3 | Phase 0 proposal drafted | ⚒️ ANVIL | DRAFTED | 23:33 CEST on 19 Apr 2026 | [B1-PROPOSAL.md](../../raw-artifacts/anvil/proposals/B1-PROPOSAL.md) |
 | 4 | Phase 0 review | 🔍 VIGIL | ❌ REVISE | 23:43 CEST on 19 Apr 2026 | [B1-VIGIL-PHASE0-REVIEW.md](../../raw-artifacts/vigil/reviews/B1-VIGIL-PHASE0-REVIEW.md) |
 | 5 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 22:34 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) |
-| 6 | Phase 0 review (R1) | 🛡️ GUARDIAN | ❌ CHANGES (R1) | 23:43 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW-R2.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) |
+| 6 | Phase 0 review (R1) | 🛡️ GUARDIAN | ❌ CHANGES (R1) | 23:52 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW-R2.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) |
+| 7 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 00:01 CEST on 20 Apr 2026 | [B1-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/B1-PHASE0-APPROVED.marker) |
 
 ## Key Decisions
 

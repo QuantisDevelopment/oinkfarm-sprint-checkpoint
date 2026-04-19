@@ -8,13 +8,13 @@
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [B1](../tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | 📝 PROPOSAL | — | — |
+| [B1](../tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | ⚙️ CODING | — | — |
 
 ## Timing
 
 - Wave start: 18:03 CEST on 19 Apr 2026
-- Last activity: 23:43 CEST on 19 Apr 2026
-- Elapsed: 5.7 h
+- Last activity: 00:01 CEST on 20 Apr 2026
+- Elapsed: 6.0 h
 
 ## Canary Outcomes
 

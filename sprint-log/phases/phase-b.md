@@ -12,7 +12,7 @@ Phase B has 15 Arbiter elements. FORGE has planned all 15 across 4 waves. Wave 1
 
 | Task | Name | Tier | Wave | Depends On | Status |
 |---|---|---|---|---|---|
-| [B1](../tasks/B1-db-abstraction-layer.md) | DB abstraction layer (oink_db.py) | 🔴 CRITICAL | B1 | A-complete | 📝 PROPOSAL |
+| [B1](../tasks/B1-db-abstraction-layer.md) | DB abstraction layer (oink_db.py) | 🔴 CRITICAL | B1 | A-complete | ⚙️ CODING |
 | B2 | PostgreSQL schema + migration | 🔴 CRITICAL | B1 | B1 | 📋 PLANNED |
 | B3 | Parallel-write verification | 🔴 CRITICAL | B1 | B2 | 📋 PLANNED |
 | B4 | PostgreSQL cutover (Mike gate) | 🔴 CRITICAL | B1 | B3 + Mike | 📋 PLANNED |
