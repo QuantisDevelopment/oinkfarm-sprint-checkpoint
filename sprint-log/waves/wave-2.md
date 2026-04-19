@@ -9,8 +9,8 @@
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
 | [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 🧪 CANARY | PENDING | [`e9be741`](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) |
-| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 🧪 CANARY | PENDING | — |
-| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 🧪 CANARY | — | — |
+| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [`6157315`](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158) |
+| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 🧪 CANARY | — | [`69d6840`](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a) |
 
 ## Timing
 

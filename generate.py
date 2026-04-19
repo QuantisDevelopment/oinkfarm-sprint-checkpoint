@@ -258,12 +258,22 @@ def parse_merged_marker(text: str) -> dict[str, Any]:
                 pn = pn or re.match(r"(.*)", fm.group(2))
                 repo_name, num = fm.group(1), int(fm.group(2))
             else:
-                repo_name = rm.group(1) if rm else None
-                num = int(pn.group(1)) if pn else None
+                # A7-style: "PR: #130 (owner/repo)" → extract trailing repo from parens
+                am = re.search(r"PR:\s*#(\d+)\s*\(([^)]+)\)", text)
+                if am:
+                    num = int(am.group(1))
+                    parens = am.group(2).strip()
+                    # parens may be "owner/repo" — take last segment as repo
+                    repo_name = parens.split("/")[-1] if "/" in parens else parens
+                else:
+                    repo_name = rm.group(1) if rm else None
+                    num = int(pn.group(1)) if pn else None
         else:
             repo_name, num = rm.group(1), int(pn.group(1))
         if not cm:
-            cm = re.search(r"(?i)merge\s*commit[:\s*]+`?([a-f0-9]{7,40})`?", text)
+            # Try multiple commit patterns: "merge commit: <sha>", "merge_sha: <sha>"
+            cm = (re.search(r"(?i)merge\s*commit[:\s*]+`?([a-f0-9]{7,40})`?", text)
+                  or re.search(r"(?i)merge[_\s]sha\s*[:=]\s*`?([a-f0-9]{7,40})`?", text))
         if repo_name and num:
             pr = {
                 "repo": repo_name, "number": num,
@@ -276,6 +286,14 @@ def parse_merged_marker(text: str) -> dict[str, Any]:
                     f"https://github.com/QuantisDevelopment/{repo_name}/commit/{pr['merge_commit']}"
                 )
             result["prs"].append(pr)
+    # Last-resort: URL_RE-matched PRs without commits → try merge_sha pattern
+    else:
+        for pr in result["prs"]:
+            if not pr["merge_commit"]:
+                cm = re.search(r"(?i)merge[_\s]sha\s*[:=]\s*`?([a-f0-9]{7,40})`?", text)
+                if cm:
+                    pr["merge_commit"] = cm.group(1)
+                    pr["commit_url"] = f"https://github.com/QuantisDevelopment/{pr['repo']}/commit/{cm.group(1)}"
     m = MERGED_AT_RE.search(text) or re.search(r"MERGED_AT\s*=\s*([0-9T:\-Z.+]+)", text)
     if m:
         result["merged_at"] = m.group(1).strip()

@@ -5,8 +5,8 @@
 **Status:** 🧪 CANARY — Merged, canary in flight  
 **Repo target:** signal-gateway  
 **Branch:** —  
-**PR:** —  
-**Merge commit:** —
+**PR:** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)  
+**Merge commit:** [61573158](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158)
 
 ## One-liner
 
@@ -22,11 +22,12 @@ When an LLM extraction classifies a trader UPDATE message (e.g., "SL moved to 0.
 | 4 | Phase 0 review | 🔍 VIGIL | ❌ BLOCK | 12:52 CEST on 19 Apr 2026 | [A7-VIGIL-PHASE0-REVIEW.md](../../raw-artifacts/vigil/reviews/A7-VIGIL-PHASE0-REVIEW.md) |
 | 5 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 12:50 CEST on 19 Apr 2026 | [A7-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE0-REVIEW.md) |
 | 6 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 12:55 CEST on 19 Apr 2026 | [A7-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A7-PHASE0-APPROVED.marker) |
-| 7 | Phase 1 review | 🔍 VIGIL | 10.00/10 | 13:11 CEST on 19 Apr 2026 | [A7-VIGIL-PHASE1-REVIEW.md](../../raw-artifacts/vigil/reviews/A7-VIGIL-PHASE1-REVIEW.md) |
-| 8 | Phase 1 review | 🛡️ GUARDIAN | 10.00/10 | 13:09 CEST on 19 Apr 2026 | [A7-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE1-REVIEW.md) |
-| 9 | Hermes parallel review | 🪽 Hermes | ✅ LGTM | 13:26 CEST on 19 Apr 2026 | [A7-HERMES-REVIEW.md](../../raw-artifacts/hermes/A7-HERMES-REVIEW.md) |
-| 10 | Merged | ⚒️ ANVIL | MERGED | 13:27 CEST on 19 Apr 2026 | [A7-MERGED.marker](../../raw-artifacts/anvil/markers/A7-MERGED.marker) |
-| 11 | Canary | 🛡️ GUARDIAN | ⏳ PENDING | 14:38 CEST on 19 Apr 2026 | [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) |
+| 7 | Phase 1 code | ⚒️ ANVIL | MERGED | 13:27 CEST on 19 Apr 2026 | [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130) |
+| 8 | Phase 1 review | 🔍 VIGIL | 10.00/10 | 13:11 CEST on 19 Apr 2026 | [A7-VIGIL-PHASE1-REVIEW.md](../../raw-artifacts/vigil/reviews/A7-VIGIL-PHASE1-REVIEW.md) |
+| 9 | Phase 1 review | 🛡️ GUARDIAN | 10.00/10 | 13:09 CEST on 19 Apr 2026 | [A7-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE1-REVIEW.md) |
+| 10 | Hermes parallel review | 🪽 Hermes | ✅ LGTM | 13:26 CEST on 19 Apr 2026 | [A7-HERMES-REVIEW.md](../../raw-artifacts/hermes/A7-HERMES-REVIEW.md) |
+| 11 | Merged | ⚒️ ANVIL | MERGED [6157315](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158) | 13:27 CEST on 19 Apr 2026 | [A7-MERGED.marker](../../raw-artifacts/anvil/markers/A7-MERGED.marker) |
+| 12 | Canary | 🛡️ GUARDIAN | ⏳ PENDING | 14:38 CEST on 19 Apr 2026 | [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) |
 
 ## Key Decisions
 
@@ -46,6 +47,8 @@ _None._
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE1-REVIEW.md)
 - **Hermes review:** [A7-HERMES-REVIEW.md](../../raw-artifacts/hermes/A7-HERMES-REVIEW.md) — LGTM
 - **Canary report:** [A7-CANARY.md](../../raw-artifacts/guardian/canary-reports/A7-CANARY.md) — PENDING
+- **Merge commit:** [`61573158`](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158) (oinkfarm PR #130)
+- **PR(s):** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)
 
 ## Lessons Learned
 
