@@ -1,12 +1,13 @@
 # raw-artifacts/guardian/canary-reports/
 
-Post-deploy canary reports. 13 file(s) copied from `/home/oinkv/guardian-workspace/canary-reports`.
+Post-deploy canary reports. 14 file(s) copied from `/home/oinkv/guardian-workspace/canary-reports`.
 
 | File | Size | Last modified |
 |---|---|---|
 | [A1-CANARY-COMPLETE.marker](A1-CANARY-COMPLETE.marker) | 351 B | 01:51 CEST on 19 Apr 2026 |
 | [A1-CANARY.md](A1-CANARY.md) | 5.1 KB | 01:51 CEST on 19 Apr 2026 |
-| [A10-CANARY.md](A10-CANARY.md) | 7.1 KB | 21:27 CEST on 19 Apr 2026 |
+| [A10-CANARY-COMPLETE.marker](A10-CANARY-COMPLETE.marker) | 298 B | 22:27 CEST on 19 Apr 2026 |
+| [A10-CANARY.md](A10-CANARY.md) | 8.2 KB | 22:27 CEST on 19 Apr 2026 |
 | [A2-CANARY-COMPLETE.marker](A2-CANARY-COMPLETE.marker) | 763 B | 04:42 CEST on 19 Apr 2026 |
 | [A2-CANARY.md](A2-CANARY.md) | 5.2 KB | 04:42 CEST on 19 Apr 2026 |
 | [A3-CANARY-COMPLETE.marker](A3-CANARY-COMPLETE.marker) | 581 B | 00:08 CEST on 19 Apr 2026 |

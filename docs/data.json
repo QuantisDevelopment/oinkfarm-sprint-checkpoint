@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-19T20:16:27+00:00",
-  "generated_at_cest": "2026-04-19T22:16:27+02:00",
+  "generated_at_utc": "2026-04-19T20:27:49+00:00",
+  "generated_at_cest": "2026-04-19T22:27:49+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -1618,7 +1618,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "32s ago",
+      "last_active_human": "11m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -1630,16 +1630,13 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-19T18:29:26+00:00",
-      "last_active_human": "1h 47m ago",
-      "light": "yellow",
+      "last_active": "2026-04-19T20:27:02+00:00",
+      "last_active_human": "47s ago",
+      "light": "green",
       "heartbeat": {
-        "current_task": "A10",
-        "current_phase": "review_pending",
-        "blockers": [
-          "waiting_for_mike_ship_it"
-        ],
-        "branch": "anvil/A10-database-merge"
+        "current_task": "null",
+        "current_phase": "idle",
+        "blockers": []
       }
     },
     {
@@ -1649,7 +1646,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-19T16:27:09+00:00",
-      "last_active_human": "3h 49m ago",
+      "last_active_human": "4h ago",
       "light": "red",
       "heartbeat": {}
     },
@@ -1659,9 +1656,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-19T19:27:52+00:00",
-      "last_active_human": "48m ago",
-      "light": "yellow",
+      "last_active": "2026-04-19T20:27:02+00:00",
+      "last_active_human": "47s ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -1671,7 +1668,7 @@
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
       "last_active": "2026-04-19T20:16:27+00:00",
-      "last_active_human": "0s ago",
+      "last_active_human": "11m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -1682,7 +1679,7 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "32s ago",
+      "last_active_human": "11m ago",
       "light": "green",
       "heartbeat": {}
     }
@@ -2390,15 +2387,6 @@
   ],
   "blockers": [
     {
-      "agent": "ANVIL",
-      "agent_emoji": "⚒️",
-      "raw": "waiting_for_mike_ship_it",
-      "label": "waiting for mike ship it",
-      "severity": "mike",
-      "current_task": "A10",
-      "current_phase": "review_pending"
-    },
-    {
       "agent": "Hermes",
       "agent_emoji": "🪽",
       "raw": "A10 POST-MERGE CANARY FAIL needs disposition (GUARDIAN P1 open since 19:23Z, ~2h20m): • 104 imported-historical rows violate KPI-R5 (fill_status=FILLED ∧ order_type=MARKET ∧ filled_at IS NULL) • Live insert path is clean (organic id≥2524 = 0 violations) • Three options per GUARDIAN canary report: (a) Accept — document as historical carve-out; adjust KPI-R5 to exclude id 1612–2523 (b) Remediate — backfill filled_at for the 104 rows with defensible values (created_at fallback?) (c) Rollback — restore /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z (loses drift + merge) GUARDIAN + OinkV webchat notes say \"not evidence against A10 code\" — live path works — so (a) or (b) is preferable to full rollback, but your call. ```",
@@ -2417,5 +2405,5 @@
     "blocker": null,
     "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_22-16-27.md"
   },
-  "commit": "c8f925eb0b50"
+  "commit": "73bbb87187bb"
 }
