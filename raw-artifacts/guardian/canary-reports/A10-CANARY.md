@@ -81,16 +81,23 @@ Representative join-path spot-checks:
 ### 4) Post-restart ingest health
 | Check | Result |
 |------|--------|
-| new rows with `id > 2523` | **0** at initial capture |
+| new rows with `id > 2523` | **1** observed so far (`id=2524`) ✅ |
 | new ACTIVE rows in imported range | **0** |
 | gateway / service errors checked since deploy | **none observed in available log tail / journal output** ✅ |
+
+First observed post-merge organic insert:
+- `id=2524`, `ticker=PIEVERSE`, `status=ACTIVE`, `order_type=MARKET`, `fill_status=FILLED`
+- `filled_at=2026-04-19T19:11:01.849705+00:00` populated correctly ✅
+- trader/server joins resolve: `Tareeq` / `Wealth Group` ✅
+- `GET /signals/2524` returns `200 OK` ✅
+- `GET /signals/active` now includes this new row and returns **78** active signals ✅
 
 ## First-N Organic Post-Merge Signals Log
 Target population: first 10 organic signals with `id > 2523` and `posted_at >= 2026-04-19T18:29:23Z`
 
 | # | Signal ID | posted_at | ticker | trader/server join | schema/FK result | API result | Verdict |
 |---|-----------|-----------|--------|--------------------|------------------|------------|---------|
-| 1 | — | — | — | Awaiting | Awaiting | Awaiting | Pending |
+| 1 | 2524 | 2026-04-19T19:11:01.849705+00:00 | PIEVERSE | Tareeq / Wealth Group ✅ | clean insert, no FK or schema issue ✅ | `/signals/2524` and `/signals/active` both clean ✅ | Clean |
 | 2 | — | — | — | Awaiting | Awaiting | Awaiting | Pending |
 | 3 | — | — | — | Awaiting | Awaiting | Awaiting | Pending |
 | 4 | — | — | — | Awaiting | Awaiting | Awaiting | Pending |
@@ -102,29 +109,41 @@ Target population: first 10 organic signals with `id > 2523` and `posted_at >= 2
 | 10 | — | — | — | Awaiting | Awaiting | Awaiting | Pending |
 
 ## Anomalies
-**None confirmed at initial capture.**
+**Confirmed regression:** KPI-R5 is now **104** after A10 merge.
 
-Notes:
-- No post-merge organic signal rows have landed yet, so insert-path validation is still pending.
-- No immediate FK, schema-population, or API-range regression was detected.
-- Current evidence supports a clean append-only merge with live API visibility across the expanded ID range.
+Evidence split:
+- pre-merge prod rows (`id < 1612`) with `fill_status='FILLED' AND order_type='MARKET' AND filled_at IS NULL`: **0**
+- imported A10 rows (`id 1612–2523`) matching that condition: **104**
+- first live post-merge organic row (`id=2524`, PIEVERSE): `filled_at` populated correctly ✅
+
+Interpretation:
+- the current live insert path appears healthy
+- the A10 imported historical dataset introduced 104 rows that violate the existing KPI-R5 invariant
+- this is therefore a **real post-merge data-quality regression**, even though it is concentrated in imported historical rows rather than new organic inserts
+
+Additional note:
+- SC-3 heuristic flag count also increased after merge (`75` imported flags + `18` legacy flags), which is expected from expanded historical coverage and is not the primary fail condition here
 
 ## Current Verdict
-**ACTIVE, INITIAL SPOT-CHECK PASS**
+**FAIL — KPI-R5 REGRESSION INTRODUCED BY IMPORTED HISTORICAL ROWS**
 
-This is not a final canary PASS yet because the first 10 organic post-merge signals have not arrived.
-What is already verified:
+What is still verified despite the fail:
 - merge counts are correct
 - imported historical rows are live through `:8888`
 - imported trader summaries resolve for all 60 referenced trader IDs
 - no orphan FK regression exists
 - no `NULL remaining_pct` / `NULL sl_type` regression exists
-- no immediate post-restart failure is visible
+- first live post-merge organic insert landed cleanly
+- no immediate post-restart service failure is visible
 
-What remains pending:
-- first 10 organic post-merge inserts
-- continued no-error observation during live ingestion
-- post-insert orphan re-check after new rows arrive
+Why this is still a FAIL:
+- production KPI-R5 moved from **0** to **104** immediately after merge
+- violating rows are in the A10 imported range
+- rollback criteria supplied by ANVIL were met because this is a real production regression
+
+Recommended disposition:
+- rollback A10, or
+- explicitly accept and remediate the imported historical `filled_at` gaps before keeping the merge live
 
 ## Failure Trigger
 If a real regression is detected, raise:

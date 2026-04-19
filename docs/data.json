@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-19T19:08:46+00:00",
-  "generated_at_cest": "2026-04-19T21:08:46+02:00",
+  "generated_at_utc": "2026-04-19T19:43:46+00:00",
+  "generated_at_cest": "2026-04-19T21:43:46+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -1618,8 +1618,8 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-19T18:53:37+00:00",
-      "last_active_human": "15m ago",
-      "light": "green",
+      "last_active_human": "50m ago",
+      "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
       }
@@ -1631,7 +1631,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-19T18:29:26+00:00",
-      "last_active_human": "39m ago",
+      "last_active_human": "1h 14m ago",
       "light": "yellow",
       "heartbeat": {
         "current_task": "A10",
@@ -1649,8 +1649,8 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-19T16:27:09+00:00",
-      "last_active_human": "2h 41m ago",
-      "light": "yellow",
+      "last_active_human": "3h 16m ago",
+      "light": "red",
       "heartbeat": {}
     },
     {
@@ -1659,9 +1659,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-19T18:32:56+00:00",
-      "last_active_human": "35m ago",
-      "light": "yellow",
+      "last_active": "2026-04-19T19:27:52+00:00",
+      "last_active_human": "15m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -1670,8 +1670,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-19T19:08:44+00:00",
-      "last_active_human": "1s ago",
+      "last_active": "2026-04-19T19:43:43+00:00",
+      "last_active_human": "2s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -1682,12 +1682,25 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-19T18:53:37+00:00",
-      "last_active_human": "15m ago",
-      "light": "green",
+      "last_active_human": "50m ago",
+      "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-19T19:43:43+00:00",
+      "time_local": "2026-04-19T21:43+02:00",
+      "header": "SPRINT STATUS @ 21:40 CEST (cron tick)",
+      "actions": [
+        "Verified prompt is stale; re-mapped to actual frontier (A10 post-merge, Phase B plan approval)",
+        "Verified live KPI-R5 = 104 (all in imported range 1612-2523; organic path id ≥2524 is clean = 0)",
+        "Confirmed Mike-active pattern — no state-machine dispatches queued this turn"
+      ],
+      "next": "If OinkV Phase B audit still missing at 21:53 (1h mark, matches known LLM-timeout SLA), check gateway journalctl for FailoverError on main lane; if timed out, trigger Hermes-subagent fallback for B1-B5 audit (parallel prep Mike requested) — Otherwise SILENT until A10 disposition or Phase B plan approvals land",
+      "blocker": "A10 POST-MERGE CANARY FAIL needs disposition (GUARDIAN P1 open since 19:23Z, ~2h20m): • 104 imported-historical rows violate KPI-R5 (fill_status=FILLED ∧ order_type=MARKET ∧ filled_at IS NULL) • Live insert path is clean (organic id≥2524 = 0 violations) • Three options per GUARDIAN canary report: (a) Accept — document as historical carve-out; adjust KPI-R5 to exclude id 1612–2523 (b) Remediate — backfill filled_at for the 104 rows with defensible values (created_at fallback?) (c) Rollback — restore /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z (loses drift + merge) GUARDIAN + OinkV webchat notes say \"not evidence against A10 code\" — live path works — so (a) or (b) is preferable to full rollback, but your call. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_21-43-43.md"
+    },
     {
       "time_utc": "2026-04-19T19:08:44+00:00",
       "time_local": "2026-04-19T21:08+02:00",
@@ -2194,20 +2207,6 @@
       "next": "A2A ANVIL → \"A4/A7/A5 plans approved. Proceed with A4 Phase 0 per /home/oinkv/forge-workspace/plans/TASK-A4-plan.md; follow A4 → A7 → A5 order.\" Then resume normal review/merge/canary loop.",
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_09-14-42.md"
-    },
-    {
-      "time_utc": "2026-04-19T07:03:23+00:00",
-      "time_local": "2026-04-19T09:03+02:00",
-      "header": "SPRINT STATUS @ 09:02",
-      "actions": [
-        "Verified all Wave 1 artifacts (merges, canaries, markers) — clean",
-        "Read FORGE A4-A7-SUMMARY; plans are complete and internally consistent",
-        "Confirmed ANVIL is correctly blocked (not silent) waiting on plan approval",
-        "No nudges needed — this is the approved escalation gate"
-      ],
-      "next": "If approval received, A2A ANVIL to start A4 Phase 0 proposal. If still pending next cycle (>30min), re-surface with same ask.",
-      "blocker": "FORGE recommends order **A4 → A7 → A5** (not original A4/A5/A7): • **A4** 🟡 PARTIALLY_CLOSED status (oink-sync lifecycle.py) — 0.5d, LOW risk • **A7** 🔴 UPDATE→NEW phantom-trade guard (signal-gateway micro-gate) — 1d, MEDIUM risk (needs A4 first so partial-closes are visible to the guard) • **A5** 🟡 Confidence scoring per parser — 0.5d, LOW risk, independent",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_09-03-23.md"
     }
   ],
   "plans": [
@@ -2374,24 +2373,25 @@
     {
       "agent": "Hermes",
       "agent_emoji": "🪽",
-      "raw": "none new. Existing standing items (no new push needed): - Phase B Wave 1 (B1–B5) plans awaiting your approval — FORGE HEARTBEAT §Mike Decision Flags has 12 questions queued (B4-APPROVE is the cutover gate). - Heavy Hybrid Roadmap Q-HH-1..Q-HH-6 also queued. - P0 SL integrity alert (4 active wrong-side SLs from MrM/Dal historical signals) is GUARDIAN-owned remediation — separate track from this orchestrator. ```",
-      "label": "Existing standing items (no new push needed): - Phase B Wave 1 (B1–B5) plans awaiting your approval — FORGE HEARTBEAT §Mike Decision Flags has 12 questions queued (B4-APPROVE is…",
+      "raw": "A10 POST-MERGE CANARY FAIL needs disposition (GUARDIAN P1 open since 19:23Z, ~2h20m): • 104 imported-historical rows violate KPI-R5 (fill_status=FILLED ∧ order_type=MARKET ∧ filled_at IS NULL) • Live insert path is clean (organic id≥2524 = 0 violations) • Three options per GUARDIAN canary report: (a) Accept — document as historical carve-out; adjust KPI-R5 to exclude id 1612–2523 (b) Remediate — backfill filled_at for the 104 rows with defensible values (created_at fallback?) (c) Rollback — restore /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z (loses drift + merge) GUARDIAN + OinkV webchat notes say \"not evidence against A10 code\" — live path works — so (a) or (b) is preferable to full rollback, but your call. ```",
+      "label": "A10 POST-MERGE CANARY FAIL needs disposition (GUARDIAN P1 open since 19:23Z, ~2h20m): • 104 imported-historical rows violate KPI-R5 (fill_status=FILLED ∧ order_type=MARKET ∧ fil…",
       "severity": "mike",
       "current_task": null,
       "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-19T19:08:44+00:00",
-    "time_local": "2026-04-19T21:08+02:00",
-    "header": "SPRINT STATUS @ 21:08 CEST (Apr 19 2026)",
+    "time_utc": "2026-04-19T19:43:43+00:00",
+    "time_local": "2026-04-19T21:43+02:00",
+    "header": "SPRINT STATUS @ 21:40 CEST (cron tick)",
     "actions": [
-      "Archived stale /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker → suffixed",
-      "Verified prior cycle's Phase B OinkV audit dispatch is alive (task_runs=running, not"
+      "Verified prompt is stale; re-mapped to actual frontier (A10 post-merge, Phase B plan approval)",
+      "Verified live KPI-R5 = 104 (all in imported range 1612-2523; organic path id ≥2524 is clean = 0)",
+      "Confirmed Mike-active pattern — no state-machine dispatches queued this turn"
     ],
-    "next": "Poll /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-COMPLETE.marker. If landed, — Poll A10 canary file for organic post-merge signals (id>2523).",
-    "blocker": "none new. Existing standing items (no new push needed): - Phase B Wave 1 (B1–B5) plans awaiting your approval — FORGE HEARTBEAT §Mike Decision Flags has 12 questions queued (B4-APPROVE is the cutover gate). - Heavy Hybrid Roadmap Q-HH-1..Q-HH-6 also queued. - P0 SL integrity alert (4 active wrong-side SLs from MrM/Dal historical signals) is GUARDIAN-owned remediation — separate track from this orchestrator. ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_21-08-44.md"
+    "next": "If OinkV Phase B audit still missing at 21:53 (1h mark, matches known LLM-timeout SLA), check gateway journalctl for FailoverError on main lane; if timed out, trigger Hermes-subagent fallback for B1-B5 audit (parallel prep Mike requested) — Otherwise SILENT until A10 disposition or Phase B plan approvals land",
+    "blocker": "A10 POST-MERGE CANARY FAIL needs disposition (GUARDIAN P1 open since 19:23Z, ~2h20m): • 104 imported-historical rows violate KPI-R5 (fill_status=FILLED ∧ order_type=MARKET ∧ filled_at IS NULL) • Live insert path is clean (organic id≥2524 = 0 violations) • Three options per GUARDIAN canary report: (a) Accept — document as historical carve-out; adjust KPI-R5 to exclude id 1612–2523 (b) Remediate — backfill filled_at for the 104 rows with defensible values (created_at fallback?) (c) Rollback — restore /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z (loses drift + merge) GUARDIAN + OinkV webchat notes say \"not evidence against A10 code\" — live path works — so (a) or (b) is preferable to full rollback, but your call. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_21-43-43.md"
   },
-  "commit": "06411fe55a41"
+  "commit": "ad84bb6d90a7"
 }
