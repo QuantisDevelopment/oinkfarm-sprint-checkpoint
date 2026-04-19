@@ -1,0 +1,64 @@
+# OinkV Audit Phase B Wave 1 — Hermes Subagent Fallback Dispatched
+
+**Dispatched:** 2026-04-19T19:55Z (21:55 CEST)
+**Dispatcher:** Hermes cron orchestrator (sprint-orchestrator skill)
+
+## Why Hermes fallback (not OinkV/`main` retry)
+
+Previous cycle's `openclaw agent --agent main` dispatch at 2026-04-19T18:53:03Z
+(tracked in `OINKV-AUDIT-PHASE-B-DISPATCHED.marker` — now renamed with `.FAILED-llm-timeout-20260419T1923Z`
+suffix) **did not succeed**. Evidence from `/tmp/dispatch_oinkv_phaseb_audit.log`:
+
+```
+2026-04-19T19:23:36.019224Z rc=1
+STDERR:
+Gateway agent failed; falling back to embedded: GatewayClientRequestError:
+  FailoverError: LLM request timed out.
+[diagnostic] lane task error: lane=main durationMs=10909
+  error="session file locked (timeout 10000ms):
+  pid=26841 /home/oinkv/.openclaw/agents/main/sessions/95d8c863-....jsonl.lock"
+FailoverError: session file locked (timeout 10000ms): ...
+```
+
+Plus: OinkV's current session (`95d8c863...jsonl.lock`) is still locked as of 21:54 CEST
+(main agent is busy working on GitHub issues #137/#138/#139 dispatched by Mike via telegram-bridge).
+Queueing another long-context Phase B audit behind that work would compound the timeout risk.
+
+Per sprint-orchestrator skill "Hermes-Subagent Fallback for OinkV Staleness Audits" section:
+  - Don't retry OinkV (same timeout likely recurs)
+  - Don't wait (blocks Phase B critical path)
+  - Dispatch 3 parallel delegate_task subagents, one per plan
+
+## Scope (Wave 1 highest-priority 3 of 5)
+
+| Plan | Tier | Priority rationale |
+|------|------|-------------------|
+| B1 (DB abstraction) | 🔴 CRITICAL | Foundation for all Phase B — 8 files touched, any drift blocks B2-B15 |
+| B2 (PostgreSQL schema + migration) | 🔴 CRITICAL | Already suspect: plan says "signals: 50 columns", actual DB has 52 (A8 sl_type + A11 leverage_source shipped after plan was drafted) |
+| B3 (Parallel-write verification) | 🔴 CRITICAL | 11 write sites enumerated — any site drift creates dual-write blind spots |
+
+B4 (cutover, tiny config switch) and B5 (signal_router decomposition, independent track)
+deferred to next orchestrator cycle — they're smaller / more self-contained and not on the
+same drift-risk profile.
+
+## Expected outputs
+
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B1.md`
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B2.md`
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B3.md`
+
+Orchestrator will consolidate + write `OINKV-AUDIT-PHASE-B.md` summary +
+`OINKV-AUDIT-PHASE-B-COMPLETE.marker` after all 3 land.
+
+## Safety rails (in each subagent's context)
+
+- Read-only audit. Do NOT modify source files in any repo.
+- Do NOT open PRs, push, commit, tag, or dispatch other agents.
+- Do NOT modify /home/oinkv/.openclaw/workspace (production clone).
+- Only writes: their own OINKV-AUDIT-PHASE-B-BN.md file.
+
+## Base commits
+
+- oinkfarm: /home/oinkv/.openclaw/workspace @ 50b23834 (post-A10 merge)
+- oink-sync: /home/oinkv/oink-sync @ e9be741
+- signal-gateway: /home/oinkv/signal-gateway @ c6cb99e

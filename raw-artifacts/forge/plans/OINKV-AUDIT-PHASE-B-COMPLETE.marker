@@ -1,0 +1,38 @@
+Phase B Wave 1 OinkV staleness audit COMPLETE (Hermes fallback).
+
+Completed: 2026-04-19T19:55Z (21:55 CEST)
+Auditor: Hermes Agent (sprint-orchestrator cron) via 3 parallel delegate_task subagents
+Fallback reason: OinkV main agent LLM-timed-out on prior dispatch (2026-04-19T19:23:36Z).
+
+Coverage: B1, B2, B3 (highest-priority 🔴 CRITICAL plans of Wave 1).
+Deferred to next cycle: B4 (8k bytes, gated on B1-B3 revisions) and B5 (standalone
+decomposition track, 🟡 STANDARD).
+
+Artifacts:
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B1.md (16,282 bytes) — 🔴 NOT SHIP-READY
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B2.md (25,557 bytes) — 🔴 REJECT — REWRITE
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B3.md (18,267 bytes) — 🔴 NOT SHIP-READY
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B.md (8,476 bytes) — consolidated summary
+
+Headline verdict: NONE of B1/B2/B3 are ship-ready as-drafted. All 3 have concrete
+revision paths. Core architectures are sound. Total FORGE revision effort ~3-5 hrs
+(B2 heaviest, potentially partial rewrite of §3 DDL).
+
+Cross-plan findings requiring coordinated revision:
+1. Commit staleness (all 3 plans reference 46154543; actual HEAD is 50b23834)
+2. Schema drift (signals has 52 cols not 50 — A8 sl_type + A11 leverage_source)
+3. event_store.py dual-location (canonical oinkfarm + vendored oink-sync)
+4. Missing signal-gateway repo coverage (A6 ghost-closure writes)
+5. Reconciler column coverage (omits all A1-A11 new columns)
+
+Preconditions for B2 revision:
+- A10 P1 alert (104 NULL filled_at MARKET-FILLED) resolution needed first (rollback
+  vs accept) — Mike-gated, currently open.
+
+Next-cycle actions:
+1. If Mike approves the audit findings: A2A FORGE with consolidated revision list.
+2. Dispatch B4 + B5 audits when bandwidth available (B4 depends on B1-B3 landing first).
+3. Continue monitoring A10 canary + P0 active-SL integrity alert (both Mike-gated).
+
+Do NOT re-dispatch the OinkV main-agent Phase B audit — this Hermes-fallback
+consolidates the work already.
