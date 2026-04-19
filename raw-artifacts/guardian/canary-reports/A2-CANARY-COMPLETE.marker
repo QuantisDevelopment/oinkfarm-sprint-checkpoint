@@ -1,0 +1,13 @@
+# GUARDIAN A2 Canary Complete
+
+- Verdict: PASS
+- Disposition: Core A2 behaviors validated in production
+- Evidence:
+  - Schema active: signals.remaining_pct present, all rows backfilled to 100.0
+  - Legacy preserved: FET #1159 remaining_pct=100.0, final_roi=3.37 unchanged
+  - Natural TP_HIT validated: signal 1602 (PHA) event id 47 at 2026-04-19T02:34:50.786Z with close_pct=25.0, remaining_pct=75.0, alloc_source=assumed
+  - Signal state after TP_HIT: ACTIVE, remaining_pct=75.0, tp2_hit_at set
+  - Baselines stable: SC-2=12.0944%, SC-4=490, KPI-R1=20.7627%, KPI-R4=80.0
+- Caveat: Full fresh post-A2 TP1→TP2 sequential chain not yet observed; non-blocking
+- Report: /home/oinkv/guardian-workspace/canary-reports/A2-CANARY.md
+- Completed at: 2026-04-19T02:40Z

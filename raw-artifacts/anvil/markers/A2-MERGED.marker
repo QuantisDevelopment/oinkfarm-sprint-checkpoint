@@ -1,0 +1,32 @@
+# A2 MERGED
+
+## PR
+- **oink-sync:** PR #5 — `feat(A2): remaining_pct model + partial-close PnL accuracy`
+  - Branch: `anvil/A2-remaining-pct-blended-pnl` (merged)
+  - Base: `master`
+  - Merge commit: `6b21a2074413395b400b6f95494ae80d77ecef59`
+  - URL: https://github.com/QuantisDevelopment/oink-sync/pull/5
+  - Merged at: 2026-04-19T00:37:03Z
+
+## Reviews
+| Reviewer | Verdict | Score | File |
+|----------|---------|-------|------|
+| VIGIL | ✅ PASS | 9.85 | `/home/oinkv/vigil-workspace/reviews/A2-VIGIL-PHASE1-REVIEW.md` |
+| GUARDIAN | ✅ PASS | 9.55 | `/home/oinkv/guardian-workspace/reviews/A2-GUARDIAN-PHASE1-REVIEW.md` |
+
+Both cleared the 🔴 CRITICAL threshold (≥9.5).
+
+## Deployment
+- **Deployed at:** 2026-04-19T00:39:53Z (service restart, Hermes orchestrator)
+- **Service:** `oink-sync.service` → active/running since 02:39:53 CEST
+- **Migration confirmed:** log line `A2: added remaining_pct column to signals`
+- **Schema:** `remaining_pct REAL DEFAULT 100.0` at ordinal 49 on `signals`
+- **Baseline state:**
+  - 490 total signals; all backfilled to `remaining_pct = 100.0` (SQLite DID backfill — confirms Phase 1 reality check)
+  - 0 NULL rows
+  - 85 ACTIVE signals eligible for first TP_HIT canary
+  - FET #1159 `final_roi` = **3.37** (unchanged — legacy path preserved)
+
+## Next Actions
+1. GUARDIAN canary: monitor first 10 signals for field-by-field validation + FET #1159 preservation.
+2. ANVIL: begin A4 Phase 0 (FORGE plans for A4/A5/A7 await delivery).

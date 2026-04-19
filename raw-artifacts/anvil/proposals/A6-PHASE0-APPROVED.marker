@@ -1,0 +1,58 @@
+# A6 Phase 0 — APPROVED (both reviewers)
+
+task: A6 — Ghost Closure Confirmation Flag
+tier: 🟡 STANDARD
+round: R1 (revision after GUARDIAN R0 REQUEST_CHANGES)
+approved_at: 2026-04-19T12:45:00Z (orchestrator-consolidated)
+
+## Reviewer Verdicts
+
+### VIGIL ✅ APPROVE
+- Review: /home/oinkv/vigil-workspace/reviews/A6-VIGIL-PHASE0-REVIEW.md
+- Complete marker: /home/oinkv/vigil-workspace/reviews/A6-VIGIL-PHASE0-COMPLETE.marker
+- Timestamp: 2026-04-19T12:27:00Z (R0 ✅, carried through R1)
+
+### GUARDIAN ✅ APPROVE
+- Review: /home/oinkv/guardian-workspace/reviews/A6-GUARDIAN-PHASE0-REVIEW.md
+- Complete marker: /home/oinkv/guardian-workspace/reviews/A6-GUARDIAN-PHASE0-COMPLETE.marker
+- Timestamp: 2026-04-19T12:44:00Z (R1 ✅ — R0 was REQUEST CHANGES, R1 resolved both blockers)
+
+## Phase 1 Concerns (bake into code)
+
+### From VIGIL (Phase 1 verification checklist):
+1. `soft_close is True` — strict identity check (not truthy, not `== True`). Use `is True` or explicit `== True` with guard.
+2. `INSERT ... WHERE NOT EXISTS` idempotency guard present on signal_events.
+3. `close_source IS NULL` guard on the note append (don't overwrite confirmed-close notes).
+4. `created_at` — either omit from INSERT (column default) OR use `strftime('%Y-%m-%dT%H:%M:%f','now')`. NOT `datetime('now')` (wrong precision).
+5. try/except wrapper around the entire DB write block; notification fires regardless of DB write success.
+6. `status IN ('ACTIVE', 'PARTIALLY_CLOSED')` in the signal lookup WHERE clause.
+7. All 7 tests pass; all existing test_reconciler.py tests pass unmodified.
+
+### From GUARDIAN (Phase 1 verification checklist):
+1. Keep event INSERT + note UPDATE inside ONE transaction exactly as proposed.
+2. Verify WARNING-path observability for no-match cases so silent audit gaps do not accumulate.
+3. Preserve `close_source` unchanged for provisional ghost closures (design is correct; just don't regress).
+4. 5% entry tolerance must be applied exactly as proposed; tests must cover BOTH multi-match and no-match branches.
+
+## Implementation Brief
+
+- **Repo:** `signal-gateway` (bandtincorporated8/signal-gateway) — NOT oinkfarm
+- **Branch:** `anvil/A6-ghost-closure-flag` (suggested)
+- **Target file:** `signal_router.py` → `_route_board_update()` CLOSE branch
+- **Schema changes:** NONE (additive events + note tag only)
+- **Financial Hotpath:** NONE (confirmed 🟡 STANDARD)
+- **Test count:** 9 total (7 core + 2 new from R1: entry_discriminator_selects_correct_signal, entry_outside_tolerance_skips)
+- **Threshold for merge:** ≥9.0 both dimensions
+
+## Next Action Checklist (ANVIL)
+- [ ] Update HEARTBEAT.md: `current_phase: "implementation"`, `branch: "anvil/A6-ghost-closure-flag"`, clear `blockers`
+- [ ] Cut branch from signal-gateway/main
+- [ ] Implement Phase 1 per proposal + checklists above
+- [ ] Run tests (all 9 + existing test_reconciler.py)
+- [ ] Open PR on bandtincorporated8/signal-gateway with label `anvil/A6`
+- [ ] A2A VIGIL + GUARDIAN for Phase 1 review
+
+## References
+- Proposal: /home/oinkv/anvil-workspace/proposals/A6-PHASE0-PROPOSAL.md
+- Plan: /home/oinkv/forge-workspace/plans/TASK-A6-plan.md
+- FORGE summary: /home/oinkv/forge-workspace/plans/A6-A11-SUMMARY.md

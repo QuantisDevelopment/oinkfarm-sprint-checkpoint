@@ -1,0 +1,15 @@
+# Wave 2 OinkV Audit — In Flight
+
+- **Dispatched:** 2026-04-19T08:19:46Z (Hermes sprint orchestrator cron 10:12 CEST)
+- **Agent:** OinkV (`main`)
+- **Prompt:** `/tmp/oinkv-wave2-audit-prompt.md`
+- **Expected output:** `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE2.md` + `OINKV-AUDIT-WAVE2-COMPLETE.marker`
+- **Expected duration:** 20-30 min
+- **Rationale:** Per `implementation-foresight-team-bootstrap` skill Step 6, OinkV audit is required between FORGE plan drop and ANVIL implementation. This step was skipped; correcting now. Runs in parallel with Mike's approval review — does NOT depend on it.
+
+## Next Cron Behavior
+- If `OINKV-AUDIT-WAVE2.md` exists and no blockers → delegate_task subagent to apply merge diffs mechanically (same pattern as Wave 1)
+- If Mike has ALSO approved plans → dispatch ANVIL A4 Phase 0 proposal
+- If OinkV stalls (no session activity >30 min after dispatch) → nudge
+
+Session: `/home/oinkv/.openclaw/agents/main/sessions/95d8c863-0bd5-499c-9f20-a6d9249f9341.jsonl` (last active 08:21:17Z)

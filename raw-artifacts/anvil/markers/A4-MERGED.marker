@@ -1,0 +1,51 @@
+# A4 MERGED — oink-sync PR #7
+
+**Merge commit:** e9be741a7a0c0d779b259c9e1813e3aeac59ca0a
+**Merged at:** 2026-04-19T10:41:21Z (12:41 CEST)
+**Squash merged, branch deleted:** anvil/A4-partially-closed-status
+**Repo:** QuantisDevelopment/oink-sync
+
+## Review Scores (🔴 CRITICAL tier, ≥9.5 threshold)
+
+| Reviewer | Score | Verdict |
+|----------|-------|---------|
+| 🔍 VIGIL  | **9.60** | ✅ PASS |
+| 🛡️ GUARDIAN | **9.90** | ✅ PASS |
+| 🔧 Hermes | LGTM  | ✅ LGTM (independent parallel review) |
+
+Reviews at:
+- /home/oinkv/vigil-workspace/reviews/A4-VIGIL-PHASE1-REVIEW.md
+- /home/oinkv/guardian-workspace/reviews/A4-GUARDIAN-PHASE1-REVIEW.md
+- /home/oinkv/hermes-workspace/A4-HERMES-REVIEW.md
+
+## Scope Delivered
+
+- 10 modification sites: lifecycle.py L1-L5 + engine.py E1-E5
+- Critical E5: `_calculate_pnl()` status filter broadened → prevents silent None PnL for PARTIALLY_CLOSED
+- Same-cycle closure path (remaining_pct → 0 on TP-hit): `calculate_blended_pnl()` called in-cycle with full tp_close_pcts; no PARTIALLY_CLOSED limbo
+- STATUS_CHANGED added to LIFECYCLE_EVENTS hygiene set
+- 21 new tests, 66 total passing (58 relevant + 8 lifecycle/remaining_pct baseline)
+- Purely additive — no schema migration, rollback = single UPDATE
+
+## Backfill Status
+
+- Guarded SQL in PR description: pre-SELECT for IDs 1561/1602, abort-if-rowcount>4 guard, BEGIN/COMMIT, #1602 anomaly handler (tp3_hit_at set with remaining_pct=50.0 — flagged pre-existing DQ, not A4 regression)
+- Execution: **ANVIL to run post-merge**
+
+## Canary
+
+- Dispatching GUARDIAN to monitor first PARTIALLY_CLOSED transition + related baselines
+- Output: /home/oinkv/guardian-workspace/canary-reports/A4-CANARY.md
+
+## Deferrals
+
+| ID | Description | Reason |
+|----|-------------|--------|
+| A4-F1 | oinkdb-api (~12 read-only SQL sites) | Read-only reporting, no data loss |
+| A4-F2 | signal-gateway dedup queries | Largely superseded by A7's `_match_active()` broadening |
+
+## Next Task
+
+Parallel with canary: ANVIL starts A7 Phase 0 (UPDATE→NEW detection, 🔴 CRITICAL, Financial Hotpath).
+FORGE plan ready at: /home/oinkv/forge-workspace/plans/TASK-A7-plan.md (v1.1)
+OinkV audit ready at: /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE2-A7.md

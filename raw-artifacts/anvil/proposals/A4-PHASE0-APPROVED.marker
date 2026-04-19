@@ -1,0 +1,39 @@
+# A4 Phase 0 Approval — Wave 2
+
+**Approved by:** Mike (Discord, 2026-04-19 11:20 CEST)
+**Audit by:** OinkV-fallback (Hermes 3-subagent parallel) — ✅ READY
+**Audit file:** /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE2-A4.md
+**Plan:** /home/oinkv/forge-workspace/plans/TASK-A4-plan.md
+
+## Mike's Decision
+- **Approve A4 scope:** YES — proceed to Phase 0 proposal
+- **Audit result:** 0 critical, 5 minor (all cosmetic line-drift)
+
+## Concerns to bake into Phase 1 (MUST-FIX / SHOULD-FIX / SUGGESTION)
+
+### MUST-FIX (materially changes behavior)
+1. **Backfill rowcount expectation is WRONG in the plan.**
+   - Plan §4e says: *"Expected pre-A4: 0 rows (A2 shipped 2026-04-19, no partial signals yet)"*
+   - Actual: **2 rows** — signals #1561 and #1602, both legitimate partial-TPs from A2's first production hours.
+   - **Action:** ANVIL's backfill script must treat `~2 rows` as the expected, Mike-approved result. Do NOT pause on the "If > 0: confirm with Mike" gate — this has been pre-confirmed.
+   - **Pre-deploy check:** Before running backfill, re-run `SELECT id, status, remaining_pct, tp1_hit_at, tp2_hit_at, tp3_hit_at FROM signals WHERE status='ACTIVE' AND remaining_pct > 0.0 AND remaining_pct < 100.0;` and paste results into PR description. If rowcount exceeds ~4, pause and ping Hermes.
+
+### SHOULD-FIX
+2. **Line citations have drifted (cosmetic but worth fixing):**
+   - `_process_tp_hits` UPDATE: plan says lines 604–612, actual **606–616** (`oink-sync/oink_sync/lifecycle.py`)
+   - `_check_sl_tp` closure UPDATE: plan says line ~481, actual **line 470–473** (the `status='ACTIVE' AND fill_status='FILLED'` predicate is at 473).
+   - Use grep-marker strategy rather than line numbers: the code blocks quoted in the plan match source byte-for-byte — safe to search-by-text.
+3. **`LIFECYCLE_EVENTS` in `event_store.py` is informational only** — `log()` does NOT validate event_type strings, so adding `STATUS_CHANGED` to the set is hygiene, not a correctness requirement. Do add it for documentation parity.
+
+### SUGGESTIONS
+4. Status-distribution snapshot in §1 is stale by hours (absolute counts drift 0–6 as signals close). Not actionable.
+
+## Next Actions for ANVIL
+1. Create branch `anvil/A4-partially-closed-status` off `main` in `oink-sync`.
+2. Draft Phase 0 proposal per FORGE plan, incorporating MUST-FIX #1 (expected rows = 2) and SHOULD-FIX #2 (line drift).
+3. Submit Phase 0 to VIGIL + GUARDIAN review via standard A2A.
+4. Update HEARTBEAT.md: `current_task=A4, current_phase=proposal_writing, blockers=[]`, set branch name.
+5. No code changes to signal-gateway — A4 is oink-sync-only.
+
+## Orchestrator follow-up
+After Phase 0 approval → Phase 1 code → VIGIL + GUARDIAN + Hermes parallel review → merge → GUARDIAN canary on first closure event of a PARTIALLY_CLOSED signal.

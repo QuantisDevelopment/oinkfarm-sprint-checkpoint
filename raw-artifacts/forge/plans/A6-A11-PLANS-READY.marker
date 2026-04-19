@@ -1,0 +1,27 @@
+Plans ready for Mike approval
+Generated: 2026-04-19T12:26:00Z
+Tasks: A6 (Ghost closure), A8 (Conditional SL type), A9 (Denomination multiplier), A10 (DB merge), A11 (Leverage source tracking)
+Order: A9+A11 (parallel, lightweight) → A8+A6 (parallel, standard) → A10 (Mike gate, critical)
+Files:
+  plans/TASK-A6-plan.md   (🟡 STANDARD — ghost closure event instrumentation)
+  plans/TASK-A8-plan.md   (🟡 STANDARD — sl_type column + classification)
+  plans/TASK-A9-plan.md   (🟢 LIGHTWEIGHT — denomination multiplier table)
+  plans/TASK-A10-plan.md  (🔴 CRITICAL — DB merge, TWO Mike approval gates)
+  plans/TASK-A11-plan.md  (🟢 LIGHTWEIGHT — leverage_source, NOT defaults)
+  plans/A6-A11-SUMMARY.md (execution order + dependency graph + risk flags)
+
+FORGE design decisions:
+  A11: leverage_source tracking instead of defaults (80.1% NULL is correct)
+  A6: no ghost_confirmed column — use close_source + GHOST_CLOSURE event
+  A9: normalize at comparison time, not INSERT time
+  A10: new DB wins for 514 overlapping signals; two Mike gates (plan + deploy)
+
+Mike approval flags:
+  A10-APPROVE: merge algorithm + dedup strategy
+  A10-DEPLOY: validation report before production swap
+  Q-A10-1: merge price_history? (FORGE recommends defer)
+  Q-A10-2: merge audit_log? (FORGE recommends skip)
+  Q-A10-3: schedule during quiet window?
+  A11-DECISION: leverage_source vs defaults (FORGE chose source tracking)
+
+Note: A6 Phase 0 already dispatched to ANVIL (14:24Z) — dependencies shipped, safe to progress.

@@ -1,0 +1,103 @@
+# A5 Phase 0 — APPROVED (both reviewers)
+
+**Task:** A5 — Parser-Type Confidence Scoring
+**Tier:** 🟡 STANDARD (threshold ≥9.0 overall for Phase 1)
+**Proposal:** /home/oinkv/anvil-workspace/proposals/A5-PHASE0-PROPOSAL.md
+**FORGE plan:** /home/oinkv/forge-workspace/plans/TASK-A5-plan.md (v1.1)
+**OinkV audit:** /home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE2-A5.md
+**Approved at:** 2026-04-19 13:40 CEST
+**Approved by:** VIGIL 🔍 (APPROVE @ 13:29) + GUARDIAN 🛡️ (APPROVE @ 13:32)
+
+## Reviewer Artifacts
+- VIGIL review:   /home/oinkv/vigil-workspace/reviews/A5-VIGIL-PHASE0-REVIEW.md
+- GUARDIAN review: /home/oinkv/guardian-workspace/reviews/A5-GUARDIAN-PHASE0-REVIEW.md
+
+---
+
+## MUST-OBSERVE in Phase 1 (both reviewers agreed)
+
+1. **`ext.get("confidence") is None` check MUST happen BEFORE `_safe_float()` normalization.**
+   Post-normalization equality-against-0.8 detection is UNSAFE — it would overwrite legitimate
+   extractor-supplied `0.8` values. Cleanest form:
+   ```python
+   extractor_supplied_confidence = ext.get("confidence") is not None
+   confidence = _safe_float(ext.get("confidence"), 0.8)
+   if confidence > 1.0:
+       confidence = round(confidence / 10.0, 2)
+   confidence = max(0.0, min(1.0, confidence))
+   if not extractor_supplied_confidence:
+       confidence = PARSER_CONFIDENCE_MAP.get(method, 0.8)
+   ```
+   (shape may vary but the ordering invariant is: decide "extractor supplied?" BEFORE any numeric
+   coercion, then apply map only in the "did-not-supply" branch.)
+
+2. **`PARSER_CONFIDENCE_MAP` must be a module-level constant** (not inside a function).
+   All 7 keys must match the verified producers:
+   | Key | Score |
+   |-----|-------|
+   | `cornix_regex` | 0.95 |
+   | `telegram_direct` | 0.90 |
+   | `chroma_regex` | 0.90 |
+   | `oinxtractor_agent` | 0.75 |
+   | `llm_nl` | 0.70 |
+   | `inline_fallback` | 0.70 |
+   | `qwen_v3` | 0.70 |
+   - Do NOT re-introduce the 3 phantom keys (`board_reconciler`, `oinkdb_opus`, `manual`) that
+     OinkV caught in FORGE v1.0.
+   - `dict.get(method, 0.8)` fallback for unknown methods — this stays the safety net.
+
+3. **Canonical file target:** `/home/oinkv/.openclaw/workspace/scripts/micro-gate-v3.py` (1,407 LOC).
+   Do NOT edit the stale `signal-gateway` copy (1,063 LOC) — it is not the production path.
+
+4. **`extraction_method` is read from `entry` (top-level), NOT `ext`** — canonical line 822:
+   `method = entry.get("extraction_method", "unknown")`. The `"unknown"` default ensures `method`
+   is never `None` when used as the map key.
+
+5. **No schema changes, no backfill, no DDL.** Forward-only regime change for new inserts.
+   Existing ~492 rows at 0.8 remain unchanged (per GUARDIAN: "historical backfill … would create
+   unnecessary mixed-era reinterpretation risk").
+
+6. **`oinxtractor_agent = 0.75` must stay flagged in the PR body** as provisional / Mike-validated,
+   so later recalibration (if production evidence suggests a different score) is straightforward.
+
+7. **Code comment on the map** noting the maintenance requirement: new extraction methods added
+   in future tasks should be added to `PARSER_CONFIDENCE_MAP` (silent 0.8 fallback would be a
+   metadata regression for a high-quality new parser).
+
+---
+
+## Phase 1 Test Requirements (VIGIL)
+
+12 tests total — 9 MUST + 3 SHOULD (test file name: canonical `.openclaw/workspace/tests/`,
+ANVIL picks either `test_a5_confidence.py` or `test_micro_gate_confidence.py` — be consistent):
+
+- 7 per-key confidence tests (one per map entry) — 4 MUST + 3 SHOULD (low-risk keys as SHOULD)
+- `test_explicit_extractor_confidence_preserved` — explicit `ext.confidence=0.73` stays 0.73 (MUST)
+- `test_unknown_method_gets_080` — unknown `extraction_method` falls back to 0.80 (MUST)
+- `test_missing_method_gets_080` — missing `extraction_method` key → 0.80 (MUST)
+- `test_confidence_gt1_normalization_unchanged` — 9.0 still normalizes to 0.9 (MUST)
+- `test_explicit_high_confidence_preserved` — explicit 0.95 preserved through the flow (MUST)
+- All existing micro-gate / confidence tests remain PASS (regression gate, MUST)
+
+---
+
+## Post-Deploy Verification (for GUARDIAN canary)
+
+Per GUARDIAN suggestion: sample recent inserts by extraction_method after deploy, confirm explicit
+extractor confidences remain untouched and PARSER_CONFIDENCE_MAP values appear on appropriate rows.
+Proposal §10 SQL using `notes LIKE '%[extracted: ...]%'` is acceptable — `extraction_method` is
+currently only on the notes tag, not a dedicated column.
+
+---
+
+## Next-Action Checklist (for ANVIL)
+
+- [ ] Create branch `anvil/A5-parser-confidence-scoring` off `origin/master` in `.openclaw/workspace` repo
+- [ ] Implement PARSER_CONFIDENCE_MAP + is-None detection per MUST-OBSERVE above
+- [ ] Write 12 tests (9 MUST + 3 SHOULD) in canonical tests/ dir
+- [ ] Run full suite — all existing tests must stay green
+- [ ] Update HEARTBEAT.md → `current_phase: "implementation"`, `branch: "anvil/A5-..."`,
+      `blockers: []`, `review_round: 0`
+- [ ] Push branch, open PR against `master` with 🟡 STANDARD tier, provisional-score note in body
+- [ ] A2A VIGIL + GUARDIAN for Phase 1 review
+- [ ] Update HEARTBEAT.md → `current_phase: "review_pending"`

@@ -250,17 +250,30 @@ def parse_merged_marker(text: str) -> dict[str, Any]:
         pn = re.search(r"PR_NUMBER\s*=\s*(\d+)", text)
         rm = re.search(r"REPO\s*=\s*(?:QuantisDevelopment/)?([\w\-.]+)", text)
         cm = re.search(r"MERGE_COMMIT\s*=\s*([a-f0-9]{7,40})", text)
-        if pn and rm:
-            repo, num = rm.group(1), int(pn.group(1))
+        # Free-form fallback (e.g. A4: "oink-sync PR #7" + "**Merge commit:** <sha>")
+        if not (pn and rm):
+            fm = re.search(r"([a-zA-Z][\w\-]+)\s+PR\s*#(\d+)", text)
+            if fm:
+                rm = rm or re.match(r"(.*)", fm.group(1))
+                pn = pn or re.match(r"(.*)", fm.group(2))
+                repo_name, num = fm.group(1), int(fm.group(2))
+            else:
+                repo_name = rm.group(1) if rm else None
+                num = int(pn.group(1)) if pn else None
+        else:
+            repo_name, num = rm.group(1), int(pn.group(1))
+        if not cm:
+            cm = re.search(r"(?i)merge\s*commit[:\s*]+`?([a-f0-9]{7,40})`?", text)
+        if repo_name and num:
             pr = {
-                "repo": repo, "number": num,
-                "pr_url": f"https://github.com/QuantisDevelopment/{repo}/pull/{num}",
+                "repo": repo_name, "number": num,
+                "pr_url": f"https://github.com/QuantisDevelopment/{repo_name}/pull/{num}",
                 "merge_commit": cm.group(1) if cm else None,
                 "commit_url": None,
             }
             if pr["merge_commit"]:
                 pr["commit_url"] = (
-                    f"https://github.com/QuantisDevelopment/{repo}/commit/{pr['merge_commit']}"
+                    f"https://github.com/QuantisDevelopment/{repo_name}/commit/{pr['merge_commit']}"
                 )
             result["prs"].append(pr)
     m = MERGED_AT_RE.search(text) or re.search(r"MERGED_AT\s*=\s*([0-9T:\-Z.+]+)", text)
@@ -666,17 +679,697 @@ def write_site(data: dict[str, Any], html: str) -> None:
                 shutil.copy2(item, dst)
 
 
+# --------------------------------------------------------------------------- #
+# Raw-artifacts + sprint-log emitters (audit trail / per-task archive)
+# --------------------------------------------------------------------------- #
+
+RAW = ROOT / "raw-artifacts"
+SPRINT_LOG = ROOT / "sprint-log"
+
+TASK_SLUGS = {
+    "A1": "signal-events-schema", "A2": "remaining-pct-model",
+    "A3": "auto-filled-at",       "A4": "partially-closed-status",
+    "A5": "confidence-scoring",   "A7": "update-new-detection",
+}
+TASK_NAMES = {
+    "A1": "signal_events Table + 12 Event Type Instrumentation",
+    "A2": "remaining_pct Model + Blended PnL Fix",
+    "A3": "Auto filled_at for MARKET Orders",
+    "A4": "PARTIALLY_CLOSED Status for Partial TP Signals",
+    "A5": "Parser-Type Confidence Scoring",
+    "A7": "UPDATE→NEW Detection (Phantom Trade Prevention)",
+}
+TASK_WAVE = {"A1": 1, "A2": 1, "A3": 1, "A4": 2, "A5": 2, "A7": 2}
+STATUS_BADGE = {
+    "DONE": "✅ DONE", "CANARY": "🧪 CANARY", "PR_REVIEW": "👀 PR REVIEW",
+    "CODE": "⚙️ CODING", "PROPOSAL_REVIEW": "📝 PROPOSAL REVIEW",
+    "PROPOSAL": "📝 PROPOSAL", "PLANNED": "📋 PLANNED",
+    "BLOCKED": "🛑 BLOCKED", "NOT_STARTED": "⏳ NOT STARTED",
+}
+STATUS_HUMAN = {
+    "DONE": "Shipped, canary PASS", "CANARY": "Merged, canary in flight",
+    "PR_REVIEW": "PR open, awaiting reviews",
+    "CODE": "Phase 0 approved, implementation in progress",
+    "PROPOSAL_REVIEW": "Proposal ready, awaiting Phase 0 review",
+    "PROPOSAL": "Proposal drafted",
+    "PLANNED": "FORGE plan published, not yet started",
+    "BLOCKED": "Blocked on decision or dependency",
+    "NOT_STARTED": "Not yet started",
+}
+CANARY_BADGE = {"PASS": "✅ PASS", "WARN": "⚠️ WARN",
+                "FAIL": "❌ FAIL", "PENDING": "⏳ PENDING"}
+
+def _fmt_mtime_cest(p: Path) -> str:
+    mt = safe_mtime(p)
+    return mt.astimezone(CEST).strftime("%H:%M CEST on %d %b %Y") if mt else "—"
+
+def _fmt_bytes(n: int) -> str:
+    if n < 1024: return f"{n} B"
+    if n < 1024 * 1024: return f"{n/1024:.1f} KB"
+    return f"{n/(1024*1024):.2f} MB"
+
+def _raw_link(subdir: str, filename: str) -> str:
+    return f"../../raw-artifacts/{subdir}/{filename}"
+
+def _subdir_desc(s: str) -> str:
+    return {
+        "forge/plans": "FORGE technical plans, A-group summaries, OinkV audits",
+        "anvil/proposals": "ANVIL Phase 0 proposals + approval markers",
+        "anvil/markers": "Merge, ready-for-review, and lifecycle markers",
+        "anvil/followups": "Deferred follow-up tasks (A{N}-F{M})",
+        "anvil/backfill-logs": "Post-merge backfill SQL execution logs",
+        "vigil/reviews": "VIGIL Phase 0 + Phase 1 code reviews (5-dim scored)",
+        "guardian/reviews": "GUARDIAN Phase 0 + Phase 1 data reviews (5-dim scored)",
+        "guardian/canary-reports": "Post-deploy canary reports",
+        "hermes": "Hermes parallel reviews (LGTM / CONCERNS)",
+    }.get(s, s)
+
+# ---- Raw-artifacts emitter ---------------------------------------------------
+
+RAW_GROUPS = [
+    ("forge/plans", FORGE / "plans",
+     ["TASK-A*.md", "A*-SUMMARY.md", "OINKV-AUDIT*.md",
+      "OINKV-AUDIT*.marker", "A*-PLANS-*.marker"]),
+    ("anvil/proposals", ANVIL / "proposals",
+     ["A*-PROPOSAL.md", "A*-PHASE0-PROPOSAL.md",
+      "A*-PHASE0-APPROVED.marker", "A*-PHASE0-REVIEW-APPROVED.marker",
+      "A*-PHASE1-APPROVED.marker", "A*-READY-FOR-REVIEW.marker"]),
+    ("anvil/markers", ANVIL,
+     ["A*-MERGED.marker", "A*-READY-FOR-REVIEW.marker",
+      "A*-REVIEW-ROUND*.marker", "A*-CANARY-FALLBACK.md",
+      "A*-ZERO-EVENT-ROOT-CAUSE.md"]),
+    ("anvil/followups", ANVIL / "followups", ["*.md"]),
+    ("anvil/backfill-logs", ANVIL, ["A*-BACKFILL-LOG.md"]),
+    ("vigil/reviews", VIGIL / "reviews", ["A*-VIGIL-*REVIEW*.md"]),
+    ("guardian/reviews", GUARDIAN / "reviews",
+     ["A*-GUARDIAN-*REVIEW*.md", "A*-POST-DEPLOY-VERIFICATION.md"]),
+    ("guardian/canary-reports", GUARDIAN / "canary-reports",
+     ["A*-CANARY.md", "A*-CANARY-COMPLETE.marker"]),
+    ("hermes", HERMES_WS, ["A*-HERMES-REVIEW.md"]),
+]
+
+def emit_raw_artifacts(data: dict[str, Any]) -> dict[str, int]:
+    """Copy verbatim agent artifacts into ./raw-artifacts/ for audit trail."""
+    if RAW.exists(): shutil.rmtree(RAW)
+    RAW.mkdir(parents=True, exist_ok=True)
+    counts: dict[str, int] = {}
+    for subdir, src, patterns in RAW_GROUPS:
+        dst = RAW / subdir
+        dst.mkdir(parents=True, exist_ok=True)
+        seen: set[Path] = set()
+        files: list[Path] = []
+        if src.exists():
+            for pat in patterns:
+                for p in src.glob(pat):
+                    if p.is_file() and p not in seen:
+                        seen.add(p); files.append(p)
+        for p in files:
+            try: shutil.copy2(p, dst / p.name)
+            except Exception as e:
+                sys.stderr.write(f"WARN  copy {p} → {dst}: {e}\n")
+        counts[subdir] = len(files)
+        lines = [f"# raw-artifacts/{subdir}/\n",
+                 f"{_subdir_desc(subdir)}. {len(files)} file(s) copied from `{src}`.\n"]
+        if files:
+            lines += ["| File | Size | Last modified |", "|---|---|---|"]
+            for p in sorted(files, key=lambda f: f.name):
+                dp = dst / p.name
+                lines.append(f"| [{p.name}]({p.name}) | "
+                             f"{_fmt_bytes(_size(dp))} | {_fmt_mtime_cest(dp)} |")
+        else:
+            lines.append("_No files._")
+        (dst / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    total = sum(counts.values())
+    top = ["# raw-artifacts/\n",
+           "Verbatim copies of every agent artifact produced during the "
+           "OinkFarm Implementation Foresight Sprint. Files are copied (not "
+           "symlinked), so this directory is self-contained for audit.\n",
+           f"**Total files:** {total}\n", "## Directory Map\n",
+           "| Path | Contents | Count |", "|---|---|---|",
+           *(f"| [{s}/]({s}/) | {_subdir_desc(s)} | {counts.get(s, 0)} |"
+             for s, _src, _pat in RAW_GROUPS),
+           "", "For the human-readable per-task archive, see "
+           "[`../sprint-log/`](../sprint-log/).", ""]
+    (RAW / "README.md").write_text("\n".join(top), encoding="utf-8")
+    return counts
+
+# ---- Sprint-log helpers ------------------------------------------------------
+
+def _oneliner_from_plan(p: Path | None, task: str) -> str:
+    fallback = f"{TASK_NAMES.get(task, task)} — see plan for details."
+    if not p or not p.exists():
+        return fallback
+    text = safe_read(p, limit=16000)
+    m = re.search(r"##\s*0?\.?\s*Executive Summary\s*\n+(.+?)\n\s*\n",
+                  text, re.DOTALL | re.IGNORECASE)
+    body = m.group(1).strip() if m else ""
+    if not body:
+        for line in text.splitlines():
+            s = line.strip()
+            if not s or s.startswith(("#", "**", "---", "-", "|", ">")):
+                if body: break
+                continue
+            body += (" " if body else "") + s
+            if len(body) > 400: break
+    if not body:
+        return fallback
+    body = re.sub(r"\s+", " ", body).strip()
+    sent = re.split(r"(?<=[.!?])\s+", body, maxsplit=1)[0]
+    return (sent[:317] + "…") if len(sent) > 320 else sent
+
+def _find_oinkv_audit(task: str) -> Path | None:
+    plans = FORGE / "plans"
+    cands = [plans / f"OINKV-AUDIT-WAVE2-{task}.md"]
+    if task in ("A1", "A2", "A3"):
+        cands.append(plans / "OINKV-AUDIT.md")
+    for c in cands:
+        if c.exists(): return c
+    for p in plans.glob(f"OINKV-AUDIT*{task}*.md"):
+        return p
+    return None
+
+def _find_review_revisions(src: Path, task: str, phase: str,
+                           agent: str) -> list[Path]:
+    if not src.exists(): return []
+    pat = re.compile(rf"^{task}-{agent}-(?:PHASE{phase}-)?REVIEW(?:-R(\d+))?\.md$")
+    found: list[tuple[int, Path]] = []
+    for p in src.iterdir():
+        if not p.is_file(): continue
+        m = pat.match(p.name)
+        if m:
+            found.append((int(m.group(1)) if m.group(1) else 0, p))
+    found.sort(key=lambda t: (t[0], t[1].name))
+    return [p for _, p in found]
+
+def _extract_blocker_count(text: str) -> int | None:
+    m = re.search(r"(\d+)\s+(?:blocking concerns?|blockers?|must[- ]fix)",
+                  text or "", re.IGNORECASE)
+    return int(m.group(1)) if m else None
+
+def _extract_branch_from_merged(text: str) -> str | None:
+    if not text: return None
+    m = re.search(r"(?:branch(?:\s+deleted)?|BRANCH)\s*[:=]\s*\*{0,2}\s*([\w/\-.]+)",
+                  text)
+    return m.group(1).strip("*").strip() if m else None
+
+def _followups_for(task: str) -> list[Path]:
+    src = ANVIL / "followups"
+    return sorted(src.glob(f"{task}-*.md")) if src.exists() else []
+
+def _row(idx: int, phase: str, actor: str, verdict: str,
+         path: Path | None, link: str | None) -> str:
+    ts = _fmt_mtime_cest(path) if path else "—"
+    art = f"[{path.name}]({link})" if (path and link) else (link or "—")
+    return f"| {idx} | {phase} | {actor} | {verdict} | {ts} | {art} |"
+
+def _extract_key_decisions(task_id: str, merged_text: str,
+                           hermes_text: str) -> list[str]:
+    out: list[str] = []
+    p1 = ANVIL / "proposals" / f"{task_id}-PHASE1-APPROVED.marker"
+    if p1.exists():
+        for line in safe_read(p1).splitlines():
+            s = line.strip()
+            if re.match(r"^[1-8]\.\s", s) and 20 < len(s) < 280:
+                out.append(re.sub(r"^\d+\.\s*", "", s).rstrip("."))
+            if len(out) >= 5: break
+    if merged_text and len(out) < 5:
+        m = re.search(r"##\s*Scope Delivered\s*\n+([\s\S]+?)(?:\n##|\Z)", merged_text)
+        if m:
+            for line in m.group(1).splitlines():
+                s = line.strip()
+                if s.startswith(("- ", "* ", "• ")):
+                    d = s.lstrip("-*• ").strip()
+                    if 15 < len(d) < 280: out.append(d)
+                if len(out) >= 6: break
+    if hermes_text and len(out) < 4:
+        m = re.search(r"(?:###|##)\s*.*?(?:Correctness|Findings)[^\n]*\n+"
+                      r"([\s\S]+?)(?:\n##|\n---|\Z)", hermes_text, re.IGNORECASE)
+        if m:
+            for line in m.group(1).splitlines():
+                s = line.strip()
+                if s.startswith(("- ", "* ", "• ")):
+                    d = s.lstrip("-*• ").strip().lstrip("✅ ⚠️ ❌ ").strip()
+                    if 15 < len(d) < 280 and not any(
+                        d.startswith(e[:30]) for e in out):
+                        out.append(d)
+                if len(out) >= 6: break
+    seen: set[str] = set()
+    dedup: list[str] = []
+    for d in out:
+        k = d[:60].lower()
+        if k in seen: continue
+        seen.add(k); dedup.append(d)
+        if len(dedup) >= 8: break
+    return dedup
+
+def _build_task_timeline(task: dict[str, Any]
+                         ) -> tuple[list[str], dict[str, Any]]:
+    tid = task["id"]
+    art = {k: Path(v) for k, v in task["artifacts"].items()}
+    scores, verdicts, canary, prs = (task["scores"], task["verdicts"],
+                                     task["canary"], task["prs"])
+    meta: dict[str, Any] = {"oinkv": None, "backfill": None, "branch": None,
+                            "guardian_p0_revs": [], "vigil_p1_revs": []}
+    rows: list[str] = []
+    idx = 0
+
+    def add(label, actor, verd, p, subdir):
+        nonlocal idx
+        idx += 1
+        rows.append(_row(idx, label, actor, verd, p,
+                         _raw_link(subdir, p.name) if p else None))
+
+    if "forge_plan" in art:
+        add("FORGE plan published", "🔥 FORGE", "PUBLISHED",
+            art["forge_plan"], "forge/plans")
+
+    audit = _find_oinkv_audit(tid)
+    if audit:
+        meta["oinkv"] = audit
+        at = safe_read(audit, limit=4000).lower()
+        verd = "FINDINGS" if ("showstopper" in at or "blocking" in at
+                              or "critical" in at[:500]) else "PASS"
+        add("OinkV audit", "👁️ OinkV", verd, audit, "forge/plans")
+
+    if "proposal" in art:
+        p1m = ANVIL / "proposals" / f"{tid}-PHASE1-APPROVED.marker"
+        label = "DRAFTED (R1)" if p1m.exists() else "DRAFTED"
+        add("Phase 0 proposal drafted", "⚒️ ANVIL", label,
+            art["proposal"], "anvil/proposals")
+
+    if "vigil_phase0" in art:
+        p = art["vigil_phase0"]
+        v = extract_verdict(safe_read(p)) or "APPROVE"
+        add("Phase 0 review", "🔍 VIGIL",
+            "✅ APPROVE" if v == "APPROVE" else f"❌ {v}", p, "vigil/reviews")
+
+    g_revs = _find_review_revisions(GUARDIAN / "reviews", tid, "0", "GUARDIAN")
+    meta["guardian_p0_revs"] = g_revs
+    for i, p in enumerate(g_revs):
+        txt = safe_read(p)
+        v = extract_verdict(txt) or "APPROVE"
+        suffix = f" (R{i})" if i else ""
+        if v == "APPROVE":
+            badge = f"✅ APPROVE{suffix}"
+        else:
+            bc = _extract_blocker_count(txt)
+            badge = f"❌ CHANGES{' (' + str(bc) + ' blockers)' if bc else ''}{suffix}"
+        add(f"Phase 0 review{suffix}", "🛡️ GUARDIAN", badge, p, "guardian/reviews")
+
+    p0_m = ANVIL / "proposals" / f"{tid}-PHASE0-APPROVED.marker"
+    p1_m = ANVIL / "proposals" / f"{tid}-PHASE1-APPROVED.marker"
+    approval = p1_m if p1_m.exists() else (p0_m if p0_m.exists() else None)
+    if approval:
+        add("Phase 0 approval", "🪽 Hermes", "✅ APPROVED",
+            approval, "anvil/proposals")
+
+    if prs:
+        idx += 1
+        pr_lines = " + ".join(f"[{p['repo']}#{p['number']}]({p['pr_url']})"
+                              for p in prs)
+        merged_p = Path(task["artifacts"].get("merged", "/nonexistent"))
+        rows.append(f"| {idx} | Phase 1 code | ⚒️ ANVIL | MERGED | "
+                    f"{_fmt_mtime_cest(merged_p)} | {pr_lines} |")
+
+    v_revs: list[Path] = []
+    if "vigil_phase1" in art: v_revs.append(art["vigil_phase1"])
+    for rn in (1, 2, 3):
+        rf = VIGIL / "reviews" / f"{tid}-VIGIL-PHASE1-REVIEW-R{rn}.md"
+        if rf.exists() and rf not in v_revs: v_revs.append(rf)
+    meta["vigil_p1_revs"] = v_revs
+    for i, p in enumerate(v_revs):
+        sc = extract_score(safe_read(p))
+        v = extract_verdict(safe_read(p)) or ""
+        badge = f"{sc:.2f}/10" if sc else (v or "—")
+        add(f"Phase 1 review{' (R'+str(i)+')' if i else ''}",
+            "🔍 VIGIL", badge, p, "vigil/reviews")
+
+    if "guardian_phase1" in art:
+        p = art["guardian_phase1"]
+        sc = scores.get("guardian")
+        badge = f"{sc:.2f}/10" if sc else (verdicts.get("guardian") or "—")
+        add("Phase 1 review", "🛡️ GUARDIAN", badge, p, "guardian/reviews")
+
+    if "hermes" in art:
+        p = art["hermes"]
+        v = verdicts.get("hermes") or extract_verdict(safe_read(p)) or "LGTM"
+        add("Hermes parallel review", "🪽 Hermes",
+            f"✅ {v}" if v in ("LGTM", "PASS", "APPROVE") else f"⚠️ {v}",
+            p, "hermes")
+
+    if "merged" in art:
+        p = art["merged"]
+        mt = safe_read(p)
+        b = _extract_branch_from_merged(mt)
+        if b: meta["branch"] = b
+        pr_tags = []
+        for pr in prs:
+            if pr.get("merge_commit"):
+                pr_tags.append(f"[{pr['merge_commit'][:7]}]"
+                               f"({pr.get('commit_url') or pr['pr_url']})")
+            else:
+                pr_tags.append(f"[#{pr['number']}]({pr['pr_url']})")
+        add("Merged", "⚒️ ANVIL",
+            f"MERGED {' + '.join(pr_tags) if pr_tags else ''}".rstrip(),
+            p, "anvil/markers")
+
+    bf = ANVIL / f"{tid}-BACKFILL-LOG.md"
+    if bf.exists():
+        meta["backfill"] = bf
+        m = re.search(r"(\d+)\s+rows?\s*(?:updated|backfilled|affected)",
+                      safe_read(bf, limit=2000), re.I)
+        add("Backfill", "⚒️ ANVIL",
+            f"{m.group(1)} rows" if m else "executed",
+            bf, "anvil/backfill-logs")
+
+    if "canary" in art:
+        v = canary["verdict"] or "PENDING"
+        add("Canary", "🛡️ GUARDIAN", CANARY_BADGE.get(v, v),
+            art["canary"], "guardian/canary-reports")
+
+    return rows, meta
+
+def _distill_lessons(tid: str, meta: dict[str, Any],
+                     merged_text: str) -> list[str]:
+    out: list[str] = []
+    g = len(meta.get("guardian_p0_revs", []))
+    if g > 1:
+        out.append(f"- **Phase 0 took {g} rounds** — GUARDIAN surfaced "
+                   f"blast-radius concerns that reshaped scope before code "
+                   f"was written. Cheaper to revise a proposal than a PR.")
+    v = len(meta.get("vigil_p1_revs", []))
+    if v > 1:
+        out.append(f"- **VIGIL Phase 1 needed {v} rounds** — initial score "
+                   f"below the tier threshold triggered fix-and-rescore loop.")
+    if merged_text and "CRITICAL" in merged_text and tid in ("A1","A2","A4","A7"):
+        out.append("- **Auto-escalation to 🔴 CRITICAL** via Financial Hotpath "
+                   "rule — Phase 1 used the stricter ≥9.5 threshold.")
+    if tid == "A4":
+        out.append("- **Same-cycle closure path** (remaining_pct → 0 on TP-all-hit)"
+                   " avoided PARTIALLY_CLOSED limbo via one atomic UPDATE carrying"
+                   " `final_roi` + `closed_at` + `close_source`.")
+        out.append("- **E5 (`_calculate_pnl` filter)** was the non-obvious "
+                   "blast-radius save — GUARDIAN's R0 flagged that E3 would "
+                   "fetch PARTIALLY_CLOSED rows but PnL would silently be `None`.")
+    if meta.get("backfill"):
+        out.append("- **Backfill pre-SELECT + abort-if-rowcount guard** caught "
+                   "a data-quality anomaly without failing the migration.")
+    return out[:6] if out else ["_(Lessons distilled at wave close.)_"]
+
+def _render_task_page(task: dict[str, Any]) -> str:
+    tid = task["id"]
+    tier_em, tier = task["tier_emoji"], task["tier"]
+    auto_esc = {
+        "A4": " — auto-escalated to 🔴 CRITICAL in Phase 1 (Financial Hotpath)",
+        "A7": " — Financial Hotpath from inception",
+    }.get(tid, "")
+    plan_path = (Path(task["artifacts"]["forge_plan"])
+                 if task["artifacts"].get("forge_plan") else None)
+    prs = task["prs"]
+    pr_line = " + ".join(f"[{p['repo']}#{p['number']}]({p['pr_url']})"
+                         for p in prs) if prs else "—"
+    merge_line = " + ".join(
+        f"[{p['merge_commit'][:12]}]({p.get('commit_url') or p['pr_url']})"
+        for p in prs if p.get("merge_commit")) or "—"
+    rows, meta = _build_task_timeline(task)
+    branch = meta.get("branch") or (
+        "anvil/A4-partially-closed-status" if tid == "A4" and not prs else None)
+    merged_text = (safe_read(Path(task["artifacts"]["merged"]))
+                   if "merged" in task["artifacts"] else "")
+    hermes_text = (safe_read(Path(task["artifacts"]["hermes"]))
+                   if "hermes" in task["artifacts"] else "")
+    decisions = _extract_key_decisions(tid, merged_text, hermes_text)
+    followups = _followups_for(tid)
+    status = task["status"]
+    L = [f"# Task {tid} — {TASK_NAMES.get(tid, tid)}\n",
+         f"**Tier:** {tier_em} {tier}{auto_esc}  ",
+         f"**Wave:** {TASK_WAVE.get(tid, '—')}  ",
+         f"**Status:** {STATUS_BADGE.get(status, status)} — "
+         f"{STATUS_HUMAN.get(status, '')}  ",
+         f"**Repo target:** {task['repo_hint'] or '—'}  ",
+         f"**Branch:** {branch or '—'}  ",
+         f"**PR:** {pr_line}  ",
+         f"**Merge commit:** {merge_line}",
+         "", "## One-liner", "", _oneliner_from_plan(plan_path, tid), "",
+         "## Timeline", "",
+         "| # | Phase | Actor | Verdict | Timestamp (CEST) | Artifact |",
+         "|---|---|---|---|---|---|", *rows,
+         "", "## Key Decisions", ""]
+    if decisions:
+        L.extend(f"- {d}" for d in decisions)
+    elif status in ("PLANNED", "NOT_STARTED"):
+        L.append("_(To be distilled once Phase 0 proposal is drafted.)_")
+    else:
+        L.append("_(Pending — will be distilled after merge.)_")
+    L += ["", "## Deferrals (Follow-up Tasks)", ""]
+    L.extend([f"- [{fu.name}]({_raw_link('anvil/followups', fu.name)})"
+              f" — {_extract_title(fu)}" for fu in followups] or ["_None._"])
+    L += ["", "## Artifacts (Full Index)", ""]
+    if plan_path and plan_path.exists():
+        L.append(f"- **FORGE plan:** [{plan_path.name}]"
+                 f"({_raw_link('forge/plans', plan_path.name)}) "
+                 f"— {_fmt_bytes(_size(plan_path))}")
+    if meta.get("oinkv"):
+        op = meta["oinkv"]
+        L.append(f"- **OinkV audit:** [{op.name}]"
+                 f"({_raw_link('forge/plans', op.name)}) "
+                 f"— {_fmt_bytes(_size(op))}")
+    if "proposal" in task["artifacts"]:
+        pp = Path(task["artifacts"]["proposal"])
+        rev = " (R1)" if (ANVIL / "proposals"
+                          / f"{tid}-PHASE1-APPROVED.marker").exists() else ""
+        L.append(f"- **ANVIL proposal:** [{pp.name}]"
+                 f"({_raw_link('anvil/proposals', pp.name)}) "
+                 f"— {_fmt_bytes(_size(pp))}{rev}")
+    vl = []
+    if "vigil_phase0" in task["artifacts"]:
+        vp = Path(task["artifacts"]["vigil_phase0"])
+        vl.append(f"[Phase 0]({_raw_link('vigil/reviews', vp.name)})")
+    for i, p in enumerate(meta.get("vigil_p1_revs", [])):
+        vl.append(f"[Phase 1{' R'+str(i) if i else ''}]"
+                  f"({_raw_link('vigil/reviews', p.name)})")
+    if vl: L.append("- **VIGIL reviews:** " + " · ".join(vl))
+    gl = []
+    for i, p in enumerate(meta.get("guardian_p0_revs", [])):
+        gl.append(f"[Phase 0{' R'+str(i) if i else ''}]"
+                  f"({_raw_link('guardian/reviews', p.name)})")
+    if "guardian_phase1" in task["artifacts"]:
+        gp = Path(task["artifacts"]["guardian_phase1"])
+        gl.append(f"[Phase 1]({_raw_link('guardian/reviews', gp.name)})")
+    if gl: L.append("- **GUARDIAN reviews:** " + " · ".join(gl))
+    if "hermes" in task["artifacts"]:
+        hp = Path(task["artifacts"]["hermes"])
+        L.append(f"- **Hermes review:** [{hp.name}]"
+                 f"({_raw_link('hermes', hp.name)}) — "
+                 f"{task['verdicts'].get('hermes') or 'LGTM'}")
+    if "canary" in task["artifacts"]:
+        cp = Path(task["artifacts"]["canary"])
+        L.append(f"- **Canary report:** [{cp.name}]"
+                 f"({_raw_link('guardian/canary-reports', cp.name)}) — "
+                 f"{task['canary']['verdict'] or 'PENDING'}")
+    if meta.get("backfill"):
+        bp = meta["backfill"]
+        L.append(f"- **Backfill log:** [{bp.name}]"
+                 f"({_raw_link('anvil/backfill-logs', bp.name)})")
+    for p in prs:
+        if p.get("merge_commit"):
+            L.append(f"- **Merge commit:** [`{p['merge_commit'][:12]}`]"
+                     f"({p.get('commit_url') or p['pr_url']}) "
+                     f"({p['repo']} PR #{p['number']})")
+    if prs:
+        L.append("- **PR(s):** " + " · ".join(
+            f"[{p['repo']}#{p['number']}]({p['pr_url']})" for p in prs))
+    L += ["", "## Lessons Learned", "",
+          *(_distill_lessons(tid, meta, merged_text) if status == "DONE"
+            else ["_(Written after canary verdict.)_"]),
+          "", "---", "",
+          "*[Live dashboard](https://quantisdevelopment.github.io/"
+          "oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/"
+          "QuantisDevelopment/oinkfarm-sprint-checkpoint) · "
+          "[All raw artifacts](../../raw-artifacts/)*"]
+    return "\n".join(L) + "\n"
+
+def _render_wave_page(n: int, tasks: list[dict[str, Any]]) -> str:
+    focus = {1: "Core schema & formula primitives — events, remaining_pct, "
+                "auto filled_at.",
+             2: "Lifecycle accuracy & phantom-trade prevention — partial "
+                "closes, confidence scoring, UPDATE→NEW dedup."}.get(n, "—")
+    done = sum(1 for t in tasks if t["status"] == "DONE")
+    in_flight = sum(1 for t in tasks
+                    if t["status"] not in ("DONE", "PLANNED", "NOT_STARTED"))
+    planned = sum(1 for t in tasks
+                  if t["status"] in ("PLANNED", "NOT_STARTED"))
+
+    L = [f"# Wave {n} Retrospective\n", f"**Focus:** {focus}\n",
+         f"**Status:** {done}/{len(tasks)} shipped · {in_flight} in flight · "
+         f"{planned} planned\n", "## Tasks\n",
+         "| Task | Name | Tier | Status | Canary | Merge commit |",
+         "|---|---|---|---|---|---|"]
+    for t in tasks:
+        tid = t["id"]
+        slug = TASK_SLUGS.get(tid, tid.lower())
+        commit = "—"
+        if t["prs"] and t["prs"][0].get("merge_commit"):
+            c = t["prs"][0]["merge_commit"]
+            commit = (f"[`{c[:7]}`]"
+                      f"({t['prs'][0].get('commit_url') or t['prs'][0]['pr_url']})")
+        L.append(f"| [{tid}](../tasks/{tid}-{slug}.md) | "
+                 f"{TASK_NAMES.get(tid, tid)} | "
+                 f"{t['tier_emoji']} {t['tier']} | "
+                 f"{STATUS_BADGE.get(t['status'], t['status'])} | "
+                 f"{t['canary']['verdict'] or '—'} | {commit} |")
+    # Timing
+    L += ["", "## Timing", ""]
+    times = [(t["timeline"][0]["mtime"], t["timeline"][-1]["mtime"])
+             for t in tasks if t.get("timeline")]
+    if times:
+        try:
+            starts = [x[0] for x in times if x[0]]
+            ends = [x[1] for x in times if x[1]]
+            fd = datetime.fromisoformat(min(starts).replace("Z", "+00:00"))
+            ld = datetime.fromisoformat(max(ends).replace("Z", "+00:00"))
+            L += [f"- Wave start: "
+                  f"{fd.astimezone(CEST).strftime('%H:%M CEST on %d %b %Y')}",
+                  f"- Last activity: "
+                  f"{ld.astimezone(CEST).strftime('%H:%M CEST on %d %b %Y')}",
+                  f"- Elapsed: {(ld - fd).total_seconds() / 3600:.1f} h"]
+        except Exception:
+            L.append("- (Timing data unavailable.)")
+    L += ["", "## Canary Outcomes", ""]
+    canaries = [f"- **{t['id']}**: {t['canary']['verdict']}"
+                for t in tasks if t["canary"]["verdict"]]
+    L.extend(canaries or ["_No canary verdicts yet._"])
+    L += ["", "## Deferred Follow-ups", ""]
+    fu_lines = []
+    for t in tasks:
+        for fu in _followups_for(t["id"]):
+            fu_lines.append(f"- [{fu.name}]"
+                            f"({_raw_link('anvil/followups', fu.name)})"
+                            f" — {_extract_title(fu)}")
+    L.extend(fu_lines or ["_None._"])
+    L += ["", "## Lessons Learned", ""]
+    L.append("- Wave complete — see individual task pages for distilled lessons."
+             if all(t["status"] == "DONE" for t in tasks)
+             else "_(To be filled at wave close.)_")
+    L += ["", "---", "",
+          "*[Sprint log index](../README.md) · "
+          "[Live dashboard](https://quantisdevelopment.github.io/"
+          "oinkfarm-sprint-checkpoint/)*"]
+    return "\n".join(L) + "\n"
+
+def _render_sprint_log_readme(data: dict[str, Any]) -> str:
+    L = ["# OinkFarm Implementation Foresight Sprint — Archive\n",
+         "Human-readable per-task archive. For verbatim agent artifacts see "
+         "[`../raw-artifacts/`](../raw-artifacts/). For the live dashboard see "
+         "[quantisdevelopment.github.io/oinkfarm-sprint-checkpoint]"
+         "(https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/).\n",
+         "## Waves", "", "| Wave | Focus | Tasks | Status |",
+         "|---|---|---|---|"]
+    wave_focus = {1: "Core schema & formula primitives",
+                  2: "Lifecycle accuracy & phantom-trade prevention"}
+    for w in data["waves"]:
+        if w.get("future"): continue
+        n = int(w["name"].split()[-1]) if w["name"].split()[-1].isdigit() else 0
+        task_ids = " · ".join(
+            f"[{tid}](tasks/{tid}-{TASK_SLUGS.get(tid, tid.lower())}.md)"
+            for tid in w["task_ids"])
+        L.append(f"| [{w['name']}](waves/wave-{n}.md) | "
+                 f"{wave_focus.get(n, '—')} | {task_ids} | "
+                 f"{w['done']}/{w['total']} shipped |")
+    L += ["", "## Tasks", "",
+          "| Task | Name | Tier | Wave | Status | Canary |",
+          "|---|---|---|---|---|---|"]
+    by_id = {t["id"]: t for t in data["tasks"]}
+    for w in data["waves"]:
+        for tid in w["task_ids"]:
+            t = by_id.get(tid)
+            if not t: continue
+            slug = TASK_SLUGS.get(tid, tid.lower())
+            L.append(f"| [{tid}](tasks/{tid}-{slug}.md) | "
+                     f"{TASK_NAMES.get(tid, tid)} | "
+                     f"{t['tier_emoji']} {t['tier']} | "
+                     f"{TASK_WAVE.get(tid, '—')} | "
+                     f"{STATUS_BADGE.get(t['status'], t['status'])} | "
+                     f"{t['canary']['verdict'] or '—'} |")
+    L += ["", "## Agents", "", "| Emoji | Name | Role |", "|---|---|---|"]
+    for a in data["agents"]:
+        L.append(f"| {a['emoji']} | {a['name']} | {a['role']} |")
+    L += ["", "## Conventions", "",
+          "- **Tier colour:** 🔴 CRITICAL / 🟡 STANDARD / 🟢 LIGHTWEIGHT "
+          "(per Arbiter-Oink Phase 4 governance)",
+          "- **Auto-escalation:** if a diff touches one of the 7 Financial "
+          "Hotpath functions, tier is upgraded to 🔴 regardless of proposal tier.",
+          "- **Status progression:** PLANNED → PROPOSAL → PROPOSAL_REVIEW → "
+          "CODE → PR_REVIEW → CANARY → DONE",
+          "- **Timestamps** are rendered in CEST (UTC+2).",
+          "", "---", "",
+          f"*Last auto-regenerated: "
+          f"{datetime.now(timezone.utc).astimezone(CEST).strftime('%H:%M CEST on %d %b %Y')}"
+          f" · [Live dashboard](https://quantisdevelopment.github.io/"
+          f"oinkfarm-sprint-checkpoint/) · "
+          f"[GitHub repo](https://github.com/QuantisDevelopment/"
+          f"oinkfarm-sprint-checkpoint)*"]
+    return "\n".join(L) + "\n"
+
+def emit_sprint_log(data: dict[str, Any]) -> dict[str, int]:
+    if SPRINT_LOG.exists():
+        shutil.rmtree(SPRINT_LOG)
+    (SPRINT_LOG / "tasks").mkdir(parents=True, exist_ok=True)
+    (SPRINT_LOG / "waves").mkdir(parents=True, exist_ok=True)
+    counts = {"tasks": 0, "waves": 0}
+    by_id = {t["id"]: t for t in data["tasks"]}
+    for tid, slug in TASK_SLUGS.items():
+        t = by_id.get(tid)
+        if not t: continue
+        (SPRINT_LOG / "tasks" / f"{tid}-{slug}.md").write_text(
+            _render_task_page(t), encoding="utf-8")
+        counts["tasks"] += 1
+    for w in data["waves"]:
+        if w.get("future"): continue
+        n = int(w["name"].split()[-1]) if w["name"].split()[-1].isdigit() else 0
+        if n:
+            wt = [by_id[tid] for tid in w["task_ids"] if tid in by_id]
+            (SPRINT_LOG / "waves" / f"wave-{n}.md").write_text(
+                _render_wave_page(n, wt), encoding="utf-8")
+            counts["waves"] += 1
+    (SPRINT_LOG / "README.md").write_text(
+        _render_sprint_log_readme(data), encoding="utf-8")
+    return counts
+
+def _inject_archive_link_in_footer() -> None:
+    """Add a subtle 'Full sprint archive' link in docs/index.html footer."""
+    idx = SITE / "index.html"
+    if not idx.exists(): return
+    html = idx.read_text(encoding="utf-8")
+    if 'id="sprint-archive-link"' in html:
+        return
+    inject = (
+        '    <div id="sprint-archive-link">\n'
+        '      📂 <a href="https://github.com/QuantisDevelopment/'
+        'oinkfarm-sprint-checkpoint/tree/main/sprint-log" '
+        'target="_blank" rel="noopener">Full sprint archive →</a>\n'
+        '    </div>\n  </div>\n</footer>'
+    )
+    html = html.replace("  </div>\n</footer>", inject, 1)
+    idx.write_text(html, encoding="utf-8")
+
 def main() -> int:
     data = build()
     html = render(data)
     write_site(data, html)
+    raw_counts = emit_raw_artifacts(data)
+    log_counts = emit_sprint_log(data)
+    _inject_archive_link_in_footer()
     sys.stdout.write(
         f"OK  generated {SITE}/index.html  "
         f"({len(data['tasks'])} tasks, {len(data['agents'])} agents, "
         f"{len(data['blockers'])} blockers, {len(data['cron'])} cron events)\n"
+        f"OK  raw-artifacts ({sum(raw_counts.values())} files across "
+        f"{len(raw_counts)} subdirs)\n"
+        f"OK  sprint-log ({log_counts['tasks']} task pages, "
+        f"{log_counts['waves']} wave pages + README)\n"
     )
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

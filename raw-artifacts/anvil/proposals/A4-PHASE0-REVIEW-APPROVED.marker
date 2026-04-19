@@ -1,0 +1,54 @@
+# A4 Phase 0 — BOTH REVIEWERS APPROVED (Revision 1)
+
+**Approved by:** VIGIL ✅ + GUARDIAN ✅ (revision round 1 of 3)
+**Timestamp:** 2026-04-19 12:08 CEST
+**Proposal:** /home/oinkv/anvil-workspace/proposals/A4-PROPOSAL.md (rev 1, 19.5KB)
+**Branch:** `anvil/A4-partially-closed-status` (oink-sync, base `6b21a20`)
+
+## Reviewer Artifacts
+- VIGIL ✅ APPROVE: /home/oinkv/vigil-workspace/reviews/A4-VIGIL-PHASE0-REVIEW.md (11:48)
+- GUARDIAN ✅ APPROVE (R1): /home/oinkv/guardian-workspace/reviews/A4-GUARDIAN-PHASE0-REVIEW-R1.md (12:08)
+- GUARDIAN R0 (REQUEST CHANGES, superseded): .../A4-GUARDIAN-PHASE0-REVIEW.md (11:51)
+
+## Phase 1 Tier
+🔴 **CRITICAL** — auto-escalated per Financial Hotpath Registry #2 (`_check_sl_tp()`) and #5 (`lifecycle.py` SL/TP write paths).
+- Phase 1 threshold: **≥9.5** from both VIGIL and GUARDIAN
+- SLA: 4 hours from branch submission
+
+## Phase 1 Carry-Forwards — bake into implementation
+
+### MUST (from both reviewers)
+1. **All 5 `lifecycle.py` modification sites broadened** (not just FORGE's 3):
+   - L389 `_check_sl_tp()` main SELECT: add `PARTIALLY_CLOSED` to status set
+   - L473 `_check_sl_tp()` closure UPDATE predicate: broaden
+   - L606–616 `_process_tp_hits()` UPDATE: add `status='PARTIALLY_CLOSED'` on partial; **same-cycle closure when `remaining_pct → 0.0`** (§2C)
+   - L811 `_check_sl_proximity()` SELECT: broaden
+   - L988 `_write_price_history()` SELECT: broaden
+2. **All 5 `engine.py` sites (E1–E5)** per GUARDIAN R1 — especially **E5 `_calculate_pnl()` L458** (prevents silent PnL zeroing for PARTIALLY_CLOSED rows).
+3. **Same-cycle closure path (§2C):** when all TPs hit in one cycle → `remaining_pct = 0.0` → call `calculate_blended_pnl()` + set `status='CLOSED_WIN'`, `final_roi`, `closed_at` in the SAME UPDATE. No PARTIALLY_CLOSED limbo.
+4. **STATUS_CHANGED dedup via pre-read** (§2D, not rowcount). Row data already contains current status — single-threaded SQLite guarantees no race.
+5. **Backfill SQL guarded:** pre-SELECT paste into PR description; `BEGIN;…COMMIT;`; abort if rowcount > 4; expected rows = 2 (Mike-pre-approved IDs #1561, #1602). Consider `AND id IN (1561, 1602)` belt-and-suspenders per VIGIL suggestion.
+
+### SHOULD
+6. Add `STATUS_CHANGED` to `LIFECYCLE_EVENTS` in `event_store.py` for hygiene/parity (not runtime-validated, documentation-only).
+7. Rename/scope-clarify `test_gap_past_all_tps_closes_directly` — explicitly state one-cycle vs two-cycle semantics per VIGIL nit.
+8. `test_gap_past_all_tps_same_cycle_close` must verify `final_roi == expected_blended_pnl` (not just `status=CLOSED_WIN`) per GUARDIAN advisory #2.
+9. Pass `current_status` as kwarg into `_process_tp_hits()` alongside existing `remaining_pct` — keeps signature pattern clean (VIGIL suggestion).
+
+### SUGGESTION / Non-blocking
+10. Signal #1602 (`tp3_hit_at` set while `remaining_pct=50.0`) is pre-existing DQ issue — GUARDIAN will track in Thursday lifecycle-consistency rotation; not an A4 blocker.
+11. oinkdb-api PARTIALLY_CLOSED reporting properly deferred to A4-F1 (read-only, no data loss).
+12. signal-gateway dedup broadening properly deferred to A7.
+
+## Next Actions for ANVIL
+1. Update HEARTBEAT.md: `current_phase: "implementation"`, clear `blockers`, confirm `branch: anvil/A4-partially-closed-status`, set `review_round: 1`.
+2. Implement per proposal rev 1 (10 sites across `lifecycle.py` + `engine.py`, plus `event_store.py` hygiene).
+3. Write tests: existing 29+8+8 must pass unmodified + new MUST tests for each of the 10 sites (target ≥16 tests per revision delta note).
+4. Pre-deploy: run pre-SELECT against prod `signals.db`, paste results into PR description.
+5. Open PR against `main` in `QuantisDevelopment/oink-sync`. Include VIGIL + GUARDIAN Phase 0 verdicts in PR body.
+6. A2A VIGIL + GUARDIAN for Phase 1 code review (CRITICAL tier, ≥9.5 threshold).
+
+## Orchestrator Next
+- After PR open → dispatch Hermes-level parallel review (`delegate_task`, max_iterations=40 for complex single-PR CRITICAL review with 10 sites + backfill).
+- After all three (VIGIL ≥9.5, GUARDIAN ≥9.5, Hermes LGTM) → merge with `--squash --delete-branch`, body includes all three scores.
+- After merge → run backfill (expected 2 rows), then GUARDIAN canary on first PARTIALLY_CLOSED signal closure event.

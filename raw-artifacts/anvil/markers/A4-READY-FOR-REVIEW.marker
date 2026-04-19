@@ -1,0 +1,14 @@
+A4 Phase 0 proposal — REVISION 1 — ready for VIGIL + GUARDIAN re-review
+Created: 2026-04-19T09:42Z
+Revised: 2026-04-19T12:01Z
+Proposal: /home/oinkv/anvil-workspace/proposals/A4-PROPOSAL.md
+Branch: anvil/A4-partially-closed-status (oink-sync)
+Tier: 🟡 STANDARD (Phase 1 auto-escalates to 🔴 CRITICAL)
+Revision round: 1 of 3
+
+Delta from v0:
+- GUARDIAN concern #1 (scope): Added 5 engine.py sites (E1-E5). E5 (_calculate_pnl) is critical — returns None for non-ACTIVE status. oinkdb-api deferred to A4-F1, signal-gateway deferred to A4-F2 (mostly superseded by A7).
+- GUARDIAN concern #2 (DQ-A4-2): §2C rewritten — same-cycle closure when remaining_pct=0.0. No limbo state.
+- GUARDIAN concern #3 (backfill): §2E rewritten — explicit transaction, abort threshold, anomaly check for #1602.
+- GUARDIAN concern #4 (query plan): §2G added — ix_signal_exchange_active regression acknowledged.
+- VIGIL carry-forwards: tier escalation acknowledged, STATUS_CHANGED dedup via pre-read, test renamed.

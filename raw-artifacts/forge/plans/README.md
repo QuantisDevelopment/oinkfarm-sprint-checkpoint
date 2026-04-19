@@ -1,0 +1,29 @@
+# raw-artifacts/forge/plans/
+
+FORGE technical plans, A-group summaries, OinkV audits. 23 file(s) copied from `/home/oinkv/forge-workspace/plans`.
+
+| File | Size | Last modified |
+|---|---|---|
+| [A1-A3-SUMMARY.md](A1-A3-SUMMARY.md) | 10.1 KB | 23:29 CEST on 18 Apr 2026 |
+| [A4-A7-PLANS-REVISED.marker](A4-A7-PLANS-REVISED.marker) | 1.1 KB | 11:42 CEST on 19 Apr 2026 |
+| [A4-A7-SUMMARY.md](A4-A7-SUMMARY.md) | 5.1 KB | 02:54 CEST on 19 Apr 2026 |
+| [A6-A11-PLANS-READY.marker](A6-A11-PLANS-READY.marker) | 1.5 KB | 14:27 CEST on 19 Apr 2026 |
+| [A6-A11-SUMMARY.md](A6-A11-SUMMARY.md) | 4.9 KB | 14:25 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE2-A4.md](OINKV-AUDIT-WAVE2-A4.md) | 13.1 KB | 12:10 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE2-A5.md](OINKV-AUDIT-WAVE2-A5.md) | 18.9 KB | 11:32 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE2-A7.md](OINKV-AUDIT-WAVE2-A7.md) | 21.8 KB | 11:31 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE2-COMPLETE.marker](OINKV-AUDIT-WAVE2-COMPLETE.marker) | 1.0 KB | 11:33 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE2-DISPATCHED.marker](OINKV-AUDIT-WAVE2-DISPATCHED.marker) | 1.0 KB | 10:21 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-WAVE2.md](OINKV-AUDIT-WAVE2.md) | 4.5 KB | 12:10 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT.md](OINKV-AUDIT.md) | 23.4 KB | 23:23 CEST on 18 Apr 2026 |
+| [TASK-A1-plan.md](TASK-A1-plan.md) | 22.3 KB | 23:27 CEST on 18 Apr 2026 |
+| [TASK-A10-plan.md](TASK-A10-plan.md) | 11.3 KB | 14:25 CEST on 19 Apr 2026 |
+| [TASK-A11-plan.md](TASK-A11-plan.md) | 6.7 KB | 14:23 CEST on 19 Apr 2026 |
+| [TASK-A2-plan.md](TASK-A2-plan.md) | 20.0 KB | 23:28 CEST on 18 Apr 2026 |
+| [TASK-A3-plan.md](TASK-A3-plan.md) | 12.8 KB | 23:28 CEST on 18 Apr 2026 |
+| [TASK-A4-plan.md](TASK-A4-plan.md) | 17.0 KB | 02:47 CEST on 19 Apr 2026 |
+| [TASK-A5-plan.md](TASK-A5-plan.md) | 17.7 KB | 11:42 CEST on 19 Apr 2026 |
+| [TASK-A6-plan.md](TASK-A6-plan.md) | 16.5 KB | 14:16 CEST on 19 Apr 2026 |
+| [TASK-A7-plan.md](TASK-A7-plan.md) | 22.1 KB | 11:40 CEST on 19 Apr 2026 |
+| [TASK-A8-plan.md](TASK-A8-plan.md) | 15.0 KB | 14:17 CEST on 19 Apr 2026 |
+| [TASK-A9-plan.md](TASK-A9-plan.md) | 14.9 KB | 14:23 CEST on 19 Apr 2026 |

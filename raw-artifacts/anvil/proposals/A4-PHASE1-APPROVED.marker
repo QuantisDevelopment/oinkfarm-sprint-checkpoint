@@ -1,0 +1,62 @@
+# A4 Phase 0 → Phase 1 Approval (Revision 1, consolidated)
+
+**Approved by:** Hermes (sprint orchestrator, full delegated authority from Mike — Discord 2026-04-19 12:11 CEST)
+**Decision date:** 2026-04-19 12:13 CEST
+**Auto-escalation:** Phase 1 is 🔴 CRITICAL (Financial Hotpath #2 + #5). Pass threshold ≥9.5 from BOTH VIGIL and GUARDIAN.
+
+## Reviewer Verdicts (R1 of Phase 0)
+
+| Reviewer | R0 verdict | R1 verdict | Notes |
+|---|---|---|---|
+| 🔍 VIGIL | ✅ APPROVE | (no R1 needed) | Already approved R0; proposal scope expansion in R1 strengthens, doesn't change spec compliance |
+| 🛡️ GUARDIAN | ❌ REQUEST CHANGES (4 blockers) | ✅ APPROVE | All 4 concerns resolved cleanly in `A4-GUARDIAN-PHASE0-REVIEW-R1.md` |
+
+## What Mike's authority approved
+
+The revised proposal expands scope from 3 lifecycle.py sites → **10 sites across 2 files**:
+- `lifecycle.py` (5 sites: L1–L5) — original scope
+- `engine.py` (5 sites: E1–E5) — added in R1, with **E5 (`_calculate_pnl()` line 458) being the critical save** — without it, PARTIALLY_CLOSED signals would be fetched by `_write_prices_to_db()` but PnL would silently return `None`
+
+Confirmed by Hermes: `oink-sync/oink_sync/engine.py` does filter on `status IN ('ACTIVE','PENDING')` at lines 203, 219, 263, 355 — GUARDIAN's blast-radius concern was correct.
+
+Properly-scoped deferrals (no hidden assumptions):
+- **A4-F1:** oinkdb-api (~12 read-only SQL sites). Read-only reporting, no data loss, separate PR.
+- **A4-F2:** signal-gateway dedup queries. Largely superseded by A7's `_match_active()` broadening. Net risk neutral vs today.
+
+Backfill: 2 rows pre-confirmed by Mike (signals #1561, #1602). Anomaly note for #1602 (`tp3_hit_at` set with `remaining_pct=50.0`) flagged as pre-existing data quality issue, NOT an A4 blocker.
+
+## MUST-FIX / SHOULD-FIX / SUGGESTION for Phase 1
+
+### MUST (incorporate into Phase 1 code + PR description)
+1. Implement all **5 lifecycle.py sites** (L1–L5) AND all **5 engine.py sites** (E1–E5). E5 is the most critical — it's the silent-PnL-zero risk.
+2. Same-cycle closure path: when `remaining_pct == 0.0` after a TP-hit cycle, call `calculate_blended_pnl()` inside `_process_tp_hits()` and set `status='CLOSED_WIN' + final_roi + closed_at` in the same UPDATE. No PARTIALLY_CLOSED limbo.
+3. Backfill SQL must be in PR description with: pre-SELECT showing IDs 1561/1602, abort-if-rowcount-gt-4 guard, `BEGIN`/`COMMIT` transaction, anomaly handler for #1602.
+4. Test `test_gap_past_all_tps_same_cycle_close` must verify `final_roi == expected_blended_pnl` (not just `status=='CLOSED_WIN'`) — per GUARDIAN advisory #2.
+5. Add `STATUS_CHANGED` to `LIFECYCLE_EVENTS` set in `event_store.py:53` for documentation parity (hygiene, not runtime).
+
+### SHOULD
+6. PR description should explicitly note partial-index regression (`ix_signal_exchange_active`) is acceptable at current ~490 row count; future >10K rows would warrant a recreated `IN (...)` partial index.
+7. Create the two follow-up files at merge time:
+   - `/home/oinkv/anvil-workspace/followups/A4-F1-OINKDB-API-STATUS-BROADENING.md`
+   - `/home/oinkv/anvil-workspace/followups/A4-F2-SIGNAL-GATEWAY-DEDUP-BROADENING.md`
+
+### SUGGESTION
+8. Signal #1602 anomaly worth a one-line entry in GUARDIAN's daily monitoring rotation (Thursday lifecycle consistency check).
+
+## Next Actions for ANVIL
+
+1. Update HEARTBEAT.md → `current_phase: implementation`, `blockers: []`, keep `branch=anvil/A4-partially-closed-status`, `review_round` reset for Phase 1.
+2. Implement on the existing branch (do NOT rebase or recreate).
+3. Run all tests (29 + 8 + 8 existing + new ones from §3 of proposal) before pushing.
+4. Open PR with: backfill pre-SELECT output pasted, scope explainer (why 10 sites, what's deferred + why), MUST-FIX checklist verifying each was addressed.
+5. Notify VIGIL + GUARDIAN for Phase 1 review at 🔴 CRITICAL tier (≥9.5 threshold, 4h SLA).
+6. Hermes will ALSO dispatch parallel review per orchestrator skill ("never skip Hermes-level review on STANDARD/CRITICAL tasks").
+
+## Orchestrator follow-up
+
+When A4 PR is opened, Hermes will:
+- Dispatch the 3-way parallel review (VIGIL, GUARDIAN, Hermes-via-delegate_task at max_iterations=40)
+- Once 3-way pass + threshold met, merge with `--squash --delete-branch`
+- Run backfill via the guarded SQL block from §2E
+- Dispatch GUARDIAN canary on first PARTIALLY_CLOSED transition
+- **In parallel with A4 canary**, dispatch ANVIL to start A7 Phase 0 proposal (FORGE revised plan ready at TASK-A7-plan.md v1.1)

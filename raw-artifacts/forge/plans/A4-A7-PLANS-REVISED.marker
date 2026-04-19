@@ -1,0 +1,7 @@
+Wave 2 plans revised per OinkV staleness audit (2026-04-19).
+
+A4: No plan changes needed — minor line drift only. Mike decision flag added for 2-signal backfill (IDs 1561, 1602).
+
+A7 (v1.1): 4 CRITICAL fixes applied — (1) all line numbers remapped to canonical .openclaw/workspace/scripts/micro-gate-v3.py (1,407 LOC), (2) inline EventStore import replaced with module-level _log_event() helper, (3) event_store.py added to Files to Modify (UPDATE_DETECTED in LIFECYCLE_EVENTS, A7_UPDATE_DETECTED in QUARANTINE_CODES), (4) _log_rejection() call fixed with conn=conn kwarg. 4 MINOR fixes: notes_parts ordering bug fixed, Q-A7-1 grounded in code precedent, three _match_active status IN clauses documented, §4b CROSS_CHANNEL_DUPLICATE guard acknowledged.
+
+A5 (v1.1): 2 CRITICAL fixes applied — (1) canonical file swap with remapped line numbers, (2) PARSER_CONFIDENCE_MAP rebuilt from verified source-code producers (removed 3 phantom keys: board_reconciler/oinkdb_opus/manual; added 4 real producers: oinxtractor_agent/telegram_direct/inline_fallback/qwen_v3). Risk table downgraded per CF5 evidence. oinxtractor_agent confidence (0.75) flagged for Mike validation.

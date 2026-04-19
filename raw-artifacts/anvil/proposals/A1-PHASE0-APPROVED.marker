@@ -1,0 +1,39 @@
+# A1 Phase 0 Proposal — APPROVED
+
+**Task:** A1 — signal_events Table Extension + Lifecycle Instrumentation
+**Tier:** 🔴 CRITICAL
+**Status:** ✅ APPROVED BY BOTH REVIEWERS — proceed to Phase 1
+**Approved At:** 2026-04-19T00:17Z
+
+## Reviewer Verdicts
+
+| Reviewer | Verdict | Review File | Verdict Time |
+|----------|---------|-------------|--------------|
+| VIGIL | ✅ APPROVE | `/home/oinkv/vigil-workspace/reviews/A1-VIGIL-PHASE0-REVIEW.md` | 2026-04-19T00:11Z |
+| GUARDIAN | ✅ APPROVE | `/home/oinkv/guardian-workspace/reviews/A1-GUARDIAN-PHASE0-REVIEW.md` | 2026-04-19T00:15Z |
+
+## Key Review Concerns to Address in Phase 1
+
+From VIGIL (SHOULD-FIX / SUGGESTION):
+1. **Transaction scope precision:** try/except wrapper around event INSERT must NOT span the lifecycle UPDATE. Keep the wrapper tight — event INSERT only — so a failure there cannot swallow an exception from the signal UPDATE.
+2. **Vendored file marker:** Add a `# Vendored from oinkfarm commit <hash>, date <date>` comment at top of `oink_sync/event_store.py` for divergence tracking.
+3. **Track deferred work:** Create follow-up tracking files (similar to `LIMIT-FILLED-AT-NULLS.md`) for DQ-2 (oinkdb-api.py) and DQ-3 (reconciler instrumentation).
+4. **PRICE_ALERT volume:** ~14.4k events/day possible. Consider dedup heuristic (don't re-emit within N minutes for same signal). Tune in Phase 1 if observed volume is high.
+
+From GUARDIAN (SUGGESTION):
+1. **Canary fallback:** `SELECT COUNT(*) > 0 within 1 hour` may not trigger on weekend/low-activity periods. Prepare a manual test-signal injection method as backup verification.
+2. **Document zero-event root cause** when you find it — same pattern could affect oinkdb-api.py and reconciler later.
+3. **Rollback script note:** CREATE-AS-SELECT doesn't preserve AUTOINCREMENT. Document this in Phase 1 rollback script.
+
+## Ordering Reminder (ANVIL's own proposal)
+
+Day 1 = diagnose + fix zero-event bug FIRST, then proceed with oink-sync instrumentation. Both reviewers explicitly endorse this ordering.
+
+## Next Actions for ANVIL
+
+1. Create feature branch (suggested: `anvil/A1-signal-events-extension` in oinkfarm, plus a companion branch in oink-sync if needed).
+2. Day 1: Diagnose zero-event bug, fix, verify in production.
+3. Day 2+: Schema ALTER (4 columns) on 0-row `signal_events`, tight non-fatal try/except wrapper on event INSERTs.
+4. Vendor `event_store.py` into oink-sync with version-marker comment.
+5. Full test suite: 12 tests per proposal (5 unit / 5 integration / 2 regression), MUST include `test_event_store_failure_non_fatal`.
+6. Submit PR(s) when ready → request VIGIL + GUARDIAN Phase 1 review.

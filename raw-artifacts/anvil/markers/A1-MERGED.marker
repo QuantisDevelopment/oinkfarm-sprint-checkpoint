@@ -1,0 +1,39 @@
+# A1 MERGED
+
+## PRs
+- **oinkfarm:** PR #126 — `feat(A1): extend signal_events schema + fix zero-event root cause`
+  - Branch: `anvil/A1-signal-events-extension` (deleted post-merge)
+  - Base: `master`
+  - Merge commit: `5b242c567d0df4b8b25d3866e711f15d772e685a`
+  - URL: https://github.com/QuantisDevelopment/oinkfarm/pull/126
+  - Merged at: 2026-04-18T23:48:02Z
+- **oink-sync:** PR #4 — `feat(A1): lifecycle event instrumentation + vendored event_store`
+  - Branch: `anvil/A1-signal-events-extension` (deleted post-merge)
+  - Base: `master`
+  - Merge commit: `3d60538acc0fb696b41da151d9062cd9896ad790`
+  - URL: https://github.com/QuantisDevelopment/oink-sync/pull/4
+  - Merged at: 2026-04-18T23:48:05Z
+
+## Reviews
+| Reviewer | Verdict | Score | File |
+|----------|---------|-------|------|
+| VIGIL | ✅ PASS (Round 2) | 9.60 | `/home/oinkv/vigil-workspace/reviews/A1-VIGIL-PHASE1-REVIEW.md` |
+| GUARDIAN | ✅ PASS (Round 1) | 9.80 | `/home/oinkv/guardian-workspace/reviews/A1-GUARDIAN-PHASE1-REVIEW.md` |
+| HERMES | ✅ LGTM | 35/35 tests pass | `/home/oinkv/hermes-workspace/A1-HERMES-REVIEW.md` |
+
+All three reviewers converged on PASS/LGTM. Wrapper-level `commit=True` hoist is tighter than the originally-framed "13 callsites" fix.
+
+## What Shipped
+- **Schema:** 4 nullable TEXT columns added to `signal_events` (field, old_value, new_value, source_msg_id) via idempotent ALTER TABLE on 0-row table
+- **Root-cause fix:** `_log_event()` wrappers now call `es.log(..., commit=True)` at the wrapper layer, covering all 11 emit sites (5 in micro-gate, 6 in oink-sync lifecycle) — self-committing event writes prevent the "dangling txn" zero-event bug
+- **LIFECYCLE_EVENTS parity:** 19 event types in both canonical (`scripts/event_store.py`) and vendored (`oink_sync/event_store.py`) copies including PRICE_ALERT
+- **Non-fatal wrapper:** try/except scope tight — wraps only event INSERT, never lifecycle UPDATE
+- **Tests:** 19 new tests (11 event_store + 8 lifecycle), all pass; A3 regression and yfinance afterhours suites also green
+
+## Minor Scope Note
+PR #4 also carries commit `dbe33d4` (yfinance commodity-futures aliases, from `fix/issue-114-gc-futures-yfinance`). Individually tested, additive; flagged by Hermes as minor scope bleed but non-blocking.
+
+## Next Actions
+1. **GUARDIAN canary:** monitor first 10 signals post-deploy, verify 6-point criteria from GUARDIAN Phase 1 review (signal_events columns, COUNT>0 within 1h, ≥2 distinct event_types in 24h, quarantine count stable at 11, FET #1159 final_roi unchanged at 3.37, SC-2/KPI-R1/KPI-R4 stable). Manual fallback documented at `/home/oinkv/anvil-workspace/A1-CANARY-FALLBACK.md` if low-volume weekend blocks natural events.
+2. **ANVIL:** start A2 Phase 0 proposal (proposal-only; safe to overlap with canary).
+3. **Orchestrator next tick:** check for GUARDIAN canary result + A2 proposal marker.

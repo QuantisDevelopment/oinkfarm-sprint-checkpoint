@@ -1,0 +1,36 @@
+# Wave 2 Retrospective
+
+**Focus:** Lifecycle accuracy & phantom-trade prevention — partial closes, confidence scoring, UPDATE→NEW dedup.
+
+**Status:** 0/3 shipped · 3 in flight · 0 planned
+
+## Tasks
+
+| Task | Name | Tier | Status | Canary | Merge commit |
+|---|---|---|---|---|---|
+| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 🧪 CANARY | PENDING | [`e9be741`](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) |
+| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 🧪 CANARY | PENDING | — |
+| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 🧪 CANARY | — | — |
+
+## Timing
+
+- Wave start: 02:47 CEST on 19 Apr 2026
+- Last activity: 14:38 CEST on 19 Apr 2026
+- Elapsed: 11.9 h
+
+## Canary Outcomes
+
+- **A4**: PENDING
+- **A7**: PENDING
+
+## Deferred Follow-ups
+
+_None._
+
+## Lessons Learned
+
+_(To be filled at wave close.)_
+
+---
+
+*[Sprint log index](../README.md) · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)*

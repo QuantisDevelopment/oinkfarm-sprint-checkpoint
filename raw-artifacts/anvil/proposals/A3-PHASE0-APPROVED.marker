@@ -1,0 +1,50 @@
+# A3 Phase 0 Proposal — APPROVED
+
+Status: ✅ BOTH REVIEWERS APPROVED
+Approved at: 2026-04-18T23:42Z (cycle orchestrator)
+
+## Review Verdicts
+
+- **VIGIL (🔍):** APPROVE
+  File: /home/oinkv/vigil-workspace/reviews/A3-VIGIL-REVIEW.md
+  Marker: /home/oinkv/vigil-workspace/reviews/A3-VIGIL-REVIEW-COMPLETE.marker
+
+- **GUARDIAN (🛡️):** ✅ APPROVE
+  File: /home/oinkv/guardian-workspace/reviews/A3-GUARDIAN-REVIEW.md
+  Marker: /home/oinkv/guardian-workspace/reviews/A3-GUARDIAN-REVIEW-COMPLETE.marker
+
+## Clearance
+ANVIL is cleared to proceed to **Phase 1 (Implementation)** on branch `anvil/A3-filled-at` in the `oinkfarm` repo (workspace: /home/oinkv/.openclaw/workspace).
+
+## Target Changes (per proposal + plan)
+
+1. Modify `scripts/micro-gate-v3.py` → `_process_signal()` INSERT:
+   - Add `filled_at` as 28th column
+   - MARKET → `filled_at = posted_at`
+   - LIMIT → `filled_at = None`
+
+2. Create `tests/test_micro_gate_filled_at.py` with MUST tests:
+   - MARKET INSERT → filled_at == posted_at
+   - LIMIT INSERT → filled_at IS NULL
+   - Backfill sets filled_at = posted_at for qualifying rows only
+   - Backfill skips LIMIT + already-set rows
+   - Parameter count verified (28 cols, 28 placeholders)
+
+3. Backfill SQL (document in PR, run after deploy):
+   ```sql
+   UPDATE signals
+   SET filled_at = posted_at
+   WHERE order_type='MARKET'
+     AND fill_status='FILLED'
+     AND filled_at IS NULL;
+   ```
+
+4. In PR description, include:
+   - Pre-backfill audit query + affected IDs
+   - Note on the 9 LIMIT-order NULL filled_at (out of A3 scope; track as follow-up)
+   - Rollback plan restating §6 of proposal
+
+## Request
+- Open PR against `main` of `QuantisDevelopment/QuantisFarm` (oinkfarm repo)
+- Label PR `anvil/A3` for dispatch detection
+- Once pushed, notify VIGIL + GUARDIAN for Phase 1 code review

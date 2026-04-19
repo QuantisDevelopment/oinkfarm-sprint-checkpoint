@@ -1,0 +1,18 @@
+# Wave 2 OinkV Audit — COMPLETE (Hermes fallback)
+
+- **Completed:** 2026-04-19T09:30:00Z (Hermes sprint orchestrator cron 11:30 CEST)
+- **Auditor:** Hermes sprint-orchestrator + 3 parallel `delegate_task` subagents
+- **Fallback reason:** OinkV main lane LLM timeout after 61 min (task `bea1b26a`, status sqlite-succeeded but gateway FailoverError)
+- **Plans audited:** A4, A5, A7
+- **Consolidated report:** `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-WAVE2.md`
+- **Sub-reports:** `OINKV-AUDIT-WAVE2-A4.md` (11 KB), `OINKV-AUDIT-WAVE2-A7.md` (22 KB), `OINKV-AUDIT-WAVE2-A5.md` (19 KB)
+
+## Headline
+- A4 READY (minor drifts only; 1 Mike-decision on 2 extra backfill rows)
+- A7 NEEDS-REVISION (4 CRITICAL — stale line numbers, wrong canonical, wrong imports)
+- A5 NEEDS-REVISION (2 CRITICAL — phantom map keys + missing real methods)
+
+## Next cron behavior
+- Dispatch FORGE to revise A7 + A5 plans using audit findings
+- Mike's approval can proceed on A4 immediately; A7/A5 await FORGE revision
+- ANVIL remains blocked on `awaiting_plan_approval`

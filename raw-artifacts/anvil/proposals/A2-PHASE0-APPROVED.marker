@@ -1,0 +1,81 @@
+# A2 Phase 0 Proposal — APPROVED
+
+**Consolidated by:** Hermes Orchestrator
+**Timestamp:** 2026-04-19T02:05Z
+**Task:** A2 — remaining_pct Model + Partial-Close PnL Accuracy (🔴 CRITICAL)
+
+---
+
+## Reviewer Verdicts
+
+| Reviewer | Verdict | Review Path | Timestamp |
+|----------|---------|-------------|-----------|
+| VIGIL 🔍 | ✅ APPROVE | `/home/oinkv/vigil-workspace/reviews/A2-VIGIL-PHASE0-REVIEW.md` | 2026-04-19T01:54Z |
+| GUARDIAN 🛡️ | ✅ APPROVE | `/home/oinkv/guardian-workspace/reviews/A2-GUARDIAN-PHASE0-REVIEW.md` | 2026-04-19T01:55Z |
+
+Both reviewers explicitly approved on spec alignment (VIGIL) and data safety (GUARDIAN). You are cleared to proceed to Phase 1 implementation.
+
+---
+
+## Concerns to Bake Into Phase 1
+
+### 🔴 MUST-FIX (both reviewers independently flagged)
+
+1. **SQLite `ALTER TABLE ADD COLUMN ... DEFAULT 100.0` does NOT backfill existing rows.** Existing signal rows will have `remaining_pct IS NULL`, not `100.0`. The backward-compat path in `calculate_blended_pnl()` MUST detect NULL (not `== 100.0`) and fall back to fixed weights. Proposal §2A is slightly misleading on this point. Verify test expectations assert `remaining_pct IS NULL` on pre-A2 rows. (GUARDIAN §Data Safety)
+
+2. **`remaining_pct` UPDATE must live in the SAME transaction as the `tp_hit_at` UPDATE and MUST NOT be wrapped in the event try/except.** This is the A1 lesson applied: if the event write fails, the signal state mutation must still succeed (or the whole TP hit must fail atomically). Do not move remaining_pct into the event emission block. (VIGIL Concern #2, GUARDIAN Critical Safety Property — both explicit)
+
+3. **Verify TP-dedup / multi-TP-in-one-cycle behavior.** If price gaps past TP1 → TP2 in a single `_process_tp_hits()` pass, the remaining_pct decrement must be sequential within that pass and not based on a stale read. If the same TP can fire twice in the same cycle, remaining_pct could drift above the 0.0 clamp floor. Write an explicit test for the gap-past-multiple-TPs scenario. (GUARDIAN Concern #2)
+
+### 🟡 SHOULD-FIX
+
+4. **Add an end-to-end lifecycle integration test** that runs the full path: insert signal → TP1 hit (remaining_pct drops) → SL closure → verify `final_roi` on the closed signals row matches the expected blended PnL. §6B describes multi-TP scenarios but doesn't explicitly chain to `final_roi` verification. (VIGIL Suggestion #1 — gap in AC4/AC5 coverage)
+
+5. **Test the `remaining_pct = 0.0` boundary after the last TP hit.** When all TPs are hit and position is fully closed, the SL check should be skipped (or produce a 0-size closure), not re-close the signal. (VIGIL Suggestion #2)
+
+6. **Document defensive handling for `tp_close_pcts` param.** Proposal describes `{1: 25.0, 2: 25.0}` but doesn't specify behavior when the dict has entries for unhit TPs. Make the handling explicit (ignore unhit TP entries) and test it. (VIGIL Suggestion #3)
+
+### 🟢 SUGGESTION (optional / future polish)
+
+7. **Dual-write `remaining_pct` into the TP_HIT event's `old_value`/`new_value` structured columns** (the A1 extension) in addition to the JSON payload. Enables future `SELECT … WHERE key='remaining_pct'` queries without JSON parsing. Not required for A2 correctness. (GUARDIAN Suggestion)
+
+8. **Preserve the 50/25/25 default table for 3-TP signals.** Both reviewers agree. Do NOT change to 33/33/34 or any other split in A2 — add a config option for future tuning when real `close_pct` data is available. (VIGIL Concern #1, GUARDIAN Open Question — both recommend NO change)
+
+---
+
+## FET #1159 Verification (GUARDIAN math, independently confirmed)
+
+| Scenario | Expected `final_roi` |
+|----------|----------------------|
+| With NULL `remaining_pct` (pre-A2 rows) | **3.37%** (fixed-weight path, unchanged) |
+| With `remaining_pct=100, tp_close_pcts={1:50}` (A2 default) | **3.37%** (default table preserves current) |
+| With `remaining_pct=75, tp_close_pcts={1:25}` (future extracted) | **1.68%** |
+
+A2 delivers the infrastructure. Actual accuracy improvement on FET #1159 arrives when provider text extraction lands in the follow-up task. Proposal is transparent about this.
+
+---
+
+## Next Actions for ANVIL
+
+1. Update `HEARTBEAT.md`:
+   - `current_phase: "implementation"`
+   - Clear `blockers` (remove `waiting_for_proposal_approval`)
+   - Set `branch: anvil/A2-remaining-pct-blended-pnl` (or your chosen branch name)
+
+2. Branch + implement on **oink-sync** repo: `anvil/A2-remaining-pct-blended-pnl`
+   - `oink_sync/lifecycle.py`: schema migration + `_process_tp_hits()` + `calculate_blended_pnl()`
+   - `tests/test_remaining_pct.py`: new dedicated suite
+   - `tests/test_lifecycle_events.py`: extend with close_pct / alloc_source assertions
+
+3. Before opening the PR:
+   - Run full test suite; capture baseline ROI values for the 260 closed signals (should be unchanged).
+   - Verify the NULL-handling path (MUST-FIX #1) with an explicit test.
+   - Confirm `remaining_pct` UPDATE is outside the event try/except (MUST-FIX #2).
+
+4. Open PR against `master` on `QuantisDevelopment/oink-sync`, request review from VIGIL + GUARDIAN, write `A2-PR-OPEN.marker` in `/home/oinkv/anvil-workspace/`.
+
+5. After merge: execute deferred ACTIVE-signal backfill (set `remaining_pct = 100.0` WHERE status='ACTIVE' AND remaining_pct IS NULL) as a separate scripted step; log rowcount to `A2-BACKFILL-LOG.md`.
+
+---
+
+*Consolidated marker — the single handoff artifact. You do not need to re-read the full reviews unless you want more context.*

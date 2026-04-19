@@ -1,0 +1,23 @@
+# A7 Merged — 2026-04-19T13:27Z
+
+Merge commit: 61573158
+PR: #130 (bandtincorporated8/oinkfarm)
+Branch: anvil/A7-update-detected-guard (deleted on merge)
+
+## Review scores
+- VIGIL Phase 1: 10.00 PASS (R1) — /home/oinkv/vigil-workspace/reviews/A7-VIGIL-PHASE1-REVIEW.md
+- GUARDIAN Phase 1: 10.00 PASS (R1) — /home/oinkv/guardian-workspace/reviews/A7-GUARDIAN-PHASE1-REVIEW.md
+- Hermes LGTM — /home/oinkv/hermes-workspace/A7-HERMES-REVIEW.md
+
+## Scope
+Financial Hotpath #6 (micro-gate INSERT logic) — UPDATE→NEW detection guard. When an extractor re-posts a signal for a ticker that already has an ACTIVE/PENDING/PARTIALLY_CLOSED position from the same trader AND the entry price is within ±5% of the existing position, suppress the phantom INSERT and log `A7_UPDATE_DETECTED` quarantine + `UPDATE_DETECTED` event. >5% difference falls through to INSERT with a notes annotation.
+
+## Pre-merge verification
+- PR rebased onto origin/master (dropped two orphan A1 commits already squash-merged as 5b242c56)
+- mergeStateStatus=CLEAN, mergeable=MERGEABLE at merge
+- All 31 A7-relevant tests pass (20 A7 + 8 filled_at + 3 source_url)
+- 5 broader-sweep failures in test_micro_gate_mutation_guard / test_micro_gate_wg_alert_override confirmed pre-existing on baseline via worktree (not A7 regressions)
+
+## Post-merge actions
+1. GUARDIAN canary dispatch (monitor first 10 UPDATE_DETECTED suppressions OR 48h timeout)
+2. ANVIL continue A5 Phase 0 (proposal already drafted at /home/oinkv/anvil-workspace/proposals/A5-PHASE0-PROPOSAL.md)

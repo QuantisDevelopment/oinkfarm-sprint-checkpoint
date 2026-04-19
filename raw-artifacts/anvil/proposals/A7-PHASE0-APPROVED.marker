@@ -1,0 +1,72 @@
+# A7 Phase 0 APPROVED — proceed to Phase 1 implementation
+
+**Task:** A7 — UPDATE→NEW Detection (Phantom Trade Prevention)
+**Tier:** 🔴 CRITICAL (Financial Hotpath #6 — micro-gate INSERT logic)
+**Threshold:** ≥9.5 (VIGIL + GUARDIAN Phase 1)
+**Repo:** bandtincorporated8/oinkfarm
+**Canonical file:** `/home/oinkv/.openclaw/workspace/scripts/micro-gate-v3.py` (HEAD 498d8b28)
+**Revision approved:** 0 (initial)
+**Approved at:** 2026-04-19T12:53Z (orchestrator consolidation)
+
+---
+
+## Reviewer Verdicts
+
+| Reviewer | Verdict | Review file | Timestamp |
+|----------|---------|-------------|-----------|
+| 🔍 VIGIL | ✅ APPROVE | /home/oinkv/vigil-workspace/reviews/A7-VIGIL-PHASE0-REVIEW.md | 2026-04-19 12:52 |
+| 🛡️ GUARDIAN | ✅ APPROVE | /home/oinkv/guardian-workspace/reviews/A7-GUARDIAN-PHASE0-REVIEW.md | 2026-04-19 12:50 |
+
+Both reviewers: no blocking concerns. Phase 1 may proceed.
+
+---
+
+## Concerns to bake into Phase 1 (MUST-FIX / SHOULD-FIX / SUGGESTION)
+
+### MUST-FIX (block Phase 1 PASS if skipped)
+
+None. Both reviewers issued unconditional APPROVE.
+
+### SHOULD-FIX (address during Phase 1, verify in tests)
+
+1. **Division-by-zero guard completeness (VIGIL suggestion 1).** §4a pseudocode uses `if existing_entry > 0 and entry_price > 0` before computing percentage. Verify the `else` branch (one or both prices zero) falls through to **allow INSERT**, not suppress. A zero-entry signal is data-quality noise, not a phantom trade. Add a unit test covering (a) `existing_entry == 0`, (b) `entry_price == 0`, (c) both zero — all three must allow INSERT.
+
+2. **5% boundary inclusivity (VIGIL suggestion 2).** Proposal says ≤5% suppress, >5% allow. §4a uses `price_diff_pct > _A7_ENTRY_TOLERANCE_PCT` for the allow branch, which correctly makes ≤5% the suppress path. **Test #11 must exercise both exactly 5.00% (suppress) and 5.01% (allow).** Confirm comparison is `>` not `>=` in the implementation.
+
+3. **A4 PARTIALLY_CLOSED status extension shipped in the SAME commit (VIGIL suggestion 3).** §2E lists 4 `status IN` clause broadenings (3 in `_match_active` + 1 in §4b CROSS_CHANNEL_DUPLICATE guard). These land in the A7 PR, not as a follow-up. All 4 clauses updated in one commit — no partial rollouts.
+
+4. **UPDATE handler still refuses `ticker_only` after broadening (GUARDIAN suggestion 1).** The `_match_active` broadening means UPDATE handler at canonical line 927 now sees PARTIALLY_CLOSED signals on ticker_only matches. Currently flags as `LOW_CONFIDENCE_UPDATE` and returns without acting — behaviour is safe. Add a test: UPDATE message targeting a PARTIALLY_CLOSED signal with `ticker_only` confidence → must flag `LOW_CONFIDENCE_UPDATE`, not silently succeed.
+
+### SUGGESTION (nice-to-have, non-blocking)
+
+5. **Daily summary: A7_UPDATE_DETECTED count (GUARDIAN suggestion 2).** Once deployed, GUARDIAN's daily checks could include a count of A7_UPDATE_DETECTED rejections for trend monitoring. Defer to a follow-up task; does not block A7 merge.
+
+---
+
+## Phase 1 Checklist
+
+- [ ] Suggested branch: `anvil/A7-update-detected-guard` (bandtincorporated8/oinkfarm)
+- [ ] Base SHA: `498d8b28`
+- [ ] Scope (per proposal §3):
+  - `scripts/micro-gate-v3.py` — add `_check_update_detected()` between step 14 and step 16; broaden 4 `status IN` clauses (3 in `_match_active`, 1 in §4b)
+  - Add `_A7_ENTRY_TOLERANCE_PCT = 5.0` module constant
+  - Add `A7_UPDATE_DETECTED` rejection reason constant
+- [ ] Test strategy (§9): 15 tests minimum
+  - MUST: suppress same/close entry, allow different entry (>5%), allow no-existing, allow opposite direction, rejection logged
+  - SHOULD: PARTIALLY_CLOSED match, event logging, trader_id-None bypass, boundary (5.00% / 5.01%), ticker_only / ambiguous confidence
+  - ADD: 3 zero-entry edge cases (SHOULD-FIX #1), PARTIALLY_CLOSED+ticker_only UPDATE handler test (SHOULD-FIX #4)
+- [ ] No schema changes. No migrations. Rollback = `git revert` + service restart.
+- [ ] Financial Hotpath #6 → 🔴 CRITICAL tier, ≥9.5 Phase 1 threshold from both reviewers.
+
+---
+
+## Next-Action
+
+ANVIL:
+1. Update HEARTBEAT.md → `current_phase: "implementation"`, clear `blockers`, set `branch: "anvil/A7-update-detected-guard"`.
+2. Create branch from `498d8b28` in bandtincorporated8/oinkfarm (canonical workspace: `/home/oinkv/.openclaw/workspace/`).
+3. Implement per proposal §2 + §3; bake SHOULD-FIX items 1-4 into tests.
+4. Open PR when green locally. Notify VIGIL + GUARDIAN for Phase 1 review.
+5. A4 canary is running in parallel (GUARDIAN monitoring first 10 PARTIALLY_CLOSED transitions); your work on A7 does NOT overlap the A4 canary surface (A7 = micro-gate INSERT path, A4 = oink-sync PARTIALLY_CLOSED status).
+
+Orchestrator will poll for `A7-VIGIL-PHASE1-REVIEW.md` + `A7-GUARDIAN-PHASE1-REVIEW.md` and dispatch Hermes-level parallel review when PR opens.
