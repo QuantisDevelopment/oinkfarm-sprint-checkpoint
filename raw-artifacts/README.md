@@ -2,7 +2,7 @@
 
 Verbatim copies of every agent artifact produced during the OinkFarm Implementation Foresight Sprint. Files are copied (not symlinked), so this directory is self-contained for audit.
 
-**Total files:** 156
+**Total files:** 157
 
 ## Directory Map
 
@@ -16,6 +16,6 @@ Verbatim copies of every agent artifact produced during the OinkFarm Implementat
 | [vigil/reviews/](vigil/reviews/) | VIGIL Phase 0 + Phase 1 code reviews (5-dim scored) | 21 |
 | [guardian/reviews/](guardian/reviews/) | GUARDIAN Phase 0 + Phase 1 data reviews (5-dim scored) | 20 |
 | [guardian/canary-reports/](guardian/canary-reports/) | Post-deploy canary reports | 22 |
-| [hermes/](hermes/) | Hermes parallel reviews (LGTM / CONCERNS) | 7 |
+| [hermes/](hermes/) | Hermes parallel reviews (LGTM / CONCERNS) | 8 |
 
 For the human-readable per-task archive, see [`../sprint-log/`](../sprint-log/).
