@@ -7,8 +7,8 @@ Human-readable per-task archive. For verbatim agent artifacts see [`../raw-artif
 | Wave | Focus | Tasks | Status |
 |---|---|---|---|
 | [Wave 1 (Phase A)](waves/wave-0.md) | — | [A1](tasks/A1-signal-events-schema.md) · [A2](tasks/A2-remaining-pct-model.md) · [A3](tasks/A3-auto-filled-at.md) | 3/3 shipped |
-| [Wave 2 (Phase A)](waves/wave-0.md) | — | [A4](tasks/A4-partially-closed-status.md) · [A7](tasks/A7-update-new-detection.md) · [A5](tasks/A5-confidence-scoring.md) | 0/3 shipped |
-| [Wave 3 (Phase A)](waves/wave-0.md) | — | [A6](tasks/A6-a6.md) · [A8](tasks/A8-a8.md) · [A9](tasks/A9-a9.md) · [A11](tasks/A11-a11.md) | 0/4 shipped |
+| [Wave 2 (Phase A)](waves/wave-0.md) | — | [A4](tasks/A4-partially-closed-status.md) · [A7](tasks/A7-update-new-detection.md) · [A5](tasks/A5-confidence-scoring.md) | 2/3 shipped |
+| [Wave 3 (Phase A)](waves/wave-0.md) | — | [A6](tasks/A6-a6.md) · [A8](tasks/A8-a8.md) · [A9](tasks/A9-a9.md) · [A11](tasks/A11-a11.md) | 3/4 shipped |
 | [Wave 4 (Phase A)](waves/wave-0.md) | — | [A10](tasks/A10-a10.md) | 1/1 shipped |
 | [Wave B1 (Phase B)](waves/wave-0.md) | — | [B1](tasks/B1-b1.md) | 0/1 shipped |
 
@@ -19,13 +19,13 @@ Human-readable per-task archive. For verbatim agent artifacts see [`../raw-artif
 | [A1](tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | 1 | ✅ DONE | PASS |
 | [A2](tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | 1 | ✅ DONE | PASS |
 | [A3](tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | 1 | ✅ DONE | PASS |
-| [A4](tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | 🧪 CANARY | PENDING |
+| [A4](tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | ✅ DONE | PASS |
 | [A7](tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 2 | 🧪 CANARY | PENDING |
-| [A5](tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 2 | 🧪 CANARY | — |
-| [A6](tasks/A6-a6.md) | A6 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
+| [A5](tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 2 | ✅ DONE | PASS |
+| [A6](tasks/A6-a6.md) | A6 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | [A8](tasks/A8-a8.md) | A8 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
-| [A9](tasks/A9-a9.md) | A9 | 🟢 LIGHTWEIGHT | — | 🧪 CANARY | PENDING |
-| [A11](tasks/A11-a11.md) | A11 | 🟢 LIGHTWEIGHT | — | 🧪 CANARY | — |
+| [A9](tasks/A9-a9.md) | A9 | 🟢 LIGHTWEIGHT | — | ✅ DONE | PASS |
+| [A11](tasks/A11-a11.md) | A11 | 🟢 LIGHTWEIGHT | — | ✅ DONE | PASS |
 | [A10](tasks/A10-a10.md) | A10 | 🔴 CRITICAL | — | ✅ DONE | PASS |
 | [B1](tasks/B1-b1.md) | B1 | 🔴 CRITICAL | — | 📝 PROPOSAL | — |
 
@@ -49,4 +49,4 @@ Human-readable per-task archive. For verbatim agent artifacts see [`../raw-artif
 
 ---
 
-*Last auto-regenerated: 22:34 CEST on 19 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*Last auto-regenerated: 22:38 CEST on 19 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

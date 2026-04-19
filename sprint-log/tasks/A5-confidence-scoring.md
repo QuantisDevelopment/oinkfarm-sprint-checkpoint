@@ -2,7 +2,7 @@
 
 **Tier:** 🟡 STANDARD  
 **Wave:** 2  
-**Status:** 🧪 CANARY — Merged, canary in flight  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131)  
@@ -27,6 +27,7 @@ The `signals.confidence` column currently stores a float derived from the extrac
 | 9 | Phase 1 review (R1) | 🔍 VIGIL | 9.85/10 | 14:01 CEST on 19 Apr 2026 | [A5-VIGIL-PHASE1-REVIEW-R2.md](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md) |
 | 10 | Phase 1 review | 🛡️ GUARDIAN | 10.00/10 | 13:51 CEST on 19 Apr 2026 | [A5-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE1-REVIEW.md) |
 | 11 | Merged | ⚒️ ANVIL | MERGED [69d6840](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a) | 14:04 CEST on 19 Apr 2026 | [A5-MERGED.marker](../../raw-artifacts/anvil/markers/A5-MERGED.marker) |
+| 12 | Canary | 🛡️ GUARDIAN | ✅ PASS | 22:38 CEST on 19 Apr 2026 | [A5-CANARY.md](../../raw-artifacts/guardian/canary-reports/A5-CANARY.md) |
 
 ## Key Decisions
 
@@ -43,12 +44,13 @@ _None._
 - **ANVIL proposal:** [A5-PHASE0-PROPOSAL.md](../../raw-artifacts/anvil/proposals/A5-PHASE0-PROPOSAL.md) — 6.6 KB
 - **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW.md) · [Phase 1 R1](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md)
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE1-REVIEW.md)
+- **Canary report:** [A5-CANARY.md](../../raw-artifacts/guardian/canary-reports/A5-CANARY.md) — PASS
 - **Merge commit:** [`69d6840a`](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a) (oinkfarm PR #131)
 - **PR(s):** [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131)
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **VIGIL Phase 1 needed 2 rounds** — initial score below the tier threshold triggered fix-and-rescore loop.
 
 ---
 

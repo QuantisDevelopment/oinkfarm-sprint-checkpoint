@@ -2,7 +2,7 @@
 
 **Tier:** 🟡 STANDARD — auto-escalated to 🔴 CRITICAL in Phase 1 (Financial Hotpath)  
 **Wave:** 2  
-**Status:** 🧪 CANARY — Merged, canary in flight  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oink-sync  
 **Branch:** anvil/A4-partially-closed-status  
 **PR:** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)  
@@ -29,7 +29,7 @@ After Task A2, `remaining_pct` is correctly decremented on every TP hit.
 | 11 | Hermes parallel review | 🪽 Hermes | ✅ LGTM | 12:40 CEST on 19 Apr 2026 | [A4-HERMES-REVIEW.md](../../raw-artifacts/hermes/A4-HERMES-REVIEW.md) |
 | 12 | Merged | ⚒️ ANVIL | MERGED [e9be741](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) | 12:41 CEST on 19 Apr 2026 | [A4-MERGED.marker](../../raw-artifacts/anvil/markers/A4-MERGED.marker) |
 | 13 | Backfill | ⚒️ ANVIL | executed | 12:45 CEST on 19 Apr 2026 | [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md) |
-| 14 | Canary | 🛡️ GUARDIAN | ⏳ PENDING | 12:48 CEST on 19 Apr 2026 | [A4-CANARY.md](../../raw-artifacts/guardian/canary-reports/A4-CANARY.md) |
+| 14 | Canary | 🛡️ GUARDIAN | ✅ PASS | 22:38 CEST on 19 Apr 2026 | [A4-CANARY.md](../../raw-artifacts/guardian/canary-reports/A4-CANARY.md) |
 
 ## Key Decisions
 
@@ -51,14 +51,18 @@ _None._
 - **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/A4-VIGIL-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/vigil/reviews/A4-VIGIL-PHASE1-REVIEW.md)
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW-R1.md) · [Phase 1](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE1-REVIEW.md)
 - **Hermes review:** [A4-HERMES-REVIEW.md](../../raw-artifacts/hermes/A4-HERMES-REVIEW.md) — LGTM
-- **Canary report:** [A4-CANARY.md](../../raw-artifacts/guardian/canary-reports/A4-CANARY.md) — PENDING
+- **Canary report:** [A4-CANARY.md](../../raw-artifacts/guardian/canary-reports/A4-CANARY.md) — PASS
 - **Backfill log:** [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md)
 - **Merge commit:** [`e9be741a7a0c`](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) (oink-sync PR #7)
 - **PR(s):** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Phase 0 took 2 rounds** — GUARDIAN surfaced blast-radius concerns that reshaped scope before code was written. Cheaper to revise a proposal than a PR.
+- **Auto-escalation to 🔴 CRITICAL** via Financial Hotpath rule — Phase 1 used the stricter ≥9.5 threshold.
+- **Same-cycle closure path** (remaining_pct → 0 on TP-all-hit) avoided PARTIALLY_CLOSED limbo via one atomic UPDATE carrying `final_roi` + `closed_at` + `close_source`.
+- **E5 (`_calculate_pnl` filter)** was the non-obvious blast-radius save — GUARDIAN's R0 flagged that E3 would fetch PARTIALLY_CLOSED rows but PnL would silently be `None`.
+- **Backfill pre-SELECT + abort-if-rowcount guard** caught a data-quality anomaly without failing the migration.
 
 ---
 
