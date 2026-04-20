@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 293
+- **Total events:** 294
 - **Last 24h:** 158 (rate 6.58/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,16 +12,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (3 events)
+### Last 1 hour (4 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
 | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
 | Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (7 events)
+### Last 4 hours (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
 | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
 | Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -33,6 +35,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 24 hours (158 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
 | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
 | Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -47,21 +50,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 15:08 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
 | Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | guardian | A10 canary PASS |
 | Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | hermes | 🔥 FORGE raised 4 Mike-gates: B2 TimescaleDB defer→B14, B13 single-host Compose, B9 W1 immutability phasing, C2 low-conf PROVISIONAL vs rejec |
-| Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 8.3h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 8.3h | APPROVE · DEFER | generic |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 8.3h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 8.3h | pg_trigger · check_only | phase-b |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 8.3h | maxlen · time_based | heavy-hybrid |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 6.9h | defer to B14 · introduce in B2 | phase-b |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 6.9h | single-host only · include multi-host preparation | heavy-hybrid |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 6.9h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 6.9h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 8.7h | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 8.7h | APPROVE · DEFER | generic |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 8.7h | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 8.7h | pg_trigger · check_only | phase-b |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 8.7h | maxlen · time_based | heavy-hybrid |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 7.3h | defer to B14 · introduce in B2 | phase-b |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 7.3h | single-host only · include multi-host preparation | heavy-hybrid |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 7.3h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 7.3h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -97,7 +99,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 13 |
+| 🪽 **Hermes** | Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 14 |
 | 🐷 **OinkV** | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | 🟢 fresh | 1 |
 | 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟡 1–3h | 66 |
 | 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🟡 1–3h | 52 |
@@ -194,4 +196,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*9/28 tasks DONE · Last auto-regenerated: 20:14 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/28 tasks DONE · Last auto-regenerated: 20:38 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

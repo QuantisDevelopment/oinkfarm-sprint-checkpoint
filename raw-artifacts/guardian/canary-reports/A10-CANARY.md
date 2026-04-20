@@ -193,3 +193,99 @@ Root cause:
 
 **Disposition:** PASS restored after successful data remediation and re-run of the canary checks.
 
+---
+
+## 🛡️ GUARDIAN 24-Hour Canary Checkpoint — 2026-04-20T18:31:00Z
+
+**Checkpoint time:** 24 hours post-merge (merge at 2026-04-19T18:29:23Z)
+
+### Post-Merge Organic Signal Volume
+- **36 organic signals** observed with `id > 2523` (IDs 2524–2559)
+- Well above the 10-signal minimum threshold; signal flow is healthy and continuous
+
+### First 10 Organic Post-Merge Signals — Field-by-Field Validation
+
+| # | Signal ID | Ticker | Status | Trader / Server | filled_at | remaining_pct | sl_type | FK | Verdict |
+|---|-----------|--------|--------|-----------------|-----------|---------------|---------|----|---------|
+| 1 | 2524 | PIEVERSE | CLOSED_WIN | Tareeq / Wealth Group | SET ✅ | 100.0 ✅ | NONE ✅ | ✅ | Clean |
+| 2 | 2525 | PIEVERSE | CLOSED_LOSS | Tareeq / Wealth Group | SET ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 3 | 2526 | EIGEN | ACTIVE | Eli / Wealth Group | SET ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 4 | 2527 | HYPE | PENDING | DietaFlex / Wealth Group | NULL (LIMIT/PENDING) ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 5 | 2528 | BTC | PENDING | DietaFlex / Wealth Group | NULL (LIMIT/PENDING) ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 6 | 2529 | PIEVERSE | CLOSED_WIN | Tareeq / Wealth Group | SET ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 7 | 2530 | HYPE | ACTIVE | Muzzagin / Wealth Group | SET ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 8 | 2531 | BTC | ACTIVE | Michele / Wealth Group | SET ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 9 | 2532 | RAVE | CLOSED_LOSS | Mouse / Wealth Group | SET ✅ | 100.0 ✅ | FIXED ✅ | ✅ | Clean |
+| 10 | 2533 | EDGE | CLOSED_BREAKEVEN | Mouse / Wealth Group | SET ✅ | 100.0 ✅ | NONE ✅ | ✅ | Clean |
+
+**All 10/10 clean.** No KPI-R5 violations, no FK orphans, no NULL remaining_pct/sl_type.
+
+### Remaining 26 Post-Merge Signals (2534–2559)
+All 26 additional signals validated clean:
+- **0** KPI-R5 violations (MARKET+FILLED with NULL filled_at)
+- **0** FK orphan references
+- **0** NULL remaining_pct
+- **0** NULL sl_type
+- Signal statuses observed: ACTIVE, CLOSED_WIN, CLOSED_LOSS, CLOSED_BREAKEVEN, PENDING, PARTIALLY_CLOSED — full lifecycle coverage
+- Notable: Signal 2544 (LUNR) at `remaining_pct=75.0` and `PARTIALLY_CLOSED` — partial-close path working correctly
+
+### KPI-R5 Re-check (Imported Range)
+- Sampled imported IDs: 1612, 1700, 1800, 1900, 2000, 2100, 2200, 2300, 2400, 2523
+- **0** KPI-R5 violations in sampled imported range
+- Historical backfill remains intact 24 hours later
+
+### FK Orphan Re-check
+- **0** orphan trader references
+- **0** orphan server references
+- Imported-range FK joins verified across 10 sampled IDs — all resolve correctly
+
+### API `:8888` Endpoint Checks
+| Endpoint | Result |
+|---------|--------|
+| `GET /signals/active` | **200 OK**, returned **91** active signals ✅ |
+| `GET /signals/1599` | **200 OK** — pre-merge prod row (B3, CLOSED_LOSS, trader_id=86, server_id=1) ✅ |
+| `GET /signals/1612` | **200 OK** — imported lowest (ORDI, CLOSED_WIN, trader_id=61, server_id=4) ✅ |
+| `GET /signals/2523` | **200 OK** — imported highest (CRV, CLOSED_WIN, trader_id=79, server_id=8) ✅ |
+| `GET /health` | **200 OK** — db=ok, price_sync=ok, total_signals=1442 ✅ |
+
+### Trader Summary Coverage for Imported Data
+- 10 imported trader IDs spot-checked: 61, 79, 31, 44, 45, 33, 100, 93, 94, 95
+- **10/10** returned **200 OK** with populated stats ✅
+
+### Schema/Constraint Error Scan
+- **0** constraint/schema/integrity/abort errors in gate-log feed (last 50 entries)
+- **0** schema-related rejections in rejection feed
+- Journal logs show only yfinance price-fetch errors for CHILL ticker (expected — obscure crypto not on Yahoo Finance) — **not a schema issue**
+- Rejections observed are all business-logic rejections (MISSING_FIELD, PRICE_DEVIATION, EXCHANGE_NOT_FOUND) — working as designed
+
+### Health Summary at 24h
+| Metric | Value |
+|--------|-------|
+| Total signals | **1442** |
+| Active signals | **91** |
+| Pending limits | **18** |
+| DB status | **ok** |
+| Price sync | **ok** (781 prices, 61 tickers tracked) |
+| OinkDB health status | **GREEN** (cycle 95) |
+| Wrong-side SL | **4** (all trailing: MrM ALB/CRDO/RKLB, Dal BTC — known) |
+| Zombie BE | **5** (all profitable — known) |
+
+### 24-Hour Verdict
+
+## ✅ CANARY PASS — 24-HOUR CHECKPOINT CONFIRMED
+
+All canary criteria met at 24 hours post-merge:
+- [x] 36/10 minimum organic post-merge signals observed
+- [x] First 10 signals validated field-by-field — all clean
+- [x] KPI-R5 = 0 (imported range backfill holding, new signals clean)
+- [x] FK orphans = 0 / 0
+- [x] NULL remaining_pct = 0, NULL sl_type = 0
+- [x] API resolves across all ID ranges (pre-merge, imported, post-merge)
+- [x] Imported trader summaries resolve for sampled IDs
+- [x] No schema/constraint errors in logs or feeds
+- [x] Full signal lifecycle coverage (ACTIVE, PENDING, CLOSED_WIN, CLOSED_LOSS, CLOSED_BREAKEVEN, PARTIALLY_CLOSED)
+
+**No regressions detected. A10 merge is stable at 24 hours.**
+
+*No `/tmp/a10_canary_fail.flag` written — all checks green.*
+

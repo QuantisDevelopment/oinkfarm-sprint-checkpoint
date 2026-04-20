@@ -7,7 +7,7 @@ Post-deploy canary reports. 22 file(s) copied from `/home/oinkv/guardian-workspa
 | [A1-CANARY-COMPLETE.marker](A1-CANARY-COMPLETE.marker) | 351 B | 01:51 CEST on 19 Apr 2026 |
 | [A1-CANARY.md](A1-CANARY.md) | 5.1 KB | 01:51 CEST on 19 Apr 2026 |
 | [A10-CANARY-COMPLETE.marker](A10-CANARY-COMPLETE.marker) | 298 B | 22:27 CEST on 19 Apr 2026 |
-| [A10-CANARY.md](A10-CANARY.md) | 9.0 KB | 15:08 CEST on 20 Apr 2026 |
+| [A10-CANARY.md](A10-CANARY.md) | 14.0 KB | 20:33 CEST on 20 Apr 2026 |
 | [A11-CANARY-COMPLETE.marker](A11-CANARY-COMPLETE.marker) | 324 B | 22:38 CEST on 19 Apr 2026 |
 | [A11-CANARY.md](A11-CANARY.md) | 551 B | 22:38 CEST on 19 Apr 2026 |
 | [A2-CANARY-COMPLETE.marker](A2-CANARY-COMPLETE.marker) | 763 B | 04:42 CEST on 19 Apr 2026 |
