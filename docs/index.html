@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T04:33:43+00:00">
+<body data-generated="2026-04-20T05:09:57+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T04:33:43+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T05:09:57+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T06:33:43+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T07:09:57+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 06:33 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 07:09 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -253,13 +253,12 @@ future      </span>
       <ul class="blocker-list">
         <li>
           <span class="blocker-agent">⚒️ ANVIL</span>
-          <span class="blocker-label">Proposal approval (VIGIL + GUARDIAN)</span>
-            <span class="blocker-task mono">on B5 · proposal_review</span>
+          <span class="blocker-label">GUARDIAN canary</span>
+            <span class="blocker-task mono">on B5 · canary</span>
         </li>
         <li>
-          <span class="blocker-agent">⚒️ ANVIL</span>
-          <span class="blocker-label">GUARDIAN canary</span>
-            <span class="blocker-task mono">on B5 · proposal_review</span>
+          <span class="blocker-agent">🪽 Hermes</span>
+          <span class="blocker-label">None — B5 shipped cleanly.</span>
         </li>
       </ul>
     </div>
@@ -2215,43 +2214,43 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">54m ago</div>
+        <div class="agent-meta mono muted">1h 30m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">⚒️</span>
           <span class="agent-name">ANVIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Implementation Lead</div>
         <div class="agent-meta mono">
             task: B5
- · proposal_review        </div>
-        <div class="agent-meta mono muted">31m ago</div>
+ · canary        </div>
+        <div class="agent-meta mono muted">1m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🔍</span>
           <span class="agent-name">VIGIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Code Review + Scoring</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">42m ago</div>
+        <div class="agent-meta mono muted">22m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🛡️</span>
           <span class="agent-name">GUARDIAN</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Data Integrity + Canary</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">35m ago</div>
+        <div class="agent-meta mono muted">1m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2263,7 +2262,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">0s ago</div>
+        <div class="agent-meta mono muted">1s ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2275,7 +2274,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">54m ago</div>
+        <div class="agent-meta mono muted">1h 30m ago</div>
       </div>
     </div>
   </div>
@@ -2292,6 +2291,14 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 07:09 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 07:06 CEST</div>
+            <ul class="narrative-actions">
+<li>Dispatched Hermes-level parallel review → LGTM 9.85 (converged with VIGIL); recovered full text from max_iterations subagent per skill</li><li>GUARDIAN Phase 1 landed independently: 9.30 PASS (P2 follow-up: emitter get_state/load_state persists counters only, not dedup caches — non-blocking)</li><li>Merged PR #25 (squash → 2e345bb on main), wrote B5-MERGED.marker, branch deleted</li><li>A2A ANVIL: restart + GUARDIAN notify + HEARTBEAT. ANVIL completed all 4 action items (old PID 193712 killed, new PID started, B5-DEPLOY-LOG.md written, GUARDIAN canary T+0 initiated)</li><li>CAUGHT dual-instance hazard post-restart: systemd unit is actually ENABLED (contradicts B4 v2 audit's DISABLED claim), spawned a second gateway process 7s after ANVIL's manual nohup. Dispatched ANVIL urgent dualfix + canary T+0 reset</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Monitor ANVIL's dualfix execution. If single-instance confirmed within 15 min, verify B5 canary T+0 restarted cleanly. If the dualfix hangs, escalate. Otherwise: cycle idles — B5 canary runs T+0→T+1h→T+24h→T+48h passively; B4/Wave 2 Mike-gated; no parallel prep available (Wave 2 needs FORGE audit drops first, which Mike paused under HEAVY HYBRID reorg).</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> None — B5 shipped cleanly. Two FYI items: 1. `signal-gateway.service` is ENABLED on this host; B4 v2 audit says DISABLED. FORGE should fix this in the next B4 revision so future deploy recipes don't re-trigger the dual-instance trap. 2. B5 canary will reveal whether the P2 cache-persistence gap matters in practice. GUARDIAN flagged two post-merge cleanup options; decision deferrable to post-canary. ```</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 06:33 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 06:33 CEST</div>
@@ -2564,13 +2571,6 @@ future      </span>
             <ul class="narrative-actions">
 <li>Verified both R2 reviews returned PASS ~5 min ago (VIGIL 18:27, GUARDIAN 18:29)</li><li>Confirmed ANVIL already replaced stale marker with fresh Gate-2 marker (18:34)</li><li>Nudged ANVIL to post a PR #135 comment flagging reviews PASS + non-blocking SHOULD-FIX deferred to cleanup PR</li>            </ul>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 18:20 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 18:20</div>
-            <ul class="narrative-actions">
-<li>Detected both A10 reviews landed REVISE at 7.90/10 (need ≥9.5 CRITICAL). Premature A10-READY-FOR-MIKE marker was stale.</li><li>Renamed marker → A10-READY-FOR-MIKE.marker.STALE-reviews-REVISE-20260419T1819Z so Mike isn't misled.</li><li>Kicked ANVIL (bg, PID 29174) with consolidated MUST-FIX: (1) tests/test_a10_merge.py with 7 named cases, (2) make import_errors fatal, (3) replace hardcoded stale closed_at with _now_iso(). Plus 2 SHOULD-FIX cleanup items.</li><li>Other sprint state confirmed steady: A1–A7/A11 merged+canary-clean; A8/A9 canaries active with GUARDIAN running 24h/48h checkpoints autonomously; Phase B Wave-1 plans waiting on Mike's B4-APPROVE.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> Watch PR #135 for ANVIL revision commits; when pushed, fire VIGIL + GUARDIAN Round-2 reviews in parallel.</div>
-        </li>
       </ol>
     </div>
 
@@ -2789,12 +2789,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">8bc82d3d3e67</span>    </div>
+checkpoint@<span class="mono">b81cced27dc0</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 06:33 CEST
+        Last orchestrator cycle: Apr 20, 07:09 CEST
     </div>
     <div>
-      generated Apr 20, 06:33 CEST
+      generated Apr 20, 07:09 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>

@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T04:33:43+00:00",
-  "generated_at_cest": "2026-04-20T06:33:43+02:00",
+  "generated_at_utc": "2026-04-20T05:09:57+00:00",
+  "generated_at_cest": "2026-04-20T07:09:57+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T03:39:06+00:00",
-      "last_active_human": "54m ago",
+      "last_active_human": "1h 30m ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,14 +3112,13 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T04:01:44+00:00",
-      "last_active_human": "31m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T05:08:28+00:00",
+      "last_active_human": "1m ago",
+      "light": "green",
       "heartbeat": {
         "current_task": "B5",
-        "current_phase": "proposal_review",
+        "current_phase": "canary",
         "blockers": [
-          "waiting_for_proposal_approval",
           "waiting_for_canary"
         ]
       }
@@ -3130,9 +3129,9 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-20T03:51:14+00:00",
-      "last_active_human": "42m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T04:47:16+00:00",
+      "last_active_human": "22m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3141,9 +3140,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T03:58:29+00:00",
-      "last_active_human": "35m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T05:08:50+00:00",
+      "last_active_human": "1m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3152,8 +3151,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T04:33:43+00:00",
-      "last_active_human": "0s ago",
+      "last_active": "2026-04-20T05:09:55+00:00",
+      "last_active_human": "1s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3164,12 +3163,27 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T03:39:06+00:00",
-      "last_active_human": "54m ago",
+      "last_active_human": "1h 30m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T05:09:55+00:00",
+      "time_local": "2026-04-20T07:09+02:00",
+      "header": "SPRINT STATUS @ 07:06 CEST",
+      "actions": [
+        "Dispatched Hermes-level parallel review → LGTM 9.85 (converged with VIGIL); recovered full text from max_iterations subagent per skill",
+        "GUARDIAN Phase 1 landed independently: 9.30 PASS (P2 follow-up: emitter get_state/load_state persists counters only, not dedup caches — non-blocking)",
+        "Merged PR #25 (squash → 2e345bb on main), wrote B5-MERGED.marker, branch deleted",
+        "A2A ANVIL: restart + GUARDIAN notify + HEARTBEAT. ANVIL completed all 4 action items (old PID 193712 killed, new PID started, B5-DEPLOY-LOG.md written, GUARDIAN canary T+0 initiated)",
+        "CAUGHT dual-instance hazard post-restart: systemd unit is actually ENABLED (contradicts B4 v2 audit's DISABLED claim), spawned a second gateway process 7s after ANVIL's manual nohup. Dispatched ANVIL urgent dualfix + canary T+0 reset"
+      ],
+      "next": "Monitor ANVIL's dualfix execution. If single-instance confirmed within 15 min, verify B5 canary T+0 restarted cleanly. If the dualfix hangs, escalate. Otherwise: cycle idles — B5 canary runs T+0→T+1h→T+24h→T+48h passively; B4/Wave 2 Mike-gated; no parallel prep available (Wave 2 needs FORGE audit drops first, which Mike paused under HEAVY HYBRID reorg).",
+      "blocker": "None — B5 shipped cleanly. Two FYI items: 1. `signal-gateway.service` is ENABLED on this host; B4 v2 audit says DISABLED. FORGE should fix this in the next B4 revision so future deploy recipes don't re-trigger the dual-instance trap. 2. B5 canary will reveal whether the P2 cache-persistence gap matters in practice. GUARDIAN flagged two post-merge cleanup options; decision deferrable to post-canary. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-09-55.md"
+    },
     {
       "time_utc": "2026-04-20T04:33:43+00:00",
       "time_local": "2026-04-20T06:33+02:00",
@@ -3657,20 +3671,6 @@
       "next": null,
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-36-20.md"
-    },
-    {
-      "time_utc": "2026-04-19T16:20:42+00:00",
-      "time_local": "2026-04-19T18:20+02:00",
-      "header": "SPRINT STATUS @ 18:20",
-      "actions": [
-        "Detected both A10 reviews landed REVISE at 7.90/10 (need ≥9.5 CRITICAL). Premature A10-READY-FOR-MIKE marker was stale.",
-        "Renamed marker → A10-READY-FOR-MIKE.marker.STALE-reviews-REVISE-20260419T1819Z so Mike isn't misled.",
-        "Kicked ANVIL (bg, PID 29174) with consolidated MUST-FIX: (1) tests/test_a10_merge.py with 7 named cases, (2) make import_errors fatal, (3) replace hardcoded stale closed_at with _now_iso(). Plus 2 SHOULD-FIX cleanup items.",
-        "Other sprint state confirmed steady: A1–A7/A11 merged+canary-clean; A8/A9 canaries active with GUARDIAN running 24h/48h checkpoints autonomously; Phase B Wave-1 plans waiting on Mike's B4-APPROVE."
-      ],
-      "next": "Watch PR #135 for ANVIL revision commits; when pushed, fire VIGIL + GUARDIAN Round-2 reviews in parallel.",
-      "blocker": null,
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-20-42.md"
     }
   ],
   "plans": [
@@ -3912,37 +3912,38 @@
     {
       "agent": "ANVIL",
       "agent_emoji": "⚒️",
-      "raw": "waiting_for_proposal_approval",
-      "label": "Proposal approval (VIGIL + GUARDIAN)",
-      "severity": "auto",
-      "current_task": "B5",
-      "current_phase": "proposal_review"
-    },
-    {
-      "agent": "ANVIL",
-      "agent_emoji": "⚒️",
       "raw": "waiting_for_canary",
       "label": "GUARDIAN canary",
       "severity": "auto",
       "current_task": "B5",
-      "current_phase": "proposal_review"
+      "current_phase": "canary"
+    },
+    {
+      "agent": "Hermes",
+      "agent_emoji": "🪽",
+      "raw": "None — B5 shipped cleanly. Two FYI items: 1. `signal-gateway.service` is ENABLED on this host; B4 v2 audit says DISABLED. FORGE should fix this in the next B4 revision so future deploy recipes don't re-trigger the dual-instance trap. 2. B5 canary will reveal whether the P2 cache-persistence gap matters in practice. GUARDIAN flagged two post-merge cleanup options; decision deferrable to post-canary. ```",
+      "label": "None — B5 shipped cleanly.",
+      "severity": "mike",
+      "current_task": null,
+      "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T04:33:43+00:00",
-    "time_local": "2026-04-20T06:33+02:00",
-    "header": "SPRINT STATUS @ 06:33 CEST",
+    "time_utc": "2026-04-20T05:09:55+00:00",
+    "time_local": "2026-04-20T07:09+02:00",
+    "header": "SPRINT STATUS @ 07:06 CEST",
     "actions": [
-      "Verified ANVIL live via session jsonl (size growing 8.95→8.97MB in 10s, tool calls actively running)",
-      "Confirmed no zombie tasks blocking dispatch, no Mike-directed scope pivot, no canary failures",
-      "Confirmed B5 files landed: emitter.py (347 LOC), test_emitter.py (15 tests), signal_router.py shrunk by 226 LOC",
-      "Checked open PRs — none on B5 (no push yet; ANVIL still in local commit/test phase)"
+      "Dispatched Hermes-level parallel review → LGTM 9.85 (converged with VIGIL); recovered full text from max_iterations subagent per skill",
+      "GUARDIAN Phase 1 landed independently: 9.30 PASS (P2 follow-up: emitter get_state/load_state persists counters only, not dedup caches — non-blocking)",
+      "Merged PR #25 (squash → 2e345bb on main), wrote B5-MERGED.marker, branch deleted",
+      "A2A ANVIL: restart + GUARDIAN notify + HEARTBEAT. ANVIL completed all 4 action items (old PID 193712 killed, new PID started, B5-DEPLOY-LOG.md written, GUARDIAN canary T+0 initiated)",
+      "CAUGHT dual-instance hazard post-restart: systemd unit is actually ENABLED (contradicts B4 v2 audit's DISABLED claim), spawned a second gateway process 7s after ANVIL's manual nohup. Dispatched ANVIL urgent dualfix + canary T+0 reset"
     ],
-    "next": "On next cron tick, check for `anvil/B5-emitter-extraction` push + PR open on signal-gateway; if PR exists, dispatch VIGIL+GUARDIAN Phase 1 reviews + parallel Hermes-level `delegate_task` review (🟡 STANDARD, ≥9.0 threshold both). If ANVIL still pre-push, re-verify liveness via session jsonl — do NOT nudge while actively coding per skill rule.",
-    "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_06-33-43.md"
+    "next": "Monitor ANVIL's dualfix execution. If single-instance confirmed within 15 min, verify B5 canary T+0 restarted cleanly. If the dualfix hangs, escalate. Otherwise: cycle idles — B5 canary runs T+0→T+1h→T+24h→T+48h passively; B4/Wave 2 Mike-gated; no parallel prep available (Wave 2 needs FORGE audit drops first, which Mike paused under HEAVY HYBRID reorg).",
+    "blocker": "None — B5 shipped cleanly. Two FYI items: 1. `signal-gateway.service` is ENABLED on this host; B4 v2 audit says DISABLED. FORGE should fix this in the next B4 revision so future deploy recipes don't re-trigger the dual-instance trap. 2. B5 canary will reveal whether the P2 cache-persistence gap matters in practice. GUARDIAN flagged two post-merge cleanup options; decision deferrable to post-canary. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-09-55.md"
   },
-  "commit": "8bc82d3d3e67",
+  "commit": "b81cced27dc0",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
