@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-20 18:12 UTC · Read time: ~8 min*
+*Last updated: 2026-04-20 20:21 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,12 +8,9 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). Step 1 of FORGE's execution sequence asks OpenClaw to accept a per-agent `contextPruning` config for the extractor, and OpenClaw rejected the key as unrecognized. OinkV reverted the gateway config cleanly so nothing's actually broken — gateway health is green — but the design needs a decision before 171 can advance. Effectively this means retrieval-learning work is paused until the orchestrator-layer question is resolved; OinkV labelled it `design_clarification_needed` rather than reaching for a workaround.
+Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the per-agent `contextPruning` key FORGE's execution sequence called for, and neither FORGE nor Hermes-ops has picked it up yet. Gateway health is green, so this is a design question rather than an outage. Only movement since the 18:12 UTC update has been the OinXtractor quality dashboard re-publishing its live metrics on schedule (latency and unknown-rate green, per-trader accuracy still `proxy_only`, corrections-loop `pending` until 171 ships).
 
-On the upside, Hermes published the new OinXtractor quality dashboard at 17:49 UTC — `docs/oinxtractor-quality.html`, fed from a live metrics JSON. Latency and unknown-rate are both green against their targets; per-trader accuracy is still flagged `proxy_only` (same honest caveat as GUARDIAN's baseline this afternoon — we don't have a real production KPI for it yet) and the corrections-loop metric reads `pending` because it only gets data once 171 ships. So the instrument went live before the feature, which is the right order.
-
-Phase B itself has gone quiet: no merges, no new PRs, no canary verdicts in the last two hours. ANVIL and VIGIL are now past their freshness threshold (both flagged stale), which is expected during this post-Wave-2 review lull — FORGE's last activity was 137m ago and GUARDIAN's was the KPI baseline 128m ago. B3's 7-day reconciliation clock toward the April 26 B4 cutover is still ticking clean. Nothing on the board needs you tonight; the one item that might want attention is the 171 design question, which FORGE or Hermes-ops should be able to triage without parking it on you.
-
+Phase B stays in the review-and-verify lull — zero merges, PRs, or canary verdicts in the last four-plus hours. Agent freshness: ANVIL silent ~9.5h, VIGIL ~12.7h (Wave 2 closing verdicts were the last thing either posted), GUARDIAN ~4.3h (the 171 KPI baseline), FORGE ~4.4h (the 171 plan revision). The open warnings on the dashboard are housekeeping only — stale PR-review timeouts on A1/A2/B1/B13/B14 that trace back to the event-log backfill, not live open PRs. B3's 7-day reconciliation clock toward the 26 Apr B4 cutover is still ticking clean. Nothing needs you tonight; the 171 design question is the one item worth picking up tomorrow, and FORGE or Hermes-ops should be able to clear it without parking it on you.
 
 ## Where We Are Today (one paragraph)
 

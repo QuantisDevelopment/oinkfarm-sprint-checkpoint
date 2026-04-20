@@ -6,7 +6,7 @@
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** [signal-gateway#19](https://github.com/QuantisDevelopment/signal-gateway/pull/19) + [oink-sync#5](https://github.com/QuantisDevelopment/oink-sync/pull/5)  
-**Merge commit:** [38eb8e8799f2](https://github.com/QuantisDevelopment/signal-gateway/commit/38eb8e8799f237bdc907e87e5044135a1f117023) + [6b21a2074413](https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59)
+**Merge commit:** —
 
 ## In plain English
 
@@ -38,8 +38,6 @@ _(No structured decision list extractable from merge artifacts — see the MERGE
 
 - **OinkV audit:** [OINKV-AUDIT.md](../../raw-artifacts/forge/plans/OINKV-AUDIT.md) — 23.4 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A2-GUARDIAN-PHASE0-REVIEW.md)
-- **Merge commit:** [`38eb8e8799f2`](https://github.com/QuantisDevelopment/signal-gateway/commit/38eb8e8799f237bdc907e87e5044135a1f117023) (signal-gateway PR #19)
-- **Merge commit:** [`6b21a2074413`](https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59) (oink-sync PR #5)
 - **PR(s):** [signal-gateway#19](https://github.com/QuantisDevelopment/signal-gateway/pull/19) · [oink-sync#5](https://github.com/QuantisDevelopment/oink-sync/pull/5)
 
 ## Lessons Learned

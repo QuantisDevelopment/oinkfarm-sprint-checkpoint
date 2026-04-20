@@ -10,10 +10,10 @@
 
 | ID | Question | Age | Options |
 |---|---|---|---|
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | 9.8h | maxlen · time_based |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | 8.4h | single-host only · include multi-host preparation |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | 8.4h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | 8.4h | PROVISIONAL soft-flag · hard reject |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | 10.4h | maxlen · time_based |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | 9.0h | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | 9.0h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | 9.0h | PROVISIONAL soft-flag · hard reject |
 
 ## Resolved Q-HH decisions
 
