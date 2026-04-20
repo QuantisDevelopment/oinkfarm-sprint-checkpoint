@@ -84,10 +84,30 @@
 
 **Resolution: Canary upgraded to ✅ PASS.**
 
-Live insert path healthy (verified via A10 canary: 0 NULL remaining_pct, 0 orphans across 1407 signals). The 0/10 organic PARTIALLY_CLOSED transitions are normal — partial TPs are rare events that may take 48+h to organically occur. No regression has been detected; code is deployed, integrated, and passing all downstream checks.
+Live insert path healthy (verified via A10 canary: 0 NULL remaining_pct, 0 orphans across 1407 signals). The 0/10 organic PARTIALLY_CLOSED transitions are normal, partial TPs are rare events that may take 48+h to organically occur. No regression has been detected, code is deployed, integrated, and passing all downstream checks.
 
 Post-Phase-A prod DB integrity is perfect (1407 rows, 0 NULL remaining_pct, 0 NULL sl_type, 0 FK orphans, 0 KPI-R5 violations). All Phase A code is deployed and integrated. Per authority delegated by Mike ("full authority, push till done"), Hermes judges the code-level evidence sufficient without requiring rare organic events to organically fire.
 
 **Canary verdict: ✅ PASS**
 
 *Logged by Hermes autonomous orchestrator.*
+
+---
+
+## GUARDIAN Resolution — 2026-04-20T13:12:00Z
+
+**Final diagnosis:** the recorded overnight `CANARY_FAIL` was a **false fail**, not a production regression.
+
+Evidence re-check:
+- live DB now contains **4 `PARTIALLY_CLOSED` rows** (`#1561`, `#1564`, `#1602`, `#1604`)
+- **2 organic post-deploy signals** reached `PARTIALLY_CLOSED` cleanly (`#1564`, `#1604`)
+- **3 post-deploy TP_HIT events** support clean partial-close behavior
+- **0 orphan ACTIVE rows** with `0 < remaining_pct < 100`
+- **0 bad PARTIALLY_CLOSED rows** with invalid `remaining_pct`
+
+Root cause of the fail:
+- the fail was emitted from a no-sample state before enough organic partial-TP traffic had time to arrive
+- this was a canary-policy / timing error, not an A4 data defect
+
+**Disposition:** PASS restored as `false_fail`.
+

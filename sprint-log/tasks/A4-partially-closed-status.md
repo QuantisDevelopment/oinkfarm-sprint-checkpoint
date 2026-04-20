@@ -2,7 +2,7 @@
 
 **Tier:** 🟡 STANDARD — auto-escalated to 🔴 CRITICAL in Phase 1 (Financial Hotpath)  
 **Wave:** 2  
-**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)  
@@ -48,7 +48,10 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Phase 0 took 2 rounds** — GUARDIAN surfaced blast-radius concerns that reshaped scope before code was written. Cheaper to revise a proposal than a PR.
+- **Same-cycle closure path** (remaining_pct → 0 on TP-all-hit) avoided PARTIALLY_CLOSED limbo via one atomic UPDATE carrying `final_roi` + `closed_at` + `close_source`.
+- **E5 (`_calculate_pnl` filter)** was the non-obvious blast-radius save — GUARDIAN's R0 flagged that E3 would fetch PARTIALLY_CLOSED rows but PnL would silently be `None`.
+- **Backfill pre-SELECT + abort-if-rowcount guard** caught a data-quality anomaly without failing the migration.
 
 ---
 

@@ -4,10 +4,10 @@
 
 > Phase A is the data-truth gate: it fixed correctness bugs in the SQLite signal layer (schema, remaining_pct, partial closes, ghost closures, UPDATE→NEW dedup) so downstream phases can trust the numbers. It shipped 11 tasks across 4 waves and is complete.
 
-**Status:** ✅ COMPLETE — 5/11 tasks shipped, canaries PASS across the board  
+**Status:** ✅ COMPLETE — 9/11 tasks shipped, canaries PASS across the board  
 **Started:** 16:20 CEST on 18 Apr 2026  
-**Finished:** 11:55 CEST on 20 Apr 2026  
-**Elapsed:** 43.6 h wall-clock  
+**Finished:** 15:08 CEST on 20 Apr 2026  
+**Elapsed:** 46.8 h wall-clock  
 **Repos touched:** `oinkfarm` · `oink-sync` · `signal-gateway`  
 **PRs merged:** 10 across 3 repos
 
@@ -43,9 +43,9 @@ Phase A is the **data-truth gate** in the Arbiter-Oink HEAVY HYBRID roadmap. Eve
 | Wave | Focus | Tasks | Elapsed | Outcome |
 |---|---|---|---|---|
 | [Wave 1](../waves/wave-1.md) | Core schema & formula primitives | [A1](../tasks/A1-signal-events-schema.md) · [A2](../tasks/A2-remaining-pct-model.md) · [A3](../tasks/A3-auto-filled-at.md) | 34.4 h | 3/3 shipped |
-| [Wave 2](../waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](../tasks/A4-partially-closed-status.md) · [A7](../tasks/A7-update-new-detection.md) · [A5](../tasks/A5-confidence-scoring.md) | 19.9 h | 1/3 shipped |
-| [Wave 3](../waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](../tasks/A6-ghost-closure-flag.md) · [A8](../tasks/A8-conditional-sl-type.md) · [A9](../tasks/A9-denomination-multiplier.md) · [A11](../tasks/A11-leverage-source-tracking.md) | 8.4 h | 1/4 shipped |
-| [Wave 4](../waves/wave-4.md) | Database merge | [A10](../tasks/A10-database-merge.md) | 17.8 h | 0/1 shipped |
+| [Wave 2](../waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](../tasks/A4-partially-closed-status.md) · [A7](../tasks/A7-update-new-detection.md) · [A5](../tasks/A5-confidence-scoring.md) | 36.3 h | 2/3 shipped |
+| [Wave 3](../waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](../tasks/A6-ghost-closure-flag.md) · [A8](../tasks/A8-conditional-sl-type.md) · [A9](../tasks/A9-denomination-multiplier.md) · [A11](../tasks/A11-leverage-source-tracking.md) | 24.9 h | 3/4 shipped |
+| [Wave 4](../waves/wave-4.md) | Database merge | [A10](../tasks/A10-database-merge.md) | 21.0 h | 1/1 shipped |
 
 ## All 11 Tasks at a Glance
 
@@ -54,13 +54,13 @@ Phase A is the **data-truth gate** in the Arbiter-Oink HEAVY HYBRID roadmap. Eve
 | [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | 1 | ✅ DONE | PASS | — |
 | [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | 1 | ✅ DONE | PASS | — |
 | [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | 1 | ✅ DONE | PASS | — |
-| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | 🛑 BLOCKED | FAIL | — |
+| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | ✅ DONE | PASS | — |
 | [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 2 | ✅ DONE | PASS | — |
-| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 3 | 🛑 BLOCKED | FAIL | — |
+| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 3 | ✅ DONE | PASS | — |
 | [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 2 | 🧪 CANARY | PENDING | — |
 | [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | 3 | 🧪 CANARY | PENDING | — |
-| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | 🛑 BLOCKED | FAIL | — |
-| [A10](../tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | 🛑 BLOCKED | FAIL | — |
+| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS | — |
+| [A10](../tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | ✅ DONE | PASS | — |
 | [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS | — |
 
 ## KPIs Improved

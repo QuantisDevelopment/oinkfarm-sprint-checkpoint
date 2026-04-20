@@ -4,23 +4,29 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 280
-- **Last 24h:** 186 (rate 7.75/h)
+- **Total events:** 284
+- **Last 24h:** 184 (rate 7.67/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (2 events)
+### Last 1 hour (4 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | hermes | 🔥 FORGE raised 4 Mike-gates: B2 TimescaleDB defer→B14, B13 single-host Compose, B9 W1 immutability phasing, C2 low-conf PROVISIONAL vs rejec |
-| Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A4` | guardian | A4 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | guardian | A10 canary PASS |
 
-### Last 4 hours (49 events)
+### Last 4 hours (53 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A4` | guardian | A4 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | guardian | A10 canary PASS |
 | Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | hermes | 🔥 FORGE raised 4 Mike-gates: B2 TimescaleDB defer→B14, B13 single-host Compose, B9 W1 immutability phasing, C2 low-conf PROVISIONAL vs rejec |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `B3` | forge | B3 plan published |
@@ -33,14 +39,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject? |
 | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
 • B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi |
 
-### Last 24 hours (186 events)
+### Last 24 hours (184 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A4` | guardian | A4 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
+| Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | guardian | A10 canary PASS |
 | Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | hermes | 🔥 FORGE raised 4 Mike-gates: B2 TimescaleDB defer→B14, B13 single-host Compose, B9 W1 immutability phasing, C2 low-conf PROVISIONAL vs rejec |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `B3` | forge | B3 plan published |
@@ -53,24 +59,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject? |
 | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
 • B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit |
-| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 2.7h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 2.7h | APPROVE · DEFER | generic |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 2.7h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 2.7h | pg_trigger · check_only | phase-b |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 2.7h | maxlen · time_based | heavy-hybrid |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 1.2h | defer to B14 · introduce in B2 | phase-b |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 1.2h | single-host only · include multi-host preparation | heavy-hybrid |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 1.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 1.2h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 3.3h | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 3.3h | APPROVE · DEFER | generic |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 3.3h | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 3.3h | pg_trigger · check_only | phase-b |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 3.3h | maxlen · time_based | heavy-hybrid |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 1.9h | defer to B14 · introduce in B2 | phase-b |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 1.9h | single-host only · include multi-host preparation | heavy-hybrid |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 1.9h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 1.9h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -94,17 +96,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🟠 WARN | `A4` | PR_OPENED (pr=7) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A7` | PR_OPENED (pr=130) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A5` | PR_OPENED (pr=131) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `A6` | PR_OPENED (pr=20) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B6` | MERGED with no CANARY_STARTED within 2h |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 8 |
-| 🔥 **FORGE** | Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | 🟢 fresh | 50 |
+| 🛡️ **GUARDIAN** | Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | 🟢 fresh | 65 |
+| 🪽 **Hermes** | Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 8 |
+| 🔥 **FORGE** | Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | 🟡 1–3h | 50 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🟡 1–3h | 2 |
 | ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 112 |
-| 🛡️ **GUARDIAN** | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | 🟡 1–3h | 61 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
 
@@ -132,9 +135,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Wave | Focus | Tasks | Status |
 |---|---|---|---|
 | [Wave 1 (Phase A)](waves/wave-1.md) | Core schema & formula primitives | [A1](tasks/A1-signal-events-schema.md) · [A2](tasks/A2-remaining-pct-model.md) · [A3](tasks/A3-auto-filled-at.md) | 3/3 shipped |
-| [Wave 2 (Phase A)](waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](tasks/A4-partially-closed-status.md) · [A7](tasks/A7-update-new-detection.md) · [A5](tasks/A5-confidence-scoring.md) | 1/3 shipped |
-| [Wave 3 (Phase A)](waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](tasks/A6-ghost-closure-flag.md) · [A8](tasks/A8-conditional-sl-type.md) · [A9](tasks/A9-denomination-multiplier.md) · [A11](tasks/A11-leverage-source-tracking.md) | 1/4 shipped |
-| [Wave 4 (Phase A)](waves/wave-4.md) | Database merge | [A10](tasks/A10-database-merge.md) | 0/1 shipped |
+| [Wave 2 (Phase A)](waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](tasks/A4-partially-closed-status.md) · [A7](tasks/A7-update-new-detection.md) · [A5](tasks/A5-confidence-scoring.md) | 2/3 shipped |
+| [Wave 3 (Phase A)](waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](tasks/A6-ghost-closure-flag.md) · [A8](tasks/A8-conditional-sl-type.md) · [A9](tasks/A9-denomination-multiplier.md) · [A11](tasks/A11-leverage-source-tracking.md) | 3/4 shipped |
+| [Wave 4 (Phase A)](waves/wave-4.md) | Database merge | [A10](tasks/A10-database-merge.md) | 1/1 shipped |
 | [Wave B1 (Phase B)](waves/wave-b1.md) | Database abstraction layer (`oink_db.py`) | [B1](tasks/B1-db-abstraction-layer.md) | 🚧 IN FLIGHT |
 
 ## Tasks
@@ -144,13 +147,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | [A1](tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | 1 | ✅ DONE | PASS |
 | [A2](tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | 1 | ✅ DONE | PASS |
 | [A3](tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | 1 | ✅ DONE | PASS |
-| [A4](tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | 🛑 BLOCKED | FAIL |
+| [A4](tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | ✅ DONE | PASS |
 | [A5](tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 2 | ✅ DONE | PASS |
-| [A6](tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 3 | 🛑 BLOCKED | FAIL |
+| [A6](tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 3 | ✅ DONE | PASS |
 | [A7](tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 2 | 🧪 CANARY | PENDING |
 | [A8](tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | 3 | 🧪 CANARY | PENDING |
-| [A9](tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | 🛑 BLOCKED | FAIL |
-| [A10](tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | 🛑 BLOCKED | FAIL |
+| [A9](tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS |
+| [A10](tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | ✅ DONE | PASS |
 | [A11](tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS |
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | 🧪 CANARY | PENDING |
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
@@ -177,11 +180,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Emoji | Name | Role |
 |---|---|---|
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | SYSTEM |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 
@@ -194,4 +197,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*5/27 tasks DONE · Last auto-regenerated: 14:35 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/27 tasks DONE · Last auto-regenerated: 15:13 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

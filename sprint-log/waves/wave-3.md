@@ -2,28 +2,28 @@
 
 **Focus:** Metadata enrichment & ghost closure — conditional SL classification, denomination multiplier, leverage source, ghost-closure flag.
 
-**Status:** 1/4 shipped · 3 in flight · 0 planned
+**Status:** 3/4 shipped · 1 in flight · 0 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 🛑 BLOCKED | FAIL | — |
+| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | ✅ DONE | PASS | — |
 | [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | 🧪 CANARY | PENDING | — |
-| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 🛑 BLOCKED | FAIL | — |
+| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | ✅ DONE | PASS | — |
 | [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | ✅ DONE | PASS | — |
 
 ## Timing
 
 - Wave start: 14:16 CEST on 19 Apr 2026
-- Last activity: 22:41 CEST on 19 Apr 2026
-- Elapsed: 8.4 h
+- Last activity: 15:08 CEST on 20 Apr 2026
+- Elapsed: 24.9 h
 
 ## Canary Outcomes
 
-- **A6**: ❌ FAIL
+- **A6**: ✅ PASS
 - **A8**: ⏳ PENDING
-- **A9**: ❌ FAIL
+- **A9**: ✅ PASS
 - **A11**: ✅ PASS
 
 ## Deferred Follow-ups

@@ -2,23 +2,23 @@
 
 **Focus:** Database merge — test → prod (912 imported signals), council-approved append-only strategy.
 
-**Status:** 0/1 shipped · 1 in flight · 0 planned
+**Status:** 1/1 shipped · 0 in flight · 0 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A10](../tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 🛑 BLOCKED | FAIL | — |
+| [A10](../tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | ✅ DONE | PASS | — |
 
 ## Timing
 
 - Wave start: 18:05 CEST on 19 Apr 2026
-- Last activity: 11:55 CEST on 20 Apr 2026
-- Elapsed: 17.8 h
+- Last activity: 15:08 CEST on 20 Apr 2026
+- Elapsed: 21.0 h
 
 ## Canary Outcomes
 
-- **A10**: ❌ FAIL
+- **A10**: ✅ PASS
 
 ## Deferred Follow-ups
 

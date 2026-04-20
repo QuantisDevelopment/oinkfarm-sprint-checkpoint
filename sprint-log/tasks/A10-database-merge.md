@@ -2,7 +2,7 @@
 
 **Tier:** 🔴 CRITICAL  
 **Wave:** 4  
-**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#135](https://github.com/QuantisDevelopment/oinkfarm/pull/135)  
@@ -25,7 +25,7 @@ Merge 912 test-DB signals into production with council-approved append-only stra
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -38,7 +38,10 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Append-only beat cp-overwrite** — validated backup at 18:24Z had drifted (3 signals closed, 76 price updates) by merge time; append-only preserved live trader state while achieving identical council-validated end state.
+- **Council governance** (OinkV + OinkDB ✅ via GH Issue #136) was the first non-standard approval path in the sprint — proved the Hermes+2-council pattern for Phase D gating.
+- **Zero ID collisions by design** (prod max=1611, imports start=1612) made the append-only method SQL-safe without a preliminary ID rewrite.
+- **Drift-inclusive backup** (`oinkfarm.db.a10-predrift-backup-20260419T182923Z`) gave a 2-step rollback: drift state OR pre-merge 494-row state.
 
 ---
 

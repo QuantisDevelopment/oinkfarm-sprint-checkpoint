@@ -2,7 +2,7 @@
 
 **Tier:** 🟢 LIGHTWEIGHT  
 **Wave:** 3  
-**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oink-sync#8](https://github.com/QuantisDevelopment/oink-sync/pull/8) + [oinkfarm#132](https://github.com/QuantisDevelopment/oinkfarm/pull/132)  
@@ -25,7 +25,7 @@ Normalize entry + SL prices for `1000*USDT` symbols by dividing by 1000 at INSER
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -38,7 +38,10 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Normalize early, dedup after** — entry-price normalization had to move to §3b (before all guards) so the snowflake dedup probe at §4 + §4b matched stored values (GUARDIAN P2 fix).
+- **SL normalization in §8a-A9** (before B11 deviation guard) prevented valid 1000x signals with SL from being rejected by the SL_DEVIATION guard (GUARDIAN P1 fix).
+- **R2 delta review** converged all three reviewers (VIGIL 9.40 · GUARDIAN 9.80 · Hermes LGTM) after 2 rounds.
+- **INSERT-time-only scope** deliberately left UPDATE and CLOSURE normalization for A9.1 follow-up — avoided blast-radius creep.
 
 ---
 

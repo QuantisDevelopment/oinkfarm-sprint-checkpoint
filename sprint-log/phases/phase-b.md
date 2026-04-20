@@ -72,13 +72,13 @@
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 2.7h | APPROVE · DEFER |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 2.7h | backfill · accept · block |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 2.7h | pg_trigger · check_only |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 2.7h | maxlen · time_based |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 1.2h | defer to B14 · introduce in B2 |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 1.2h | single-host only · include multi-host preparation |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 1.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 3.3h | APPROVE · DEFER |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 3.3h | backfill · accept · block |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 3.3h | pg_trigger · check_only |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 3.3h | maxlen · time_based |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 1.9h | defer to B14 · introduce in B2 |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 1.9h | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 1.9h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
 
 ---
 

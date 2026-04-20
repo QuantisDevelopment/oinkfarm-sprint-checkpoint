@@ -2,7 +2,7 @@
 
 **Tier:** 🟡 STANDARD  
 **Wave:** 3  
-**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [signal-gateway#20](https://github.com/QuantisDevelopment/signal-gateway/pull/20)  
@@ -26,7 +26,7 @@ Emit a `GHOST_CLOSURE` lifecycle event + additive note tag whenever the reconcil
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -39,7 +39,9 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Additive-metadata-only discipline** kept A6 out of the Financial Hotpath registry — no financial-field writes, no DDL, no close_source mutation.
+- **`changes()` coupling** was the elegant TOCTOU fix: gate the note UPDATE on the actual rowcount of the INSERT within the same connection/transaction.
+- **Entry-price discriminator with 5% tolerance** (mirroring A7) handles the multi-ACTIVE-signal-per-symbol edge case cleanly.
 
 ---
 

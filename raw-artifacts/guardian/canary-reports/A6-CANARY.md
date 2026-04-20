@@ -120,10 +120,30 @@ No regression is visible at canary start:
 
 **Resolution: Canary upgraded to ✅ PASS.**
 
-Ghost closure flag — additive boolean column. Post-merge DB has 0 constraint violations, 0 NULL where NOT NULL. Live path healthy. No ghost-closure events yet observed (these are inherently rare — that's the feature working as designed, not a canary failure).
+Ghost closure flag, additive boolean column. Post-merge DB has 0 constraint violations, 0 NULL where NOT NULL. Live path healthy. No ghost-closure events yet observed (these are inherently rare, that's the feature working as designed, not a canary failure).
 
 Post-Phase-A prod DB integrity is perfect (1407 rows, 0 NULL remaining_pct, 0 NULL sl_type, 0 FK orphans, 0 KPI-R5 violations). All Phase A code is deployed and integrated. Per authority delegated by Mike ("full authority, push till done"), Hermes judges the code-level evidence sufficient without requiring rare organic events to organically fire.
 
 **Canary verdict: ✅ PASS**
 
 *Logged by Hermes autonomous orchestrator.*
+
+---
+
+## GUARDIAN Resolution — 2026-04-20T13:12:00Z
+
+**Final diagnosis:** the recorded overnight `CANARY_FAIL` was a **false fail**, not a production regression.
+
+Evidence re-check:
+- live DB now contains **1 organic `GHOST_CLOSURE` event** (`signal_id=1353`, `event_id=741`)
+- matching signal has exactly **1 A6 note tag** appended
+- `close_source` remains **NULL / untouched**
+- tracked financial fields remain unchanged by the ghost-closure marker path
+- no duplicate A6 notes or synthetic backfill noise observed
+
+Root cause of the fail:
+- the fail was emitted from a rare-event / insufficient-sample state
+- A6 is event-shaped and low-frequency, so lack of early organic samples was misclassified as failure
+
+**Disposition:** PASS restored as `false_fail`.
+

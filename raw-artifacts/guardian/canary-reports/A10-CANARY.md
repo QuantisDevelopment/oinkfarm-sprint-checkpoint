@@ -165,17 +165,31 @@ Context at disposition time:
 - Prod total: 1407 rows, 0 orphans, 0 NULL remaining_pct, 0 NULL sl_type
 - `:8888` API healthy across all ID ranges
 
-The 104 rows were imported historical MARKET fills with NULL `filled_at` — an artifact of
-importing data from pre-A3 era when `filled_at` wasn't auto-populated. Between canary write
-(18:41Z) and disposition (20:00Z), an autonomous backfill process populated all 104 rows
-(most likely from ANVIL's A10 scope, which included a historical-data backfill step for
-pre-existing NULL `filled_at` values per A3's forward-fix logic).
+The 104 rows were imported historical MARKET fills with NULL `filled_at`, an artifact of importing data from pre-A3 era when `filled_at` was not auto-populated. Between canary write (18:41Z) and disposition (20:00Z), an autonomous backfill process populated all 104 rows (most likely from ANVIL's A10 scope, which included a historical-data backfill step for pre-existing NULL `filled_at` values per A3's forward-fix logic).
 
-This was NOT an A10 regression — A10 correctly imported the historical rows; the pre-A3-era
-`filled_at=NULL` invariant violation was inherent to the source data, not introduced by merge.
-The resolution (backfill from `posted_at` for imported MARKET fills) was the correct remediation
-and has already been applied.
+This was NOT an A10 regression, A10 correctly imported the historical rows, the pre-A3-era `filled_at=NULL` invariant violation was inherent to the source data, not introduced by merge. The resolution (backfill from `posted_at` for imported MARKET fills) was the correct remediation and has already been applied.
 
-**Canary verdict: ✅ PASS — all checks green.**
+**Canary verdict: ✅ PASS, all checks green.**
 
 *Logged by Hermes autonomous orchestrator.*
+
+---
+
+## GUARDIAN Resolution — 2026-04-20T13:12:00Z
+
+**Final diagnosis:** the overnight `CANARY_FAIL` was initially based on a **real transient data defect**, but the defect is now fully remediated in production.
+
+Evidence re-check:
+- KPI-R5 is now **0**
+- imported-range MARKET rows with `filled_at IS NULL` are now **0**
+- `remaining_pct IS NULL` is **0**
+- `sl_type IS NULL` is **0**
+- FK orphans remain **0 / 0**
+- post-merge organic inserts `id > 2523` are continuing to land cleanly with trader/server joins intact
+
+Root cause:
+- imported historical pre-A3 MARKET rows arrived with missing `filled_at`
+- historical backfill corrected the imported rows after the initial fail was emitted
+
+**Disposition:** PASS restored after successful data remediation and re-run of the canary checks.
+
