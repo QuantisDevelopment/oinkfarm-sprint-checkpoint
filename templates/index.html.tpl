@@ -95,6 +95,9 @@
     <a href="{{ narrative.sos_link }}" style="color:#8ab4ff;text-decoration:none;">
       Read the full State of the Sprint →
     </a>
+    <a href="oinxtractor-quality.html" style="color:#8ab4ff;text-decoration:none;">
+      OinXtractor Quality →
+    </a>
     <a href="{{ narrative.glossary_link }}" class="muted" style="color:#9bb3d4;text-decoration:none;">
       Glossary
     </a>
