@@ -1,0 +1,48 @@
+# OINKV-AUDIT-PHASE-B-WAVE1-V2-READY.marker
+# Generated: 2026-04-20 05:30 CEST
+# Author: FORGE 🔥
+
+## Wave 1 Plan v2 Status
+
+| Plan | Audit Verdict | v2 Status | Size (v2) |
+|------|-------------|-----------|-----------|
+| B1 | ✅ MERGED (VIGIL 9.55, GUARDIAN 9.80) | N/A — shipped | N/A |
+| B2 | 🔴 REJECT → REVISED v2 | ✅ Written 2026-04-20 02:00 CEST | 32,756B |
+| B3 | 🔴 NOT-SHIP-READY → REVISED v2 | ✅ Written 2026-04-20 02:00 CEST | 33,761B |
+| B4 | 🔴 REWRITE-REQUIRED → REVISED v2 | ✅ Written 2026-04-20 05:20 CEST | 24,237B |
+| B5 | 🟡 MINOR-REVISION → REVISED v2 | ✅ Written 2026-04-20 05:25 CEST | 22,041B |
+
+## Findings Addressed
+
+### B4 (3 SS + 2 CRITICAL + 1 MAJOR + 2 MINOR = 8 findings)
+- SS1: micro-gate systemd unit nonexistent → removed (inline in signal-gateway)
+- SS2: signal-gateway.service DISABLED → manual restart pattern + Q-B4-4
+- SS3: reconcile_stores.py --full doesn't exist → removed (full-by-default)
+- C1: OINK_PG_URL missing from env-flip → full env-var matrix per service
+- C2: PostgreSQL not provisioned → 🚨 PREREQUISITES NOT MET banner + 8-row gate
+- M1: .openclaw/workspace fork B1-only → fork-sync action item + Q-B4-5
+- m1: "7 days" vs "7 reports" → disambiguated
+- m2: backup filename timezone → UTC timestamp
+
+### B5 (2 CRITICAL + 3 MAJOR + 5 MINOR = 10 findings)
+- C1: phantom _forward_raw_to_signals → _route_passthrough at line 2035
+- C2: emitter API 3/6 methods → expanded to 6 emit_* methods (36 dispatch sites)
+- M1: oinxtractor_client.py 150→479 LOC
+- M2: dependency inversion → both methods move to emitter
+- M3: 400-600 LOC savings → 150-250 LOC realistic
+- Min1-5: line drifts, stale HEAD, architecture mischaracterization
+
+## New Mike Decision Flags
+- Q-B4-4: signal-gateway.service DISABLED — re-enable or keep manual?
+- Q-B4-5: .openclaw/workspace fork — fork-sync or re-point?
+
+## Files Modified
+- /home/oinkv/forge-workspace/plans/TASK-B4-plan.md (v2, 24,237B)
+- /home/oinkv/forge-workspace/plans/TASK-B5-plan.md (v2, 22,041B)
+- /home/oinkv/forge-workspace/plans/PHASE-B-WAVE1-REVISION-v2.md (updated with B4+B5 sections)
+- /home/oinkv/forge-workspace/HEARTBEAT.md (B4/B5 status, commit hashes, new decision flags)
+
+## Sequencing
+- B5 can queue for ANVIL Phase 0 after OinkV re-audit passes
+- B4 remains gated on prerequisite chain (PG install, migration run, dual-write activation, 7+ CLEAN reports)
+- Wave 1 is now complete at v2 quality level across all 5 plans

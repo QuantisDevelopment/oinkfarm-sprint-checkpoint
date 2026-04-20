@@ -1,0 +1,40 @@
+# OinkV Audit Phase B Wave 1 v2 — Re-Audit Dispatched
+
+**Dispatched:** 2026-04-20T03:30Z (05:30 CEST)
+**Dispatcher:** Hermes cron orchestrator (sprint-orchestrator skill)
+**Target agent:** main (OinkV)
+**Dispatch PID:** 213093
+**Message log:** /tmp/dispatch_oinkv_b4b5_reaudit.log
+
+## Scope
+
+Re-audit v2 plans that FORGE produced in response to the previous OinkV audit:
+
+| Plan | v2 mtime | Prior verdict | v2 audit file |
+|------|---------|--------------|---------------|
+| TASK-B4-plan.md | 2026-04-20 05:16 CEST | REWRITE-REQUIRED (3 SS + 2 C + 1 M + 2 m) | OINKV-AUDIT-PHASE-B-B4-v2.md |
+| TASK-B5-plan.md | 2026-04-20 05:18 CEST | MINOR-REVISION (2 C + 3 M + 5 m) | OINKV-AUDIT-PHASE-B-B5-v2.md |
+
+## Expected outputs
+
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B4-v2.md`
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B5-v2.md`
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-WAVE1-V2-COMPLETE.marker` (handoff trigger)
+
+## SLA
+
+60-90 min. Next orchestrator cycle should poll for the COMPLETE marker before re-dispatching.
+
+## Base commits verified at dispatch
+
+- oinkfarm: 6af042f7
+- oink-sync: 73d074f
+- signal-gateway: cc70e5b
+- .openclaw/workspace: 0fbcbf1b (B1-only — flagged as M1 in B4 v2)
+
+## Provenance
+
+OinkV main lane session file: no lock present at dispatch (free). Gateway healthy, no recent FailoverError in journalctl.
+If this dispatch times out (LLM FailoverError or agent busy), fall back to Hermes delegate_task per sprint-orchestrator skill "Hermes-Subagent Fallback" section.
+
+Do NOT re-dispatch — next cycles should only poll for the COMPLETE marker.

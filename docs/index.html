@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T03:12:29+00:00">
+<body data-generated="2026-04-20T03:31:53+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T03:12:29+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T03:31:53+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T05:12:29+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T05:31:53+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 05:12 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 05:31 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -2214,7 +2214,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">2m ago</div>
+        <div class="agent-meta mono muted">22s ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2226,7 +2226,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B3
  · review_pending        </div>
-        <div class="agent-meta mono muted">45m ago</div>
+        <div class="agent-meta mono muted">1h 5m ago</div>
           <div class="agent-meta mono muted">branch: anvil/B3-parallel-write-verification</div>
       </div>
       <div class="agent agent-light-yellow">
@@ -2239,7 +2239,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">56m ago</div>
+        <div class="agent-meta mono muted">1h 16m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2251,7 +2251,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">39m ago</div>
+        <div class="agent-meta mono muted">58m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2263,7 +2263,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">0s ago</div>
+        <div class="agent-meta mono muted">2s ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2275,7 +2275,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">2m ago</div>
+        <div class="agent-meta mono muted">22s ago</div>
       </div>
     </div>
   </div>
@@ -2292,6 +2292,13 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 05:31 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 05:31 CEST (2026-04-20)</div>
+            <ul class="narrative-actions">
+<li>Dispatched OinkV re-audit of B4 v2 + B5 v2 (PID 213093, SLA 60-90 min)</li><li>Dispatched GUARDIAN B3 T+1h canary checkpoint nudge (PID 213094)</li><li>Wrote dispatch marker: OINKV-AUDIT-PHASE-B-WAVE1-V2-DISPATCHED.marker</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Poll for OINKV-AUDIT-PHASE-B-WAVE1-V2-COMPLETE.marker — If SHIP-READY on B5 v2 → A2A ANVIL: "Begin B5 Phase 0 proposal" — If GUARDIAN T+1h checkpoint clean → log and continue; if issues → investigate — If OinkV audit times out (>90 min) → Hermes fallback via delegate_task per sprint-orchestrator skill</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 05:12 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 05:12</div>
@@ -2568,13 +2575,6 @@ future      </span>
 <li>A8 Phase 0: both reviewers APPROVE (VIGIL file landed 16:58; GUARDIAN hit LLM timeout post-verdict)</li><li>Recovered GUARDIAN's verbatim A8 Phase 0 review from journalctl @ 16:59:30 → wrote A8-GUARDIAN-PHASE0-REVIEW.md + COMPLETE marker</li><li>Wrote A8-PHASE0-APPROVED.marker (consolidated both reviews' non-blocking concerns + 8-item Phase 1 checklist)</li><li>Dispatched ANVIL to start Phase 1 (branch anvil/A8-conditional-sl-type, running task c548121d @ 17:06:54)</li>            </ul>
             <div class="narrative-next"><span class="pill pill-info">next</span> monitor ANVIL for Phase 1 branch push + PR, then trigger triple review (VIGIL + GUARDIAN + Hermes parallel)</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 16:53 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 16:53 CEST (2026-04-19)</div>
-            <ul class="narrative-actions">
-<li>Transcribed VIGIL A11 Phase 1 ✅ PASS from webchat → /home/oinkv/vigil-workspace/reviews/A11-VIGIL-PHASE1-REVIEW.md (+ completion marker). VIGIL delivered verdict but skipped disk write on LIGHTWEIGHT path.</li><li>Opened oinkfarm PR #133 (CLEAN/MERGEABLE) and squash-merged (SHA 45a6931d, 14:51:52Z). Branch deleted.</li><li>Wrote A11-MERGED.marker, removed stale A11-READY-FOR-REVIEW.marker.</li><li>Dispatched combined A2A to ANVIL: (1) deploy A11 + migration + 98-row backfill with rowcount check + service restart; (2) start A8 Phase 0 proposal (🟡 STANDARD, next per FORGE Wave 3 order, A10 deferred to last pending Mike approval). Task 4109077a running.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> verify ANVIL deploys A11 + writes A8-PHASE0-PROPOSAL.md + A8-READY-FOR-REVIEW.marker; then VIGIL+GUARDIAN Phase 0 review dispatch will be ANVIL-initiated per skill pattern.</div>
-        </li>
       </ol>
     </div>
 
@@ -2781,12 +2781,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">3f3eeb1b448c</span>    </div>
+checkpoint@<span class="mono">c1ce9288755a</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 05:12 CEST
+        Last orchestrator cycle: Apr 20, 05:31 CEST
     </div>
     <div>
-      generated Apr 20, 05:12 CEST
+      generated Apr 20, 05:31 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
