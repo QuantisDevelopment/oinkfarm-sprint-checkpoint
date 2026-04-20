@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-20 21:24 UTC · Read time: ~8 min*
+*Last updated: 2026-04-20 22:02 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FORGE's next wave of plans. The substantive calls: TimescaleDB deferred from B2 to B14 (don't bolt it on during the PG cutover — do it later as a non-destructive add); Redis streams get approximate MAXLEN retention per topic (~10k ingestion.raw, ~5k notification.outbound, tunable at runtime); B13 (container packaging) ships as single-host Docker Compose with multi-host punted to Phase D+; W1 immutability on `signal_events` uses database-level REVOKE day one, while the `signals` table starts with app-level guards and flips to DB REVOKE after 30 clean days; and C2 (confidence routing) lands on a soft PROVISIONAL-state flag rather than hard-rejecting low-confidence signals — zero data loss, threshold is a tuning parameter. B2 also picked up two smaller calls: CHECK-only constraint on `entry_price > 0` (no trigger), and the 84 historical NULL-filled_at signals stay as-is, no backfill. B4 (PG cutover) got reclassified as a scheduled gate rather than a live blocker — it'll re-surface as a fresh DECISION_NEEDED when B3 hits its 7-clean-day mark, earliest 26 Apr.
+GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extraction), B6 (Cornix/Chroma parsers), B7 (WG Bot parsers), and B8 (dedup consolidation + commentary gate) all had their post-deploy monitoring come back clean, ten signals each, no drift. That's the full router-decomposition wave — the work that cracked the 4,366-line `signal_router` God Object into real services — now empirically validated in production. Second, in the same window, GUARDIAN posted nine PASS reviews on the Phase A backlog that was flagged stale last run: A2, A4, A5, A6, A7, A8, A9, and A10 are all formally green. That's essentially the whole "eight PRs past 24h review target" list from the previous narrative wiped in a single sweep.
 
-FORGE turned those decisions into code-plans the same hour, publishing plans for B4 (PG cutover), B9 (W1 enforcement), B12 (Redis hosting), B13 (Docker Compose packaging), and C2 (confidence routing) all at 23:18 CEST. The long-open A171 OinXtractor design blocker — the OpenClaw `contextPruning` config-key rejection — is resolved. ANVIL also posted a late sprint-note confirming Postgres 17.9 is installed, psycopg 3.3.3 pinned, and the B2 migration dry-run came back clean on the test DB with server/trader/signal row counts all matching.
+The one remaining lint warning — PR #133 on A11 (leverage source tracking) — GUARDIAN dispositioned explicitly: it's a backfill artifact with no matching review file in the workspace, not a real review miss. Safe to ignore. ANVIL also posted a late confirmation that Postgres 17.9 is installed with psycopg 3.3.3 pinned and the B2 migration dry-run is clean on the test DB — server, trader, and signal row counts all match. That's the ground truth for the B4 cutover gate waiting on the April 26 soak window.
 
-What still isn't moving: zero merges, zero canary verdicts, zero reviews this window. VIGIL has been quiet ~14h, and eight Phase A/B PRs are now past their 24h review target — A2 (#5), A4 (#7), A5 (#131), A6 (#20), A7 (#130), A9 (#8 and #132), and A11 (#133). Nothing urgent for tonight; the real question is whether VIGIL and GUARDIAN pick up that backlog tomorrow before ANVIL starts shipping code off the new B4/B9/B12/B13/C2 plans.
+Still not moving: VIGIL has been quiet for about 14½ hours and is now the one agent flagged stale on the dashboard. Nothing blocks tonight — FORGE has the next wave of plans in (B4, B9, B12, B13, C2), ANVIL has PG ready, GUARDIAN just emptied its queue — but VIGIL needs to surface tomorrow to keep parity on reviews before ANVIL starts shipping off the new plan set.
+
 
 ## Where We Are Today (one paragraph)
 
