@@ -197,3 +197,56 @@ Root cause of the fail:
 
 **Disposition:** PASS restored as `false_fail`.
 
+---
+
+## 24h Canary Checkpoint — 2026-04-20T14:25:00Z
+
+### A9-Specific Validation
+| Check | Result | Status |
+|-------|--------|--------|
+| Post-deploy qualifying `1000*` ingests | **0** | ⏳ No organic traffic |
+| Post-deploy A9-note rows | **0** | ⏳ Expected (no 1000x ingests) |
+| Mixed-denomination rows (entry<1e-4 + SL>1e-3) | **0** | ✅ Clean |
+| Post-deploy `SL_DEVIATION` rejections (qualifying symbols) | **0** | ✅ Clean |
+| Total `SL_DEVIATION` entries in rejection log | **0** | ✅ Clean |
+| Post-deploy non-1000x signals ingested | **27** | ✅ Healthy flow |
+
+### Existing 1000x Rows in DB (not countable — pre-deploy)
+| ID | Ticker | exchange_ticker | entry_price | SL | posted_at | Notes |
+|----|--------|-----------------|-------------|-----|-----------|-------|
+| 2424 | PEPE | 1000PEPE | 0.00365 | 0.00365 | 2026-03-17 | A10 import, pre-migration |
+| 1497 | PEPE | 1000PEPEUSDT | 3.657e-06 | 3.287e-06 | 2026-04-15 | WG close, pre-deploy |
+
+Neither row falls within the canary window.
+
+### SC/KPI Baseline Comparison at 24h
+| Metric | Baseline (pre-deploy) | Current (24h) | Delta | Status |
+|--------|-----------------------|---------------|-------|--------|
+| SC-1 total signal_events | 320 | 890 | +570 | ✅ Normal pipeline growth |
+| SC-1 distinct signals with events | 26 | 61 | +35 | ✅ Normal pipeline growth |
+| SC-2 false closure rate | 11.8841% | 6.2280% | −5.66pp | ✅ Improved (Phase A fixes) |
+| SC-4 total signals | 493 | 1,429 | +936 | ✅ Phase A DB merge complete |
+| KPI-R1 breakeven 7d | 20.4167% | 15.7143% | −4.70pp | ✅ Improved |
+| KPI-R3 duplicate discord groups | 14 | 14 | 0 | ✅ Stable |
+| KPI-R4 NULL leverage pct | 80.1217% | 67.5297% | −12.59pp | ✅ Improved |
+| KPI-R5 FILLED MARKET null filled_at | 0 | 0 | 0 | ✅ Clean |
+
+Note: large deltas in SC-1, SC-4, KPI-R4 are expected — the baseline was captured before Phase A DB merge and pipeline improvements. No regressions.
+
+### 24h Checkpoint Interpretation
+- **A9-specific**: Still zero organic 1000x signals in the 24h since deploy. This is expected — `1000PEPEUSDT`, `1000SHIBUSDT` etc. are traded infrequently across monitored channels.
+- **Non-1000x pipeline**: Healthy — 27 signals ingested post-deploy with no anomalies.
+- **Mixed-denomination**: Clean — no rows exhibit mixed normalization.
+- **Rejection log**: Clean — no qualifying SL_DEVIATION rejections.
+- **SC/KPI metrics**: All improved or stable vs baseline. No regression signal.
+
+### 24h Checkpoint Verdict
+**INCONCLUSIVE for A9-specific normalization** (0/3 minimum qualifying signals) — but **no regression signal of any kind**.
+
+The Hermes PASS disposition and GUARDIAN false-fail resolution remain valid. Code is deployed, unit-tested (27+ tests), and no downstream errors are visible. The canary's inability to organically validate is a function of rare ticker traffic, not a deficiency.
+
+**Next**: 48h checkpoint at `2026-04-21T14:25:00Z`. If still <3 qualifying signals, canary closes as INCONCLUSIVE with code-evidence PASS per Hermes disposition.
+
+*🛡️ GUARDIAN — 24h Checkpoint Complete*
+*Last updated: 2026-04-20T14:25:00Z*
+
