@@ -2,23 +2,27 @@
 
 **Focus:** Lifecycle accuracy & phantom-trade prevention — partial closes, confidence scoring, UPDATE→NEW dedup.
 
-**Status:** 0/3 shipped · 0 in flight · 3 planned
+**Status:** 1/3 shipped · 2 in flight · 0 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
-| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | ⏳ NOT STARTED | — | — |
-| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
+| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 🛑 BLOCKED | FAIL | — |
+| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 🧪 CANARY | PENDING | — |
+| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | ✅ DONE | PASS | — |
 
 ## Timing
 
-- (No timeline events yet.)
+- Wave start: 02:47 CEST on 19 Apr 2026
+- Last activity: 22:38 CEST on 19 Apr 2026
+- Elapsed: 19.9 h
 
 ## Canary Outcomes
 
-_No canary verdicts yet._
+- **A4**: ❌ FAIL
+- **A7**: ⏳ PENDING
+- **A5**: ✅ PASS
 
 ## Deferred Follow-ups
 

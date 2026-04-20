@@ -2,11 +2,11 @@
 
 **Tier:** 🔴 CRITICAL  
 **Wave:** B1  
-**Status:** ✅ DONE — Shipped, canary PASS  
+**Status:** 🧪 CANARY — Merged, canary in flight  
 **Repo target:** oink-sync  
 **Branch:** —  
-**PR:** [oinkfarm#142](https://github.com/QuantisDevelopment/oinkfarm/pull/142)  
-**Merge commit:** [abcd1234dead](https://github.com/QuantisDevelopment/oinkfarm/commit/abcd1234deadbeef1234)
+**PR:** [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) + [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) + [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21)  
+**Merge commit:** —
 
 ## One-liner
 
@@ -20,11 +20,11 @@ Thin wrapper module `oink_db.py` that makes every sqlite3 caller backend-agnosti
 | 2 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 22:34 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) |
 | 3 | Phase 0 review (R1) | 🛡️ GUARDIAN | ❌ CHANGES (R1) | 23:52 CEST on 19 Apr 2026 | [B1-GUARDIAN-PHASE0-REVIEW-R2.md](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md) |
 | 4 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 00:01 CEST on 20 Apr 2026 | [B1-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/B1-PHASE0-APPROVED.marker) |
-| 5 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [oinkfarm#142](https://github.com/QuantisDevelopment/oinkfarm/pull/142) |
+| 5 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) + [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) + [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) |
 
 ## Key Decisions
 
-_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
+_(Pending — will be distilled after merge.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -34,12 +34,11 @@ _None._
 
 - **OinkV audit:** [OINKV-AUDIT-PHASE-B-B1.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-PHASE-B-B1.md) — 15.9 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md)
-- **Merge commit:** [`abcd1234dead`](https://github.com/QuantisDevelopment/oinkfarm/commit/abcd1234deadbeef1234) (oinkfarm PR #142)
-- **PR(s):** [oinkfarm#142](https://github.com/QuantisDevelopment/oinkfarm/pull/142)
+- **PR(s):** [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) · [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) · [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) · [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) · [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21)
 
 ## Lessons Learned
 
-- **Phase 0 took 2 rounds** — GUARDIAN surfaced blast-radius concerns that reshaped scope before code was written. Cheaper to revise a proposal than a PR.
+_(Written after canary verdict.)_
 
 ---
 

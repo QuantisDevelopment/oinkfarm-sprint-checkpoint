@@ -2,10 +2,10 @@
 
 **Tier:** 🟡 STANDARD — auto-escalated to 🔴 CRITICAL in Phase 1 (Financial Hotpath)  
 **Wave:** 2  
-**Status:** ⏳ NOT STARTED — Not yet started  
+**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
 **Repo target:** oink-sync  
-**Branch:** anvil/A4-partially-closed-status  
-**PR:** —  
+**Branch:** —  
+**PR:** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)  
 **Merge commit:** —
 
 ## One-liner
@@ -20,7 +20,8 @@ PARTIALLY_CLOSED Status for Partial TP Signals — see plan for details.
 | 2 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 11:51 CEST on 19 Apr 2026 | [A4-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW.md) |
 | 3 | Phase 0 review (R1) | 🛡️ GUARDIAN | ❌ CHANGES (4 blockers) (R1) | 12:08 CEST on 19 Apr 2026 | [A4-GUARDIAN-PHASE0-REVIEW-R1.md](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW-R1.md) |
 | 4 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 12:17 CEST on 19 Apr 2026 | [A4-PHASE1-APPROVED.marker](../../raw-artifacts/anvil/proposals/A4-PHASE1-APPROVED.marker) |
-| 5 | Backfill | ⚒️ ANVIL | executed | 12:45 CEST on 19 Apr 2026 | [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md) |
+| 5 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7) |
+| 6 | Backfill | ⚒️ ANVIL | executed | 12:45 CEST on 19 Apr 2026 | [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md) |
 
 ## Key Decisions
 
@@ -39,6 +40,7 @@ _None._
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A4.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A4.md) — 13.1 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW-R1.md)
 - **Backfill log:** [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md)
+- **PR(s):** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)
 
 ## Lessons Learned
 

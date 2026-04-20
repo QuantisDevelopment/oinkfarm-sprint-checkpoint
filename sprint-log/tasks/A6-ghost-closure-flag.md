@@ -2,10 +2,10 @@
 
 **Tier:** 🟡 STANDARD  
 **Wave:** 3  
-**Status:** ⏳ NOT STARTED — Not yet started  
+**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
 **Repo target:** signal-gateway  
 **Branch:** —  
-**PR:** —  
+**PR:** [signal-gateway#20](https://github.com/QuantisDevelopment/signal-gateway/pull/20)  
 **Merge commit:** —
 
 ## One-liner
@@ -18,10 +18,11 @@ Emit a `GHOST_CLOSURE` lifecycle event + additive note tag whenever the reconcil
 |---|---|---|---|---|---|
 | 1 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 14:45 CEST on 19 Apr 2026 | [A6-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A6-GUARDIAN-PHASE0-REVIEW.md) |
 | 2 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 14:55 CEST on 19 Apr 2026 | [A6-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A6-PHASE0-APPROVED.marker) |
+| 3 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [signal-gateway#20](https://github.com/QuantisDevelopment/signal-gateway/pull/20) |
 
 ## Key Decisions
 
-_(To be distilled once Phase 0 proposal is drafted.)_
+_(Pending — will be distilled after merge.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -30,6 +31,7 @@ _None._
 ## Artifacts (Full Index)
 
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A6-GUARDIAN-PHASE0-REVIEW.md)
+- **PR(s):** [signal-gateway#20](https://github.com/QuantisDevelopment/signal-gateway/pull/20)
 
 ## Lessons Learned
 

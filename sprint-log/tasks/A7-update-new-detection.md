@@ -2,10 +2,10 @@
 
 **Tier:** 🔴 CRITICAL — Financial Hotpath from inception  
 **Wave:** 2  
-**Status:** ⏳ NOT STARTED — Not yet started  
+**Status:** 🧪 CANARY — Merged, canary in flight  
 **Repo target:** signal-gateway  
 **Branch:** —  
-**PR:** —  
+**PR:** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)  
 **Merge commit:** —
 
 ## One-liner
@@ -19,10 +19,11 @@ UPDATE→NEW Detection (Phantom Trade Prevention) — see plan for details.
 | 1 | OinkV audit | 👁️ OinkV | PASS | 11:31 CEST on 19 Apr 2026 | [OINKV-AUDIT-WAVE2-A7.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A7.md) |
 | 2 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 12:50 CEST on 19 Apr 2026 | [A7-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE0-REVIEW.md) |
 | 3 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 12:55 CEST on 19 Apr 2026 | [A7-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A7-PHASE0-APPROVED.marker) |
+| 4 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130) |
 
 ## Key Decisions
 
-_(To be distilled once Phase 0 proposal is drafted.)_
+_(Pending — will be distilled after merge.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -32,6 +33,7 @@ _None._
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A7.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A7.md) — 21.8 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE0-REVIEW.md)
+- **PR(s):** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)
 
 ## Lessons Learned
 

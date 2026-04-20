@@ -2,10 +2,10 @@
 
 **Tier:** 🔴 CRITICAL  
 **Wave:** 1  
-**Status:** ⏳ NOT STARTED — Not yet started  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oinkfarm  
 **Branch:** —  
-**PR:** —  
+**PR:** [signal-gateway#17](https://github.com/QuantisDevelopment/signal-gateway/pull/17) + [signal-gateway#18](https://github.com/QuantisDevelopment/signal-gateway/pull/18) + [oinkfarm#126](https://github.com/QuantisDevelopment/oinkfarm/pull/126) + [oink-sync#4](https://github.com/QuantisDevelopment/oink-sync/pull/4)  
 **Merge commit:** —
 
 ## One-liner
@@ -19,10 +19,11 @@ signal_events Table + 12 Event Type Instrumentation — see plan for details.
 | 1 | OinkV audit | 👁️ OinkV | FINDINGS | 23:23 CEST on 18 Apr 2026 | [OINKV-AUDIT.md](../../raw-artifacts/forge/plans/OINKV-AUDIT.md) |
 | 2 | Phase 0 review | 🛡️ GUARDIAN | ✅ APPROVE | 00:14 CEST on 19 Apr 2026 | [A1-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A1-GUARDIAN-PHASE0-REVIEW.md) |
 | 3 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 00:20 CEST on 19 Apr 2026 | [A1-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A1-PHASE0-APPROVED.marker) |
+| 4 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [signal-gateway#17](https://github.com/QuantisDevelopment/signal-gateway/pull/17) + [signal-gateway#18](https://github.com/QuantisDevelopment/signal-gateway/pull/18) + [oinkfarm#126](https://github.com/QuantisDevelopment/oinkfarm/pull/126) + [oink-sync#4](https://github.com/QuantisDevelopment/oink-sync/pull/4) |
 
 ## Key Decisions
 
-_(To be distilled once Phase 0 proposal is drafted.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -33,10 +34,11 @@ _(To be distilled once Phase 0 proposal is drafted.)_
 
 - **OinkV audit:** [OINKV-AUDIT.md](../../raw-artifacts/forge/plans/OINKV-AUDIT.md) — 23.4 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A1-GUARDIAN-PHASE0-REVIEW.md)
+- **PR(s):** [signal-gateway#17](https://github.com/QuantisDevelopment/signal-gateway/pull/17) · [signal-gateway#18](https://github.com/QuantisDevelopment/signal-gateway/pull/18) · [oinkfarm#126](https://github.com/QuantisDevelopment/oinkfarm/pull/126) · [oink-sync#4](https://github.com/QuantisDevelopment/oink-sync/pull/4)
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+_(Lessons distilled at wave close.)_
 
 ---
 

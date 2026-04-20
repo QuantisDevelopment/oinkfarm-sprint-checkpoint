@@ -2,23 +2,27 @@
 
 **Focus:** Core schema & formula primitives — events, remaining_pct, auto filled_at.
 
-**Status:** 0/3 shipped · 0 in flight · 3 planned
+**Status:** 3/3 shipped · 0 in flight · 0 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | ⏳ NOT STARTED | — | — |
-| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | ⏳ NOT STARTED | — | — |
-| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
+| [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | ✅ DONE | PASS | — |
+| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | ✅ DONE | PASS | — |
+| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | ✅ DONE | PASS | — |
 
 ## Timing
 
-- (No timeline events yet.)
+- Wave start: 16:20 CEST on 18 Apr 2026
+- Last activity: 02:43 CEST on 20 Apr 2026
+- Elapsed: 34.4 h
 
 ## Canary Outcomes
 
-_No canary verdicts yet._
+- **A1**: ✅ PASS
+- **A2**: ✅ PASS
+- **A3**: ✅ PASS
 
 ## Deferred Follow-ups
 

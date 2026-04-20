@@ -2,10 +2,10 @@
 
 **Tier:** 🟡 STANDARD  
 **Wave:** 1  
-**Status:** ⏳ NOT STARTED — Not yet started  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oinkfarm  
 **Branch:** —  
-**PR:** —  
+**PR:** [oinkfarm#125](https://github.com/QuantisDevelopment/oinkfarm/pull/125)  
 **Merge commit:** —
 
 ## One-liner
@@ -19,11 +19,12 @@ Auto filled_at for MARKET Orders — see plan for details.
 | 1 | OinkV audit | 👁️ OinkV | FINDINGS | 23:23 CEST on 18 Apr 2026 | [OINKV-AUDIT.md](../../raw-artifacts/forge/plans/OINKV-AUDIT.md) |
 | 2 | Phase 0 review | 🛡️ GUARDIAN | ✅ APPROVE | 23:58 CEST on 18 Apr 2026 | [A3-GUARDIAN-REVIEW.md](../../raw-artifacts/guardian/reviews/A3-GUARDIAN-REVIEW.md) |
 | 3 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 23:44 CEST on 18 Apr 2026 | [A3-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A3-PHASE0-APPROVED.marker) |
-| 4 | Backfill | ⚒️ ANVIL | executed | 00:08 CEST on 19 Apr 2026 | [A3-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A3-BACKFILL-LOG.md) |
+| 4 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [oinkfarm#125](https://github.com/QuantisDevelopment/oinkfarm/pull/125) |
+| 5 | Backfill | ⚒️ ANVIL | executed | 00:08 CEST on 19 Apr 2026 | [A3-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A3-BACKFILL-LOG.md) |
 
 ## Key Decisions
 
-_(To be distilled once Phase 0 proposal is drafted.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -34,10 +35,11 @@ _None._
 - **OinkV audit:** [OINKV-AUDIT.md](../../raw-artifacts/forge/plans/OINKV-AUDIT.md) — 23.4 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A3-GUARDIAN-REVIEW.md)
 - **Backfill log:** [A3-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A3-BACKFILL-LOG.md)
+- **PR(s):** [oinkfarm#125](https://github.com/QuantisDevelopment/oinkfarm/pull/125)
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Backfill pre-SELECT + abort-if-rowcount guard** caught a data-quality anomaly without failing the migration.
 
 ---
 

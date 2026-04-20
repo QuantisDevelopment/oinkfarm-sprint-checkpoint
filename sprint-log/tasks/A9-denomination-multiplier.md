@@ -2,10 +2,10 @@
 
 **Tier:** 🟢 LIGHTWEIGHT  
 **Wave:** 3  
-**Status:** ⏳ NOT STARTED — Not yet started  
+**Status:** 🛑 BLOCKED — Blocked on decision or dependency  
 **Repo target:** oinkfarm  
 **Branch:** —  
-**PR:** —  
+**PR:** [oink-sync#8](https://github.com/QuantisDevelopment/oink-sync/pull/8) + [oinkfarm#132](https://github.com/QuantisDevelopment/oinkfarm/pull/132)  
 **Merge commit:** —
 
 ## One-liner
@@ -17,10 +17,11 @@ Normalize entry + SL prices for `1000*USDT` symbols by dividing by 1000 at INSER
 | # | Phase | Actor | Verdict | Timestamp (CEST) | Artifact |
 |---|---|---|---|---|---|
 | 1 | OinkV audit | 👁️ OinkV | PASS | 15:29 CEST on 19 Apr 2026 | [OINKV-AUDIT-WAVE3-A9.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A9.md) |
+| 2 | Phase 1 code | ⚒️ ANVIL | MERGED | — | [oink-sync#8](https://github.com/QuantisDevelopment/oink-sync/pull/8) + [oinkfarm#132](https://github.com/QuantisDevelopment/oinkfarm/pull/132) |
 
 ## Key Decisions
 
-_(To be distilled once Phase 0 proposal is drafted.)_
+_(Pending — will be distilled after merge.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -29,6 +30,7 @@ _None._
 ## Artifacts (Full Index)
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A9.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A9.md) — 21.6 KB
+- **PR(s):** [oink-sync#8](https://github.com/QuantisDevelopment/oink-sync/pull/8) · [oinkfarm#132](https://github.com/QuantisDevelopment/oinkfarm/pull/132)
 
 ## Lessons Learned
 

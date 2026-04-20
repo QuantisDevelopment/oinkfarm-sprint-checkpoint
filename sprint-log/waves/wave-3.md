@@ -2,24 +2,29 @@
 
 **Focus:** Metadata enrichment & ghost closure — conditional SL classification, denomination multiplier, leverage source, ghost-closure flag.
 
-**Status:** 0/4 shipped · 0 in flight · 4 planned
+**Status:** 1/4 shipped · 3 in flight · 0 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
-| [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
-| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | ⏳ NOT STARTED | — | — |
-| [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | ⏳ NOT STARTED | — | — |
+| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 🛑 BLOCKED | FAIL | — |
+| [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | 🧪 CANARY | PENDING | — |
+| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 🛑 BLOCKED | FAIL | — |
+| [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | ✅ DONE | PASS | — |
 
 ## Timing
 
-- (No timeline events yet.)
+- Wave start: 14:16 CEST on 19 Apr 2026
+- Last activity: 22:41 CEST on 19 Apr 2026
+- Elapsed: 8.4 h
 
 ## Canary Outcomes
 
-_No canary verdicts yet._
+- **A6**: ❌ FAIL
+- **A8**: ⏳ PENDING
+- **A9**: ❌ FAIL
+- **A11**: ✅ PASS
 
 ## Deferred Follow-ups
 
