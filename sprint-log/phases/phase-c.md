@@ -26,7 +26,7 @@ _No waves yet for this phase._
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 0m | PROVISIONAL soft-flag · hard reject |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 12m | PROVISIONAL soft-flag · hard reject |
 
 ---
 

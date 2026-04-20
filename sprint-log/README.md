@@ -4,17 +4,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 274
-- **Last 24h:** 196 (rate 8.17/h)
+- **Total events:** 276
+- **Last 24h:** 194 (rate 8.08/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (13 events)
+### Last 1 hour (14 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `B3` | mike | B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t |
+| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | mike | — decision: GUARDIAN publishes monthly Phase D Readiness Report scoring each of Arbiter's 7 prerequisites with traffic-light + evidence cita |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
@@ -28,11 +30,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t |
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
-| Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
 
 ### Last 4 hours (48 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `B3` | mike | B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t |
+| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | mike | — decision: GUARDIAN publishes monthly Phase D Readiness Report scoring each of Arbiter's 7 prerequisites with traffic-light + evidence cita |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
@@ -47,12 +50,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t |
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
-| Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
-| Apr 20, 12:10 CEST | `CANARY_STARTED` | `B8` | guardian | B8 canary started |
 
-### Last 24 hours (196 events)
+### Last 24 hours (194 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `B3` | mike | B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t |
+| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | mike | — decision: GUARDIAN publishes monthly Phase D Readiness Report scoring each of Arbiter's 7 prerequisites with traffic-light + evidence cita |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
@@ -67,24 +70,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t |
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
-| Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
-| Apr 20, 12:10 CEST | `CANARY_STARTED` | `B8` | guardian | B8 canary started |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 1.4h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 1.4h | APPROVE · DEFER | generic |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 1.4h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 1.4h | pg_trigger · check_only | phase-b |
-| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 1.4h | 7d · 14d | phase-b |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 1.4h | maxlen · time_based | heavy-hybrid |
-| `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | `—` | 1.4h | mike_guardian_joint | heavy-hybrid |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 0m | defer to B14 · introduce in B2 | phase-b |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 0m | single-host only · include multi-host preparation | heavy-hybrid |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 0m | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 0m | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 1.6h | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 1.6h | APPROVE · DEFER | generic |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 1.6h | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 1.6h | pg_trigger · check_only | phase-b |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 1.6h | maxlen · time_based | heavy-hybrid |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 12m | defer to B14 · introduce in B2 | phase-b |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 12m | single-host only · include multi-host preparation | heavy-hybrid |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 12m | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 12m | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -113,10 +112,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
+| • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🟢 fresh | 2 |
 | 🔥 **FORGE** | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | 🟢 fresh | 47 |
 | 🪽 **Hermes** | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 7 |
 | ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 112 |
-| 🛡️ **GUARDIAN** | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | 🟢 fresh | 61 |
+| 🛡️ **GUARDIAN** | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | 🟡 1–3h | 61 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
 
@@ -189,6 +189,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Emoji | Name | Role |
 |---|---|---|
+| • | mike |  |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
@@ -205,4 +206,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*5/27 tasks DONE · Last auto-regenerated: 13:22 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*5/27 tasks DONE · Last auto-regenerated: 13:34 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
