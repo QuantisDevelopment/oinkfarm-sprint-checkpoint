@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T05:09:57+00:00",
-  "generated_at_cest": "2026-04-20T07:09:57+02:00",
+  "generated_at_utc": "2026-04-20T05:45:03+00:00",
+  "generated_at_cest": "2026-04-20T07:45:03+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,9 +3099,9 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-20T03:39:06+00:00",
-      "last_active_human": "1h 30m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T05:43:24+00:00",
+      "last_active_human": "1m ago",
+      "light": "green",
       "heartbeat": {
         "current_phase": "B"
       }
@@ -3113,8 +3113,8 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-20T05:08:28+00:00",
-      "last_active_human": "1m ago",
-      "light": "green",
+      "last_active_human": "36m ago",
+      "light": "yellow",
       "heartbeat": {
         "current_task": "B5",
         "current_phase": "canary",
@@ -3130,8 +3130,8 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T04:47:16+00:00",
-      "last_active_human": "22m ago",
-      "light": "green",
+      "last_active_human": "57m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3141,8 +3141,8 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-20T05:08:50+00:00",
-      "last_active_human": "1m ago",
-      "light": "green",
+      "last_active_human": "36m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3151,8 +3151,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T05:09:55+00:00",
-      "last_active_human": "1s ago",
+      "last_active": "2026-04-20T05:45:02+00:00",
+      "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3162,13 +3162,27 @@
       "emoji": "🐷",
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
-      "last_active": "2026-04-20T03:39:06+00:00",
-      "last_active_human": "1h 30m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T05:43:24+00:00",
+      "last_active_human": "1m ago",
+      "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T05:45:02+00:00",
+      "time_local": "2026-04-20T07:45+02:00",
+      "header": "SPRINT STATUS @ 07:46 CEST (prompt is stale — A1/A2/A3 shipped weeks ago; real frontier is Phase B Wave 2)",
+      "actions": [
+        "Detected orthogonal prep step not yet dispatched: Phase B Wave 2 OinkV audit (Mike's 06:57 note explicitly said orchestrator would schedule it). Per \"Human-Gate Blocked ≠ Idle\".",
+        "Dispatched 3 parallel Hermes-fallback audit subagents (B6/B7/B8). B9+B12 deferred (B4-gated, 🔴 CRITICAL).",
+        "B6: 🟡 REVISE MINOR (3 fixes). B7: 🟡 REVISE MINOR (5 fixes). B8: 🔴 REVISE MAJOR — B5's merge absorbed 5 of B8's 10 target functions into emitter.py; plan is ~50% obsolete, needs rewrite.",
+        "A2A FORGE with consolidated findings + prioritized revision list (B8 rewrite first, B6+B7 quick corrections second). Dispatch confirmed running on FORGE's lane."
+      ],
+      "next": "15-08:30 cycle): check B5 canary T+1h checkpoint (due 08:05); check FORGE revision outputs (TASK-B6/B7/B8 plan v2 files) landing on disk. If FORGE revisions land clean and B5 canary T+1h passes, no further dispatches needed this wave — ANVIL remains idle pending Mike's B4/Wave2 sequencing decision.",
+      "blocker": "none. B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-45-02.md"
+    },
     {
       "time_utc": "2026-04-20T05:09:55+00:00",
       "time_local": "2026-04-20T07:09+02:00",
@@ -3658,19 +3672,6 @@
       "next": "Next cycle — if A10 merged + canary, A2A ANVIL to start next Wave A task (A12+) or await Mike's Phase B greenlight.",
       "blocker": "1. 🔴 **A10 SHIP-IT** — run the 4-command sequence in /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker (stop oink-sync → cp merged DB → start → verify 1406 signals). Rollback recipe included. Pending ~12 min. 2. 🟡 **Phase B plan approval** — FORGE delivered B1-B5 plans at /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md. Needs Mike's nod on 12 design questions, esp. B4-APPROVE (PG cutover gate). Pending ~40 min. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-48-21.md"
-    },
-    {
-      "time_utc": "2026-04-19T16:36:20+00:00",
-      "time_local": "2026-04-19T18:36+02:00",
-      "header": "SPRINT STATUS @ 18:37 UTC",
-      "actions": [
-        "Verified both R2 reviews returned PASS ~5 min ago (VIGIL 18:27, GUARDIAN 18:29)",
-        "Confirmed ANVIL already replaced stale marker with fresh Gate-2 marker (18:34)",
-        "Nudged ANVIL to post a PR #135 comment flagging reviews PASS + non-blocking SHOULD-FIX deferred to cleanup PR"
-      ],
-      "next": null,
-      "blocker": null,
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-36-20.md"
     }
   ],
   "plans": [
@@ -3817,11 +3818,39 @@
       "mtime": "2026-04-20T03:04:38+00:00"
     },
     {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B6.md",
+      "name": "OINKV-AUDIT-PHASE-B-B6.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B6 (Hermes fallback)",
+      "size_bytes": 19452,
+      "mtime": "2026-04-20T05:35:07+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B7.md",
+      "name": "OINKV-AUDIT-PHASE-B-B7.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B7 (Hermes fallback)",
+      "size_bytes": 10909,
+      "mtime": "2026-04-20T05:42:21+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B8.md",
+      "name": "OINKV-AUDIT-PHASE-B-B8.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B8 (Hermes fallback)",
+      "size_bytes": 26589,
+      "mtime": "2026-04-20T05:33:21+00:00"
+    },
+    {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md",
       "name": "OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md",
       "title": "OinkV Audit — Phase B Wave 1 B4/B5 (Hermes fallback batch)",
       "size_bytes": 6542,
       "mtime": "2026-04-20T03:09:38+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-WAVE2.md",
+      "name": "OINKV-AUDIT-PHASE-B-WAVE2.md",
+      "title": "OinkV Staleness Audit — Phase B Wave 2 (B6, B7, B8)",
+      "size_bytes": 5596,
+      "mtime": "2026-04-20T05:43:07+00:00"
     },
     {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-v2.md",
@@ -3921,29 +3950,28 @@
     {
       "agent": "Hermes",
       "agent_emoji": "🪽",
-      "raw": "None — B5 shipped cleanly. Two FYI items: 1. `signal-gateway.service` is ENABLED on this host; B4 v2 audit says DISABLED. FORGE should fix this in the next B4 revision so future deploy recipes don't re-trigger the dual-instance trap. 2. B5 canary will reveal whether the P2 cache-persistence gap matters in practice. GUARDIAN flagged two post-merge cleanup options; decision deferrable to post-canary. ```",
-      "label": "None — B5 shipped cleanly.",
+      "raw": "none. B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck. ```",
+      "label": "B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck.",
       "severity": "mike",
       "current_task": null,
       "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T05:09:55+00:00",
-    "time_local": "2026-04-20T07:09+02:00",
-    "header": "SPRINT STATUS @ 07:06 CEST",
+    "time_utc": "2026-04-20T05:45:02+00:00",
+    "time_local": "2026-04-20T07:45+02:00",
+    "header": "SPRINT STATUS @ 07:46 CEST (prompt is stale — A1/A2/A3 shipped weeks ago; real frontier is Phase B Wave 2)",
     "actions": [
-      "Dispatched Hermes-level parallel review → LGTM 9.85 (converged with VIGIL); recovered full text from max_iterations subagent per skill",
-      "GUARDIAN Phase 1 landed independently: 9.30 PASS (P2 follow-up: emitter get_state/load_state persists counters only, not dedup caches — non-blocking)",
-      "Merged PR #25 (squash → 2e345bb on main), wrote B5-MERGED.marker, branch deleted",
-      "A2A ANVIL: restart + GUARDIAN notify + HEARTBEAT. ANVIL completed all 4 action items (old PID 193712 killed, new PID started, B5-DEPLOY-LOG.md written, GUARDIAN canary T+0 initiated)",
-      "CAUGHT dual-instance hazard post-restart: systemd unit is actually ENABLED (contradicts B4 v2 audit's DISABLED claim), spawned a second gateway process 7s after ANVIL's manual nohup. Dispatched ANVIL urgent dualfix + canary T+0 reset"
+      "Detected orthogonal prep step not yet dispatched: Phase B Wave 2 OinkV audit (Mike's 06:57 note explicitly said orchestrator would schedule it). Per \"Human-Gate Blocked ≠ Idle\".",
+      "Dispatched 3 parallel Hermes-fallback audit subagents (B6/B7/B8). B9+B12 deferred (B4-gated, 🔴 CRITICAL).",
+      "B6: 🟡 REVISE MINOR (3 fixes). B7: 🟡 REVISE MINOR (5 fixes). B8: 🔴 REVISE MAJOR — B5's merge absorbed 5 of B8's 10 target functions into emitter.py; plan is ~50% obsolete, needs rewrite.",
+      "A2A FORGE with consolidated findings + prioritized revision list (B8 rewrite first, B6+B7 quick corrections second). Dispatch confirmed running on FORGE's lane."
     ],
-    "next": "Monitor ANVIL's dualfix execution. If single-instance confirmed within 15 min, verify B5 canary T+0 restarted cleanly. If the dualfix hangs, escalate. Otherwise: cycle idles — B5 canary runs T+0→T+1h→T+24h→T+48h passively; B4/Wave 2 Mike-gated; no parallel prep available (Wave 2 needs FORGE audit drops first, which Mike paused under HEAVY HYBRID reorg).",
-    "blocker": "None — B5 shipped cleanly. Two FYI items: 1. `signal-gateway.service` is ENABLED on this host; B4 v2 audit says DISABLED. FORGE should fix this in the next B4 revision so future deploy recipes don't re-trigger the dual-instance trap. 2. B5 canary will reveal whether the P2 cache-persistence gap matters in practice. GUARDIAN flagged two post-merge cleanup options; decision deferrable to post-canary. ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-09-55.md"
+    "next": "15-08:30 cycle): check B5 canary T+1h checkpoint (due 08:05); check FORGE revision outputs (TASK-B6/B7/B8 plan v2 files) landing on disk. If FORGE revisions land clean and B5 canary T+1h passes, no further dispatches needed this wave — ANVIL remains idle pending Mike's B4/Wave2 sequencing decision.",
+    "blocker": "none. B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-45-02.md"
   },
-  "commit": "b81cced27dc0",
+  "commit": "e9b54cd96a6c",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",

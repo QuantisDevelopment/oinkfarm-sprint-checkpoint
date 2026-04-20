@@ -1,0 +1,26 @@
+# OinkV Wave 2 Audit Dispatch Marker
+# Generated: 2026-04-20T07:20Z (CEST 09:20)
+# Dispatcher: Hermes (cron orchestrator)
+# Method: Hermes-subagent fallback (3 parallel delegate_task subagents)
+
+## Why Hermes fallback (not direct OinkV)
+OinkV has hit LLM timeout (FailoverError, 600s) multiple times on prior audits.
+Past verified pattern: Wave 1 Phase-B audits (B1-B3) all used Hermes fallback successfully.
+Mike's 06:57 dispatch confirmed: "The orchestrator is going to schedule that audit in a parallel cron cycle."
+
+## Scope this cycle (B4-independent plans, 3/5 parallel limit)
+- B6 — Cornix+Chroma parser extraction (🟡 STANDARD)
+- B7 — WG Bot parser extraction (🟡 STANDARD)
+- B8 — Router extraction / classification + dedup + suppression (🟡 STANDARD, depends on B6+B7 landing first)
+
+## Deferred to next cycle
+- B9 — W1 Immutable signal records (🔴 CRITICAL, B4-gated — no ANVIL action until B4 ships)
+- B12 — Redis Streams transport (🔴 CRITICAL, B4+B8-gated)
+
+## Expected outputs (per subagent)
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B6.md
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B7.md
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B8.md
+
+## Dispatched at
+2026-04-20 07:20 CEST (2026-04-20 05:20 UTC)

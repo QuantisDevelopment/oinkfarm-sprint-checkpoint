@@ -1,0 +1,43 @@
+# OinkV Phase B Wave 2 Audit — Complete Marker
+# Generated: 2026-04-20T07:35Z (CEST 09:35)
+# Dispatcher: Hermes (cron orchestrator)
+# Method: Hermes-subagent fallback (3 parallel delegate_task subagents)
+
+## Coverage this cycle (3/5 Wave 2 plans)
+- ✅ B6 — Cornix+Chroma parser extraction → 🟡 REVISE MINOR (3)
+- ✅ B7 — WG Bot parser extraction → 🟡 REVISE MINOR (5)
+- ✅ B8 — Router extraction → 🔴 REVISE MAJOR (4) — B5 absorbed 5 target functions
+
+## Deferred (B4-gated, 🔴 CRITICAL both)
+- ⏳ B9 — W1 Immutable signal records on PostgreSQL
+- ⏳ B12 — Redis Streams transport
+
+Rationale for deferral: both hard-depend on B4 (PostgreSQL cutover), which
+is Mike-gated. Auditing now runs against a plan surface that may be
+restructured by Mike's B4 decisions.
+
+## Consolidated summary
+/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-WAVE2.md
+
+## Per-plan audits
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B6.md (19.5 KB)
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B7.md (10.9 KB)
+- /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B8.md (26.5 KB)
+
+## Subagent execution stats
+- B6 subagent: completed, 52 API calls, 546s, wrote file directly
+- B7 subagent: max_iterations hit at 60 calls, 868s — orchestrator recovered content from summary
+- B8 subagent: completed, 43 API calls, 440s, wrote file directly
+
+## Next orchestrator action
+A2A FORGE with the consolidated summary so revisions can start in
+parallel with B5 canary (which runs for 48h). FORGE revision budget
+estimated at ~90 min total (B6 + B7 are quick; B8 needs rewrite).
+
+## Agents NOT touched this cycle
+- ANVIL: correctly idle per Mike's 06:57 dispatch (wait for B5 canary + Mike's B4/Wave2 sequencing decision)
+- VIGIL: no active reviews pending
+- GUARDIAN: B5 canary in progress (single-instance baseline reset @ 07:05 CEST, T+1h due 08:05)
+
+## Dispatched at
+2026-04-20 07:20 CEST — completed 2026-04-20 07:35 CEST (15 min wall-clock)

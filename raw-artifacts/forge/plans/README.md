@@ -1,6 +1,6 @@
 # raw-artifacts/forge/plans/
 
-FORGE technical plans, A-group summaries, OinkV audits. 51 file(s) copied from `/home/oinkv/forge-workspace/plans`.
+FORGE technical plans, A-group summaries, OinkV audits. 57 file(s) copied from `/home/oinkv/forge-workspace/plans`.
 
 | File | Size | Last modified |
 |---|---|---|
@@ -18,6 +18,9 @@ FORGE technical plans, A-group summaries, OinkV audits. 51 file(s) copied from `
 | [OINKV-AUDIT-PHASE-B-B4.md](OINKV-AUDIT-PHASE-B-B4.md) | 20.2 KB | 05:08 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-B5-v2.md](OINKV-AUDIT-PHASE-B-B5-v2.md) | 4.7 KB | 05:39 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-B5.md](OINKV-AUDIT-PHASE-B-B5.md) | 24.2 KB | 05:04 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-B6.md](OINKV-AUDIT-PHASE-B-B6.md) | 19.0 KB | 07:35 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-B7.md](OINKV-AUDIT-PHASE-B-B7.md) | 10.7 KB | 07:42 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-B8.md](OINKV-AUDIT-PHASE-B-B8.md) | 26.0 KB | 07:33 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-COMPLETE.marker](OINKV-AUDIT-PHASE-B-COMPLETE.marker) | 2.0 KB | 22:15 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-HERMES-FALLBACK-DISPATCHED.marker](OINKV-AUDIT-PHASE-B-HERMES-FALLBACK-DISPATCHED.marker) | 3.0 KB | 22:01 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-WAVE1-B4-B5-COMPLETE.marker](OINKV-AUDIT-PHASE-B-WAVE1-B4-B5-COMPLETE.marker) | 1.5 KB | 05:09 CEST on 20 Apr 2026 |
@@ -25,6 +28,9 @@ FORGE technical plans, A-group summaries, OinkV audits. 51 file(s) copied from `
 | [OINKV-AUDIT-PHASE-B-WAVE1-V2-COMPLETE.marker](OINKV-AUDIT-PHASE-B-WAVE1-V2-COMPLETE.marker) | 236 B | 05:39 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-WAVE1-V2-DISPATCHED.marker](OINKV-AUDIT-PHASE-B-WAVE1-V2-DISPATCHED.marker) | 1.6 KB | 05:31 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-WAVE1-V2-READY.marker](OINKV-AUDIT-PHASE-B-WAVE1-V2-READY.marker) | 2.4 KB | 05:20 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-WAVE2-COMPLETE.marker](OINKV-AUDIT-PHASE-B-WAVE2-COMPLETE.marker) | 1.9 KB | 07:43 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-WAVE2-DISPATCHED.marker](OINKV-AUDIT-PHASE-B-WAVE2-DISPATCHED.marker) | 1.2 KB | 07:25 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-WAVE2.md](OINKV-AUDIT-PHASE-B-WAVE2.md) | 5.5 KB | 07:43 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker](OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker) | 1.0 KB | 02:24 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-v2.md](OINKV-AUDIT-PHASE-B-v2.md) | 7.5 KB | 02:24 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B.md](OINKV-AUDIT-PHASE-B.md) | 8.3 KB | 22:15 CEST on 19 Apr 2026 |
