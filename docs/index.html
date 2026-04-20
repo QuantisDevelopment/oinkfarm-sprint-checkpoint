@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T02:27:02+00:00">
+<body data-generated="2026-04-20T02:40:17+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T02:27:02+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T02:40:17+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T04:27:02+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T04:40:17+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 04:27 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 04:40 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -258,7 +258,7 @@ future      </span>
         </li>
         <li>
           <span class="blocker-agent">🪽 Hermes</span>
-          <span class="blocker-label">[only if genuine blocker, else omit]</span>
+          <span class="blocker-label">none new — pre-existing B4-APPROVE flag is the only gate.</span>
         </li>
       </ul>
     </div>
@@ -2214,7 +2214,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">2h 2m ago</div>
+        <div class="agent-meta mono muted">2h 15m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2226,7 +2226,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B3
  · review_pending        </div>
-        <div class="agent-meta mono muted">27s ago</div>
+        <div class="agent-meta mono muted">13m ago</div>
           <div class="agent-meta mono muted">branch: anvil/B3-parallel-write-verification</div>
       </div>
       <div class="agent agent-light-green">
@@ -2239,7 +2239,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">11m ago</div>
+        <div class="agent-meta mono muted">24m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2251,7 +2251,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">5m ago</div>
+        <div class="agent-meta mono muted">7m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2275,7 +2275,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">2h 2m ago</div>
+        <div class="agent-meta mono muted">2h 15m ago</div>
       </div>
     </div>
   </div>
@@ -2292,6 +2292,14 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 04:40 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 04:37 CEST (02:37 UTC) / Mon Apr 20</div>
+            <ul class="narrative-actions">
+<li>Scanned all Phase-0 markers, review files, canary reports — no review backlog, no stale READY markers (all merged).</li><li>Verified no agent is blocked, no PR waiting >30min for review, no canary regressions.</li><li>Confirmed next task (B4 = PostgreSQL cutover, task 1.7) is correctly gated: requires (a) Mike's explicit go-ahead — already on FORGE flag list as "B4-APPROVE 🔴" — and (b) 7+ days of B3 parallel-write dwell. B3 is 15min old; cannot advance.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cron cycle confirms B3 canary T+1h checkpoint (due 03:25 UTC / 05:25 CEST) and B2 canary T+24h (03:22 UTC / 05:22 CEST tomorrow); no agent A2A needed until a canary verdict or Mike signs off B4.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> none new — pre-existing B4-APPROVE flag is the only gate. No action required from you right now; sprint is steady-state on canary dwell. ```</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 04:27 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 04:22 CEST (Apr 20)</div>
@@ -2566,13 +2574,6 @@ future      </span>
 <li>Wrote A11-PHASE0-APPROVED.marker consolidating VIGIL approve + LIGHTWEIGHT GUARDIAN-skip rationale + 3 Phase-1 verification notes</li><li>A2A'd ANVIL (nohup + Python wrapper) to cut anvil/A11-leverage-source-tracking from origin/master, implement schema+backfill+INSERT+5 tests, deploy via cp+restart (VIGIL-only Phase 1, LIGHTWEIGHT tier)</li><li>Verified dispatch landed (task_runs 763a5a1b running on agent:anvil:main)</li><li>Confirmed A9 canary is healthy passive-wait (GUARDIAN updated at 16:29: no SL_DEVIATION, no mixed-denom, awaiting organic 1000*USDT)</li>            </ul>
             <div class="narrative-next"><span class="pill pill-info">next</span> Next cycle — check for anvil/A11 branch push, PR #N on oinkfarm, and A11-VIGIL-PHASE1-REVIEW.md. Merge when VIGIL ≥9.0 + Hermes LGTM (GUARDIAN skipped for LIGHTWEIGHT).</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 16:24 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 16:24</div>
-            <ul class="narrative-actions">
-<li>Dispatched delta Hermes R2 review of A9 (LGTM — confirmed H1/H4 resolved at line level, H2/H3 deferred as A9.1 per plan, 89/89 + 15/15 tests verified)</li><li>Merged oink-sync #8 (master 2719648) + oinkfarm #132 (master e7cfdb8e), both squashed + branches deleted</li><li>Wrote A9-MERGED.marker with VIGIL 9.40 R2 / GUARDIAN 9.80 R2 / Hermes LGTM R2 audit trail</li><li>A2A'd ANVIL: deploy micro-gate + start A11 🟢 Phase 0 proposal (Wave 3 next task; A11 independent of A8, parallel-safe)</li><li>A2A'd GUARDIAN: A9 canary (verify 1000x normalization tag, SL_DEVIATION P1 repro doesn't trigger, H2 smoking-gun grep for mixed-denomination rows)</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle verifies A9 deploy landed + A11 proposal written + ANVIL notified GUARDIAN; starts VIGIL proposal review if marker lands.</div>
-        </li>
       </ol>
     </div>
 
@@ -2761,12 +2762,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">cecac421614c</span>    </div>
+checkpoint@<span class="mono">0d0df6587778</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 04:27 CEST
+        Last orchestrator cycle: Apr 20, 04:40 CEST
     </div>
     <div>
-      generated Apr 20, 04:27 CEST
+      generated Apr 20, 04:40 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
