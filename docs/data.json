@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T05:45:03+00:00",
-  "generated_at_cest": "2026-04-20T07:45:03+02:00",
+  "generated_at_utc": "2026-04-20T05:57:26+00:00",
+  "generated_at_cest": "2026-04-20T07:57:26+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,7 +3099,7 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-20T05:43:24+00:00",
+      "last_active": "2026-04-20T05:55:28+00:00",
       "last_active_human": "1m ago",
       "light": "green",
       "heartbeat": {
@@ -3113,7 +3113,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-20T05:08:28+00:00",
-      "last_active_human": "36m ago",
+      "last_active_human": "48m ago",
       "light": "yellow",
       "heartbeat": {
         "current_task": "B5",
@@ -3130,7 +3130,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T04:47:16+00:00",
-      "last_active_human": "57m ago",
+      "last_active_human": "1h 10m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3141,7 +3141,7 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-20T05:08:50+00:00",
-      "last_active_human": "36m ago",
+      "last_active_human": "48m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3151,7 +3151,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T05:45:02+00:00",
+      "last_active": "2026-04-20T05:57:25+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3162,13 +3162,22 @@
       "emoji": "🐷",
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
-      "last_active": "2026-04-20T05:43:24+00:00",
+      "last_active": "2026-04-20T05:55:28+00:00",
       "last_active_human": "1m ago",
       "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T05:57:25+00:00",
+      "time_local": "2026-04-20T07:57+02:00",
+      "header": "SPRINT STATUS @ 07:56 CEST (Mon Apr 20)",
+      "actions": [],
+      "next": "after B5 T+1h clean (08:05), verify GUARDIAN report then A2A ANVIL → start B6 Phase 0 proposal",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-57-25.md"
+    },
     {
       "time_utc": "2026-04-20T05:45:02+00:00",
       "time_local": "2026-04-20T07:45+02:00",
@@ -3657,21 +3666,6 @@
       "next": "next cycle — if Mike has issued ship-it, verify post-merge counts (1406 signals, 912 A10-tagged, 0 orphan FKs) and kick GUARDIAN canary on first 10 post-merge signals; then A2A ANVIL to start any deferred Phase A follow-ups. If still awaiting Mike, stay silent unless >2h.",
       "blocker": "1. A10 SHIP-IT (🔴 CRITICAL, 2 gates per plan) — run the 4-command sequence in A10-READY-FOR-MIKE.marker, or reply \"ship A10\". 2. Phase B Wave 1 plans (B1–B5) awaiting approval — /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md. Critical path B1→B2→B3 (7–14d)→B4 cutover gate. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_19-00-29.md"
-    },
-    {
-      "time_utc": "2026-04-19T16:48:21+00:00",
-      "time_local": "2026-04-19T18:48+02:00",
-      "header": "SPRINT STATUS @ 16:48 UTC (18:48 CEST)",
-      "actions": [
-        "Verified A10 review convergence: VIGIL 9.70 / GUARDIAN 9.80 (both ≥9.5 CRITICAL threshold, R2)",
-        "Confirmed A10 PR #135 open, backup SHA256 verified, validation report clean (1,406 signals, 0 orphans)",
-        "Confirmed no stuck agents: all READY-FOR-REVIEW markers have downstream MERGED markers",
-        "Confirmed FORGE Wave 1 Phase B plans (B1-B5) ready since 16:09 UTC (+12 design questions)",
-        "No new work to dispatch — A10 is the only in-flight CRITICAL task; downstream waits on ship-it"
-      ],
-      "next": "Next cycle — if A10 merged + canary, A2A ANVIL to start next Wave A task (A12+) or await Mike's Phase B greenlight.",
-      "blocker": "1. 🔴 **A10 SHIP-IT** — run the 4-command sequence in /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker (stop oink-sync → cp merged DB → start → verify 1406 signals). Rollback recipe included. Pending ~12 min. 2. 🟡 **Phase B plan approval** — FORGE delivered B1-B5 plans at /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md. Needs Mike's nod on 12 design questions, esp. B4-APPROVE (PG cutover gate). Pending ~40 min. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-48-21.md"
     }
   ],
   "plans": [
@@ -3958,20 +3952,15 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T05:45:02+00:00",
-    "time_local": "2026-04-20T07:45+02:00",
-    "header": "SPRINT STATUS @ 07:46 CEST (prompt is stale — A1/A2/A3 shipped weeks ago; real frontier is Phase B Wave 2)",
-    "actions": [
-      "Detected orthogonal prep step not yet dispatched: Phase B Wave 2 OinkV audit (Mike's 06:57 note explicitly said orchestrator would schedule it). Per \"Human-Gate Blocked ≠ Idle\".",
-      "Dispatched 3 parallel Hermes-fallback audit subagents (B6/B7/B8). B9+B12 deferred (B4-gated, 🔴 CRITICAL).",
-      "B6: 🟡 REVISE MINOR (3 fixes). B7: 🟡 REVISE MINOR (5 fixes). B8: 🔴 REVISE MAJOR — B5's merge absorbed 5 of B8's 10 target functions into emitter.py; plan is ~50% obsolete, needs rewrite.",
-      "A2A FORGE with consolidated findings + prioritized revision list (B8 rewrite first, B6+B7 quick corrections second). Dispatch confirmed running on FORGE's lane."
-    ],
-    "next": "15-08:30 cycle): check B5 canary T+1h checkpoint (due 08:05); check FORGE revision outputs (TASK-B6/B7/B8 plan v2 files) landing on disk. If FORGE revisions land clean and B5 canary T+1h passes, no further dispatches needed this wave — ANVIL remains idle pending Mike's B4/Wave2 sequencing decision.",
-    "blocker": "none. B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck. ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-45-02.md"
+    "time_utc": "2026-04-20T05:57:25+00:00",
+    "time_local": "2026-04-20T07:57+02:00",
+    "header": "SPRINT STATUS @ 07:56 CEST (Mon Apr 20)",
+    "actions": [],
+    "next": "after B5 T+1h clean (08:05), verify GUARDIAN report then A2A ANVIL → start B6 Phase 0 proposal",
+    "blocker": null,
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-57-25.md"
   },
-  "commit": "e9b54cd96a6c",
+  "commit": "677b20c341f7",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
