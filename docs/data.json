@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T03:31:53+00:00",
-  "generated_at_cest": "2026-04-20T05:31:53+02:00",
+  "generated_at_utc": "2026-04-20T03:48:28+00:00",
+  "generated_at_cest": "2026-04-20T05:48:28+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,8 +3099,8 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-20T03:31:30+00:00",
-      "last_active_human": "22s ago",
+      "last_active": "2026-04-20T03:39:06+00:00",
+      "last_active_human": "9m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,9 +3112,9 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T02:26:34+00:00",
-      "last_active_human": "1h 5m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T03:48:22+00:00",
+      "last_active_human": "6s ago",
+      "light": "green",
       "heartbeat": {
         "current_task": "B3",
         "current_phase": "review_pending",
@@ -3131,7 +3131,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T02:15:38+00:00",
-      "last_active_human": "1h 16m ago",
+      "last_active_human": "1h 32m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3141,9 +3141,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T02:33:08+00:00",
-      "last_active_human": "58m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T03:32:57+00:00",
+      "last_active_human": "15m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3152,8 +3152,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T03:31:50+00:00",
-      "last_active_human": "2s ago",
+      "last_active": "2026-04-20T03:48:27+00:00",
+      "last_active_human": "1s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3163,13 +3163,27 @@
       "emoji": "🐷",
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
-      "last_active": "2026-04-20T03:31:30+00:00",
-      "last_active_human": "22s ago",
+      "last_active": "2026-04-20T03:39:06+00:00",
+      "last_active_human": "9m ago",
       "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T03:48:27+00:00",
+      "time_local": "2026-04-20T05:48+02:00",
+      "header": "SPRINT STATUS @ 05:47 CEST (2026-04-20)",
+      "actions": [
+        "Read B3 canary (CLEAN T+1h, passive wait on organic traffic — healthy, not a stall).",
+        "Confirmed OinkV re-audit landed 05:31: B4 v2=MINOR-REVISION, B5 v2=SHIP-READY.",
+        "Dispatched ANVIL → start B5 Phase 0 proposal in parallel with B3 canary (task 2018bf29 running, lane agent:anvil:main, 05:47:31). Nudge included: B5 plan+audit paths, scope summary, 2 OinkV tidiness findings (N1 \"36 dispatch sites\" wording, N2 explicit persist_state wiring), HEARTBEAT update fields, instruction to A2A VIGIL+GUARDIAN for Phase 0 review.",
+        "Noted transient 401 auth flicker on OinkV+Pilot lanes at 05:40 — model-fallback kicked in (anthropic→openai/gpt-5.3-codex), no outage, no re-dispatch needed."
+      ],
+      "next": "Next cycle: poll for B5-PHASE0-PROPOSAL.md + B5-READY-FOR-REVIEW.marker. If landed, expect VIGIL+GUARDIAN reviews (ANVIL was instructed to self-dispatch). If reviews haven't landed after ~10 min, dispatch them directly per the orchestrator skill. — Also poll B3 canary T+24h checkpoint (due Apr 21 04:25 CEST — GUARDIAN self-starts). — B4 v2.1 revision (2 MINOR residuals per OinkV) — defer to FORGE's next heartbeat; B4 is post-B3-canary-passes and post-B2-bootstrap, not time-critical.",
+      "blocker": "none. A10 council review (issue #136) is outstanding but was already on your plate; orchestrator is not waiting on a fresh decision from you. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_05-48-27.md"
+    },
     {
       "time_utc": "2026-04-20T03:31:50+00:00",
       "time_local": "2026-04-20T05:31+02:00",
@@ -3663,20 +3677,6 @@
       "next": "poll for A8-BACKFILL-LOG.md + A8-CANARY.md; if canary PASSes and A10 still gated on Mike, remain silent pending approval.",
       "blocker": "**A10-APPROVE decision pending.** A10 (DB merge, 🔴 CRITICAL) is the next task in the roadmap and is explicitly gated on your approval of the merge algorithm + dedup strategy (per FORGE plan §0). A8 deploy unlocks A10's schema-freeze precondition, so after A8 canary PASSes ANVIL goes idle waiting for your go-ahead. Plan at /home/oinkv/forge-workspace/plans/TASK-A10-plan.md. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_17-29-01.md"
-    },
-    {
-      "time_utc": "2026-04-19T15:07:07+00:00",
-      "time_local": "2026-04-19T17:07+02:00",
-      "header": "SPRINT STATUS @ 17:07",
-      "actions": [
-        "A8 Phase 0: both reviewers APPROVE (VIGIL file landed 16:58; GUARDIAN hit LLM timeout post-verdict)",
-        "Recovered GUARDIAN's verbatim A8 Phase 0 review from journalctl @ 16:59:30 → wrote A8-GUARDIAN-PHASE0-REVIEW.md + COMPLETE marker",
-        "Wrote A8-PHASE0-APPROVED.marker (consolidated both reviews' non-blocking concerns + 8-item Phase 1 checklist)",
-        "Dispatched ANVIL to start Phase 1 (branch anvil/A8-conditional-sl-type, running task c548121d @ 17:06:54)"
-      ],
-      "next": "monitor ANVIL for Phase 1 branch push + PR, then trigger triple review (VIGIL + GUARDIAN + Hermes parallel)",
-      "blocker": null,
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_17-07-07.md"
     }
   ],
   "plans": [
@@ -3795,11 +3795,25 @@
       "mtime": "2026-04-19T20:14:24+00:00"
     },
     {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B4-v2.md",
+      "name": "OINKV-AUDIT-PHASE-B-B4-v2.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B4 v2",
+      "size_bytes": 5922,
+      "mtime": "2026-04-20T03:38:36+00:00"
+    },
+    {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B4.md",
       "name": "OINKV-AUDIT-PHASE-B-B4.md",
       "title": "OinkV Engineering Audit — FORGE Plan B4 (Hermes fallback)",
       "size_bytes": 20645,
       "mtime": "2026-04-20T03:08:25+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B5-v2.md",
+      "name": "OINKV-AUDIT-PHASE-B-B5-v2.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B5 v2",
+      "size_bytes": 4789,
+      "mtime": "2026-04-20T03:39:01+00:00"
     },
     {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B5.md",
@@ -3921,19 +3935,20 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T03:31:50+00:00",
-    "time_local": "2026-04-20T05:31+02:00",
-    "header": "SPRINT STATUS @ 05:31 CEST (2026-04-20)",
+    "time_utc": "2026-04-20T03:48:27+00:00",
+    "time_local": "2026-04-20T05:48+02:00",
+    "header": "SPRINT STATUS @ 05:47 CEST (2026-04-20)",
     "actions": [
-      "Dispatched OinkV re-audit of B4 v2 + B5 v2 (PID 213093, SLA 60-90 min)",
-      "Dispatched GUARDIAN B3 T+1h canary checkpoint nudge (PID 213094)",
-      "Wrote dispatch marker: OINKV-AUDIT-PHASE-B-WAVE1-V2-DISPATCHED.marker"
+      "Read B3 canary (CLEAN T+1h, passive wait on organic traffic — healthy, not a stall).",
+      "Confirmed OinkV re-audit landed 05:31: B4 v2=MINOR-REVISION, B5 v2=SHIP-READY.",
+      "Dispatched ANVIL → start B5 Phase 0 proposal in parallel with B3 canary (task 2018bf29 running, lane agent:anvil:main, 05:47:31). Nudge included: B5 plan+audit paths, scope summary, 2 OinkV tidiness findings (N1 \"36 dispatch sites\" wording, N2 explicit persist_state wiring), HEARTBEAT update fields, instruction to A2A VIGIL+GUARDIAN for Phase 0 review.",
+      "Noted transient 401 auth flicker on OinkV+Pilot lanes at 05:40 — model-fallback kicked in (anthropic→openai/gpt-5.3-codex), no outage, no re-dispatch needed."
     ],
-    "next": "Poll for OINKV-AUDIT-PHASE-B-WAVE1-V2-COMPLETE.marker — If SHIP-READY on B5 v2 → A2A ANVIL: \"Begin B5 Phase 0 proposal\" — If GUARDIAN T+1h checkpoint clean → log and continue; if issues → investigate — If OinkV audit times out (>90 min) → Hermes fallback via delegate_task per sprint-orchestrator skill",
-    "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_05-31-50.md"
+    "next": "Next cycle: poll for B5-PHASE0-PROPOSAL.md + B5-READY-FOR-REVIEW.marker. If landed, expect VIGIL+GUARDIAN reviews (ANVIL was instructed to self-dispatch). If reviews haven't landed after ~10 min, dispatch them directly per the orchestrator skill. — Also poll B3 canary T+24h checkpoint (due Apr 21 04:25 CEST — GUARDIAN self-starts). — B4 v2.1 revision (2 MINOR residuals per OinkV) — defer to FORGE's next heartbeat; B4 is post-B3-canary-passes and post-B2-bootstrap, not time-critical.",
+    "blocker": "none. A10 council review (issue #136) is outstanding but was already on your plate; orchestrator is not waiting on a fresh decision from you. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_05-48-27.md"
   },
-  "commit": "c1ce9288755a",
+  "commit": "588fb1ededa9",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
