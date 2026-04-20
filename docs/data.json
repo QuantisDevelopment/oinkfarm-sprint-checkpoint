@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T00:26:12+00:00",
-  "generated_at_cest": "2026-04-20T02:26:12+02:00",
+  "generated_at_utc": "2026-04-20T00:40:36+00:00",
+  "generated_at_cest": "2026-04-20T02:40:36+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "1m ago",
+      "last_active_human": "15m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,16 +3112,15 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-19T23:20:53+00:00",
-      "last_active_human": "1h 5m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T00:29:30+00:00",
+      "last_active_human": "11m ago",
+      "light": "green",
       "heartbeat": {
-        "current_task": "B1",
-        "current_phase": "deployed",
+        "current_task": "B2",
+        "current_phase": "proposal",
         "blockers": [
-          "waiting_for_canary"
-        ],
-        "branch": "anvil/B1-db-abstraction"
+          "waiting_for_proposal_approval"
+        ]
       }
     },
     {
@@ -3130,9 +3129,9 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-19T23:11:46+00:00",
-      "last_active_human": "1h 14m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T00:35:05+00:00",
+      "last_active_human": "5m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3141,9 +3140,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-19T23:23:12+00:00",
-      "last_active_human": "1h 2m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T00:32:45+00:00",
+      "last_active_human": "7m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3152,7 +3151,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T00:26:11+00:00",
+      "last_active": "2026-04-20T00:40:35+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3164,12 +3163,25 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "1m ago",
+      "last_active_human": "15m ago",
       "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T00:40:35+00:00",
+      "time_local": "2026-04-20T02:40+02:00",
+      "header": "SPRINT STATUS @ 02:40",
+      "actions": [
+        "Read B2 R1 reviews (VIGIL approve, GUARDIAN request-changes on snapshot strategy + engine-gating).",
+        "A2A-nudged ANVIL with consolidated MUST-FIX list: immutable SQLite copy OR single read-txn snapshot; engine-gated SQL; SQLite byte-for-byte invariant; plus VIGIL's non-blocking notes (sequence-reset tests, migration-report artifact, \"21 explicit indexes\" fix).",
+        "Verified ANVIL session advanced to 02:39 — R2 queued despite transient Anthropic overload in gateway logs."
+      ],
+      "next": "On next cycle, check for B2 R2 proposal + re-review markers. If R2 ready → A2A VIGIL + GUARDIAN for re-review (VIGIL can carry-forward unless scope widened). If both APPROVE → greenlight ANVIL Phase 1.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-40-35.md"
+    },
     {
       "time_utc": "2026-04-20T00:26:11+00:00",
       "time_local": "2026-04-20T02:26+02:00",
@@ -3676,21 +3688,6 @@
       "next": "On next cycle — poll for A6-READY-FOR-REVIEW.marker + A6-PHASE0-PROPOSAL.md, then A2A VIGIL+GUARDIAN. In parallel: poll for A6-A11-SUMMARY.md from FORGE to surface Wave 3 to Mike for approval. Continue passive canary monitoring on A4/A5/A7.",
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_14-26-51.md"
-    },
-    {
-      "time_utc": "2026-04-19T12:07:00+00:00",
-      "time_local": "2026-04-19T14:07+02:00",
-      "header": "SPRINT STATUS @ 14:06 UTC",
-      "actions": [
-        "A5 R1 had VIGIL REVISE (8.20) on MUST-FIX (telegram_direct 0.90 vs spec 0.92). A2A'd ANVIL → fix pushed as commit 188eaa35 + SHOULD-FIX boundary test.",
-        "A2A'd VIGIL for R2 → PASS 9.85 (Spec/Test both 7→10). GUARDIAN 10.00 carried forward.",
-        "A2A'd ANVIL to merge+deploy → PR #131 merged, service restarted, A5-MERGED.marker written.",
-        "A2A'd GUARDIAN for A5 post-deploy SQL verification (metadata-only, no canary).",
-        "A2A'd FORGE to produce Wave 3 plans (A6, A8, A9, A10, A11) with Mike-approval flags."
-      ],
-      "next": "Next cycle will (1) check FORGE's WAVE3-PLANS-READY.marker + surface Mike's approval gate for A10 if flagged, (2) verify GUARDIAN's A5 post-deploy SQL report landed, (3) if plans approved, nudge ANVIL to start next Phase 0 proposal (likely A9/A11 lightweight first, then A6/A8).",
-      "blocker": "Wave 3 plans incoming from FORGE. Once WAVE3-PLANS-READY.marker lands (expect next cycle), you'll need to approve A10 (DB merge — 🔴 CRITICAL) before ANVIL touches it. Lightweight A9/A11 and STANDARD A6/A8 can proceed without explicit approval per prior sprint pattern. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_14-07-00.md"
     }
   ],
   "plans": [
@@ -3897,11 +3894,11 @@
     {
       "agent": "ANVIL",
       "agent_emoji": "⚒️",
-      "raw": "waiting_for_canary",
-      "label": "GUARDIAN canary",
+      "raw": "waiting_for_proposal_approval",
+      "label": "Proposal approval (VIGIL + GUARDIAN)",
       "severity": "auto",
-      "current_task": "B1",
-      "current_phase": "deployed"
+      "current_task": "B2",
+      "current_phase": "proposal"
     },
     {
       "agent": "Hermes",
@@ -3914,20 +3911,19 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T00:26:11+00:00",
-    "time_local": "2026-04-20T02:26+02:00",
-    "header": "SPRINT STATUS @ 00:25 UTC (02:25 CEST)",
+    "time_utc": "2026-04-20T00:40:35+00:00",
+    "time_local": "2026-04-20T02:40+02:00",
+    "header": "SPRINT STATUS @ 02:40",
     "actions": [
-      "Detected OinkV (main) lane LLM-timing-out (FailoverError @ 01:57/02:01/02:12) — took Hermes-subagent fallback path per skill.",
-      "Dispatched 2× parallel delegate_task audits of FORGE's v2 revisions: B2 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 2 Minor / 14 Confirmed-Fixed), B3 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 1 Minor / 11 Confirmed-Fixed). Verified against live DB schema + 3-repo HEADs (0fbcbf1b / ecd2622 / b0f0254).",
-      "Wrote consolidated audit + marker: OINKV-AUDIT-PHASE-B-v2.md + OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker (with Mike provenance note on OinkV timeout).",
-      "A2A'd ANVIL to start B2 Phase 0 proposal — parallel-safe with passive B1 canary. Dispatch confirmed in task_runs as running 02:25:50."
+      "Read B2 R1 reviews (VIGIL approve, GUARDIAN request-changes on snapshot strategy + engine-gating).",
+      "A2A-nudged ANVIL with consolidated MUST-FIX list: immutable SQLite copy OR single read-txn snapshot; engine-gated SQL; SQLite byte-for-byte invariant; plus VIGIL's non-blocking notes (sequence-reset tests, migration-report artifact, \"21 explicit indexes\" fix).",
+      "Verified ANVIL session advanced to 02:39 — R2 queued despite transient Anthropic overload in gateway logs."
     ],
-    "next": "check B1 canary progress (organic signal arrival) + poll for /home/oinkv/anvil-workspace/proposals/B2-READY-FOR-REVIEW.marker; if present, A2A VIGIL+GUARDIAN for Phase 0 proposal review.",
+    "next": "On next cycle, check for B2 R2 proposal + re-review markers. If R2 ready → A2A VIGIL + GUARDIAN for re-review (VIGIL can carry-forward unless scope widened). If both APPROVE → greenlight ANVIL Phase 1.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-26-11.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-40-35.md"
   },
-  "commit": "efa227535116",
+  "commit": "5259ed02c3c3",
   "recent_events": [
     {
       "ts": "2026-04-19T23:23:12+00:00",

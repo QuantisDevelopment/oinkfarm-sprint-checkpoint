@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T00:26:12+00:00">
+<body data-generated="2026-04-20T00:40:36+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T00:26:12+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T00:40:36+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T02:26:12+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T02:40:36+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 02:26 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 02:40 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -253,8 +253,8 @@ future      </span>
       <ul class="blocker-list">
         <li>
           <span class="blocker-agent">⚒️ ANVIL</span>
-          <span class="blocker-label">GUARDIAN canary</span>
-            <span class="blocker-task mono">on B1 · deployed</span>
+          <span class="blocker-label">Proposal approval (VIGIL + GUARDIAN)</span>
+            <span class="blocker-task mono">on B2 · proposal</span>
         </li>
         <li>
           <span class="blocker-agent">🪽 Hermes</span>
@@ -2214,44 +2214,43 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">1m ago</div>
+        <div class="agent-meta mono muted">15m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">⚒️</span>
           <span class="agent-name">ANVIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Implementation Lead</div>
         <div class="agent-meta mono">
-            task: B1
- · deployed        </div>
-        <div class="agent-meta mono muted">1h 5m ago</div>
-          <div class="agent-meta mono muted">branch: anvil/B1-db-abstraction</div>
+            task: B2
+ · proposal        </div>
+        <div class="agent-meta mono muted">11m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🔍</span>
           <span class="agent-name">VIGIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Code Review + Scoring</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 14m ago</div>
+        <div class="agent-meta mono muted">5m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🛡️</span>
           <span class="agent-name">GUARDIAN</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Data Integrity + Canary</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 2m ago</div>
+        <div class="agent-meta mono muted">7m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2275,7 +2274,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">1m ago</div>
+        <div class="agent-meta mono muted">15m ago</div>
       </div>
     </div>
   </div>
@@ -2292,6 +2291,13 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 02:40 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 02:40</div>
+            <ul class="narrative-actions">
+<li>Read B2 R1 reviews (VIGIL approve, GUARDIAN request-changes on snapshot strategy + engine-gating).</li><li>A2A-nudged ANVIL with consolidated MUST-FIX list: immutable SQLite copy OR single read-txn snapshot; engine-gated SQL; SQLite byte-for-byte invariant; plus VIGIL's non-blocking notes (sequence-reset tests, migration-report artifact, "21 explicit indexes" fix).</li><li>Verified ANVIL session advanced to 02:39 — R2 queued despite transient Anthropic overload in gateway logs.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> On next cycle, check for B2 R2 proposal + re-review markers. If R2 ready → A2A VIGIL + GUARDIAN for re-review (VIGIL can carry-forward unless scope widened). If both APPROVE → greenlight ANVIL Phase 1.</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 02:26 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 00:25 UTC (02:25 CEST)</div>
@@ -2570,14 +2576,6 @@ future      </span>
 <li>Dispatched ANVIL (task de2af9ae) for A6 Phase 0 proposal using FORGE TASK-A6-plan.md (🟡 STANDARD, deps A1/A4/A5 all ✅)</li><li>Dispatched FORGE (task 16fe66cb) to finalize Wave 3 bundle — subagent wrote A6/A8/A9/A10/A11 plans to disk but timed out before SUMMARY + marker + HEARTBEAT refresh</li><li>Confirmed A5 canary already active: GUARDIAN posted initial verification 14:05 (493 signals, pre-deploy distribution clean), committed to passive re-check at ~18:00Z when organic post-deploy signals arrive — no re-dispatch needed</li><li>Verified A4 canary (🟡 MONITORING, 0/10 organic PARTIALLY_CLOSED) and A7 canary (PENDING, 0/10 validated UPDATE_DETECTED) both passive-healthy, no escalation</li><li>Ran FORGE HEARTBEAT + plans dir audit — plans A6/A8/A9/A10/A11 all landed (14:16–14:24), only SUMMARY/marker/heartbeat missing</li>            </ul>
             <div class="narrative-next"><span class="pill pill-info">next</span> On next cycle — poll for A6-READY-FOR-REVIEW.marker + A6-PHASE0-PROPOSAL.md, then A2A VIGIL+GUARDIAN. In parallel: poll for A6-A11-SUMMARY.md from FORGE to surface Wave 3 to Mike for approval. Continue passive canary monitoring on A4/A5/A7.</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 14:07 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 14:06 UTC</div>
-            <ul class="narrative-actions">
-<li>A5 R1 had VIGIL REVISE (8.20) on MUST-FIX (telegram_direct 0.90 vs spec 0.92). A2A'd ANVIL → fix pushed as commit 188eaa35 + SHOULD-FIX boundary test.</li><li>A2A'd VIGIL for R2 → PASS 9.85 (Spec/Test both 7→10). GUARDIAN 10.00 carried forward.</li><li>A2A'd ANVIL to merge+deploy → PR #131 merged, service restarted, A5-MERGED.marker written.</li><li>A2A'd GUARDIAN for A5 post-deploy SQL verification (metadata-only, no canary).</li><li>A2A'd FORGE to produce Wave 3 plans (A6, A8, A9, A10, A11) with Mike-approval flags.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> Next cycle will (1) check FORGE's WAVE3-PLANS-READY.marker + surface Mike's approval gate for A10 if flagged, (2) verify GUARDIAN's A5 post-deploy SQL report landed, (3) if plans approved, nudge ANVIL to start next Phase 0 proposal (likely A9/A11 lightweight first, then A6/A8).</div>
-            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> Wave 3 plans incoming from FORGE. Once WAVE3-PLANS-READY.marker lands (expect next cycle), you'll need to approve A10 (DB merge — 🔴 CRITICAL) before ANVIL touches it. Lightweight A9/A11 and STANDARD A6/A8 can proceed without explicit approval per prior sprint pattern. ```</div>
-        </li>
       </ol>
     </div>
 
@@ -2766,12 +2764,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">efa227535116</span>    </div>
+checkpoint@<span class="mono">5259ed02c3c3</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 02:26 CEST
+        Last orchestrator cycle: Apr 20, 02:40 CEST
     </div>
     <div>
-      generated Apr 20, 02:26 CEST
+      generated Apr 20, 02:40 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
