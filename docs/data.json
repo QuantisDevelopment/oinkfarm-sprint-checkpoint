@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T20:22:01+00:00",
-  "generated_at_cest": "2026-04-20T22:22:01+02:00",
+  "generated_at_utc": "2026-04-20T20:55:30+00:00",
+  "generated_at_cest": "2026-04-20T22:55:30+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -1791,7 +1791,7 @@
             "mtime": "2026-04-20T13:08:31Z"
           },
           "merged_at": "2026-04-19T16:05:42Z",
-          "last_activity": "2026-04-20T13:08:31Z",
+          "last_activity": "2026-04-20T20:55:19Z",
           "timeline": [
             {
               "label": "A10 merged via PR #None @81ba446",
@@ -1900,6 +1900,15 @@
               "verdict": null,
               "score": null,
               "event_type": "CANARY_PASS"
+            },
+            {
+              "label": "A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe",
+              "actor": "hermes",
+              "path": null,
+              "mtime": "2026-04-20T20:55:19Z",
+              "verdict": null,
+              "score": null,
+              "event_type": "DECISION_RESOLVED"
             }
           ],
           "artifacts": {
@@ -1910,16 +1919,17 @@
             "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md"
           },
           "_from_stream": true,
-          "event_count": 12,
+          "event_count": 13,
           "blocker": null,
           "phase": "A",
           "agents_touched": [
             "anvil",
             "forge",
             "guardian",
+            "hermes",
             "vigil"
           ],
-          "last_event_type": "CANARY_PASS"
+          "last_event_type": "DECISION_RESOLVED"
         }
       ],
       "task_ids": [
@@ -2281,12 +2291,762 @@
   ],
   "tasks": [
     {
-      "id": "A171",
+      "id": "B2",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "repo_hint": null,
-      "status": "BLOCKED",
-      "status_label": "Blocked",
+      "status": "CANARY",
+      "status_label": "Canary",
+      "prs": [
+        {
+          "repo": "oinkdb-api",
+          "number": 2,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/2",
+          "merge_commit": null,
+          "commit_url": null
+        },
+        {
+          "repo": "oinkfarm",
+          "number": 153,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/153",
+          "merge_commit": null,
+          "commit_url": null
+        },
+        {
+          "repo": "oink-sync",
+          "number": 11,
+          "pr_url": "https://github.com/QuantisDevelopment/oink-sync/pull/11",
+          "merge_commit": null,
+          "commit_url": null
+        },
+        {
+          "repo": "signal-gateway",
+          "number": 24,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/24",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "scores": {
+        "vigil": 9.5,
+        "guardian": 9.6,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": "PASS",
+        "hermes": null
+      },
+      "canary": {
+        "verdict": "PENDING",
+        "path": null,
+        "mtime": "2026-04-20T02:30:26Z"
+      },
+      "merged_at": "2026-04-18T16:56:57Z",
+      "last_activity": "2026-04-20T20:55:19Z",
+      "timeline": [
+        {
+          "label": "B2 PR #2 opened — feat(#16): PR-B2 — implement 12 by-route handlers",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-18T16:40:40Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 merged via PR #2 @f1f5544",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-18T16:56:57Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
+          "mtime": "2026-04-19T23:43:45Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B2 review by guardian — REVISE (5.0)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T00:32:41Z",
+          "verdict": "REVISE",
+          "score": 5.0,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 review by vigil — PASS (9.5)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/B2-VIGIL-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T00:34:38Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 proposal ready",
+          "actor": "anvil",
+          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
+          "mtime": "2026-04-20T00:41:56Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_READY"
+        },
+        {
+          "label": "B2 review by guardian — PASS (9.5)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW-R2.md",
+          "mtime": "2026-04-20T00:45:52Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 proposal approved by vigil+guardian",
+          "actor": "system",
+          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
+          "mtime": "2026-04-20T00:54:22Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_APPROVED"
+        },
+        {
+          "label": "B2 merged via PR #None @9bf9c5f",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:07:01Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 merged via PR #None @92cdfef",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:07:12Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 review by guardian — PASS (9.6)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
+          "mtime": "2026-04-20T01:16:45Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 PR #153 opened — feat(B2): PostgreSQL schema translation + one-time data migration",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:11Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 PR #11 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:23Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 PR #24 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:25Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 merged via PR #153 @14563d2",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 merged via PR #11 @80288bb",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:55Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 merged via PR #24 @df8112d",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:58Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 canary started",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md",
+          "mtime": "2026-04-20T02:30:26Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "CANARY_STARTED"
+        },
+        {
+          "label": "B2 Mike gate: PostgreSQL hosting: same server or separate?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 Mike gate: TimescaleDB now or later (B14)?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:21:53Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses ",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:55:19Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
+        "review_posted": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
+        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
+        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
+        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md"
+      },
+      "_from_stream": true,
+      "event_count": 27,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "hermes",
+        "system",
+        "vigil"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "B4",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "MERGED",
+      "status_label": "MERGED",
+      "prs": [
+        {
+          "repo": "oinkdb-api",
+          "number": 4,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/4",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": "2026-04-18T17:33:10Z",
+      "last_activity": "2026-04-20T20:55:19Z",
+      "timeline": [
+        {
+          "label": "B4 PR #4 opened — feat(#16): PR-B4 — WG handlers (4 endpoints) — CLOSES Phase 2",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-18T17:33:08Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B4 merged via PR #4 @52303fc",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-18T17:33:10Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B4 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md",
+          "mtime": "2026-04-20T03:16:02Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B4 Mike gate: Cutover requires Mike's explicit go-ahead",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B4 Mike gate: signal-gateway.service systemd re-enable or keep manual?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B4 plan published",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:35:21Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:55:19Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md"
+      },
+      "_from_stream": true,
+      "event_count": 10,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "A10",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": "oinkfarm",
+      "status": "DONE",
+      "status_label": "Done",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 135,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/135",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "scores": {
+        "vigil": 9.7,
+        "guardian": 9.8,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": "PASS",
+        "hermes": null
+      },
+      "canary": {
+        "verdict": "PASS",
+        "path": null,
+        "mtime": "2026-04-20T13:08:31Z"
+      },
+      "merged_at": "2026-04-19T16:05:42Z",
+      "last_activity": "2026-04-20T20:55:19Z",
+      "timeline": [
+        {
+          "label": "A10 merged via PR #None @81ba446",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-19T16:05:42Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "A10 PR #135 opened — feat(A10): database merge script — old DB into new DB",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-19T16:05:51Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "A10 review by vigil — REVISE (7.9)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/A10-VIGIL-PHASE1-R1-REVIEW.md",
+          "mtime": "2026-04-19T16:09:08Z",
+          "verdict": "REVISE",
+          "score": 7.9,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "A10 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-A10-plan.md",
+          "mtime": "2026-04-19T16:11:51Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "A10 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-A10-plan-v2-DELTA.md",
+          "mtime": "2026-04-19T16:12:30Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "A10 review by vigil — PASS (9.7)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/A10-VIGIL-PHASE1-R2-REVIEW.md",
+          "mtime": "2026-04-19T16:27:09Z",
+          "verdict": "PASS",
+          "score": 9.7,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "A10 review by guardian — PASS (9.8)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/A10-GUARDIAN-PHASE1-REVIEW.md",
+          "mtime": "2026-04-19T16:29:25Z",
+          "verdict": "PASS",
+          "score": 9.8,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "A10 merged via PR #135 @80f4fe0",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-19T18:30:16Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "A10 canary started",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
+          "mtime": "2026-04-19T20:27:02Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "CANARY_STARTED"
+        },
+        {
+          "label": "A10 canary FAIL — ['see_report']",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
+          "mtime": "2026-04-19T20:27:02Z",
+          "verdict": "FAIL",
+          "score": null,
+          "event_type": "CANARY_FAIL"
+        },
+        {
+          "label": "A10 Mike gate: Approve A10 merge algorithm + dedup strategy",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "A10 canary PASS",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
+          "mtime": "2026-04-20T13:08:31Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "CANARY_PASS"
+        },
+        {
+          "label": "A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:55:19Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "review_posted": "/home/oinkv/guardian-workspace/reviews/A10-GUARDIAN-PHASE1-REVIEW.md",
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-A10-plan-v2-DELTA.md",
+        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
+        "canary_fail": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
+        "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md"
+      },
+      "_from_stream": true,
+      "event_count": 13,
+      "blocker": null,
+      "phase": "A",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "hermes",
+        "vigil"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "B13",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "MERGED",
+      "status_label": "MERGED",
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 3,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/3",
+          "merge_commit": null,
+          "commit_url": null
+        },
+        {
+          "repo": "signal-gateway",
+          "number": 5,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/5",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": "2026-04-14T09:28:11Z",
+      "last_activity": "2026-04-20T20:54:52Z",
+      "timeline": [
+        {
+          "label": "B13 PR #3 opened — feat: B13 pre-emit lifecycle noise filter",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-13T22:04:12Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B13 PR #5 opened — feat: B13 pre-emit lifecycle noise filter (Issue #47)",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-14T09:08:45Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B13 merged via PR #5 @d8a612c",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-14T09:28:11Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B13 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
+          "mtime": "2026-04-20T09:53:22Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B13 Mike gate: Docker Compose: single host or multi-host?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:21:53Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md"
+      },
+      "_from_stream": true,
+      "event_count": 7,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "B9",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
       "prs": [],
       "scores": {
         "vigil": null,
@@ -2304,7 +3064,233 @@
         "mtime": null
       },
       "merged_at": null,
-      "last_activity": "2026-04-20T17:58:46Z",
+      "last_activity": "2026-04-20T20:54:52Z",
+      "timeline": [
+        {
+          "label": "B9 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B9-plan.md",
+          "mtime": "2026-04-19T17:30:16Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B9 Mike gate: W1 enforcement level: DB REVOKE UPDATE, or app-level guard?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:21:53Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B9-plan.md"
+      },
+      "_from_stream": true,
+      "event_count": 4,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "B12",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-20T20:54:52Z",
+      "timeline": [
+        {
+          "label": "B12 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B12-plan.md",
+          "mtime": "2026-04-19T17:31:41Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B12 Mike gate: Redis hosting: same server or separate?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B12 Mike gate: Redis Streams retention policy: MAXLEN or time-based?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at ",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B12-plan.md"
+      },
+      "_from_stream": true,
+      "event_count": 5,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "C2",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-20T20:54:52Z",
+      "timeline": [
+        {
+          "label": "C2 Mike gate: Confidence routing: hard reject or soft flag?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:21:53Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 3,
+      "blocker": null,
+      "phase": "C",
+      "agents_touched": [
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
+      "id": "A171",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-20T20:54:52Z",
       "timeline": [
         {
           "label": "A171 BLOCKED — design_clarification_needed",
@@ -2314,17 +3300,27 @@
           "verdict": null,
           "score": null,
           "event_type": "BLOCKED"
+        },
+        {
+          "label": "A171 blocker cleared",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKER_RESOLVED"
         }
       ],
       "artifacts": {},
       "_from_stream": true,
-      "event_count": 1,
-      "blocker": "design_clarification_needed",
+      "event_count": 2,
+      "blocker": null,
       "phase": "A",
       "agents_touched": [
+        "hermes",
         "oinkv"
       ],
-      "last_event_type": "BLOCKED"
+      "last_event_type": "BLOCKER_RESOLVED"
     },
     {
       "id": "B3",
@@ -3090,821 +4086,6 @@
       "last_event_type": "CANARY_PASS"
     },
     {
-      "id": "A10",
-      "tier": "CRITICAL",
-      "tier_emoji": "🔴",
-      "repo_hint": "oinkfarm",
-      "status": "DONE",
-      "status_label": "Done",
-      "prs": [
-        {
-          "repo": "oinkfarm",
-          "number": 135,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/135",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "scores": {
-        "vigil": 9.7,
-        "guardian": 9.8,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": "PASS",
-        "guardian": "PASS",
-        "hermes": null
-      },
-      "canary": {
-        "verdict": "PASS",
-        "path": null,
-        "mtime": "2026-04-20T13:08:31Z"
-      },
-      "merged_at": "2026-04-19T16:05:42Z",
-      "last_activity": "2026-04-20T13:08:31Z",
-      "timeline": [
-        {
-          "label": "A10 merged via PR #None @81ba446",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-19T16:05:42Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "A10 PR #135 opened — feat(A10): database merge script — old DB into new DB",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-19T16:05:51Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "A10 review by vigil — REVISE (7.9)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/A10-VIGIL-PHASE1-R1-REVIEW.md",
-          "mtime": "2026-04-19T16:09:08Z",
-          "verdict": "REVISE",
-          "score": 7.9,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "A10 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-A10-plan.md",
-          "mtime": "2026-04-19T16:11:51Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "A10 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-A10-plan-v2-DELTA.md",
-          "mtime": "2026-04-19T16:12:30Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "A10 review by vigil — PASS (9.7)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/A10-VIGIL-PHASE1-R2-REVIEW.md",
-          "mtime": "2026-04-19T16:27:09Z",
-          "verdict": "PASS",
-          "score": 9.7,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "A10 review by guardian — PASS (9.8)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/A10-GUARDIAN-PHASE1-REVIEW.md",
-          "mtime": "2026-04-19T16:29:25Z",
-          "verdict": "PASS",
-          "score": 9.8,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "A10 merged via PR #135 @80f4fe0",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-19T18:30:16Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "A10 canary started",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
-          "mtime": "2026-04-19T20:27:02Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "CANARY_STARTED"
-        },
-        {
-          "label": "A10 canary FAIL — ['see_report']",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
-          "mtime": "2026-04-19T20:27:02Z",
-          "verdict": "FAIL",
-          "score": null,
-          "event_type": "CANARY_FAIL"
-        },
-        {
-          "label": "A10 Mike gate: Approve A10 merge algorithm + dedup strategy",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "A10 canary PASS",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
-          "mtime": "2026-04-20T13:08:31Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "CANARY_PASS"
-        }
-      ],
-      "artifacts": {
-        "review_posted": "/home/oinkv/guardian-workspace/reviews/A10-GUARDIAN-PHASE1-REVIEW.md",
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-A10-plan-v2-DELTA.md",
-        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
-        "canary_fail": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md",
-        "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/A10-CANARY.md"
-      },
-      "_from_stream": true,
-      "event_count": 12,
-      "blocker": null,
-      "phase": "A",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "vigil"
-      ],
-      "last_event_type": "CANARY_PASS"
-    },
-    {
-      "id": "B4",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "MERGED",
-      "status_label": "MERGED",
-      "prs": [
-        {
-          "repo": "oinkdb-api",
-          "number": 4,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/4",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": "2026-04-18T17:33:10Z",
-      "last_activity": "2026-04-20T11:35:21Z",
-      "timeline": [
-        {
-          "label": "B4 PR #4 opened — feat(#16): PR-B4 — WG handlers (4 endpoints) — CLOSES Phase 2",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-18T17:33:08Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B4 merged via PR #4 @52303fc",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-18T17:33:10Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B4 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md",
-          "mtime": "2026-04-20T03:16:02Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B4 Mike gate: Cutover requires Mike's explicit go-ahead",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B4 Mike gate: signal-gateway.service systemd re-enable or keep manual?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B4 plan published",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:35:21Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md"
-      },
-      "_from_stream": true,
-      "event_count": 9,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "hermes"
-      ],
-      "last_event_type": "TASK_PLANNED"
-    },
-    {
-      "id": "B13",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "MERGED",
-      "status_label": "MERGED",
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 3,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/3",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "signal-gateway",
-          "number": 5,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/5",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": "2026-04-14T09:28:11Z",
-      "last_activity": "2026-04-20T11:21:53Z",
-      "timeline": [
-        {
-          "label": "B13 PR #3 opened — feat: B13 pre-emit lifecycle noise filter",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-13T22:04:12Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B13 PR #5 opened — feat: B13 pre-emit lifecycle noise filter (Issue #47)",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-14T09:08:45Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B13 merged via PR #5 @d8a612c",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-14T09:28:11Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B13 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
-          "mtime": "2026-04-20T09:53:22Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B13 Mike gate: Docker Compose: single host or multi-host?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:21:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md"
-      },
-      "_from_stream": true,
-      "event_count": 6,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge"
-      ],
-      "last_event_type": "DECISION_NEEDED"
-    },
-    {
-      "id": "B2",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "CANARY",
-      "status_label": "Canary",
-      "prs": [
-        {
-          "repo": "oinkdb-api",
-          "number": 2,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/2",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "oinkfarm",
-          "number": 153,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/153",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "oink-sync",
-          "number": 11,
-          "pr_url": "https://github.com/QuantisDevelopment/oink-sync/pull/11",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "signal-gateway",
-          "number": 24,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/24",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "scores": {
-        "vigil": 9.5,
-        "guardian": 9.6,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": "PASS",
-        "guardian": "PASS",
-        "hermes": null
-      },
-      "canary": {
-        "verdict": "PENDING",
-        "path": null,
-        "mtime": "2026-04-20T02:30:26Z"
-      },
-      "merged_at": "2026-04-18T16:56:57Z",
-      "last_activity": "2026-04-20T11:21:53Z",
-      "timeline": [
-        {
-          "label": "B2 PR #2 opened — feat(#16): PR-B2 — implement 12 by-route handlers",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-18T16:40:40Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 merged via PR #2 @f1f5544",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-18T16:56:57Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
-          "mtime": "2026-04-19T23:43:45Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B2 review by guardian — REVISE (5.0)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T00:32:41Z",
-          "verdict": "REVISE",
-          "score": 5.0,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 review by vigil — PASS (9.5)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/B2-VIGIL-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T00:34:38Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 proposal ready",
-          "actor": "anvil",
-          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
-          "mtime": "2026-04-20T00:41:56Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_READY"
-        },
-        {
-          "label": "B2 review by guardian — PASS (9.5)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW-R2.md",
-          "mtime": "2026-04-20T00:45:52Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 proposal approved by vigil+guardian",
-          "actor": "system",
-          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
-          "mtime": "2026-04-20T00:54:22Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_APPROVED"
-        },
-        {
-          "label": "B2 merged via PR #None @9bf9c5f",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:07:01Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 merged via PR #None @92cdfef",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:07:12Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 review by guardian — PASS (9.6)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
-          "mtime": "2026-04-20T01:16:45Z",
-          "verdict": "PASS",
-          "score": 9.6,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 PR #153 opened — feat(B2): PostgreSQL schema translation + one-time data migration",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:11Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 PR #11 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:23Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 PR #24 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:25Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 merged via PR #153 @14563d2",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 merged via PR #11 @80288bb",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:55Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 merged via PR #24 @df8112d",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:58Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 canary started",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md",
-          "mtime": "2026-04-20T02:30:26Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "CANARY_STARTED"
-        },
-        {
-          "label": "B2 Mike gate: PostgreSQL hosting: same server or separate?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 Mike gate: TimescaleDB now or later (B14)?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:21:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
-        "review_posted": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
-        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
-        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
-        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md"
-      },
-      "_from_stream": true,
-      "event_count": 24,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "hermes",
-        "system",
-        "vigil"
-      ],
-      "last_event_type": "DECISION_NEEDED"
-    },
-    {
-      "id": "B9",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "NOT_STARTED",
-      "status_label": "Not Started",
-      "prs": [],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": null,
-      "last_activity": "2026-04-20T11:21:53Z",
-      "timeline": [
-        {
-          "label": "B9 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B9-plan.md",
-          "mtime": "2026-04-19T17:30:16Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B9 Mike gate: W1 enforcement level: DB REVOKE UPDATE, or app-level guard?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:21:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B9-plan.md"
-      },
-      "_from_stream": true,
-      "event_count": 3,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "forge"
-      ],
-      "last_event_type": "DECISION_NEEDED"
-    },
-    {
-      "id": "C2",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "NOT_STARTED",
-      "status_label": "Not Started",
-      "prs": [],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": null,
-      "last_activity": "2026-04-20T11:21:53Z",
-      "timeline": [
-        {
-          "label": "C2 Mike gate: Confidence routing: hard reject or soft flag?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:21:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        }
-      ],
-      "artifacts": {},
-      "_from_stream": true,
-      "event_count": 2,
-      "blocker": null,
-      "phase": "C",
-      "agents_touched": [
-        "forge"
-      ],
-      "last_event_type": "DECISION_NEEDED"
-    },
-    {
       "id": "B1",
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
@@ -4219,82 +4400,6 @@
         "hermes",
         "system",
         "vigil"
-      ],
-      "last_event_type": "DECISION_RESOLVED"
-    },
-    {
-      "id": "B12",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "NOT_STARTED",
-      "status_label": "Not Started",
-      "prs": [],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": null,
-      "last_activity": "2026-04-20T11:15:09Z",
-      "timeline": [
-        {
-          "label": "B12 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B12-plan.md",
-          "mtime": "2026-04-19T17:31:41Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B12 Mike gate: Redis hosting: same server or separate?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B12 Mike gate: Redis Streams retention policy: MAXLEN or time-based?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B12-plan.md"
-      },
-      "_from_stream": true,
-      "event_count": 4,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "forge",
-        "hermes"
       ],
       "last_event_type": "DECISION_RESOLVED"
     },
@@ -6307,20 +6412,20 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-20T20:20:23Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": null,
-      "current_task": null,
-      "age_hours": 0.027424780277777776,
+      "last_event_ts": "2026-04-20T20:55:19Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_task_id": "B4",
+      "current_task": "B4",
+      "age_hours": 0.0031685244444444446,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 16,
+      "event_count": 26,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-20T20:20:23Z",
-      "last_active_human": "1m ago",
+      "last_active": "2026-04-20T20:55:19Z",
+      "last_active_human": "11s ago",
       "heartbeat": {
-        "current_task": null,
+        "current_task": "B4",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -6333,14 +6438,14 @@
       "last_event_type": "BLOCKED",
       "last_task_id": "A171",
       "current_task": "A171",
-      "age_hours": 2.3877025580555555,
+      "age_hours": 2.9456685244444443,
       "staleness_label": "yellow",
       "light": "yellow",
       "event_count": 1,
       "emoji": "🐷",
       "role": "Plan Auditor",
       "last_active": "2026-04-20T17:58:46Z",
-      "last_active_human": "2h 23m ago",
+      "last_active_human": "2h 56m ago",
       "heartbeat": {
         "current_task": "A171",
         "current_phase": null,
@@ -6355,14 +6460,14 @@
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 4.324369224722222,
+      "age_hours": 4.882335191111111,
       "staleness_label": "red",
       "light": "red",
       "event_count": 66,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "last_active": "2026-04-20T16:02:34Z",
-      "last_active_human": "4h 19m ago",
+      "last_active_human": "4h 52m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6377,14 +6482,14 @@
       "last_event_type": "TASK_PLANNED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 4.469369224722222,
+      "age_hours": 5.027335191111111,
       "staleness_label": "red",
       "light": "red",
       "event_count": 52,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-20T15:53:52Z",
-      "last_active_human": "4h 28m ago",
+      "last_active_human": "5h 1m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6399,14 +6504,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 8.8296470025,
+      "age_hours": 9.38761296888889,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "8h 49m ago",
+      "last_active_human": "9h 23m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6421,14 +6526,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 9.556313669166666,
+      "age_hours": 10.114279635555556,
       "staleness_label": "red",
       "light": "red",
       "event_count": 112,
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "last_active": "2026-04-20T10:48:39Z",
-      "last_active_human": "9h 33m ago",
+      "last_active_human": "10h 6m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6443,14 +6548,14 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 12.684924780277777,
+      "age_hours": 13.242890746666667,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T07:40:56Z",
-      "last_active_human": "12h 41m ago",
+      "last_active_human": "13h 14m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -6465,14 +6570,14 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 12.764091446944443,
+      "age_hours": 13.322057413333335,
       "staleness_label": "red",
       "light": "red",
       "event_count": 31,
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "last_active": "2026-04-20T07:36:11Z",
-      "last_active_human": "12h 45m ago",
+      "last_active_human": "13h 19m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -6573,98 +6678,7 @@
   ],
   "plans": [],
   "audits": [],
-  "blockers": [
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Approve A10 merge algorithm + dedup strategy",
-      "label": "A10-APPROVE: Approve A10 merge algorithm + dedup strategy",
-      "severity": "mike",
-      "current_task": "A10",
-      "current_phase": "A"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Cutover requires Mike's explicit go-ahead",
-      "label": "B4-APPROVE: Cutover requires Mike's explicit go-ahead",
-      "severity": "mike",
-      "current_task": "B4",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "84 closed signals with NULL filled_at — backfill/accept/block?",
-      "label": "Q-B2-4: 84 closed signals with NULL filled_at — backfill/accept/block?",
-      "severity": "mike",
-      "current_task": "B2",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "trg_entry_price_update REJECTED_AUDIT exception handling",
-      "label": "Q-B2-5: trg_entry_price_update REJECTED_AUDIT exception handling",
-      "severity": "mike",
-      "current_task": "B2",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Redis Streams retention policy: MAXLEN or time-based?",
-      "label": "Q-HH-2: Redis Streams retention policy: MAXLEN or time-based?",
-      "severity": "mike",
-      "current_task": "B12",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Defer TimescaleDB introduction from B2 to B14?",
-      "label": "Q-B2-3: Defer TimescaleDB introduction from B2 to B14?",
-      "severity": "mike",
-      "current_task": "B2",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-      "label": "Q-HH-3: Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-      "severity": "mike",
-      "current_task": "B13",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Enforce W1 immutability via phased app-level then DB REVOKE?",
-      "label": "Q-HH-4: Enforce W1 immutability via phased app-level then DB REVOKE?",
-      "severity": "mike",
-      "current_task": "B9",
-      "current_phase": "B"
-    },
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Route low-confidence signals to PROVISIONAL state or hard-reject?",
-      "label": "Q-HH-5: Route low-confidence signals to PROVISIONAL state or hard-reject?",
-      "severity": "mike",
-      "current_task": "C2",
-      "current_phase": "C"
-    },
-    {
-      "agent": "—",
-      "agent_emoji": "🛑",
-      "raw": "design_clarification_needed",
-      "label": "A171 blocked: design_clarification_needed",
-      "severity": "auto",
-      "current_task": "A171",
-      "current_phase": "A"
-    }
-  ],
+  "blockers": [],
   "last_cron": {
     "time_utc": "2026-04-20T20:20:23Z",
     "time_local": "2026-04-20T22:20+02:00",
@@ -6676,7 +6690,7 @@
     "blocker": null,
     "path": "evt_20260420T202023Z_000001"
   },
-  "commit": "6730dccba366",
+  "commit": "41b7c7cb4e40",
   "_from_stream": true,
   "_tasks_map": {
     "B3": {
@@ -7922,10 +7936,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-20T11:21:53Z",
-      "last_event_type": "DECISION_NEEDED",
-      "last_agent": "forge",
-      "event_count": 6,
+      "last_event_ts": "2026-04-20T20:54:52Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 7,
       "prs": [
         {
           "repo": "signal-gateway",
@@ -7946,7 +7960,8 @@
       "blocker": null,
       "agents_touched": [
         "anvil",
-        "forge"
+        "forge",
+        "hermes"
       ],
       "events": [
         {
@@ -8073,6 +8088,32 @@
               "single-host only",
               "include multi-host preparation"
             ]
+          }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000004",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B13",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-HH-3",
+            "answer": "Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb",
+              "forge",
+              "oinkv"
+            ],
+            "source": "automated_closure_from_gh_comments"
           }
         }
       ]
@@ -9569,10 +9610,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-20T11:21:53Z",
-      "last_event_type": "DECISION_NEEDED",
-      "last_agent": "forge",
-      "event_count": 24,
+      "last_event_ts": "2026-04-20T20:55:19Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 27,
       "prs": [
         {
           "repo": "oinkdb-api",
@@ -10130,6 +10171,78 @@
               "introduce in B2"
             ]
           }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000001",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B2",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-B2-5",
+            "answer": "CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb"
+            ],
+            "source": "automated_closure_from_gh_comments"
+          }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000002",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B2",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-B2-3",
+            "answer": "Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "forge"
+            ],
+            "source": "automated_closure_from_gh_comments"
+          }
+        },
+        {
+          "event_id": "evt_20260420T205519Z_000001",
+          "ts": "2026-04-20T20:55:19Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B2",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-B2-4",
+            "answer": "Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses filled_at on closed signals without IS NOT NULL filter.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb"
+            ],
+            "source": "automated_closure_from_gh_comments"
+          }
         }
       ]
     },
@@ -10139,10 +10252,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-20T11:35:21Z",
-      "last_event_type": "TASK_PLANNED",
-      "last_agent": "forge",
-      "event_count": 9,
+      "last_event_ts": "2026-04-20T20:55:19Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 10,
       "prs": [
         {
           "repo": "oinkdb-api",
@@ -10348,6 +10461,27 @@
           "extra": {
             "plan_path": "forge-workspace/plans/TASK-B4-plan.md",
             "revision": "B3 verification timeline added per Q-B3-2 resolution"
+          }
+        },
+        {
+          "event_id": "evt_20260420T205519Z_000003",
+          "ts": "2026-04-20T20:55:19Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B4",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "B4-APPROVE",
+            "answer": "RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 dual-write is active, (b) 7 consecutive clean reconciliation reports complete, (c) all P1-P8 prerequisites green. OinkDB daily reconciliation cron (job_id b6232091-c6fa-4d4d-87c4-1fb1c638d769) will emit the new DECISION_NEEDED at that point.",
+            "authority": "hermes_ops",
+            "source": "gate_reclassification"
           }
         }
       ]
@@ -12559,10 +12693,10 @@
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
       "phase": "A",
-      "last_event_ts": "2026-04-20T13:08:31Z",
-      "last_event_type": "CANARY_PASS",
-      "last_agent": "guardian",
-      "event_count": 12,
+      "last_event_ts": "2026-04-20T20:55:19Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 13,
       "prs": [
         {
           "repo": "oinkfarm",
@@ -12578,6 +12712,7 @@
         "anvil",
         "forge",
         "guardian",
+        "hermes",
         "vigil"
       ],
       "events": [
@@ -12839,6 +12974,27 @@
             "note": "resolved_after_data_fix",
             "diagnosis": "initial imported filled_at gaps remediated; KPI-R5 now 0 and post-merge organic inserts clean"
           }
+        },
+        {
+          "event_id": "evt_20260420T205519Z_000002",
+          "ts": "2026-04-20T20:55:19Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "A10",
+          "phase": "A",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "A10-APPROVE",
+            "answer": "A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 per event evt_20260420T130831Z_000004. This gate was backfilled from FORGE HEARTBEAT; resolving retroactively.",
+            "authority": "hermes_retro",
+            "source": "resolved_after_merge"
+          }
         }
       ]
     },
@@ -12848,15 +13004,16 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-20T11:21:53Z",
-      "last_event_type": "DECISION_NEEDED",
-      "last_agent": "forge",
-      "event_count": 3,
+      "last_event_ts": "2026-04-20T20:54:52Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 4,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
       "agents_touched": [
-        "forge"
+        "forge",
+        "hermes"
       ],
       "events": [
         {
@@ -12924,6 +13081,32 @@
               "immediate DB-level REVOKE"
             ]
           }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000005",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B9",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-HH-4",
+            "answer": "signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFORCE toggle in oink_db.py.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb",
+              "forge",
+              "oinkv"
+            ],
+            "source": "automated_closure_from_gh_comments"
+          }
         }
       ]
     },
@@ -12933,10 +13116,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-20T11:15:09Z",
+      "last_event_ts": "2026-04-20T20:54:52Z",
       "last_event_type": "DECISION_RESOLVED",
       "last_agent": "hermes",
-      "event_count": 4,
+      "event_count": 5,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
@@ -13030,6 +13213,30 @@
             "question_id": "Q-HH-1",
             "answer": "Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-topology Docker Compose model ('8 services + PostgreSQL + Redis'). 256MB RAM allocation for Redis is trivial on barn. Redis MAXLEN retention (Q-HH-2) caps memory footprint. Trigger for re-evaluation: if Redis CPU >30% sustained or stream lag shows contention with PG writes. Risk: low — Redis is even easier to relocate than PG (stateless streams with AOF persistence; redis-cli --rdb dump).",
             "authority": "hermes_ops"
+          }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000003",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B12",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-HH-2",
+            "answer": "Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at runtime.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb"
+            ],
+            "source": "automated_closure_from_gh_comments"
           }
         }
       ]
@@ -13395,15 +13602,16 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "C",
-      "last_event_ts": "2026-04-20T11:21:53Z",
-      "last_event_type": "DECISION_NEEDED",
-      "last_agent": "forge",
-      "event_count": 2,
+      "last_event_ts": "2026-04-20T20:54:52Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 3,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
       "agents_touched": [
-        "forge"
+        "forge",
+        "hermes"
       ],
       "events": [
         {
@@ -13452,23 +13660,50 @@
               "hard reject"
             ]
           }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000006",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "C2",
+          "phase": "C",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-HH-5",
+            "answer": "Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb",
+              "forge",
+              "oinkv"
+            ],
+            "source": "automated_closure_from_gh_comments"
+          }
         }
       ]
     },
     "A171": {
       "id": "A171",
-      "status": "BLOCKED",
+      "status": "NOT_STARTED",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "A",
-      "last_event_ts": "2026-04-20T17:58:46Z",
-      "last_event_type": "BLOCKED",
-      "last_agent": "oinkv",
-      "event_count": 1,
+      "last_event_ts": "2026-04-20T20:54:52Z",
+      "last_event_type": "BLOCKER_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 2,
       "prs": [],
       "canary_verdict": null,
-      "blocker": "design_clarification_needed",
+      "blocker": null,
       "agents_touched": [
+        "hermes",
         "oinkv"
       ],
       "events": [
@@ -13489,6 +13724,24 @@
           "extra": {
             "reason": "design_clarification_needed",
             "details": "Step 1 blocked: OpenClaw rejects per-agent extractor contextPruning in ~/.openclaw/openclaw.json with error agents.list.2: Unrecognized key: \"contextPruning\". Reverted the config to restore a valid gateway config. openclaw health is clean after revert."
+          }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000007",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "BLOCKER_RESOLVED",
+          "task_id": "A171",
+          "phase": null,
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": "design_clarification_needed",
+          "extra": {
+            "reason": "design_clarification_needed"
           }
         }
       ]
@@ -19766,148 +20019,355 @@
       "extra": {
         "text": "Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the per-agent `contextPruning` key FORGE's execution sequence called for, and neither FORGE nor Hermes-ops has picked it up yet. Gateway health is green, so this is a design question rather than an outage. Only movement since the 18:12 UTC update has been the OinXtractor quality dashboard re-publishing its live metrics on schedule (latency and unknown-rate green, per-trader accuracy still `proxy_only`, corrections-loop `pending` until 171 ships).\n\nPhase B stays in the review-and-verify lull — zero merges, PRs, or canary verdicts in the last four-plus hours. Agent freshness: ANVIL silent ~9.5h, VIGIL ~12.7h (Wave 2 closing verdicts were the last thing either posted), GUARDIAN ~4.3h (the 171 KPI baseline), FORGE ~4.4h (the 171 plan revision). The open warnings on the dashboard are housekeeping only — stale PR-review timeouts on A1/A2/B1/B13/B14 that trace back to the event-log backfill, not live open PRs. B3's 7-day reconciliation clock toward the 26 Apr B4 cutover is still ticking clean. Nothing needs you tonight; the 171 design question is the one item worth picking up tomorrow, and FORGE or Hermes-ops should be able to clear it without parking it on you."
       }
-    }
-  ],
-  "open_decisions": [
-    {
-      "question_id": "A10-APPROVE",
-      "question": "Approve A10 merge algorithm + dedup strategy",
-      "options": [
-        "APPROVE",
-        "REVISE"
-      ],
-      "task_id": "A10",
-      "phase": "A",
-      "ts": "2026-04-20T09:55:50Z",
-      "age_hours": 10.436591446944444,
-      "age_human": "10.4h",
-      "agent": "forge",
-      "gate_type": "generic"
     },
     {
-      "question_id": "B4-APPROVE",
-      "question": "Cutover requires Mike's explicit go-ahead",
-      "options": [
-        "APPROVE",
-        "DEFER"
-      ],
-      "task_id": "B4",
-      "phase": "B",
-      "ts": "2026-04-20T09:55:50Z",
-      "age_hours": 10.436591446944444,
-      "age_human": "10.4h",
-      "agent": "forge",
-      "gate_type": "generic"
-    },
-    {
-      "question_id": "Q-B2-4",
-      "question": "84 closed signals with NULL filled_at — backfill/accept/block?",
-      "options": [
-        "backfill",
-        "accept",
-        "block"
-      ],
+      "event_id": "evt_20260420T205452Z_000001",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "B2",
       "phase": "B",
-      "ts": "2026-04-20T09:55:50Z",
-      "age_hours": 10.436591446944444,
-      "age_human": "10.4h",
-      "agent": "forge",
-      "gate_type": "phase-b"
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-B2-5",
+        "answer": "CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "oinkdb"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
     },
     {
-      "question_id": "Q-B2-5",
-      "question": "trg_entry_price_update REJECTED_AUDIT exception handling",
-      "options": [
-        "pg_trigger",
-        "check_only"
-      ],
+      "event_id": "evt_20260420T205452Z_000002",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "B2",
       "phase": "B",
-      "ts": "2026-04-20T09:55:50Z",
-      "age_hours": 10.436591446944444,
-      "age_human": "10.4h",
-      "agent": "forge",
-      "gate_type": "phase-b"
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-B2-3",
+        "answer": "Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "forge"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
     },
     {
-      "question_id": "Q-HH-2",
-      "question": "Redis Streams retention policy: MAXLEN or time-based?",
-      "options": [
-        "maxlen",
-        "time_based"
-      ],
+      "event_id": "evt_20260420T205452Z_000003",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "B12",
       "phase": "B",
-      "ts": "2026-04-20T09:55:50Z",
-      "age_hours": 10.436591446944444,
-      "age_human": "10.4h",
-      "agent": "forge",
-      "gate_type": "heavy-hybrid"
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-HH-2",
+        "answer": "Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at runtime.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "oinkdb"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
     },
     {
-      "question_id": "Q-B2-3",
-      "question": "Defer TimescaleDB introduction from B2 to B14?",
-      "options": [
-        "defer to B14",
-        "introduce in B2"
-      ],
-      "task_id": "B2",
-      "phase": "B",
-      "ts": "2026-04-20T11:21:53Z",
-      "age_hours": 9.002424780277778,
-      "age_human": "9.0h",
-      "agent": "forge",
-      "gate_type": "phase-b"
-    },
-    {
-      "question_id": "Q-HH-3",
-      "question": "Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-      "options": [
-        "single-host only",
-        "include multi-host preparation"
-      ],
+      "event_id": "evt_20260420T205452Z_000004",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "B13",
       "phase": "B",
-      "ts": "2026-04-20T11:21:53Z",
-      "age_hours": 9.002424780277778,
-      "age_human": "9.0h",
-      "agent": "forge",
-      "gate_type": "heavy-hybrid"
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-HH-3",
+        "answer": "Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "oinkdb",
+          "forge",
+          "oinkv"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
     },
     {
-      "question_id": "Q-HH-4",
-      "question": "Enforce W1 immutability via phased app-level then DB REVOKE?",
-      "options": [
-        "phased app-level then DB REVOKE",
-        "immediate DB-level REVOKE"
-      ],
+      "event_id": "evt_20260420T205452Z_000005",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "B9",
       "phase": "B",
-      "ts": "2026-04-20T11:21:53Z",
-      "age_hours": 9.002424780277778,
-      "age_human": "9.0h",
-      "agent": "forge",
-      "gate_type": "heavy-hybrid"
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-HH-4",
+        "answer": "signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFORCE toggle in oink_db.py.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "oinkdb",
+          "forge",
+          "oinkv"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
     },
     {
-      "question_id": "Q-HH-5",
-      "question": "Route low-confidence signals to PROVISIONAL state or hard-reject?",
-      "options": [
-        "PROVISIONAL soft-flag",
-        "hard reject"
-      ],
+      "event_id": "evt_20260420T205452Z_000006",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "C2",
       "phase": "C",
-      "ts": "2026-04-20T11:21:53Z",
-      "age_hours": 9.002424780277778,
-      "age_human": "9.0h",
-      "agent": "forge",
-      "gate_type": "heavy-hybrid"
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-HH-5",
+        "answer": "Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "oinkdb",
+          "forge",
+          "oinkv"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
+    },
+    {
+      "event_id": "evt_20260420T205452Z_000007",
+      "ts": "2026-04-20T20:54:52Z",
+      "event_type": "BLOCKER_RESOLVED",
+      "task_id": "A171",
+      "phase": null,
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": "design_clarification_needed",
+      "extra": {
+        "reason": "design_clarification_needed"
+      }
+    },
+    {
+      "event_id": "evt_20260420T205519Z_000001",
+      "ts": "2026-04-20T20:55:19Z",
+      "event_type": "DECISION_RESOLVED",
+      "task_id": "B2",
+      "phase": "B",
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-B2-4",
+        "answer": "Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses filled_at on closed signals without IS NOT NULL filter.",
+        "authority": "agent_council_consensus",
+        "approvers": [
+          "oinkdb"
+        ],
+        "source": "automated_closure_from_gh_comments"
+      }
+    },
+    {
+      "event_id": "evt_20260420T205519Z_000002",
+      "ts": "2026-04-20T20:55:19Z",
+      "event_type": "DECISION_RESOLVED",
+      "task_id": "A10",
+      "phase": "A",
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "A10-APPROVE",
+        "answer": "A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 per event evt_20260420T130831Z_000004. This gate was backfilled from FORGE HEARTBEAT; resolving retroactively.",
+        "authority": "hermes_retro",
+        "source": "resolved_after_merge"
+      }
+    },
+    {
+      "event_id": "evt_20260420T205519Z_000003",
+      "ts": "2026-04-20T20:55:19Z",
+      "event_type": "DECISION_RESOLVED",
+      "task_id": "B4",
+      "phase": "B",
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "B4-APPROVE",
+        "answer": "RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 dual-write is active, (b) 7 consecutive clean reconciliation reports complete, (c) all P1-P8 prerequisites green. OinkDB daily reconciliation cron (job_id b6232091-c6fa-4d4d-87c4-1fb1c638d769) will emit the new DECISION_NEEDED at that point.",
+        "authority": "hermes_ops",
+        "source": "gate_reclassification"
+      }
     }
   ],
+  "open_decisions": [],
   "live_buckets": {
     "1h": [
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses ",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "A10",
+        "agent": "hermes",
+        "summary": "A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B4",
+        "agent": "hermes",
+        "summary": "B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B12",
+        "agent": "hermes",
+        "summary": "B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at ",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B13",
+        "agent": "hermes",
+        "summary": "B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B9",
+        "agent": "hermes",
+        "summary": "B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "C2",
+        "agent": "hermes",
+        "summary": "C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.",
+        "phase": "C",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "BLOCKER_RESOLVED",
+        "task_id": "A171",
+        "agent": "hermes",
+        "summary": "A171 blocker cleared",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
       {
         "ts": "2026-04-20T20:20:23Z",
         "event_type": "SPRINT_NOTE",
@@ -19917,22 +20377,121 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.027424780277777776
-      },
-      {
-        "ts": "2026-04-20T19:43:38Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.6399247802777778
+        "age_hours": 0.5853907466666667
       }
     ],
     "4h": [
       {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses ",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "A10",
+        "agent": "hermes",
+        "summary": "A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B4",
+        "agent": "hermes",
+        "summary": "B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B12",
+        "agent": "hermes",
+        "summary": "B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at ",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B13",
+        "agent": "hermes",
+        "summary": "B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B9",
+        "agent": "hermes",
+        "summary": "B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "C2",
+        "agent": "hermes",
+        "summary": "C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.",
+        "phase": "C",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "BLOCKER_RESOLVED",
+        "task_id": "A171",
+        "agent": "hermes",
+        "summary": "A171 blocker cleared",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
         "ts": "2026-04-20T20:20:23Z",
         "event_type": "SPRINT_NOTE",
         "task_id": null,
@@ -19941,7 +20500,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.027424780277777776
+        "age_hours": 0.5853907466666667
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -19952,7 +20511,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6399247802777778
+        "age_hours": 1.1978907466666666
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -19963,7 +20522,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.7368692247222222
+        "age_hours": 2.294835191111111
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -19974,7 +20533,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.161035891388889
+        "age_hours": 2.7190018577777777
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -19985,7 +20544,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.3877025580555555
+        "age_hours": 2.9456685244444443
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -19996,11 +20555,121 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.541035891388889
+        "age_hours": 3.0990018577777776
       }
     ],
     "24h": [
       {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses ",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "A10",
+        "agent": "hermes",
+        "summary": "A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:55:19Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B4",
+        "agent": "hermes",
+        "summary": "B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.0031685244444444446
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B12",
+        "agent": "hermes",
+        "summary": "B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at ",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B13",
+        "agent": "hermes",
+        "summary": "B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B9",
+        "agent": "hermes",
+        "summary": "B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "C2",
+        "agent": "hermes",
+        "summary": "C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.",
+        "phase": "C",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
+        "ts": "2026-04-20T20:54:52Z",
+        "event_type": "BLOCKER_RESOLVED",
+        "task_id": "A171",
+        "agent": "hermes",
+        "summary": "A171 blocker cleared",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.010668524444444445
+      },
+      {
         "ts": "2026-04-20T20:20:23Z",
         "event_type": "SPRINT_NOTE",
         "task_id": null,
@@ -20009,7 +20678,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.027424780277777776
+        "age_hours": 0.5853907466666667
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -20020,7 +20689,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6399247802777778
+        "age_hours": 1.1978907466666666
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -20031,7 +20700,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.7368692247222222
+        "age_hours": 2.294835191111111
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -20042,7 +20711,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.161035891388889
+        "age_hours": 2.7190018577777777
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -20053,7 +20722,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.3877025580555555
+        "age_hours": 2.9456685244444443
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -20064,7 +20733,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.541035891388889
+        "age_hours": 3.0990018577777776
       },
       {
         "ts": "2026-04-20T16:06:27Z",
@@ -20075,7 +20744,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.2596470024999995
+        "age_hours": 4.817612968888889
       },
       {
         "ts": "2026-04-20T16:02:34Z",
@@ -20086,7 +20755,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 4.324369224722222
+        "age_hours": 4.882335191111111
       },
       {
         "ts": "2026-04-20T15:53:52Z",
@@ -20097,7 +20766,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.469369224722222
+        "age_hours": 5.027335191111111
       },
       {
         "ts": "2026-04-20T15:52:02Z",
@@ -20108,7 +20777,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.4999247802777775
+        "age_hours": 5.057890746666667
       },
       {
         "ts": "2026-04-20T13:47:28Z",
@@ -20119,7 +20788,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.576035891388889
+        "age_hours": 7.134001857777777
       },
       {
         "ts": "2026-04-20T13:15:36Z",
@@ -20130,7 +20799,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 7.1071470025000005
+        "age_hours": 7.665112968888889
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20141,7 +20810,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.225202558055556
+        "age_hours": 7.783168524444444
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20152,7 +20821,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.225202558055556
+        "age_hours": 7.783168524444444
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20163,7 +20832,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.225202558055556
+        "age_hours": 7.783168524444444
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20174,7 +20843,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.225202558055556
+        "age_hours": 7.783168524444444
       },
       {
         "ts": "2026-04-20T11:57:11Z",
@@ -20185,7 +20854,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.414091446944445
+        "age_hours": 8.972057413333333
       },
       {
         "ts": "2026-04-20T11:35:27Z",
@@ -20196,7 +20865,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 8.776313669166667
+        "age_hours": 9.334279635555557
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -20207,7 +20876,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.777980335833334
+        "age_hours": 9.335946302222222
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -20218,7 +20887,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.777980335833334
+        "age_hours": 9.335946302222222
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -20229,7 +20898,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.8296470025
+        "age_hours": 9.38761296888889
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -20240,7 +20909,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 8.8296470025
+        "age_hours": 9.38761296888889
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20251,7 +20920,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.002424780277778
+        "age_hours": 9.560390746666668
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20262,7 +20931,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.002424780277778
+        "age_hours": 9.560390746666668
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20273,7 +20942,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.002424780277778
+        "age_hours": 9.560390746666668
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20284,7 +20953,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 9.002424780277778
+        "age_hours": 9.560390746666668
       },
       {
         "ts": "2026-04-20T11:18:04Z",
@@ -20295,7 +20964,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.06603589138889
+        "age_hours": 9.62400185777778
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20306,7 +20975,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.1146470025
+        "age_hours": 9.67261296888889
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20317,7 +20986,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.1146470025
+        "age_hours": 9.67261296888889
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20328,7 +20997,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.1146470025
+        "age_hours": 9.67261296888889
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20339,7 +21008,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.1146470025
+        "age_hours": 9.67261296888889
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20350,7 +21019,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.1146470025
+        "age_hours": 9.67261296888889
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20361,7 +21030,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.1146470025
+        "age_hours": 9.67261296888889
       },
       {
         "ts": "2026-04-20T10:48:39Z",
@@ -20372,7 +21041,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 9.556313669166666
+        "age_hours": 10.114279635555556
       },
       {
         "ts": "2026-04-20T10:26:10Z",
@@ -20383,7 +21052,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.931035891388888
+        "age_hours": 10.489001857777778
       },
       {
         "ts": "2026-04-20T10:17:53Z",
@@ -20394,7 +21063,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 10.069091446944444
+        "age_hours": 10.627057413333334
       },
       {
         "ts": "2026-04-20T10:10:58Z",
@@ -20405,7 +21074,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.184369224722222
+        "age_hours": 10.742335191111112
       },
       {
         "ts": "2026-04-20T09:57:20Z",
@@ -20416,7 +21085,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 10.411591446944444
+        "age_hours": 10.969557413333334
       },
       {
         "ts": "2026-04-20T09:56:32Z",
@@ -20427,7 +21096,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 10.424924780277777
+        "age_hours": 10.982890746666667
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20438,7 +21107,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20449,7 +21118,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20460,7 +21129,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20471,7 +21140,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20482,7 +21151,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20493,7 +21162,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20504,7 +21173,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20515,7 +21184,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20526,7 +21195,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20537,7 +21206,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20548,7 +21217,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20559,7 +21228,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20570,7 +21239,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20581,7 +21250,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20592,7 +21261,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20603,7 +21272,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -20614,7 +21283,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.436591446944444
+        "age_hours": 10.994557413333334
       },
       {
         "ts": "2026-04-20T09:55:41Z",
@@ -20625,7 +21294,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.439091446944444
+        "age_hours": 10.997057413333334
       },
       {
         "ts": "2026-04-20T09:54:24Z",
@@ -20636,7 +21305,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 10.460480335833333
+        "age_hours": 11.018446302222223
       },
       {
         "ts": "2026-04-20T09:53:22Z",
@@ -20647,7 +21316,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.477702558055555
+        "age_hours": 11.035668524444445
       },
       {
         "ts": "2026-04-20T09:52:22Z",
@@ -20658,7 +21327,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.494369224722222
+        "age_hours": 11.052335191111112
       },
       {
         "ts": "2026-04-20T09:46:32Z",
@@ -20669,7 +21338,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 10.591591446944443
+        "age_hours": 11.149557413333333
       },
       {
         "ts": "2026-04-20T09:45:48Z",
@@ -20680,7 +21349,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.603813669166666
+        "age_hours": 11.161779635555556
       },
       {
         "ts": "2026-04-20T09:43:00Z",
@@ -20691,7 +21360,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.650480335833333
+        "age_hours": 11.208446302222223
       },
       {
         "ts": "2026-04-20T09:36:24Z",
@@ -20702,7 +21371,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.760480335833332
+        "age_hours": 11.318446302222222
       },
       {
         "ts": "2026-04-20T09:29:42Z",
@@ -20713,7 +21382,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 10.872147002499998
+        "age_hours": 11.43011296888889
       },
       {
         "ts": "2026-04-20T07:40:56Z",
@@ -20724,7 +21393,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.684924780277777
+        "age_hours": 13.242890746666667
       },
       {
         "ts": "2026-04-20T07:36:57Z",
@@ -20735,7 +21404,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.751313669166667
+        "age_hours": 13.309279635555557
       },
       {
         "ts": "2026-04-20T07:36:11Z",
@@ -20746,7 +21415,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.764091446944443
+        "age_hours": 13.322057413333335
       },
       {
         "ts": "2026-04-20T07:31:11Z",
@@ -20757,7 +21426,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.847424780277777
+        "age_hours": 13.405390746666667
       },
       {
         "ts": "2026-04-20T07:27:24Z",
@@ -20768,7 +21437,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.910480335833332
+        "age_hours": 13.468446302222222
       },
       {
         "ts": "2026-04-20T07:21:43Z",
@@ -20779,7 +21448,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.005202558055554
+        "age_hours": 13.563168524444444
       },
       {
         "ts": "2026-04-20T07:19:51Z",
@@ -20790,7 +21459,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.036313669166667
+        "age_hours": 13.594279635555557
       },
       {
         "ts": "2026-04-20T07:17:01Z",
@@ -20801,7 +21470,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.083535891388888
+        "age_hours": 13.64150185777778
       },
       {
         "ts": "2026-04-20T07:02:47Z",
@@ -20812,7 +21481,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.32075811361111
+        "age_hours": 13.878724080000001
       },
       {
         "ts": "2026-04-20T06:46:18Z",
@@ -20823,7 +21492,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 13.595480335833333
+        "age_hours": 14.153446302222223
       },
       {
         "ts": "2026-04-20T06:39:51Z",
@@ -20834,7 +21503,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.702980335833333
+        "age_hours": 14.260946302222223
       },
       {
         "ts": "2026-04-20T06:30:38Z",
@@ -20845,7 +21514,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.856591446944444
+        "age_hours": 14.414557413333334
       },
       {
         "ts": "2026-04-20T06:29:50Z",
@@ -20856,7 +21525,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.869924780277778
+        "age_hours": 14.427890746666668
       },
       {
         "ts": "2026-04-20T06:27:34Z",
@@ -20867,7 +21536,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.907702558055554
+        "age_hours": 14.465668524444446
       },
       {
         "ts": "2026-04-20T05:53:53Z",
@@ -20878,7 +21547,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.469091446944443
+        "age_hours": 15.027057413333335
       },
       {
         "ts": "2026-04-20T05:53:15Z",
@@ -20889,7 +21558,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.4796470025
+        "age_hours": 15.03761296888889
       },
       {
         "ts": "2026-04-20T05:52:01Z",
@@ -20900,7 +21569,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.500202558055555
+        "age_hours": 15.058168524444445
       },
       {
         "ts": "2026-04-20T04:55:31Z",
@@ -20911,7 +21580,7 @@
         "phase": "B",
         "pr": 25,
         "repo": "signal-gateway",
-        "age_hours": 15.441869224722222
+        "age_hours": 15.999835191111112
       },
       {
         "ts": "2026-04-20T04:49:26Z",
@@ -20922,7 +21591,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 15.54325811361111
+        "age_hours": 16.10122408
       },
       {
         "ts": "2026-04-20T04:47:04Z",
@@ -20933,7 +21602,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 15.582702558055555
+        "age_hours": 16.140668524444447
       },
       {
         "ts": "2026-04-20T04:42:57Z",
@@ -20944,7 +21613,7 @@
         "phase": "B",
         "pr": 25,
         "repo": "signal-gateway",
-        "age_hours": 15.651313669166665
+        "age_hours": 16.209279635555557
       },
       {
         "ts": "2026-04-20T04:42:41Z",
@@ -20955,7 +21624,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 15.65575811361111
+        "age_hours": 16.213724080000002
       },
       {
         "ts": "2026-04-20T04:01:44Z",
@@ -20966,7 +21635,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.33825811361111
+        "age_hours": 16.89622408
       },
       {
         "ts": "2026-04-20T03:58:26Z",
@@ -20977,7 +21646,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.39325811361111
+        "age_hours": 16.95122408
       },
       {
         "ts": "2026-04-20T03:51:02Z",
@@ -20988,7 +21657,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.516591446944442
+        "age_hours": 17.074557413333334
       },
       {
         "ts": "2026-04-20T03:48:22Z",
@@ -20999,7 +21668,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.561035891388887
+        "age_hours": 17.11900185777778
       },
       {
         "ts": "2026-04-20T03:32:57Z",
@@ -21010,7 +21679,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.817980335833333
+        "age_hours": 17.37594630222222
       },
       {
         "ts": "2026-04-20T03:18:19Z",
@@ -21021,7 +21690,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.061869224722223
+        "age_hours": 17.61983519111111
       },
       {
         "ts": "2026-04-20T03:16:02Z",
@@ -21032,7 +21701,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.099924780277778
+        "age_hours": 17.657890746666666
       },
       {
         "ts": "2026-04-20T02:30:26Z",
@@ -21043,7 +21712,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.859924780277776
+        "age_hours": 18.417890746666668
       },
       {
         "ts": "2026-04-20T02:24:46Z",
@@ -21054,7 +21723,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 17.95436922472222
+        "age_hours": 18.512335191111113
       },
       {
         "ts": "2026-04-20T02:24:42Z",
@@ -21065,7 +21734,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 17.955480335833332
+        "age_hours": 18.513446302222224
       },
       {
         "ts": "2026-04-20T02:24:30Z",
@@ -21076,7 +21745,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 17.958813669166666
+        "age_hours": 18.516779635555558
       },
       {
         "ts": "2026-04-20T02:21:29Z",
@@ -21087,7 +21756,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.009091446944442
+        "age_hours": 18.567057413333334
       },
       {
         "ts": "2026-04-20T02:19:26Z",
@@ -21098,7 +21767,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.04325811361111
+        "age_hours": 18.60122408
       },
       {
         "ts": "2026-04-20T01:57:21Z",
@@ -21109,7 +21778,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.411313669166667
+        "age_hours": 18.969279635555555
       },
       {
         "ts": "2026-04-20T01:47:41Z",
@@ -21120,7 +21789,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 18.572424780277778
+        "age_hours": 19.130390746666667
       },
       {
         "ts": "2026-04-20T01:47:40Z",
@@ -21131,7 +21800,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 18.572702558055553
+        "age_hours": 19.130668524444445
       },
       {
         "ts": "2026-04-20T01:47:32Z",
@@ -21142,7 +21811,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 18.574924780277776
+        "age_hours": 19.132890746666668
       },
       {
         "ts": "2026-04-20T01:37:03Z",
@@ -21153,7 +21822,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.749647002499998
+        "age_hours": 19.30761296888889
       },
       {
         "ts": "2026-04-20T01:34:52Z",
@@ -21164,7 +21833,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.786035891388888
+        "age_hours": 19.34400185777778
       },
       {
         "ts": "2026-04-20T01:32:43Z",
@@ -21175,7 +21844,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.82186922472222
+        "age_hours": 19.379835191111113
       },
       {
         "ts": "2026-04-20T01:28:31Z",
@@ -21186,7 +21855,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.89186922472222
+        "age_hours": 19.449835191111113
       },
       {
         "ts": "2026-04-20T01:21:58Z",
@@ -21197,7 +21866,7 @@
         "phase": "B",
         "pr": 24,
         "repo": "signal-gateway",
-        "age_hours": 19.001035891388888
+        "age_hours": 19.55900185777778
       },
       {
         "ts": "2026-04-20T01:21:55Z",
@@ -21208,7 +21877,7 @@
         "phase": "B",
         "pr": 11,
         "repo": "oink-sync",
-        "age_hours": 19.00186922472222
+        "age_hours": 19.559835191111112
       },
       {
         "ts": "2026-04-20T01:21:52Z",
@@ -21219,7 +21888,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 19.002702558055553
+        "age_hours": 19.560668524444445
       },
       {
         "ts": "2026-04-20T01:21:25Z",
@@ -21230,7 +21899,7 @@
         "phase": "B",
         "pr": 24,
         "repo": "signal-gateway",
-        "age_hours": 19.010202558055553
+        "age_hours": 19.568168524444445
       },
       {
         "ts": "2026-04-20T01:21:23Z",
@@ -21241,7 +21910,7 @@
         "phase": "B",
         "pr": 11,
         "repo": "oink-sync",
-        "age_hours": 19.01075811361111
+        "age_hours": 19.56872408
       },
       {
         "ts": "2026-04-20T01:21:11Z",
@@ -21252,7 +21921,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 19.014091446944445
+        "age_hours": 19.572057413333333
       },
       {
         "ts": "2026-04-20T01:16:45Z",
@@ -21263,7 +21932,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.087980335833333
+        "age_hours": 19.645946302222224
       },
       {
         "ts": "2026-04-20T01:07:12Z",
@@ -21274,7 +21943,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 19.2471470025
+        "age_hours": 19.80511296888889
       },
       {
         "ts": "2026-04-20T01:07:01Z",
@@ -21285,7 +21954,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 19.250202558055555
+        "age_hours": 19.808168524444444
       },
       {
         "ts": "2026-04-20T00:54:22Z",
@@ -21296,7 +21965,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.46103589138889
+        "age_hours": 20.019001857777777
       },
       {
         "ts": "2026-04-20T00:45:52Z",
@@ -21307,7 +21976,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.602702558055555
+        "age_hours": 20.160668524444446
       },
       {
         "ts": "2026-04-20T00:43:57Z",
@@ -21318,7 +21987,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 19.6346470025
+        "age_hours": 20.19261296888889
       },
       {
         "ts": "2026-04-20T00:43:57Z",
@@ -21329,7 +21998,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 19.6346470025
+        "age_hours": 20.19261296888889
       },
       {
         "ts": "2026-04-20T00:41:56Z",
@@ -21340,7 +22009,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.66825811361111
+        "age_hours": 20.22622408
       },
       {
         "ts": "2026-04-20T00:34:38Z",
@@ -21351,7 +22020,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.789924780277776
+        "age_hours": 20.347890746666668
       },
       {
         "ts": "2026-04-20T00:32:41Z",
@@ -21362,7 +22031,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.822424780277778
+        "age_hours": 20.380390746666667
       },
       {
         "ts": "2026-04-19T23:43:45Z",
@@ -21373,7 +22042,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.637980335833333
+        "age_hours": 21.19594630222222
       },
       {
         "ts": "2026-04-19T23:42:02Z",
@@ -21384,7 +22053,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.666591446944444
+        "age_hours": 21.224557413333333
       },
       {
         "ts": "2026-04-19T23:23:12Z",
@@ -21395,7 +22064,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.98048033583333
+        "age_hours": 21.538446302222223
       },
       {
         "ts": "2026-04-19T23:17:17Z",
@@ -21406,7 +22075,7 @@
         "phase": "B",
         "pr": 21,
         "repo": "signal-gateway",
-        "age_hours": 21.079091446944442
+        "age_hours": 21.637057413333334
       },
       {
         "ts": "2026-04-19T23:17:10Z",
@@ -21417,7 +22086,7 @@
         "phase": "B",
         "pr": 9,
         "repo": "oink-sync",
-        "age_hours": 21.08103589138889
+        "age_hours": 21.639001857777778
       },
       {
         "ts": "2026-04-19T23:17:04Z",
@@ -21428,7 +22097,7 @@
         "phase": "B",
         "pr": 149,
         "repo": "oinkfarm",
-        "age_hours": 21.082702558055555
+        "age_hours": 21.640668524444447
       },
       {
         "ts": "2026-04-19T23:16:59Z",
@@ -21439,7 +22108,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 21.084091446944445
+        "age_hours": 21.642057413333333
       },
       {
         "ts": "2026-04-19T23:11:12Z",
@@ -21450,7 +22119,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.180480335833334
+        "age_hours": 21.738446302222222
       },
       {
         "ts": "2026-04-19T22:35:19Z",
@@ -21461,7 +22130,7 @@
         "phase": "B",
         "pr": 21,
         "repo": "signal-gateway",
-        "age_hours": 21.778535891388888
+        "age_hours": 22.33650185777778
       },
       {
         "ts": "2026-04-19T22:34:34Z",
@@ -21472,7 +22141,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.791035891388887
+        "age_hours": 22.34900185777778
       },
       {
         "ts": "2026-04-19T22:29:22Z",
@@ -21483,7 +22152,7 @@
         "phase": "B",
         "pr": 9,
         "repo": "oink-sync",
-        "age_hours": 21.877702558055553
+        "age_hours": 22.435668524444445
       },
       {
         "ts": "2026-04-19T22:29:20Z",
@@ -21494,7 +22163,7 @@
         "phase": "B",
         "pr": 149,
         "repo": "oinkfarm",
-        "age_hours": 21.87825811361111
+        "age_hours": 22.436224080000002
       },
       {
         "ts": "2026-04-19T22:22:39Z",
@@ -21505,7 +22174,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 21.9896470025
+        "age_hours": 22.547612968888888
       },
       {
         "ts": "2026-04-19T22:22:30Z",
@@ -21516,7 +22185,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 21.992147002499998
+        "age_hours": 22.55011296888889
       },
       {
         "ts": "2026-04-19T22:22:24Z",
@@ -21527,7 +22196,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 21.993813669166666
+        "age_hours": 22.551779635555555
       },
       {
         "ts": "2026-04-19T22:07:54Z",
@@ -21538,7 +22207,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 22.235480335833333
+        "age_hours": 22.793446302222222
       },
       {
         "ts": "2026-04-19T22:07:54Z",
@@ -21549,7 +22218,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 22.235480335833333
+        "age_hours": 22.793446302222222
       },
       {
         "ts": "2026-04-19T22:01:10Z",
@@ -21560,7 +22229,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.347702558055555
+        "age_hours": 22.905668524444444
       },
       {
         "ts": "2026-04-19T21:52:53Z",
@@ -21571,7 +22240,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.48575811361111
+        "age_hours": 23.04372408
       },
       {
         "ts": "2026-04-19T21:43:23Z",
@@ -21582,7 +22251,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.644091446944444
+        "age_hours": 23.202057413333335
       },
       {
         "ts": "2026-04-19T21:33:27Z",
@@ -21593,172 +22262,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.8096470025
-      },
-      {
-        "ts": "2026-04-19T20:41:59Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A8",
-        "agent": "guardian",
-        "summary": "A8 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.667424780277777
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A11",
-        "agent": "guardian",
-        "summary": "A11 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "A11",
-        "agent": "guardian",
-        "summary": "A11 canary PASS",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A4",
-        "agent": "guardian",
-        "summary": "A4 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_FAIL",
-        "task_id": "A4",
-        "agent": "guardian",
-        "summary": "A4 canary FAIL — ['see_report']",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A5",
-        "agent": "guardian",
-        "summary": "A5 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "A5",
-        "agent": "guardian",
-        "summary": "A5 canary PASS",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A6",
-        "agent": "guardian",
-        "summary": "A6 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_FAIL",
-        "task_id": "A6",
-        "agent": "guardian",
-        "summary": "A6 canary FAIL — ['see_report']",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A7",
-        "agent": "guardian",
-        "summary": "A7 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A9",
-        "agent": "guardian",
-        "summary": "A9 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:38:48Z",
-        "event_type": "CANARY_FAIL",
-        "task_id": "A9",
-        "agent": "guardian",
-        "summary": "A9 canary FAIL — ['see_report']",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.720480335833333
-      },
-      {
-        "ts": "2026-04-19T20:34:45Z",
-        "event_type": "REVIEW_POSTED",
-        "task_id": "B1",
-        "agent": "guardian",
-        "summary": "B1 review by guardian — PASS (9.5)",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.787980335833332
-      },
-      {
-        "ts": "2026-04-19T20:27:02Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "A10",
-        "agent": "guardian",
-        "summary": "A10 canary started",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.916591446944444
-      },
-      {
-        "ts": "2026-04-19T20:27:02Z",
-        "event_type": "CANARY_FAIL",
-        "task_id": "A10",
-        "agent": "guardian",
-        "summary": "A10 canary FAIL — ['see_report']",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.916591446944444
+        "age_hours": 23.36761296888889
       }
     ]
   },
@@ -21769,7 +22273,7 @@
       "issue": "MERGED with no CANARY_STARTED within 2h",
       "severity": "warn",
       "event_id": "evt_20260414T092811Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B14",
@@ -21777,7 +22281,7 @@
       "issue": "PR_OPENED (pr=63) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260415T023710Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B14",
@@ -21785,7 +22289,7 @@
       "issue": "MERGED with no CANARY_STARTED within 2h",
       "severity": "warn",
       "event_id": "evt_20260417T094654Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B1",
@@ -21793,7 +22297,7 @@
       "issue": "PR_OPENED (pr=121) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T141946Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A1",
@@ -21801,7 +22305,7 @@
       "issue": "PR_OPENED (pr=17) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T142005Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A1",
@@ -21809,7 +22313,7 @@
       "issue": "PR_OPENED (pr=18) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T144101Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A2",
@@ -21817,7 +22321,7 @@
       "issue": "PR_OPENED (pr=19) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T151135Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B1",
@@ -21825,7 +22329,7 @@
       "issue": "PR_OPENED (pr=1) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T162813Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B2",
@@ -21833,7 +22337,7 @@
       "issue": "PR_OPENED (pr=2) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T164040Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B3",
@@ -21841,7 +22345,7 @@
       "issue": "PR_OPENED (pr=3) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T173000Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B4",
@@ -21849,7 +22353,7 @@
       "issue": "MERGED with no CANARY_STARTED within 2h",
       "severity": "warn",
       "event_id": "evt_20260418T173310Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A3",
@@ -21857,7 +22361,7 @@
       "issue": "PR_OPENED (pr=125) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T215008Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A1",
@@ -21865,7 +22369,7 @@
       "issue": "PR_OPENED (pr=126) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T231153Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A1",
@@ -21873,7 +22377,7 @@
       "issue": "PR_OPENED (pr=4) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T231204Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A2",
@@ -21881,7 +22385,7 @@
       "issue": "PR_OPENED (pr=5) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T001420Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A4",
@@ -21889,7 +22393,7 @@
       "issue": "PR_OPENED (pr=7) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T102605Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A7",
@@ -21897,7 +22401,7 @@
       "issue": "PR_OPENED (pr=130) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T110614Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A5",
@@ -21905,7 +22409,7 @@
       "issue": "PR_OPENED (pr=131) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T114804Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A6",
@@ -21913,7 +22417,7 @@
       "issue": "PR_OPENED (pr=20) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T130242Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A9",
@@ -21921,7 +22425,7 @@
       "issue": "PR_OPENED (pr=8) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T132828Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A9",
@@ -21929,7 +22433,7 @@
       "issue": "PR_OPENED (pr=132) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T132842Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A11",
@@ -21937,7 +22441,7 @@
       "issue": "PR_OPENED (pr=133) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T145137Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A8",
@@ -21945,7 +22449,7 @@
       "issue": "PR_OPENED (pr=134) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T151539Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "A10",
@@ -21953,7 +22457,7 @@
       "issue": "PR_OPENED (pr=135) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T160551Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     },
     {
       "task_id": "B6",
@@ -21961,39 +22465,39 @@
       "issue": "MERGED with no CANARY_STARTED within 2h",
       "severity": "warn",
       "event_id": "evt_20260420T064618Z_000001",
-      "detected_at": "2026-04-20T20:22:05Z"
+      "detected_at": "2026-04-20T20:55:34Z"
     }
   ],
   "events_integrity": {
-    "total": 296,
-    "last_24h": 160,
-    "rate_per_hour": 6.67,
+    "total": 306,
+    "last_24h": 155,
+    "rate_per_hour": 6.46,
     "schema_version": "1.0",
     "monotonic_gaps": [],
     "monotonic_ok": true,
     "source": "lib",
     "events_file": "/home/oinkv/sprint-checkpoint/events.jsonl",
-    "human_line": "In plain English: 160 things happened today, ~6.67/h steady-state. System is healthy."
+    "human_line": "In plain English: 155 things happened today, ~6.46/h steady-state. System is healthy."
   },
   "bootstrap": false,
   "freshness_by_agent": [
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-20T20:20:23Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": null,
-      "current_task": null,
-      "age_hours": 0.027424780277777776,
+      "last_event_ts": "2026-04-20T20:55:19Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_task_id": "B4",
+      "current_task": "B4",
+      "age_hours": 0.0031685244444444446,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 16,
+      "event_count": 26,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-20T20:20:23Z",
-      "last_active_human": "1m ago",
+      "last_active": "2026-04-20T20:55:19Z",
+      "last_active_human": "11s ago",
       "heartbeat": {
-        "current_task": null,
+        "current_task": "B4",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -22006,14 +22510,14 @@
       "last_event_type": "BLOCKED",
       "last_task_id": "A171",
       "current_task": "A171",
-      "age_hours": 2.3877025580555555,
+      "age_hours": 2.9456685244444443,
       "staleness_label": "yellow",
       "light": "yellow",
       "event_count": 1,
       "emoji": "🐷",
       "role": "Plan Auditor",
       "last_active": "2026-04-20T17:58:46Z",
-      "last_active_human": "2h 23m ago",
+      "last_active_human": "2h 56m ago",
       "heartbeat": {
         "current_task": "A171",
         "current_phase": null,
@@ -22028,14 +22532,14 @@
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 4.324369224722222,
+      "age_hours": 4.882335191111111,
       "staleness_label": "red",
       "light": "red",
       "event_count": 66,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "last_active": "2026-04-20T16:02:34Z",
-      "last_active_human": "4h 19m ago",
+      "last_active_human": "4h 52m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22050,14 +22554,14 @@
       "last_event_type": "TASK_PLANNED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 4.469369224722222,
+      "age_hours": 5.027335191111111,
       "staleness_label": "red",
       "light": "red",
       "event_count": 52,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-20T15:53:52Z",
-      "last_active_human": "4h 28m ago",
+      "last_active_human": "5h 1m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22072,14 +22576,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 8.8296470025,
+      "age_hours": 9.38761296888889,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "8h 49m ago",
+      "last_active_human": "9h 23m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22094,14 +22598,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 9.556313669166666,
+      "age_hours": 10.114279635555556,
       "staleness_label": "red",
       "light": "red",
       "event_count": 112,
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "last_active": "2026-04-20T10:48:39Z",
-      "last_active_human": "9h 33m ago",
+      "last_active_human": "10h 6m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22116,14 +22620,14 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 12.684924780277777,
+      "age_hours": 13.242890746666667,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T07:40:56Z",
-      "last_active_human": "12h 41m ago",
+      "last_active_human": "13h 14m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -22138,14 +22642,14 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 12.764091446944443,
+      "age_hours": 13.322057413333335,
       "staleness_label": "red",
       "light": "red",
       "event_count": 31,
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "last_active": "2026-04-20T07:36:11Z",
-      "last_active_human": "12h 45m ago",
+      "last_active_human": "13h 19m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -22157,7 +22661,7 @@
   "narrative": {
     "mission": "OinkFarm is the pipeline that watches Discord and Telegram for trading signals, parses them with a mix of deterministic parsers and a local LLM (Gemma), checks them against live prices from four exchanges, and tracks every signal from post to close. It runs about 1,000 signals/day across crypto and a handful of non-crypto assets, on a single server (\"the barn\"). The thing that's broken is **trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.",
     "today": "Today: 18 merges, six canaries kicked off, five canary PASSes, and 21 reviews posted. Tasks on the board: B2 🟡 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up all moved forward. Mike weighed in: Q-B1-1 resolved (Adopt psycopg3 (`psycopg[binary]`). It is the actively maint); Q-B1-2 resolved (Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv); Q-B2-1 resolved (Same server (barn) initially, inside Docker Compose network.). New gates opened for Mike: A10-APPROVE, B4-APPROVE, Q-B1-1, Q-B1-2.",
-    "week": "Over the last three days, the stream recorded 54 merges, 26 canary events, and 66 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🟡 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B4 🟡 PostgreSQL cutover shipped in this window. 29 decision events flowed through the Mike-gate process.",
+    "week": "Over the last three days, the stream recorded 54 merges, 26 canary events, and 66 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🟡 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B4 🟡 PostgreSQL cutover shipped in this window. 38 decision events flowed through the Mike-gate process.",
     "whats_next": "**Next merges expected (this week):** B2 canary result (currently CANARY_PENDING), B3 verification window opens, B6/B7/B8 canary results land. Phase B Wave 2 decomposition is essentially done — next real code merge is B4 (cutover) itself, which is a one-day task gated on B3's 7-clean-day soak. **The April 26 cutover gate (B4):** B3 merged 2026-04-19. Under the **7-day + reset rule**, earliest B4 cutover is **2026-04-26** if every daily reconciliation report shows zero row-count and zero event-count discrepancies. Any single discrepancy resets the clock. Mike's explicit go-ahead is still required on the day. **Phase C start (late May 2026):** Begins after Phase B quality gate (all Wave 3 + Wave 4 tasks green, W1 immutable records live on PostgreSQL, W4 trace…",
     "sos_exists": true,
     "sos_link": "sprint-log/STATE-OF-SPRINT.md",

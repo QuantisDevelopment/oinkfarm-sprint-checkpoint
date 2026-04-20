@@ -13,7 +13,7 @@
 
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
-| [C2](../tasks/C2-c2.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 13:21 CEST · `DECISION_NEEDED` | forge |
+| [C2](../tasks/C2-c2.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | forge · hermes |
 
 ## Waves
 
@@ -23,14 +23,13 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded. |
 | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject? |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Confidence routing: hard reject or soft flag? |
 
 ## Needs Mike (open gates)
 
-| Question ID | Question | Task | Age | Options |
-|---|---|---|---|---|
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 9.0h | PROVISIONAL soft-flag · hard reject |
+_No open DECISION_NEEDED for this phase._
 
 ---
 

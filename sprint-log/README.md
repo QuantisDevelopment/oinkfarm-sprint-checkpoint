@@ -4,62 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 296
-- **Last 24h:** 160 (rate 6.67/h)
+- **Total events:** 306
+- **Last 24h:** 155 (rate 6.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (2 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at  |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B13` | hermes | B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded. |
+| Apr 20, 22:54 CEST | `BLOCKER_RESOLVED` | `A171` | hermes | A171 blocker cleared |
 | Apr 20, 22:20 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the  |
-| Apr 20, 21:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (6 events)
+### Last 4 hours (16 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at  |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B13` | hermes | B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded. |
+| Apr 20, 22:54 CEST | `BLOCKER_RESOLVED` | `A171` | hermes | A171 blocker cleared |
 | Apr 20, 22:20 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the  |
 | Apr 20, 21:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
 | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
-| Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (160 events)
+### Last 24 hours (155 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
+| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at  |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B13` | hermes | B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope. |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: signal_events: DB-level REVOKE day 1. signals table: application-level guard first, DB REVOKE after 30 days clean. WARNING→ENFO |
+| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded. |
+| Apr 20, 22:54 CEST | `BLOCKER_RESOLVED` | `A171` | hermes | A171 blocker cleared |
 | Apr 20, 22:20 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the  |
 | Apr 20, 21:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
 | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
-| Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | hermes | FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the  |
-| Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | guardian | — published kpi-baseline: extraction-accuracy-baseline.md |
-| Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 17:52 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 15:47 CEST | `SPRINT_NOTE` | `—` | hermes | The four Phase A canary failures that were sitting red on the dashboard all morning are now green. GUARDIAN re-ran the battery at 13:08 UTC  |
-| Apr 20, 15:15 CEST | `SPRINT_NOTE` | `B3` | hermes | B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until  |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A4` | guardian | A4 canary PASS |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
 
 ## 🧭 Needs Mike
 
-| Question ID | Question | Task | Age | Options | Gate |
-|---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 10.4h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 10.4h | APPROVE · DEFER | generic |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 10.4h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 10.4h | pg_trigger · check_only | phase-b |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 10.4h | maxlen · time_based | heavy-hybrid |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 9.0h | defer to B14 · introduce in B2 | phase-b |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 9.0h | single-host only · include multi-host preparation | heavy-hybrid |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 9.0h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 9.0h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
+_No open DECISION_NEEDED events._
 
 ## 🔍 Missing evidence
 
@@ -95,7 +103,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 22:20 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 16 |
+| 🪽 **Hermes** | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | 🟢 fresh | 26 |
 | 🐷 **OinkV** | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | 🟡 1–3h | 1 |
 | 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🔴 stale | 66 |
 | 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 52 |
@@ -148,7 +156,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | [A9](tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS |
 | [A10](tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | ✅ DONE | PASS |
 | [A11](tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS |
-| `A171` | A171 | 🟡 STANDARD | — | 🛑 BLOCKED | — |
+| `A171` | A171 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | 🧪 CANARY | PENDING |
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
@@ -192,4 +200,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*9/28 tasks DONE · Last auto-regenerated: 22:22 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/28 tasks DONE · Last auto-regenerated: 22:55 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
