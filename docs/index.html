@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T05:57:26+00:00">
+<body data-generated="2026-04-20T06:11:23+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T05:57:26+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T06:11:23+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T07:57:26+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T08:11:23+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 07:57 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 08:11 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -258,7 +258,7 @@ future      </span>
         </li>
         <li>
           <span class="blocker-agent">🪽 Hermes</span>
-          <span class="blocker-label">B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck.</span>
+          <span class="blocker-label">none.</span>
         </li>
       </ul>
     </div>
@@ -2214,7 +2214,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">1m ago</div>
+        <div class="agent-meta mono muted">15m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2226,7 +2226,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B5
  · canary        </div>
-        <div class="agent-meta mono muted">48m ago</div>
+        <div class="agent-meta mono muted">1h 2m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2238,19 +2238,19 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 10m ago</div>
+        <div class="agent-meta mono muted">1h 24m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🛡️</span>
           <span class="agent-name">GUARDIAN</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Data Integrity + Canary</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">48m ago</div>
+        <div class="agent-meta mono muted">4m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2274,7 +2274,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">1m ago</div>
+        <div class="agent-meta mono muted">15m ago</div>
       </div>
     </div>
   </div>
@@ -2291,6 +2291,14 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 08:11 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 08:10 CEST</div>
+            <ul class="narrative-actions">
+<li>GUARDIAN daily cron task failed 08:00 UTC with "Channel is required when multiple channels are configured" — config issue (harmless, daily report wrote to disk 08:06 anyway, not an LLM/lane failure).</li><li>OinkV (main) heartbeat lane hit 2x LLM timeouts 08:02 + 08:06 (gpt-5.4 → fallback). Mike is already aware — dispatched audit at 07:48.</li><li>3 non-sprint open PRs across oinkfarm/oink-sync/signal-gateway (flag-auditor / micro-gate fix / BE flicker guard) — not orchestrator-owned.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle will verify B5-CANARY.md has a T+1h update, re-audit marker for Wave 2 v2 (OinkV or Hermes fallback), and stale detection on anything >60min idle.</div>
+            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> none. ```</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 07:57 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 07:56 CEST (Mon Apr 20)</div>
@@ -2562,14 +2570,6 @@ future      </span>
             <div class="narrative-next"><span class="pill pill-info">next</span> If A10 still gated next cycle >90min, I'll nudge — else silent until merge lands, then dispatch GUARDIAN canary for A10.</div>
             <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> (1) A10 ship-it — PR#135 approved, run the 4-line sequence in A10-READY-FOR-MIKE.marker (2) Phase B Wave 1 approval — B1–B5 plans (answer 12 design questions, approve B4 cutover gate when time comes) ```</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 19:00 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 18:58 UTC</div>
-            <ul class="narrative-actions">
-<li>Scanned ANVIL/VIGIL/GUARDIAN workspaces + FORGE heartbeat — all artifacts current; no stale marker.</li><li>Confirmed A8 canary is on its pre-scheduled 24h/48h checkpoint cadence (next at 2026-04-20 15:28 UTC) — no intervention.</li><li>Verified no REQUEST_CHANGES loops, no silent agents, no open PRs needing auto-review.</li><li>No nudge sent: A10 is at plan-mandated human gate (A10-APPROVE + A10-DEPLOY flags), not an agent stall.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle — if Mike has issued ship-it, verify post-merge counts (1406 signals, 912 A10-tagged, 0 orphan FKs) and kick GUARDIAN canary on first 10 post-merge signals; then A2A ANVIL to start any deferred Phase A follow-ups. If still awaiting Mike, stay silent unless >2h.</div>
-            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> 1. A10 SHIP-IT (🔴 CRITICAL, 2 gates per plan) — run the 4-command sequence in A10-READY-FOR-MIKE.marker, or reply "ship A10". 2. Phase B Wave 1 plans (B1–B5) awaiting approval — /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md. Critical path B1→B2→B3 (7–14d)→B4 cutover gate. ```</div>
-        </li>
       </ol>
     </div>
 
@@ -2812,12 +2812,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">677b20c341f7</span>    </div>
+checkpoint@<span class="mono">29b4198d2b20</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 07:57 CEST
+        Last orchestrator cycle: Apr 20, 08:11 CEST
     </div>
     <div>
-      generated Apr 20, 07:57 CEST
+      generated Apr 20, 08:11 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>

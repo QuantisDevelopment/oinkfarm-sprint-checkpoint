@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T05:57:26+00:00",
-  "generated_at_cest": "2026-04-20T07:57:26+02:00",
+  "generated_at_utc": "2026-04-20T06:11:23+00:00",
+  "generated_at_cest": "2026-04-20T08:11:23+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "1m ago",
+      "last_active_human": "15m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -3113,7 +3113,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-20T05:08:28+00:00",
-      "last_active_human": "48m ago",
+      "last_active_human": "1h 2m ago",
       "light": "yellow",
       "heartbeat": {
         "current_task": "B5",
@@ -3130,7 +3130,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T04:47:16+00:00",
-      "last_active_human": "1h 10m ago",
+      "last_active_human": "1h 24m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3140,9 +3140,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T05:08:50+00:00",
-      "last_active_human": "48m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T06:06:56+00:00",
+      "last_active_human": "4m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3151,7 +3151,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T05:57:25+00:00",
+      "last_active": "2026-04-20T06:11:23+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3163,12 +3163,25 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "1m ago",
+      "last_active_human": "15m ago",
       "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T06:11:23+00:00",
+      "time_local": "2026-04-20T08:11+02:00",
+      "header": "SPRINT STATUS @ 08:10 CEST",
+      "actions": [
+        "GUARDIAN daily cron task failed 08:00 UTC with \"Channel is required when multiple channels are configured\" — config issue (harmless, daily report wrote to disk 08:06 anyway, not an LLM/lane failure).",
+        "OinkV (main) heartbeat lane hit 2x LLM timeouts 08:02 + 08:06 (gpt-5.4 → fallback). Mike is already aware — dispatched audit at 07:48.",
+        "3 non-sprint open PRs across oinkfarm/oink-sync/signal-gateway (flag-auditor / micro-gate fix / BE flicker guard) — not orchestrator-owned."
+      ],
+      "next": "next cycle will verify B5-CANARY.md has a T+1h update, re-audit marker for Wave 2 v2 (OinkV or Hermes fallback), and stale detection on anything >60min idle.",
+      "blocker": "none. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_08-11-23.md"
+    },
     {
       "time_utc": "2026-04-20T05:57:25+00:00",
       "time_local": "2026-04-20T07:57+02:00",
@@ -3652,20 +3665,6 @@
       "next": "If A10 still gated next cycle >90min, I'll nudge — else silent until merge lands, then dispatch GUARDIAN canary for A10.",
       "blocker": "(1) A10 ship-it — PR#135 approved, run the 4-line sequence in A10-READY-FOR-MIKE.marker (2) Phase B Wave 1 approval — B1–B5 plans (answer 12 design questions, approve B4 cutover gate when time comes) ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_19-12-35.md"
-    },
-    {
-      "time_utc": "2026-04-19T17:00:29+00:00",
-      "time_local": "2026-04-19T19:00+02:00",
-      "header": "SPRINT STATUS @ 18:58 UTC",
-      "actions": [
-        "Scanned ANVIL/VIGIL/GUARDIAN workspaces + FORGE heartbeat — all artifacts current; no stale marker.",
-        "Confirmed A8 canary is on its pre-scheduled 24h/48h checkpoint cadence (next at 2026-04-20 15:28 UTC) — no intervention.",
-        "Verified no REQUEST_CHANGES loops, no silent agents, no open PRs needing auto-review.",
-        "No nudge sent: A10 is at plan-mandated human gate (A10-APPROVE + A10-DEPLOY flags), not an agent stall."
-      ],
-      "next": "next cycle — if Mike has issued ship-it, verify post-merge counts (1406 signals, 912 A10-tagged, 0 orphan FKs) and kick GUARDIAN canary on first 10 post-merge signals; then A2A ANVIL to start any deferred Phase A follow-ups. If still awaiting Mike, stay silent unless >2h.",
-      "blocker": "1. A10 SHIP-IT (🔴 CRITICAL, 2 gates per plan) — run the 4-command sequence in A10-READY-FOR-MIKE.marker, or reply \"ship A10\". 2. Phase B Wave 1 plans (B1–B5) awaiting approval — /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md. Critical path B1→B2→B3 (7–14d)→B4 cutover gate. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_19-00-29.md"
     }
   ],
   "plans": [
@@ -3944,23 +3943,27 @@
     {
       "agent": "Hermes",
       "agent_emoji": "🪽",
-      "raw": "none. B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck. ```",
-      "label": "B4 cutover + Wave2 sequencing still awaiting your decision, but no agent is stuck.",
+      "raw": "none. ```",
+      "label": "none.",
       "severity": "mike",
       "current_task": null,
       "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T05:57:25+00:00",
-    "time_local": "2026-04-20T07:57+02:00",
-    "header": "SPRINT STATUS @ 07:56 CEST (Mon Apr 20)",
-    "actions": [],
-    "next": "after B5 T+1h clean (08:05), verify GUARDIAN report then A2A ANVIL → start B6 Phase 0 proposal",
-    "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_07-57-25.md"
+    "time_utc": "2026-04-20T06:11:23+00:00",
+    "time_local": "2026-04-20T08:11+02:00",
+    "header": "SPRINT STATUS @ 08:10 CEST",
+    "actions": [
+      "GUARDIAN daily cron task failed 08:00 UTC with \"Channel is required when multiple channels are configured\" — config issue (harmless, daily report wrote to disk 08:06 anyway, not an LLM/lane failure).",
+      "OinkV (main) heartbeat lane hit 2x LLM timeouts 08:02 + 08:06 (gpt-5.4 → fallback). Mike is already aware — dispatched audit at 07:48.",
+      "3 non-sprint open PRs across oinkfarm/oink-sync/signal-gateway (flag-auditor / micro-gate fix / BE flicker guard) — not orchestrator-owned."
+    ],
+    "next": "next cycle will verify B5-CANARY.md has a T+1h update, re-audit marker for Wave 2 v2 (OinkV or Hermes fallback), and stale detection on anything >60min idle.",
+    "blocker": "none. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_08-11-23.md"
   },
-  "commit": "677b20c341f7",
+  "commit": "29b4198d2b20",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
