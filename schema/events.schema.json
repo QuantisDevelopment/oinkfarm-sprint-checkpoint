@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oinkfarm/sprint-checkpoint/schema/events.schema.json",
+  "title": "Checkpoint Reporting Event",
+  "description": "Frozen event schema v1.0 for the sprint-checkpoint event stream (events.jsonl).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "ts",
+    "event_type",
+    "task_id",
+    "phase",
+    "wave",
+    "agent",
+    "repo",
+    "branch",
+    "pr",
+    "artifact_path",
+    "status",
+    "blocker",
+    "extra"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^evt_[0-9]{8}T[0-9]{6}Z_[0-9]{6}$",
+      "description": "Monotonic ID: evt_YYYYMMDDTHHMMSSZ_NNNNNN (UTC ts + 6-digit counter)."
+    },
+    "ts": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+      "description": "ISO-8601 UTC timestamp, second precision, Z suffix required."
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "TASK_PLANNED",
+        "PROPOSAL_READY",
+        "PROPOSAL_APPROVED",
+        "PROPOSAL_REJECTED",
+        "CODE_STARTED",
+        "PR_OPENED",
+        "REVIEW_POSTED",
+        "MERGED",
+        "CANARY_STARTED",
+        "CANARY_PASS",
+        "CANARY_FAIL",
+        "BLOCKED",
+        "BLOCKER_RESOLVED",
+        "DECISION_NEEDED",
+        "DECISION_RESOLVED",
+        "STATUS_CHANGED",
+        "ARTIFACT_PUBLISHED",
+        "AGENT_HEARTBEAT",
+        "SPRINT_NOTE"
+      ]
+    },
+    "task_id": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "pattern": "^[A-Z][0-9]+$" }
+      ],
+      "description": "Task code like A1..A11, B1..B15, C1..C7, or null for meta events."
+    },
+    "phase": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "enum": ["A", "B", "C", "D", "meta"] }
+      ]
+    },
+    "wave": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "integer", "minimum": 0 }
+      ]
+    },
+    "agent": {
+      "type": "string",
+      "enum": [
+        "anvil",
+        "vigil",
+        "guardian",
+        "forge",
+        "hermes",
+        "oinkv",
+        "mike",
+        "system"
+      ]
+    },
+    "repo": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "string",
+          "enum": ["oinkfarm", "oink-sync", "signal-gateway", "oinkdb-api"]
+        }
+      ]
+    },
+    "branch": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "minLength": 1 }
+      ]
+    },
+    "pr": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "integer", "minimum": 1 }
+      ]
+    },
+    "artifact_path": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "minLength": 1 }
+      ]
+    },
+    "status": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "string",
+          "enum": [
+            "PROPOSAL",
+            "PROPOSAL_REVIEW",
+            "CODE",
+            "PR_REVIEW",
+            "MERGED",
+            "CANARY",
+            "DONE",
+            "BLOCKED",
+            "DEFERRED",
+            "NOT_STARTED"
+          ]
+        }
+      ]
+    },
+    "blocker": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "string",
+          "enum": [
+            "waiting_for_mike_decision",
+            "waiting_for_vigil_review",
+            "waiting_for_guardian_review",
+            "waiting_for_proposal_approval",
+            "waiting_for_canary",
+            "waiting_for_upstream_task",
+            "design_clarification_needed",
+            "test_failure",
+            "external_dependency"
+          ]
+        }
+      ]
+    },
+    "extra": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "event_type": { "const": "TASK_PLANNED" } } },
+      "then": { "properties": { "extra": { "required": ["plan_path"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "PROPOSAL_READY" } } },
+      "then": { "properties": { "extra": { "required": ["proposal_path"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "PROPOSAL_APPROVED" } } },
+      "then": { "properties": { "extra": { "required": ["approver"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "PROPOSAL_REJECTED" } } },
+      "then": { "properties": { "extra": { "required": ["reviewer", "reason"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "CODE_STARTED" } } },
+      "then": { "properties": { "extra": { "required": ["branch"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "PR_OPENED" } } },
+      "then": { "properties": { "extra": { "required": ["pr", "title"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "REVIEW_POSTED" } } },
+      "then": {
+        "properties": {
+          "extra": {
+            "required": ["reviewer", "score", "verdict"],
+            "properties": {
+              "verdict": { "type": "string", "enum": ["PASS", "REVISE", "FAIL"] },
+              "score": { "type": "number", "minimum": 0, "maximum": 10 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "MERGED" } } },
+      "then": { "properties": { "extra": { "required": ["pr", "commit_sha"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "CANARY_STARTED" } } },
+      "then": { "properties": { "extra": { "required": ["baseline_ts"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "CANARY_PASS" } } },
+      "then": { "properties": { "extra": { "required": ["report_path", "signals_observed"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "CANARY_FAIL" } } },
+      "then": { "properties": { "extra": { "required": ["report_path", "issues"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "BLOCKED" } } },
+      "then": { "properties": { "extra": { "required": ["reason"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "BLOCKER_RESOLVED" } } },
+      "then": { "properties": { "extra": { "required": ["reason"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "DECISION_NEEDED" } } },
+      "then": { "properties": { "extra": { "required": ["question_id", "question", "options"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "DECISION_RESOLVED" } } },
+      "then": { "properties": { "extra": { "required": ["question_id", "answer"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "STATUS_CHANGED" } } },
+      "then": { "properties": { "extra": { "required": ["from_status", "to_status"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "ARTIFACT_PUBLISHED" } } },
+      "then": { "properties": { "extra": { "required": ["category", "src_path"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "AGENT_HEARTBEAT" } } },
+      "then": { "properties": { "extra": { "required": ["current_task", "phase"] } } }
+    },
+    {
+      "if": { "properties": { "event_type": { "const": "SPRINT_NOTE" } } },
+      "then": { "properties": { "extra": { "required": ["text"] } } }
+    }
+  ]
+}
