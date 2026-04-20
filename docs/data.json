@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T20:55:30+00:00",
-  "generated_at_cest": "2026-04-20T22:55:30+02:00",
+  "generated_at_utc": "2026-04-20T20:59:54+00:00",
+  "generated_at_cest": "2026-04-20T22:59:54+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2291,6 +2291,71 @@
   ],
   "tasks": [
     {
+      "id": "A171",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-20T20:57:07Z",
+      "timeline": [
+        {
+          "label": "A171 BLOCKED — design_clarification_needed",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-20T17:58:46Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKED"
+        },
+        {
+          "label": "A171 blocker cleared",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKER_RESOLVED"
+        },
+        {
+          "label": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-20T20:57:07Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 3,
+      "blocker": null,
+      "phase": "A",
+      "agents_touched": [
+        "hermes",
+        "oinkv"
+      ],
+      "last_event_type": "SPRINT_NOTE"
+    },
+    {
       "id": "B2",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
@@ -2922,125 +2987,6 @@
       "last_event_type": "DECISION_RESOLVED"
     },
     {
-      "id": "B13",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "MERGED",
-      "status_label": "MERGED",
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 3,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/3",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "signal-gateway",
-          "number": 5,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/5",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": "2026-04-14T09:28:11Z",
-      "last_activity": "2026-04-20T20:54:52Z",
-      "timeline": [
-        {
-          "label": "B13 PR #3 opened — feat: B13 pre-emit lifecycle noise filter",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-13T22:04:12Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B13 PR #5 opened — feat: B13 pre-emit lifecycle noise filter (Issue #47)",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-14T09:08:45Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B13 merged via PR #5 @d8a612c",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-14T09:28:11Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B13 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
-          "mtime": "2026-04-20T09:53:22Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B13 Mike gate: Docker Compose: single host or multi-host?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:21:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:54:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md"
-      },
-      "_from_stream": true,
-      "event_count": 7,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "hermes"
-      ],
-      "last_event_type": "DECISION_RESOLVED"
-    },
-    {
       "id": "B9",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
@@ -3202,6 +3148,82 @@
       "last_event_type": "DECISION_RESOLVED"
     },
     {
+      "id": "B13",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-20T20:54:52Z",
+      "timeline": [
+        {
+          "label": "B13 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
+          "mtime": "2026-04-20T09:53:22Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B13 Mike gate: Docker Compose: single host or multi-host?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:21:53Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md"
+      },
+      "_from_stream": true,
+      "event_count": 4,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
+    },
+    {
       "id": "C2",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
@@ -3267,62 +3289,6 @@
       "last_event_type": "DECISION_RESOLVED"
     },
     {
-      "id": "A171",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "NOT_STARTED",
-      "status_label": "Not Started",
-      "prs": [],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": null,
-      "last_activity": "2026-04-20T20:54:52Z",
-      "timeline": [
-        {
-          "label": "A171 BLOCKED — design_clarification_needed",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-20T17:58:46Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "BLOCKED"
-        },
-        {
-          "label": "A171 blocker cleared",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:54:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "BLOCKER_RESOLVED"
-        }
-      ],
-      "artifacts": {},
-      "_from_stream": true,
-      "event_count": 2,
-      "blocker": null,
-      "phase": "A",
-      "agents_touched": [
-        "hermes",
-        "oinkv"
-      ],
-      "last_event_type": "BLOCKER_RESOLVED"
-    },
-    {
       "id": "B3",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
@@ -3353,18 +3319,9 @@
         "path": null,
         "mtime": "2026-04-20T03:32:57Z"
       },
-      "merged_at": "2026-04-01T03:06:20Z",
+      "merged_at": "2026-04-18T17:31:06Z",
       "last_activity": "2026-04-20T13:15:36Z",
       "timeline": [
-        {
-          "label": "B3 merged via PR #None @b848ce4",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-01T03:06:20Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
         {
           "label": "B3 PR #3 opened — feat(#16): PR-B3+B5 — filtered handlers (13) + registry endpoints (2)",
           "actor": "anvil",
@@ -3563,7 +3520,7 @@
         "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md"
       },
       "_from_stream": true,
-      "event_count": 22,
+      "event_count": 21,
       "blocker": null,
       "phase": "B",
       "agents_touched": [
@@ -4579,18 +4536,9 @@
         "path": null,
         "mtime": "2026-04-20T10:10:58Z"
       },
-      "merged_at": "2026-04-02T22:13:36Z",
+      "merged_at": "2026-04-20T09:29:42Z",
       "last_activity": "2026-04-20T10:10:58Z",
       "timeline": [
-        {
-          "label": "B8 merged via PR #None @c56d580",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-02T22:13:36Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
         {
           "label": "B8 plan published",
           "actor": "forge",
@@ -4690,7 +4638,7 @@
         "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B8-CANARY.md"
       },
       "_from_stream": true,
-      "event_count": 11,
+      "event_count": 10,
       "blocker": null,
       "phase": "B",
       "agents_touched": [
@@ -4877,18 +4825,9 @@
         "path": null,
         "mtime": "2026-04-20T07:02:47Z"
       },
-      "merged_at": "2026-04-01T18:07:49Z",
+      "merged_at": "2026-04-20T04:42:41Z",
       "last_activity": "2026-04-20T07:02:47Z",
       "timeline": [
-        {
-          "label": "B5 merged via PR #None @01343f6",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-01T18:07:49Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
         {
           "label": "B5 plan published",
           "actor": "forge",
@@ -4997,7 +4936,7 @@
         "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B5-CANARY.md"
       },
       "_from_stream": true,
-      "event_count": 12,
+      "event_count": 11,
       "blocker": null,
       "phase": "B",
       "agents_touched": [
@@ -5032,18 +4971,9 @@
         "path": null,
         "mtime": null
       },
-      "merged_at": "2026-04-02T06:11:12Z",
+      "merged_at": "2026-04-20T06:46:18Z",
       "last_activity": "2026-04-20T06:46:18Z",
       "timeline": [
-        {
-          "label": "B6 merged via PR #None @3f8be83",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-02T06:11:12Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
         {
           "label": "B6 plan published",
           "actor": "forge",
@@ -5106,7 +5036,7 @@
         "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker"
       },
       "_from_stream": true,
-      "event_count": 7,
+      "event_count": 6,
       "blocker": null,
       "phase": "B",
       "agents_touched": [
@@ -6318,97 +6248,31 @@
         "vigil"
       ],
       "last_event_type": "CANARY_PASS"
-    },
-    {
-      "id": "B14",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "MERGED",
-      "status_label": "MERGED",
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 4,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/4",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "oinkfarm",
-          "number": 63,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/63",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": "2026-04-15T02:38:22Z",
-      "last_activity": "2026-04-17T09:46:54Z",
-      "timeline": [
-        {
-          "label": "B14 PR #4 opened — B14: SL→entry overwrite guard",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-14T08:01:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B14 PR #63 opened — fix: micro-gate SL→entry overwrite guards (A15 + B14)",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-15T02:37:10Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B14 merged via PR #63 @11a10c3",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-15T02:38:22Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B14 merged via PR #4 @1883461",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-17T09:46:54Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        }
-      ],
-      "artifacts": {},
-      "_from_stream": true,
-      "event_count": 4,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil"
-      ],
-      "last_event_type": "MERGED"
     }
   ],
   "agents": [
+    {
+      "id": "oinkv",
+      "name": "OinkV",
+      "last_event_ts": "2026-04-20T20:57:07Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "A171",
+      "current_task": "A171",
+      "age_hours": 0.04650299944444444,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 2,
+      "emoji": "🐷",
+      "role": "Plan Auditor",
+      "last_active": "2026-04-20T20:57:07Z",
+      "last_active_human": "2m ago",
+      "heartbeat": {
+        "current_task": "A171",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
     {
       "id": "hermes",
       "name": "Hermes",
@@ -6416,38 +6280,16 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 0.0031685244444444446,
+      "age_hours": 0.07650299944444444,
       "staleness_label": "green",
       "light": "green",
       "event_count": 26,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "last_active": "2026-04-20T20:55:19Z",
-      "last_active_human": "11s ago",
+      "last_active_human": "4m ago",
       "heartbeat": {
         "current_task": "B4",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "oinkv",
-      "name": "OinkV",
-      "last_event_ts": "2026-04-20T17:58:46Z",
-      "last_event_type": "BLOCKED",
-      "last_task_id": "A171",
-      "current_task": "A171",
-      "age_hours": 2.9456685244444443,
-      "staleness_label": "yellow",
-      "light": "yellow",
-      "event_count": 1,
-      "emoji": "🐷",
-      "role": "Plan Auditor",
-      "last_active": "2026-04-20T17:58:46Z",
-      "last_active_human": "2h 56m ago",
-      "heartbeat": {
-        "current_task": "A171",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -6460,14 +6302,14 @@
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 4.882335191111111,
+      "age_hours": 4.9556696661111115,
       "staleness_label": "red",
       "light": "red",
       "event_count": 66,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "last_active": "2026-04-20T16:02:34Z",
-      "last_active_human": "4h 52m ago",
+      "last_active_human": "4h 57m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6482,14 +6324,14 @@
       "last_event_type": "TASK_PLANNED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 5.027335191111111,
+      "age_hours": 5.100669666111111,
       "staleness_label": "red",
       "light": "red",
       "event_count": 52,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-20T15:53:52Z",
-      "last_active_human": "5h 1m ago",
+      "last_active_human": "5h 6m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6504,14 +6346,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 9.38761296888889,
+      "age_hours": 9.460947443888887,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "9h 23m ago",
+      "last_active_human": "9h 27m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6526,14 +6368,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 10.114279635555556,
+      "age_hours": 10.187614110555554,
       "staleness_label": "red",
       "light": "red",
-      "event_count": 112,
+      "event_count": 101,
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "last_active": "2026-04-20T10:48:39Z",
-      "last_active_human": "10h 6m ago",
+      "last_active_human": "10h 11m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6548,14 +6390,14 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 13.242890746666667,
+      "age_hours": 13.316225221666667,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T07:40:56Z",
-      "last_active_human": "13h 14m ago",
+      "last_active_human": "13h 18m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -6570,14 +6412,14 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 13.322057413333335,
+      "age_hours": 13.395391888333332,
       "staleness_label": "red",
       "light": "red",
       "event_count": 31,
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "last_active": "2026-04-20T07:36:11Z",
-      "last_active_human": "13h 19m ago",
+      "last_active_human": "13h 23m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -6587,6 +6429,17 @@
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T20:57:07Z",
+      "time_local": "2026-04-20T22:57+02:00",
+      "header": null,
+      "actions": [
+        "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPruning. Use global prune or trim extractor tools/recall."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260420T205707Z_000001"
+    },
     {
       "time_utc": "2026-04-20T20:20:23Z",
       "time_local": "2026-04-20T22:20+02:00",
@@ -6680,1558 +6533,19 @@
   "audits": [],
   "blockers": [],
   "last_cron": {
-    "time_utc": "2026-04-20T20:20:23Z",
-    "time_local": "2026-04-20T22:20+02:00",
+    "time_utc": "2026-04-20T20:57:07Z",
+    "time_local": "2026-04-20T22:57+02:00",
     "header": null,
     "actions": [
-      "Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the per-agent `contextPruning` key FORGE's execution sequence called for, and neither FORGE nor Hermes-ops has picked it up yet. Gateway health is green, so this is a design question rather than an outage. Only movement since the 18:12 UTC update has been the OinXtractor quality dashboard re-publishing its live metrics on schedule (latency and unknown-rate green, per-trader accuracy still `proxy_only`, corrections-loop `pending` until 171 ships).\n\nPhase B stays in the review-and-verify lull — zero merges, PRs, or canary verdicts in the last four-plus hours. Agent freshness: ANVIL silent ~9.5h, VIGIL ~12.7h (Wave 2 closing verdicts were the last thing either posted), GUARDIAN ~4.3h (the 171 KPI baseline), FORGE ~4.4h (the 171 plan revision). The open warnings on the dashboard are housekeeping only — stale PR-review timeouts on A1/A2/B1/B13/B14 that trace back to the event-log backfill, not live open PRs. B3's 7-day reconciliation clock toward the 26 Apr B4 cutover is still ticking clean. Nothing needs you tonight; the 171 design question is the one item worth picking up tomorrow, and FORGE or Hermes-ops should be able to clear it without parking it on you."
+      "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPruning. Use global prune or trim extractor tools/recall."
     ],
     "next": null,
     "blocker": null,
-    "path": "evt_20260420T202023Z_000001"
+    "path": "evt_20260420T205707Z_000001"
   },
-  "commit": "41b7c7cb4e40",
+  "commit": "3c70d5a3458a",
   "_from_stream": true,
   "_tasks_map": {
-    "B3": {
-      "id": "B3",
-      "status": "CANARY",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "phase": "B",
-      "last_event_ts": "2026-04-20T13:15:36Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_agent": "hermes",
-      "event_count": 22,
-      "prs": [
-        {
-          "repo": "oinkdb-api",
-          "number": 3,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/3",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "canary_verdict": "PENDING",
-      "blocker": null,
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "hermes",
-        "mike",
-        "system",
-        "vigil"
-      ],
-      "events": [
-        {
-          "event_id": "evt_20260401T030620Z_000001",
-          "ts": "2026-04-01T03:06:20Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "b848ce4b528b3fd05eac2a615f18c8b2d5de266c",
-            "commit_subject": "B3: non-crypto asset-universe gate in signal_router",
-            "source": "git_log",
-            "source_fingerprint": "48f5ca74dc4515c2518ad03a"
-          }
-        },
-        {
-          "event_id": "evt_20260418T173000Z_000001",
-          "ts": "2026-04-18T17:30:00Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "oinkdb-api",
-          "branch": "feat/16-b3-b5-handlers",
-          "pr": 3,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 3,
-            "title": "feat(#16): PR-B3+B5 — filtered handlers (13) + registry endpoints (2)",
-            "source_fingerprint": "028278bdad2789dd7c1bf026"
-          }
-        },
-        {
-          "event_id": "evt_20260418T173106Z_000001",
-          "ts": "2026-04-18T17:31:06Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "oinkdb-api",
-          "branch": "feat/16-b3-b5-handlers",
-          "pr": 3,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": 3,
-            "commit_sha": "401b770bc4f39494888a70b890b81e0d000ee2c2",
-            "source_fingerprint": "febef316c71b9285437760e1"
-          }
-        },
-        {
-          "event_id": "evt_20260419T234202Z_000001",
-          "ts": "2026-04-19T23:42:02Z",
-          "event_type": "TASK_PLANNED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
-          "status": "NOT_STARTED",
-          "blocker": null,
-          "extra": {
-            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
-            "source_fingerprint": "6c3344beacccf69b550970c3"
-          }
-        },
-        {
-          "event_id": "evt_20260420T012831Z_000001",
-          "ts": "2026-04-20T01:28:31Z",
-          "event_type": "PROPOSAL_READY",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
-          "status": "PROPOSAL_REVIEW",
-          "blocker": null,
-          "extra": {
-            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
-            "source_fingerprint": "97698361ee4bae5e9ca161e5"
-          }
-        },
-        {
-          "event_id": "evt_20260420T013243Z_000001",
-          "ts": "2026-04-20T01:32:43Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "vigil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "vigil",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "f6c5df230cb2b68d1facacad",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T013452Z_000001",
-          "ts": "2026-04-20T01:34:52Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE0-REVIEW-R1.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE0-REVIEW-R1.md",
-            "phase_tag": "0",
-            "source_fingerprint": "4885c182236681ede5c7ddd5",
-            "round": 1,
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T013703Z_000001",
-          "ts": "2026-04-20T01:37:03Z",
-          "event_type": "PROPOSAL_APPROVED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "system",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-APPROVED.marker",
-          "status": "CODE",
-          "blocker": null,
-          "extra": {
-            "approver": "vigil+guardian",
-            "source_fingerprint": "b562befe94f1522d45f20597"
-          }
-        },
-        {
-          "event_id": "evt_20260420T014732Z_000001",
-          "ts": "2026-04-20T01:47:32Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "oinkfarm",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "a91278ae679d6f8762a203b6e181dc7272dedef0",
-            "commit_subject": "B3: Dual-write verification layer + reconciliation + ghost closure fix",
-            "source": "git_log",
-            "source_fingerprint": "e77072e32baecbf159a858f1"
-          }
-        },
-        {
-          "event_id": "evt_20260420T014740Z_000001",
-          "ts": "2026-04-20T01:47:40Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "oink-sync",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "92f7adacd6e7df7bbcefd5cd0c8aee85d6820027",
-            "commit_subject": "B3: Re-vendor oink_db.py with dual-write support",
-            "source": "git_log",
-            "source_fingerprint": "42233a9da75d971f945e38ea"
-          }
-        },
-        {
-          "event_id": "evt_20260420T014741Z_000001",
-          "ts": "2026-04-20T01:47:41Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "07940ce971e18d34c81979d3434d16d52352ae0f",
-            "commit_subject": "B3: Re-vendor oink_db.py + ghost closure fix (Q-B3-4)",
-            "source": "git_log",
-            "source_fingerprint": "6ac8a901f7c721446bc4bcb5"
-          }
-        },
-        {
-          "event_id": "evt_20260420T015721Z_000001",
-          "ts": "2026-04-20T01:57:21Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "vigil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE1-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "vigil",
-            "score": 7.55,
-            "verdict": "REVISE",
-            "review_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE1-REVIEW.md",
-            "phase_tag": "1",
-            "source_fingerprint": "07f6cf2cd35808df34be8946"
-          }
-        },
-        {
-          "event_id": "evt_20260420T021926Z_000001",
-          "ts": "2026-04-20T02:19:26Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.6,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW.md",
-            "phase_tag": "1",
-            "source_fingerprint": "6af8a1c2b1259d00e86dba69"
-          }
-        },
-        {
-          "event_id": "evt_20260420T022129Z_000001",
-          "ts": "2026-04-20T02:21:29Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.6,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
-            "phase_tag": "1",
-            "source_fingerprint": "22c0e0c739434bc3e7eb07d6",
-            "round": 2
-          }
-        },
-        {
-          "event_id": "evt_20260420T022430Z_000001",
-          "ts": "2026-04-20T02:24:30Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "oinkfarm",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "6af042f7327445673a3e0a67e9af39ed09eaf2de",
-            "commit_subject": "Merge B3: Parallel write verification layer (DualWriteConnection + reconcile_stores.py)",
-            "source": "git_log",
-            "source_fingerprint": "016c647a998b45ece45fcda2"
-          }
-        },
-        {
-          "event_id": "evt_20260420T022442Z_000001",
-          "ts": "2026-04-20T02:24:42Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "oink-sync",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "73d074f13ad6441eb7ae68c0927763d9d56dc0bb",
-            "commit_subject": "Merge B3: Re-vendor oink_db.py (DualWriteConnection + executemany fix)",
-            "source": "git_log",
-            "source_fingerprint": "32e1bb4fd38ad5578ddea76b"
-          }
-        },
-        {
-          "event_id": "evt_20260420T022446Z_000001",
-          "ts": "2026-04-20T02:24:46Z",
-          "event_type": "MERGED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "cc70e5ba5f9ce9c99aa25c4bebbbc7668320ac6c",
-            "commit_subject": "Merge B3: Re-vendor oink_db.py (DualWriteConnection) + ghost closure fix (signal_router.py)",
-            "source": "git_log",
-            "source_fingerprint": "b9d5b65c7ba37fa9673a5f91"
-          }
-        },
-        {
-          "event_id": "evt_20260420T033257Z_000001",
-          "ts": "2026-04-20T03:32:57Z",
-          "event_type": "CANARY_STARTED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
-          "status": "CANARY",
-          "blocker": null,
-          "extra": {
-            "baseline_ts": "2026-04-20T03:32:57Z",
-            "report_path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
-            "source_fingerprint": "6a92b339c8613b7d1f2d2cc6"
-          }
-        },
-        {
-          "event_id": "evt_20260420T095550Z_000009",
-          "ts": "2026-04-20T09:55:50Z",
-          "event_type": "DECISION_NEEDED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "BLOCKED",
-          "blocker": "waiting_for_mike_decision",
-          "extra": {
-            "question_id": "Q-B3-2",
-            "question": "Minimum verification period: 7 or 14 days?",
-            "options": [
-              "7d",
-              "14d"
-            ],
-            "source_fingerprint": "e0f6c0070547fac685b06d3f"
-          }
-        },
-        {
-          "event_id": "evt_20260420T113215Z_000001",
-          "ts": "2026-04-20T11:32:15Z",
-          "event_type": "DECISION_RESOLVED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "mike",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "question_id": "Q-B3-2",
-            "answer": "7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock to day 0. Cutover eligible when 7 consecutive clean daily reports. B3 merged 2026-04-19; earliest B4 cutover 2026-04-26 if no resets.",
-            "authority": "mike_direct",
-            "decided_at": "2026-04-20T11:50:00Z",
-            "source": "hermes_one_pager"
-          }
-        },
-        {
-          "event_id": "evt_20260420T113521Z_000001",
-          "ts": "2026-04-20T11:35:21Z",
-          "event_type": "TASK_PLANNED",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "plan_path": "forge-workspace/plans/TASK-B3-plan.md",
-            "revision": "Q-B3-2 resolved: 7-day + reset rule"
-          }
-        },
-        {
-          "event_id": "evt_20260420T131536Z_000001",
-          "ts": "2026-04-20T13:15:36Z",
-          "event_type": "SPRINT_NOTE",
-          "task_id": "B3",
-          "phase": "B",
-          "wave": 1,
-          "agent": "hermes",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "text": "B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until upstream prerequisites (P4 PG install, P5 psycopg install, P6 B2 migration run) are satisfied. B3-MERGED.marker lines 41-48 explicitly document the activation sequence as 5 gated steps. Flipping the flag now would silently no-op: psycopg is not installed, so oink_db.py:110-119 auto-disables _DB_DUAL_WRITE with a warning. ANVIL was NOT dispatched — dispatching would mask real blockers (Mike Q-B2-4/Q-B2-5, PG provisioning, migration run, GUARDIAN signoff). Earliest B4 cutover cannot be 2026-04-26; real earliest = (activation_date + 7d) where activation_date is gated on the unblock chain.",
-            "note_type": "DUAL_WRITE_ACTIVATION_GAP_INVESTIGATION",
-            "verdict_letter": "B-negated",
-            "evidence": {
-              "b3_marker_activation_gate_lines": "41-48",
-              "psql_missing": true,
-              "psycopg_missing": true,
-              "postgresql_service_missing": true,
-              "b2_migration_not_run": true,
-              "oink_db_safe_gate_lines": "110-119"
-            }
-          }
-        }
-      ]
-    },
-    "B5": {
-      "id": "B5",
-      "status": "CANARY",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "phase": "B",
-      "last_event_ts": "2026-04-20T07:02:47Z",
-      "last_event_type": "CANARY_STARTED",
-      "last_agent": "guardian",
-      "event_count": 12,
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 25,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/25",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "canary_verdict": "PENDING",
-      "blocker": null,
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "system",
-        "vigil"
-      ],
-      "events": [
-        {
-          "event_id": "evt_20260401T180749Z_000001",
-          "ts": "2026-04-01T18:07:49Z",
-          "event_type": "MERGED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "01343f61cba592186c8c998f13121eab78e04b66",
-            "commit_subject": "B5: direction validation guardrail — auto-correct SL/TP vs direction mismatches",
-            "source": "git_log",
-            "source_fingerprint": "debce6241f3b659b386ee44f"
-          }
-        },
-        {
-          "event_id": "evt_20260420T031819Z_000001",
-          "ts": "2026-04-20T03:18:19Z",
-          "event_type": "TASK_PLANNED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B5-plan.md",
-          "status": "NOT_STARTED",
-          "blocker": null,
-          "extra": {
-            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B5-plan.md",
-            "source_fingerprint": "e5cd8720c50a47f5f4ef054e"
-          }
-        },
-        {
-          "event_id": "evt_20260420T034822Z_000001",
-          "ts": "2026-04-20T03:48:22Z",
-          "event_type": "PROPOSAL_READY",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B5-PHASE0-PROPOSAL.md",
-          "status": "PROPOSAL_REVIEW",
-          "blocker": null,
-          "extra": {
-            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B5-PHASE0-PROPOSAL.md",
-            "source_fingerprint": "be5c3d9f154405ae9c17b8e7"
-          }
-        },
-        {
-          "event_id": "evt_20260420T035102Z_000001",
-          "ts": "2026-04-20T03:51:02Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "vigil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "vigil",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "e1e3a743f8845bb674f43430",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T035826Z_000001",
-          "ts": "2026-04-20T03:58:26Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "8be4da98660268ee8569f0f1",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T040144Z_000001",
-          "ts": "2026-04-20T04:01:44Z",
-          "event_type": "PROPOSAL_APPROVED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "system",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B5-PHASE0-APPROVED.marker",
-          "status": "CODE",
-          "blocker": null,
-          "extra": {
-            "approver": "vigil+guardian",
-            "source_fingerprint": "dc68c3827e3f92302ebb06bb"
-          }
-        },
-        {
-          "event_id": "evt_20260420T044241Z_000001",
-          "ts": "2026-04-20T04:42:41Z",
-          "event_type": "MERGED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "e1f1fb6601a2804126534b63f2ad8394e13e837d",
-            "commit_subject": "B5: extract SignalEmitter from signal_router",
-            "source": "git_log",
-            "source_fingerprint": "dd81fc254c73764b908619cb"
-          }
-        },
-        {
-          "event_id": "evt_20260420T044257Z_000001",
-          "ts": "2026-04-20T04:42:57Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "anvil/B5-emitter-extraction",
-          "pr": 25,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 25,
-            "title": "B5: extract SignalEmitter from signal_router",
-            "source_fingerprint": "93e685f3d8913c65646e6e77"
-          }
-        },
-        {
-          "event_id": "evt_20260420T044704Z_000001",
-          "ts": "2026-04-20T04:47:04Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "vigil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE1-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "vigil",
-            "score": 9.85,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE1-REVIEW.md",
-            "phase_tag": "1",
-            "source_fingerprint": "1baea0f17ee06a4f7e2235ce"
-          }
-        },
-        {
-          "event_id": "evt_20260420T044926Z_000001",
-          "ts": "2026-04-20T04:49:26Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE1-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.3,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE1-REVIEW.md",
-            "phase_tag": "1",
-            "source_fingerprint": "c3426d9eeaf6cce9f6d07dfa"
-          }
-        },
-        {
-          "event_id": "evt_20260420T045531Z_000001",
-          "ts": "2026-04-20T04:55:31Z",
-          "event_type": "MERGED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "anvil/B5-emitter-extraction",
-          "pr": 25,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": 25,
-            "commit_sha": "2e345bb6c14b4a02057e56218b038cb0da0cb2e5",
-            "source_fingerprint": "fa47d1b3a0ef221a4d7f9890"
-          }
-        },
-        {
-          "event_id": "evt_20260420T070247Z_000001",
-          "ts": "2026-04-20T07:02:47Z",
-          "event_type": "CANARY_STARTED",
-          "task_id": "B5",
-          "phase": "B",
-          "wave": 1,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/canary-reports/B5-CANARY.md",
-          "status": "CANARY",
-          "blocker": null,
-          "extra": {
-            "baseline_ts": "2026-04-20T07:02:47Z",
-            "report_path": "/home/oinkv/guardian-workspace/canary-reports/B5-CANARY.md",
-            "source_fingerprint": "f3e9147bedb9f6c86283ea80"
-          }
-        }
-      ]
-    },
-    "B6": {
-      "id": "B6",
-      "status": "MERGED",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "phase": "B",
-      "last_event_ts": "2026-04-20T06:46:18Z",
-      "last_event_type": "MERGED",
-      "last_agent": "anvil",
-      "event_count": 7,
-      "prs": [],
-      "canary_verdict": null,
-      "blocker": null,
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "system",
-        "vigil"
-      ],
-      "events": [
-        {
-          "event_id": "evt_20260402T061112Z_000001",
-          "ts": "2026-04-02T06:11:12Z",
-          "event_type": "MERGED",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "3f8be839e8282fae45f8be38171889004c45ded1",
-            "commit_subject": "B6: normalize verbose OinXtractor direction lines",
-            "source": "git_log",
-            "source_fingerprint": "1c04ddbf494cebb71bc28f4f"
-          }
-        },
-        {
-          "event_id": "evt_20260420T055315Z_000001",
-          "ts": "2026-04-20T05:53:15Z",
-          "event_type": "TASK_PLANNED",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
-          "status": "NOT_STARTED",
-          "blocker": null,
-          "extra": {
-            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
-            "source_fingerprint": "1b380ce5752c5fc8c139e084"
-          }
-        },
-        {
-          "event_id": "evt_20260420T062734Z_000001",
-          "ts": "2026-04-20T06:27:34Z",
-          "event_type": "PROPOSAL_READY",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
-          "status": "PROPOSAL_REVIEW",
-          "blocker": null,
-          "extra": {
-            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
-            "source_fingerprint": "1160aa3dd890e7d5eac3750a"
-          }
-        },
-        {
-          "event_id": "evt_20260420T062950Z_000001",
-          "ts": "2026-04-20T06:29:50Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "vigil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B6-VIGIL-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "vigil",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/vigil-workspace/reviews/B6-VIGIL-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "c45e60ccc6fd6b5a42a237d8",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T063038Z_000001",
-          "ts": "2026-04-20T06:30:38Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "ffaf0020e9903b1920730e68",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T063951Z_000001",
-          "ts": "2026-04-20T06:39:51Z",
-          "event_type": "PROPOSAL_APPROVED",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "system",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker",
-          "status": "CODE",
-          "blocker": null,
-          "extra": {
-            "approver": "vigil+guardian",
-            "source_fingerprint": "de8af3d0758ebb6965ac8922"
-          }
-        },
-        {
-          "event_id": "evt_20260420T064618Z_000001",
-          "ts": "2026-04-20T06:46:18Z",
-          "event_type": "MERGED",
-          "task_id": "B6",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "945b6a542b706fdfd335de81564abc8f9d102553",
-            "commit_subject": "B6: extract Cornix + Chroma parsers from signal_router.py",
-            "source": "git_log",
-            "source_fingerprint": "65f59a8aa42f6e37cd3f2823"
-          }
-        }
-      ]
-    },
-    "B8": {
-      "id": "B8",
-      "status": "CANARY",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "phase": "B",
-      "last_event_ts": "2026-04-20T10:10:58Z",
-      "last_event_type": "CANARY_STARTED",
-      "last_agent": "guardian",
-      "event_count": 11,
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 26,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/26",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "canary_verdict": "PENDING",
-      "blocker": null,
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "system",
-        "vigil"
-      ],
-      "events": [
-        {
-          "event_id": "evt_20260402T221336Z_000001",
-          "ts": "2026-04-02T22:13:36Z",
-          "event_type": "MERGED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "c56d580ce8669a517d5e5e0c5ec1a13c05ea1427",
-            "commit_subject": "B8: common-path commentary-type gate",
-            "source": "git_log",
-            "source_fingerprint": "3b90eb11f6f5be39ae020c80"
-          }
-        },
-        {
-          "event_id": "evt_20260420T055201Z_000001",
-          "ts": "2026-04-20T05:52:01Z",
-          "event_type": "TASK_PLANNED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B8-plan.md",
-          "status": "NOT_STARTED",
-          "blocker": null,
-          "extra": {
-            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B8-plan.md",
-            "source_fingerprint": "5a46c350c7a9293fc75286b7"
-          }
-        },
-        {
-          "event_id": "evt_20260420T073111Z_000001",
-          "ts": "2026-04-20T07:31:11Z",
-          "event_type": "PROPOSAL_READY",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B8-PHASE0-PROPOSAL.md",
-          "status": "PROPOSAL_REVIEW",
-          "blocker": null,
-          "extra": {
-            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B8-PHASE0-PROPOSAL.md",
-            "source_fingerprint": "66af4833c702e10ae4d6585b"
-          }
-        },
-        {
-          "event_id": "evt_20260420T073611Z_000001",
-          "ts": "2026-04-20T07:36:11Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "vigil",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B8-VIGIL-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "vigil",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/vigil-workspace/reviews/B8-VIGIL-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "e2b0be373e2d45a111aecd57",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T073657Z_000001",
-          "ts": "2026-04-20T07:36:57Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE0-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.5,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE0-REVIEW.md",
-            "phase_tag": "0",
-            "source_fingerprint": "38c0e62f3f9fb21072b65fa6",
-            "score_note": "phase0_qualitative"
-          }
-        },
-        {
-          "event_id": "evt_20260420T074056Z_000001",
-          "ts": "2026-04-20T07:40:56Z",
-          "event_type": "PROPOSAL_APPROVED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "system",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B8-PHASE0-APPROVED.marker",
-          "status": "CODE",
-          "blocker": null,
-          "extra": {
-            "approver": "vigil+guardian",
-            "source_fingerprint": "79d79b297004be75737d903d"
-          }
-        },
-        {
-          "event_id": "evt_20260420T092942Z_000001",
-          "ts": "2026-04-20T09:29:42Z",
-          "event_type": "MERGED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": null,
-            "commit_sha": "39447d18d4c5dea42a2fb8ce29dfb8b9a10850a9",
-            "commit_subject": "B8: extract cross-channel dedup to dedup.py",
-            "source": "git_log",
-            "source_fingerprint": "2d2857865e15483718aa2409"
-          }
-        },
-        {
-          "event_id": "evt_20260420T093624Z_000001",
-          "ts": "2026-04-20T09:36:24Z",
-          "event_type": "REVIEW_POSTED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE1-REVIEW.md",
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "reviewer": "guardian",
-            "score": 9.8,
-            "verdict": "PASS",
-            "review_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE1-REVIEW.md",
-            "phase_tag": "1",
-            "source_fingerprint": "6dbbf045f8f243341aa79b62"
-          }
-        },
-        {
-          "event_id": "evt_20260420T095424Z_000001",
-          "ts": "2026-04-20T09:54:24Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "anvil/B8-dedup-consolidation",
-          "pr": 26,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 26,
-            "title": "feat(B8): cross-channel dedup consolidation — extract dedup.py",
-            "source_fingerprint": "32e20bf1b04665fce902227c"
-          }
-        },
-        {
-          "event_id": "evt_20260420T095720Z_000001",
-          "ts": "2026-04-20T09:57:20Z",
-          "event_type": "MERGED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "anvil/B8-dedup-consolidation",
-          "pr": 26,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": 26,
-            "commit_sha": "6879e257702b3cf3fb9cf7477c40c56814e014a3",
-            "source_fingerprint": "ee748f733719cece1b328705"
-          }
-        },
-        {
-          "event_id": "evt_20260420T101058Z_000001",
-          "ts": "2026-04-20T10:10:58Z",
-          "event_type": "CANARY_STARTED",
-          "task_id": "B8",
-          "phase": "B",
-          "wave": 2,
-          "agent": "guardian",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/guardian-workspace/canary-reports/B8-CANARY.md",
-          "status": "CANARY",
-          "blocker": null,
-          "extra": {
-            "baseline_ts": "2026-04-20T10:10:58Z",
-            "report_path": "/home/oinkv/guardian-workspace/canary-reports/B8-CANARY.md",
-            "source_fingerprint": "fd63f1f66a2169619c5a614e"
-          }
-        }
-      ]
-    },
-    "B13": {
-      "id": "B13",
-      "status": "MERGED",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "phase": "B",
-      "last_event_ts": "2026-04-20T20:54:52Z",
-      "last_event_type": "DECISION_RESOLVED",
-      "last_agent": "hermes",
-      "event_count": 7,
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 3,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/3",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "signal-gateway",
-          "number": 5,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/5",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "canary_verdict": null,
-      "blocker": null,
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "hermes"
-      ],
-      "events": [
-        {
-          "event_id": "evt_20260413T220412Z_000001",
-          "ts": "2026-04-13T22:04:12Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "fix/47-preemit-noise-filter",
-          "pr": 3,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 3,
-            "title": "feat: B13 pre-emit lifecycle noise filter",
-            "source_fingerprint": "9614bf8a4854e01726fecf6e"
-          }
-        },
-        {
-          "event_id": "evt_20260414T090845Z_000001",
-          "ts": "2026-04-14T09:08:45Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "fix/47-preemit-lifecycle-filter",
-          "pr": 5,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 5,
-            "title": "feat: B13 pre-emit lifecycle noise filter (Issue #47)",
-            "source_fingerprint": "66ef6ae7f68dd120d3c935be"
-          }
-        },
-        {
-          "event_id": "evt_20260414T092811Z_000001",
-          "ts": "2026-04-14T09:28:11Z",
-          "event_type": "MERGED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "fix/47-preemit-lifecycle-filter",
-          "pr": 5,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": 5,
-            "commit_sha": "d8a612cc1bf09c1f54a04012ab12fe17dc776c30",
-            "source_fingerprint": "3bcb3ecc0bf816f98629a46a"
-          }
-        },
-        {
-          "event_id": "evt_20260420T095322Z_000001",
-          "ts": "2026-04-20T09:53:22Z",
-          "event_type": "TASK_PLANNED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": 4,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
-          "status": "NOT_STARTED",
-          "blocker": null,
-          "extra": {
-            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
-            "source_fingerprint": "de2e2d7e34e6f5692d5889e9"
-          }
-        },
-        {
-          "event_id": "evt_20260420T095550Z_000014",
-          "ts": "2026-04-20T09:55:50Z",
-          "event_type": "DECISION_NEEDED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": 4,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": "BLOCKED",
-          "blocker": "waiting_for_mike_decision",
-          "extra": {
-            "question_id": "Q-HH-3",
-            "question": "Docker Compose: single host or multi-host?",
-            "options": [
-              "single",
-              "multi"
-            ],
-            "source_fingerprint": "abb1fdc42b4ace5d28b254fc"
-          }
-        },
-        {
-          "event_id": "evt_20260420T112153Z_000002",
-          "ts": "2026-04-20T11:21:53Z",
-          "event_type": "DECISION_NEEDED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": 4,
-          "agent": "forge",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "question_id": "Q-HH-3",
-            "question": "Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-            "options": [
-              "single-host only",
-              "include multi-host preparation"
-            ]
-          }
-        },
-        {
-          "event_id": "evt_20260420T205452Z_000004",
-          "ts": "2026-04-20T20:54:52Z",
-          "event_type": "DECISION_RESOLVED",
-          "task_id": "B13",
-          "phase": "B",
-          "wave": null,
-          "agent": "hermes",
-          "repo": null,
-          "branch": null,
-          "pr": null,
-          "artifact_path": null,
-          "status": null,
-          "blocker": null,
-          "extra": {
-            "question_id": "Q-HH-3",
-            "answer": "Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
-            "authority": "agent_council_consensus",
-            "approvers": [
-              "oinkdb",
-              "forge",
-              "oinkv"
-            ],
-            "source": "automated_closure_from_gh_comments"
-          }
-        }
-      ]
-    },
-    "B14": {
-      "id": "B14",
-      "status": "MERGED",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "phase": "B",
-      "last_event_ts": "2026-04-17T09:46:54Z",
-      "last_event_type": "MERGED",
-      "last_agent": "anvil",
-      "event_count": 4,
-      "prs": [
-        {
-          "repo": "signal-gateway",
-          "number": 4,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/4",
-          "merge_commit": null,
-          "commit_url": null
-        },
-        {
-          "repo": "oinkfarm",
-          "number": 63,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/63",
-          "merge_commit": null,
-          "commit_url": null
-        }
-      ],
-      "canary_verdict": null,
-      "blocker": null,
-      "agents_touched": [
-        "anvil"
-      ],
-      "events": [
-        {
-          "event_id": "evt_20260414T080153Z_000001",
-          "ts": "2026-04-14T08:01:53Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B14",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "fix/b14-sl-entry-overwrite-guard",
-          "pr": 4,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 4,
-            "title": "B14: SL→entry overwrite guard",
-            "source_fingerprint": "b7e7b0f6b788611895bb1bc6"
-          }
-        },
-        {
-          "event_id": "evt_20260415T023710Z_000001",
-          "ts": "2026-04-15T02:37:10Z",
-          "event_type": "PR_OPENED",
-          "task_id": "B14",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "oinkfarm",
-          "branch": "fix/micro-gate-sl-overwrite",
-          "pr": 63,
-          "artifact_path": null,
-          "status": "PR_REVIEW",
-          "blocker": null,
-          "extra": {
-            "pr": 63,
-            "title": "fix: micro-gate SL→entry overwrite guards (A15 + B14)",
-            "source_fingerprint": "6df24092110ca059d061e663"
-          }
-        },
-        {
-          "event_id": "evt_20260415T023822Z_000001",
-          "ts": "2026-04-15T02:38:22Z",
-          "event_type": "MERGED",
-          "task_id": "B14",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "oinkfarm",
-          "branch": "fix/micro-gate-sl-overwrite",
-          "pr": 63,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": 63,
-            "commit_sha": "11a10c31f9d6335daa99c50472144201ce8f9a67",
-            "source_fingerprint": "59bf8a2a1acfa44b0203d016"
-          }
-        },
-        {
-          "event_id": "evt_20260417T094654Z_000001",
-          "ts": "2026-04-17T09:46:54Z",
-          "event_type": "MERGED",
-          "task_id": "B14",
-          "phase": "B",
-          "wave": 4,
-          "agent": "anvil",
-          "repo": "signal-gateway",
-          "branch": "fix/b14-sl-entry-overwrite-guard",
-          "pr": 4,
-          "artifact_path": null,
-          "status": "MERGED",
-          "blocker": null,
-          "extra": {
-            "pr": 4,
-            "commit_sha": "1883461edd38c8ffdb46d4af6dbce8759f10a5fd",
-            "source_fingerprint": "846992887c0fb029898c0323"
-          }
-        }
-      ]
-    },
     "B1": {
       "id": "B1",
       "status": "CANARY",
@@ -10242,6 +8556,500 @@
               "oinkdb"
             ],
             "source": "automated_closure_from_gh_comments"
+          }
+        }
+      ]
+    },
+    "B3": {
+      "id": "B3",
+      "status": "CANARY",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "B",
+      "last_event_ts": "2026-04-20T13:15:36Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_agent": "hermes",
+      "event_count": 21,
+      "prs": [
+        {
+          "repo": "oinkdb-api",
+          "number": 3,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/3",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "canary_verdict": "PENDING",
+      "blocker": null,
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "hermes",
+        "mike",
+        "system",
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260418T173000Z_000001",
+          "ts": "2026-04-18T17:30:00Z",
+          "event_type": "PR_OPENED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "oinkdb-api",
+          "branch": "feat/16-b3-b5-handlers",
+          "pr": 3,
+          "artifact_path": null,
+          "status": "PR_REVIEW",
+          "blocker": null,
+          "extra": {
+            "pr": 3,
+            "title": "feat(#16): PR-B3+B5 — filtered handlers (13) + registry endpoints (2)",
+            "source_fingerprint": "028278bdad2789dd7c1bf026"
+          }
+        },
+        {
+          "event_id": "evt_20260418T173106Z_000001",
+          "ts": "2026-04-18T17:31:06Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "oinkdb-api",
+          "branch": "feat/16-b3-b5-handlers",
+          "pr": 3,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": 3,
+            "commit_sha": "401b770bc4f39494888a70b890b81e0d000ee2c2",
+            "source_fingerprint": "febef316c71b9285437760e1"
+          }
+        },
+        {
+          "event_id": "evt_20260419T234202Z_000001",
+          "ts": "2026-04-19T23:42:02Z",
+          "event_type": "TASK_PLANNED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
+          "status": "NOT_STARTED",
+          "blocker": null,
+          "extra": {
+            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
+            "source_fingerprint": "6c3344beacccf69b550970c3"
+          }
+        },
+        {
+          "event_id": "evt_20260420T012831Z_000001",
+          "ts": "2026-04-20T01:28:31Z",
+          "event_type": "PROPOSAL_READY",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
+          "status": "PROPOSAL_REVIEW",
+          "blocker": null,
+          "extra": {
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
+            "source_fingerprint": "97698361ee4bae5e9ca161e5"
+          }
+        },
+        {
+          "event_id": "evt_20260420T013243Z_000001",
+          "ts": "2026-04-20T01:32:43Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "vigil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "f6c5df230cb2b68d1facacad",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T013452Z_000001",
+          "ts": "2026-04-20T01:34:52Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE0-REVIEW-R1.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE0-REVIEW-R1.md",
+            "phase_tag": "0",
+            "source_fingerprint": "4885c182236681ede5c7ddd5",
+            "round": 1,
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T013703Z_000001",
+          "ts": "2026-04-20T01:37:03Z",
+          "event_type": "PROPOSAL_APPROVED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "system",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-APPROVED.marker",
+          "status": "CODE",
+          "blocker": null,
+          "extra": {
+            "approver": "vigil+guardian",
+            "source_fingerprint": "b562befe94f1522d45f20597"
+          }
+        },
+        {
+          "event_id": "evt_20260420T014732Z_000001",
+          "ts": "2026-04-20T01:47:32Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "oinkfarm",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "a91278ae679d6f8762a203b6e181dc7272dedef0",
+            "commit_subject": "B3: Dual-write verification layer + reconciliation + ghost closure fix",
+            "source": "git_log",
+            "source_fingerprint": "e77072e32baecbf159a858f1"
+          }
+        },
+        {
+          "event_id": "evt_20260420T014740Z_000001",
+          "ts": "2026-04-20T01:47:40Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "oink-sync",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "92f7adacd6e7df7bbcefd5cd0c8aee85d6820027",
+            "commit_subject": "B3: Re-vendor oink_db.py with dual-write support",
+            "source": "git_log",
+            "source_fingerprint": "42233a9da75d971f945e38ea"
+          }
+        },
+        {
+          "event_id": "evt_20260420T014741Z_000001",
+          "ts": "2026-04-20T01:47:41Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "07940ce971e18d34c81979d3434d16d52352ae0f",
+            "commit_subject": "B3: Re-vendor oink_db.py + ghost closure fix (Q-B3-4)",
+            "source": "git_log",
+            "source_fingerprint": "6ac8a901f7c721446bc4bcb5"
+          }
+        },
+        {
+          "event_id": "evt_20260420T015721Z_000001",
+          "ts": "2026-04-20T01:57:21Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "vigil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE1-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 7.55,
+            "verdict": "REVISE",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE1-REVIEW.md",
+            "phase_tag": "1",
+            "source_fingerprint": "07f6cf2cd35808df34be8946"
+          }
+        },
+        {
+          "event_id": "evt_20260420T021926Z_000001",
+          "ts": "2026-04-20T02:19:26Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.6,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW.md",
+            "phase_tag": "1",
+            "source_fingerprint": "6af8a1c2b1259d00e86dba69"
+          }
+        },
+        {
+          "event_id": "evt_20260420T022129Z_000001",
+          "ts": "2026-04-20T02:21:29Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.6,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
+            "phase_tag": "1",
+            "source_fingerprint": "22c0e0c739434bc3e7eb07d6",
+            "round": 2
+          }
+        },
+        {
+          "event_id": "evt_20260420T022430Z_000001",
+          "ts": "2026-04-20T02:24:30Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "oinkfarm",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "6af042f7327445673a3e0a67e9af39ed09eaf2de",
+            "commit_subject": "Merge B3: Parallel write verification layer (DualWriteConnection + reconcile_stores.py)",
+            "source": "git_log",
+            "source_fingerprint": "016c647a998b45ece45fcda2"
+          }
+        },
+        {
+          "event_id": "evt_20260420T022442Z_000001",
+          "ts": "2026-04-20T02:24:42Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "oink-sync",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "73d074f13ad6441eb7ae68c0927763d9d56dc0bb",
+            "commit_subject": "Merge B3: Re-vendor oink_db.py (DualWriteConnection + executemany fix)",
+            "source": "git_log",
+            "source_fingerprint": "32e1bb4fd38ad5578ddea76b"
+          }
+        },
+        {
+          "event_id": "evt_20260420T022446Z_000001",
+          "ts": "2026-04-20T02:24:46Z",
+          "event_type": "MERGED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "cc70e5ba5f9ce9c99aa25c4bebbbc7668320ac6c",
+            "commit_subject": "Merge B3: Re-vendor oink_db.py (DualWriteConnection) + ghost closure fix (signal_router.py)",
+            "source": "git_log",
+            "source_fingerprint": "b9d5b65c7ba37fa9673a5f91"
+          }
+        },
+        {
+          "event_id": "evt_20260420T033257Z_000001",
+          "ts": "2026-04-20T03:32:57Z",
+          "event_type": "CANARY_STARTED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
+          "status": "CANARY",
+          "blocker": null,
+          "extra": {
+            "baseline_ts": "2026-04-20T03:32:57Z",
+            "report_path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
+            "source_fingerprint": "6a92b339c8613b7d1f2d2cc6"
+          }
+        },
+        {
+          "event_id": "evt_20260420T095550Z_000009",
+          "ts": "2026-04-20T09:55:50Z",
+          "event_type": "DECISION_NEEDED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "BLOCKED",
+          "blocker": "waiting_for_mike_decision",
+          "extra": {
+            "question_id": "Q-B3-2",
+            "question": "Minimum verification period: 7 or 14 days?",
+            "options": [
+              "7d",
+              "14d"
+            ],
+            "source_fingerprint": "e0f6c0070547fac685b06d3f"
+          }
+        },
+        {
+          "event_id": "evt_20260420T113215Z_000001",
+          "ts": "2026-04-20T11:32:15Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "mike",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-B3-2",
+            "answer": "7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock to day 0. Cutover eligible when 7 consecutive clean daily reports. B3 merged 2026-04-19; earliest B4 cutover 2026-04-26 if no resets.",
+            "authority": "mike_direct",
+            "decided_at": "2026-04-20T11:50:00Z",
+            "source": "hermes_one_pager"
+          }
+        },
+        {
+          "event_id": "evt_20260420T113521Z_000001",
+          "ts": "2026-04-20T11:35:21Z",
+          "event_type": "TASK_PLANNED",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "plan_path": "forge-workspace/plans/TASK-B3-plan.md",
+            "revision": "Q-B3-2 resolved: 7-day + reset rule"
+          }
+        },
+        {
+          "event_id": "evt_20260420T131536Z_000001",
+          "ts": "2026-04-20T13:15:36Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": 1,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "text": "B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until upstream prerequisites (P4 PG install, P5 psycopg install, P6 B2 migration run) are satisfied. B3-MERGED.marker lines 41-48 explicitly document the activation sequence as 5 gated steps. Flipping the flag now would silently no-op: psycopg is not installed, so oink_db.py:110-119 auto-disables _DB_DUAL_WRITE with a warning. ANVIL was NOT dispatched — dispatching would mask real blockers (Mike Q-B2-4/Q-B2-5, PG provisioning, migration run, GUARDIAN signoff). Earliest B4 cutover cannot be 2026-04-26; real earliest = (activation_date + 7d) where activation_date is gated on the unblock chain.",
+            "note_type": "DUAL_WRITE_ACTIVATION_GAP_INVESTIGATION",
+            "verdict_letter": "B-negated",
+            "evidence": {
+              "b3_marker_activation_gate_lines": "41-48",
+              "psql_missing": true,
+              "psycopg_missing": true,
+              "postgresql_service_missing": true,
+              "b2_migration_not_run": true,
+              "oink_db_safe_gate_lines": "110-119"
+            }
           }
         }
       ]
@@ -13241,6 +12049,661 @@
         }
       ]
     },
+    "B5": {
+      "id": "B5",
+      "status": "CANARY",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "B",
+      "last_event_ts": "2026-04-20T07:02:47Z",
+      "last_event_type": "CANARY_STARTED",
+      "last_agent": "guardian",
+      "event_count": 11,
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 25,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/25",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "canary_verdict": "PENDING",
+      "blocker": null,
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "system",
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260420T031819Z_000001",
+          "ts": "2026-04-20T03:18:19Z",
+          "event_type": "TASK_PLANNED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B5-plan.md",
+          "status": "NOT_STARTED",
+          "blocker": null,
+          "extra": {
+            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B5-plan.md",
+            "source_fingerprint": "e5cd8720c50a47f5f4ef054e"
+          }
+        },
+        {
+          "event_id": "evt_20260420T034822Z_000001",
+          "ts": "2026-04-20T03:48:22Z",
+          "event_type": "PROPOSAL_READY",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B5-PHASE0-PROPOSAL.md",
+          "status": "PROPOSAL_REVIEW",
+          "blocker": null,
+          "extra": {
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B5-PHASE0-PROPOSAL.md",
+            "source_fingerprint": "be5c3d9f154405ae9c17b8e7"
+          }
+        },
+        {
+          "event_id": "evt_20260420T035102Z_000001",
+          "ts": "2026-04-20T03:51:02Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "vigil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "e1e3a743f8845bb674f43430",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T035826Z_000001",
+          "ts": "2026-04-20T03:58:26Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "8be4da98660268ee8569f0f1",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T040144Z_000001",
+          "ts": "2026-04-20T04:01:44Z",
+          "event_type": "PROPOSAL_APPROVED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "system",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B5-PHASE0-APPROVED.marker",
+          "status": "CODE",
+          "blocker": null,
+          "extra": {
+            "approver": "vigil+guardian",
+            "source_fingerprint": "dc68c3827e3f92302ebb06bb"
+          }
+        },
+        {
+          "event_id": "evt_20260420T044241Z_000001",
+          "ts": "2026-04-20T04:42:41Z",
+          "event_type": "MERGED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "e1f1fb6601a2804126534b63f2ad8394e13e837d",
+            "commit_subject": "B5: extract SignalEmitter from signal_router",
+            "source": "git_log",
+            "source_fingerprint": "dd81fc254c73764b908619cb"
+          }
+        },
+        {
+          "event_id": "evt_20260420T044257Z_000001",
+          "ts": "2026-04-20T04:42:57Z",
+          "event_type": "PR_OPENED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": "anvil/B5-emitter-extraction",
+          "pr": 25,
+          "artifact_path": null,
+          "status": "PR_REVIEW",
+          "blocker": null,
+          "extra": {
+            "pr": 25,
+            "title": "B5: extract SignalEmitter from signal_router",
+            "source_fingerprint": "93e685f3d8913c65646e6e77"
+          }
+        },
+        {
+          "event_id": "evt_20260420T044704Z_000001",
+          "ts": "2026-04-20T04:47:04Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "vigil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE1-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.85,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B5-VIGIL-PHASE1-REVIEW.md",
+            "phase_tag": "1",
+            "source_fingerprint": "1baea0f17ee06a4f7e2235ce"
+          }
+        },
+        {
+          "event_id": "evt_20260420T044926Z_000001",
+          "ts": "2026-04-20T04:49:26Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE1-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.3,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B5-GUARDIAN-PHASE1-REVIEW.md",
+            "phase_tag": "1",
+            "source_fingerprint": "c3426d9eeaf6cce9f6d07dfa"
+          }
+        },
+        {
+          "event_id": "evt_20260420T045531Z_000001",
+          "ts": "2026-04-20T04:55:31Z",
+          "event_type": "MERGED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": "anvil/B5-emitter-extraction",
+          "pr": 25,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": 25,
+            "commit_sha": "2e345bb6c14b4a02057e56218b038cb0da0cb2e5",
+            "source_fingerprint": "fa47d1b3a0ef221a4d7f9890"
+          }
+        },
+        {
+          "event_id": "evt_20260420T070247Z_000001",
+          "ts": "2026-04-20T07:02:47Z",
+          "event_type": "CANARY_STARTED",
+          "task_id": "B5",
+          "phase": "B",
+          "wave": 1,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/canary-reports/B5-CANARY.md",
+          "status": "CANARY",
+          "blocker": null,
+          "extra": {
+            "baseline_ts": "2026-04-20T07:02:47Z",
+            "report_path": "/home/oinkv/guardian-workspace/canary-reports/B5-CANARY.md",
+            "source_fingerprint": "f3e9147bedb9f6c86283ea80"
+          }
+        }
+      ]
+    },
+    "B8": {
+      "id": "B8",
+      "status": "CANARY",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "B",
+      "last_event_ts": "2026-04-20T10:10:58Z",
+      "last_event_type": "CANARY_STARTED",
+      "last_agent": "guardian",
+      "event_count": 10,
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 26,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/26",
+          "merge_commit": null,
+          "commit_url": null
+        }
+      ],
+      "canary_verdict": "PENDING",
+      "blocker": null,
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "system",
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260420T055201Z_000001",
+          "ts": "2026-04-20T05:52:01Z",
+          "event_type": "TASK_PLANNED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B8-plan.md",
+          "status": "NOT_STARTED",
+          "blocker": null,
+          "extra": {
+            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B8-plan.md",
+            "source_fingerprint": "5a46c350c7a9293fc75286b7"
+          }
+        },
+        {
+          "event_id": "evt_20260420T073111Z_000001",
+          "ts": "2026-04-20T07:31:11Z",
+          "event_type": "PROPOSAL_READY",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B8-PHASE0-PROPOSAL.md",
+          "status": "PROPOSAL_REVIEW",
+          "blocker": null,
+          "extra": {
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B8-PHASE0-PROPOSAL.md",
+            "source_fingerprint": "66af4833c702e10ae4d6585b"
+          }
+        },
+        {
+          "event_id": "evt_20260420T073611Z_000001",
+          "ts": "2026-04-20T07:36:11Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "vigil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B8-VIGIL-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B8-VIGIL-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "e2b0be373e2d45a111aecd57",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T073657Z_000001",
+          "ts": "2026-04-20T07:36:57Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "38c0e62f3f9fb21072b65fa6",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T074056Z_000001",
+          "ts": "2026-04-20T07:40:56Z",
+          "event_type": "PROPOSAL_APPROVED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "system",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B8-PHASE0-APPROVED.marker",
+          "status": "CODE",
+          "blocker": null,
+          "extra": {
+            "approver": "vigil+guardian",
+            "source_fingerprint": "79d79b297004be75737d903d"
+          }
+        },
+        {
+          "event_id": "evt_20260420T092942Z_000001",
+          "ts": "2026-04-20T09:29:42Z",
+          "event_type": "MERGED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "39447d18d4c5dea42a2fb8ce29dfb8b9a10850a9",
+            "commit_subject": "B8: extract cross-channel dedup to dedup.py",
+            "source": "git_log",
+            "source_fingerprint": "2d2857865e15483718aa2409"
+          }
+        },
+        {
+          "event_id": "evt_20260420T093624Z_000001",
+          "ts": "2026-04-20T09:36:24Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE1-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.8,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B8-GUARDIAN-PHASE1-REVIEW.md",
+            "phase_tag": "1",
+            "source_fingerprint": "6dbbf045f8f243341aa79b62"
+          }
+        },
+        {
+          "event_id": "evt_20260420T095424Z_000001",
+          "ts": "2026-04-20T09:54:24Z",
+          "event_type": "PR_OPENED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": "anvil/B8-dedup-consolidation",
+          "pr": 26,
+          "artifact_path": null,
+          "status": "PR_REVIEW",
+          "blocker": null,
+          "extra": {
+            "pr": 26,
+            "title": "feat(B8): cross-channel dedup consolidation — extract dedup.py",
+            "source_fingerprint": "32e20bf1b04665fce902227c"
+          }
+        },
+        {
+          "event_id": "evt_20260420T095720Z_000001",
+          "ts": "2026-04-20T09:57:20Z",
+          "event_type": "MERGED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": "anvil/B8-dedup-consolidation",
+          "pr": 26,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": 26,
+            "commit_sha": "6879e257702b3cf3fb9cf7477c40c56814e014a3",
+            "source_fingerprint": "ee748f733719cece1b328705"
+          }
+        },
+        {
+          "event_id": "evt_20260420T101058Z_000001",
+          "ts": "2026-04-20T10:10:58Z",
+          "event_type": "CANARY_STARTED",
+          "task_id": "B8",
+          "phase": "B",
+          "wave": 2,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/canary-reports/B8-CANARY.md",
+          "status": "CANARY",
+          "blocker": null,
+          "extra": {
+            "baseline_ts": "2026-04-20T10:10:58Z",
+            "report_path": "/home/oinkv/guardian-workspace/canary-reports/B8-CANARY.md",
+            "source_fingerprint": "fd63f1f66a2169619c5a614e"
+          }
+        }
+      ]
+    },
+    "B6": {
+      "id": "B6",
+      "status": "MERGED",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "B",
+      "last_event_ts": "2026-04-20T06:46:18Z",
+      "last_event_type": "MERGED",
+      "last_agent": "anvil",
+      "event_count": 6,
+      "prs": [],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "system",
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260420T055315Z_000001",
+          "ts": "2026-04-20T05:53:15Z",
+          "event_type": "TASK_PLANNED",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": 2,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
+          "status": "NOT_STARTED",
+          "blocker": null,
+          "extra": {
+            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
+            "source_fingerprint": "1b380ce5752c5fc8c139e084"
+          }
+        },
+        {
+          "event_id": "evt_20260420T062734Z_000001",
+          "ts": "2026-04-20T06:27:34Z",
+          "event_type": "PROPOSAL_READY",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": 2,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
+          "status": "PROPOSAL_REVIEW",
+          "blocker": null,
+          "extra": {
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
+            "source_fingerprint": "1160aa3dd890e7d5eac3750a"
+          }
+        },
+        {
+          "event_id": "evt_20260420T062950Z_000001",
+          "ts": "2026-04-20T06:29:50Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": 2,
+          "agent": "vigil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/vigil-workspace/reviews/B6-VIGIL-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B6-VIGIL-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "c45e60ccc6fd6b5a42a237d8",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T063038Z_000001",
+          "ts": "2026-04-20T06:30:38Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": 2,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "guardian",
+            "score": 9.5,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
+            "phase_tag": "0",
+            "source_fingerprint": "ffaf0020e9903b1920730e68",
+            "score_note": "phase0_qualitative"
+          }
+        },
+        {
+          "event_id": "evt_20260420T063951Z_000001",
+          "ts": "2026-04-20T06:39:51Z",
+          "event_type": "PROPOSAL_APPROVED",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": 2,
+          "agent": "system",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker",
+          "status": "CODE",
+          "blocker": null,
+          "extra": {
+            "approver": "vigil+guardian",
+            "source_fingerprint": "de8af3d0758ebb6965ac8922"
+          }
+        },
+        {
+          "event_id": "evt_20260420T064618Z_000001",
+          "ts": "2026-04-20T06:46:18Z",
+          "event_type": "MERGED",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": 2,
+          "agent": "anvil",
+          "repo": "signal-gateway",
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MERGED",
+          "blocker": null,
+          "extra": {
+            "pr": null,
+            "commit_sha": "945b6a542b706fdfd335de81564abc8f9d102553",
+            "commit_subject": "B6: extract Cornix + Chroma parsers from signal_router.py",
+            "source": "git_log",
+            "source_fingerprint": "65f59a8aa42f6e37cd3f2823"
+          }
+        }
+      ]
+    },
     "B7": {
       "id": "B7",
       "status": "CANARY",
@@ -13558,6 +13021,118 @@
         }
       ]
     },
+    "B13": {
+      "id": "B13",
+      "status": "NOT_STARTED",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "B",
+      "last_event_ts": "2026-04-20T20:54:52Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 4,
+      "prs": [],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "forge",
+        "hermes"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260420T095322Z_000001",
+          "ts": "2026-04-20T09:53:22Z",
+          "event_type": "TASK_PLANNED",
+          "task_id": "B13",
+          "phase": "B",
+          "wave": 4,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
+          "status": "NOT_STARTED",
+          "blocker": null,
+          "extra": {
+            "plan_path": "/home/oinkv/forge-workspace/plans/TASK-B13-plan.md",
+            "source_fingerprint": "de2e2d7e34e6f5692d5889e9"
+          }
+        },
+        {
+          "event_id": "evt_20260420T095550Z_000014",
+          "ts": "2026-04-20T09:55:50Z",
+          "event_type": "DECISION_NEEDED",
+          "task_id": "B13",
+          "phase": "B",
+          "wave": 4,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "BLOCKED",
+          "blocker": "waiting_for_mike_decision",
+          "extra": {
+            "question_id": "Q-HH-3",
+            "question": "Docker Compose: single host or multi-host?",
+            "options": [
+              "single",
+              "multi"
+            ],
+            "source_fingerprint": "abb1fdc42b4ace5d28b254fc"
+          }
+        },
+        {
+          "event_id": "evt_20260420T112153Z_000002",
+          "ts": "2026-04-20T11:21:53Z",
+          "event_type": "DECISION_NEEDED",
+          "task_id": "B13",
+          "phase": "B",
+          "wave": 4,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-HH-3",
+            "question": "Single-host Docker Compose for B13, defer multi-host to Phase D+?",
+            "options": [
+              "single-host only",
+              "include multi-host preparation"
+            ]
+          }
+        },
+        {
+          "event_id": "evt_20260420T205452Z_000004",
+          "ts": "2026-04-20T20:54:52Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B13",
+          "phase": "B",
+          "wave": null,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-HH-3",
+            "answer": "Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope.",
+            "authority": "agent_council_consensus",
+            "approvers": [
+              "oinkdb",
+              "forge",
+              "oinkv"
+            ],
+            "source": "automated_closure_from_gh_comments"
+          }
+        }
+      ]
+    },
     "B15": {
       "id": "B15",
       "status": "NOT_STARTED",
@@ -13695,10 +13270,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "A",
-      "last_event_ts": "2026-04-20T20:54:52Z",
-      "last_event_type": "BLOCKER_RESOLVED",
-      "last_agent": "hermes",
-      "event_count": 2,
+      "last_event_ts": "2026-04-20T20:57:07Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_agent": "oinkv",
+      "event_count": 3,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
@@ -13743,239 +13318,30 @@
           "extra": {
             "reason": "design_clarification_needed"
           }
+        },
+        {
+          "event_id": "evt_20260420T205707Z_000001",
+          "ts": "2026-04-20T20:57:07Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "A171",
+          "phase": null,
+          "wave": null,
+          "agent": "oinkv",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "text": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPruning. Use global prune or trim extractor tools/recall.",
+            "step": "1-diag"
+          }
         }
       ]
     }
   },
   "_events_all_stream": [
-    {
-      "event_id": "evt_20260401T030620Z_000001",
-      "ts": "2026-04-01T03:06:20Z",
-      "event_type": "MERGED",
-      "task_id": "B3",
-      "phase": "B",
-      "wave": 1,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": null,
-      "pr": null,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": null,
-        "commit_sha": "b848ce4b528b3fd05eac2a615f18c8b2d5de266c",
-        "commit_subject": "B3: non-crypto asset-universe gate in signal_router",
-        "source": "git_log",
-        "source_fingerprint": "48f5ca74dc4515c2518ad03a"
-      }
-    },
-    {
-      "event_id": "evt_20260401T180749Z_000001",
-      "ts": "2026-04-01T18:07:49Z",
-      "event_type": "MERGED",
-      "task_id": "B5",
-      "phase": "B",
-      "wave": 1,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": null,
-      "pr": null,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": null,
-        "commit_sha": "01343f61cba592186c8c998f13121eab78e04b66",
-        "commit_subject": "B5: direction validation guardrail — auto-correct SL/TP vs direction mismatches",
-        "source": "git_log",
-        "source_fingerprint": "debce6241f3b659b386ee44f"
-      }
-    },
-    {
-      "event_id": "evt_20260402T061112Z_000001",
-      "ts": "2026-04-02T06:11:12Z",
-      "event_type": "MERGED",
-      "task_id": "B6",
-      "phase": "B",
-      "wave": 2,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": null,
-      "pr": null,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": null,
-        "commit_sha": "3f8be839e8282fae45f8be38171889004c45ded1",
-        "commit_subject": "B6: normalize verbose OinXtractor direction lines",
-        "source": "git_log",
-        "source_fingerprint": "1c04ddbf494cebb71bc28f4f"
-      }
-    },
-    {
-      "event_id": "evt_20260402T221336Z_000001",
-      "ts": "2026-04-02T22:13:36Z",
-      "event_type": "MERGED",
-      "task_id": "B8",
-      "phase": "B",
-      "wave": 2,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": null,
-      "pr": null,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": null,
-        "commit_sha": "c56d580ce8669a517d5e5e0c5ec1a13c05ea1427",
-        "commit_subject": "B8: common-path commentary-type gate",
-        "source": "git_log",
-        "source_fingerprint": "3b90eb11f6f5be39ae020c80"
-      }
-    },
-    {
-      "event_id": "evt_20260413T220412Z_000001",
-      "ts": "2026-04-13T22:04:12Z",
-      "event_type": "PR_OPENED",
-      "task_id": "B13",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": "fix/47-preemit-noise-filter",
-      "pr": 3,
-      "artifact_path": null,
-      "status": "PR_REVIEW",
-      "blocker": null,
-      "extra": {
-        "pr": 3,
-        "title": "feat: B13 pre-emit lifecycle noise filter",
-        "source_fingerprint": "9614bf8a4854e01726fecf6e"
-      }
-    },
-    {
-      "event_id": "evt_20260414T080153Z_000001",
-      "ts": "2026-04-14T08:01:53Z",
-      "event_type": "PR_OPENED",
-      "task_id": "B14",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": "fix/b14-sl-entry-overwrite-guard",
-      "pr": 4,
-      "artifact_path": null,
-      "status": "PR_REVIEW",
-      "blocker": null,
-      "extra": {
-        "pr": 4,
-        "title": "B14: SL→entry overwrite guard",
-        "source_fingerprint": "b7e7b0f6b788611895bb1bc6"
-      }
-    },
-    {
-      "event_id": "evt_20260414T090845Z_000001",
-      "ts": "2026-04-14T09:08:45Z",
-      "event_type": "PR_OPENED",
-      "task_id": "B13",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": "fix/47-preemit-lifecycle-filter",
-      "pr": 5,
-      "artifact_path": null,
-      "status": "PR_REVIEW",
-      "blocker": null,
-      "extra": {
-        "pr": 5,
-        "title": "feat: B13 pre-emit lifecycle noise filter (Issue #47)",
-        "source_fingerprint": "66ef6ae7f68dd120d3c935be"
-      }
-    },
-    {
-      "event_id": "evt_20260414T092811Z_000001",
-      "ts": "2026-04-14T09:28:11Z",
-      "event_type": "MERGED",
-      "task_id": "B13",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": "fix/47-preemit-lifecycle-filter",
-      "pr": 5,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": 5,
-        "commit_sha": "d8a612cc1bf09c1f54a04012ab12fe17dc776c30",
-        "source_fingerprint": "3bcb3ecc0bf816f98629a46a"
-      }
-    },
-    {
-      "event_id": "evt_20260415T023710Z_000001",
-      "ts": "2026-04-15T02:37:10Z",
-      "event_type": "PR_OPENED",
-      "task_id": "B14",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "oinkfarm",
-      "branch": "fix/micro-gate-sl-overwrite",
-      "pr": 63,
-      "artifact_path": null,
-      "status": "PR_REVIEW",
-      "blocker": null,
-      "extra": {
-        "pr": 63,
-        "title": "fix: micro-gate SL→entry overwrite guards (A15 + B14)",
-        "source_fingerprint": "6df24092110ca059d061e663"
-      }
-    },
-    {
-      "event_id": "evt_20260415T023822Z_000001",
-      "ts": "2026-04-15T02:38:22Z",
-      "event_type": "MERGED",
-      "task_id": "B14",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "oinkfarm",
-      "branch": "fix/micro-gate-sl-overwrite",
-      "pr": 63,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": 63,
-        "commit_sha": "11a10c31f9d6335daa99c50472144201ce8f9a67",
-        "source_fingerprint": "59bf8a2a1acfa44b0203d016"
-      }
-    },
-    {
-      "event_id": "evt_20260417T094654Z_000001",
-      "ts": "2026-04-17T09:46:54Z",
-      "event_type": "MERGED",
-      "task_id": "B14",
-      "phase": "B",
-      "wave": 4,
-      "agent": "anvil",
-      "repo": "signal-gateway",
-      "branch": "fix/b14-sl-entry-overwrite-guard",
-      "pr": 4,
-      "artifact_path": null,
-      "status": "MERGED",
-      "blocker": null,
-      "extra": {
-        "pr": 4,
-        "commit_sha": "1883461edd38c8ffdb46d4af6dbce8759f10a5fd",
-        "source_fingerprint": "846992887c0fb029898c0323"
-      }
-    },
     {
       "event_id": "evt_20260418T141946Z_000001",
       "ts": "2026-04-18T14:19:46Z",
@@ -20253,12 +19619,42 @@
         "authority": "hermes_ops",
         "source": "gate_reclassification"
       }
+    },
+    {
+      "event_id": "evt_20260420T205707Z_000001",
+      "ts": "2026-04-20T20:57:07Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "A171",
+      "phase": null,
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPruning. Use global prune or trim extractor tools/recall.",
+        "step": "1-diag"
+      }
     }
   ],
   "open_decisions": [],
   "live_buckets": {
     "1h": [
       {
+        "ts": "2026-04-20T20:57:07Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.04650299944444444
+      },
+      {
         "ts": "2026-04-20T20:55:19Z",
         "event_type": "DECISION_RESOLVED",
         "task_id": "B2",
@@ -20267,7 +19663,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -20278,7 +19674,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -20289,7 +19685,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20300,7 +19696,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20311,7 +19707,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20322,7 +19718,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20333,7 +19729,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20344,7 +19740,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20355,7 +19751,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20366,7 +19762,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:20:23Z",
@@ -20377,11 +19773,22 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5853907466666667
+        "age_hours": 0.6587252216666666
       }
     ],
     "4h": [
       {
+        "ts": "2026-04-20T20:57:07Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.04650299944444444
+      },
+      {
         "ts": "2026-04-20T20:55:19Z",
         "event_type": "DECISION_RESOLVED",
         "task_id": "B2",
@@ -20390,7 +19797,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -20401,7 +19808,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -20412,7 +19819,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20423,7 +19830,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20434,7 +19841,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20445,7 +19852,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20456,7 +19863,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20467,7 +19874,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20478,7 +19885,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20489,7 +19896,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:20:23Z",
@@ -20500,7 +19907,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5853907466666667
+        "age_hours": 0.6587252216666666
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -20511,7 +19918,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.1978907466666666
+        "age_hours": 1.2712252216666666
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -20522,7 +19929,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.294835191111111
+        "age_hours": 2.368169666111111
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -20533,7 +19940,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.7190018577777777
+        "age_hours": 2.792336332777778
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -20544,7 +19951,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.9456685244444443
+        "age_hours": 3.0190029994444445
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -20555,11 +19962,22 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.0990018577777776
+        "age_hours": 3.172336332777778
       }
     ],
     "24h": [
       {
+        "ts": "2026-04-20T20:57:07Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.04650299944444444
+      },
+      {
         "ts": "2026-04-20T20:55:19Z",
         "event_type": "DECISION_RESOLVED",
         "task_id": "B2",
@@ -20568,7 +19986,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -20579,7 +19997,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -20590,7 +20008,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.0031685244444444446
+        "age_hours": 0.07650299944444444
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20601,7 +20019,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20612,7 +20030,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20623,7 +20041,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20634,7 +20052,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20645,7 +20063,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20656,7 +20074,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -20667,7 +20085,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.010668524444444445
+        "age_hours": 0.08400299944444445
       },
       {
         "ts": "2026-04-20T20:20:23Z",
@@ -20678,7 +20096,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5853907466666667
+        "age_hours": 0.6587252216666666
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -20689,7 +20107,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.1978907466666666
+        "age_hours": 1.2712252216666666
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -20700,7 +20118,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.294835191111111
+        "age_hours": 2.368169666111111
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -20711,7 +20129,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.7190018577777777
+        "age_hours": 2.792336332777778
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -20722,7 +20140,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.9456685244444443
+        "age_hours": 3.0190029994444445
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -20733,7 +20151,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.0990018577777776
+        "age_hours": 3.172336332777778
       },
       {
         "ts": "2026-04-20T16:06:27Z",
@@ -20744,7 +20162,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.817612968888889
+        "age_hours": 4.890947443888889
       },
       {
         "ts": "2026-04-20T16:02:34Z",
@@ -20755,7 +20173,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 4.882335191111111
+        "age_hours": 4.9556696661111115
       },
       {
         "ts": "2026-04-20T15:53:52Z",
@@ -20766,7 +20184,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 5.027335191111111
+        "age_hours": 5.100669666111111
       },
       {
         "ts": "2026-04-20T15:52:02Z",
@@ -20777,7 +20195,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 5.057890746666667
+        "age_hours": 5.131225221666667
       },
       {
         "ts": "2026-04-20T13:47:28Z",
@@ -20788,7 +20206,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.134001857777777
+        "age_hours": 7.207336332777778
       },
       {
         "ts": "2026-04-20T13:15:36Z",
@@ -20799,7 +20217,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 7.665112968888889
+        "age_hours": 7.738447443888889
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20810,7 +20228,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.783168524444444
+        "age_hours": 7.856502999444444
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20821,7 +20239,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.783168524444444
+        "age_hours": 7.856502999444444
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20832,7 +20250,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.783168524444444
+        "age_hours": 7.856502999444444
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -20843,7 +20261,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 7.783168524444444
+        "age_hours": 7.856502999444444
       },
       {
         "ts": "2026-04-20T11:57:11Z",
@@ -20854,7 +20272,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.972057413333333
+        "age_hours": 9.045391888333334
       },
       {
         "ts": "2026-04-20T11:35:27Z",
@@ -20865,7 +20283,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 9.334279635555557
+        "age_hours": 9.407614110555555
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -20876,7 +20294,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.335946302222222
+        "age_hours": 9.409280777222222
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -20887,7 +20305,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.335946302222222
+        "age_hours": 9.409280777222222
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -20898,7 +20316,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.38761296888889
+        "age_hours": 9.460947443888887
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -20909,7 +20327,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 9.38761296888889
+        "age_hours": 9.460947443888887
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20920,7 +20338,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.560390746666668
+        "age_hours": 9.633725221666666
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20931,7 +20349,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.560390746666668
+        "age_hours": 9.633725221666666
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20942,7 +20360,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.560390746666668
+        "age_hours": 9.633725221666666
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -20953,7 +20371,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 9.560390746666668
+        "age_hours": 9.633725221666666
       },
       {
         "ts": "2026-04-20T11:18:04Z",
@@ -20964,7 +20382,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.62400185777778
+        "age_hours": 9.697336332777777
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20975,7 +20393,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.67261296888889
+        "age_hours": 9.745947443888888
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20986,7 +20404,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.67261296888889
+        "age_hours": 9.745947443888888
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -20997,7 +20415,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.67261296888889
+        "age_hours": 9.745947443888888
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -21008,7 +20426,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.67261296888889
+        "age_hours": 9.745947443888888
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -21019,7 +20437,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.67261296888889
+        "age_hours": 9.745947443888888
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -21030,7 +20448,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 9.67261296888889
+        "age_hours": 9.745947443888888
       },
       {
         "ts": "2026-04-20T10:48:39Z",
@@ -21041,7 +20459,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 10.114279635555556
+        "age_hours": 10.187614110555554
       },
       {
         "ts": "2026-04-20T10:26:10Z",
@@ -21052,7 +20470,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.489001857777778
+        "age_hours": 10.562336332777777
       },
       {
         "ts": "2026-04-20T10:17:53Z",
@@ -21063,7 +20481,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 10.627057413333334
+        "age_hours": 10.700391888333332
       },
       {
         "ts": "2026-04-20T10:10:58Z",
@@ -21074,7 +20492,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.742335191111112
+        "age_hours": 10.815669666111111
       },
       {
         "ts": "2026-04-20T09:57:20Z",
@@ -21085,7 +20503,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 10.969557413333334
+        "age_hours": 11.042891888333333
       },
       {
         "ts": "2026-04-20T09:56:32Z",
@@ -21096,7 +20514,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 10.982890746666667
+        "age_hours": 11.056225221666665
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21107,7 +20525,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21118,7 +20536,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21129,7 +20547,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21140,7 +20558,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21151,7 +20569,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21162,7 +20580,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21173,7 +20591,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21184,7 +20602,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21195,7 +20613,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21206,7 +20624,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21217,7 +20635,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21228,7 +20646,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21239,7 +20657,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21250,7 +20668,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21261,7 +20679,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21272,7 +20690,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:50Z",
@@ -21283,7 +20701,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.994557413333334
+        "age_hours": 11.067891888333332
       },
       {
         "ts": "2026-04-20T09:55:41Z",
@@ -21294,7 +20712,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 10.997057413333334
+        "age_hours": 11.070391888333333
       },
       {
         "ts": "2026-04-20T09:54:24Z",
@@ -21305,7 +20723,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 11.018446302222223
+        "age_hours": 11.09178077722222
       },
       {
         "ts": "2026-04-20T09:53:22Z",
@@ -21316,7 +20734,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 11.035668524444445
+        "age_hours": 11.109002999444444
       },
       {
         "ts": "2026-04-20T09:52:22Z",
@@ -21327,7 +20745,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 11.052335191111112
+        "age_hours": 11.12566966611111
       },
       {
         "ts": "2026-04-20T09:46:32Z",
@@ -21338,7 +20756,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 11.149557413333333
+        "age_hours": 11.222891888333333
       },
       {
         "ts": "2026-04-20T09:45:48Z",
@@ -21349,7 +20767,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 11.161779635555556
+        "age_hours": 11.235114110555555
       },
       {
         "ts": "2026-04-20T09:43:00Z",
@@ -21360,7 +20778,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 11.208446302222223
+        "age_hours": 11.281780777222222
       },
       {
         "ts": "2026-04-20T09:36:24Z",
@@ -21371,7 +20789,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 11.318446302222222
+        "age_hours": 11.391780777222221
       },
       {
         "ts": "2026-04-20T09:29:42Z",
@@ -21382,7 +20800,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 11.43011296888889
+        "age_hours": 11.503447443888888
       },
       {
         "ts": "2026-04-20T07:40:56Z",
@@ -21393,7 +20811,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.242890746666667
+        "age_hours": 13.316225221666667
       },
       {
         "ts": "2026-04-20T07:36:57Z",
@@ -21404,7 +20822,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.309279635555557
+        "age_hours": 13.382614110555554
       },
       {
         "ts": "2026-04-20T07:36:11Z",
@@ -21415,7 +20833,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.322057413333335
+        "age_hours": 13.395391888333332
       },
       {
         "ts": "2026-04-20T07:31:11Z",
@@ -21426,7 +20844,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.405390746666667
+        "age_hours": 13.478725221666666
       },
       {
         "ts": "2026-04-20T07:27:24Z",
@@ -21437,7 +20855,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.468446302222222
+        "age_hours": 13.541780777222222
       },
       {
         "ts": "2026-04-20T07:21:43Z",
@@ -21448,7 +20866,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.563168524444444
+        "age_hours": 13.636502999444444
       },
       {
         "ts": "2026-04-20T07:19:51Z",
@@ -21459,7 +20877,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.594279635555557
+        "age_hours": 13.667614110555554
       },
       {
         "ts": "2026-04-20T07:17:01Z",
@@ -21470,7 +20888,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.64150185777778
+        "age_hours": 13.714836332777777
       },
       {
         "ts": "2026-04-20T07:02:47Z",
@@ -21481,7 +20899,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.878724080000001
+        "age_hours": 13.952058554999999
       },
       {
         "ts": "2026-04-20T06:46:18Z",
@@ -21492,7 +20910,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 14.153446302222223
+        "age_hours": 14.22678077722222
       },
       {
         "ts": "2026-04-20T06:39:51Z",
@@ -21503,7 +20921,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.260946302222223
+        "age_hours": 14.334280777222222
       },
       {
         "ts": "2026-04-20T06:30:38Z",
@@ -21514,7 +20932,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.414557413333334
+        "age_hours": 14.487891888333333
       },
       {
         "ts": "2026-04-20T06:29:50Z",
@@ -21525,7 +20943,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.427890746666668
+        "age_hours": 14.501225221666665
       },
       {
         "ts": "2026-04-20T06:27:34Z",
@@ -21536,7 +20954,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.465668524444446
+        "age_hours": 14.539002999444444
       },
       {
         "ts": "2026-04-20T05:53:53Z",
@@ -21547,7 +20965,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 15.027057413333335
+        "age_hours": 15.100391888333332
       },
       {
         "ts": "2026-04-20T05:53:15Z",
@@ -21558,7 +20976,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 15.03761296888889
+        "age_hours": 15.110947443888888
       },
       {
         "ts": "2026-04-20T05:52:01Z",
@@ -21569,7 +20987,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 15.058168524444445
+        "age_hours": 15.131502999444443
       },
       {
         "ts": "2026-04-20T04:55:31Z",
@@ -21580,7 +20998,7 @@
         "phase": "B",
         "pr": 25,
         "repo": "signal-gateway",
-        "age_hours": 15.999835191111112
+        "age_hours": 16.07316966611111
       },
       {
         "ts": "2026-04-20T04:49:26Z",
@@ -21591,7 +21009,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.10122408
+        "age_hours": 16.174558555
       },
       {
         "ts": "2026-04-20T04:47:04Z",
@@ -21602,7 +21020,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.140668524444447
+        "age_hours": 16.214002999444443
       },
       {
         "ts": "2026-04-20T04:42:57Z",
@@ -21613,7 +21031,7 @@
         "phase": "B",
         "pr": 25,
         "repo": "signal-gateway",
-        "age_hours": 16.209279635555557
+        "age_hours": 16.282614110555556
       },
       {
         "ts": "2026-04-20T04:42:41Z",
@@ -21624,7 +21042,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 16.213724080000002
+        "age_hours": 16.287058554999998
       },
       {
         "ts": "2026-04-20T04:01:44Z",
@@ -21635,7 +21053,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.89622408
+        "age_hours": 16.969558555
       },
       {
         "ts": "2026-04-20T03:58:26Z",
@@ -21646,7 +21064,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.95122408
+        "age_hours": 17.024558555
       },
       {
         "ts": "2026-04-20T03:51:02Z",
@@ -21657,7 +21075,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.074557413333334
+        "age_hours": 17.147891888333334
       },
       {
         "ts": "2026-04-20T03:48:22Z",
@@ -21668,7 +21086,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.11900185777778
+        "age_hours": 17.192336332777778
       },
       {
         "ts": "2026-04-20T03:32:57Z",
@@ -21679,7 +21097,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.37594630222222
+        "age_hours": 17.44928077722222
       },
       {
         "ts": "2026-04-20T03:18:19Z",
@@ -21690,7 +21108,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.61983519111111
+        "age_hours": 17.69316966611111
       },
       {
         "ts": "2026-04-20T03:16:02Z",
@@ -21701,7 +21119,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.657890746666666
+        "age_hours": 17.731225221666666
       },
       {
         "ts": "2026-04-20T02:30:26Z",
@@ -21712,7 +21130,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.417890746666668
+        "age_hours": 18.491225221666667
       },
       {
         "ts": "2026-04-20T02:24:46Z",
@@ -21723,7 +21141,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 18.512335191111113
+        "age_hours": 18.58566966611111
       },
       {
         "ts": "2026-04-20T02:24:42Z",
@@ -21734,7 +21152,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 18.513446302222224
+        "age_hours": 18.58678077722222
       },
       {
         "ts": "2026-04-20T02:24:30Z",
@@ -21745,7 +21163,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 18.516779635555558
+        "age_hours": 18.590114110555554
       },
       {
         "ts": "2026-04-20T02:21:29Z",
@@ -21756,7 +21174,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.567057413333334
+        "age_hours": 18.640391888333333
       },
       {
         "ts": "2026-04-20T02:19:26Z",
@@ -21767,7 +21185,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.60122408
+        "age_hours": 18.674558555
       },
       {
         "ts": "2026-04-20T01:57:21Z",
@@ -21778,7 +21196,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.969279635555555
+        "age_hours": 19.042614110555554
       },
       {
         "ts": "2026-04-20T01:47:41Z",
@@ -21789,7 +21207,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 19.130390746666667
+        "age_hours": 19.203725221666666
       },
       {
         "ts": "2026-04-20T01:47:40Z",
@@ -21800,7 +21218,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 19.130668524444445
+        "age_hours": 19.204002999444445
       },
       {
         "ts": "2026-04-20T01:47:32Z",
@@ -21811,7 +21229,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 19.132890746666668
+        "age_hours": 19.206225221666667
       },
       {
         "ts": "2026-04-20T01:37:03Z",
@@ -21822,7 +21240,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.30761296888889
+        "age_hours": 19.38094744388889
       },
       {
         "ts": "2026-04-20T01:34:52Z",
@@ -21833,7 +21251,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.34400185777778
+        "age_hours": 19.417336332777776
       },
       {
         "ts": "2026-04-20T01:32:43Z",
@@ -21844,7 +21262,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.379835191111113
+        "age_hours": 19.453169666111112
       },
       {
         "ts": "2026-04-20T01:28:31Z",
@@ -21855,7 +21273,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.449835191111113
+        "age_hours": 19.52316966611111
       },
       {
         "ts": "2026-04-20T01:21:58Z",
@@ -21866,7 +21284,7 @@
         "phase": "B",
         "pr": 24,
         "repo": "signal-gateway",
-        "age_hours": 19.55900185777778
+        "age_hours": 19.632336332777776
       },
       {
         "ts": "2026-04-20T01:21:55Z",
@@ -21877,7 +21295,7 @@
         "phase": "B",
         "pr": 11,
         "repo": "oink-sync",
-        "age_hours": 19.559835191111112
+        "age_hours": 19.63316966611111
       },
       {
         "ts": "2026-04-20T01:21:52Z",
@@ -21888,7 +21306,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 19.560668524444445
+        "age_hours": 19.634002999444444
       },
       {
         "ts": "2026-04-20T01:21:25Z",
@@ -21899,7 +21317,7 @@
         "phase": "B",
         "pr": 24,
         "repo": "signal-gateway",
-        "age_hours": 19.568168524444445
+        "age_hours": 19.641502999444445
       },
       {
         "ts": "2026-04-20T01:21:23Z",
@@ -21910,7 +21328,7 @@
         "phase": "B",
         "pr": 11,
         "repo": "oink-sync",
-        "age_hours": 19.56872408
+        "age_hours": 19.642058555
       },
       {
         "ts": "2026-04-20T01:21:11Z",
@@ -21921,7 +21339,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 19.572057413333333
+        "age_hours": 19.645391888333332
       },
       {
         "ts": "2026-04-20T01:16:45Z",
@@ -21932,7 +21350,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.645946302222224
+        "age_hours": 19.71928077722222
       },
       {
         "ts": "2026-04-20T01:07:12Z",
@@ -21943,7 +21361,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 19.80511296888889
+        "age_hours": 19.878447443888888
       },
       {
         "ts": "2026-04-20T01:07:01Z",
@@ -21954,7 +21372,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 19.808168524444444
+        "age_hours": 19.881502999444443
       },
       {
         "ts": "2026-04-20T00:54:22Z",
@@ -21965,7 +21383,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.019001857777777
+        "age_hours": 20.092336332777776
       },
       {
         "ts": "2026-04-20T00:45:52Z",
@@ -21976,7 +21394,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.160668524444446
+        "age_hours": 20.234002999444442
       },
       {
         "ts": "2026-04-20T00:43:57Z",
@@ -21987,7 +21405,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.19261296888889
+        "age_hours": 20.265947443888887
       },
       {
         "ts": "2026-04-20T00:43:57Z",
@@ -21998,7 +21416,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.19261296888889
+        "age_hours": 20.265947443888887
       },
       {
         "ts": "2026-04-20T00:41:56Z",
@@ -22009,7 +21427,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.22622408
+        "age_hours": 20.299558555
       },
       {
         "ts": "2026-04-20T00:34:38Z",
@@ -22020,7 +21438,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.347890746666668
+        "age_hours": 20.421225221666667
       },
       {
         "ts": "2026-04-20T00:32:41Z",
@@ -22031,7 +21449,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.380390746666667
+        "age_hours": 20.453725221666666
       },
       {
         "ts": "2026-04-19T23:43:45Z",
@@ -22042,7 +21460,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.19594630222222
+        "age_hours": 21.26928077722222
       },
       {
         "ts": "2026-04-19T23:42:02Z",
@@ -22053,7 +21471,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.224557413333333
+        "age_hours": 21.297891888333332
       },
       {
         "ts": "2026-04-19T23:23:12Z",
@@ -22064,7 +21482,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.538446302222223
+        "age_hours": 21.611780777222222
       },
       {
         "ts": "2026-04-19T23:17:17Z",
@@ -22075,7 +21493,7 @@
         "phase": "B",
         "pr": 21,
         "repo": "signal-gateway",
-        "age_hours": 21.637057413333334
+        "age_hours": 21.710391888333334
       },
       {
         "ts": "2026-04-19T23:17:10Z",
@@ -22086,7 +21504,7 @@
         "phase": "B",
         "pr": 9,
         "repo": "oink-sync",
-        "age_hours": 21.639001857777778
+        "age_hours": 21.712336332777777
       },
       {
         "ts": "2026-04-19T23:17:04Z",
@@ -22097,7 +21515,7 @@
         "phase": "B",
         "pr": 149,
         "repo": "oinkfarm",
-        "age_hours": 21.640668524444447
+        "age_hours": 21.714002999444443
       },
       {
         "ts": "2026-04-19T23:16:59Z",
@@ -22108,7 +21526,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 21.642057413333333
+        "age_hours": 21.715391888333333
       },
       {
         "ts": "2026-04-19T23:11:12Z",
@@ -22119,7 +21537,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.738446302222222
+        "age_hours": 21.81178077722222
       },
       {
         "ts": "2026-04-19T22:35:19Z",
@@ -22130,7 +21548,7 @@
         "phase": "B",
         "pr": 21,
         "repo": "signal-gateway",
-        "age_hours": 22.33650185777778
+        "age_hours": 22.409836332777775
       },
       {
         "ts": "2026-04-19T22:34:34Z",
@@ -22141,7 +21559,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.34900185777778
+        "age_hours": 22.42233633277778
       },
       {
         "ts": "2026-04-19T22:29:22Z",
@@ -22152,7 +21570,7 @@
         "phase": "B",
         "pr": 9,
         "repo": "oink-sync",
-        "age_hours": 22.435668524444445
+        "age_hours": 22.509002999444444
       },
       {
         "ts": "2026-04-19T22:29:20Z",
@@ -22163,7 +21581,7 @@
         "phase": "B",
         "pr": 149,
         "repo": "oinkfarm",
-        "age_hours": 22.436224080000002
+        "age_hours": 22.509558554999998
       },
       {
         "ts": "2026-04-19T22:22:39Z",
@@ -22174,7 +21592,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 22.547612968888888
+        "age_hours": 22.620947443888888
       },
       {
         "ts": "2026-04-19T22:22:30Z",
@@ -22185,7 +21603,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oink-sync",
-        "age_hours": 22.55011296888889
+        "age_hours": 22.62344744388889
       },
       {
         "ts": "2026-04-19T22:22:24Z",
@@ -22196,7 +21614,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 22.551779635555555
+        "age_hours": 22.625114110555554
       },
       {
         "ts": "2026-04-19T22:07:54Z",
@@ -22207,7 +21625,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 22.793446302222222
+        "age_hours": 22.86678077722222
       },
       {
         "ts": "2026-04-19T22:07:54Z",
@@ -22218,7 +21636,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 22.793446302222222
+        "age_hours": 22.86678077722222
       },
       {
         "ts": "2026-04-19T22:01:10Z",
@@ -22229,7 +21647,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.905668524444444
+        "age_hours": 22.979002999444443
       },
       {
         "ts": "2026-04-19T21:52:53Z",
@@ -22240,7 +21658,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.04372408
+        "age_hours": 23.117058555
       },
       {
         "ts": "2026-04-19T21:43:23Z",
@@ -22251,7 +21669,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.202057413333335
+        "age_hours": 23.27539188833333
       },
       {
         "ts": "2026-04-19T21:33:27Z",
@@ -22262,42 +21680,18 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.36761296888889
+        "age_hours": 23.440947443888888
       }
     ]
   },
   "lint_gaps": [
-    {
-      "task_id": "B13",
-      "agent": "anvil",
-      "issue": "MERGED with no CANARY_STARTED within 2h",
-      "severity": "warn",
-      "event_id": "evt_20260414T092811Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
-    },
-    {
-      "task_id": "B14",
-      "agent": "anvil",
-      "issue": "PR_OPENED (pr=63) with no REVIEW_POSTED within 24h",
-      "severity": "warn",
-      "event_id": "evt_20260415T023710Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
-    },
-    {
-      "task_id": "B14",
-      "agent": "anvil",
-      "issue": "MERGED with no CANARY_STARTED within 2h",
-      "severity": "warn",
-      "event_id": "evt_20260417T094654Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
-    },
     {
       "task_id": "B1",
       "agent": "anvil",
       "issue": "PR_OPENED (pr=121) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T141946Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A1",
@@ -22305,7 +21699,7 @@
       "issue": "PR_OPENED (pr=17) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T142005Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A1",
@@ -22313,7 +21707,7 @@
       "issue": "PR_OPENED (pr=18) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T144101Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A2",
@@ -22321,7 +21715,7 @@
       "issue": "PR_OPENED (pr=19) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T151135Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "B1",
@@ -22329,7 +21723,7 @@
       "issue": "PR_OPENED (pr=1) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T162813Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "B2",
@@ -22337,7 +21731,7 @@
       "issue": "PR_OPENED (pr=2) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T164040Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "B3",
@@ -22345,7 +21739,7 @@
       "issue": "PR_OPENED (pr=3) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T173000Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "B4",
@@ -22353,7 +21747,7 @@
       "issue": "MERGED with no CANARY_STARTED within 2h",
       "severity": "warn",
       "event_id": "evt_20260418T173310Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A3",
@@ -22361,7 +21755,7 @@
       "issue": "PR_OPENED (pr=125) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T215008Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A1",
@@ -22369,7 +21763,7 @@
       "issue": "PR_OPENED (pr=126) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T231153Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A1",
@@ -22377,7 +21771,7 @@
       "issue": "PR_OPENED (pr=4) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260418T231204Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A2",
@@ -22385,7 +21779,7 @@
       "issue": "PR_OPENED (pr=5) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T001420Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A4",
@@ -22393,7 +21787,7 @@
       "issue": "PR_OPENED (pr=7) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T102605Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A7",
@@ -22401,7 +21795,7 @@
       "issue": "PR_OPENED (pr=130) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T110614Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A5",
@@ -22409,7 +21803,7 @@
       "issue": "PR_OPENED (pr=131) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T114804Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A6",
@@ -22417,7 +21811,7 @@
       "issue": "PR_OPENED (pr=20) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T130242Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A9",
@@ -22425,7 +21819,7 @@
       "issue": "PR_OPENED (pr=8) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T132828Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A9",
@@ -22433,7 +21827,7 @@
       "issue": "PR_OPENED (pr=132) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T132842Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A11",
@@ -22441,7 +21835,7 @@
       "issue": "PR_OPENED (pr=133) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T145137Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A8",
@@ -22449,7 +21843,7 @@
       "issue": "PR_OPENED (pr=134) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T151539Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "A10",
@@ -22457,7 +21851,7 @@
       "issue": "PR_OPENED (pr=135) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T160551Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     },
     {
       "task_id": "B6",
@@ -22465,22 +21859,44 @@
       "issue": "MERGED with no CANARY_STARTED within 2h",
       "severity": "warn",
       "event_id": "evt_20260420T064618Z_000001",
-      "detected_at": "2026-04-20T20:55:34Z"
+      "detected_at": "2026-04-20T20:59:57Z"
     }
   ],
   "events_integrity": {
-    "total": 306,
-    "last_24h": 155,
-    "rate_per_hour": 6.46,
+    "total": 296,
+    "last_24h": 156,
+    "rate_per_hour": 6.5,
     "schema_version": "1.0",
     "monotonic_gaps": [],
     "monotonic_ok": true,
     "source": "lib",
     "events_file": "/home/oinkv/sprint-checkpoint/events.jsonl",
-    "human_line": "In plain English: 155 things happened today, ~6.46/h steady-state. System is healthy."
+    "human_line": "In plain English: 156 things happened today, ~6.5/h steady-state. System is healthy."
   },
   "bootstrap": false,
   "freshness_by_agent": [
+    {
+      "id": "oinkv",
+      "name": "OinkV",
+      "last_event_ts": "2026-04-20T20:57:07Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "A171",
+      "current_task": "A171",
+      "age_hours": 0.04650299944444444,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 2,
+      "emoji": "🐷",
+      "role": "Plan Auditor",
+      "last_active": "2026-04-20T20:57:07Z",
+      "last_active_human": "2m ago",
+      "heartbeat": {
+        "current_task": "A171",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
     {
       "id": "hermes",
       "name": "Hermes",
@@ -22488,38 +21904,16 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 0.0031685244444444446,
+      "age_hours": 0.07650299944444444,
       "staleness_label": "green",
       "light": "green",
       "event_count": 26,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "last_active": "2026-04-20T20:55:19Z",
-      "last_active_human": "11s ago",
+      "last_active_human": "4m ago",
       "heartbeat": {
         "current_task": "B4",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "oinkv",
-      "name": "OinkV",
-      "last_event_ts": "2026-04-20T17:58:46Z",
-      "last_event_type": "BLOCKED",
-      "last_task_id": "A171",
-      "current_task": "A171",
-      "age_hours": 2.9456685244444443,
-      "staleness_label": "yellow",
-      "light": "yellow",
-      "event_count": 1,
-      "emoji": "🐷",
-      "role": "Plan Auditor",
-      "last_active": "2026-04-20T17:58:46Z",
-      "last_active_human": "2h 56m ago",
-      "heartbeat": {
-        "current_task": "A171",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -22532,14 +21926,14 @@
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 4.882335191111111,
+      "age_hours": 4.9556696661111115,
       "staleness_label": "red",
       "light": "red",
       "event_count": 66,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "last_active": "2026-04-20T16:02:34Z",
-      "last_active_human": "4h 52m ago",
+      "last_active_human": "4h 57m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22554,14 +21948,14 @@
       "last_event_type": "TASK_PLANNED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 5.027335191111111,
+      "age_hours": 5.100669666111111,
       "staleness_label": "red",
       "light": "red",
       "event_count": 52,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-20T15:53:52Z",
-      "last_active_human": "5h 1m ago",
+      "last_active_human": "5h 6m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22576,14 +21970,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 9.38761296888889,
+      "age_hours": 9.460947443888887,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "9h 23m ago",
+      "last_active_human": "9h 27m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22598,14 +21992,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 10.114279635555556,
+      "age_hours": 10.187614110555554,
       "staleness_label": "red",
       "light": "red",
-      "event_count": 112,
+      "event_count": 101,
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "last_active": "2026-04-20T10:48:39Z",
-      "last_active_human": "10h 6m ago",
+      "last_active_human": "10h 11m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -22620,14 +22014,14 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 13.242890746666667,
+      "age_hours": 13.316225221666667,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T07:40:56Z",
-      "last_active_human": "13h 14m ago",
+      "last_active_human": "13h 18m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -22642,14 +22036,14 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 13.322057413333335,
+      "age_hours": 13.395391888333332,
       "staleness_label": "red",
       "light": "red",
       "event_count": 31,
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "last_active": "2026-04-20T07:36:11Z",
-      "last_active_human": "13h 19m ago",
+      "last_active_human": "13h 23m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -22668,105 +22062,6 @@
     "glossary_link": "sprint-log/STATE-OF-SPRINT.md#glossary"
   },
   "recent_events": [
-    {
-      "ts": "2026-04-01T03:06:20Z",
-      "type": "MERGED",
-      "task": "B3",
-      "desc": "B3 merged via PR #None @b848ce4",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
-    {
-      "ts": "2026-04-01T18:07:49Z",
-      "type": "MERGED",
-      "task": "B5",
-      "desc": "B5 merged via PR #None @01343f6",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
-    {
-      "ts": "2026-04-02T06:11:12Z",
-      "type": "MERGED",
-      "task": "B6",
-      "desc": "B6 merged via PR #None @3f8be83",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
-    {
-      "ts": "2026-04-02T22:13:36Z",
-      "type": "MERGED",
-      "task": "B8",
-      "desc": "B8 merged via PR #None @c56d580",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
-    {
-      "ts": "2026-04-13T22:04:12Z",
-      "type": "PR_OPENED",
-      "task": "B13",
-      "desc": "B13 PR #3 opened — feat: B13 pre-emit lifecycle noise filter",
-      "link": null,
-      "emoji": "•",
-      "actor": "—"
-    },
-    {
-      "ts": "2026-04-14T08:01:53Z",
-      "type": "PR_OPENED",
-      "task": "B14",
-      "desc": "B14 PR #4 opened — B14: SL→entry overwrite guard",
-      "link": null,
-      "emoji": "•",
-      "actor": "—"
-    },
-    {
-      "ts": "2026-04-14T09:08:45Z",
-      "type": "PR_OPENED",
-      "task": "B13",
-      "desc": "B13 PR #5 opened — feat: B13 pre-emit lifecycle noise filter (Issue #47)",
-      "link": null,
-      "emoji": "•",
-      "actor": "—"
-    },
-    {
-      "ts": "2026-04-14T09:28:11Z",
-      "type": "MERGED",
-      "task": "B13",
-      "desc": "B13 merged via PR #5 @d8a612c",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
-    {
-      "ts": "2026-04-15T02:37:10Z",
-      "type": "PR_OPENED",
-      "task": "B14",
-      "desc": "B14 PR #63 opened — fix: micro-gate SL→entry overwrite guards (A15 + B14)",
-      "link": null,
-      "emoji": "•",
-      "actor": "—"
-    },
-    {
-      "ts": "2026-04-15T02:38:22Z",
-      "type": "MERGED",
-      "task": "B14",
-      "desc": "B14 merged via PR #63 @11a10c3",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
-    {
-      "ts": "2026-04-17T09:46:54Z",
-      "type": "MERGED",
-      "task": "B14",
-      "desc": "B14 merged via PR #4 @1883461",
-      "link": null,
-      "emoji": "🚀",
-      "actor": "ANVIL"
-    },
     {
       "ts": "2026-04-18T14:19:46Z",
       "type": "PR_OPENED",
@@ -22847,6 +22142,105 @@
       "link": null,
       "emoji": "🚀",
       "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-18T16:56:57Z",
+      "type": "MERGED",
+      "task": "B2",
+      "desc": "B2 merged via PR #2 @f1f5544",
+      "link": null,
+      "emoji": "🚀",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-18T17:30:00Z",
+      "type": "PR_OPENED",
+      "task": "B3",
+      "desc": "B3 PR #3 opened — feat(#16): PR-B3+B5 — filtered handlers (13) + registry endpoints (2)",
+      "link": null,
+      "emoji": "•",
+      "actor": "—"
+    },
+    {
+      "ts": "2026-04-18T17:31:06Z",
+      "type": "MERGED",
+      "task": "B3",
+      "desc": "B3 merged via PR #3 @401b770",
+      "link": null,
+      "emoji": "🚀",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-18T17:33:08Z",
+      "type": "PR_OPENED",
+      "task": "B4",
+      "desc": "B4 PR #4 opened — feat(#16): PR-B4 — WG handlers (4 endpoints) — CLOSES Phase 2",
+      "link": null,
+      "emoji": "•",
+      "actor": "—"
+    },
+    {
+      "ts": "2026-04-18T17:33:10Z",
+      "type": "MERGED",
+      "task": "B4",
+      "desc": "B4 merged via PR #4 @52303fc",
+      "link": null,
+      "emoji": "🚀",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-18T21:27:17Z",
+      "type": "PLAN_PUBLISHED",
+      "task": "A1",
+      "desc": "A1 plan published",
+      "link": "/home/oinkv/forge-workspace/plans/TASK-A1-plan.md",
+      "emoji": "🔥",
+      "actor": "FORGE"
+    },
+    {
+      "ts": "2026-04-18T21:28:11Z",
+      "type": "PLAN_PUBLISHED",
+      "task": "A2",
+      "desc": "A2 plan published",
+      "link": "/home/oinkv/forge-workspace/plans/TASK-A2-plan.md",
+      "emoji": "🔥",
+      "actor": "FORGE"
+    },
+    {
+      "ts": "2026-04-18T21:28:35Z",
+      "type": "PLAN_PUBLISHED",
+      "task": "A3",
+      "desc": "A3 plan published",
+      "link": "/home/oinkv/forge-workspace/plans/TASK-A3-plan.md",
+      "emoji": "🔥",
+      "actor": "FORGE"
+    },
+    {
+      "ts": "2026-04-18T21:32:44Z",
+      "type": "PROPOSAL_DRAFTED",
+      "task": "A3",
+      "desc": "A3 proposal ready",
+      "link": "/home/oinkv/anvil-workspace/proposals/A3-PHASE0-PROPOSAL.md",
+      "emoji": "⚒️",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-18T21:44:47Z",
+      "type": "PROPOSAL_DRAFTED",
+      "task": "A3",
+      "desc": "A3 proposal approved by vigil+guardian",
+      "link": "/home/oinkv/anvil-workspace/proposals/A3-PHASE0-APPROVED.marker",
+      "emoji": "⚒️",
+      "actor": "ANVIL"
+    },
+    {
+      "ts": "2026-04-18T21:50:08Z",
+      "type": "PR_OPENED",
+      "task": "A3",
+      "desc": "A3 PR #125 opened — feat(micro-gate): auto-populate filled_at for MARKET orders (A3)",
+      "link": null,
+      "emoji": "•",
+      "actor": "—"
     }
   ]
 }

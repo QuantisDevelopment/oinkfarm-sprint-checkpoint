@@ -4,7 +4,7 @@
 
 > Phase B migrates OinkFarm from SQLite + monolith to PostgreSQL + decomposed services — the infrastructure layer that unlocks Redis, W1 governance, and multi-writer safety. Wave 1 (db abstraction) shipped; Wave 2 (parser extraction, Cornix/Chroma, dedup consolidation) is in flight.
 
-**Status:** 0/15 tasks shipped  
+**Status:** 0/14 tasks shipped  
 **Goal:** Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.  
 **Data source:** event-stream reducer (`events.jsonl`)  
 **Live:** [dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)
@@ -25,8 +25,7 @@
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:43 CEST · `TASK_PLANNED` | forge |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:45 CEST · `TASK_PLANNED` | forge |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | forge · hermes |
-| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | MERGED | — | [signal-gateway#3](https://github.com/QuantisDevelopment/signal-gateway/pull/3) + [signal-gateway#5](https://github.com/QuantisDevelopment/signal-gateway/pull/5) | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | anvil · forge · hermes |
-| [B14](../tasks/B14-b14.md) | 🟡 STANDARD | MERGED | — | [signal-gateway#4](https://github.com/QuantisDevelopment/signal-gateway/pull/4) + [oinkfarm#63](https://github.com/QuantisDevelopment/oinkfarm/pull/63) | Apr 17, 11:46 CEST · `MERGED` | anvil |
+| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | forge · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
 
 ## Waves

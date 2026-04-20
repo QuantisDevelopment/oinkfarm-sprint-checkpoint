@@ -22,6 +22,7 @@ import re
 import subprocess
 import sys
 from collections import Counter, defaultdict
+SPRINT_EPOCH = "2026-04-18T00:00:00+00:00"  # reject pre-sprint B-commits
 from datetime import datetime, timezone
 from pathlib import Path
 

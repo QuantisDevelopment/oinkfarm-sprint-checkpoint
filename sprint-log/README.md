@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 306
-- **Last 24h:** 155 (rate 6.46/h)
+- **Total events:** 296
+- **Last 24h:** 156 (rate 6.5/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (11 events)
+### Last 1 hour (12 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | oinkv | Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
@@ -27,9 +28,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 22:54 CEST | `BLOCKER_RESOLVED` | `A171` | hermes | A171 blocker cleared |
 | Apr 20, 22:20 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the  |
 
-### Last 4 hours (16 events)
+### Last 4 hours (17 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | oinkv | Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
@@ -44,11 +46,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 21:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
-| Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
 
-### Last 24 hours (155 events)
+### Last 24 hours (156 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | oinkv | Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
@@ -63,7 +65,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 21:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
-| Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
 
 ## 🧭 Needs Mike
 
@@ -73,9 +74,6 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `B13` | MERGED with no CANARY_STARTED within 2h |
-| 🟠 WARN | `B14` | PR_OPENED (pr=63) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B14` | MERGED with no CANARY_STARTED within 2h |
 | 🟠 WARN | `B1` | PR_OPENED (pr=121) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A1` | PR_OPENED (pr=17) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A1` | PR_OPENED (pr=18) with no REVIEW_POSTED within 24h |
@@ -103,12 +101,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
+| 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 2 |
 | 🪽 **Hermes** | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | 🟢 fresh | 26 |
-| 🐷 **OinkV** | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | 🟡 1–3h | 1 |
 | 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🔴 stale | 66 |
 | 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 52 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
-| ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 112 |
+| ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 101 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
 
@@ -169,8 +167,7 @@ _No open DECISION_NEEDED events._
 | `B10` | B10 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B11` | B11 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B12` | B12 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
-| `B13` | B13 | 🟡 STANDARD | — | MERGED | — |
-| `B14` | B14 | 🟡 STANDARD | — | MERGED | — |
+| `B13` | B13 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B15` | B15 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `C2` | C2 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 
@@ -182,8 +179,8 @@ _No open DECISION_NEEDED events._
 
 | Emoji | Name | Role |
 |---|---|---|
-| 🪽 | Hermes | Sprint Orchestrator |
 | 🐷 | OinkV | Plan Auditor |
+| 🪽 | Hermes | Sprint Orchestrator |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
@@ -200,4 +197,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*9/28 tasks DONE · Last auto-regenerated: 22:55 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/27 tasks DONE · Last auto-regenerated: 22:59 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
