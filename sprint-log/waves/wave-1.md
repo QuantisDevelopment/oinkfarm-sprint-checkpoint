@@ -9,8 +9,8 @@
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
 | [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | ✅ DONE | PASS | — |
-| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | ✅ DONE | PASS | [`38eb8e8`](https://github.com/QuantisDevelopment/signal-gateway/commit/38eb8e8799f237bdc907e87e5044135a1f117023) |
-| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | ✅ DONE | PASS | [`3b5453b`](https://github.com/QuantisDevelopment/oinkfarm/commit/3b5453b7036337e593b46eb02a496df251885e4b) |
+| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | ✅ DONE | PASS | — |
+| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | ✅ DONE | PASS | — |
 
 ## Timing
 
