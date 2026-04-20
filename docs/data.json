@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T00:01:32+00:00",
-  "generated_at_cest": "2026-04-20T02:01:32+02:00",
+  "generated_at_utc": "2026-04-20T00:26:12+00:00",
+  "generated_at_cest": "2026-04-20T02:26:12+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,8 +3099,8 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-19T23:43:49+00:00",
-      "last_active_human": "17m ago",
+      "last_active": "2026-04-20T00:24:55+00:00",
+      "last_active_human": "1m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -3113,7 +3113,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-19T23:20:53+00:00",
-      "last_active_human": "40m ago",
+      "last_active_human": "1h 5m ago",
       "light": "yellow",
       "heartbeat": {
         "current_task": "B1",
@@ -3131,7 +3131,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-19T23:11:46+00:00",
-      "last_active_human": "49m ago",
+      "last_active_human": "1h 14m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3142,7 +3142,7 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-19T23:23:12+00:00",
-      "last_active_human": "38m ago",
+      "last_active_human": "1h 2m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3152,7 +3152,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T00:01:31+00:00",
+      "last_active": "2026-04-20T00:26:11+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3163,13 +3163,27 @@
       "emoji": "🐷",
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
-      "last_active": "2026-04-19T20:15:55+00:00",
-      "last_active_human": "3h 45m ago",
-      "light": "red",
+      "last_active": "2026-04-20T00:24:55+00:00",
+      "last_active_human": "1m ago",
+      "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T00:26:11+00:00",
+      "time_local": "2026-04-20T02:26+02:00",
+      "header": "SPRINT STATUS @ 00:25 UTC (02:25 CEST)",
+      "actions": [
+        "Detected OinkV (main) lane LLM-timing-out (FailoverError @ 01:57/02:01/02:12) — took Hermes-subagent fallback path per skill.",
+        "Dispatched 2× parallel delegate_task audits of FORGE's v2 revisions: B2 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 2 Minor / 14 Confirmed-Fixed), B3 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 1 Minor / 11 Confirmed-Fixed). Verified against live DB schema + 3-repo HEADs (0fbcbf1b / ecd2622 / b0f0254).",
+        "Wrote consolidated audit + marker: OINKV-AUDIT-PHASE-B-v2.md + OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker (with Mike provenance note on OinkV timeout).",
+        "A2A'd ANVIL to start B2 Phase 0 proposal — parallel-safe with passive B1 canary. Dispatch confirmed in task_runs as running 02:25:50."
+      ],
+      "next": "check B1 canary progress (organic signal arrival) + poll for /home/oinkv/anvil-workspace/proposals/B2-READY-FOR-REVIEW.marker; if present, A2A VIGIL+GUARDIAN for Phase 0 proposal review.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-26-11.md"
+    },
     {
       "time_utc": "2026-04-20T00:01:31+00:00",
       "time_local": "2026-04-20T02:01+02:00",
@@ -3677,19 +3691,6 @@
       "next": "Next cycle will (1) check FORGE's WAVE3-PLANS-READY.marker + surface Mike's approval gate for A10 if flagged, (2) verify GUARDIAN's A5 post-deploy SQL report landed, (3) if plans approved, nudge ANVIL to start next Phase 0 proposal (likely A9/A11 lightweight first, then A6/A8).",
       "blocker": "Wave 3 plans incoming from FORGE. Once WAVE3-PLANS-READY.marker lands (expect next cycle), you'll need to approve A10 (DB merge — 🔴 CRITICAL) before ANVIL touches it. Lightweight A9/A11 and STANDARD A6/A8 can proceed without explicit approval per prior sprint pattern. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_14-07-00.md"
-    },
-    {
-      "time_utc": "2026-04-19T11:43:07+00:00",
-      "time_local": "2026-04-19T13:43+02:00",
-      "header": "State is healthy — no zombies, no gateway lane errors, cron is making tight progress. Let me emit the concise sprint status.",
-      "actions": [
-        "Wrote consolidated /home/oinkv/anvil-workspace/proposals/A5-PHASE0-APPROVED.marker with 7 MUST-OBSERVE items distilled from both reviews (is-None detection ordering, 7-key map, canonical file path, forward-only, oinxtractor provisional flag).",
-        "Dispatched ANVIL via Python-wrapper + nohup (task a1a97b6b, running @ 13:42:33) with full action-item list to branch `anvil/A5-parser-confidence-scoring`, implement, test, push, and A2A VIGIL+GUARDIAN for Phase 1.",
-        "Verified A7/A4 canaries are passive-waiting for production events — no GUARDIAN nudge needed, no LLM failover errors in journalctl."
-      ],
-      "next": "Next cycle polls for A5 PR open (`gh pr list`) + HEARTBEAT.md→\"implementation\"/\"review_pending\" transitions. When VIGIL+GUARDIAN Phase 1 reviews land, fire Hermes-level parallel review, then merge if all three clear ≥9.0.",
-      "blocker": "none — sprint is steady. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_13-43-07.md"
     }
   ],
   "plans": [
@@ -3780,6 +3781,13 @@
       "mtime": "2026-04-19T20:12:14+00:00"
     },
     {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B2-v2.md",
+      "name": "OINKV-AUDIT-PHASE-B-B2-v2.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B2 v2 (Hermes fallback)",
+      "size_bytes": 17213,
+      "mtime": "2026-04-20T00:22:58+00:00"
+    },
+    {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B2.md",
       "name": "OINKV-AUDIT-PHASE-B-B2.md",
       "title": "OinkV Engineering Audit — FORGE Plan B2 (Hermes fallback)",
@@ -3787,11 +3795,25 @@
       "mtime": "2026-04-19T20:08:48+00:00"
     },
     {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B3-v2.md",
+      "name": "OINKV-AUDIT-PHASE-B-B3-v2.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B3 v2 (Hermes fallback)",
+      "size_bytes": 19792,
+      "mtime": "2026-04-20T00:22:41+00:00"
+    },
+    {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B3.md",
       "name": "OINKV-AUDIT-PHASE-B-B3.md",
       "title": "OinkV Engineering Audit — FORGE Plan B3 (Hermes fallback)",
       "size_bytes": 18267,
       "mtime": "2026-04-19T20:14:24+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-v2.md",
+      "name": "OINKV-AUDIT-PHASE-B-v2.md",
+      "title": "OinkV Audit — Phase B Wave 1 v2 (Hermes fallback)",
+      "size_bytes": 7640,
+      "mtime": "2026-04-20T00:24:44+00:00"
     },
     {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B.md",
@@ -3892,15 +3914,20 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T00:01:31+00:00",
-    "time_local": "2026-04-20T02:01+02:00",
-    "header": "SPRINT STATUS @ 01:58",
-    "actions": [],
-    "next": "If OinkV re-audit file lands (OINKV-AUDIT-PHASE-B-B2-v2.md / -B3-v2.md) → if findings, notify FORGE; if clean, consolidate and notify Mike. — If B1 canary file mtime advances past 3 post-deploy signals → read verdict, escalate if FAIL. — If PR #152 merges → re-scan open PRs, update markers. — If 30+ min pass with no OinkV v2 audit activity and no Mike dispatch → offer Hermes-subagent fallback (main-lane healthy for OinkV is uncertain; 01:15 session-lock + 01:57 heartbeat LLM-timeout on main lane suggest it may be wedged).",
-    "blocker": "none actionable by orchestrator. Heads-up only — OinkV (main lane) had session-lock errors @ 01:15 and FailoverError heartbeat timeout @ 01:57; if you planned to dispatch OinkV re-audit of B2/B3 v2 and it doesn't complete, ping and I'll run the Hermes-subagent 3-parallel fallback (same pattern that recovered Wave 2 and Phase B audits). ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-01-31.md"
+    "time_utc": "2026-04-20T00:26:11+00:00",
+    "time_local": "2026-04-20T02:26+02:00",
+    "header": "SPRINT STATUS @ 00:25 UTC (02:25 CEST)",
+    "actions": [
+      "Detected OinkV (main) lane LLM-timing-out (FailoverError @ 01:57/02:01/02:12) — took Hermes-subagent fallback path per skill.",
+      "Dispatched 2× parallel delegate_task audits of FORGE's v2 revisions: B2 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 2 Minor / 14 Confirmed-Fixed), B3 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 1 Minor / 11 Confirmed-Fixed). Verified against live DB schema + 3-repo HEADs (0fbcbf1b / ecd2622 / b0f0254).",
+      "Wrote consolidated audit + marker: OINKV-AUDIT-PHASE-B-v2.md + OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker (with Mike provenance note on OinkV timeout).",
+      "A2A'd ANVIL to start B2 Phase 0 proposal — parallel-safe with passive B1 canary. Dispatch confirmed in task_runs as running 02:25:50."
+    ],
+    "next": "check B1 canary progress (organic signal arrival) + poll for /home/oinkv/anvil-workspace/proposals/B2-READY-FOR-REVIEW.marker; if present, A2A VIGIL+GUARDIAN for Phase 0 proposal review.",
+    "blocker": null,
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-26-11.md"
   },
-  "commit": "2db15256b25b",
+  "commit": "efa227535116",
   "recent_events": [
     {
       "ts": "2026-04-19T23:23:12+00:00",

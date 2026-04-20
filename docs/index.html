@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T00:01:32+00:00">
+<body data-generated="2026-04-20T00:26:12+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T00:01:32+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T00:26:12+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T02:01:32+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T02:26:12+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 02:01 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 02:26 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -2214,7 +2214,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">17m ago</div>
+        <div class="agent-meta mono muted">1m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2226,7 +2226,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B1
  · deployed        </div>
-        <div class="agent-meta mono muted">40m ago</div>
+        <div class="agent-meta mono muted">1h 5m ago</div>
           <div class="agent-meta mono muted">branch: anvil/B1-db-abstraction</div>
       </div>
       <div class="agent agent-light-yellow">
@@ -2239,7 +2239,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">49m ago</div>
+        <div class="agent-meta mono muted">1h 14m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2251,7 +2251,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">38m ago</div>
+        <div class="agent-meta mono muted">1h 2m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2265,17 +2265,17 @@ future      </span>
         </div>
         <div class="agent-meta mono muted">0s ago</div>
       </div>
-      <div class="agent agent-light-red">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🐷</span>
           <span class="agent-name">OinkV</span>
-          <span class="agent-light light-red" title="red"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Plan Auditor</div>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">3h 45m ago</div>
+        <div class="agent-meta mono muted">1m ago</div>
       </div>
     </div>
   </div>
@@ -2292,6 +2292,13 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 02:26 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 00:25 UTC (02:25 CEST)</div>
+            <ul class="narrative-actions">
+<li>Detected OinkV (main) lane LLM-timing-out (FailoverError @ 01:57/02:01/02:12) — took Hermes-subagent fallback path per skill.</li><li>Dispatched 2× parallel delegate_task audits of FORGE's v2 revisions: B2 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 2 Minor / 14 Confirmed-Fixed), B3 v2 → ✅ SHIP-READY (0 Crit / 0 Maj / 1 Minor / 11 Confirmed-Fixed). Verified against live DB schema + 3-repo HEADs (0fbcbf1b / ecd2622 / b0f0254).</li><li>Wrote consolidated audit + marker: OINKV-AUDIT-PHASE-B-v2.md + OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker (with Mike provenance note on OinkV timeout).</li><li>A2A'd ANVIL to start B2 Phase 0 proposal — parallel-safe with passive B1 canary. Dispatch confirmed in task_runs as running 02:25:50.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> check B1 canary progress (organic signal arrival) + poll for /home/oinkv/anvil-workspace/proposals/B2-READY-FOR-REVIEW.marker; if present, A2A VIGIL+GUARDIAN for Phase 0 proposal review.</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 02:01 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 01:58</div>
@@ -2571,14 +2578,6 @@ future      </span>
             <div class="narrative-next"><span class="pill pill-info">next</span> Next cycle will (1) check FORGE's WAVE3-PLANS-READY.marker + surface Mike's approval gate for A10 if flagged, (2) verify GUARDIAN's A5 post-deploy SQL report landed, (3) if plans approved, nudge ANVIL to start next Phase 0 proposal (likely A9/A11 lightweight first, then A6/A8).</div>
             <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> Wave 3 plans incoming from FORGE. Once WAVE3-PLANS-READY.marker lands (expect next cycle), you'll need to approve A10 (DB merge — 🔴 CRITICAL) before ANVIL touches it. Lightweight A9/A11 and STANDARD A6/A8 can proceed without explicit approval per prior sprint pattern. ```</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 13:43 CEST</div>
-            <div class="narrative-header">State is healthy — no zombies, no gateway lane errors, cron is making tight progress. Let me emit the concise sprint status.</div>
-            <ul class="narrative-actions">
-<li>Wrote consolidated /home/oinkv/anvil-workspace/proposals/A5-PHASE0-APPROVED.marker with 7 MUST-OBSERVE items distilled from both reviews (is-None detection ordering, 7-key map, canonical file path, forward-only, oinxtractor provisional flag).</li><li>Dispatched ANVIL via Python-wrapper + nohup (task a1a97b6b, running @ 13:42:33) with full action-item list to branch `anvil/A5-parser-confidence-scoring`, implement, test, push, and A2A VIGIL+GUARDIAN for Phase 1.</li><li>Verified A7/A4 canaries are passive-waiting for production events — no GUARDIAN nudge needed, no LLM failover errors in journalctl.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> Next cycle polls for A5 PR open (`gh pr list`) + HEARTBEAT.md→"implementation"/"review_pending" transitions. When VIGIL+GUARDIAN Phase 1 reviews land, fire Hermes-level parallel review, then merge if all three clear ≥9.0.</div>
-            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> none — sprint is steady. ```</div>
-        </li>
       </ol>
     </div>
 
@@ -2662,16 +2661,34 @@ future      </span>
           <span class="mono muted file-mtime">Apr 19, 22:12 CEST</span>
         </li>
         <li>
+          <span class="mono file-name">OINKV-AUDIT-PHASE-B-B2-v2.md</span>
+          <span class="file-title">OinkV Engineering Audit — FORGE Plan B2 v2 (Hermes fallback)</span>
+          <span class="mono muted file-size">16.8 KB</span>
+          <span class="mono muted file-mtime">Apr 20, 02:22 CEST</span>
+        </li>
+        <li>
           <span class="mono file-name">OINKV-AUDIT-PHASE-B-B2.md</span>
           <span class="file-title">OinkV Engineering Audit — FORGE Plan B2 (Hermes fallback)</span>
           <span class="mono muted file-size">25.0 KB</span>
           <span class="mono muted file-mtime">Apr 19, 22:08 CEST</span>
         </li>
         <li>
+          <span class="mono file-name">OINKV-AUDIT-PHASE-B-B3-v2.md</span>
+          <span class="file-title">OinkV Engineering Audit — FORGE Plan B3 v2 (Hermes fallback)</span>
+          <span class="mono muted file-size">19.3 KB</span>
+          <span class="mono muted file-mtime">Apr 20, 02:22 CEST</span>
+        </li>
+        <li>
           <span class="mono file-name">OINKV-AUDIT-PHASE-B-B3.md</span>
           <span class="file-title">OinkV Engineering Audit — FORGE Plan B3 (Hermes fallback)</span>
           <span class="mono muted file-size">17.8 KB</span>
           <span class="mono muted file-mtime">Apr 19, 22:14 CEST</span>
+        </li>
+        <li>
+          <span class="mono file-name">OINKV-AUDIT-PHASE-B-v2.md</span>
+          <span class="file-title">OinkV Audit — Phase B Wave 1 v2 (Hermes fallback)</span>
+          <span class="mono muted file-size">7.5 KB</span>
+          <span class="mono muted file-mtime">Apr 20, 02:24 CEST</span>
         </li>
         <li>
           <span class="mono file-name">OINKV-AUDIT-PHASE-B.md</span>
@@ -2749,12 +2766,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">2db15256b25b</span>    </div>
+checkpoint@<span class="mono">efa227535116</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 02:01 CEST
+        Last orchestrator cycle: Apr 20, 02:26 CEST
     </div>
     <div>
-      generated Apr 20, 02:01 CEST
+      generated Apr 20, 02:26 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
