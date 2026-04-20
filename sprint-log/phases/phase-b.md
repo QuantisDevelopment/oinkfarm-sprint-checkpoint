@@ -16,16 +16,16 @@
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 20, 22:55 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 20, 15:15 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
-| [B4](../tasks/B4-b4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 22:55 CEST · `DECISION_RESOLVED` | forge · hermes |
+| [B4](../tasks/B4-b4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `SPRINT_NOTE` | anvil · forge · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 20, 09:02 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | MERGED | — | — | Apr 20, 08:46 CEST · `MERGED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 20, 12:26 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 20, 12:10 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
-| [B9](../tasks/B9-b9.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | forge · hermes |
+| [B9](../tasks/B9-b9.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:43 CEST · `TASK_PLANNED` | forge |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:45 CEST · `TASK_PLANNED` | forge |
-| [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | forge · hermes |
-| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 22:54 CEST · `DECISION_RESOLVED` | forge · hermes |
+| [B12](../tasks/B12-b12.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
+| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
 
 ## Waves
@@ -36,6 +36,10 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
+| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B9` | forge | B9 plan published |
+| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B12` | forge | B12 plan published |
+| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B13` | forge | B13 plan published |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
 | Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
@@ -62,10 +66,6 @@
 | Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
 | Apr 20, 12:10 CEST | `CANARY_STARTED` | `B8` | guardian | B8 canary started |
 | Apr 20, 11:57 CEST | `MERGED` | `B8` | anvil | B8 merged via PR #26 @6879e25 |
-| Apr 20, 11:56 CEST | `PR_OPENED` | `B7` | anvil | B7 PR #27 opened — feat(B7): extract WG Bot parsers to parsers/wg_bot.py |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: Cutover requires Mike's explicit go-ahead |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B1` | forge | B1 Mike gate: PostgreSQL driver: psycopg3 vs psycopg2? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B1` | forge | B1 Mike gate: oink_db.py location? |
 
 ## Needs Mike (open gates)
 
