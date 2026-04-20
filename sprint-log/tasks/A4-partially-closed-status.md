@@ -6,7 +6,11 @@
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)  
-**Merge commit:** [e9be741a7a0c](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a)
+**Merge commit:** —
+
+## In plain English
+
+A4 added the PARTIALLY_CLOSED status so partial-TP signals have a clean lifecycle. Before this, signals hit a limbo state whenever a TP1/TP2 fired without all levels closing — breaking PnL aggregation.
 
 ## One-liner
 
@@ -40,7 +44,6 @@ _None._
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A4.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A4.md) — 13.1 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW-R1.md)
 - **Backfill log:** [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md)
-- **Merge commit:** [`e9be741a7a0c`](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) (oink-sync PR #7)
 - **PR(s):** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)
 
 ## Lessons Learned

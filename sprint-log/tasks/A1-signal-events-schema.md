@@ -6,7 +6,11 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [signal-gateway#17](https://github.com/QuantisDevelopment/signal-gateway/pull/17) + [signal-gateway#18](https://github.com/QuantisDevelopment/signal-gateway/pull/18) + [oinkfarm#126](https://github.com/QuantisDevelopment/oinkfarm/pull/126) + [oink-sync#4](https://github.com/QuantisDevelopment/oink-sync/pull/4)  
-**Merge commit:** [9fa2d1937da5](https://github.com/QuantisDevelopment/signal-gateway/commit/9fa2d1937da5a16aef5834645abd504a5eff2df4) + [5b242c567d0d](https://github.com/QuantisDevelopment/oinkfarm/commit/5b242c567d0df4b8b25d3866e711f15d772e685a) + [3d60538acc0f](https://github.com/QuantisDevelopment/oink-sync/commit/3d60538acc0fb696b41da151d9062cd9896ad790)
+**Merge commit:** —
+
+## In plain English
+
+A1 introduced a dedicated signal_events table with 12 lifecycle event types. Before this, signal state changes were scattered across log files and status columns, making it impossible to reconstruct history. Now every lifecycle transition leaves a durable, queryable event row.
 
 ## One-liner
 
@@ -34,9 +38,6 @@ _(No structured decision list extractable from merge artifacts — see the MERGE
 
 - **OinkV audit:** [OINKV-AUDIT.md](../../raw-artifacts/forge/plans/OINKV-AUDIT.md) — 23.4 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A1-GUARDIAN-PHASE0-REVIEW.md)
-- **Merge commit:** [`9fa2d1937da5`](https://github.com/QuantisDevelopment/signal-gateway/commit/9fa2d1937da5a16aef5834645abd504a5eff2df4) (signal-gateway PR #18)
-- **Merge commit:** [`5b242c567d0d`](https://github.com/QuantisDevelopment/oinkfarm/commit/5b242c567d0df4b8b25d3866e711f15d772e685a) (oinkfarm PR #126)
-- **Merge commit:** [`3d60538acc0f`](https://github.com/QuantisDevelopment/oink-sync/commit/3d60538acc0fb696b41da151d9062cd9896ad790) (oink-sync PR #4)
 - **PR(s):** [signal-gateway#17](https://github.com/QuantisDevelopment/signal-gateway/pull/17) · [signal-gateway#18](https://github.com/QuantisDevelopment/signal-gateway/pull/18) · [oinkfarm#126](https://github.com/QuantisDevelopment/oinkfarm/pull/126) · [oink-sync#4](https://github.com/QuantisDevelopment/oink-sync/pull/4)
 
 ## Lessons Learned

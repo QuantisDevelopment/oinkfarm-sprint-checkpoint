@@ -6,7 +6,11 @@
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)  
-**Merge commit:** [615731582e75](https://github.com/QuantisDevelopment/oinkfarm/commit/615731582e75b7a451dc84a12915839ada6503a8)
+**Merge commit:** —
+
+## In plain English
+
+A7 added UPDATE→NEW dedup with 5% tolerance to prevent phantom trades. Without this, a stream re-broadcast or tiny price wiggle could create a duplicate signal and fire a real order twice.
 
 ## One-liner
 
@@ -33,7 +37,6 @@ _None._
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A7.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A7.md) — 21.8 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A7-GUARDIAN-PHASE0-REVIEW.md)
-- **Merge commit:** [`615731582e75`](https://github.com/QuantisDevelopment/oinkfarm/commit/615731582e75b7a451dc84a12915839ada6503a8) (oinkfarm PR #130)
 - **PR(s):** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130)
 
 ## Lessons Learned

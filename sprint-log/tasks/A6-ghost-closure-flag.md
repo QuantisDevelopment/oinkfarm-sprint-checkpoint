@@ -6,7 +6,11 @@
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [signal-gateway#20](https://github.com/QuantisDevelopment/signal-gateway/pull/20)  
-**Merge commit:** [1adeaa1fd2bb](https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef)
+**Merge commit:** —
+
+## In plain English
+
+A6 emits a GHOST_CLOSURE event + note tag whenever the reconciler soft-closes a signal on board-absent. Purely additive, no financial writes — gives us an audit trail for closures that previously happened silently.
 
 ## One-liner
 
@@ -31,7 +35,6 @@ _None._
 ## Artifacts (Full Index)
 
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A6-GUARDIAN-PHASE0-REVIEW.md)
-- **Merge commit:** [`1adeaa1fd2bb`](https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef) (signal-gateway PR #20)
 - **PR(s):** [signal-gateway#20](https://github.com/QuantisDevelopment/signal-gateway/pull/20)
 
 ## Lessons Learned

@@ -1,5 +1,9 @@
 # Phase C — Mature Observability
 
+## What is Phase C?
+
+> Phase C builds mature observability on top of Phase A+B — dashboards, alerting, SLOs, and confidence-routing so the trading loop can be measured and tuned. Scoped but not yet started.
+
 **Status:** 0/1 tasks shipped  
 **Goal:** Build measurement, monitoring, and operational sophistication on top of Phase A+B.  
 **Data source:** event-stream reducer (`events.jsonl`)  
@@ -26,7 +30,7 @@ _No waves yet for this phase._
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 43m | PROVISIONAL soft-flag · hard reject |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 1.2h | PROVISIONAL soft-flag · hard reject |
 
 ---
 

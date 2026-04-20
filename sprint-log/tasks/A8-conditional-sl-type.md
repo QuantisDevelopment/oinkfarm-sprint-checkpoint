@@ -6,7 +6,11 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#134](https://github.com/QuantisDevelopment/oinkfarm/pull/134)  
-**Merge commit:** [461545434c32](https://github.com/QuantisDevelopment/oinkfarm/commit/461545434c32beac11aa451792dc1479ab770b31)
+**Merge commit:** —
+
+## In plain English
+
+A8 added a conditional SL type column (NONE / NUMERIC / MANUAL / BE / CONDITIONAL) so we can classify stop-loss origin at INSERT-time. This lets us tell Mike's context-dependent SLs apart from explicit numeric ones.
 
 ## One-liner
 
@@ -35,7 +39,6 @@ _None._
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A8.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A8.md) — 13.3 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A8-GUARDIAN-PHASE0-REVIEW.md)
 - **Backfill log:** [A8-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A8-BACKFILL-LOG.md)
-- **Merge commit:** [`461545434c32`](https://github.com/QuantisDevelopment/oinkfarm/commit/461545434c32beac11aa451792dc1479ab770b31) (oinkfarm PR #134)
 - **PR(s):** [oinkfarm#134](https://github.com/QuantisDevelopment/oinkfarm/pull/134)
 
 ## Lessons Learned

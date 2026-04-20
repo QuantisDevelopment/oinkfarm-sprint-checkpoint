@@ -6,7 +6,11 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#133](https://github.com/QuantisDevelopment/oinkfarm/pull/133)  
-**Merge commit:** [45a6931d4436](https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae)
+**Merge commit:** —
+
+## In plain English
+
+A11 persists a leverage_source column (EXPLICIT / DEFAULT / NULL) alongside the leverage value at INSERT-time. This gives us provenance for every leverage number — we can tell which came from the signal and which were filled from defaults.
 
 ## One-liner
 
@@ -33,7 +37,6 @@ _None._
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A11.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A11.md) — 14.8 KB
 - **Backfill log:** [A11-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A11-BACKFILL-LOG.md)
-- **Merge commit:** [`45a6931d4436`](https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae) (oinkfarm PR #133)
 - **PR(s):** [oinkfarm#133](https://github.com/QuantisDevelopment/oinkfarm/pull/133)
 
 ## Lessons Learned

@@ -79,7 +79,51 @@
       {% endif %}
     </div>
   </div>
+  {% if events_integrity.human_line %}
+  <div class="integrity-human" style="margin-top:6px;font-size:0.85rem;color:#c6d0e0;">
+    {{ events_integrity.human_line }}
+  </div>
+  {% endif %}
 </section>
+
+<!-- ★★★ HUMAN NARRATIVE BLOCK — leads the dashboard for Mike/Dominik ★★★ ---- -->
+{% if narrative %}
+<section class="human-narrative" id="human-narrative"
+         style="background:linear-gradient(180deg,rgba(30,42,70,0.55),rgba(20,26,42,0.35));border:1px solid rgba(138,180,255,0.25);border-radius:10px;padding:18px 22px;margin-bottom:24px;">
+  <div class="narrative-topbar" style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-bottom:14px;font-size:0.85rem;">
+    <span class="muted">📖 Plain-English sprint narrative</span>
+    <a href="{{ narrative.sos_link }}" style="color:#8ab4ff;text-decoration:none;">
+      Read the full State of the Sprint →
+    </a>
+    <a href="{{ narrative.glossary_link }}" class="muted" style="color:#9bb3d4;text-decoration:none;">
+      Glossary
+    </a>
+    {% if not narrative.sos_exists %}
+      <span class="muted" style="font-size:0.8rem;color:#e0a868;">
+        (State of Sprint doc being built by Scribe — link will go live on next regen)
+      </span>
+    {% endif %}
+  </div>
+  <div class="narrative-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
+    <div class="narrative-cell">
+      <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📖 The Mission</h3>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.mission }}</p>
+    </div>
+    <div class="narrative-cell">
+      <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📍 Today in one paragraph</h3>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.today }}</p>
+    </div>
+    <div class="narrative-cell">
+      <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📅 What happened this week</h3>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.week }}</p>
+    </div>
+    <div class="narrative-cell">
+      <h3 style="margin:0 0 8px 0;font-size:1.0rem;">🎯 What's next</h3>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.whats_next }}</p>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <!-- ★ MIKE SPEC — 4 top-level sections ★ ----------------------------------- -->
 

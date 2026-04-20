@@ -1,15 +1,19 @@
 # Heavy Hybrid Roadmap — Long-horizon Decisions
 
+## What is Heavy Hybrid?
+
+> Heavy Hybrid is the long-horizon roadmap captured as Q-HH decisions — Redis placement, retention policy, container strategy, W1 enforcement, confidence routing, and Phase-D gating. Six decisions resolved, zero open.
+
 **Source:** event-stream reducer (Q-HH-* DECISION_NEEDED / DECISION_RESOLVED)
 
 ## Open Q-HH gates
 
 | ID | Question | Age | Options |
 |---|---|---|---|
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | 2.2h | maxlen · time_based |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | 43m | single-host only · include multi-host preparation |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | 43m | phased app-level then DB REVOKE · immediate DB-level REVOKE |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | 43m | PROVISIONAL soft-flag · hard reject |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | 2.7h | maxlen · time_based |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | 1.2h | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | 1.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | 1.2h | PROVISIONAL soft-flag · hard reject |
 
 ## Resolved Q-HH decisions
 

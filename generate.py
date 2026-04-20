@@ -1486,6 +1486,18 @@ def build(now: datetime | None = None) -> dict[str, Any]:
         data["audits"] = []
         # Blockers — union of open_decisions + currently BLOCKED tasks
         data["blockers"] = _blockers_from_stream(data["tasks"], data["open_decisions"])
+        # ---- HUMAN NARRATIVE block — top-of-dashboard plain-English layer ----
+        tasks_by_id = {t["id"]: t for t in data["tasks"]}
+        data["narrative"] = {
+            "mission":        _render_mission(),
+            "today":          _render_today_paragraph(events, now, tasks_by_id),
+            "week":           _render_week_prose(events, now, tasks_by_id),
+            "whats_next":     _render_whats_next_prose(data),
+            "sos_exists":     STATE_OF_SPRINT.exists(),
+            "sos_link":       "sprint-log/STATE-OF-SPRINT.md",
+            "glossary_link":  "sprint-log/STATE-OF-SPRINT.md#glossary",
+        }
+        data["events_integrity"]["human_line"] = _integrity_human_line(integrity)
         return data
 
     # ----- FALLBACK: crawler (bootstrap mode) -----
@@ -1522,10 +1534,20 @@ def build(now: datetime | None = None) -> dict[str, Any]:
         "blockers": blockers, "last_cron": cron[0] if cron else None,
         "commit": git_commit(),
         "bootstrap": True,
-        "events_integrity": integrity,
+        "events_integrity": {**integrity,
+                             "human_line": _integrity_human_line(integrity)},
         "open_decisions": [],
         "live_buckets": {"1h": [], "4h": [], "24h": []},
         "lint_gaps": [],
+        "narrative": {
+            "mission":       _render_mission(),
+            "today":         _render_today_paragraph(events, now, {}),
+            "week":          _render_week_prose(events, now, {}),
+            "whats_next":    _render_whats_next_prose(None),
+            "sos_exists":    STATE_OF_SPRINT.exists(),
+            "sos_link":      "sprint-log/STATE-OF-SPRINT.md",
+            "glossary_link": "sprint-log/STATE-OF-SPRINT.md#glossary",
+        },
         "freshness_by_agent": [
             {
                 "id": a["id"], "name": a["name"], "emoji": a["emoji"],
@@ -1595,6 +1617,574 @@ def _blockers_from_stream(tasks: list[dict[str, Any]],
                 "current_phase": t.get("phase"),
             })
     return out
+
+
+# --------------------------------------------------------------------------- #
+# HUMAN NARRATIVE rendering — plain-English prose for the dashboard top block.
+#
+# These helpers lead the dashboard with a narrative layer that Mike/Dominik can
+# read without prior engineering context. They fall back gracefully if the
+# STATE-OF-SPRINT.md companion doc (produced by the Scribe subagent) is absent.
+# --------------------------------------------------------------------------- #
+
+STATE_OF_SPRINT = ROOT / "sprint-log" / "STATE-OF-SPRINT.md"
+
+# Known task short-names used to make the prose concrete.
+_TASK_SHORTNAMES = {
+    "A1":  "signal_events schema",
+    "A2":  "remaining_pct model",
+    "A3":  "auto filled_at",
+    "A4":  "PARTIALLY_CLOSED lifecycle",
+    "A5":  "parser confidence scoring",
+    "A6":  "ghost-closure flag",
+    "A7":  "UPDATE→NEW dedup",
+    "A8":  "conditional SL type",
+    "A9":  "1000x denomination multiplier",
+    "A10": "test→prod database merge",
+    "A11": "leverage-source tracking",
+    "B1":  "db abstraction layer",
+    "B2":  "PostgreSQL schema migration",
+    "B3":  "parallel-write verification",
+    "B4":  "PostgreSQL cutover",
+    "B5":  "Redis co-host bring-up",
+    "B6":  "Cornix/Chroma parser extraction",
+    "B7":  "config unification",
+    "B8":  "dedup consolidation",
+    "B9":  "W1 DB-level enforcement",
+    "C1":  "observability scaffolding",
+    "C2":  "confidence routing",
+}
+
+def _read_sos_section(section: str) -> str | None:
+    """Read a '## <section>' block from STATE-OF-SPRINT.md. Returns None if
+    the file is missing or the section cannot be located. Matches either an
+    exact heading or a heading where `section` is the prefix (so 'The Mission'
+    matches '## The Mission (one paragraph)')."""
+    if not STATE_OF_SPRINT.exists():
+        return None
+    try:
+        text = STATE_OF_SPRINT.read_text(encoding="utf-8", errors="replace")
+    except Exception:
+        return None
+    # Match '## <section>[ trailing words ...]' and capture everything up to
+    # the next '## ' heading or EOF.
+    pattern = re.compile(
+        r"(?ms)^##[ \t]+" + re.escape(section)
+        + r"(?:[ \t][^\n]*)?\n(.*?)(?=^##[ \t]|\Z)"
+    )
+    m = pattern.search(text)
+    if not m:
+        return None
+    body = m.group(1).strip()
+    return body or None
+
+
+def _render_mission() -> str:
+    """Return the Mission paragraph from STATE-OF-SPRINT.md, or a graceful
+    placeholder if the Scribe has not produced it yet."""
+    body = _read_sos_section("The Mission") or _read_sos_section("Mission")
+    if not body:
+        return (
+            "Mission statement pending — first Scribe run populates this. "
+            "State of Sprint doc being built by Scribe."
+        )
+    # Use the first non-empty paragraph only for the dashboard inline block.
+    for para in body.split("\n\n"):
+        p = para.strip()
+        if p and not p.startswith("#"):
+            return p
+    return body
+
+
+def _short_task(tid: str, tasks_by_id: dict[str, dict[str, Any]]) -> str:
+    """Render a task reference as '<tid> <tier_emoji> <short-name>'."""
+    t = tasks_by_id.get(tid) or {}
+    emoji = t.get("tier_emoji") or TIER_EMOJI.get(TIERS.get(tid, "STANDARD"), "•")
+    name = _TASK_SHORTNAMES.get(tid, "")
+    return f"{tid} {emoji}{(' ' + name) if name else ''}".strip()
+
+
+def _n_as_word(n: int) -> str:
+    """Render small counts as English words ('three merges')."""
+    words = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four",
+             5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine",
+             10: "ten", 11: "eleven", 12: "twelve"}
+    return words.get(n, str(n))
+
+
+def _events_between(events: list[dict[str, Any]],
+                    start: datetime, end: datetime) -> list[dict[str, Any]]:
+    """Return events with ts in [start, end]. Uses UTC-aware comparison."""
+    out = []
+    for e in events:
+        ts = _parse_event_ts(e.get("ts", ""))
+        if ts and start <= ts <= end:
+            out.append(e)
+    return out
+
+
+def _render_today_paragraph(events: list[dict[str, Any]],
+                            now: datetime | None = None,
+                            tasks_by_id: dict[str, dict[str, Any]] | None = None
+                            ) -> str:
+    """Construct a plain-English paragraph from today's (UTC day) events.
+
+    Rules: mention concrete tasks by short-name + tier emoji; mention counts;
+    mention Mike interactions if any; mention new decisions. Max ~120 words,
+    no bullets. If zero events today, emits a 'quiet' line.
+    """
+    now = now or datetime.now(timezone.utc)
+    tasks_by_id = tasks_by_id or {}
+    day_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    today = _events_between(events, day_start, now)
+    if not today:
+        return ("Quiet so far today — no merges, reviews, or canaries since "
+                "midnight UTC.")
+
+    # Tally event types
+    merged = [e for e in today if e.get("event_type") == "MERGED"]
+    canary_start = [e for e in today if e.get("event_type") == "CANARY_STARTED"]
+    canary_pass = [e for e in today if e.get("event_type") == "CANARY_PASS"]
+    canary_fail = [e for e in today if e.get("event_type") == "CANARY_FAIL"]
+    reviews = [e for e in today if e.get("event_type") == "REVIEW_POSTED"]
+    prs_opened = [e for e in today if e.get("event_type") == "PR_OPENED"]
+    decisions_opened = [e for e in today
+                        if e.get("event_type") == "DECISION_NEEDED"]
+    decisions_resolved = [e for e in today
+                          if e.get("event_type") == "DECISION_RESOLVED"]
+    authority = [e for e in today
+                 if e.get("event_type") == "AUTHORITY"
+                 or (e.get("agent") or "").lower() == "mike"]
+
+    # First sentence — counts summary
+    bits = []
+    if merged:
+        bits.append(f"{_n_as_word(len(merged))} merge{'s' if len(merged) != 1 else ''}")
+    if canary_start:
+        bits.append(
+            f"{_n_as_word(len(canary_start))} canary kicked off"
+            if len(canary_start) == 1
+            else f"{_n_as_word(len(canary_start))} canaries kicked off"
+        )
+    if canary_pass:
+        bits.append(
+            f"{_n_as_word(len(canary_pass))} canary PASS"
+            if len(canary_pass) == 1
+            else f"{_n_as_word(len(canary_pass))} canary PASSes"
+        )
+    if canary_fail:
+        bits.append(f"{_n_as_word(len(canary_fail))} canary FAIL"
+                    + ("s" if len(canary_fail) != 1 else ""))
+    if reviews:
+        bits.append(f"{_n_as_word(len(reviews))} review"
+                    + ("s posted" if len(reviews) != 1 else " posted"))
+    if prs_opened and not merged:
+        bits.append(f"{_n_as_word(len(prs_opened))} PR"
+                    + ("s opened" if len(prs_opened) != 1 else " opened"))
+
+    parts: list[str] = []
+    if bits:
+        # Nice English joining
+        if len(bits) == 1:
+            parts.append(f"Today: {bits[0]}.")
+        elif len(bits) == 2:
+            parts.append(f"Today: {bits[0]} and {bits[1]}.")
+        else:
+            parts.append(f"Today: {', '.join(bits[:-1])}, and {bits[-1]}.")
+
+    # Second sentence — specific shipped tasks (up to 3 concrete examples)
+    shipped_ids = []
+    seen = set()
+    for e in merged + canary_pass:
+        tid = e.get("task_id")
+        if tid and tid not in seen:
+            seen.add(tid)
+            shipped_ids.append(tid)
+    if shipped_ids:
+        refs = [_short_task(t, tasks_by_id) for t in shipped_ids[:3]]
+        verb = "shipped" if merged else "cleared canary"
+        if len(refs) == 1:
+            parts.append(f"{refs[0]} {verb}.")
+        else:
+            parts.append(
+                f"Tasks on the board: {', '.join(refs[:-1])}, and {refs[-1]} "
+                f"all moved forward."
+            )
+
+    # Mike interactions
+    if authority or decisions_resolved:
+        mike_bits = []
+        # Find Mike-resolved decisions
+        for e in decisions_resolved:
+            ex = e.get("extra") or {}
+            qid = ex.get("question_id") or ""
+            ans = (ex.get("answer") or "").strip()
+            if qid:
+                mike_bits.append(f"{qid} resolved" + (f" ({ans[:60]})" if ans else ""))
+        for e in authority:
+            ex = e.get("extra") or {}
+            text = ex.get("text") or ex.get("summary") or ""
+            if text:
+                mike_bits.append(text.strip()[:80])
+        mike_bits = mike_bits[:3]
+        if mike_bits:
+            parts.append("Mike weighed in: " + "; ".join(mike_bits) + ".")
+
+    # New decisions opened
+    if decisions_opened:
+        qids = []
+        for e in decisions_opened:
+            ex = e.get("extra") or {}
+            qid = ex.get("question_id")
+            if qid and qid not in qids:
+                qids.append(qid)
+        if qids:
+            if len(qids) == 1:
+                parts.append(f"One new gate opened for Mike: {qids[0]}.")
+            else:
+                parts.append(
+                    f"New gates opened for Mike: {', '.join(qids[:4])}."
+                )
+
+    text = " ".join(parts).strip()
+    # Word-cap ~120 words
+    words = text.split()
+    if len(words) > 120:
+        text = " ".join(words[:120]).rstrip(",;:") + "…"
+    return text or "Activity logged today, no headline moves yet."
+
+
+def _render_week_prose(events: list[dict[str, Any]],
+                       now: datetime | None = None,
+                       tasks_by_id: dict[str, dict[str, Any]] | None = None
+                       ) -> str:
+    """Chronological prose summary of the last 72 hours. Max ~150 words."""
+    now = now or datetime.now(timezone.utc)
+    tasks_by_id = tasks_by_id or {}
+    week_start = now - timedelta(hours=72)
+    window = _events_between(events, week_start, now)
+    if not window:
+        return ("The last three days have been quiet — no merges, canaries, "
+                "or reviews recorded in the event stream.")
+
+    # Find phase transitions + major merges chronologically
+    window_sorted = sorted(window, key=lambda e: e.get("ts", ""))
+
+    # Group merges by day
+    merges_by_day: dict[str, list[str]] = {}
+    canaries_by_day: dict[str, list[str]] = {}
+    for e in window_sorted:
+        ts = _parse_event_ts(e.get("ts", ""))
+        if not ts:
+            continue
+        day = ts.strftime("%Y-%m-%d")
+        tid = e.get("task_id")
+        if e.get("event_type") == "MERGED" and tid:
+            merges_by_day.setdefault(day, []).append(tid)
+        if e.get("event_type") in ("CANARY_PASS", "CANARY_STARTED") and tid:
+            canaries_by_day.setdefault(day, []).append(tid)
+
+    # Phase grouping
+    merged_tasks = sorted({t for ts in merges_by_day.values() for t in ts})
+    phase_a_merged = [t for t in merged_tasks if (t or "").startswith("A")]
+    phase_b_merged = [t for t in merged_tasks if (t or "").startswith("B")]
+
+    # Total counts
+    total_merges = sum(len(v) for v in merges_by_day.values())
+    total_canaries = sum(len(v) for v in canaries_by_day.values())
+    reviews = sum(1 for e in window if e.get("event_type") == "REVIEW_POSTED")
+    decisions = sum(1 for e in window
+                    if e.get("event_type") in
+                    ("DECISION_NEEDED", "DECISION_RESOLVED"))
+
+    parts: list[str] = []
+    parts.append(
+        f"Over the last three days, the stream recorded {_n_as_word(total_merges)} "
+        f"merge{'s' if total_merges != 1 else ''}, "
+        f"{_n_as_word(total_canaries)} canary event{'s' if total_canaries != 1 else ''}, "
+        f"and {_n_as_word(reviews)} review{'s' if reviews != 1 else ''} "
+        f"posted across the board."
+    )
+
+    if phase_a_merged:
+        refs = [_short_task(t, tasks_by_id) for t in phase_a_merged[:4]]
+        parts.append(
+            "Phase A work continued to settle with "
+            + (", ".join(refs[:-1]) + ", and " + refs[-1] if len(refs) > 1
+               else refs[0])
+            + " reaching prod."
+        )
+    if phase_b_merged:
+        refs = [_short_task(t, tasks_by_id) for t in phase_b_merged[:4]]
+        parts.append(
+            "Phase B Wave 2 is in flight — "
+            + (", ".join(refs[:-1]) + ", and " + refs[-1] if len(refs) > 1
+               else refs[0])
+            + " shipped in this window."
+        )
+    if decisions:
+        parts.append(
+            f"{_n_as_word(decisions).capitalize()} decision "
+            f"event{'s' if decisions != 1 else ''} flowed through the "
+            f"Mike-gate process."
+        )
+
+    text = " ".join(parts).strip()
+    words = text.split()
+    if len(words) > 150:
+        text = " ".join(words[:150]).rstrip(",;:") + "…"
+    return text
+
+
+def _render_whats_next_prose(data: dict[str, Any] | None = None) -> str:
+    """Prose summary of upcoming milestones — reads STATE-OF-SPRINT.md's
+    'What's Next' / 'Next' section when available, otherwise synthesises from
+    the current blocker set + open decisions. Max ~120 words."""
+    body = (_read_sos_section("What's Next")
+            or _read_sos_section("Whats Next")
+            or _read_sos_section("Next"))
+    if body:
+        # Flatten bullets → prose. First collapse list items into sentences.
+        lines = [ln.strip() for ln in body.split("\n") if ln.strip()]
+        sentences = []
+        for ln in lines:
+            s = re.sub(r"^[-*+]\s+", "", ln)
+            s = re.sub(r"^\d+\.\s+", "", s)
+            if s and not s.startswith("#"):
+                if s[-1] not in ".!?":
+                    s = s + "."
+                sentences.append(s)
+        text = " ".join(sentences)
+        words = text.split()
+        if len(words) > 120:
+            text = " ".join(words[:120]).rstrip(",;:") + "…"
+        return text or (
+            "State of Sprint doc is being built by Scribe — upcoming "
+            "milestones will appear here next regen."
+        )
+
+    # Fallback: synthesize from current open decisions + tasks in flight
+    if not data:
+        return ("State of Sprint doc being built by Scribe — upcoming "
+                "milestones will appear here once the Scribe populates the "
+                "'What's Next' section.")
+
+    tasks = data.get("tasks") or []
+    open_decs = data.get("open_decisions") or []
+    in_flight = [t for t in tasks
+                 if t.get("status") in ("CODE", "PR_REVIEW", "CANARY",
+                                        "PROPOSAL", "PROPOSAL_REVIEW")]
+    in_flight.sort(key=lambda t: t.get("id") or "")
+    parts = []
+    if in_flight:
+        refs = [f"{t['id']} ({STATUS_HUMAN.get(t['status'], t['status']).lower()})"
+                for t in in_flight[:4]]
+        parts.append("Next up: " + ", ".join(refs) + ".")
+    if open_decs:
+        parts.append(
+            f"{_n_as_word(len(open_decs)).capitalize()} open Mike-gate"
+            f"{'s' if len(open_decs) != 1 else ''} — "
+            + ", ".join(d.get("question_id", "?") for d in open_decs[:4])
+            + " — pending resolution."
+        )
+    if not parts:
+        parts.append(
+            "State of Sprint doc being built by Scribe — upcoming milestones "
+            "will appear here."
+        )
+    text = " ".join(parts)
+    words = text.split()
+    if len(words) > 120:
+        text = " ".join(words[:120]).rstrip(",;:") + "…"
+    return text
+
+
+def _integrity_human_line(integrity: dict[str, Any]) -> str:
+    """Translate the machine-readable events-integrity strip into plain
+    English for the dashboard."""
+    total = integrity.get("total") or 0
+    last_24h = integrity.get("last_24h") or 0
+    rate = integrity.get("rate_per_hour") or 0.0
+    monotonic_ok = integrity.get("monotonic_ok", True)
+    if last_24h == 0:
+        return (f"In plain English: quiet — {total} events on file, nothing "
+                f"recorded in the last 24 hours.")
+    # Rough healthiness — gaps hurt, otherwise healthy.
+    health = "System is healthy." if monotonic_ok else "Event stream has order gaps — review needed."
+    if last_24h < 5:
+        return (f"In plain English: only {last_24h} things happened in the "
+                f"last 24 hours — a slow day. {health}")
+    return (f"In plain English: {last_24h} things happened today, ~{rate}/h "
+            f"steady-state. {health}")
+
+
+# Two-sentence human blurbs per phase — used by phase pages. Kept short so
+# they read naturally as the first paragraph a non-engineer sees.
+_PHASE_HUMAN_FALLBACK = {
+    "A": (
+        "Phase A is the data-truth gate: it fixed correctness bugs in the "
+        "SQLite signal layer (schema, remaining_pct, partial closes, ghost "
+        "closures, UPDATE→NEW dedup) so downstream phases can trust the "
+        "numbers. "
+        "It shipped 11 tasks across 4 waves and is complete."
+    ),
+    "B": (
+        "Phase B migrates OinkFarm from SQLite + monolith to PostgreSQL + "
+        "decomposed services — the infrastructure layer that unlocks Redis, "
+        "W1 governance, and multi-writer safety. "
+        "Wave 1 (db abstraction) shipped; Wave 2 (parser extraction, "
+        "Cornix/Chroma, dedup consolidation) is in flight."
+    ),
+    "C": (
+        "Phase C builds mature observability on top of Phase A+B — "
+        "dashboards, alerting, SLOs, and confidence-routing so the trading "
+        "loop can be measured and tuned. "
+        "Scoped but not yet started."
+    ),
+    "HH": (
+        "Heavy Hybrid is the long-horizon roadmap captured as Q-HH decisions "
+        "— Redis placement, retention policy, container strategy, W1 "
+        "enforcement, confidence routing, and Phase-D gating. "
+        "Six decisions resolved, zero open."
+    ),
+}
+
+
+def _phase_human_blurb(phase: str) -> str:
+    """Return a 2-sentence plain-English blurb for the phase. Prefers the
+    matching '## Phase X' section from STATE-OF-SPRINT.md; falls back to the
+    hard-coded defaults above."""
+    key = (phase or "").strip().upper().replace("PHASE-", "").replace(" ", "")
+    # Try multiple section heading variants
+    candidates = []
+    if key == "HH":
+        candidates = ["Heavy Hybrid", "Phase HH", "Heavy-Hybrid"]
+    else:
+        candidates = [f"Phase {key}", f"Phase-{key}"]
+    for cand in candidates:
+        body = _read_sos_section(cand)
+        if body:
+            # Take first two sentences, strip bullets
+            clean = re.sub(r"^[-*+]\s+", "", body, flags=re.M).strip()
+            sentences = re.split(r"(?<=[.!?])\s+", clean)
+            out = " ".join(sentences[:2]).strip()
+            if out:
+                return out
+    return _PHASE_HUMAN_FALLBACK.get(
+        key,
+        "Phase documentation pending — State of Sprint doc being built by Scribe.",
+    )
+
+
+# --- Per-task 'In plain English' blurb ------------------------------------ #
+
+# Hand-curated plain-English blurbs. Used as the canonical source when
+# available; otherwise _task_plain_english falls back to event-history.
+_TASK_PLAIN_ENGLISH = {
+    "A1": (
+        "A1 introduced a dedicated signal_events table with 12 lifecycle "
+        "event types. Before this, signal state changes were scattered across "
+        "log files and status columns, making it impossible to reconstruct "
+        "history. Now every lifecycle transition leaves a durable, queryable "
+        "event row."
+    ),
+    "A2": (
+        "A2 fixed the remaining_pct model so blended PnL is arithmetically "
+        "correct after partial closes. The old model silently mixed full- and "
+        "partial-close rows, producing wrong aggregate numbers on any signal "
+        "that hit a partial TP."
+    ),
+    "A3": (
+        "A3 auto-populates filled_at for MARKET orders at INSERT-time. "
+        "Previously it was left NULL and backfilled late (or not at all), "
+        "which broke downstream latency metrics."
+    ),
+    "A4": (
+        "A4 added the PARTIALLY_CLOSED status so partial-TP signals have a "
+        "clean lifecycle. Before this, signals hit a limbo state whenever a "
+        "TP1/TP2 fired without all levels closing — breaking PnL aggregation."
+    ),
+    "A5": (
+        "A5 introduced parser-type confidence scoring (regex / board / LLM "
+        "weights) so we can tell which parser produced a signal and how much "
+        "to trust it. This is the foundation for Phase C confidence routing."
+    ),
+    "A6": (
+        "A6 emits a GHOST_CLOSURE event + note tag whenever the reconciler "
+        "soft-closes a signal on board-absent. Purely additive, no financial "
+        "writes — gives us an audit trail for closures that previously "
+        "happened silently."
+    ),
+    "A7": (
+        "A7 added UPDATE→NEW dedup with 5% tolerance to prevent phantom "
+        "trades. Without this, a stream re-broadcast or tiny price wiggle "
+        "could create a duplicate signal and fire a real order twice."
+    ),
+    "A8": (
+        "A8 added a conditional SL type column (NONE / NUMERIC / MANUAL / BE "
+        "/ CONDITIONAL) so we can classify stop-loss origin at INSERT-time. "
+        "This lets us tell Mike's context-dependent SLs apart from explicit "
+        "numeric ones."
+    ),
+    "A9": (
+        "A9 normalizes entry + SL prices for 1000x-prefixed symbols "
+        "(1000SHIB, 1000PEPE, …) by dividing by 1000 at INSERT. Before this, "
+        "~7% of signals had off-by-1000 prices and the SL_DEVIATION guard "
+        "incorrectly rejected valid signals."
+    ),
+    "A10": (
+        "A10 merged 912 test-DB signals into prod using a council-approved "
+        "append-only strategy. This was the first non-standard governance "
+        "path in the sprint — OinkV + OinkDB co-signed via GH Issue #136 — "
+        "and it produced 1,407 rows with zero NULL invariants and zero "
+        "orphans."
+    ),
+    "A11": (
+        "A11 persists a leverage_source column (EXPLICIT / DEFAULT / NULL) "
+        "alongside the leverage value at INSERT-time. This gives us "
+        "provenance for every leverage number — we can tell which came from "
+        "the signal and which were filled from defaults."
+    ),
+    "B1": (
+        "B1 shipped oink_db.py — a thin wrapper module that makes every "
+        "sqlite3 caller backend-agnostic. Before this, swapping to PostgreSQL "
+        "would have meant touching every query site; now it's a one-line "
+        "config change at the top of the module."
+    ),
+    "B8": (
+        "B8 consolidated signal deduplication logic into a dedicated dedup.py "
+        "module. Before this, dedup was scattered across four places in the "
+        "codebase, making bugs hard to find. Now all dedup logic lives in "
+        "one module with a clear public API."
+    ),
+}
+
+
+def _task_plain_english(task: dict[str, Any]) -> str:
+    """Return a short 'Why this task matters' paragraph. Uses curated copy
+    when available; falls back to auto-generation from task metadata +
+    event history."""
+    tid = task.get("id") or ""
+    if tid in _TASK_PLAIN_ENGLISH:
+        return _TASK_PLAIN_ENGLISH[tid]
+    # Fallback: synthesize from metadata
+    name = TASK_NAMES.get(tid, tid)
+    oneliner = TASK_ONELINERS.get(tid, "").strip()
+    tier = task.get("tier", "")
+    status_label = STATUS_HUMAN.get(task.get("status", ""), "").lower()
+    ev_count = task.get("event_count") or len(task.get("events") or [])
+    prs = task.get("prs") or []
+    pr_note = ""
+    if prs:
+        p = prs[0]
+        pr_note = f" The work is tracked in {p.get('repo', '?')} PR #{p.get('number', '?')}."
+    base = f"{tid} — {name}."
+    if oneliner:
+        base += f" In plain terms: {oneliner}"
+    else:
+        base += (f" Tier {tier}, currently {status_label or 'in planning'}, "
+                 f"with {ev_count} event(s) on the stream so far.")
+    return base + pr_note
 
 
 def _tstime_filter(iso_str: str | None) -> str:
@@ -2158,7 +2748,12 @@ def _render_task_page(task: dict[str, Any]) -> str:
          f"**Branch:** {branch or '—'}  ",
          f"**PR:** {pr_line}  ",
          f"**Merge commit:** {merge_line}",
-         "", "## One-liner", "", _oneliner_from_plan(plan_path, tid), "",
+         "",
+         "## In plain English",
+         "",
+         _task_plain_english(task),
+         "",
+         "## One-liner", "", _oneliner_from_plan(plan_path, tid), "",
          "## Timeline", "",
          "| # | Phase | Actor | Verdict | Timestamp (CEST) | Artifact |",
          "|---|---|---|---|---|---|", *rows,
@@ -2416,6 +3011,8 @@ def _render_phase_a(data: dict[str, Any]) -> str:
 
     L = [
         "# Phase A — Data Truth — Complete Retrospective\n",
+        "## What is Phase A?\n",
+        f"> {_phase_human_blurb('A')}\n",
         f"**Status:** ✅ COMPLETE — {done}/11 tasks shipped, canaries PASS "
         "across the board  ",
         f"**Started:** {start_str}  ",
@@ -2573,6 +3170,8 @@ def _render_event_phase_page(data: dict[str, Any], phase_letter: str,
     ]
 
     L = [f"# {title}\n",
+         f"## What is Phase {phase_letter}?\n",
+         f"> {_phase_human_blurb(phase_letter)}\n",
          f"**Status:** {done}/{total} tasks shipped  ",
          f"**Goal:** {goal}  ",
          f"**Data source:** event-stream reducer (`events.jsonl`)  ",
@@ -2685,6 +3284,8 @@ def _render_heavy_hybrid(data: dict[str, Any] | None = None) -> str:
                    if e.get("event_type") == "DECISION_RESOLVED"
                    and str((e.get("extra") or {}).get("question_id", "")).startswith("Q-HH")]
     L = ["# Heavy Hybrid Roadmap — Long-horizon Decisions\n",
+         "## What is Heavy Hybrid?\n",
+         f"> {_phase_human_blurb('HH')}\n",
          "**Source:** event-stream reducer (Q-HH-* DECISION_NEEDED / DECISION_RESOLVED)\n",
          "## Open Q-HH gates\n"]
     if hh_decisions:
@@ -3150,12 +3751,28 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
 
 
 def emit_sprint_log(data: dict[str, Any]) -> dict[str, int]:
+    # Preserve top-level Scribe-maintained markdown files across regen.
+    # These are hand-written / Scribe-produced docs that the generator
+    # references (Mission, glossary, narrative templates) but does not own.
+    preserved: dict[str, bytes] = {}
     if SPRINT_LOG.exists():
+        for p in SPRINT_LOG.iterdir():
+            if p.is_file() and p.suffix.lower() == ".md" and p.name != "README.md":
+                try:
+                    preserved[p.name] = p.read_bytes()
+                except Exception:
+                    pass
         shutil.rmtree(SPRINT_LOG)
     (SPRINT_LOG / "tasks").mkdir(parents=True, exist_ok=True)
     (SPRINT_LOG / "waves").mkdir(parents=True, exist_ok=True)
     (SPRINT_LOG / "phases").mkdir(parents=True, exist_ok=True)
     (SPRINT_LOG / "events").mkdir(parents=True, exist_ok=True)
+    # Restore Scribe-maintained top-level markdown files
+    for name, body in preserved.items():
+        try:
+            (SPRINT_LOG / name).write_bytes(body)
+        except Exception:
+            pass
     counts = {"tasks": 0, "waves": 0, "phases": 0, "event_days": 0}
     by_id = {t["id"]: t for t in data["tasks"]}
 

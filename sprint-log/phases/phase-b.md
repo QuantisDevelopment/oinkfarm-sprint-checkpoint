@@ -1,5 +1,9 @@
 # Phase B — Infrastructure Migration
 
+## What is Phase B?
+
+> Phase B migrates OinkFarm from SQLite + monolith to PostgreSQL + decomposed services — the infrastructure layer that unlocks Redis, W1 governance, and multi-writer safety. Wave 1 (db abstraction) shipped; Wave 2 (parser extraction, Cornix/Chroma, dedup consolidation) is in flight.
+
 **Status:** 0/15 tasks shipped  
 **Goal:** Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.  
 **Data source:** event-stream reducer (`events.jsonl`)  
@@ -68,13 +72,13 @@
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 2.2h | APPROVE · DEFER |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 2.2h | backfill · accept · block |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 2.2h | pg_trigger · check_only |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 2.2h | maxlen · time_based |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 43m | defer to B14 · introduce in B2 |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 43m | single-host only · include multi-host preparation |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 43m | phased app-level then DB REVOKE · immediate DB-level REVOKE |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 2.7h | APPROVE · DEFER |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 2.7h | backfill · accept · block |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 2.7h | pg_trigger · check_only |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 2.7h | maxlen · time_based |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 1.2h | defer to B14 · introduce in B2 |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 1.2h | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 1.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
 
 ---
 

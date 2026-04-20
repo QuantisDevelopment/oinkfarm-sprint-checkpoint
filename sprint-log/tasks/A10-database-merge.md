@@ -6,7 +6,11 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#135](https://github.com/QuantisDevelopment/oinkfarm/pull/135)  
-**Merge commit:** [80f4fe0aabd4](https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13)
+**Merge commit:** —
+
+## In plain English
+
+A10 merged 912 test-DB signals into prod using a council-approved append-only strategy. This was the first non-standard governance path in the sprint — OinkV + OinkDB co-signed via GH Issue #136 — and it produced 1,407 rows with zero NULL invariants and zero orphans.
 
 ## One-liner
 
@@ -30,7 +34,6 @@ _None._
 ## Artifacts (Full Index)
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A10.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A10.md) — 27.5 KB
-- **Merge commit:** [`80f4fe0aabd4`](https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13) (oinkfarm PR #135)
 - **PR(s):** [oinkfarm#135](https://github.com/QuantisDevelopment/oinkfarm/pull/135)
 
 ## Lessons Learned
