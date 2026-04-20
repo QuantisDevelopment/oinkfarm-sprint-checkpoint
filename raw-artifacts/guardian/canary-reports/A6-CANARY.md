@@ -83,7 +83,7 @@ This is a clean canary start, but **not yet a verdictable sample**.
 
 | # | Event ID | Signal ID | absent_count | entry_price_at_close | A6 note | close_source unchanged | financial fields unchanged | txn integrity | Verdict |
 |---|----------|-----------|--------------|----------------------|---------|------------------------|----------------------------|---------------|---------|
-| 1 | — | — | — | — | — | — | — | — | Awaiting |
+| 1 | 741 | 1353 | 3 | protocol uses `entry=2300.0` | ✅ exactly once | ✅ `NULL` preserved | ✅ unchanged | ✅ consistent | Clean |
 | 2 | — | — | — | — | — | — | — | — | Awaiting |
 | 3 | — | — | — | — | — | — | — | — | Awaiting |
 | 4 | — | — | — | — | — | — | — | — | Awaiting |
@@ -94,25 +94,46 @@ This is a clean canary start, but **not yet a verdictable sample**.
 | 9 | — | — | — | — | — | — | — | — | Awaiting |
 | 10 | — | — | — | — | — | — | — | — | Awaiting |
 
-## Immediate Risk Assessment
+## 24h Checkpoint — 2026-04-20T13:17:42Z
 
-No regression is visible at canary start:
-- `close_source='board_absent'` count unchanged
-- no unexpected `GHOST_CLOSURE` backfill or synthetic rows
-- no A6 note tags without matching events
-- no post-deploy board-absent closures yet
+**Checkpoint verdict: CLEAN, first organic sample validated.**
+
+Observed post-deploy organic event:
+- `event_id=741`, `signal_id=1353`, `created_at=2026-04-20T08:15:04.602Z`
+- payload fields present: `absent_count=3`, `trader='Muzzagin'`, `ticker='ETH'`, `direction='LONG'`, `board_channel='active-futures'`, `entry=2300.0`
+- matching note tag present exactly once: `[A6: ghost_closure absent_count=3]`
+- `close_source` remains `NULL`
+- tracked financial fields unchanged: `entry_price=2200.0`, `stop_loss=2140.0`, `take_profit_1/2/3=NULL`, `status='ACTIVE'`
+- `updated_at` matches the event timestamp, consistent with the note-write transaction path
+
+Protocol clarification:
+- the live payload uses key **`entry`**, not `entry_price_at_close`
+- this matches the approved A6 proposal, implementation, and unit tests
+- therefore this is **not** treated as a regression or protocol failure
+
+24h snapshot:
+- baseline `signal_events` before deploy: **312**
+- post-deploy `signal_events`: **540**
+- post-deploy `GHOST_CLOSURE` events: **1**
+- signals with A6 tag: **1**
+- `close_source='board_absent'` signals: **18**
+
+Interpretation:
+- the A6 write path is now validated on a real organic sample
+- idempotent insert + single-shot note append behavior is working
+- no blocker or regression is visible at the 24h checkpoint
+- minimum 48h sample threshold for a classical verdict is still not met (`1 < 3`), but the first real event materially de-risks the feature
 
 ## Next Checks
 
-1. Monitor for first 3 organic `GHOST_CLOSURE` events before 48h deadline
-2. For each event, verify payload fields and matched signal row
-3. Confirm note append is single-shot and coupled to the event insert
-4. Confirm `close_source` remains untouched and financial columns are unchanged
-5. If fewer than 3 events by 2026-04-21 13:17:42 UTC, mark **INCONCLUSIVE**
+1. Monitor for additional organic `GHOST_CLOSURE` events until 48h deadline
+2. Re-validate idempotency if signal `1353` reappears in the ghost-closure path
+3. Confirm any subsequent samples preserve `close_source` and financial fields
+4. At 48h, issue final checkpoint summary based on observed event count and data quality
 
 ---
 *🛡️ GUARDIAN — Canary Protocol Active*
-*Last updated: 2026-04-19T13:59Z*
+*Last updated: 2026-04-20T13:17:42Z*
 
 ---
 
