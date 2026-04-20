@@ -4,25 +4,39 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 263
-- **Last 24h:** 187 (rate 7.79/h)
+- **Total events:** 270
+- **Last 24h:** 192 (rate 8.0/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (4 events)
+### Last 1 hour (9 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
+• B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t |
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
-| Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
-| Apr 20, 12:10 CEST | `CANARY_STARTED` | `B8` | guardian | B8 canary started |
 
-### Last 4 hours (40 events)
+### Last 4 hours (45 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
+• B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t |
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
 | Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
@@ -31,17 +45,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 11:56 CEST | `PR_OPENED` | `B7` | anvil | B7 PR #27 opened — feat(B7): extract WG Bot parsers to parsers/wg_bot.py |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `A10` | forge | A10 Mike gate: Approve A10 merge algorithm + dedup strategy |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: Cutover requires Mike's explicit go-ahead |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B1` | forge | B1 Mike gate: PostgreSQL driver: psycopg3 vs psycopg2? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B1` | forge | B1 Mike gate: oink_db.py location? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: PostgreSQL hosting: same server or separate? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: TimescaleDB now or later (B14)? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B3` | forge | B3 Mike gate: Minimum verification period: 7 or 14 days? |
 
-### Last 24 hours (187 events)
+### Last 24 hours (192 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
+• B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv |
+| Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t |
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
 | Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
@@ -50,35 +65,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 11:56 CEST | `PR_OPENED` | `B7` | anvil | B7 PR #27 opened — feat(B7): extract WG Bot parsers to parsers/wg_bot.py |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `A10` | forge | A10 Mike gate: Approve A10 merge algorithm + dedup strategy |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: Cutover requires Mike's explicit go-ahead |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B1` | forge | B1 Mike gate: PostgreSQL driver: psycopg3 vs psycopg2? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B1` | forge | B1 Mike gate: oink_db.py location? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: PostgreSQL hosting: same server or separate? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: TimescaleDB now or later (B14)? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B3` | forge | B3 Mike gate: Minimum verification period: 7 or 14 days? |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 1.2h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 1.2h | APPROVE · DEFER | generic |
-| `Q-B1-1` | PostgreSQL driver: psycopg3 vs psycopg2? | `B1` | 1.2h | psycopg3 · psycopg2 | phase-b |
-| `Q-B1-2` | oink_db.py location? | `B1` | 1.2h | canonical · other | phase-b |
-| `Q-B2-1` | PostgreSQL hosting: same server or separate? | `B2` | 1.2h | same · separate | phase-b |
-| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 1.2h | now · later | phase-b |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 1.2h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 1.2h | pg_trigger · check_only | phase-b |
-| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 1.2h | 7d · 14d | phase-b |
-| `Q-B4-4` | signal-gateway.service systemd re-enable or keep manual? | `B4` | 1.2h | re-enable · keep_manual | phase-b |
-| `Q-B4-5` | .openclaw/workspace fork-sync or re-point to canonical? | `B4` | 1.2h | fork_sync · repoint | phase-b |
-| `Q-HH-1` | Redis hosting: same server or separate? | `B12` | 1.2h | same · separate | heavy-hybrid |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 1.2h | maxlen · time_based | heavy-hybrid |
-| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 1.2h | single · multi | heavy-hybrid |
-| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 1.2h | db_revoke · app_guard | heavy-hybrid |
-| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 1.2h | hard_reject · soft_flag | heavy-hybrid |
-| `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | `—` | 1.2h | mike_guardian_joint | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 1.4h | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 1.4h | APPROVE · DEFER | generic |
+| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 1.4h | now · later | phase-b |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 1.4h | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 1.4h | pg_trigger · check_only | phase-b |
+| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 1.4h | 7d · 14d | phase-b |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 1.4h | maxlen · time_based | heavy-hybrid |
+| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 1.4h | single · multi | heavy-hybrid |
+| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 1.4h | db_revoke · app_guard | heavy-hybrid |
+| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 1.4h | hard_reject · soft_flag | heavy-hybrid |
+| `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | `—` | 1.4h | mike_guardian_joint | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -107,6 +109,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
+| 🪽 **Hermes** | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 7 |
 | ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 112 |
 | 🛡️ **GUARDIAN** | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | 🟢 fresh | 61 |
 | 🔥 **FORGE** | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `—` | 🟡 1–3h | 43 |
@@ -182,6 +185,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Emoji | Name | Role |
 |---|---|---|
+| 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -197,4 +201,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*5/27 tasks DONE · Last auto-regenerated: 13:08 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*5/27 tasks DONE · Last auto-regenerated: 13:20 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
