@@ -4,36 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 313
-- **Last 24h:** 180 (rate 7.5/h)
+- **Total events:** 314
+- **Last 24h:** 169 (rate 7.04/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (30 events)
+### Last 1 hour (1 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
-| Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
-| Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
+| Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
 | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
@@ -48,11 +35,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
 
-### Last 24 hours (180 events)
+### Last 24 hours (169 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
 | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
@@ -67,7 +54,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
 
 ## 🧭 Needs Mike
 
@@ -78,15 +64,18 @@ _No open DECISION_NEEDED events._
 | Severity | Task | Issue |
 |---|---|---|
 | 🟠 WARN | `A11` | PR_OPENED (pr=133) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=149) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=9) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 32 |
-| 🛡️ **GUARDIAN** | Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | 🟢 fresh | 84 |
-| ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 89 |
-| 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🟢 fresh | 57 |
+| 🪽 **Hermes** | Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 33 |
+| 🛡️ **GUARDIAN** | Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | 🟡 1–3h | 84 |
+| ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🟡 1–3h | 89 |
+| 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🟡 1–3h | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🟡 1–3h | 2 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -179,4 +168,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*13/27 tasks DONE · Last auto-regenerated: 00:17 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 01:22 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
