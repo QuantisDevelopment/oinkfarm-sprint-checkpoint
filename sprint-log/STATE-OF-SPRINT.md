@@ -1,10 +1,18 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-20 13:45 UTC · Read time: ~8 min*
+*Last updated: 2026-04-20 16:06 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
 OinkFarm is the pipeline that watches Discord and Telegram for trading signals, parses them with a mix of deterministic parsers and a local LLM (Gemma), checks them against live prices from four exchanges, and tracks every signal from post to close. It runs about 1,000 signals/day across crypto and a handful of non-crypto assets, on a single server ("the barn"). The thing that's broken is **trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.
+
+## Today in one paragraph
+
+FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the trader-message extractor actual memory, so it recalls the last few extractions from the same trader as few-shot guidance, captures every successful extraction back into Supermemory, and turns OinkV's correction flag into a learning loop instead of a one-off fix. FORGE replaced the first draft with a tighter "Direct Execution Sequence" an hour later — five commits, ~2.5 hours of work total, no Mike gates (you already granted full autonomous authority on this one), runs parallel to Heavy Hybrid Phase B rather than waiting in line behind it.
+
+GUARDIAN's pre-change accuracy baseline for 171 landed at 18:02 CEST and it's honest in a useful way: we don't actually have a real per-trader weekly extraction-accuracy KPI in production today. The baseline is a proxy pulled from OinkV's audit journal for the last 7 days — posture is clean (zero confirmed bad DB writes, zero confirmed missed signals, two safe-noise incidents that got rejected before doing damage), but it's flagged PROXY_ONLY because the underlying measurement gap is part of what 171 is meant to close. So the "did the learning agent actually help" question only becomes answerable once 171 ships.
+
+Phase B side is quiet — no new merges, PRs, or canary verdicts in the last two hours. ANVIL has been silent since lunch, which is normal for a post-Wave-2 review lull. B3's 7-day reconciliation clock toward the 2026-04-26 B4 cutover is still ticking clean, and the B2 canary plus B6/B7/B8 post-deploy monitoring reports are the next expected signals. Nothing on the board needs you today.
 
 ## Where We Are Today (one paragraph)
 
