@@ -1,9 +1,9 @@
 # Phase A — Data Truth — Complete Retrospective
 
-**Status:** ✅ COMPLETE — 11/11 tasks shipped, canaries PASS across the board  
-**Started:** 23:27 CEST on 18 Apr 2026  
-**Finished:** 02:43 CEST on 20 Apr 2026  
-**Elapsed:** 27.3 h wall-clock  
+**Status:** ✅ COMPLETE — 0/11 tasks shipped, canaries PASS across the board  
+**Started:** —  
+**Finished:** —  
+**Elapsed:** —  
 **Repos touched:** `oinkfarm` · `oink-sync` · `signal-gateway`  
 **PRs merged:** 10 across 3 repos
 
@@ -38,26 +38,26 @@ Phase A is the **data-truth gate** in the Arbiter-Oink HEAVY HYBRID roadmap. Eve
 
 | Wave | Focus | Tasks | Elapsed | Outcome |
 |---|---|---|---|---|
-| [Wave 1](../waves/wave-1.md) | Core schema & formula primitives | [A1](../tasks/A1-signal-events-schema.md) · [A2](../tasks/A2-remaining-pct-model.md) · [A3](../tasks/A3-auto-filled-at.md) | 27.3 h | 3/3 shipped |
-| [Wave 2](../waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](../tasks/A4-partially-closed-status.md) · [A7](../tasks/A7-update-new-detection.md) · [A5](../tasks/A5-confidence-scoring.md) | 19.9 h | 3/3 shipped |
-| [Wave 3](../waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](../tasks/A6-ghost-closure-flag.md) · [A8](../tasks/A8-conditional-sl-type.md) · [A9](../tasks/A9-denomination-multiplier.md) · [A11](../tasks/A11-leverage-source-tracking.md) | 8.4 h | 4/4 shipped |
-| [Wave 4](../waves/wave-4.md) | Database merge | [A10](../tasks/A10-database-merge.md) | 4.3 h | 1/1 shipped |
+| [Wave 1](../waves/wave-1.md) | Core schema & formula primitives | [A1](../tasks/A1-signal-events-schema.md) · [A2](../tasks/A2-remaining-pct-model.md) · [A3](../tasks/A3-auto-filled-at.md) | — | 0/3 shipped |
+| [Wave 2](../waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](../tasks/A4-partially-closed-status.md) · [A7](../tasks/A7-update-new-detection.md) · [A5](../tasks/A5-confidence-scoring.md) | — | 0/3 shipped |
+| [Wave 3](../waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](../tasks/A6-ghost-closure-flag.md) · [A8](../tasks/A8-conditional-sl-type.md) · [A9](../tasks/A9-denomination-multiplier.md) · [A11](../tasks/A11-leverage-source-tracking.md) | — | 0/4 shipped |
+| [Wave 4](../waves/wave-4.md) | Database merge | [A10](../tasks/A10-database-merge.md) | — | 0/1 shipped |
 
 ## All 11 Tasks at a Glance
 
 | Task | Name | Tier | Wave | Status | Canary | Merge commit |
 |---|---|---|---|---|---|---|
-| [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | 1 | ✅ DONE | PASS | [`5b242c5`](https://github.com/QuantisDevelopment/oinkfarm/commit/5b242c567d0df4b8b25d3866e711f15d772e685a) |
-| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | 1 | ✅ DONE | PASS | [`6b21a20`](https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59) |
-| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | 1 | ✅ DONE | PASS | [`3b5453b`](https://github.com/QuantisDevelopment/oinkfarm/commit/3b5453b7) |
-| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | ✅ DONE | PASS | [`e9be741`](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) |
-| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 2 | ✅ DONE | PASS | [`69d6840`](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a) |
-| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 3 | ✅ DONE | PASS | [`1adeaa1`](https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef) |
-| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 2 | ✅ DONE | PASS | [`6157315`](https://github.com/QuantisDevelopment/oinkfarm/commit/61573158) |
-| [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | 3 | ✅ DONE | PASS | [`4615454`](https://github.com/QuantisDevelopment/oinkfarm/commit/46154543) |
-| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS | [`2719648`](https://github.com/QuantisDevelopment/oink-sync/commit/2719648) |
-| [A10](../tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | ✅ DONE | PASS | — |
-| [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS | [`45a6931`](https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae) |
+| [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | 1 | ⏳ NOT STARTED | — | — |
+| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | 1 | ⏳ NOT STARTED | — | — |
+| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | 1 | ⏳ NOT STARTED | — | — |
+| [A4](../tasks/A4-partially-closed-status.md) | PARTIALLY_CLOSED Status for Partial TP Signals | 🟡 STANDARD | 2 | ⏳ NOT STARTED | — | — |
+| [A5](../tasks/A5-confidence-scoring.md) | Parser-Type Confidence Scoring | 🟡 STANDARD | 2 | ⏳ NOT STARTED | — | — |
+| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | 3 | ⏳ NOT STARTED | — | — |
+| [A7](../tasks/A7-update-new-detection.md) | UPDATE→NEW Detection (Phantom Trade Prevention) | 🔴 CRITICAL | 2 | ⏳ NOT STARTED | — | — |
+| [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | 3 | ⏳ NOT STARTED | — | — |
+| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | ⏳ NOT STARTED | — | — |
+| [A10](../tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | ⏳ NOT STARTED | — | — |
+| [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | 3 | ⏳ NOT STARTED | — | — |
 
 ## KPIs Improved
 

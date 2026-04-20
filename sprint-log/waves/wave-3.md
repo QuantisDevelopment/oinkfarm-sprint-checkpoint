@@ -2,29 +2,24 @@
 
 **Focus:** Metadata enrichment & ghost closure — conditional SL classification, denomination multiplier, leverage source, ghost-closure flag.
 
-**Status:** 4/4 shipped · 0 in flight · 0 planned
+**Status:** 0/4 shipped · 0 in flight · 4 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | ✅ DONE | PASS | [`1adeaa1`](https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef) |
-| [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | ✅ DONE | PASS | [`4615454`](https://github.com/QuantisDevelopment/oinkfarm/commit/46154543) |
-| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | ✅ DONE | PASS | [`2719648`](https://github.com/QuantisDevelopment/oink-sync/commit/2719648) |
-| [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | ✅ DONE | PASS | [`45a6931`](https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae) |
+| [A6](../tasks/A6-ghost-closure-flag.md) | Ghost Closure Confirmation Flag | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
+| [A8](../tasks/A8-conditional-sl-type.md) | Conditional SL Type Field | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
+| [A9](../tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | ⏳ NOT STARTED | — | — |
+| [A11](../tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | ⏳ NOT STARTED | — | — |
 
 ## Timing
 
-- Wave start: 14:16 CEST on 19 Apr 2026
-- Last activity: 22:41 CEST on 19 Apr 2026
-- Elapsed: 8.4 h
+- (No timeline events yet.)
 
 ## Canary Outcomes
 
-- **A6**: ✅ PASS
-- **A8**: ✅ PASS
-- **A9**: ✅ PASS
-- **A11**: ✅ PASS
+_No canary verdicts yet._
 
 ## Deferred Follow-ups
 

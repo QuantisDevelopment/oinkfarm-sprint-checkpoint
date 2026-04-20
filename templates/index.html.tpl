@@ -52,6 +52,176 @@
 
 <main class="container">
 
+<!-- Bootstrapping banner --------------------------------------------------- -->
+{% if bootstrap %}
+<div class="bootstrap-banner" style="background:#4a2800;border:2px solid #e07b00;color:#fff0d6;padding:14px 18px;margin-bottom:18px;border-radius:8px;font-weight:500;">
+  ⚠️ <strong>BOOTSTRAPPING FROM CRAWLER</strong> — event stream not yet populated
+  ({{ events_integrity.total }} events in <code>{{ events_integrity.events_file }}</code>).
+  Dashboard data sourced from workspace file mtimes as a fallback. As agents
+  emit events into <code>events.jsonl</code>, this banner will disappear.
+</div>
+{% endif %}
+
+<!-- Events integrity ------------------------------------------------------- -->
+<section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
+  <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
+    <div><span class="muted">📊 events:</span> <strong class="mono">{{ events_integrity.total }}</strong></div>
+    <div><span class="muted">24h rate:</span> <strong class="mono">{{ events_integrity.rate_per_hour }}/h</strong></div>
+    <div><span class="muted">last 24h:</span> <strong class="mono">{{ events_integrity.last_24h }}</strong></div>
+    <div><span class="muted">schema:</span> <strong class="mono">v{{ events_integrity.schema_version }}</strong></div>
+    <div><span class="muted">source:</span> <strong class="mono">{{ events_integrity.source }}</strong></div>
+    <div>
+      <span class="muted">monotonic:</span>
+      {% if events_integrity.monotonic_ok %}
+        <strong style="color:#4ade80;">✓ ok</strong>
+      {% else %}
+        <strong style="color:#f87171;">⚠ {{ events_integrity.monotonic_gaps|length }} gap(s)</strong>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<!-- ★ MIKE SPEC — 4 top-level sections ★ ----------------------------------- -->
+
+<!-- 1. LIVE NOW ............................................................ -->
+<section class="live-now" id="live-now" style="margin-bottom:24px;">
+  <div class="section-head"><h2>🔴 Live now</h2><span class="muted mono">event stream</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;">
+    {% for bucket_name, label in [('1h','Last 1 hour'), ('4h','Last 4 hours'), ('24h','Last 24 hours')] %}
+    <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <strong>{{ label }}</strong>
+        <span class="mono muted">{{ live_buckets[bucket_name]|length }} events</span>
+      </div>
+      {% if live_buckets[bucket_name] %}
+        <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          {% for e in live_buckets[bucket_name][:25] %}
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">{{ e.ts | tstime }}</span>
+              <span class="mono" style="color:#8ab4ff;">{{ e.event_type }}</span>
+              {% if e.task_id %}<span class="mono">{{ e.task_id }}</span>{% endif %}
+              <span class="muted mono">· {{ e.agent or '—' }}</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">{{ e.summary }}</div>
+          </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p class="muted" style="font-size:0.85rem;">No events in this window.</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- 2. NEEDS MIKE .......................................................... -->
+<section class="needs-mike" id="needs-mike" style="margin-bottom:24px;">
+  <div class="section-head"><h2>🧭 Needs Mike</h2><span class="muted mono">{{ open_decisions|length }} open</span></div>
+  {% if open_decisions %}
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <thead>
+        <tr style="background:rgba(255,255,255,0.05);">
+          <th style="padding:8px;text-align:left;">Question ID</th>
+          <th style="padding:8px;text-align:left;">Question</th>
+          <th style="padding:8px;text-align:left;">Task</th>
+          <th style="padding:8px;text-align:left;">Age</th>
+          <th style="padding:8px;text-align:left;">Options</th>
+          <th style="padding:8px;text-align:left;">Gate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for d in open_decisions %}
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td class="mono" style="padding:8px;font-weight:600;color:#f0a868;">{{ d.question_id }}</td>
+          <td style="padding:8px;">{{ d.question }}</td>
+          <td class="mono" style="padding:8px;">{{ d.task_id or '—' }}</td>
+          <td class="mono" style="padding:8px;">{{ d.age_human }}</td>
+          <td class="muted mono" style="padding:8px;font-size:0.8rem;">
+            {% if d.options %}{{ d.options | join(' · ') }}{% else %}—{% endif %}
+          </td>
+          <td class="mono" style="padding:8px;font-size:0.75rem;">{{ d.gate_type }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="muted">No open DECISION_NEEDED events. Team is unblocked.</p>
+  {% endif %}
+</section>
+
+<!-- 3. MISSING EVIDENCE .................................................... -->
+<section class="missing-evidence" id="missing-evidence" style="margin-bottom:24px;">
+  <div class="section-head"><h2>🔍 Missing evidence</h2><span class="muted mono">{{ lint_gaps|length }} gaps</span></div>
+  {% if lint_gaps %}
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <thead>
+        <tr style="background:rgba(255,255,255,0.05);">
+          <th style="padding:8px;text-align:left;">Severity</th>
+          <th style="padding:8px;text-align:left;">Task</th>
+          <th style="padding:8px;text-align:left;">Issue</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for g in lint_gaps %}
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+          <td style="padding:8px;">
+            {% if g.severity == 'critical' %}<span style="background:#7f1d1d;color:#fecaca;padding:2px 8px;border-radius:4px;">CRITICAL</span>
+            {% elif g.severity == 'warn' %}<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
+            {% elif g.severity == 'mike' %}<span style="background:#1e3a8a;color:#bfdbfe;padding:2px 8px;border-radius:4px;">MIKE</span>
+            {% else %}<span style="background:#374151;color:#d1d5db;padding:2px 8px;border-radius:4px;">INFO</span>{% endif %}
+          </td>
+          <td class="mono" style="padding:8px;">{{ g.task_id or '—' }}</td>
+          <td style="padding:8px;">{{ g.issue }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="muted">✓ No lint gaps — stream is internally consistent.</p>
+  {% endif %}
+</section>
+
+<!-- 4. FRESHNESS BY AGENT .................................................. -->
+<section class="freshness" id="freshness" style="margin-bottom:24px;">
+  <div class="section-head"><h2>🫀 Freshness by agent</h2><span class="muted mono">last emitted event</span></div>
+  <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+    <thead>
+      <tr style="background:rgba(255,255,255,0.05);">
+        <th style="padding:8px;text-align:left;">Agent</th>
+        <th style="padding:8px;text-align:left;">Last event</th>
+        <th style="padding:8px;text-align:left;">Type</th>
+        <th style="padding:8px;text-align:left;">Task</th>
+        <th style="padding:8px;text-align:left;">Staleness</th>
+        <th style="padding:8px;text-align:left;">Events</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for a in freshness_by_agent %}
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>{{ a.emoji or '•' }}</span>
+          <strong>{{ a.name }}</strong>
+          <span class="muted mono" style="font-size:0.75rem;">{{ a.role }}</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">{{ a.last_event_ts | tstime }}</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">{{ a.last_event_type or '—' }}</td>
+        <td class="mono" style="padding:8px;">{{ a.current_task or a.last_task_id or '—' }}</td>
+        <td style="padding:8px;">
+          {% if a.light == 'green' %}<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+          {% elif a.light == 'yellow' %}<span style="background:#713f12;color:#fde68a;padding:2px 8px;border-radius:4px;">● 1–3h</span>
+          {% else %}<span style="background:#7f1d1d;color:#fecaca;padding:2px 8px;border-radius:4px;">● stale</span>{% endif %}
+        </td>
+        <td class="mono muted" style="padding:8px;">{{ a.event_count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<!-- END Mike spec 4-section layout ----------------------------------------- -->
+
+
 <!-- Wave progress ---------------------------------------------------------- -->
 <section class="waves">
   {% for wave in waves %}

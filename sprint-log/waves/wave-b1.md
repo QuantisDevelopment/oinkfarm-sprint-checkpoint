@@ -8,17 +8,17 @@
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [B1](../tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | 🧪 CANARY | PENDING | — |
+| [B1](../tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | ✅ DONE | PASS | [`abcd123`](https://github.com/QuantisDevelopment/oinkfarm/commit/abcd1234deadbeef1234) |
 
 ## Timing
 
-- Wave start: 18:03 CEST on 19 Apr 2026
-- Last activity: 01:23 CEST on 20 Apr 2026
-- Elapsed: 7.3 h
+- Wave start: 14:00 CEST on 20 Apr 2026
+- Last activity: 14:30 CEST on 20 Apr 2026
+- Elapsed: 0.5 h
 
 ## Canary Outcomes
 
-- **B1**: ⏳ PENDING
+- **B1**: ✅ PASS
 
 ## Deferred Follow-ups
 

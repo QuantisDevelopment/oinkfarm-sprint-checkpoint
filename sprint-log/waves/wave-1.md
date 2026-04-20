@@ -2,27 +2,23 @@
 
 **Focus:** Core schema & formula primitives — events, remaining_pct, auto filled_at.
 
-**Status:** 3/3 shipped · 0 in flight · 0 planned
+**Status:** 0/3 shipped · 0 in flight · 3 planned
 
 ## Tasks
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | ✅ DONE | PASS | [`5b242c5`](https://github.com/QuantisDevelopment/oinkfarm/commit/5b242c567d0df4b8b25d3866e711f15d772e685a) |
-| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | ✅ DONE | PASS | [`6b21a20`](https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59) |
-| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | ✅ DONE | PASS | [`3b5453b`](https://github.com/QuantisDevelopment/oinkfarm/commit/3b5453b7) |
+| [A1](../tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | ⏳ NOT STARTED | — | — |
+| [A2](../tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | ⏳ NOT STARTED | — | — |
+| [A3](../tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | ⏳ NOT STARTED | — | — |
 
 ## Timing
 
-- Wave start: 23:27 CEST on 18 Apr 2026
-- Last activity: 02:43 CEST on 20 Apr 2026
-- Elapsed: 27.3 h
+- (No timeline events yet.)
 
 ## Canary Outcomes
 
-- **A1**: ✅ PASS
-- **A2**: ✅ PASS
-- **A3**: ✅ PASS
+_No canary verdicts yet._
 
 ## Deferred Follow-ups
 

@@ -9,15 +9,35 @@ Read-only outside ./docs/. Missing files are treated as "not yet"; never raises.
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import subprocess
 import sys
+from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+# --------------------------------------------------------------------------- #
+# Optional lib/checkpoint_reporting.py — the canonical reader lives there.
+# If unavailable we fall back to inline jsonl parsing (below).
+# --------------------------------------------------------------------------- #
+_LIB_DIR = Path(__file__).resolve().parent / "lib"
+if _LIB_DIR.exists():
+    sys.path.insert(0, str(_LIB_DIR))
+try:
+    from checkpoint_reporting import (  # type: ignore
+        read_events as _lib_read_events,
+        lint_checkpoint as _lib_lint_checkpoint,
+    )
+    _HAS_LIB = True
+except Exception:
+    _HAS_LIB = False
+    _lib_read_events = None  # type: ignore
+    _lib_lint_checkpoint = None  # type: ignore
 
 # --------------------------------------------------------------------------- #
 # Configuration
@@ -31,7 +51,20 @@ HERMES_WS = HOME / "hermes-workspace"
 HERMES_CRON = HOME / ".hermes/cron/output/c5fe3ace64fd"
 SITE, STATIC, TEMPLATES = ROOT / "docs", ROOT / "static", ROOT / "templates"
 
-TASKS = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "B1"]
+# --- Event stream -----------------------------------------------------------
+EVENTS_JSONL = ROOT / "events.jsonl"
+EVENT_SCHEMA_VERSION = "1.0"
+# Switch to crawler fallback if fewer than this many events are on disk
+MIN_EVENTS_FOR_PRIMARY = 10
+# Override via env for tests
+EVENTS_JSONL_OVERRIDE = os.environ.get("SPRINT_EVENTS_JSONL")
+if EVENTS_JSONL_OVERRIDE:
+    EVENTS_JSONL = Path(EVENTS_JSONL_OVERRIDE)
+
+# Seed set (used when events.jsonl is empty AND crawler fallback not desired).
+# Dynamic discovery from events supplements this; nothing here is authoritative.
+SEED_TASKS = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11", "B1"]
+TASKS = list(SEED_TASKS)
 TIERS = {"A1": "CRITICAL", "A2": "CRITICAL", "A3": "STANDARD",
          "A4": "STANDARD", "A5": "STANDARD", "A6": "STANDARD",
          "A7": "CRITICAL", "A8": "STANDARD", "A9": "LIGHTWEIGHT",
@@ -685,12 +718,781 @@ def git_commit() -> str | None:
     return None
 
 
+# =========================================================================== #
+# EVENT-STREAM REDUCER (primary data path — Mike spec)
+# =========================================================================== #
+# Reads events.jsonl, reduces events → (task_state_machine, agent_state,
+# open_decisions, live-now buckets, lint gaps). The existing crawler stack
+# above is retained as a fallback when the stream is empty/bootstrapping.
+# =========================================================================== #
+
+# Status state machine ordering — higher wins
+STATUS_ORDER = {
+    "NOT_STARTED": 0, "PLANNED": 1, "PROPOSAL": 2, "PROPOSAL_REVIEW": 3,
+    "CODE": 4, "PR_REVIEW": 5, "MERGED": 6, "CANARY": 7, "DONE": 8,
+    "BLOCKED": -1, "DEFERRED": -2,
+}
+
+EVENT_TYPE_SEVERITY = {
+    "CANARY_FAIL": "critical", "PROPOSAL_REJECTED": "warn",
+    "BLOCKED": "warn", "DECISION_NEEDED": "mike",
+}
+
+# STATUS → which event types implicitly transition a task there
+EVENT_TO_STATUS = {
+    "TASK_PLANNED": "PLANNED",
+    "PROPOSAL_READY": "PROPOSAL_REVIEW",
+    "PROPOSAL_APPROVED": "CODE",
+    "PROPOSAL_REJECTED": "PROPOSAL",
+    "CODE_STARTED": "CODE",
+    "PR_OPENED": "PR_REVIEW",
+    "REVIEW_POSTED": "PR_REVIEW",
+    "MERGED": "MERGED",
+    "CANARY_STARTED": "CANARY",
+    "CANARY_PASS": "DONE",
+    "CANARY_FAIL": "BLOCKED",
+    "BLOCKED": "BLOCKED",
+    "BLOCKER_RESOLVED": None,  # restore prior
+}
+
+
+def _parse_event_ts(ts: str) -> datetime | None:
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00")).astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def _inline_read_events(path: Path = EVENTS_JSONL) -> list[dict[str, Any]]:
+    """Fallback jsonl reader if lib/checkpoint_reporting is not importable."""
+    if not path.exists():
+        return []
+    out: list[dict[str, Any]] = []
+    try:
+        for i, raw in enumerate(path.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            raw = raw.strip()
+            if not raw:
+                continue
+            try:
+                out.append(json.loads(raw))
+            except Exception as e:
+                sys.stderr.write(f"WARN  events.jsonl line {i} skipped: {e}\n")
+    except Exception as e:
+        sys.stderr.write(f"WARN  reading {path}: {e}\n")
+    return out
+
+
+def read_events_safe() -> list[dict[str, Any]]:
+    """Return all events, preferring the lib module when available."""
+    if _HAS_LIB and _lib_read_events is not None:
+        try:
+            return list(_lib_read_events())
+        except Exception as e:
+            sys.stderr.write(f"WARN  lib read_events failed, falling back: {e}\n")
+    return _inline_read_events()
+
+
+# --- Inline lint (mirrors lib/checkpoint_reporting.lint_checkpoint) ---------
+
+def _inline_lint(events: list[dict[str, Any]], now: datetime) -> list[dict[str, Any]]:
+    """Detect gaps in the event stream. Matches schema §lint_checkpoint spec."""
+    gaps: list[dict[str, Any]] = []
+    by_task: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    by_agent_heartbeat: dict[str, datetime] = {}
+    open_blockers: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    open_decisions: dict[str, dict[str, Any]] = {}
+
+    for e in events:
+        tid = e.get("task_id")
+        if tid:
+            by_task[tid].append(e)
+        if e.get("event_type") == "AGENT_HEARTBEAT":
+            ag = e.get("agent")
+            ts = _parse_event_ts(e.get("ts", ""))
+            if ag and ts and (ag not in by_agent_heartbeat or ts > by_agent_heartbeat[ag]):
+                by_agent_heartbeat[ag] = ts
+        if e.get("event_type") == "BLOCKED":
+            open_blockers[tid or "_meta"].append(e)
+        if e.get("event_type") == "BLOCKER_RESOLVED":
+            if open_blockers.get(tid or "_meta"):
+                open_blockers[tid or "_meta"].pop(0)
+        if e.get("event_type") == "DECISION_NEEDED":
+            qid = (e.get("extra") or {}).get("question_id") or e.get("event_id")
+            open_decisions[qid] = e
+        if e.get("event_type") == "DECISION_RESOLVED":
+            qid = (e.get("extra") or {}).get("question_id")
+            if qid and qid in open_decisions:
+                open_decisions.pop(qid, None)
+
+    def hours_since(ts: datetime) -> float:
+        return (now - ts).total_seconds() / 3600.0
+
+    # Per-task gap rules
+    for tid, evs in by_task.items():
+        types = [(e["event_type"], _parse_event_ts(e.get("ts", ""))) for e in evs]
+        types = [(t, ts) for t, ts in types if ts]
+
+        # MERGED → expect CANARY_STARTED within 2h
+        merged = [ts for t, ts in types if t == "MERGED"]
+        canary_started = [ts for t, ts in types if t == "CANARY_STARTED"]
+        for mts in merged:
+            follow = [c for c in canary_started if c >= mts]
+            if not follow and hours_since(mts) > 2:
+                gaps.append({
+                    "task_id": tid, "severity": "warn",
+                    "issue": f"MERGED {hours_since(mts):.1f}h ago with no CANARY_STARTED",
+                })
+
+        # CANARY_STARTED → CANARY_PASS/FAIL within 48h
+        for cts in canary_started:
+            verdict = [ts for t, ts in types if t in ("CANARY_PASS", "CANARY_FAIL") and ts >= cts]
+            if not verdict and hours_since(cts) > 48:
+                gaps.append({
+                    "task_id": tid, "severity": "warn",
+                    "issue": f"CANARY_STARTED {hours_since(cts):.1f}h ago, no verdict",
+                })
+
+        # PR_OPENED → REVIEW_POSTED within 24h
+        prs = [ts for t, ts in types if t == "PR_OPENED"]
+        for pts in prs:
+            revs = [ts for t, ts in types if t == "REVIEW_POSTED" and ts >= pts]
+            if not revs and hours_since(pts) > 24:
+                gaps.append({
+                    "task_id": tid, "severity": "warn",
+                    "issue": f"PR_OPENED {hours_since(pts):.1f}h ago with no REVIEW_POSTED",
+                })
+
+        # Task with any event but none in last 72h (stale)
+        last_ts = max((ts for _, ts in types), default=None)
+        if last_ts and hours_since(last_ts) > 72:
+            # only surface if task isn't done
+            final_status = _reduce_task_status([e for e in evs])
+            if final_status not in ("DONE", "DEFERRED"):
+                gaps.append({
+                    "task_id": tid, "severity": "info",
+                    "issue": f"no event for {hours_since(last_ts):.0f}h (status={final_status})",
+                })
+
+    # Unresolved BLOCKED >4h
+    for tid, blocks in open_blockers.items():
+        for b in blocks:
+            bts = _parse_event_ts(b.get("ts", ""))
+            if bts and hours_since(bts) > 4:
+                gaps.append({
+                    "task_id": tid if tid != "_meta" else None,
+                    "severity": "critical",
+                    "issue": (f"BLOCKED {hours_since(bts):.1f}h, reason="
+                              f"{b.get('blocker') or (b.get('extra') or {}).get('reason') or '?'}"),
+                })
+
+    # DECISION_NEEDED >24h
+    for qid, d in open_decisions.items():
+        dts = _parse_event_ts(d.get("ts", ""))
+        if dts and hours_since(dts) > 24:
+            gaps.append({
+                "task_id": d.get("task_id"), "severity": "mike",
+                "issue": (f"DECISION_NEEDED {hours_since(dts):.0f}h unresolved: "
+                          f"{(d.get('extra') or {}).get('question', qid)[:100]}"),
+            })
+
+    # AGENT_HEARTBEAT stale >3h (for agents we've ever heard from)
+    for ag, ts in by_agent_heartbeat.items():
+        if hours_since(ts) > 3:
+            gaps.append({
+                "task_id": None, "severity": "info",
+                "issue": f"agent {ag} heartbeat stale ({hours_since(ts):.1f}h)",
+            })
+
+    return gaps
+
+
+def lint_events_safe(events: list[dict[str, Any]], now: datetime) -> list[dict[str, Any]]:
+    if _HAS_LIB and _lib_lint_checkpoint is not None:
+        try:
+            return list(_lib_lint_checkpoint())
+        except Exception as e:
+            sys.stderr.write(f"WARN  lib lint_checkpoint failed, inline fallback: {e}\n")
+    return _inline_lint(events, now)
+
+
+# --- Reducers ---------------------------------------------------------------
+
+def _reduce_task_status(task_events: list[dict[str, Any]]) -> str:
+    """Replay events chronologically → final STATUS (highest-order transition)."""
+    evs = sorted(task_events, key=lambda e: e.get("ts", ""))
+    current = "NOT_STARTED"
+    prior_before_block = current
+    for e in evs:
+        et = e.get("event_type")
+        # Explicit status carry
+        if e.get("status") and e["status"] in STATUS_ORDER:
+            # Don't downgrade from DONE unless the event is a CANARY_FAIL or BLOCKED
+            if STATUS_ORDER.get(e["status"], 0) >= STATUS_ORDER.get(current, 0) or et in (
+                "CANARY_FAIL", "BLOCKED", "PROPOSAL_REJECTED"
+            ):
+                if current != "BLOCKED":
+                    prior_before_block = current
+                current = e["status"]
+                continue
+        if et == "STATUS_CHANGED":
+            ns = (e.get("extra") or {}).get("to_status")
+            if ns in STATUS_ORDER:
+                if current != "BLOCKED":
+                    prior_before_block = current
+                current = ns
+                continue
+        if et == "BLOCKER_RESOLVED" and current == "BLOCKED":
+            current = prior_before_block
+            continue
+        mapped = EVENT_TO_STATUS.get(et)
+        if mapped:
+            if current != "BLOCKED":
+                prior_before_block = current
+            # Never downgrade unless explicit BLOCKED/CANARY_FAIL
+            if STATUS_ORDER.get(mapped, 0) >= STATUS_ORDER.get(current, 0) or et in (
+                "CANARY_FAIL", "BLOCKED", "PROPOSAL_REJECTED"
+            ):
+                current = mapped
+    return current
+
+
+def _infer_tier(task_events: list[dict[str, Any]], task_id: str) -> str:
+    """Tier from event 'extra.tier' or fall back to hardcoded map or STANDARD."""
+    for e in reversed(sorted(task_events, key=lambda x: x.get("ts", ""))):
+        tier = (e.get("extra") or {}).get("tier")
+        if tier in ("CRITICAL", "STANDARD", "LIGHTWEIGHT"):
+            return tier
+    return TIERS.get(task_id, "STANDARD")
+
+
+def _infer_phase(task_id: str | None) -> str | None:
+    if not task_id:
+        return None
+    m = re.match(r"^([A-Z])\d", task_id)
+    return m.group(1) if m else None
+
+
+def reduce_tasks(events: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    """task_id → {status, tier, last_event_ts, last_event_type, phase,
+                  pr_numbers, prs, canary_verdict, events (all), blocker,
+                  agents_touched}."""
+    by_task: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for e in events:
+        tid = e.get("task_id")
+        if tid:
+            by_task[tid].append(e)
+
+    out: dict[str, dict[str, Any]] = {}
+    for tid, evs in by_task.items():
+        evs_sorted = sorted(evs, key=lambda x: x.get("ts", ""))
+        status = _reduce_task_status(evs_sorted)
+        tier = _infer_tier(evs_sorted, tid)
+        last = evs_sorted[-1] if evs_sorted else {}
+
+        # PR tracking
+        prs: list[dict[str, Any]] = []
+        seen_prs: set[tuple[str, int]] = set()
+        for e in evs_sorted:
+            pr_num = e.get("pr")
+            repo = e.get("repo")
+            if pr_num and repo and (repo, pr_num) not in seen_prs:
+                seen_prs.add((repo, pr_num))
+                merge_sha = (e.get("extra") or {}).get("commit_sha")
+                prs.append({
+                    "repo": repo, "number": pr_num,
+                    "pr_url": f"https://github.com/QuantisDevelopment/{repo}/pull/{pr_num}",
+                    "merge_commit": merge_sha,
+                    "commit_url": (
+                        f"https://github.com/QuantisDevelopment/{repo}/commit/{merge_sha}"
+                        if merge_sha else None
+                    ),
+                })
+
+        # Canary verdict
+        canary_verdict = None
+        for e in evs_sorted:
+            if e.get("event_type") == "CANARY_PASS":
+                canary_verdict = "PASS"
+            elif e.get("event_type") == "CANARY_FAIL":
+                canary_verdict = "FAIL"
+            elif e.get("event_type") == "CANARY_STARTED" and canary_verdict is None:
+                canary_verdict = "PENDING"
+
+        # Open blocker
+        blocker = None
+        for e in evs_sorted:
+            if e.get("event_type") == "BLOCKED":
+                blocker = e.get("blocker") or (e.get("extra") or {}).get("reason")
+            elif e.get("event_type") == "BLOCKER_RESOLVED":
+                blocker = None
+
+        agents_touched = sorted({e.get("agent") for e in evs_sorted if e.get("agent")})
+
+        out[tid] = {
+            "id": tid, "status": status, "tier": tier,
+            "tier_emoji": TIER_EMOJI.get(tier, "•"),
+            "phase": _infer_phase(tid),
+            "last_event_ts": last.get("ts"),
+            "last_event_type": last.get("event_type"),
+            "last_agent": last.get("agent"),
+            "event_count": len(evs_sorted),
+            "prs": prs,
+            "canary_verdict": canary_verdict,
+            "blocker": blocker,
+            "agents_touched": agents_touched,
+            "events": evs_sorted,
+        }
+    return out
+
+
+def reduce_agents(events: list[dict[str, Any]], now: datetime) -> list[dict[str, Any]]:
+    """agent → last event ts/type + current_task + staleness."""
+    by_agent: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for e in events:
+        ag = e.get("agent")
+        if ag:
+            by_agent[ag].append(e)
+    out: list[dict[str, Any]] = []
+    for ag, evs in by_agent.items():
+        evs_sorted = sorted(evs, key=lambda x: x.get("ts", ""))
+        last = evs_sorted[-1]
+        last_dt = _parse_event_ts(last.get("ts", ""))
+        age_hours = ((now - last_dt).total_seconds() / 3600.0) if last_dt else None
+        if age_hours is None:
+            light = "red"
+        elif age_hours < 1:
+            light = "green"
+        elif age_hours < 3:
+            light = "yellow"
+        else:
+            light = "red"
+        # Find last heartbeat for current task
+        last_hb = next(
+            (e for e in reversed(evs_sorted) if e.get("event_type") == "AGENT_HEARTBEAT"),
+            None,
+        )
+        current_task = (
+            (last_hb.get("extra") or {}).get("current_task") if last_hb else last.get("task_id")
+        )
+        out.append({
+            "id": ag, "name": ag.upper() if ag not in ("mike", "oinkv") else ag,
+            "last_event_ts": last.get("ts"),
+            "last_event_type": last.get("event_type"),
+            "last_task_id": last.get("task_id"),
+            "current_task": current_task,
+            "age_hours": age_hours,
+            "staleness_label": (
+                "green" if light == "green" else "yellow" if light == "yellow" else "red"
+            ),
+            "light": light,
+            "event_count": len(evs_sorted),
+        })
+    out.sort(key=lambda a: a.get("last_event_ts") or "", reverse=True)
+    return out
+
+
+# --- Live-now time buckets --------------------------------------------------
+
+def bucket_events(events: list[dict[str, Any]], now: datetime) -> dict[str, list[dict[str, Any]]]:
+    """Return {'1h': [...], '4h': [...], '24h': [...]} — oldest bucket includes newer."""
+    buckets: dict[str, list[dict[str, Any]]] = {"1h": [], "4h": [], "24h": []}
+    for e in events:
+        ts = _parse_event_ts(e.get("ts", ""))
+        if not ts:
+            continue
+        age_h = (now - ts).total_seconds() / 3600.0
+        summary = _one_line_summary(e)
+        row = {
+            "ts": e.get("ts"), "event_type": e.get("event_type"),
+            "task_id": e.get("task_id"), "agent": e.get("agent"),
+            "summary": summary, "phase": e.get("phase") or _infer_phase(e.get("task_id")),
+            "pr": e.get("pr"), "repo": e.get("repo"),
+            "age_hours": age_h,
+        }
+        if age_h <= 1:
+            buckets["1h"].append(row)
+        if age_h <= 4:
+            buckets["4h"].append(row)
+        if age_h <= 24:
+            buckets["24h"].append(row)
+    for k in buckets:
+        buckets[k].sort(key=lambda r: r.get("ts") or "", reverse=True)
+    return buckets
+
+
+def _one_line_summary(e: dict[str, Any]) -> str:
+    et = e.get("event_type") or ""
+    ex = e.get("extra") or {}
+    tid = e.get("task_id") or "—"
+    if et == "MERGED":
+        sha = (ex.get("commit_sha") or "")[:7]
+        return f"{tid} merged via PR #{e.get('pr')}" + (f" @{sha}" if sha else "")
+    if et == "CANARY_PASS":
+        return f"{tid} canary PASS"
+    if et == "CANARY_FAIL":
+        return f"{tid} canary FAIL — {ex.get('issues', '')}"[:140]
+    if et == "CANARY_STARTED":
+        return f"{tid} canary started"
+    if et == "PR_OPENED":
+        return f"{tid} PR #{e.get('pr')} opened — {ex.get('title', '')}"[:140]
+    if et == "REVIEW_POSTED":
+        return (f"{tid} review by {ex.get('reviewer', e.get('agent'))} — "
+                f"{ex.get('verdict', '')} ({ex.get('score', '')})")[:140]
+    if et == "PROPOSAL_READY":
+        return f"{tid} proposal ready"
+    if et == "PROPOSAL_APPROVED":
+        return f"{tid} proposal approved by {ex.get('approver', '?')}"
+    if et == "PROPOSAL_REJECTED":
+        return f"{tid} proposal rejected — {ex.get('reason', '')}"[:140]
+    if et == "CODE_STARTED":
+        return f"{tid} code started on {e.get('branch', '?')}"
+    if et == "BLOCKED":
+        return f"{tid} BLOCKED — {e.get('blocker') or ex.get('reason', '')}"[:140]
+    if et == "BLOCKER_RESOLVED":
+        return f"{tid} blocker cleared"
+    if et == "DECISION_NEEDED":
+        return f"{tid} Mike gate: {ex.get('question', ex.get('question_id', ''))}"[:140]
+    if et == "DECISION_RESOLVED":
+        return f"{tid} decision: {ex.get('answer', '?')}"[:140]
+    if et == "STATUS_CHANGED":
+        return f"{tid} {ex.get('from_status', '?')} → {ex.get('to_status', '?')}"
+    if et == "ARTIFACT_PUBLISHED":
+        return f"{tid} published {ex.get('category', '')}: {Path(e.get('artifact_path') or '').name}"
+    if et == "AGENT_HEARTBEAT":
+        return f"{e.get('agent')} heartbeat — {ex.get('current_task', '?')}"
+    if et == "TASK_PLANNED":
+        return f"{tid} plan published"
+    if et == "SPRINT_NOTE":
+        return (ex.get("text") or "")[:140]
+    return f"{et} {tid}"
+
+
+# --- Open decisions (Needs Mike) -------------------------------------------
+
+def open_decisions(events: list[dict[str, Any]], now: datetime) -> list[dict[str, Any]]:
+    open_: dict[str, dict[str, Any]] = {}
+    for e in sorted(events, key=lambda x: x.get("ts", "")):
+        et = e.get("event_type")
+        ex = e.get("extra") or {}
+        if et == "DECISION_NEEDED":
+            qid = ex.get("question_id") or e.get("event_id")
+            open_[qid] = e
+        elif et == "DECISION_RESOLVED":
+            qid = ex.get("question_id")
+            if qid:
+                open_.pop(qid, None)
+
+    out: list[dict[str, Any]] = []
+    for qid, e in open_.items():
+        ts = _parse_event_ts(e.get("ts", ""))
+        age_h = ((now - ts).total_seconds() / 3600.0) if ts else None
+        ex = e.get("extra") or {}
+        # Detect Q-B1-*, Q-B2-*, Q-HH-* style gates
+        gate_type = "generic"
+        if isinstance(qid, str):
+            if qid.startswith("Q-HH"):
+                gate_type = "heavy-hybrid"
+            elif re.match(r"^Q-B\d", qid):
+                gate_type = f"phase-{qid.split('-')[1][0].lower()}"
+            elif re.match(r"^Q-A\d", qid):
+                gate_type = "phase-a"
+        out.append({
+            "question_id": qid,
+            "question": ex.get("question", "(no question text)"),
+            "options": ex.get("options", []),
+            "task_id": e.get("task_id"),
+            "phase": e.get("phase") or _infer_phase(e.get("task_id")),
+            "ts": e.get("ts"), "age_hours": age_h,
+            "age_human": _age_human(age_h),
+            "agent": e.get("agent"),
+            "gate_type": gate_type,
+        })
+    out.sort(key=lambda x: x.get("age_hours") or 0, reverse=True)
+    return out
+
+
+def _age_human(h: float | None) -> str:
+    if h is None:
+        return "—"
+    if h < 0:
+        return "just now"
+    if h < 1:
+        return f"{int(h*60)}m"
+    if h < 48:
+        return f"{h:.1f}h"
+    return f"{h/24:.1f}d"
+
+
+# --- Events integrity -------------------------------------------------------
+
+def events_integrity(events: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
+    total = len(events)
+    last_24h = 0
+    gaps_monotonic: list[str] = []
+    last_id = None
+    for e in events:
+        ts = _parse_event_ts(e.get("ts", ""))
+        if ts and (now - ts).total_seconds() / 3600.0 <= 24:
+            last_24h += 1
+        eid = e.get("event_id") or ""
+        if last_id and eid and eid < last_id:
+            gaps_monotonic.append(f"{eid} came after {last_id}")
+        if eid:
+            last_id = eid
+    rate = last_24h / 24.0 if last_24h else 0.0
+    return {
+        "total": total, "last_24h": last_24h, "rate_per_hour": round(rate, 2),
+        "schema_version": EVENT_SCHEMA_VERSION,
+        "monotonic_gaps": gaps_monotonic[:5],
+        "monotonic_ok": not gaps_monotonic,
+        "source": "lib" if _HAS_LIB else "inline",
+        "events_file": str(EVENTS_JSONL),
+    }
+
+
+# --- GH PR live state enrichment -------------------------------------------
+
+def enrich_merged_prs_via_gh(tasks_map: dict[str, dict[str, Any]]) -> None:
+    """Best-effort: for each MERGED PR, ask `gh` for current state. Skip on failure."""
+    # Quick gh availability check
+    try:
+        subprocess.run(
+            ["gh", "--version"], capture_output=True, text=True, timeout=3, check=True
+        )
+    except Exception:
+        return
+    for tid, t in tasks_map.items():
+        for pr in t.get("prs", []):
+            repo = pr.get("repo")
+            num = pr.get("number")
+            if not repo or not num:
+                continue
+            try:
+                r = subprocess.run(
+                    ["gh", "pr", "view", str(num),
+                     "-R", f"QuantisDevelopment/{repo}",
+                     "--json", "state,mergedAt,mergeCommit"],
+                    capture_output=True, text=True, timeout=5,
+                )
+                if r.returncode != 0:
+                    continue
+                info = json.loads(r.stdout)
+                pr["live_state"] = info.get("state")
+                pr["live_merged_at"] = info.get("mergedAt")
+                mc = info.get("mergeCommit") or {}
+                oid = mc.get("oid") if isinstance(mc, dict) else None
+                if oid and not pr.get("merge_commit"):
+                    pr["merge_commit"] = oid[:12]
+                    pr["commit_url"] = f"https://github.com/QuantisDevelopment/{repo}/commit/{oid}"
+            except Exception:
+                continue
+
+
+# --- Event-derived "task" dicts (shape-compatible with crawler tasks) -------
+
+def task_from_stream(tid: str, task_state: dict[str, Any]) -> dict[str, Any]:
+    """Produce a crawler-compatible task dict from the reduced state."""
+    status = task_state["status"]
+    tier = task_state["tier"]
+    canary_verdict = task_state.get("canary_verdict")
+    prs = task_state.get("prs") or []
+    evs = task_state.get("events") or []
+
+    # Timeline = chronological event rows rendered for dashboard
+    timeline = []
+    for e in evs:
+        meta = EVENT_META.get(e.get("event_type", ""), {"emoji": "•", "actor": "—"})
+        timeline.append({
+            "label": _one_line_summary(e),
+            "actor": e.get("agent") or meta.get("actor", "—"),
+            "path": e.get("artifact_path"),
+            "mtime": e.get("ts"),
+            "verdict": (e.get("extra") or {}).get("verdict"),
+            "score": (e.get("extra") or {}).get("score"),
+            "event_type": e.get("event_type"),
+        })
+
+    # Scores — last REVIEW_POSTED per reviewer
+    scores = {"vigil": None, "guardian": None, "hermes": None}
+    verdicts = {"vigil": None, "guardian": None, "hermes": None}
+    for e in evs:
+        if e.get("event_type") == "REVIEW_POSTED":
+            ex = e.get("extra") or {}
+            rv = (ex.get("reviewer") or e.get("agent") or "").lower()
+            if rv in scores:
+                sc = ex.get("score")
+                if isinstance(sc, (int, float)):
+                    scores[rv] = float(sc)
+                v = ex.get("verdict")
+                if v:
+                    verdicts[rv] = v
+
+    merged_at = next(
+        (e.get("ts") for e in evs if e.get("event_type") == "MERGED"), None
+    )
+    last_activity = task_state.get("last_event_ts")
+
+    return {
+        "id": tid, "tier": tier,
+        "tier_emoji": TIER_EMOJI.get(tier, "•"),
+        "repo_hint": TASK_REPO_HINT.get(tid),
+        "status": status,
+        "status_label": STATUS_LABEL.get(status, status),
+        "prs": prs, "scores": scores, "verdicts": verdicts,
+        "canary": {
+            "verdict": canary_verdict, "path": None,
+            "mtime": next((e.get("ts") for e in reversed(evs)
+                           if e.get("event_type", "").startswith("CANARY_")), None),
+        },
+        "merged_at": merged_at,
+        "last_activity": last_activity,
+        "timeline": timeline,
+        "artifacts": {
+            # Map event artifact_paths by event type (best effort)
+            e["event_type"].lower(): e["artifact_path"]
+            for e in evs if e.get("artifact_path")
+        },
+        # Event-stream-specific
+        "_from_stream": True,
+        "event_count": task_state.get("event_count", len(evs)),
+        "blocker": task_state.get("blocker"),
+        "phase": task_state.get("phase"),
+        "agents_touched": task_state.get("agents_touched", []),
+        "last_event_type": task_state.get("last_event_type"),
+    }
+
+
+def build_from_events(events: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
+    """Produce a 'data' dict shaped compatibly with the crawler's build()."""
+    tasks_map = reduce_tasks(events)
+    # Enrich MERGED PRs via gh (best effort, silently skipped)
+    try:
+        enrich_merged_prs_via_gh(tasks_map)
+    except Exception:
+        pass
+
+    # Ensure all SEED_TASKS are at least present as NOT_STARTED
+    for tid in SEED_TASKS:
+        if tid not in tasks_map:
+            tasks_map[tid] = {
+                "id": tid, "status": "NOT_STARTED",
+                "tier": TIERS.get(tid, "STANDARD"),
+                "tier_emoji": TIER_EMOJI.get(TIERS.get(tid, "STANDARD"), "•"),
+                "phase": _infer_phase(tid),
+                "last_event_ts": None, "last_event_type": None,
+                "last_agent": None, "event_count": 0, "prs": [],
+                "canary_verdict": None, "blocker": None,
+                "agents_touched": [], "events": [],
+            }
+
+    tasks = [task_from_stream(tid, ts) for tid, ts in tasks_map.items()]
+    tasks.sort(key=lambda t: t.get("last_activity") or "", reverse=True)
+
+    agents = reduce_agents(events, now)
+    if not agents:
+        # No agents seen yet — provide stub so UI doesn't crash
+        agents = [
+            {"id": a["id"], "name": a["name"], "emoji": a.get("emoji", "•"),
+             "role": a.get("role", ""), "last_event_ts": None, "last_event_type": None,
+             "current_task": None, "age_hours": None,
+             "staleness_label": "red", "light": "red",
+             "event_count": 0, "last_task_id": None}
+            for a in AGENTS
+        ]
+    else:
+        # Enrich with role/emoji from static AGENTS
+        ag_meta = {a["id"]: a for a in AGENTS}
+        for a in agents:
+            m = ag_meta.get(a["id"], {})
+            a["emoji"] = m.get("emoji", "•")
+            a["role"] = m.get("role", "")
+            a["name"] = m.get("name", a["name"])
+            # Legacy key the template reads
+            a["last_active"] = a["last_event_ts"]
+            a["last_active_human"] = humanize(
+                _parse_event_ts(a["last_event_ts"] or ""), now
+            )
+            a["heartbeat"] = {
+                "current_task": a.get("current_task"),
+                "current_phase": None,
+                "blockers": [],
+                "branch": None,
+            }
+
+    # Waves — dynamic, only for tasks we've seen
+    wave_progress = []
+    for w in WAVES:
+        w_tasks = [t for t in tasks if t["id"] in w["tasks"]]
+        done = sum(1 for t in w_tasks if t["status"] == "DONE")
+        total = len(w["tasks"])
+        wave_progress.append({
+            "name": w["name"], "tasks": w_tasks, "task_ids": w["tasks"],
+            "done": done, "total": total,
+            "percent": int((done / total) * 100) if total else 0,
+            "future": w.get("future", False),
+        })
+
+    return {
+        "generated_at_utc": iso(now),
+        "generated_at_cest": now.astimezone(CEST).isoformat(timespec="seconds"),
+        "sprint_title": "OinkFarm Implementation Foresight Sprint",
+        "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
+        "waves": wave_progress, "tasks": tasks, "agents": agents,
+        "cron": [], "plans": [], "audits": [],
+        "blockers": [],  # will be derived below from open_decisions + stream
+        "last_cron": None,
+        "commit": git_commit(),
+        "_from_stream": True,
+        "_tasks_map": tasks_map,
+        "_events_all_stream": events,
+    }
+
+
 # --------------------------------------------------------------------------- #
 # Main build + render
 # --------------------------------------------------------------------------- #
 
 def build(now: datetime | None = None) -> dict[str, Any]:
     now = now or datetime.now(timezone.utc)
+
+    # ----- PRIMARY: event-stream reducer -----
+    events = read_events_safe()
+    integrity = events_integrity(events, now)
+    bootstrap = len(events) < MIN_EVENTS_FOR_PRIMARY
+
+    if not bootstrap:
+        # Event-stream is the primary source
+        data = build_from_events(events, now)
+        # Dynamic TASKS discovery — every task_id we've seen in events
+        global TASKS
+        discovered = sorted(
+            {t["id"] for t in data["tasks"]},
+            key=lambda t: (t[0], int(re.search(r"\d+", t).group()) if re.search(r"\d+", t) else 0),
+        )
+        if discovered:
+            TASKS = discovered
+        # Derive open_decisions + buckets + lint gaps
+        data["open_decisions"] = open_decisions(events, now)
+        data["live_buckets"] = bucket_events(events, now)
+        data["lint_gaps"] = lint_events_safe(events, now)
+        data["events_integrity"] = integrity
+        data["bootstrap"] = False
+        # Build "freshness by agent" table — uses reduced agents directly
+        data["freshness_by_agent"] = data["agents"]
+        # Cron narrative still useful; derive from SPRINT_NOTEs
+        data["cron"] = _cron_from_events(events)
+        data["last_cron"] = data["cron"][0] if data["cron"] else None
+        data["plans"] = []
+        data["audits"] = []
+        # Blockers — union of open_decisions + currently BLOCKED tasks
+        data["blockers"] = _blockers_from_stream(data["tasks"], data["open_decisions"])
+        return data
+
+    # ----- FALLBACK: crawler (bootstrap mode) -----
+    sys.stderr.write(
+        f"INFO  events.jsonl has {len(events)} events (<{MIN_EVENTS_FOR_PRIMARY}), "
+        f"bootstrapping from crawler\n"
+    )
     tasks = [crawl_task(t, now) for t in TASKS]
     tasks.sort(key=lambda t: t["last_activity"] or "", reverse=True)
     agents = [crawl_agent(a, now) for a in AGENTS]
@@ -719,7 +1521,80 @@ def build(now: datetime | None = None) -> dict[str, Any]:
         "cron": cron, "plans": plans["plans"], "audits": plans["audits"],
         "blockers": blockers, "last_cron": cron[0] if cron else None,
         "commit": git_commit(),
+        "bootstrap": True,
+        "events_integrity": integrity,
+        "open_decisions": [],
+        "live_buckets": {"1h": [], "4h": [], "24h": []},
+        "lint_gaps": [],
+        "freshness_by_agent": [
+            {
+                "id": a["id"], "name": a["name"], "emoji": a["emoji"],
+                "role": a["role"],
+                "last_event_ts": a["last_active"],
+                "last_event_type": "(crawler mtime)",
+                "last_task_id": a.get("heartbeat", {}).get("current_task"),
+                "current_task": a.get("heartbeat", {}).get("current_task"),
+                "light": a["light"],
+                "staleness_label": a["light"],
+                "age_hours": None,
+                "event_count": 0,
+            }
+            for a in agents
+        ],
     }
+
+
+def _cron_from_events(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Convert SPRINT_NOTE events into a cron-like feed for the narrative tab."""
+    out: list[dict[str, Any]] = []
+    for e in reversed(sorted(events, key=lambda x: x.get("ts", ""))):
+        if e.get("event_type") != "SPRINT_NOTE":
+            continue
+        ex = e.get("extra") or {}
+        text = ex.get("text") or ""
+        ts = _parse_event_ts(e.get("ts", ""))
+        out.append({
+            "time_utc": e.get("ts"),
+            "time_local": (
+                ts.astimezone(CEST).isoformat(timespec="minutes") if ts else None
+            ),
+            "header": None,
+            "actions": [text] if text else [],
+            "next": None, "blocker": None,
+            "path": e.get("event_id"),
+        })
+        if len(out) >= 40:
+            break
+    return out
+
+
+def _blockers_from_stream(tasks: list[dict[str, Any]],
+                          open_decs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    # Open DECISION_NEEDED → Mike blocker
+    for d in open_decs:
+        out.append({
+            "agent": "Mike", "agent_emoji": "🧭",
+            "raw": d.get("question", ""),
+            "label": (
+                f"{d.get('question_id', '?')}: {d.get('question', '')[:120]}"
+            ),
+            "severity": "mike",
+            "current_task": d.get("task_id"),
+            "current_phase": d.get("phase"),
+        })
+    # BLOCKED tasks
+    for t in tasks:
+        if t.get("status") == "BLOCKED" and t.get("blocker"):
+            out.append({
+                "agent": "—", "agent_emoji": "🛑",
+                "raw": t["blocker"],
+                "label": f"{t['id']} blocked: {t['blocker']}",
+                "severity": "auto",
+                "current_task": t["id"],
+                "current_phase": t.get("phase"),
+            })
+    return out
 
 
 def _tstime_filter(iso_str: str | None) -> str:
@@ -1679,19 +2554,161 @@ def _load_static_template(name: str, **subs: str) -> str:
     return text or f"# {name}\n\n_(template missing)_\n"
 
 
-def _render_phase_b(data: dict[str, Any]) -> str:
+def _render_event_phase_page(data: dict[str, Any], phase_letter: str,
+                             title: str, goal: str) -> str:
+    """Event-derived phase page: task grid, waves, recent activity, needs-mike."""
     by_id = {t["id"]: t for t in data["tasks"]}
-    b1 = by_id.get("B1")
-    b1_status = STATUS_BADGE.get(b1["status"], b1["status"]) if b1 else "—"
-    return _load_static_template("phase-b.md.tpl", b1_status=b1_status)
+    phase_tasks = [t for t in data["tasks"]
+                   if (t.get("phase") or _infer_phase(t["id"])) == phase_letter]
+    phase_tasks.sort(key=lambda t: (
+        int(re.search(r"\d+", t["id"]).group()) if re.search(r"\d+", t["id"]) else 999
+    ))
+    done = sum(1 for t in phase_tasks if t["status"] == "DONE")
+    total = len(phase_tasks)
+    events_all = data.get("_events_all_stream") or []
+    phase_events = [
+        e for e in events_all
+        if (e.get("phase") == phase_letter
+            or _infer_phase(e.get("task_id")) == phase_letter)
+    ]
+
+    L = [f"# {title}\n",
+         f"**Status:** {done}/{total} tasks shipped  ",
+         f"**Goal:** {goal}  ",
+         f"**Data source:** event-stream reducer (`events.jsonl`)  ",
+         f"**Live:** [dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)\n",
+         "## Tasks (live status from event stream)\n",
+         "| Task | Tier | Status | Canary | PRs | Last event | Agents |",
+         "|---|---|---|---|---|---|---|"]
+    for t in phase_tasks:
+        tid = t["id"]
+        slug = TASK_SLUGS.get(tid, tid.lower())
+        canary = t["canary"].get("verdict") or "—"
+        prs = " + ".join(f"[{p['repo']}#{p['number']}]({p['pr_url']})" for p in t.get("prs", [])) or "—"
+        last_ts = t.get("last_activity")
+        last_ev = t.get("last_event_type") or "—"
+        last_str = (
+            f"{_tstime_filter(last_ts)} · `{last_ev}`" if last_ts else "—"
+        )
+        ag_str = " · ".join(t.get("agents_touched", [])[:4]) or "—"
+        L.append(f"| [{tid}](../tasks/{tid}-{slug}.md) | "
+                 f"{t['tier_emoji']} {t['tier']} | "
+                 f"{STATUS_BADGE.get(t['status'], t['status'])} | "
+                 f"{canary} | {prs} | {last_str} | {ag_str} |")
+
+    # Waves
+    L += ["\n## Waves\n"]
+    wave_rows = []
+    for w in WAVES:
+        w_ids = [tid for tid in w["tasks"] if tid in by_id and
+                 (by_id[tid].get("phase") or _infer_phase(tid)) == phase_letter]
+        if not w_ids:
+            continue
+        w_done = sum(1 for tid in w_ids if by_id[tid]["status"] == "DONE")
+        wave_rows.append(
+            f"- **{w['name']}** — {w_done}/{len(w_ids)} shipped: "
+            + " · ".join(f"`{tid}`" for tid in w_ids)
+        )
+    L.extend(wave_rows or ["_No waves yet for this phase._"])
+
+    # Recent activity (last 24h)
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
+    recent_24h = [
+        e for e in phase_events
+        if (_parse_event_ts(e.get("ts", "")) or datetime.min.replace(tzinfo=timezone.utc)) > cutoff
+    ]
+    recent_24h.sort(key=lambda e: e.get("ts", ""), reverse=True)
+    L += ["\n## Recent activity (last 24h)\n"]
+    if recent_24h:
+        L += ["| Time | Type | Task | Agent | Summary |",
+              "|---|---|---|---|---|"]
+        for e in recent_24h[:30]:
+            L.append(f"| {_tstime_filter(e.get('ts'))} | `{e.get('event_type')}` | "
+                     f"`{e.get('task_id') or '—'}` | {e.get('agent') or '—'} | "
+                     f"{_one_line_summary(e)} |")
+    else:
+        L.append("_No events in the last 24 hours._")
+
+    # Needs Mike (phase-scoped)
+    decisions = [d for d in data.get("open_decisions", [])
+                 if d.get("phase") == phase_letter
+                 or _infer_phase(d.get("task_id")) == phase_letter
+                 or (phase_letter in ("B", "C") and d.get("gate_type") == f"phase-{phase_letter.lower()}")]
+    L += ["\n## Needs Mike (open gates)\n"]
+    if decisions:
+        L += ["| Question ID | Question | Task | Age | Options |",
+              "|---|---|---|---|---|"]
+        for d in decisions:
+            opts = " · ".join(d.get("options") or []) or "—"
+            L.append(f"| `{d['question_id']}` | {d['question']} | "
+                     f"`{d.get('task_id') or '—'}` | {d['age_human']} | {opts} |")
+    else:
+        L.append("_No open DECISION_NEEDED for this phase._")
+
+    L += ["\n---\n",
+          "*[Sprint log index](../README.md) · "
+          "[Live dashboard](https://quantisdevelopment.github.io/"
+          "oinkfarm-sprint-checkpoint/)*"]
+    return "\n".join(L) + "\n"
 
 
-def _render_phase_c() -> str:
-    return _load_static_template("phase-c.md.tpl")
+def _render_phase_b(data: dict[str, Any]) -> str:
+    if data.get("bootstrap"):
+        by_id = {t["id"]: t for t in data["tasks"]}
+        b1 = by_id.get("B1")
+        b1_status = STATUS_BADGE.get(b1["status"], b1["status"]) if b1 else "—"
+        return _load_static_template("phase-b.md.tpl", b1_status=b1_status)
+    return _render_event_phase_page(
+        data, "B", "Phase B — Infrastructure Migration",
+        "Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.",
+    )
 
 
-def _render_heavy_hybrid() -> str:
-    return _load_static_template("heavy-hybrid.md.tpl")
+def _render_phase_c(data: dict[str, Any] | None = None) -> str:
+    if not data or data.get("bootstrap"):
+        return _load_static_template("phase-c.md.tpl")
+    return _render_event_phase_page(
+        data, "C", "Phase C — Mature Observability",
+        "Build measurement, monitoring, and operational sophistication on top of Phase A+B.",
+    )
+
+
+def _render_heavy_hybrid(data: dict[str, Any] | None = None) -> str:
+    if not data or data.get("bootstrap"):
+        return _load_static_template("heavy-hybrid.md.tpl")
+    # Heavy Hybrid: dedicated rendering focused on Q-HH gates + roadmap
+    events_all = data.get("_events_all_stream") or []
+    hh_decisions = [d for d in data.get("open_decisions", [])
+                    if d.get("gate_type") == "heavy-hybrid"]
+    # Resolved Q-HH decisions
+    resolved_hh = [e for e in events_all
+                   if e.get("event_type") == "DECISION_RESOLVED"
+                   and str((e.get("extra") or {}).get("question_id", "")).startswith("Q-HH")]
+    L = ["# Heavy Hybrid Roadmap — Long-horizon Decisions\n",
+         "**Source:** event-stream reducer (Q-HH-* DECISION_NEEDED / DECISION_RESOLVED)\n",
+         "## Open Q-HH gates\n"]
+    if hh_decisions:
+        L += ["| ID | Question | Age | Options |", "|---|---|---|---|"]
+        for d in hh_decisions:
+            opts = " · ".join(d.get("options") or []) or "—"
+            L.append(f"| `{d['question_id']}` | {d['question']} | {d['age_human']} | {opts} |")
+    else:
+        L.append("_No open Q-HH gates._")
+    L += ["\n## Resolved Q-HH decisions\n"]
+    if resolved_hh:
+        resolved_hh.sort(key=lambda e: e.get("ts", ""), reverse=True)
+        L += ["| When | ID | Answer |", "|---|---|---|"]
+        for e in resolved_hh:
+            ex = e.get("extra") or {}
+            L.append(f"| {_tstime_filter(e.get('ts'))} | "
+                     f"`{ex.get('question_id', '?')}` | {ex.get('answer', '—')} |")
+    else:
+        L.append("_None yet._")
+    L += ["\n---\n",
+          "*[Sprint log index](../README.md) · "
+          "[Live dashboard](https://quantisdevelopment.github.io/"
+          "oinkfarm-sprint-checkpoint/)*"]
+    return "\n".join(L) + "\n"
 
 
 # ---- Event log ---------------------------------------------------------------
@@ -1967,6 +2984,12 @@ def _render_event_readme(events_by_day: dict[str, list[dict[str, Any]]]) -> str:
 def _render_sprint_log_readme(data: dict[str, Any]) -> str:
     by_id = {t["id"]: t for t in data["tasks"]}
     total_merged = sum(1 for t in data["tasks"] if t["status"] == "DONE")
+    integ = data.get("events_integrity", {})
+    live = data.get("live_buckets", {"1h": [], "4h": [], "24h": []})
+    decs = data.get("open_decisions", [])
+    gaps = data.get("lint_gaps", [])
+    fresh = data.get("freshness_by_agent", [])
+
     L = [
         "# OinkFarm Implementation Foresight Sprint — Archive\n",
         "Human-readable per-task, per-wave, per-phase, and per-event archive. "
@@ -1974,6 +2997,83 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
         "For the live dashboard see "
         "[quantisdevelopment.github.io/oinkfarm-sprint-checkpoint]"
         "(https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/).\n",
+    ]
+
+    if data.get("bootstrap"):
+        L.append("> ⚠️ **BOOTSTRAPPING FROM CRAWLER** — events.jsonl has "
+                 f"{integ.get('total', 0)} events (<{MIN_EVENTS_FOR_PRIMARY}). "
+                 "This archive is sourced from workspace file mtimes.\n")
+
+    # Events integrity
+    L += ["## Event stream integrity\n",
+          f"- **Total events:** {integ.get('total', 0)}",
+          f"- **Last 24h:** {integ.get('last_24h', 0)} "
+          f"(rate {integ.get('rate_per_hour', 0)}/h)",
+          f"- **Schema:** v{integ.get('schema_version', '?')}",
+          f"- **Source:** {integ.get('source', '?')}",
+          f"- **Monotonic:** {'✓ ok' if integ.get('monotonic_ok') else '⚠ gaps'}",
+          ""]
+
+    # ★ MIKE SPEC SECTION 1 — Live now
+    L += ["## 🔴 Live now\n"]
+    for label, key in [("Last 1 hour", "1h"), ("Last 4 hours", "4h"), ("Last 24 hours", "24h")]:
+        L.append(f"### {label} ({len(live.get(key, []))} events)")
+        evs = live.get(key, [])[:15]
+        if evs:
+            L += ["| Time | Type | Task | Agent | Summary |",
+                  "|---|---|---|---|---|"]
+            for e in evs:
+                L.append(f"| {_tstime_filter(e.get('ts'))} | `{e.get('event_type')}` | "
+                         f"`{e.get('task_id') or '—'}` | {e.get('agent') or '—'} | "
+                         f"{e.get('summary', '')} |")
+        else:
+            L.append("_(no events)_")
+        L.append("")
+
+    # ★ MIKE SPEC SECTION 2 — Needs Mike
+    L += ["## 🧭 Needs Mike\n"]
+    if decs:
+        L += ["| Question ID | Question | Task | Age | Options | Gate |",
+              "|---|---|---|---|---|---|"]
+        for d in decs:
+            opts = " · ".join(d.get("options") or []) or "—"
+            L.append(f"| `{d['question_id']}` | {d['question']} | "
+                     f"`{d.get('task_id') or '—'}` | {d['age_human']} | {opts} | "
+                     f"{d.get('gate_type', '—')} |")
+    else:
+        L.append("_No open DECISION_NEEDED events._")
+    L.append("")
+
+    # ★ MIKE SPEC SECTION 3 — Missing evidence
+    L += ["## 🔍 Missing evidence\n"]
+    if gaps:
+        L += ["| Severity | Task | Issue |", "|---|---|---|"]
+        for g in gaps:
+            sev_emoji = {
+                "critical": "🔴", "warn": "🟠", "mike": "🧭", "info": "⚪",
+            }.get(g.get("severity", "info"), "•")
+            L.append(f"| {sev_emoji} {g.get('severity', 'info').upper()} | "
+                     f"`{g.get('task_id') or '—'}` | {g.get('issue', '')} |")
+    else:
+        L.append("_✓ No lint gaps._")
+    L.append("")
+
+    # ★ MIKE SPEC SECTION 4 — Freshness by agent
+    L += ["## 🫀 Freshness by agent\n",
+          "| Agent | Last event | Type | Task | Staleness | Events |",
+          "|---|---|---|---|---|---|"]
+    for a in fresh:
+        light = a.get("light", "red")
+        badge = ({"green": "🟢 fresh", "yellow": "🟡 1–3h", "red": "🔴 stale"}
+                 .get(light, "•"))
+        L.append(f"| {a.get('emoji', '•')} **{a.get('name', a.get('id'))}** | "
+                 f"{_tstime_filter(a.get('last_event_ts'))} | "
+                 f"`{a.get('last_event_type') or '—'}` | "
+                 f"`{a.get('current_task') or a.get('last_task_id') or '—'}` | "
+                 f"{badge} | {a.get('event_count', 0)} |")
+    L.append("")
+
+    L += [
         "## What's live now\n",
         "| | |", "|---|---|",
         f"| **Phase A** | ✅ COMPLETE — 11/11 tasks shipped, canaries PASS |",
@@ -2008,11 +3108,15 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
     L += ["\n## Tasks\n",
           "| Task | Name | Tier | Wave | Status | Canary |",
           "|---|---|---|---|---|---|"]
-    for tid in TASKS:
+    for tid in sorted(by_id.keys(),
+                      key=lambda t: (t[0], int(re.search(r"\d+", t).group()) if re.search(r"\d+", t) else 0)):
         t = by_id.get(tid)
-        if not t: continue
+        if not t:
+            continue
         slug = TASK_SLUGS.get(tid, tid.lower())
-        L.append(f"| [{tid}](tasks/{tid}-{slug}.md) | "
+        task_link = (f"[{tid}](tasks/{tid}-{slug}.md)"
+                     if tid in TASK_SLUGS else f"`{tid}`")
+        L.append(f"| {task_link} | "
                  f"{TASK_NAMES.get(tid, tid)} | "
                  f"{t['tier_emoji']} {t['tier']} | "
                  f"{TASK_WAVE.get(tid, '—')} | "
@@ -2022,14 +3126,10 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
     L += ["\n## Event log\n",
           "- [Event index](events/README.md) — chronological feed (newest "
           "first within each day)",
-          "- [2026-04-18](events/2026-04-18.md) — Phase A kickoff (FORGE "
-          "plans, first proposals)",
-          "- [2026-04-19](events/2026-04-19.md) — Phase A completion + B1 "
-          "kickoff (10 merges, 11 canaries)",
           "",
           "## Agents", "", "| Emoji | Name | Role |", "|---|---|---|"]
     for a in data["agents"]:
-        L.append(f"| {a['emoji']} | {a['name']} | {a['role']} |")
+        L.append(f"| {a.get('emoji', '•')} | {a.get('name', '?')} | {a.get('role', '')} |")
     L += ["", "## Conventions", "",
           "- **Tier colour:** 🔴 CRITICAL / 🟡 STANDARD / 🟢 LIGHTWEIGHT "
           "(per Arbiter-Oink Phase 4 governance)",
@@ -2039,7 +3139,7 @@ def _render_sprint_log_readme(data: dict[str, Any]) -> str:
           "CODE → PR_REVIEW → CANARY → DONE",
           "- **Timestamps** are rendered in CEST (UTC+2).",
           "", "---", "",
-          f"*{total_merged}/12 tasks DONE · "
+          f"*{total_merged}/{len(data['tasks'])} tasks DONE · "
           f"Last auto-regenerated: "
           f"{datetime.now(timezone.utc).astimezone(CEST).strftime('%H:%M CEST on %d %b %Y')}"
           f" · [Live dashboard](https://quantisdevelopment.github.io/"
@@ -2080,13 +3180,45 @@ def emit_sprint_log(data: dict[str, Any]) -> dict[str, int]:
     (SPRINT_LOG / "phases" / "phase-b.md").write_text(
         _render_phase_b(data), encoding="utf-8")
     (SPRINT_LOG / "phases" / "phase-c.md").write_text(
-        _render_phase_c(), encoding="utf-8")
+        _render_phase_c(data), encoding="utf-8")
     (SPRINT_LOG / "phases" / "heavy-hybrid.md").write_text(
-        _render_heavy_hybrid(), encoding="utf-8")
+        _render_heavy_hybrid(data), encoding="utf-8")
     counts["phases"] = 4
 
-    # Event log — group by CEST day
-    events = _collect_events(data)
+    # Event log — group by CEST day. Prefer the stream events when available.
+    if data.get("_from_stream") and data.get("_events_all_stream"):
+        # Map stream events into the shape _render_event_day expects
+        stream_evs = data["_events_all_stream"]
+        events = []
+        for e in stream_evs:
+            et = e.get("event_type", "")
+            # Map schema event_types → legacy event emoji keys
+            legacy_type = {
+                "TASK_PLANNED": "PLAN_PUBLISHED",
+                "PROPOSAL_READY": "PROPOSAL_DRAFTED",
+                "PROPOSAL_APPROVED": "PROPOSAL_DRAFTED",
+                "PROPOSAL_REJECTED": "PROPOSAL_DRAFTED",
+                "REVIEW_POSTED": (
+                    "VIGIL_VERDICT" if (e.get("extra") or {}).get("reviewer") == "vigil"
+                    else "GUARDIAN_VERDICT" if (e.get("extra") or {}).get("reviewer") == "guardian"
+                    else "HERMES_REVIEW"
+                ),
+                "MERGED": "MERGED",
+                "CANARY_PASS": "CANARY_PASS",
+                "CANARY_FAIL": "CANARY_FAIL",
+                "CANARY_STARTED": "CANARY_PENDING",
+                "DECISION_NEEDED": "DECISION",
+                "DECISION_RESOLVED": "DECISION",
+            }.get(et, et)
+            events.append({
+                "ts": e.get("ts"),
+                "type": legacy_type,
+                "task": e.get("task_id") or "—",
+                "desc": _one_line_summary(e),
+                "link": e.get("artifact_path"),
+            })
+    else:
+        events = _collect_events(data)
     by_day: dict[str, list[dict[str, Any]]] = {}
     for e in events:
         try:

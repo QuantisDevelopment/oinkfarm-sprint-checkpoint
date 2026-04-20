@@ -1,69 +1,42 @@
-# Phase B — Infrastructure Migration — Overview
+# Phase B — Infrastructure Migration
 
-**Status:** 🚧 IN FLIGHT — B1 Phase 0 proposal drafted  
+**Status:** 1/4 tasks shipped  
 **Goal:** Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.  
-**Source:** [`PHASE-B-SUMMARY.md`](../../raw-artifacts/forge/plans/PHASE-B-SUMMARY.md) · [`HEAVY-HYBRID-ROADMAP.md`](../../raw-artifacts/forge/plans/HEAVY-HYBRID-ROADMAP.md)
+**Data source:** event-stream reducer (`events.jsonl`)  
+**Live:** [dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)
 
-## Scope
+## Tasks (live status from event stream)
 
-Phase B has 15 Arbiter elements. FORGE has planned all 15 across 4 waves. Wave 1 (B1-B5) is the critical path; B1 in flight, B2-B5 planned.
+| Task | Tier | Status | Canary | PRs | Last event | Agents |
+|---|---|---|---|---|---|---|
+| [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#142](https://github.com/QuantisDevelopment/oinkfarm/pull/142) | Apr 20, 14:30 CEST · `CANARY_PASS` | anvil · guardian |
+| [B2](../tasks/B2-b2.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 13:30 CEST · `DECISION_NEEDED` | hermes |
+| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🛑 BLOCKED | — | — | Apr 20, 15:00 CEST · `BLOCKED` | anvil |
+| [B8](../tasks/B8-b8.md) | 🟡 STANDARD | 👀 PR REVIEW | — | — | Apr 20, 14:40 CEST · `REVIEW_POSTED` | anvil · forge · vigil |
 
-## All 15 Planned B-Tasks
+## Waves
 
-| Task | Name | Tier | Wave | Depends On | Status |
-|---|---|---|---|---|---|
-| [B1](../tasks/B1-db-abstraction-layer.md) | DB abstraction layer (oink_db.py) | 🔴 CRITICAL | B1 | A-complete | 🧪 CANARY |
-| B2 | PostgreSQL schema + migration | 🔴 CRITICAL | B1 | B1 | 📋 PLANNED |
-| B3 | Parallel-write verification | 🔴 CRITICAL | B1 | B2 | 📋 PLANNED |
-| B4 | PostgreSQL cutover (Mike gate) | 🔴 CRITICAL | B1 | B3 + Mike | 📋 PLANNED |
-| B5 | Emitter extraction | 🟡 STANDARD | B1 | None (parallel w/ B3) | 📋 PLANNED |
-| B6 | Cornix + Chroma parser extraction | 🟡 STANDARD | B2 | B5 | 📋 PLANNED |
-| B7 | WG Bot parser extraction | 🟡 STANDARD | B2 | B5 | 📋 PLANNED |
-| B8 | Router extraction (classify, dedup) | 🟡 STANDARD | B2 | B6, B7 | 📋 PLANNED |
-| B9 | W1 Immutable signal records | 🔴 CRITICAL | B3 | B4 | ⏳ DEFERRED |
-| B10 | W3 Materialized views + PnL continuity | 🟡 STANDARD | B3 | B9 | ⏳ DEFERRED |
-| B11 | W4 Full trace layer (18 timestamps) | 🟡 STANDARD | B3 | B4 | ⏳ DEFERRED |
-| B12 | Redis Streams transport (8 topics) | 🔴 CRITICAL | B4 | B4, B8 | ⏳ DEFERRED |
-| B13 | Docker Compose deployment | 🟡 STANDARD | B4 | B8, B12 | ⏳ DEFERRED |
-| B14 | TimescaleDB for price_history | 🟢 LIGHTWEIGHT | B4 | B4 | ⏳ DEFERRED |
-| B15 | Schema versioning + DLQ/replay | 🟡 STANDARD | B4 | B12 | ⏳ DEFERRED |
+- **Wave B1 (Phase B)** — 1/1 shipped: `B1`
 
-## Dependency Graph
+## Recent activity (last 24h)
 
-```
-B1 → B2 → B3 (7-14d elapsed) → B4 (Mike gate)
-                                  │
-B5 (emitter) ── parallel w/ B3 ───┘
-                                  │
-B5 → B6, B7 → B8 ────────────────┤
-                                  │
-B4 → B9 → B10 ───────────────────┤
-B4 → B11 ────────────────────────┤
-B4 + B8 → B12 → B15 ─────────────┤
-B8 + B12 → B13 ──────────────────┤
-B4 → B14 ────────────────────────┘
-```
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 20, 15:00 CEST | `BLOCKED` | `B3` | anvil | B3 BLOCKED — waiting_for_upstream_task |
+| Apr 20, 14:40 CEST | `REVIEW_POSTED` | `B8` | vigil | B8 review by vigil — PASS (9.4) |
+| Apr 20, 14:30 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
+| Apr 20, 14:10 CEST | `CANARY_STARTED` | `B1` | guardian | B1 canary started |
+| Apr 20, 14:05 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — B8 |
+| Apr 20, 14:00 CEST | `MERGED` | `B1` | anvil | B1 merged via PR #142 @abcd123 |
+| Apr 20, 13:30 CEST | `DECISION_NEEDED` | `B2` | hermes | B2 Mike gate: PostgreSQL hosting — same server or separate? |
+| Apr 20, 13:00 CEST | `PROPOSAL_READY` | `B8` | anvil | B8 proposal ready |
+| Apr 20, 12:30 CEST | `TASK_PLANNED` | `B8` | forge | B8 plan published |
 
-## Estimated Timeline
+## Needs Mike (open gates)
 
-- **Wave 1 (B1-B5):** ~13-23 days elapsed (B3 dominates the timeline)
-- **Wave 2 (B6-B8):** ~5-8 days, parallel with B3
-- **Wave 3 (B9-B11):** ~7-10 days after B4 cutover
-- **Wave 4 (B12-B15):** ~8-13 days, parallel tracks
-- **Critical path:** B1→B2→B3→B4→B9→B10 (~6-9 weeks)
-
-## Mike Gates
-
-- **Q-B1-1:** PostgreSQL driver — psycopg3 vs psycopg2
-- **Q-B1-2:** `oink_db.py` location — canonical vs per-repo
-- **Q-B2-1:** PostgreSQL hosting — same server or separate?
-- **Q-B2-3:** TimescaleDB now or later (B14)?
-- **Q-B3-2:** Minimum verification window — 7 or 14 days?
-- **B4-APPROVE:** Cutover requires Mike's explicit go-ahead
-
-## Next
-
-→ [B1 task page](../tasks/B1-db-abstraction-layer.md) — DB abstraction layer, proposal in review.
+| Question ID | Question | Task | Age | Options |
+|---|---|---|---|---|
+| `Q-B2-1` | PostgreSQL hosting — same server or separate? | `B2` | just now | same-server · separate-vm |
 
 ---
 

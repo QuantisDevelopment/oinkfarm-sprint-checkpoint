@@ -2,36 +2,28 @@
 
 **Tier:** 🟡 STANDARD  
 **Wave:** 2  
-**Status:** ✅ DONE — Shipped, canary PASS  
+**Status:** ⏳ NOT STARTED — Not yet started  
 **Repo target:** signal-gateway  
 **Branch:** —  
-**PR:** [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131)  
-**Merge commit:** [69d6840a](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a)
+**PR:** —  
+**Merge commit:** —
 
 ## One-liner
 
-The `signals.confidence` column currently stores a float derived from the extraction payload.
+Parser-Type Confidence Scoring — see plan for details.
 
 ## Timeline
 
 | # | Phase | Actor | Verdict | Timestamp (CEST) | Artifact |
 |---|---|---|---|---|---|
-| 1 | FORGE plan published | 🔥 FORGE | PUBLISHED | 11:42 CEST on 19 Apr 2026 | [TASK-A5-plan.md](../../raw-artifacts/forge/plans/TASK-A5-plan.md) |
-| 2 | OinkV audit | 👁️ OinkV | PASS | 11:32 CEST on 19 Apr 2026 | [OINKV-AUDIT-WAVE2-A5.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A5.md) |
-| 3 | Phase 0 proposal drafted | ⚒️ ANVIL | DRAFTED | 13:24 CEST on 19 Apr 2026 | [A5-PHASE0-PROPOSAL.md](../../raw-artifacts/anvil/proposals/A5-PHASE0-PROPOSAL.md) |
-| 4 | Phase 0 review | 🔍 VIGIL | ❌ BLOCK | 13:30 CEST on 19 Apr 2026 | [A5-VIGIL-PHASE0-REVIEW.md](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE0-REVIEW.md) |
-| 5 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 13:32 CEST on 19 Apr 2026 | [A5-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE0-REVIEW.md) |
-| 6 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 13:41 CEST on 19 Apr 2026 | [A5-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A5-PHASE0-APPROVED.marker) |
-| 7 | Phase 1 code | ⚒️ ANVIL | MERGED | 14:04 CEST on 19 Apr 2026 | [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131) |
-| 8 | Phase 1 review | 🔍 VIGIL | 9.85/10 | 14:00 CEST on 19 Apr 2026 | [A5-VIGIL-PHASE1-REVIEW.md](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW.md) |
-| 9 | Phase 1 review (R1) | 🔍 VIGIL | 9.85/10 | 14:01 CEST on 19 Apr 2026 | [A5-VIGIL-PHASE1-REVIEW-R2.md](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md) |
-| 10 | Phase 1 review | 🛡️ GUARDIAN | 10.00/10 | 13:51 CEST on 19 Apr 2026 | [A5-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE1-REVIEW.md) |
-| 11 | Merged | ⚒️ ANVIL | MERGED [69d6840](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a) | 14:04 CEST on 19 Apr 2026 | [A5-MERGED.marker](../../raw-artifacts/anvil/markers/A5-MERGED.marker) |
-| 12 | Canary | 🛡️ GUARDIAN | ✅ PASS | 22:38 CEST on 19 Apr 2026 | [A5-CANARY.md](../../raw-artifacts/guardian/canary-reports/A5-CANARY.md) |
+| 1 | OinkV audit | 👁️ OinkV | PASS | 11:32 CEST on 19 Apr 2026 | [OINKV-AUDIT-WAVE2-A5.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A5.md) |
+| 2 | Phase 0 review | 🛡️ GUARDIAN | ❌ CHANGES | 13:32 CEST on 19 Apr 2026 | [A5-GUARDIAN-PHASE0-REVIEW.md](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE0-REVIEW.md) |
+| 3 | Phase 0 approval | 🪽 Hermes | ✅ APPROVED | 13:41 CEST on 19 Apr 2026 | [A5-PHASE0-APPROVED.marker](../../raw-artifacts/anvil/proposals/A5-PHASE0-APPROVED.marker) |
+| 4 | Phase 1 review | 🔍 VIGIL | 9.85/10 | 14:01 CEST on 19 Apr 2026 | [A5-VIGIL-PHASE1-REVIEW-R2.md](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md) |
 
 ## Key Decisions
 
-_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
+_(To be distilled once Phase 0 proposal is drafted.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -39,18 +31,13 @@ _None._
 
 ## Artifacts (Full Index)
 
-- **FORGE plan:** [TASK-A5-plan.md](../../raw-artifacts/forge/plans/TASK-A5-plan.md) — 17.7 KB
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A5.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A5.md) — 18.9 KB
-- **ANVIL proposal:** [A5-PHASE0-PROPOSAL.md](../../raw-artifacts/anvil/proposals/A5-PHASE0-PROPOSAL.md) — 6.6 KB
-- **VIGIL reviews:** [Phase 0](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW.md) · [Phase 1 R1](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md)
-- **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE0-REVIEW.md) · [Phase 1](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE1-REVIEW.md)
-- **Canary report:** [A5-CANARY.md](../../raw-artifacts/guardian/canary-reports/A5-CANARY.md) — PASS
-- **Merge commit:** [`69d6840a`](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a) (oinkfarm PR #131)
-- **PR(s):** [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131)
+- **VIGIL reviews:** [Phase 1](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md)
+- **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE0-REVIEW.md)
 
 ## Lessons Learned
 
-- **VIGIL Phase 1 needed 2 rounds** — initial score below the tier threshold triggered fix-and-rescore loop.
+_(Written after canary verdict.)_
 
 ---
 
