@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T09:02:58+00:00",
-  "generated_at_cest": "2026-04-20T11:02:58+02:00",
+  "generated_at_utc": "2026-04-20T09:21:18+00:00",
+  "generated_at_cest": "2026-04-20T11:21:18+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "3h 7m ago",
+      "last_active_human": "3h 25m ago",
       "light": "red",
       "heartbeat": {
         "current_phase": "B"
@@ -3113,7 +3113,7 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-20T07:40:56+00:00",
-      "last_active_human": "1h 22m ago",
+      "last_active_human": "1h 40m ago",
       "light": "yellow",
       "heartbeat": {
         "blockers": [
@@ -3129,7 +3129,7 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T07:36:25+00:00",
-      "last_active_human": "1h 26m ago",
+      "last_active_human": "1h 44m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3140,7 +3140,7 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-20T07:59:28+00:00",
-      "last_active_human": "1h 3m ago",
+      "last_active_human": "1h 21m ago",
       "light": "yellow",
       "heartbeat": {}
     },
@@ -3150,7 +3150,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T09:02:58+00:00",
+      "last_active": "2026-04-20T09:21:18+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3162,12 +3162,27 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "3h 7m ago",
+      "last_active_human": "3h 25m ago",
       "light": "red",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T09:21:18+00:00",
+      "time_local": "2026-04-20T11:21+02:00",
+      "header": "SPRINT STATUS @ 11:21 CEST (09:21 UTC)",
+      "actions": [
+        "Verified: A1/A2/A3 (and A4-A11 + B1/B2/B3/B5) all merged+canaried long ago; prompt's \"A1/A2/A3\" directive is stale — trusting filesystem state per skill.",
+        "Verified B5 canary is passive-clean (2/10 post-reset signals, zero P0/P1/P2), B6 self-gate is correct, B7 Phase 0 approved gated on B6 merge, B8 Phase 0 approved 09:38 CEST.",
+        "Detected ANVIL idle since 09:37 UTC (~1h45m) despite B8 acknowledged as \"independent, can start from main once approved\" in its own HEARTBEAT.",
+        "No Mike activity in last 60 min, no zombie running tasks, no blocking GH issues on target scope.",
+        "Dispatched ANVIL B8 Phase 1 nudge (task_runs confirms `running`) with distilled SQL parity + scope boundary constraints inlined from the consolidated approval marker."
+      ],
+      "next": "Next cycle — poll for `anvil/B8-dedup-consolidation` branch push / oinkfarm PR open; if present, dispatch VIGIL+GUARDIAN+Hermes Phase 1 reviews in parallel. Also check B5 T+24h checkpoint and B6 PR-open once B5 canary advances.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_11-21-18.md"
+    },
     {
       "time_utc": "2026-04-20T08:47:20+00:00",
       "time_local": "2026-04-20T10:47+02:00",
@@ -3665,19 +3680,6 @@
       "next": "poll for OINKV-AUDIT-PHASE-B-COMPLETE.marker and organic post-merge signals (id>2523) landing in A10-CANARY.md; respond to whichever lands first. [SILENT] if neither has moved.",
       "blocker": "• **A10 ship-it: DONE** (Hermes executed append-only merge 18:29Z per council authority — no further ship-it action required). • **Phase B Wave 1 approval** still pending your review of /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md + 12 design questions. OinkV audit of plans now running in parallel — approval gate is yours alone once audit lands. • Separate: P0 SL Integrity alert (4 ACTIVE wrong-side-SL signals) escalated by GUARDIAN at 20:15Z is awaiting your remediation decision (not sprint-blocking). ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_20-53-55.md"
-    },
-    {
-      "time_utc": "2026-04-19T18:36:58+00:00",
-      "time_local": "2026-04-19T20:36+02:00",
-      "header": "SPRINT STATUS @ 20:37 UTC+2",
-      "actions": [
-        "Scanned all proposal/review/canary artifacts — no pending Phase 0 reviews, no REQUEST_CHANGES, no open A-labeled PRs.",
-        "Verified oink-sync live (up 7m since A10 restart), signal-gateway up, no `/tmp/a10_canary_fail.flag`, DB integrity clean (1406 signals, 0 orphans, 0 NULL remaining_pct/sl_type).",
-        "Confirmed FORGE delivered: Phase A plans 11/11, Phase B plans 10/15 (Wave 1 B1-B5 + Wave 2-4 B6-B9/B12), Phase C summary, Heavy Hybrid Roadmap."
-      ],
-      "next": "Continue monitoring A10 canary organic flow (id > 2523); dispatch GUARDIAN post-verdict once ≥10 organic inserts land. No other autonomous moves available — pipeline is steady-state waiting on external signal traffic and Mike decisions.",
-      "blocker": "• B4-APPROVE (🔴 CRITICAL cutover go-ahead) + Q-B1-1/B1-2/B2-1/B2-3/B3-2 — Phase B Wave 1 blocked • Q-HH-1..6 — Heavy Hybrid roadmap decisions (Redis hosting, retention, Docker topology, W1 enforcement, confidence routing, Phase D gate authority) • A10 post-canary sign-off pending (canary itself still running — no action needed from Mike until verdict posts) ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_20-36-58.md"
     }
   ],
   "plans": [
@@ -3964,20 +3966,21 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T08:47:20+00:00",
-    "time_local": "2026-04-20T10:47+02:00",
-    "header": "Sprint status check: Everything in the A-series (A1-A11) and B-series through B5 is already shipped. Current state is B-wave-2 all gated on B5 canary PASS, which is still awaiting organic signal throughput. Nothing actionable this cycle.",
+    "time_utc": "2026-04-20T09:21:18+00:00",
+    "time_local": "2026-04-20T11:21+02:00",
+    "header": "SPRINT STATUS @ 11:21 CEST (09:21 UTC)",
     "actions": [
-      "All proposals approved; no REVISE backlog",
-      "No open PRs on QuantisFarm / oinkfarm / signal-gateway",
-      "No VIGIL/GUARDIAN reviews pending",
-      "B5 canary can't be accelerated (organic signal flow)"
+      "Verified: A1/A2/A3 (and A4-A11 + B1/B2/B3/B5) all merged+canaried long ago; prompt's \"A1/A2/A3\" directive is stale — trusting filesystem state per skill.",
+      "Verified B5 canary is passive-clean (2/10 post-reset signals, zero P0/P1/P2), B6 self-gate is correct, B7 Phase 0 approved gated on B6 merge, B8 Phase 0 approved 09:38 CEST.",
+      "Detected ANVIL idle since 09:37 UTC (~1h45m) despite B8 acknowledged as \"independent, can start from main once approved\" in its own HEARTBEAT.",
+      "No Mike activity in last 60 min, no zombie running tasks, no blocking GH issues on target scope.",
+      "Dispatched ANVIL B8 Phase 1 nudge (task_runs confirms `running`) with distilled SQL parity + scope boundary constraints inlined from the consolidated approval marker."
     ],
-    "next": "monitor B5 canary signal count (2/10 → 10/10) and trigger B6 PR + B8 Phase 1 kickoff once GUARDIAN flips verdict to PASS. T+24h checkpoint: 2026-04-21 07:05 CEST.",
-    "blocker": "none. Sprint is steady — 14/17 Phase A/B tasks merged & deployed, three more APPROVED and queued behind canary discipline. ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_10-47-20.md"
+    "next": "Next cycle — poll for `anvil/B8-dedup-consolidation` branch push / oinkfarm PR open; if present, dispatch VIGIL+GUARDIAN+Hermes Phase 1 reviews in parallel. Also check B5 T+24h checkpoint and B6 PR-open once B5 canary advances.",
+    "blocker": null,
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_11-21-18.md"
   },
-  "commit": "66612ad54d42",
+  "commit": "d8df7494b661",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",

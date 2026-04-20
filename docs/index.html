@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T09:02:58+00:00">
+<body data-generated="2026-04-20T09:21:18+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T09:02:58+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T09:21:18+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T11:02:58+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T11:21:18+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 11:02 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 11:21 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -2213,7 +2213,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">3h 7m ago</div>
+        <div class="agent-meta mono muted">3h 25m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2225,7 +2225,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 22m ago</div>
+        <div class="agent-meta mono muted">1h 40m ago</div>
           <div class="agent-meta mono muted">branch: anvil/B6-parser-extraction</div>
       </div>
       <div class="agent agent-light-yellow">
@@ -2238,7 +2238,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 26m ago</div>
+        <div class="agent-meta mono muted">1h 44m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -2250,7 +2250,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 3m ago</div>
+        <div class="agent-meta mono muted">1h 21m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2274,7 +2274,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">3h 7m ago</div>
+        <div class="agent-meta mono muted">3h 25m ago</div>
       </div>
     </div>
   </div>
@@ -2291,6 +2291,13 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 11:21 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 11:21 CEST (09:21 UTC)</div>
+            <ul class="narrative-actions">
+<li>Verified: A1/A2/A3 (and A4-A11 + B1/B2/B3/B5) all merged+canaried long ago; prompt's "A1/A2/A3" directive is stale — trusting filesystem state per skill.</li><li>Verified B5 canary is passive-clean (2/10 post-reset signals, zero P0/P1/P2), B6 self-gate is correct, B7 Phase 0 approved gated on B6 merge, B8 Phase 0 approved 09:38 CEST.</li><li>Detected ANVIL idle since 09:37 UTC (~1h45m) despite B8 acknowledged as "independent, can start from main once approved" in its own HEARTBEAT.</li><li>No Mike activity in last 60 min, no zombie running tasks, no blocking GH issues on target scope.</li><li>Dispatched ANVIL B8 Phase 1 nudge (task_runs confirms `running`) with distilled SQL parity + scope boundary constraints inlined from the consolidated approval marker.</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Next cycle — poll for `anvil/B8-dedup-consolidation` branch push / oinkfarm PR open; if present, dispatch VIGIL+GUARDIAN+Hermes Phase 1 reviews in parallel. Also check B5 T+24h checkpoint and B6 PR-open once B5 canary advances.</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 10:47 CEST</div>
             <div class="narrative-header">Sprint status check: Everything in the A-series (A1-A11) and B-series through B5 is already shipped. Current state is B-wave-2 all gated on B5 canary PASS, which is still awaiting organic signal throughput. Nothing actionable this cycle.</div>
@@ -2565,14 +2572,6 @@ future      </span>
             <div class="narrative-next"><span class="pill pill-info">next</span> poll for OINKV-AUDIT-PHASE-B-COMPLETE.marker and organic post-merge signals (id>2523) landing in A10-CANARY.md; respond to whichever lands first. [SILENT] if neither has moved.</div>
             <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> • **A10 ship-it: DONE** (Hermes executed append-only merge 18:29Z per council authority — no further ship-it action required). • **Phase B Wave 1 approval** still pending your review of /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md + 12 design questions. OinkV audit of plans now running in parallel — approval gate is yours alone once audit lands. • Separate: P0 SL Integrity alert (4 ACTIVE wrong-side-SL signals) escalated by GUARDIAN at 20:15Z is awaiting your remediation decision (not sprint-blocking). ```</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 20:36 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 20:37 UTC+2</div>
-            <ul class="narrative-actions">
-<li>Scanned all proposal/review/canary artifacts — no pending Phase 0 reviews, no REQUEST_CHANGES, no open A-labeled PRs.</li><li>Verified oink-sync live (up 7m since A10 restart), signal-gateway up, no `/tmp/a10_canary_fail.flag`, DB integrity clean (1406 signals, 0 orphans, 0 NULL remaining_pct/sl_type).</li><li>Confirmed FORGE delivered: Phase A plans 11/11, Phase B plans 10/15 (Wave 1 B1-B5 + Wave 2-4 B6-B9/B12), Phase C summary, Heavy Hybrid Roadmap.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> Continue monitoring A10 canary organic flow (id > 2523); dispatch GUARDIAN post-verdict once ≥10 organic inserts land. No other autonomous moves available — pipeline is steady-state waiting on external signal traffic and Mike decisions.</div>
-            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> • B4-APPROVE (🔴 CRITICAL cutover go-ahead) + Q-B1-1/B1-2/B2-1/B2-3/B3-2 — Phase B Wave 1 blocked • Q-HH-1..6 — Heavy Hybrid roadmap decisions (Redis hosting, retention, Docker topology, W1 enforcement, confidence routing, Phase D gate authority) • A10 post-canary sign-off pending (canary itself still running — no action needed from Mike until verdict posts) ```</div>
-        </li>
       </ol>
     </div>
 
@@ -2815,12 +2814,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">66612ad54d42</span>    </div>
+checkpoint@<span class="mono">d8df7494b661</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 10:47 CEST
+        Last orchestrator cycle: Apr 20, 11:21 CEST
     </div>
     <div>
-      generated Apr 20, 11:02 CEST
+      generated Apr 20, 11:21 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
