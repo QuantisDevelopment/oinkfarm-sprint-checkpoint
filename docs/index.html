@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T06:27:31+00:00">
+<body data-generated="2026-04-20T06:41:11+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T06:27:31+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T06:41:11+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T08:27:31+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T08:41:11+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 08:27 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 08:41 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -253,8 +253,8 @@ future      </span>
       <ul class="blocker-list">
         <li>
           <span class="blocker-agent">⚒️ ANVIL</span>
-          <span class="blocker-label">GUARDIAN canary</span>
-            <span class="blocker-task mono">on B5 · canary</span>
+          <span class="blocker-label">Proposal approval (VIGIL + GUARDIAN)</span>
+            <span class="blocker-task mono">on B6 · proposal_review</span>
         </li>
         <li>
           <span class="blocker-agent">🪽 Hermes</span>
@@ -2214,31 +2214,31 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">32m ago</div>
+        <div class="agent-meta mono muted">45m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">⚒️</span>
           <span class="agent-name">ANVIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Implementation Lead</div>
         <div class="agent-meta mono">
-            task: B5
- · canary        </div>
-        <div class="agent-meta mono muted">1h 19m ago</div>
+            task: B6
+ · proposal_review        </div>
+        <div class="agent-meta mono muted">1m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🔍</span>
           <span class="agent-name">VIGIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Code Review + Scoring</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 40m ago</div>
+        <div class="agent-meta mono muted">11m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2250,7 +2250,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">20m ago</div>
+        <div class="agent-meta mono muted">10m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2274,7 +2274,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">32m ago</div>
+        <div class="agent-meta mono muted">45m ago</div>
       </div>
     </div>
   </div>
@@ -2291,6 +2291,13 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 08:41 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 08:40 CEST (2026-04-20)</div>
+            <ul class="narrative-actions">
+<li>Detected B6-VIGIL-PHASE0-REVIEW.md + B6-GUARDIAN-PHASE0-REVIEW.md both APPROVE (Round 1, no revisions)</li><li>Wrote consolidated /home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker with both reviewers' SHOULD-BAKE-IN constraints distilled (GUARDIAN: boundary/pure-function; VIGIL: T-14 must hit real _route_text_extract call sites)</li><li>A2A'd ANVIL via nohup Python wrapper (task_runs 8142e84c = running @ 08:40) unblocking "waiting_for_proposal_approval"; message respects ANVIL's self-gate that B6 Phase 1 code waits for B5 canary PASS (canary still PENDING CLEAN, 3/10 post-reset events, single-instance baseline from 07:05)</li><li>Skipped orthogonal prep dispatches — Wave 2 OinkV audit already complete (WAVE2-V2-READY marker present), no non-dispatched preconditions found</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> next cycle verifies ANVIL HEARTBEAT flipped off "waiting_for_proposal_approval" (expected phase: implementation OR proposal_review-with-waiting-for-B5-canary note), watches B5 canary progression toward 10/10 post-reset, and watches signal-gateway repo for anvil/B6-parser-extraction branch.</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 08:27 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 08:27 CEST</div>
@@ -2565,13 +2572,6 @@ future      </span>
             <div class="narrative-next"><span class="pill pill-info">next</span> On next cycle, if A10 merged → dispatch GUARDIAN canary + A2A ANVIL to start B1 Phase 0.</div>
             <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> A10 DB merge needs "ship it" — 912 rows import, 494→1406 signals, backup SHA256 verified, rollback one-liner ready. PR #135. See /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker. Also: FORGE Phase B/Heavy Hybrid plans ready for your approval (6 design Qs Q-HH-1..6 in HEAVY-HYBRID-ROADMAP). ```</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 19:30 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 19:23 CEST</div>
-            <ul class="narrative-actions">
-<li>Verified Mike active 19:17–19:21 driving directly (issue #136 + FORGE HEAVY HYBRID)</li><li>Confirmed Phase A pipeline steady, no agent stuck</li><li>Checked no zombie tasks (1 pre-existing from 2026-04-17 unchanged)</li><li>Declined to launch Phase B OinkV audit (FORGE HEAVY HYBRID pivot makes it likely stale)</li><li>Declined to execute A10 ship-it autonomously (council still open, marker says "Mike SHIP IT")</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> monitor #136 for OinkV verdict + FORGE HEAVY HYBRID output. If both land + Mike says proceed → ship-it sequence per A10-READY-FOR-MIKE.marker. Else idle.</div>
-        </li>
       </ol>
     </div>
 
@@ -2814,12 +2814,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">f4991e221184</span>    </div>
+checkpoint@<span class="mono">a645d04b9dcd</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 08:27 CEST
+        Last orchestrator cycle: Apr 20, 08:41 CEST
     </div>
     <div>
-      generated Apr 20, 08:27 CEST
+      generated Apr 20, 08:41 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
