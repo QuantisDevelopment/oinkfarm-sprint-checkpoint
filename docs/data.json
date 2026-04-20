@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T00:55:58+00:00",
-  "generated_at_cest": "2026-04-20T02:55:58+02:00",
+  "generated_at_utc": "2026-04-20T01:24:28+00:00",
+  "generated_at_cest": "2026-04-20T03:24:28+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "31m ago",
+      "last_active_human": "59m ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,15 +3112,17 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T00:54:22+00:00",
+      "last_active": "2026-04-20T01:22:30+00:00",
       "last_active_human": "1m ago",
       "light": "green",
       "heartbeat": {
         "current_task": "B2",
-        "current_phase": "proposal",
+        "current_phase": "review_pending",
         "blockers": [
-          "waiting_for_proposal_approval"
-        ]
+          "waiting_for_vigil_review",
+          "waiting_for_guardian_review"
+        ],
+        "branch": "anvil/B2-pg-schema-migration"
       }
     },
     {
@@ -3129,8 +3131,8 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-20T00:35:05+00:00",
-      "last_active_human": "20m ago",
+      "last_active": "2026-04-20T01:12:09+00:00",
+      "last_active_human": "12m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3140,8 +3142,8 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T00:45:54+00:00",
-      "last_active_human": "10m ago",
+      "last_active": "2026-04-20T01:16:49+00:00",
+      "last_active_human": "7m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3151,7 +3153,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T00:55:57+00:00",
+      "last_active": "2026-04-20T01:24:27+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3163,12 +3165,26 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "31m ago",
+      "last_active_human": "59m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T01:24:27+00:00",
+      "time_local": "2026-04-20T03:24+02:00",
+      "header": "SPRINT STATUS @ 03:24 CEST",
+      "actions": [
+        "Hermes parallel review of B2 Phase 1 → ✅ LGTM (recovered from max_iterations via direct write_file per skill)",
+        "Opened 3 PRs (oinkfarm#153, oink-sync#11, signal-gateway#24), all CLEAN+MERGEABLE",
+        "Merged all 3 PRs (VIGIL 9.60 + GUARDIAN 9.60 + Hermes LGTM, 🔴 CRITICAL threshold ≥9.50 both cleared)",
+        "Wrote B2-MERGED.marker; dispatched GUARDIAN canary (passive — engine-gating verification, no PG traffic) + A2A ANVIL for B3 Phase 0 kickoff"
+      ],
+      "next": "Monitor B3 Phase 0 proposal draft (ANVIL) + B2 canary initial verification file (GUARDIAN). Standard Phase 0 review dispatch if proposal ready within expected window.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_03-24-27.md"
+    },
     {
       "time_utc": "2026-04-20T00:55:57+00:00",
       "time_local": "2026-04-20T02:55+02:00",
@@ -3673,20 +3689,6 @@
       "next": "Poll for A6 PR open on bandtincorporated8/signal-gateway; when PR lands, triple-dispatch VIGIL Phase 1 + GUARDIAN Phase 1 + Hermes parallel review. If Wave 3 remains on Mike's plate >2 more cycles with no ANVIL idle time, dispatch OinkV/Hermes audit for A8/A9/A11 plans.",
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_14-58-04.md"
-    },
-    {
-      "time_utc": "2026-04-19T12:43:14+00:00",
-      "time_local": "2026-04-19T14:43+02:00",
-      "header": "SPRINT STATUS @ 14:43 CEST (12:43 UTC)",
-      "actions": [
-        "A6 Phase 0 verdicts: VIGIL ✅ APPROVE, GUARDIAN ❌ REQUEST CHANGES (2 blockers: ambiguous signal lookup, non-idempotent note append)",
-        "A2A'd ANVIL with GUARDIAN's critique + VIGIL Phase 1 notes; instructed to include `entry` in lookup, add note idempotency guard, bump marker to round 2 (task 151b2d79 running)",
-        "Confirmed A5 canary in flight (GUARDIAN initial verification 14:05), A7 canary advancing (1/10 validated), A4 canary monitoring (0/10 organic yet)",
-        "FORGE Wave 3 plans (A6/A8/A9/A10/A11) already READY; no FORGE action needed this tick"
-      ],
-      "next": "Poll for revised A6 proposal + GUARDIAN R2 review; once GUARDIAN APPROVE → unblock ANVIL for Phase 1 on signal-gateway repo. Continue watching A5/A7 canary progression.",
-      "blocker": "None immediate. (Heads-up only: A10 DB-merge plan sits in Wave 3 READY_FOR_MIKE queue with an explicit deploy-gate — not blocking until A6/A8/A9 clear.) ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_14-43-14.md"
     }
   ],
   "plans": [
@@ -3893,28 +3895,37 @@
     {
       "agent": "ANVIL",
       "agent_emoji": "⚒️",
-      "raw": "waiting_for_proposal_approval",
-      "label": "Proposal approval (VIGIL + GUARDIAN)",
+      "raw": "waiting_for_vigil_review",
+      "label": "VIGIL review",
       "severity": "auto",
       "current_task": "B2",
-      "current_phase": "proposal"
+      "current_phase": "review_pending"
+    },
+    {
+      "agent": "ANVIL",
+      "agent_emoji": "⚒️",
+      "raw": "waiting_for_guardian_review",
+      "label": "GUARDIAN review",
+      "severity": "auto",
+      "current_task": "B2",
+      "current_phase": "review_pending"
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T00:55:57+00:00",
-    "time_local": "2026-04-20T02:55+02:00",
-    "header": "SPRINT STATUS @ 02:55 CEST",
+    "time_utc": "2026-04-20T01:24:27+00:00",
+    "time_local": "2026-04-20T03:24+02:00",
+    "header": "SPRINT STATUS @ 03:24 CEST",
     "actions": [
-      "Detected VIGIL APPROVE (R1) + GUARDIAN APPROVE (R2 @ 02:45) both landed on B2 Phase 0; no APPROVED marker yet",
-      "Wrote /home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker (consolidated verdicts + carry-forwards + Mike decision gates)",
-      "Dispatched ANVIL to Phase 1 implementation via Python wrapper + nohup (task_runs id 5ccee805 running); branch `anvil/B2-pg-schema-migration`, threshold 9.5 🔴 CRITICAL",
-      "Carry-forwards inlined in A2A: GUARDIAN's 4 code-verify items (snapshot WAL handling, SQLite default byte-identical, verification-vs-snapshot, sequence reset tests) + VIGIL's 5 notes + Mike-decision Q-B2-4/Q-B2-5 defaults"
+      "Hermes parallel review of B2 Phase 1 → ✅ LGTM (recovered from max_iterations via direct write_file per skill)",
+      "Opened 3 PRs (oinkfarm#153, oink-sync#11, signal-gateway#24), all CLEAN+MERGEABLE",
+      "Merged all 3 PRs (VIGIL 9.60 + GUARDIAN 9.60 + Hermes LGTM, 🔴 CRITICAL threshold ≥9.50 both cleared)",
+      "Wrote B2-MERGED.marker; dispatched GUARDIAN canary (passive — engine-gating verification, no PG traffic) + A2A ANVIL for B3 Phase 0 kickoff"
     ],
-    "next": "next cycle checks ANVIL HEARTBEAT mid-implementation liveness (lane logs, not nudge); on PR open → fire VIGIL + GUARDIAN + Hermes-parallel review in the same tick.",
+    "next": "Monitor B3 Phase 0 proposal draft (ANVIL) + B2 canary initial verification file (GUARDIAN). Standard Phase 0 review dispatch if proposal ready within expected window.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_02-55-57.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_03-24-27.md"
   },
-  "commit": "47e4bbf99258",
+  "commit": "fd76c6c4b287",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",

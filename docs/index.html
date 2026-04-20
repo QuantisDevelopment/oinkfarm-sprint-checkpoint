@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T00:55:58+00:00">
+<body data-generated="2026-04-20T01:24:28+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T00:55:58+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T01:24:28+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T02:55:58+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T03:24:28+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 02:55 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 03:24 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -248,13 +248,18 @@ future      </span>
       <div class="blockers-head">
         <span class="warn-icon">!</span>
         <h2>Active blockers</h2>
-        <span class="blocker-count">1</span>
+        <span class="blocker-count">2</span>
       </div>
       <ul class="blocker-list">
         <li>
           <span class="blocker-agent">⚒️ ANVIL</span>
-          <span class="blocker-label">Proposal approval (VIGIL + GUARDIAN)</span>
-            <span class="blocker-task mono">on B2 · proposal</span>
+          <span class="blocker-label">VIGIL review</span>
+            <span class="blocker-task mono">on B2 · review_pending</span>
+        </li>
+        <li>
+          <span class="blocker-agent">⚒️ ANVIL</span>
+          <span class="blocker-label">GUARDIAN review</span>
+            <span class="blocker-task mono">on B2 · review_pending</span>
         </li>
       </ul>
     </div>
@@ -2210,7 +2215,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">31m ago</div>
+        <div class="agent-meta mono muted">59m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2221,8 +2226,9 @@ future      </span>
         <div class="agent-meta muted">Implementation Lead</div>
         <div class="agent-meta mono">
             task: B2
- · proposal        </div>
+ · review_pending        </div>
         <div class="agent-meta mono muted">1m ago</div>
+          <div class="agent-meta mono muted">branch: anvil/B2-pg-schema-migration</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2234,7 +2240,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">20m ago</div>
+        <div class="agent-meta mono muted">12m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2246,7 +2252,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">10m ago</div>
+        <div class="agent-meta mono muted">7m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2270,7 +2276,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">31m ago</div>
+        <div class="agent-meta mono muted">59m ago</div>
       </div>
     </div>
   </div>
@@ -2287,6 +2293,13 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 03:24 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 03:24 CEST</div>
+            <ul class="narrative-actions">
+<li>Hermes parallel review of B2 Phase 1 → ✅ LGTM (recovered from max_iterations via direct write_file per skill)</li><li>Opened 3 PRs (oinkfarm#153, oink-sync#11, signal-gateway#24), all CLEAN+MERGEABLE</li><li>Merged all 3 PRs (VIGIL 9.60 + GUARDIAN 9.60 + Hermes LGTM, 🔴 CRITICAL threshold ≥9.50 both cleared)</li><li>Wrote B2-MERGED.marker; dispatched GUARDIAN canary (passive — engine-gating verification, no PG traffic) + A2A ANVIL for B3 Phase 0 kickoff</li>            </ul>
+            <div class="narrative-next"><span class="pill pill-info">next</span> Monitor B3 Phase 0 proposal draft (ANVIL) + B2 canary initial verification file (GUARDIAN). Standard Phase 0 review dispatch if proposal ready within expected window.</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 02:55 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 02:55 CEST</div>
@@ -2564,14 +2577,6 @@ future      </span>
 <li>Detected A6 R1 revision earned both APPROVEs (VIGIL ✅ carried from R0, GUARDIAN ✅ R1 resolved both R0 blockers)</li><li>Wrote consolidated /home/oinkv/anvil-workspace/proposals/A6-PHASE0-APPROVED.marker (3.2KB) inlining both reviewers' Phase 1 checklists (7 VIGIL items + 4 GUARDIAN items)</li><li>Fire-and-forget A2A to ANVIL (task c0339e93 running) — unblock HEARTBEAT.md, cut anvil/A6-ghost-closure-flag in signal-gateway repo, implement per both checklists, A2A reviewers when PR opens</li><li>Verified A5 canary GUARDIAN-self-started at 14:05Z per journalctl (initial verification posted, awaiting organic signals — no re-dispatch needed)</li><li>No Wave 3 audit dispatch needed this cycle — A6 is Phase 1, A8/A9/A11 wait on Mike (their audits are a separate orthogonal step; can dispatch next cycle if still idle)</li>            </ul>
             <div class="narrative-next"><span class="pill pill-info">next</span> Poll for A6 PR open on bandtincorporated8/signal-gateway; when PR lands, triple-dispatch VIGIL Phase 1 + GUARDIAN Phase 1 + Hermes parallel review. If Wave 3 remains on Mike's plate >2 more cycles with no ANVIL idle time, dispatch OinkV/Hermes audit for A8/A9/A11 plans.</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 14:43 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 14:43 CEST (12:43 UTC)</div>
-            <ul class="narrative-actions">
-<li>A6 Phase 0 verdicts: VIGIL ✅ APPROVE, GUARDIAN ❌ REQUEST CHANGES (2 blockers: ambiguous signal lookup, non-idempotent note append)</li><li>A2A'd ANVIL with GUARDIAN's critique + VIGIL Phase 1 notes; instructed to include `entry` in lookup, add note idempotency guard, bump marker to round 2 (task 151b2d79 running)</li><li>Confirmed A5 canary in flight (GUARDIAN initial verification 14:05), A7 canary advancing (1/10 validated), A4 canary monitoring (0/10 organic yet)</li><li>FORGE Wave 3 plans (A6/A8/A9/A10/A11) already READY; no FORGE action needed this tick</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> Poll for revised A6 proposal + GUARDIAN R2 review; once GUARDIAN APPROVE → unblock ANVIL for Phase 1 on signal-gateway repo. Continue watching A5/A7 canary progression.</div>
-            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> None immediate. (Heads-up only: A10 DB-merge plan sits in Wave 3 READY_FOR_MIKE queue with an explicit deploy-gate — not blocking until A6/A8/A9 clear.) ```</div>
-        </li>
       </ol>
     </div>
 
@@ -2760,12 +2765,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">47e4bbf99258</span>    </div>
+checkpoint@<span class="mono">fd76c6c4b287</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 02:55 CEST
+        Last orchestrator cycle: Apr 20, 03:24 CEST
     </div>
     <div>
-      generated Apr 20, 02:55 CEST
+      generated Apr 20, 03:24 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
