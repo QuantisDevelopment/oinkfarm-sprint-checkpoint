@@ -1,6 +1,6 @@
 # raw-artifacts/forge/plans/
 
-FORGE technical plans, A-group summaries, OinkV audits. 42 file(s) copied from `/home/oinkv/forge-workspace/plans`.
+FORGE technical plans, A-group summaries, OinkV audits. 46 file(s) copied from `/home/oinkv/forge-workspace/plans`.
 
 | File | Size | Last modified |
 |---|---|---|
@@ -14,8 +14,12 @@ FORGE technical plans, A-group summaries, OinkV audits. 42 file(s) copied from `
 | [OINKV-AUDIT-PHASE-B-B2.md](OINKV-AUDIT-PHASE-B-B2.md) | 25.0 KB | 22:08 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-B3-v2.md](OINKV-AUDIT-PHASE-B-B3-v2.md) | 19.3 KB | 02:22 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-B3.md](OINKV-AUDIT-PHASE-B-B3.md) | 17.8 KB | 22:14 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-B4.md](OINKV-AUDIT-PHASE-B-B4.md) | 20.2 KB | 05:08 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-B5.md](OINKV-AUDIT-PHASE-B-B5.md) | 24.2 KB | 05:04 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-COMPLETE.marker](OINKV-AUDIT-PHASE-B-COMPLETE.marker) | 2.0 KB | 22:15 CEST on 19 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-HERMES-FALLBACK-DISPATCHED.marker](OINKV-AUDIT-PHASE-B-HERMES-FALLBACK-DISPATCHED.marker) | 3.0 KB | 22:01 CEST on 19 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-WAVE1-B4-B5-COMPLETE.marker](OINKV-AUDIT-PHASE-B-WAVE1-B4-B5-COMPLETE.marker) | 1.5 KB | 05:09 CEST on 20 Apr 2026 |
+| [OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md](OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md) | 6.4 KB | 05:09 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker](OINKV-AUDIT-PHASE-B-v2-COMPLETE.marker) | 1.0 KB | 02:24 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B-v2.md](OINKV-AUDIT-PHASE-B-v2.md) | 7.5 KB | 02:24 CEST on 20 Apr 2026 |
 | [OINKV-AUDIT-PHASE-B.md](OINKV-AUDIT-PHASE-B.md) | 8.3 KB | 22:15 CEST on 19 Apr 2026 |

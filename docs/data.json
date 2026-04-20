@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T02:40:17+00:00",
-  "generated_at_cest": "2026-04-20T04:40:17+02:00",
+  "generated_at_utc": "2026-04-20T03:12:29+00:00",
+  "generated_at_cest": "2026-04-20T05:12:29+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,9 +3099,9 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "2h 15m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T03:09:52+00:00",
+      "last_active_human": "2m ago",
+      "light": "green",
       "heartbeat": {
         "current_phase": "B"
       }
@@ -3113,8 +3113,8 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-20T02:26:34+00:00",
-      "last_active_human": "13m ago",
-      "light": "green",
+      "last_active_human": "45m ago",
+      "light": "yellow",
       "heartbeat": {
         "current_task": "B3",
         "current_phase": "review_pending",
@@ -3131,8 +3131,8 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T02:15:38+00:00",
-      "last_active_human": "24m ago",
-      "light": "green",
+      "last_active_human": "56m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3142,8 +3142,8 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-20T02:33:08+00:00",
-      "last_active_human": "7m ago",
-      "light": "green",
+      "last_active_human": "39m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3152,7 +3152,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T02:40:16+00:00",
+      "last_active": "2026-04-20T03:12:28+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3163,13 +3163,28 @@
       "emoji": "🐷",
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
-      "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "2h 15m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T03:09:52+00:00",
+      "last_active_human": "2m ago",
+      "light": "green",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T03:12:28+00:00",
+      "time_local": "2026-04-20T05:12+02:00",
+      "header": "SPRINT STATUS @ 05:12",
+      "actions": [
+        "Detected B3 shipped + B4/B5 v1 plans unaudited (Wave 1 tail, approval-independent prep per skill)",
+        "Dispatched 2 parallel Hermes-fallback subagents (OinkV main lane LLM-timed-out 04:38 CEST, 306s FailoverError)",
+        "B4 audit 🔴 REWRITE-REQUIRED (3 SS: nonexistent micro-gate unit, DISABLED signal-gateway.service, phantom `--full` flag; + 2 CRITICAL: missing OINK_PG_URL, host not provisioned)",
+        "B5 audit 🟡 MINOR-REVISION (phantom `_forward_raw_to_signals`, narrow 3-method emitter API covers only 11/37 live dispatch sites)",
+        "A2A FORGE with inlined findings + 8 B4 fixes + 5 B5 fixes (dispatch `running` in task_runs 05:11)"
+      ],
+      "next": "Next cycle monitors for B4/B5 v2 plan files + `OINKV-AUDIT-PHASE-B-WAVE1-V2-READY.marker`; B3 canary T+1h checkpoint at 05:25 (GUARDIAN self-progresses on organic traffic).",
+      "blocker": "B4 cutover must NOT be scheduled until prereq chain lands — resolve Q-B2-4/Q-B2-5 (B2 migration execution), activate OINK_DB_DUAL_WRITE, accumulate 7+ CLEAN reconcile reports, provision PostgreSQL + psycopg on host, sync `.openclaw/workspace` fork or re-point oinkdb-api. ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_05-12-28.md"
+    },
     {
       "time_utc": "2026-04-20T02:40:16+00:00",
       "time_local": "2026-04-20T04:40+02:00",
@@ -3663,20 +3678,6 @@
       "next": "verify ANVIL deploys A11 + writes A8-PHASE0-PROPOSAL.md + A8-READY-FOR-REVIEW.marker; then VIGIL+GUARDIAN Phase 0 review dispatch will be ANVIL-initiated per skill pattern.",
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_16-53-46.md"
-    },
-    {
-      "time_utc": "2026-04-19T14:37:49+00:00",
-      "time_local": "2026-04-19T16:37+02:00",
-      "header": "SPRINT STATUS @ 16:37",
-      "actions": [
-        "Wrote A11-PHASE0-APPROVED.marker consolidating VIGIL approve + LIGHTWEIGHT GUARDIAN-skip rationale + 3 Phase-1 verification notes",
-        "A2A'd ANVIL (nohup + Python wrapper) to cut anvil/A11-leverage-source-tracking from origin/master, implement schema+backfill+INSERT+5 tests, deploy via cp+restart (VIGIL-only Phase 1, LIGHTWEIGHT tier)",
-        "Verified dispatch landed (task_runs 763a5a1b running on agent:anvil:main)",
-        "Confirmed A9 canary is healthy passive-wait (GUARDIAN updated at 16:29: no SL_DEVIATION, no mixed-denom, awaiting organic 1000*USDT)"
-      ],
-      "next": "Next cycle — check for anvil/A11 branch push, PR #N on oinkfarm, and A11-VIGIL-PHASE1-REVIEW.md. Merge when VIGIL ≥9.0 + Hermes LGTM (GUARDIAN skipped for LIGHTWEIGHT).",
-      "blocker": null,
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_16-37-49.md"
     }
   ],
   "plans": [
@@ -3795,6 +3796,27 @@
       "mtime": "2026-04-19T20:14:24+00:00"
     },
     {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B4.md",
+      "name": "OINKV-AUDIT-PHASE-B-B4.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B4 (Hermes fallback)",
+      "size_bytes": 20645,
+      "mtime": "2026-04-20T03:08:25+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B5.md",
+      "name": "OINKV-AUDIT-PHASE-B-B5.md",
+      "title": "OinkV Engineering Audit — FORGE Plan B5 (Hermes fallback)",
+      "size_bytes": 24742,
+      "mtime": "2026-04-20T03:04:38+00:00"
+    },
+    {
+      "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md",
+      "name": "OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md",
+      "title": "OinkV Audit — Phase B Wave 1 B4/B5 (Hermes fallback batch)",
+      "size_bytes": 6542,
+      "mtime": "2026-04-20T03:09:38+00:00"
+    },
+    {
       "path": "/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-v2.md",
       "name": "OINKV-AUDIT-PHASE-B-v2.md",
       "title": "OinkV Audit — Phase B Wave 1 v2 (Hermes fallback)",
@@ -3892,27 +3914,29 @@
     {
       "agent": "Hermes",
       "agent_emoji": "🪽",
-      "raw": "none new — pre-existing B4-APPROVE flag is the only gate. No action required from you right now; sprint is steady-state on canary dwell. ```",
-      "label": "none new — pre-existing B4-APPROVE flag is the only gate.",
+      "raw": "B4 cutover must NOT be scheduled until prereq chain lands — resolve Q-B2-4/Q-B2-5 (B2 migration execution), activate OINK_DB_DUAL_WRITE, accumulate 7+ CLEAN reconcile reports, provision PostgreSQL + psycopg on host, sync `.openclaw/workspace` fork or re-point oinkdb-api. ```",
+      "label": "B4 cutover must NOT be scheduled until prereq chain lands — resolve Q-B2-4/Q-B2-5 (B2 migration execution), activate OINK_DB_DUAL_WRITE, accumulate 7+ CLEAN reconcile reports, p…",
       "severity": "mike",
       "current_task": null,
       "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T02:40:16+00:00",
-    "time_local": "2026-04-20T04:40+02:00",
-    "header": "SPRINT STATUS @ 04:37 CEST (02:37 UTC) / Mon Apr 20",
+    "time_utc": "2026-04-20T03:12:28+00:00",
+    "time_local": "2026-04-20T05:12+02:00",
+    "header": "SPRINT STATUS @ 05:12",
     "actions": [
-      "Scanned all Phase-0 markers, review files, canary reports — no review backlog, no stale READY markers (all merged).",
-      "Verified no agent is blocked, no PR waiting >30min for review, no canary regressions.",
-      "Confirmed next task (B4 = PostgreSQL cutover, task 1.7) is correctly gated: requires (a) Mike's explicit go-ahead — already on FORGE flag list as \"B4-APPROVE 🔴\" — and (b) 7+ days of B3 parallel-write dwell. B3 is 15min old; cannot advance."
+      "Detected B3 shipped + B4/B5 v1 plans unaudited (Wave 1 tail, approval-independent prep per skill)",
+      "Dispatched 2 parallel Hermes-fallback subagents (OinkV main lane LLM-timed-out 04:38 CEST, 306s FailoverError)",
+      "B4 audit 🔴 REWRITE-REQUIRED (3 SS: nonexistent micro-gate unit, DISABLED signal-gateway.service, phantom `--full` flag; + 2 CRITICAL: missing OINK_PG_URL, host not provisioned)",
+      "B5 audit 🟡 MINOR-REVISION (phantom `_forward_raw_to_signals`, narrow 3-method emitter API covers only 11/37 live dispatch sites)",
+      "A2A FORGE with inlined findings + 8 B4 fixes + 5 B5 fixes (dispatch `running` in task_runs 05:11)"
     ],
-    "next": "next cron cycle confirms B3 canary T+1h checkpoint (due 03:25 UTC / 05:25 CEST) and B2 canary T+24h (03:22 UTC / 05:22 CEST tomorrow); no agent A2A needed until a canary verdict or Mike signs off B4.",
-    "blocker": "none new — pre-existing B4-APPROVE flag is the only gate. No action required from you right now; sprint is steady-state on canary dwell. ```",
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_04-40-16.md"
+    "next": "Next cycle monitors for B4/B5 v2 plan files + `OINKV-AUDIT-PHASE-B-WAVE1-V2-READY.marker`; B3 canary T+1h checkpoint at 05:25 (GUARDIAN self-progresses on organic traffic).",
+    "blocker": "B4 cutover must NOT be scheduled until prereq chain lands — resolve Q-B2-4/Q-B2-5 (B2 migration execution), activate OINK_DB_DUAL_WRITE, accumulate 7+ CLEAN reconcile reports, provision PostgreSQL + psycopg on host, sync `.openclaw/workspace` fork or re-point oinkdb-api. ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_05-12-28.md"
   },
-  "commit": "0d0df6587778",
+  "commit": "3f3eeb1b448c",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",

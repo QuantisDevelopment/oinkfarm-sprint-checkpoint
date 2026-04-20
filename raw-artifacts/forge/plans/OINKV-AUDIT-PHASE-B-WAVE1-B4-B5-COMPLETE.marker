@@ -1,0 +1,29 @@
+# OinkV Audit — Phase B Wave 1 B4/B5 COMPLETE (Hermes Fallback)
+
+Completed: 2026-04-20 05:10 CEST (03:10 UTC)
+Auditor: Hermes subagents (2 parallel delegate_task batch)
+Fallback reason: OinkV main lane LLM-timing-out at 04:38 CEST (FailoverError, 306s)
+
+## Headline verdicts
+- TASK-B4-plan.md — 🔴 **REWRITE-REQUIRED** (3 SHOWSTOPPER / 2 CRITICAL / 1 MAJOR / 2 minor)
+- TASK-B5-plan.md — 🟡 **MINOR-REVISION** (0 SS / 2 CRITICAL / 3 MAJOR / 5 minor / 7 OK)
+
+## Artifacts
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B4.md` (20.6 KB)
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-B5.md` (24.7 KB)
+- `/home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-WAVE1-B4-B5.md` (consolidated summary)
+
+## Key blockers surfaced
+- **B4 cutover cannot proceed** until prereq chain lands: B2 migration run, dual-write activated,
+  7+ CLEAN reconcile reports accumulated, PostgreSQL server + psycopg installed, `.openclaw/workspace`
+  fork synced or oinkdb-api re-pointed at canonical.
+- B4's §4a service-restart commands would fail at runtime today (SS1/SS2/SS3 unit/flag issues).
+- B5 has 1 phantom function name + narrow emitter API — both are v2 hygiene, not architectural.
+
+## Provenance
+Iteration-cap recovery applied to B4 subagent (exited max_iterations=50 after full evidence
+gathering; orchestrator recovered complete audit from summary per documented recovery pattern).
+B5 subagent completed in 41 calls within budget.
+
+## Next
+A2A FORGE + Mike notify. B4 cutover NOT scheduled. B5 can queue for Phase 0 after v2 revision.
