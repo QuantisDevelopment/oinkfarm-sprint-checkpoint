@@ -37,6 +37,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
+| Apr 20, 17:52 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 20, 15:15 CEST | `SPRINT_NOTE` | `B3` | hermes | B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until  |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `B3` | forge | B3 plan published |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `B4` | forge | B4 plan published |
@@ -65,20 +67,18 @@
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B3` | forge | B3 Mike gate: Minimum verification period: 7 or 14 days? |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: signal-gateway.service systemd re-enable or keep manual? |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B12` | forge | B12 Mike gate: Redis hosting: same server or separate? |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B12` | forge | B12 Mike gate: Redis Streams retention policy: MAXLEN or time-based? |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 5.6h | APPROVE · DEFER |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 5.6h | backfill · accept · block |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 5.6h | pg_trigger · check_only |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 5.6h | maxlen · time_based |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 4.2h | defer to B14 · introduce in B2 |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 4.2h | single-host only · include multi-host preparation |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 4.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 6.0h | APPROVE · DEFER |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 6.0h | backfill · accept · block |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 6.0h | pg_trigger · check_only |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 6.0h | maxlen · time_based |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 4.6h | defer to B14 · introduce in B2 |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 4.6h | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 4.6h | phased app-level then DB REVOKE · immediate DB-level REVOKE |
 
 ---
 
