@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 290
-- **Last 24h:** 163 (rate 6.79/h)
+- **Total events:** 291
+- **Last 24h:** 164 (rate 6.83/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
@@ -15,6 +15,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (19 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | hermes | Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FOR |
 | Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
 | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
@@ -29,11 +30,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at  |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B13` | hermes | B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope. |
 
-### Last 4 hours (24 events)
+### Last 4 hours (25 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | hermes | Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FOR |
 | Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
 | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
@@ -48,11 +49,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at  |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B13` | hermes | B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope. |
 
-### Last 24 hours (163 events)
+### Last 24 hours (164 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | hermes | Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FOR |
 | Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
 | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
@@ -67,7 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
 | Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: Approximate MAXLEN retention per-topic. ingestion.raw ~10000, notification.outbound ~5000, lifecycle.event ~10000. Tunable at  |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B13` | hermes | B13 decision: Single-host Docker Compose for B13. No multi-host preparation. Multi-host is Phase D+ scope. |
 
 ## 🧭 Needs Mike
 
@@ -93,7 +93,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 27 |
+| 🪽 **Hermes** | Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 28 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🟢 fresh | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 2 |
@@ -189,4 +189,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*9/27 tasks DONE · Last auto-regenerated: 23:19 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/27 tasks DONE · Last auto-regenerated: 23:29 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

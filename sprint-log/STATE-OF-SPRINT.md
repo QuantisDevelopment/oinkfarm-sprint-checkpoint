@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-20 20:21 UTC · Read time: ~8 min*
+*Last updated: 2026-04-20 21:24 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,9 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Still quiet. The OinXtractor Task 171 design blocker OinkV raised at 17:58 UTC is now ~2h20m old and unresolved — OpenClaw won't accept the per-agent `contextPruning` key FORGE's execution sequence called for, and neither FORGE nor Hermes-ops has picked it up yet. Gateway health is green, so this is a design question rather than an outage. Only movement since the 18:12 UTC update has been the OinXtractor quality dashboard re-publishing its live metrics on schedule (latency and unknown-rate green, per-trader accuracy still `proxy_only`, corrections-loop `pending` until 171 ships).
+Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FORGE's next wave of plans. The substantive calls: TimescaleDB deferred from B2 to B14 (don't bolt it on during the PG cutover — do it later as a non-destructive add); Redis streams get approximate MAXLEN retention per topic (~10k ingestion.raw, ~5k notification.outbound, tunable at runtime); B13 (container packaging) ships as single-host Docker Compose with multi-host punted to Phase D+; W1 immutability on `signal_events` uses database-level REVOKE day one, while the `signals` table starts with app-level guards and flips to DB REVOKE after 30 clean days; and C2 (confidence routing) lands on a soft PROVISIONAL-state flag rather than hard-rejecting low-confidence signals — zero data loss, threshold is a tuning parameter. B2 also picked up two smaller calls: CHECK-only constraint on `entry_price > 0` (no trigger), and the 84 historical NULL-filled_at signals stay as-is, no backfill. B4 (PG cutover) got reclassified as a scheduled gate rather than a live blocker — it'll re-surface as a fresh DECISION_NEEDED when B3 hits its 7-clean-day mark, earliest 26 Apr.
 
-Phase B stays in the review-and-verify lull — zero merges, PRs, or canary verdicts in the last four-plus hours. Agent freshness: ANVIL silent ~9.5h, VIGIL ~12.7h (Wave 2 closing verdicts were the last thing either posted), GUARDIAN ~4.3h (the 171 KPI baseline), FORGE ~4.4h (the 171 plan revision). The open warnings on the dashboard are housekeeping only — stale PR-review timeouts on A1/A2/B1/B13/B14 that trace back to the event-log backfill, not live open PRs. B3's 7-day reconciliation clock toward the 26 Apr B4 cutover is still ticking clean. Nothing needs you tonight; the 171 design question is the one item worth picking up tomorrow, and FORGE or Hermes-ops should be able to clear it without parking it on you.
+FORGE turned those decisions into code-plans the same hour, publishing plans for B4 (PG cutover), B9 (W1 enforcement), B12 (Redis hosting), B13 (Docker Compose packaging), and C2 (confidence routing) all at 23:18 CEST. The long-open A171 OinXtractor design blocker — the OpenClaw `contextPruning` config-key rejection — is resolved. ANVIL also posted a late sprint-note confirming Postgres 17.9 is installed, psycopg 3.3.3 pinned, and the B2 migration dry-run came back clean on the test DB with server/trader/signal row counts all matching.
+
+What still isn't moving: zero merges, zero canary verdicts, zero reviews this window. VIGIL has been quiet ~14h, and eight Phase A/B PRs are now past their 24h review target — A2 (#5), A4 (#7), A5 (#131), A6 (#20), A7 (#130), A9 (#8 and #132), and A11 (#133). Nothing urgent for tonight; the real question is whether VIGIL and GUARDIAN pick up that backlog tomorrow before ANVIL starts shipping code off the new B4/B9/B12/B13/C2 plans.
 
 ## Where We Are Today (one paragraph)
 
