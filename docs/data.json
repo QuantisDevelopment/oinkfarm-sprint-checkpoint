@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T01:24:28+00:00",
-  "generated_at_cest": "2026-04-20T03:24:28+02:00",
+  "generated_at_utc": "2026-04-20T01:47:43+00:00",
+  "generated_at_cest": "2026-04-20T03:47:43+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "59m ago",
+      "last_active_human": "1h 22m ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,17 +3112,15 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T01:22:30+00:00",
-      "last_active_human": "1m ago",
+      "last_active": "2026-04-20T01:37:03+00:00",
+      "last_active_human": "10m ago",
       "light": "green",
       "heartbeat": {
-        "current_task": "B2",
-        "current_phase": "review_pending",
+        "current_task": "B3",
+        "current_phase": "proposal",
         "blockers": [
-          "waiting_for_vigil_review",
-          "waiting_for_guardian_review"
-        ],
-        "branch": "anvil/B2-pg-schema-migration"
+          "waiting_for_proposal_approval"
+        ]
       }
     },
     {
@@ -3131,8 +3129,8 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-20T01:12:09+00:00",
-      "last_active_human": "12m ago",
+      "last_active": "2026-04-20T01:33:05+00:00",
+      "last_active_human": "14m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3142,8 +3140,8 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T01:16:49+00:00",
-      "last_active_human": "7m ago",
+      "last_active": "2026-04-20T01:34:52+00:00",
+      "last_active_human": "12m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3153,7 +3151,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T01:24:27+00:00",
+      "last_active": "2026-04-20T01:47:42+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3165,12 +3163,21 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "59m ago",
+      "last_active_human": "1h 22m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T01:47:42+00:00",
+      "time_local": "2026-04-20T03:47+02:00",
+      "header": "SPRINT STATUS @ HH:MM",
+      "actions": [],
+      "next": "[what next cycle will do]",
+      "blocker": "[only if genuine blocker, else omit] ```",
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_03-47-42.md"
+    },
     {
       "time_utc": "2026-04-20T01:24:27+00:00",
       "time_local": "2026-04-20T03:24+02:00",
@@ -3674,21 +3681,6 @@
       "next": "Next cycle checks for A9-VIGIL-PHASE1-REVIEW.md. If PASS, merge oink-sync#8 + oinkfarm#132, nudge ANVIL to start A11 (🟢) then A8 Phase 0 (🟡 STANDARD).",
       "blocker": "A10 (DB merge) still needs your approval — 🔴 CRITICAL, merge algorithm + dedup strategy (new DB wins for 514 overlaps), ~5-min oink-sync downtime window. See /home/oinkv/forge-workspace/plans/TASK-A10-plan.md. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_15-33-28.md"
-    },
-    {
-      "time_utc": "2026-04-19T12:58:04+00:00",
-      "time_local": "2026-04-19T14:58+02:00",
-      "header": "SPRINT STATUS @ 14:57 CEST (12:57 UTC)",
-      "actions": [
-        "Detected A6 R1 revision earned both APPROVEs (VIGIL ✅ carried from R0, GUARDIAN ✅ R1 resolved both R0 blockers)",
-        "Wrote consolidated /home/oinkv/anvil-workspace/proposals/A6-PHASE0-APPROVED.marker (3.2KB) inlining both reviewers' Phase 1 checklists (7 VIGIL items + 4 GUARDIAN items)",
-        "Fire-and-forget A2A to ANVIL (task c0339e93 running) — unblock HEARTBEAT.md, cut anvil/A6-ghost-closure-flag in signal-gateway repo, implement per both checklists, A2A reviewers when PR opens",
-        "Verified A5 canary GUARDIAN-self-started at 14:05Z per journalctl (initial verification posted, awaiting organic signals — no re-dispatch needed)",
-        "No Wave 3 audit dispatch needed this cycle — A6 is Phase 1, A8/A9/A11 wait on Mike (their audits are a separate orthogonal step; can dispatch next cycle if still idle)"
-      ],
-      "next": "Poll for A6 PR open on bandtincorporated8/signal-gateway; when PR lands, triple-dispatch VIGIL Phase 1 + GUARDIAN Phase 1 + Hermes parallel review. If Wave 3 remains on Mike's plate >2 more cycles with no ANVIL idle time, dispatch OinkV/Hermes audit for A8/A9/A11 plans.",
-      "blocker": null,
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_14-58-04.md"
     }
   ],
   "plans": [
@@ -3895,37 +3887,32 @@
     {
       "agent": "ANVIL",
       "agent_emoji": "⚒️",
-      "raw": "waiting_for_vigil_review",
-      "label": "VIGIL review",
+      "raw": "waiting_for_proposal_approval",
+      "label": "Proposal approval (VIGIL + GUARDIAN)",
       "severity": "auto",
-      "current_task": "B2",
-      "current_phase": "review_pending"
+      "current_task": "B3",
+      "current_phase": "proposal"
     },
     {
-      "agent": "ANVIL",
-      "agent_emoji": "⚒️",
-      "raw": "waiting_for_guardian_review",
-      "label": "GUARDIAN review",
-      "severity": "auto",
-      "current_task": "B2",
-      "current_phase": "review_pending"
+      "agent": "Hermes",
+      "agent_emoji": "🪽",
+      "raw": "[only if genuine blocker, else omit] ```",
+      "label": "[only if genuine blocker, else omit]",
+      "severity": "mike",
+      "current_task": null,
+      "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T01:24:27+00:00",
-    "time_local": "2026-04-20T03:24+02:00",
-    "header": "SPRINT STATUS @ 03:24 CEST",
-    "actions": [
-      "Hermes parallel review of B2 Phase 1 → ✅ LGTM (recovered from max_iterations via direct write_file per skill)",
-      "Opened 3 PRs (oinkfarm#153, oink-sync#11, signal-gateway#24), all CLEAN+MERGEABLE",
-      "Merged all 3 PRs (VIGIL 9.60 + GUARDIAN 9.60 + Hermes LGTM, 🔴 CRITICAL threshold ≥9.50 both cleared)",
-      "Wrote B2-MERGED.marker; dispatched GUARDIAN canary (passive — engine-gating verification, no PG traffic) + A2A ANVIL for B3 Phase 0 kickoff"
-    ],
-    "next": "Monitor B3 Phase 0 proposal draft (ANVIL) + B2 canary initial verification file (GUARDIAN). Standard Phase 0 review dispatch if proposal ready within expected window.",
-    "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_03-24-27.md"
+    "time_utc": "2026-04-20T01:47:42+00:00",
+    "time_local": "2026-04-20T03:47+02:00",
+    "header": "SPRINT STATUS @ HH:MM",
+    "actions": [],
+    "next": "[what next cycle will do]",
+    "blocker": "[only if genuine blocker, else omit] ```",
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_03-47-42.md"
   },
-  "commit": "fd76c6c4b287",
+  "commit": "eeeeecd87e3a",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
