@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T04:18:27+00:00",
-  "generated_at_cest": "2026-04-20T06:18:27+02:00",
+  "generated_at_utc": "2026-04-20T04:33:43+00:00",
+  "generated_at_cest": "2026-04-20T06:33:43+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T03:39:06+00:00",
-      "last_active_human": "39m ago",
+      "last_active_human": "54m ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3113,8 +3113,8 @@
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
       "last_active": "2026-04-20T04:01:44+00:00",
-      "last_active_human": "16m ago",
-      "light": "green",
+      "last_active_human": "31m ago",
+      "light": "yellow",
       "heartbeat": {
         "current_task": "B5",
         "current_phase": "proposal_review",
@@ -3131,8 +3131,8 @@
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
       "last_active": "2026-04-20T03:51:14+00:00",
-      "last_active_human": "27m ago",
-      "light": "green",
+      "last_active_human": "42m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3142,8 +3142,8 @@
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
       "last_active": "2026-04-20T03:58:29+00:00",
-      "last_active_human": "19m ago",
-      "light": "green",
+      "last_active_human": "35m ago",
+      "light": "yellow",
       "heartbeat": {}
     },
     {
@@ -3152,7 +3152,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T04:18:26+00:00",
+      "last_active": "2026-04-20T04:33:43+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3164,12 +3164,26 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T03:39:06+00:00",
-      "last_active_human": "39m ago",
+      "last_active_human": "54m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T04:33:43+00:00",
+      "time_local": "2026-04-20T06:33+02:00",
+      "header": "SPRINT STATUS @ 06:33 CEST",
+      "actions": [
+        "Verified ANVIL live via session jsonl (size growing 8.95→8.97MB in 10s, tool calls actively running)",
+        "Confirmed no zombie tasks blocking dispatch, no Mike-directed scope pivot, no canary failures",
+        "Confirmed B5 files landed: emitter.py (347 LOC), test_emitter.py (15 tests), signal_router.py shrunk by 226 LOC",
+        "Checked open PRs — none on B5 (no push yet; ANVIL still in local commit/test phase)"
+      ],
+      "next": "On next cron tick, check for `anvil/B5-emitter-extraction` push + PR open on signal-gateway; if PR exists, dispatch VIGIL+GUARDIAN Phase 1 reviews + parallel Hermes-level `delegate_task` review (🟡 STANDARD, ≥9.0 threshold both). If ANVIL still pre-push, re-verify liveness via session jsonl — do NOT nudge while actively coding per skill rule.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_06-33-43.md"
+    },
     {
       "time_utc": "2026-04-20T04:18:26+00:00",
       "time_local": "2026-04-20T06:18+02:00",
@@ -3657,21 +3671,6 @@
       "next": "Watch PR #135 for ANVIL revision commits; when pushed, fire VIGIL + GUARDIAN Round-2 reviews in parallel.",
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-20-42.md"
-    },
-    {
-      "time_utc": "2026-04-19T16:07:36+00:00",
-      "time_local": "2026-04-19T18:07+02:00",
-      "header": "SPRINT STATUS @ 17:58Z",
-      "actions": [
-        "Dispatched OinkV-fallback staleness audit of A10 plan (Hermes subagent, 503s, 17 tool calls) — verdict REVISE-REQUIRED.",
-        "Found 3 🔴 CRITICAL plan issues: schema model stale (50→52 cols; missing sl_type + leverage_source + remaining_pct ALTERs), A9 denomination normalization gap on old-DB 1000*USDT prices, and non-atomic cp in §4d step 8.",
-        "Wrote consolidated audit + marker: OINKV-AUDIT-WAVE3-A10.md (28KB, 407 lines) + OINKV-AUDIT-WAVE3-A10-COMPLETE.marker.",
-        "Dispatched FORGE to revise TASK-A10-plan.md → v2 with explicit deltas. Running on lane 21d59387.",
-        "A8 canary PENDING/CLEAN INITIAL CAPTURE (passive wait on first 10 organic signals); A9 canary also passive (awaiting 1000*USDT prod ingest)."
-      ],
-      "next": "Next cycle, verify FORGE landed v2 plan + delta doc; A8 canary check.",
-      "blocker": "A10 plan v2 revision in-flight. When v2 lands (this cycle or next), you'll have complete decision context — 1,144-row merge plan with 3 critical issues now addressed, ready for your A10-APPROVE gate. No other tasks blocked. ANVIL idle pending canary passes + your A10 call. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_18-07-36.md"
     }
   ],
   "plans": [
@@ -3930,15 +3929,20 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T04:18:26+00:00",
-    "time_local": "2026-04-20T06:18+02:00",
-    "header": "SPRINT STATUS @ 06:18 CEST",
-    "actions": [],
-    "next": "next cron tick — scan signal-gateway for pushed `anvil/B5-emitter-extraction` branch + open PR, then dispatch VIGIL+GUARDIAN Phase 1 review + Hermes-level parallel review. If no push within 60 min, liveness-check via gateway lane logs before nudging again.",
+    "time_utc": "2026-04-20T04:33:43+00:00",
+    "time_local": "2026-04-20T06:33+02:00",
+    "header": "SPRINT STATUS @ 06:33 CEST",
+    "actions": [
+      "Verified ANVIL live via session jsonl (size growing 8.95→8.97MB in 10s, tool calls actively running)",
+      "Confirmed no zombie tasks blocking dispatch, no Mike-directed scope pivot, no canary failures",
+      "Confirmed B5 files landed: emitter.py (347 LOC), test_emitter.py (15 tests), signal_router.py shrunk by 226 LOC",
+      "Checked open PRs — none on B5 (no push yet; ANVIL still in local commit/test phase)"
+    ],
+    "next": "On next cron tick, check for `anvil/B5-emitter-extraction` push + PR open on signal-gateway; if PR exists, dispatch VIGIL+GUARDIAN Phase 1 reviews + parallel Hermes-level `delegate_task` review (🟡 STANDARD, ≥9.0 threshold both). If ANVIL still pre-push, re-verify liveness via session jsonl — do NOT nudge while actively coding per skill rule.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_06-18-26.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_06-33-43.md"
   },
-  "commit": "59e3e2cda2c1",
+  "commit": "8bc82d3d3e67",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
