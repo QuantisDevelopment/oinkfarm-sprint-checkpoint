@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T02:06:25+00:00",
-  "generated_at_cest": "2026-04-20T04:06:25+02:00",
+  "generated_at_utc": "2026-04-20T02:27:02+00:00",
+  "generated_at_cest": "2026-04-20T04:27:02+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3100,7 +3100,7 @@
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "1h 41m ago",
+      "last_active_human": "2h 2m ago",
       "light": "yellow",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,15 +3112,14 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T01:47:56+00:00",
-      "last_active_human": "18m ago",
+      "last_active": "2026-04-20T02:26:34+00:00",
+      "last_active_human": "27s ago",
       "light": "green",
       "heartbeat": {
         "current_task": "B3",
         "current_phase": "review_pending",
         "blockers": [
-          "waiting_for_vigil_review",
-          "waiting_for_guardian_review"
+          "waiting_for_canary"
         ],
         "branch": "anvil/B3-parallel-write-verification"
       }
@@ -3131,8 +3130,8 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-20T01:58:16+00:00",
-      "last_active_human": "8m ago",
+      "last_active": "2026-04-20T02:15:38+00:00",
+      "last_active_human": "11m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3142,8 +3141,8 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T02:03:54+00:00",
-      "last_active_human": "2m ago",
+      "last_active": "2026-04-20T02:21:29+00:00",
+      "last_active_human": "5m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3153,7 +3152,7 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T02:06:24+00:00",
+      "last_active": "2026-04-20T02:27:01+00:00",
       "last_active_human": "0s ago",
       "light": "green",
       "heartbeat": {}
@@ -3165,12 +3164,25 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T00:24:55+00:00",
-      "last_active_human": "1h 41m ago",
+      "last_active_human": "2h 2m ago",
       "light": "yellow",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T02:27:01+00:00",
+      "time_local": "2026-04-20T04:27+02:00",
+      "header": "SPRINT STATUS @ 04:22 CEST (Apr 20)",
+      "actions": [
+        "Confirmed VIGIL R2 PASS 9.60 already written at 04:15; dispatched GUARDIAN for matching R2 re-review.",
+        "GUARDIAN R2 completed: PASS 9.60 (+3.40 delta from R1 FAIL 6.20). Live verified against /home/m/data/oinkfarm.db, 72/72 B3 tests pass, FET #1159 intact.",
+        "Dispatched ANVIL to merge anvil/B3-parallel-write-verification across oinkfarm/oink-sync/signal-gateway, deploy, and notify GUARDIAN for canary. Reminded ANVIL to keep OINK_DB_DUAL_WRITE=false until clean bootstrap reconciliation gate passes."
+      ],
+      "next": "detect B3-MERGED.marker → confirm GUARDIAN canary kicked off; if canary clean, A2A ANVIL to begin B4 Phase 0. Also confirm B2 canary T+24h checkpoint (~03:22 CEST tomorrow) stays green.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_04-27-01.md"
+    },
     {
       "time_utc": "2026-04-20T02:06:24+00:00",
       "time_local": "2026-04-20T04:06+02:00",
@@ -3667,21 +3679,6 @@
       "next": "next cycle verifies A9 deploy landed + A11 proposal written + ANVIL notified GUARDIAN; starts VIGIL proposal review if marker lands.",
       "blocker": null,
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_16-24-51.md"
-    },
-    {
-      "time_utc": "2026-04-19T13:59:59+00:00",
-      "time_local": "2026-04-19T15:59+02:00",
-      "header": "SPRINT STATUS @ 15:59 CEST (Apr 19)",
-      "actions": [
-        "Dispatched GUARDIAN Phase 1 review of A9 (oinkfarm #132 + oink-sync #8). VIGIL had passed 9.15 but GUARDIAN wasn't self-starting on Phase 1 — per skill, that's the normal asymmetry.",
-        "Ran Hermes-level parallel review (delegate_task). Verdict 🟡 CONCERNS — flagged H1 cross-channel dedup ordering + H2/H3 UPDATE/CLOSURE scope gaps. Recovered full review from subagent summary after max_iterations hit (stub-only landed).",
-        "GUARDIAN came back FAIL 7.20 < 9.0 threshold. Two blocking regressions reproduced locally on real _process_signal(): P1 valid 1000x signals with SL present rejected as SL_DEVIATION (entry normalized before B11, SL only after §9 — real-world signals always have SL, so the PEPE fix is useless in practice), P2 NULL-trader-id replay double-inserts. Converges with Hermes H1.",
-        "Dispatched ANVIL revision nudge (d0a147ad running) with both GUARDIAN blockers inlined verbatim, a recommended Option A single-block normalization fix, and a required 2 new end-to-end tests. Round 2 of 3.",
-        "Dispatched A6 post-deploy canary to GUARDIAN (1877266b running) — no auto-start seen in journalctl since merge 27min ago, event-shaped canary awaiting first organic GHOST_CLOSURE."
-      ],
-      "next": "poll for ANVIL's A9 revision push → new VIGIL + GUARDIAN R2 reviews. If all clear → merge A9 both repos. Also poll A6 canary landing.",
-      "blocker": "none. GUARDIAN catching this FAIL pre-merge is the system working as designed — the P1 would have produced a fleet of rejected 1000x signals in prod. Merge hold is correct. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_15-59-59.md"
     }
   ],
   "plans": [
@@ -3888,17 +3885,8 @@
     {
       "agent": "ANVIL",
       "agent_emoji": "⚒️",
-      "raw": "waiting_for_vigil_review",
-      "label": "VIGIL review",
-      "severity": "auto",
-      "current_task": "B3",
-      "current_phase": "review_pending"
-    },
-    {
-      "agent": "ANVIL",
-      "agent_emoji": "⚒️",
-      "raw": "waiting_for_guardian_review",
-      "label": "GUARDIAN review",
+      "raw": "waiting_for_canary",
+      "label": "GUARDIAN canary",
       "severity": "auto",
       "current_task": "B3",
       "current_phase": "review_pending"
@@ -3914,20 +3902,19 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T02:06:24+00:00",
-    "time_local": "2026-04-20T04:06+02:00",
-    "header": "SPRINT STATUS @ 04:06 CEST",
+    "time_utc": "2026-04-20T02:27:01+00:00",
+    "time_local": "2026-04-20T04:27+02:00",
+    "header": "SPRINT STATUS @ 04:22 CEST (Apr 20)",
     "actions": [
-      "Confirmed B3 Phase 0 double-approval (VIGIL + GUARDIAN @ 03:32/03:35 CEST) and ANVIL's 3-repo Phase 1 submission (oinkfarm a91278ae, oink-sync 92f7ada, signal-gateway 07940ce)",
-      "Read VIGIL B3 Phase 1 review (REVISE, 5 MUST-FIX entirely in reconcile_stores.py: 4 wrong column lists + datetime comparison bug)",
-      "A2A ANVIL with consolidated R2 nudge (concrete column fixes + SHOULD-FIX guidance + instruction NOT to wait for GUARDIAN) — delivered 04:05 CEST, ANVIL session processing",
-      "Verified GUARDIAN Phase 1 review in-flight (session 7b9c9821 hitting \"no such column: channel_id\" on live reconciler run — confirms convergence with VIGIL on MUST-FIX-2)"
+      "Confirmed VIGIL R2 PASS 9.60 already written at 04:15; dispatched GUARDIAN for matching R2 re-review.",
+      "GUARDIAN R2 completed: PASS 9.60 (+3.40 delta from R1 FAIL 6.20). Live verified against /home/m/data/oinkfarm.db, 72/72 B3 tests pass, FET #1159 intact.",
+      "Dispatched ANVIL to merge anvil/B3-parallel-write-verification across oinkfarm/oink-sync/signal-gateway, deploy, and notify GUARDIAN for canary. Reminded ANVIL to keep OINK_DB_DUAL_WRITE=false until clean bootstrap reconciliation gate passes."
     ],
-    "next": "Next cron tick: check for GUARDIAN B3-PHASE1-REVIEW.md + ANVIL R2 commits on same branch; if GUARDIAN also REVISE, confirm ANVIL has both reviews; if ANVIL R2 pushed, nudge VIGIL+GUARDIAN for re-review — T+1h B2 canary checkpoint (04:22 CEST) — GUARDIAN handles autonomously",
+    "next": "detect B3-MERGED.marker → confirm GUARDIAN canary kicked off; if canary clean, A2A ANVIL to begin B4 Phase 0. Also confirm B2 canary T+24h checkpoint (~03:22 CEST tomorrow) stays green.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_04-06-24.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_04-27-01.md"
   },
-  "commit": "2f6b7d70f170",
+  "commit": "cecac421614c",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
