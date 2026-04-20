@@ -4,29 +4,38 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 290
-- **Last 24h:** 155 (rate 6.46/h)
+- **Total events:** 293
+- **Last 24h:** 158 (rate 6.58/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (0 events)
-_(no events)_
-
-### Last 4 hours (5 events)
+### Last 1 hour (3 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
+| Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
+| Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+
+### Last 4 hours (7 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
+| Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
+| Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | hermes | FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the  |
 | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | guardian | — published kpi-baseline: extraction-accuracy-baseline.md |
 | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 20, 17:52 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 15:47 CEST | `SPRINT_NOTE` | `—` | hermes | The four Phase A canary failures that were sitting red on the dashboard all morning are now green. GUARDIAN re-ran the battery at 13:08 UTC  |
 
-### Last 24 hours (155 events)
+### Last 24 hours (158 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | hermes | OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). |
+| Apr 20, 19:58 CEST | `BLOCKED` | `A171` | oinkv | A171 BLOCKED — design_clarification_needed |
+| Apr 20, 19:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | hermes | FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the  |
 | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | guardian | — published kpi-baseline: extraction-accuracy-baseline.md |
 | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
@@ -39,23 +48,20 @@ _(no events)_
 | Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | guardian | A10 canary PASS |
 | Apr 20, 13:57 CEST | `SPRINT_NOTE` | `—` | hermes | 🔥 FORGE raised 4 Mike-gates: B2 TimescaleDB defer→B14, B13 single-host Compose, B9 W1 immutability phasing, C2 low-conf PROVISIONAL vs rejec |
 | Apr 20, 13:35 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 13:35 CEST | `TASK_PLANNED` | `B3` | forge | B3 plan published |
-| Apr 20, 13:35 CEST | `TASK_PLANNED` | `B4` | forge | B4 plan published |
-| Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `B3` | mike | B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 7.6h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 7.6h | APPROVE · DEFER | generic |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 7.6h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 7.6h | pg_trigger · check_only | phase-b |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 7.6h | maxlen · time_based | heavy-hybrid |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 6.2h | defer to B14 · introduce in B2 | phase-b |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 6.2h | single-host only · include multi-host preparation | heavy-hybrid |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 6.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 6.2h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 8.3h | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 8.3h | APPROVE · DEFER | generic |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 8.3h | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 8.3h | pg_trigger · check_only | phase-b |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 8.3h | maxlen · time_based | heavy-hybrid |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 6.9h | defer to B14 · introduce in B2 | phase-b |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 6.9h | single-host only · include multi-host preparation | heavy-hybrid |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 6.9h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 6.9h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -91,7 +97,8 @@ _(no events)_
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 11 |
+| 🪽 **Hermes** | Apr 20, 20:12 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 13 |
+| 🐷 **OinkV** | Apr 20, 19:58 CEST | `BLOCKED` | `A171` | 🟢 fresh | 1 |
 | 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟡 1–3h | 66 |
 | 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🟡 1–3h | 52 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -143,6 +150,7 @@ _(no events)_
 | [A9](tasks/A9-denomination-multiplier.md) | Denomination Multiplier Table (1000x-prefixed symbols) | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS |
 | [A10](tasks/A10-database-merge.md) | Database Merge (test → prod, council-approved) | 🔴 CRITICAL | 4 | ✅ DONE | PASS |
 | [A11](tasks/A11-leverage-source-tracking.md) | Leverage Source Tracking | 🟢 LIGHTWEIGHT | 3 | ✅ DONE | PASS |
+| `A171` | A171 | 🟡 STANDARD | — | 🛑 BLOCKED | — |
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | 🧪 CANARY | PENDING |
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
@@ -169,6 +177,7 @@ _(no events)_
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
@@ -185,4 +194,4 @@ _(no events)_
 
 ---
 
-*9/27 tasks DONE · Last auto-regenerated: 19:33 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/28 tasks DONE · Last auto-regenerated: 20:14 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

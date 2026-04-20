@@ -6,7 +6,7 @@
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) + [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) + [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21)  
-**Merge commit:** [b4b4a528bfc9](https://github.com/QuantisDevelopment/oinkdb-api/commit/b4b4a528bfc9c1524496269cd2b84763a622cb21) + [75a32f7f80e6](https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186) + [ecd2622a2aa3](https://github.com/QuantisDevelopment/oink-sync/commit/ecd2622a2aa357a6e1efa925bc15af8bfbdc4eb0) + [b0f02548415d](https://github.com/QuantisDevelopment/signal-gateway/commit/b0f02548415de4598f807912f1fefca4472620ee)
+**Merge commit:** —
 
 ## In plain English
 
@@ -38,10 +38,6 @@ _None._
 
 - **OinkV audit:** [OINKV-AUDIT-PHASE-B-B1.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-PHASE-B-B1.md) — 15.9 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/B1-GUARDIAN-PHASE0-REVIEW-R2.md)
-- **Merge commit:** [`b4b4a528bfc9`](https://github.com/QuantisDevelopment/oinkdb-api/commit/b4b4a528bfc9c1524496269cd2b84763a622cb21) (oinkdb-api PR #1)
-- **Merge commit:** [`75a32f7f80e6`](https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186) (oinkfarm PR #149)
-- **Merge commit:** [`ecd2622a2aa3`](https://github.com/QuantisDevelopment/oink-sync/commit/ecd2622a2aa357a6e1efa925bc15af8bfbdc4eb0) (oink-sync PR #9)
-- **Merge commit:** [`b0f02548415d`](https://github.com/QuantisDevelopment/signal-gateway/commit/b0f02548415de4598f807912f1fefca4472620ee) (signal-gateway PR #21)
 - **PR(s):** [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) · [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) · [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) · [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) · [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21)
 
 ## Lessons Learned

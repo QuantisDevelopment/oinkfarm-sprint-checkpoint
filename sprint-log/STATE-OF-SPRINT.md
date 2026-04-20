@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-20 16:06 UTC · Read time: ~8 min*
+*Last updated: 2026-04-20 18:12 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the trader-message extractor actual memory, so it recalls the last few extractions from the same trader as few-shot guidance, captures every successful extraction back into Supermemory, and turns OinkV's correction flag into a learning loop instead of a one-off fix. FORGE replaced the first draft with a tighter "Direct Execution Sequence" an hour later — five commits, ~2.5 hours of work total, no Mike gates (you already granted full autonomous authority on this one), runs parallel to Heavy Hybrid Phase B rather than waiting in line behind it.
+OinkV just hit a blocker on Task 171 (the OinXtractor stateful retrieval-learning agent you approved for parallel execution this afternoon). Step 1 of FORGE's execution sequence asks OpenClaw to accept a per-agent `contextPruning` config for the extractor, and OpenClaw rejected the key as unrecognized. OinkV reverted the gateway config cleanly so nothing's actually broken — gateway health is green — but the design needs a decision before 171 can advance. Effectively this means retrieval-learning work is paused until the orchestrator-layer question is resolved; OinkV labelled it `design_clarification_needed` rather than reaching for a workaround.
 
-GUARDIAN's pre-change accuracy baseline for 171 landed at 18:02 CEST and it's honest in a useful way: we don't actually have a real per-trader weekly extraction-accuracy KPI in production today. The baseline is a proxy pulled from OinkV's audit journal for the last 7 days — posture is clean (zero confirmed bad DB writes, zero confirmed missed signals, two safe-noise incidents that got rejected before doing damage), but it's flagged PROXY_ONLY because the underlying measurement gap is part of what 171 is meant to close. So the "did the learning agent actually help" question only becomes answerable once 171 ships.
+On the upside, Hermes published the new OinXtractor quality dashboard at 17:49 UTC — `docs/oinxtractor-quality.html`, fed from a live metrics JSON. Latency and unknown-rate are both green against their targets; per-trader accuracy is still flagged `proxy_only` (same honest caveat as GUARDIAN's baseline this afternoon — we don't have a real production KPI for it yet) and the corrections-loop metric reads `pending` because it only gets data once 171 ships. So the instrument went live before the feature, which is the right order.
 
-Phase B side is quiet — no new merges, PRs, or canary verdicts in the last two hours. ANVIL has been silent since lunch, which is normal for a post-Wave-2 review lull. B3's 7-day reconciliation clock toward the 2026-04-26 B4 cutover is still ticking clean, and the B2 canary plus B6/B7/B8 post-deploy monitoring reports are the next expected signals. Nothing on the board needs you today.
+Phase B itself has gone quiet: no merges, no new PRs, no canary verdicts in the last two hours. ANVIL and VIGIL are now past their freshness threshold (both flagged stale), which is expected during this post-Wave-2 review lull — FORGE's last activity was 137m ago and GUARDIAN's was the KPI baseline 128m ago. B3's 7-day reconciliation clock toward the April 26 B4 cutover is still ticking clean. Nothing on the board needs you tonight; the one item that might want attention is the 171 design question, which FORGE or Hermes-ops should be able to triage without parking it on you.
+
 
 ## Where We Are Today (one paragraph)
 
