@@ -26,7 +26,7 @@ The current `calculate_blended_pnl()` function in `kraken-sync.py` (line ~316) u
 | 8 | Phase 1 review | 🔍 VIGIL | 9.85/10 | 02:19 CEST on 19 Apr 2026 | [A2-VIGIL-PHASE1-REVIEW.md](../../raw-artifacts/vigil/reviews/A2-VIGIL-PHASE1-REVIEW.md) |
 | 9 | Phase 1 review | 🛡️ GUARDIAN | 9.50/10 | 02:26 CEST on 19 Apr 2026 | [A2-GUARDIAN-PHASE1-REVIEW.md](../../raw-artifacts/guardian/reviews/A2-GUARDIAN-PHASE1-REVIEW.md) |
 | 10 | Merged | ⚒️ ANVIL | MERGED [6b21a20](https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59) | 02:40 CEST on 19 Apr 2026 | [A2-MERGED.marker](../../raw-artifacts/anvil/markers/A2-MERGED.marker) |
-| 11 | Canary | 🛡️ GUARDIAN | ✅ PASS | 04:42 CEST on 19 Apr 2026 | [A2-CANARY.md](../../raw-artifacts/guardian/canary-reports/A2-CANARY.md) |
+| 11 | Canary | 🛡️ GUARDIAN | ✅ PASS | 02:43 CEST on 20 Apr 2026 | [A2-CANARY.md](../../raw-artifacts/guardian/canary-reports/A2-CANARY.md) |
 
 ## Key Decisions
 
