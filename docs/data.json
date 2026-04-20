@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T09:45:12+00:00",
-  "generated_at_cest": "2026-04-20T11:45:12+02:00",
+  "generated_at_utc": "2026-04-20T10:06:06+00:00",
+  "generated_at_cest": "2026-04-20T12:06:06+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,8 +3099,8 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-20T09:43:00+00:00",
-      "last_active_human": "2m ago",
+      "last_active": "2026-04-20T09:55:50+00:00",
+      "last_active_human": "10m ago",
       "light": "green",
       "heartbeat": {
         "current_phase": "B"
@@ -3112,14 +3112,13 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T09:38:38+00:00",
-      "last_active_human": "6m ago",
+      "last_active": "2026-04-20T09:57:45+00:00",
+      "last_active_human": "8m ago",
       "light": "green",
       "heartbeat": {
         "blockers": [
           "waiting_for_b5_canary_pass"
-        ],
-        "branch": "anvil/B8-dedup-consolidation"
+        ]
       }
     },
     {
@@ -3128,8 +3127,8 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-20T09:33:35+00:00",
-      "last_active_human": "11m ago",
+      "last_active": "2026-04-20T09:50:21+00:00",
+      "last_active_human": "15m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3139,8 +3138,8 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T09:36:27+00:00",
-      "last_active_human": "8m ago",
+      "last_active": "2026-04-20T09:52:26+00:00",
+      "last_active_human": "13m ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3150,8 +3149,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T09:45:11+00:00",
-      "last_active_human": "1s ago",
+      "last_active": "2026-04-20T10:06:04+00:00",
+      "last_active_human": "2s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3162,12 +3161,26 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "3h 49m ago",
+      "last_active_human": "4h 10m ago",
       "light": "red",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T10:06:04+00:00",
+      "time_local": "2026-04-20T12:06+02:00",
+      "header": "SPRINT STATUS @ 12:07 CEST — 2026-04-20",
+      "actions": [
+        "Merged B8 PR #26 (signal-gateway) — squash, branch deleted. VIGIL 9.85 + GUARDIAN 9.80 + Hermes LGTM. Merge commit 6879e25. B8-MERGED.marker written, B8-PR-OPEN.marker removed.",
+        "Dispatched B7 Hermes parallel review in parallel — result ✅ LGTM (11,259 B, verdict at top). Notable bonus finding: the original `_extract_field_line` Unicode-dash normalization in signal_router.py was a silent no-op (operands all ASCII `0x2D`); B7's `\\u2010/\\u2013/\\u2014` escapes fix it — strict improvement, covered by a new test.",
+        "A2A'd ANVIL (task b9ac7b46, running) with packed handoff: (1) update HEARTBEAT for B8 merge, (2) notify GUARDIAN for B8 canary, (3) deploy B8, (4) rebase B7 onto new main 6879e25 + open PR, (5) write B7-PR-OPEN.marker.",
+        "Verified B5 canary is PENDING CLEAN at T+1h (10/10 post-reset events clean, FET #1159 parity intact). T+24h checkpoint 2026-04-21 05:05 UTC. B6 gate is legitimate passive wait — not escalating."
+      ],
+      "next": "Next cycle merges B7 PR once ANVIL opens it (all 3 reviewers already ≥9.8 / LGTM). Also confirms B8 deploy + GUARDIAN canary self-start.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_12-06-04.md"
+    },
     {
       "time_utc": "2026-04-20T09:45:11+00:00",
       "time_local": "2026-04-20T11:45+02:00",
@@ -3662,18 +3675,6 @@
       "next": "If OinkV Phase B audit still missing at 21:53 (1h mark, matches known LLM-timeout SLA), check gateway journalctl for FailoverError on main lane; if timed out, trigger Hermes-subagent fallback for B1-B5 audit (parallel prep Mike requested) — Otherwise SILENT until A10 disposition or Phase B plan approvals land",
       "blocker": "A10 POST-MERGE CANARY FAIL needs disposition (GUARDIAN P1 open since 19:23Z, ~2h20m): • 104 imported-historical rows violate KPI-R5 (fill_status=FILLED ∧ order_type=MARKET ∧ filled_at IS NULL) • Live insert path is clean (organic id≥2524 = 0 violations) • Three options per GUARDIAN canary report: (a) Accept — document as historical carve-out; adjust KPI-R5 to exclude id 1612–2523 (b) Remediate — backfill filled_at for the 104 rows with defensible values (created_at fallback?) (c) Rollback — restore /home/m/data/oinkfarm.db.a10-predrift-backup-20260419T182923Z (loses drift + merge) GUARDIAN + OinkV webchat notes say \"not evidence against A10 code\" — live path works — so (a) or (b) is preferable to full rollback, but your call. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_21-43-43.md"
-    },
-    {
-      "time_utc": "2026-04-19T19:08:44+00:00",
-      "time_local": "2026-04-19T21:08+02:00",
-      "header": "SPRINT STATUS @ 21:08 CEST (Apr 19 2026)",
-      "actions": [
-        "Archived stale /home/oinkv/anvil-workspace/A10-READY-FOR-MIKE.marker → suffixed",
-        "Verified prior cycle's Phase B OinkV audit dispatch is alive (task_runs=running, not"
-      ],
-      "next": "Poll /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-COMPLETE.marker. If landed, — Poll A10 canary file for organic post-merge signals (id>2523).",
-      "blocker": "none new. Existing standing items (no new push needed): - Phase B Wave 1 (B1–B5) plans awaiting your approval — FORGE HEARTBEAT §Mike Decision Flags has 12 questions queued (B4-APPROVE is the cutover gate). - Heavy Hybrid Roadmap Q-HH-1..Q-HH-6 also queued. - P0 SL integrity alert (4 active wrong-side SLs from MrM/Dal historical signals) is GUARDIAN-owned remediation — separate track from this orchestrator. ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_21-08-44.md"
     }
   ],
   "plans": [
@@ -3948,27 +3949,23 @@
       "severity": "auto",
       "current_task": null,
       "current_phase": null
-    },
-    {
-      "agent": "Hermes",
-      "agent_emoji": "🪽",
-      "raw": "none. Sprint is steady — 14/17 Phase A/B tasks merged & deployed, three more APPROVED and queued behind canary discipline. ```",
-      "label": "Sprint is steady — 14/17 Phase A/B tasks merged & deployed, three more APPROVED and queued behind canary discipline.",
-      "severity": "mike",
-      "current_task": null,
-      "current_phase": null
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T09:45:11+00:00",
-    "time_local": "2026-04-20T11:45+02:00",
-    "header": "SPRINT STATUS @ 11:45",
-    "actions": [],
-    "next": "merge B8 PR (squash, `--delete-branch`, review scores in body), write `B8-MERGED.marker`, dispatch GUARDIAN canary (self-start expected per skill), dispatch ANVIL to await B5 T+24h checkpoint before opening B6 PR.",
+    "time_utc": "2026-04-20T10:06:04+00:00",
+    "time_local": "2026-04-20T12:06+02:00",
+    "header": "SPRINT STATUS @ 12:07 CEST — 2026-04-20",
+    "actions": [
+      "Merged B8 PR #26 (signal-gateway) — squash, branch deleted. VIGIL 9.85 + GUARDIAN 9.80 + Hermes LGTM. Merge commit 6879e25. B8-MERGED.marker written, B8-PR-OPEN.marker removed.",
+      "Dispatched B7 Hermes parallel review in parallel — result ✅ LGTM (11,259 B, verdict at top). Notable bonus finding: the original `_extract_field_line` Unicode-dash normalization in signal_router.py was a silent no-op (operands all ASCII `0x2D`); B7's `\\u2010/\\u2013/\\u2014` escapes fix it — strict improvement, covered by a new test.",
+      "A2A'd ANVIL (task b9ac7b46, running) with packed handoff: (1) update HEARTBEAT for B8 merge, (2) notify GUARDIAN for B8 canary, (3) deploy B8, (4) rebase B7 onto new main 6879e25 + open PR, (5) write B7-PR-OPEN.marker.",
+      "Verified B5 canary is PENDING CLEAN at T+1h (10/10 post-reset events clean, FET #1159 parity intact). T+24h checkpoint 2026-04-21 05:05 UTC. B6 gate is legitimate passive wait — not escalating."
+    ],
+    "next": "Next cycle merges B7 PR once ANVIL opens it (all 3 reviewers already ≥9.8 / LGTM). Also confirms B8 deploy + GUARDIAN canary self-start.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_11-45-11.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_12-06-04.md"
   },
-  "commit": "f60c3faf073c",
+  "commit": "079faf982590",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",
