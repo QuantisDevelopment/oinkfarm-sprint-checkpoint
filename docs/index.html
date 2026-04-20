@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T20:59:54+00:00">
+<body data-generated="2026-04-20T21:13:33+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T20:59:54+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T21:13:33+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T22:59:54+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T23:13:33+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 22:59 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 23:13 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -57,7 +57,7 @@
 <!-- Events integrity ------------------------------------------------------- -->
 <section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
   <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
-    <div><span class="muted">📊 events:</span> <strong class="mono">296</strong></div>
+    <div><span class="muted">📊 events:</span> <strong class="mono">283</strong></div>
     <div><span class="muted">24h rate:</span> <strong class="mono">6.5/h</strong></div>
     <div><span class="muted">last 24h:</span> <strong class="mono">156</strong></div>
     <div><span class="muted">schema:</span> <strong class="mono">v1.0</strong></div>
@@ -98,7 +98,7 @@
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📅 What happened this week</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">Over the last three days, the stream recorded 54 merges, 26 canary events, and 66 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🟡 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B4 🟡 PostgreSQL cutover shipped in this window. 38 decision events flowed through the Mike-gate process.</p>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">Over the last three days, the stream recorded 52 merges, 26 canary events, and 66 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🟡 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 38 decision events flowed through the Mike-gate process.</p>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">🎯 What's next</h3>
@@ -580,7 +580,7 @@
 
 <!-- 3. MISSING EVIDENCE .................................................... -->
 <section class="missing-evidence" id="missing-evidence" style="margin-bottom:24px;">
-  <div class="section-head"><h2>🔍 Missing evidence</h2><span class="muted mono">22 gaps</span></div>
+  <div class="section-head"><h2>🔍 Missing evidence</h2><span class="muted mono">11 gaps</span></div>
     <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
       <thead>
         <tr style="background:rgba(255,255,255,0.05);">
@@ -590,83 +590,6 @@
         </tr>
       </thead>
       <tbody>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">B1</td>
-          <td style="padding:8px;">PR_OPENED (pr=121) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">A1</td>
-          <td style="padding:8px;">PR_OPENED (pr=17) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">A1</td>
-          <td style="padding:8px;">PR_OPENED (pr=18) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">A2</td>
-          <td style="padding:8px;">PR_OPENED (pr=19) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">B1</td>
-          <td style="padding:8px;">PR_OPENED (pr=1) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">B2</td>
-          <td style="padding:8px;">PR_OPENED (pr=2) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">B3</td>
-          <td style="padding:8px;">PR_OPENED (pr=3) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">B4</td>
-          <td style="padding:8px;">MERGED with no CANARY_STARTED within 2h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">A3</td>
-          <td style="padding:8px;">PR_OPENED (pr=125) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">A1</td>
-          <td style="padding:8px;">PR_OPENED (pr=126) with no REVIEW_POSTED within 24h</td>
-        </tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-          <td style="padding:8px;">
-<span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
-          </td>
-          <td class="mono" style="padding:8px;">A1</td>
-          <td style="padding:8px;">PR_OPENED (pr=4) with no REVIEW_POSTED within 24h</td>
-        </tr>
         <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
           <td style="padding:8px;">
 <span style="background:#92400e;color:#fed7aa;padding:2px 8px;border-radius:4px;">WARN</span>
@@ -841,7 +764,7 @@
         <td class="mono" style="padding:8px;">—</td>
         <td style="padding:8px;">
 <span style="background:#7f1d1d;color:#fecaca;padding:2px 8px;border-radius:4px;">● stale</span>        </td>
-        <td class="mono muted" style="padding:8px;">101</td>
+        <td class="mono muted" style="padding:8px;">88</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -1007,34 +930,6 @@ future      </span>
     <a class="mono muted section-more" href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log/events" target="_blank" rel="noopener">full log ↗</a>
   </div>
   <ol class="events-feed">
-    <li class="event-row event-pr_opened">
-      <span class="event-emoji" title="PR_OPENED">•</span>
-      <span class="event-time mono muted">Apr 18, 16:19 CEST</span>
-      <span class="event-task mono">B1</span>
-      <span class="event-type mono">PR_OPENED</span>
-      <span class="event-desc">B1 PR #121 opened — feat(#16): scaffold signals-by-route API endpoints (PR-B1)</span>
-    </li>
-    <li class="event-row event-pr_opened">
-      <span class="event-emoji" title="PR_OPENED">•</span>
-      <span class="event-time mono muted">Apr 18, 16:20 CEST</span>
-      <span class="event-task mono">A1</span>
-      <span class="event-type mono">PR_OPENED</span>
-      <span class="event-desc">A1 PR #17 opened — Part of #16 — Phase 2 PR-A1 (Rename Pass A)</span>
-    </li>
-    <li class="event-row event-pr_opened">
-      <span class="event-emoji" title="PR_OPENED">•</span>
-      <span class="event-time mono muted">Apr 18, 16:41 CEST</span>
-      <span class="event-task mono">A1</span>
-      <span class="event-type mono">PR_OPENED</span>
-      <span class="event-desc">A1 PR #18 opened — Part of #16 — Phase 2 PR-A1 (Rename Pass A)</span>
-    </li>
-    <li class="event-row event-pr_opened">
-      <span class="event-emoji" title="PR_OPENED">•</span>
-      <span class="event-time mono muted">Apr 18, 17:11 CEST</span>
-      <span class="event-task mono">A2</span>
-      <span class="event-type mono">PR_OPENED</span>
-      <span class="event-desc">A2 PR #19 opened — Part of #16 — Phase 2 PR-A2 (lifecycle-events tee)</span>
-    </li>
     <li class="event-row event-merged">
       <span class="event-emoji" title="MERGED">🚀</span>
       <span class="event-time mono muted">Apr 18, 18:23 CEST</span>
@@ -1042,26 +937,54 @@ future      </span>
       <span class="event-type mono">MERGED</span>
       <span class="event-desc">A1 merged via PR #18 @9fa2d19</span>
     </li>
-    <li class="event-row event-pr_opened">
-      <span class="event-emoji" title="PR_OPENED">•</span>
-      <span class="event-time mono muted">Apr 18, 18:28 CEST</span>
-      <span class="event-task mono">B1</span>
-      <span class="event-type mono">PR_OPENED</span>
-      <span class="event-desc">B1 PR #1 opened — feat(#16): PR-B1 scaffold — 28 /signals/* endpoints returning 501 [retroactive]</span>
+    <li class="event-row event-merged">
+      <span class="event-emoji" title="MERGED">🚀</span>
+      <span class="event-time mono muted">Apr 18, 18:56 CEST</span>
+      <span class="event-task mono">A2</span>
+      <span class="event-type mono">MERGED</span>
+      <span class="event-desc">A2 merged via PR #19 @38eb8e8</span>
     </li>
     <li class="event-row event-merged">
       <span class="event-emoji" title="MERGED">🚀</span>
-      <span class="event-time mono muted">Apr 18, 18:28 CEST</span>
-      <span class="event-task mono">B1</span>
-      <span class="event-type mono">MERGED</span>
-      <span class="event-desc">B1 merged via PR #1 @b4b4a52</span>
-    </li>
-    <li class="event-row event-pr_opened">
-      <span class="event-emoji" title="PR_OPENED">•</span>
-      <span class="event-time mono muted">Apr 18, 18:40 CEST</span>
+      <span class="event-time mono muted">Apr 18, 18:56 CEST</span>
       <span class="event-task mono">B2</span>
-      <span class="event-type mono">PR_OPENED</span>
-      <span class="event-desc">B2 PR #2 opened — feat(#16): PR-B2 — implement 12 by-route handlers</span>
+      <span class="event-type mono">MERGED</span>
+      <span class="event-desc">B2 merged via PR #2 @f1f5544</span>
+    </li>
+    <li class="event-row event-merged">
+      <span class="event-emoji" title="MERGED">🚀</span>
+      <span class="event-time mono muted">Apr 18, 19:31 CEST</span>
+      <span class="event-task mono">B3</span>
+      <span class="event-type mono">MERGED</span>
+      <span class="event-desc">B3 merged via PR #3 @401b770</span>
+    </li>
+    <li class="event-row event-plan_published">
+      <span class="event-emoji" title="PLAN_PUBLISHED">🔥</span>
+      <span class="event-time mono muted">Apr 18, 23:27 CEST</span>
+      <span class="event-task mono">A1</span>
+      <span class="event-type mono">PLAN_PUBLISHED</span>
+      <span class="event-desc">A1 plan published</span>
+    </li>
+    <li class="event-row event-plan_published">
+      <span class="event-emoji" title="PLAN_PUBLISHED">🔥</span>
+      <span class="event-time mono muted">Apr 18, 23:28 CEST</span>
+      <span class="event-task mono">A2</span>
+      <span class="event-type mono">PLAN_PUBLISHED</span>
+      <span class="event-desc">A2 plan published</span>
+    </li>
+    <li class="event-row event-plan_published">
+      <span class="event-emoji" title="PLAN_PUBLISHED">🔥</span>
+      <span class="event-time mono muted">Apr 18, 23:28 CEST</span>
+      <span class="event-task mono">A3</span>
+      <span class="event-type mono">PLAN_PUBLISHED</span>
+      <span class="event-desc">A3 plan published</span>
+    </li>
+    <li class="event-row event-proposal_drafted">
+      <span class="event-emoji" title="PROPOSAL_DRAFTED">⚒️</span>
+      <span class="event-time mono muted">Apr 18, 23:32 CEST</span>
+      <span class="event-task mono">A3</span>
+      <span class="event-type mono">PROPOSAL_DRAFTED</span>
+      <span class="event-desc">A3 proposal ready</span>
     </li>
   </ol>
 </section>
@@ -1168,6 +1091,9 @@ future      </span>
                 <span class="pr-repo mono">oinkdb-api</span>
                 <span class="pr-num mono">#2</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkdb-api/commit/f1f5544fe1f2f935f66de745a7772c052183d5e4" target="_blank" rel="noopener" title="merge commit">
+                  f1f5544
+                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/153" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#153</span>
@@ -1184,7 +1110,7 @@ future      </span>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(27 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(26 events)</span></summary>
           <ol class="timeline">
             <li class="timeline-event">
               <span class="dot dot-info"></span>
@@ -1506,169 +1432,6 @@ future      </span>
                 </div>
               </div>
             </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 PR #2 opened — feat(#16): PR-B2 — implement 12 by-route handlers</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 18:40 CEST
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-merged" id="task-B4">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">B4</span>
-          <span class="badge badge-merged">MERGED</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 20, 22:55 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-        </div>
-
-          <div class="task-prs">
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkdb-api/pull/4" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oinkdb-api</span>
-                <span class="pr-num mono">#4</span>
-              </a>
-          </div>
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(10 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 22:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B4 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:35 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:15 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:15 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B4 Mike gate: signal-gateway.service systemd re-enable or keep manual?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B4 Mike gate: Cutover requires Mike's explicit go-ahead</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B4 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 05:16 CEST
-                    · <span class="filepath">TASK-B4-plan.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B4 merged via PR #4 @52303fc</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 19:33 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B4 PR #4 opened — feat(#16): PR-B4 — WG handlers (4 endpoints) — CLOSES Phase 2</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 19:33 CEST
-                </div>
-              </div>
-            </li>
           </ol>
       </details>
     </article>
@@ -1863,6 +1626,127 @@ future      </span>
                 </div>
                 <div class="timeline-meta mono muted">
                   Apr 19, 18:05 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-B4">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">B4</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 20, 22:55 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(8 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 22:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B4 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:35 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:15 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:15 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B4 Mike gate: signal-gateway.service systemd re-enable or keep manual?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B4 Mike gate: Cutover requires Mike's explicit go-ahead</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B4 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 05:16 CEST
+                    · <span class="filepath">TASK-B4-plan.md</span>
                 </div>
               </div>
             </li>
@@ -2184,11 +2068,14 @@ future      </span>
                 <span class="pr-repo mono">oinkdb-api</span>
                 <span class="pr-num mono">#3</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkdb-api/commit/401b770bc4f39494888a70b890b81e0d000ee2c2" target="_blank" rel="noopener" title="merge commit">
+                  401b770
+                </a>
           </div>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(21 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(20 events)</span></summary>
           <ol class="timeline">
             <li class="timeline-event">
               <span class="dot dot-info"></span>
@@ -2436,18 +2323,6 @@ future      </span>
                 </div>
                 <div class="timeline-meta mono muted">
                   Apr 18, 19:31 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 PR #3 opened — feat(#16): PR-B3+B5 — filtered handlers (13) + registry endpoints (2)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 19:30 CEST
                 </div>
               </div>
             </li>
@@ -3048,14 +2923,6 @@ future      </span>
         </div>
 
           <div class="task-prs">
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/121" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oinkfarm</span>
-                <span class="pr-num mono">#121</span>
-              </a>
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkdb-api/pull/1" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oinkdb-api</span>
-                <span class="pr-num mono">#1</span>
-              </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/149" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#149</span>
@@ -3072,7 +2939,7 @@ future      </span>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(26 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(23 events)</span></summary>
           <ol class="timeline">
             <li class="timeline-event">
               <span class="dot dot-info"></span>
@@ -3356,42 +3223,6 @@ future      </span>
                 <div class="timeline-meta mono muted">
                   Apr 19, 18:03 CEST
                     · <span class="filepath">TASK-B1-plan.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B1 merged via PR #1 @b4b4a52</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 18:28 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B1 PR #1 opened — feat(#16): PR-B1 scaffold — 28 /signals/* endpoints returning 501 [retroactive]</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 18:28 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B1 PR #121 opened — feat(#16): scaffold signals-by-route API endpoints (PR-B1)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 16:19 CEST
                 </div>
               </div>
             </li>
@@ -4129,6 +3960,9 @@ future      </span>
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#19</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/38eb8e8799f237bdc907e87e5044135a1f117023" target="_blank" rel="noopener" title="merge commit">
+                  38eb8e8
+                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/5" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#5</span>
@@ -4137,7 +3971,7 @@ future      </span>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(14 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(13 events)</span></summary>
           <ol class="timeline">
             <li class="timeline-event">
               <span class="dot dot-pass"></span>
@@ -4304,18 +4138,6 @@ future      </span>
                 </div>
               </div>
             </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>A2 PR #19 opened — Part of #16 — Phase 2 PR-A2 (lifecycle-events tee)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 17:11 CEST
-                </div>
-              </div>
-            </li>
           </ol>
       </details>
     </article>
@@ -4343,11 +4165,14 @@ future      </span>
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#125</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/3b5453b7036337e593b46eb02a496df251885e4b" target="_blank" rel="noopener" title="merge commit">
+                  3b5453b
+                </a>
           </div>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(10 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(9 events)</span></summary>
           <ol class="timeline">
             <li class="timeline-event">
               <span class="dot dot-pass"></span>
@@ -4423,18 +4248,6 @@ future      </span>
                 <div class="timeline-meta mono muted">
                   Apr 18, 23:54 CEST
                     · <span class="filepath">A3-VIGIL-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>A3 PR #125 opened — feat(micro-gate): auto-populate filled_at for MARKET orders (A3)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 23:50 CEST
                 </div>
               </div>
             </li>
@@ -5204,27 +5017,32 @@ future      </span>
         </div>
 
           <div class="task-prs">
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/17" target="_blank" rel="noopener">
-                <span class="pr-repo mono">signal-gateway</span>
-                <span class="pr-num mono">#17</span>
-              </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/18" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#18</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/9fa2d1937da5a16aef5834645abd504a5eff2df4" target="_blank" rel="noopener" title="merge commit">
+                  9fa2d19
+                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/126" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#126</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/5b242c567d0df4b8b25d3866e711f15d772e685a" target="_blank" rel="noopener" title="merge commit">
+                  5b242c5
+                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/4" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#4</span>
               </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/3d60538acc0fb696b41da151d9062cd9896ad790" target="_blank" rel="noopener" title="merge commit">
+                  3d60538
+                </a>
           </div>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(18 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(14 events)</span></summary>
           <ol class="timeline">
             <li class="timeline-event">
               <span class="dot dot-pass"></span>
@@ -5299,30 +5117,6 @@ future      </span>
                 <div class="timeline-meta mono muted">
                   Apr 19, 01:19 CEST
                     · <span class="filepath">A1-GUARDIAN-PHASE1-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>A1 PR #4 opened — feat(A1): lifecycle event instrumentation + vendored event_store</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 19, 01:12 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>A1 PR #126 opened — feat(A1): extend signal_events schema + fix zero-event root cause</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 19, 01:11 CEST
                 </div>
               </div>
             </li>
@@ -5427,30 +5221,6 @@ future      </span>
                 </div>
               </div>
             </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>A1 PR #18 opened — Part of #16 — Phase 2 PR-A1 (Rename Pass A)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 16:41 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>A1 PR #17 opened — Part of #16 — Phase 2 PR-A1 (Rename Pass A)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 16:20 CEST
-                </div>
-              </div>
-            </li>
           </ol>
       </details>
     </article>
@@ -5477,7 +5247,7 @@ future      </span>
         <div class="agent-meta mono">
             task: A171
         </div>
-        <div class="agent-meta mono muted">2m ago</div>
+        <div class="agent-meta mono muted">16m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -5489,7 +5259,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B4
         </div>
-        <div class="agent-meta mono muted">4m ago</div>
+        <div class="agent-meta mono muted">18m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -5501,7 +5271,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">4h 57m ago</div>
+        <div class="agent-meta mono muted">5h 10m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -5513,7 +5283,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">5h 6m ago</div>
+        <div class="agent-meta mono muted">5h 19m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -5525,7 +5295,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">9h 27m ago</div>
+        <div class="agent-meta mono muted">9h 41m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -5537,7 +5307,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">10h 11m ago</div>
+        <div class="agent-meta mono muted">10h 24m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -5549,7 +5319,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B8
         </div>
-        <div class="agent-meta mono muted">13h 18m ago</div>
+        <div class="agent-meta mono muted">13h 32m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -5561,7 +5331,7 @@ future      </span>
         <div class="agent-meta mono">
             task: B8
         </div>
-        <div class="agent-meta mono muted">13h 23m ago</div>
+        <div class="agent-meta mono muted">13h 37m ago</div>
       </div>
     </div>
   </div>
@@ -5665,12 +5435,12 @@ No new merges or PRs this half-hour — agents are in the review-and-verify lull
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">3c70d5a3458a</span>    </div>
+checkpoint@<span class="mono">491db5f22b35</span>    </div>
     <div>
         Last orchestrator cycle: Apr 20, 22:57 CEST
     </div>
     <div>
-      generated Apr 20, 22:59 CEST
+      generated Apr 20, 23:13 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>

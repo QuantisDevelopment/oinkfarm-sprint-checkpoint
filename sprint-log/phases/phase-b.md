@@ -13,10 +13,10 @@
 
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
-| [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) + [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) + [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
+| [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 20, 22:55 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 20, 15:15 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
-| [B4](../tasks/B4-b4.md) | 🟡 STANDARD | MERGED | — | [oinkdb-api#4](https://github.com/QuantisDevelopment/oinkdb-api/pull/4) | Apr 20, 22:55 CEST · `DECISION_RESOLVED` | anvil · forge · hermes |
+| [B4](../tasks/B4-b4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 22:55 CEST · `DECISION_RESOLVED` | forge · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 20, 09:02 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | MERGED | — | — | Apr 20, 08:46 CEST · `MERGED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 20, 12:26 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |

@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 296
+- **Total events:** 283
 - **Last 24h:** 156 (rate 6.5/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -74,17 +74,6 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `B1` | PR_OPENED (pr=121) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A1` | PR_OPENED (pr=17) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A1` | PR_OPENED (pr=18) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A2` | PR_OPENED (pr=19) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B1` | PR_OPENED (pr=1) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B2` | PR_OPENED (pr=2) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B3` | PR_OPENED (pr=3) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B4` | MERGED with no CANARY_STARTED within 2h |
-| 🟠 WARN | `A3` | PR_OPENED (pr=125) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A1` | PR_OPENED (pr=126) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A1` | PR_OPENED (pr=4) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A2` | PR_OPENED (pr=5) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A4` | PR_OPENED (pr=7) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A7` | PR_OPENED (pr=130) with no REVIEW_POSTED within 24h |
@@ -106,7 +95,7 @@ _No open DECISION_NEEDED events._
 | 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🔴 stale | 66 |
 | 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 52 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
-| ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 101 |
+| ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 88 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
 
@@ -158,7 +147,7 @@ _No open DECISION_NEEDED events._
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | 🧪 CANARY | PENDING |
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
-| `B4` | B4 | 🟡 STANDARD | — | MERGED | — |
+| `B4` | B4 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `B5` | B5 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B6` | B6 | 🟡 STANDARD | — | MERGED | — |
 | `B7` | B7 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
@@ -197,4 +186,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*9/27 tasks DONE · Last auto-regenerated: 22:59 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/27 tasks DONE · Last auto-regenerated: 23:13 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

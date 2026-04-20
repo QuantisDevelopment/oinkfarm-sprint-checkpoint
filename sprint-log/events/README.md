@@ -7,8 +7,8 @@ Append-only chronological feed of every significant event in the OinkFarm Implem
 | Date | Events | File |
 |---|---|---|
 | 2026-04-20 | 153 | [2026-04-20.md](2026-04-20.md) |
-| 2026-04-19 | 121 | [2026-04-19.md](2026-04-19.md) |
-| 2026-04-18 | 22 | [2026-04-18.md](2026-04-18.md) |
+| 2026-04-19 | 119 | [2026-04-19.md](2026-04-19.md) |
+| 2026-04-18 | 11 | [2026-04-18.md](2026-04-18.md) |
 
 ## Event types
 
