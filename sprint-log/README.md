@@ -4,70 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 292
-- **Last 24h:** 165 (rate 6.88/h)
+- **Total events:** 310
+- **Last 24h:** 182 (rate 7.58/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (20 events)
+### Last 1 hour (38 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 20, 23:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | hermes | Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FOR |
-| Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B9` | forge | B9 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B12` | forge | B12 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B13` | forge | B13 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | oinkv | Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
+| Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
+| Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
+| Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
+| Apr 20, 23:30 CEST | `CANARY_STARTED` | `B6` | guardian | B6 canary started |
 
-### Last 4 hours (26 events)
+### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 20, 23:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | hermes | Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FOR |
-| Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B9` | forge | B9 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B12` | forge | B12 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B13` | forge | B13 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | oinkv | Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
+| Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
+| Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
+| Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
+| Apr 20, 23:30 CEST | `CANARY_STARTED` | `B6` | guardian | B6 canary started |
 
-### Last 24 hours (165 events)
+### Last 24 hours (182 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 20, 23:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:27 CEST | `SPRINT_NOTE` | `—` | hermes | Hermes-ops flushed nine Mike-gates at 22:54–22:55 CEST in a single batch, most of them Heavy Hybrid roadmap questions that were blocking FOR |
-| Apr 20, 23:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B9` | forge | B9 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B12` | forge | B12 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B13` | forge | B13 plan published |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | oinkv | Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses  |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `A10` | hermes | A10 decision: A10 database merge shipped as PR #135 (commit 80f4fe0a) on 2026-04-19. Canary subsequently re-ran by GUARDIAN on 2026-04-20 pe |
-| Apr 20, 22:55 CEST | `DECISION_RESOLVED` | `B4` | hermes | B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead. |
-| Apr 20, 22:54 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies. |
+| Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
+| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
+| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
+| Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
+| Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
+| Apr 20, 23:30 CEST | `CANARY_STARTED` | `B6` | guardian | B6 canary started |
 
 ## 🧭 Needs Mike
 
@@ -77,27 +77,17 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A2` | PR_OPENED (pr=5) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A4` | PR_OPENED (pr=7) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A7` | PR_OPENED (pr=130) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A5` | PR_OPENED (pr=131) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A6` | PR_OPENED (pr=20) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A9` | PR_OPENED (pr=8) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A9` | PR_OPENED (pr=132) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `A11` | PR_OPENED (pr=133) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A8` | PR_OPENED (pr=134) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `A10` | PR_OPENED (pr=135) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B6` | MERGED with no CANARY_STARTED within 2h |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 23:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 29 |
+| 🪽 **Hermes** | Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 30 |
+| 🛡️ **GUARDIAN** | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | 🟢 fresh | 83 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🟢 fresh | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 2 |
-| 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🔴 stale | 66 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
@@ -151,10 +141,10 @@ _No open DECISION_NEEDED events._
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B4` | B4 | 🟡 STANDARD | — | 📋 PLANNED | — |
-| `B5` | B5 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
-| `B6` | B6 | 🟡 STANDARD | — | MERGED | — |
-| `B7` | B7 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
-| `B8` | B8 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
+| `B5` | B5 | 🟡 STANDARD | — | ✅ DONE | PASS |
+| `B6` | B6 | 🟡 STANDARD | — | ✅ DONE | PASS |
+| `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
+| `B8` | B8 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B9` | B9 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `B10` | B10 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B11` | B11 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -172,10 +162,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | mike |  |
 | • | SYSTEM |  |
 | 🔍 | VIGIL | Code Review + Scoring |
@@ -189,4 +179,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*9/27 tasks DONE · Last auto-regenerated: 23:30 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 23:41 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
