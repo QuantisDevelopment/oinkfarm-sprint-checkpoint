@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-20T09:21:18+00:00",
-  "generated_at_cest": "2026-04-20T11:21:18+02:00",
+  "generated_at_utc": "2026-04-20T09:45:12+00:00",
+  "generated_at_cest": "2026-04-20T11:45:12+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -3099,9 +3099,9 @@
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "workspace": "/home/oinkv/forge-workspace",
-      "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "3h 25m ago",
-      "light": "red",
+      "last_active": "2026-04-20T09:43:00+00:00",
+      "last_active_human": "2m ago",
+      "light": "green",
       "heartbeat": {
         "current_phase": "B"
       }
@@ -3112,14 +3112,14 @@
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "workspace": "/home/oinkv/anvil-workspace",
-      "last_active": "2026-04-20T07:40:56+00:00",
-      "last_active_human": "1h 40m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T09:38:38+00:00",
+      "last_active_human": "6m ago",
+      "light": "green",
       "heartbeat": {
         "blockers": [
           "waiting_for_b5_canary_pass"
         ],
-        "branch": "anvil/B6-parser-extraction"
+        "branch": "anvil/B8-dedup-consolidation"
       }
     },
     {
@@ -3128,9 +3128,9 @@
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "workspace": "/home/oinkv/vigil-workspace",
-      "last_active": "2026-04-20T07:36:25+00:00",
-      "last_active_human": "1h 44m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T09:33:35+00:00",
+      "last_active_human": "11m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3139,9 +3139,9 @@
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "workspace": "/home/oinkv/guardian-workspace",
-      "last_active": "2026-04-20T07:59:28+00:00",
-      "last_active_human": "1h 21m ago",
-      "light": "yellow",
+      "last_active": "2026-04-20T09:36:27+00:00",
+      "last_active_human": "8m ago",
+      "light": "green",
       "heartbeat": {}
     },
     {
@@ -3150,8 +3150,8 @@
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
       "workspace": "/home/oinkv/hermes-workspace",
-      "last_active": "2026-04-20T09:21:18+00:00",
-      "last_active_human": "0s ago",
+      "last_active": "2026-04-20T09:45:11+00:00",
+      "last_active_human": "1s ago",
       "light": "green",
       "heartbeat": {}
     },
@@ -3162,12 +3162,21 @@
       "role": "Plan Auditor",
       "workspace": "/home/oinkv/forge-workspace/plans",
       "last_active": "2026-04-20T05:55:28+00:00",
-      "last_active_human": "3h 25m ago",
+      "last_active_human": "3h 49m ago",
       "light": "red",
       "heartbeat": {}
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-20T09:45:11+00:00",
+      "time_local": "2026-04-20T11:45+02:00",
+      "header": "SPRINT STATUS @ 11:45",
+      "actions": [],
+      "next": "merge B8 PR (squash, `--delete-branch`, review scores in body), write `B8-MERGED.marker`, dispatch GUARDIAN canary (self-start expected per skill), dispatch ANVIL to await B5 T+24h checkpoint before opening B6 PR.",
+      "blocker": null,
+      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_11-45-11.md"
+    },
     {
       "time_utc": "2026-04-20T09:21:18+00:00",
       "time_local": "2026-04-20T11:21+02:00",
@@ -3665,21 +3674,6 @@
       "next": "Poll /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-COMPLETE.marker. If landed, — Poll A10 canary file for organic post-merge signals (id>2523).",
       "blocker": "none new. Existing standing items (no new push needed): - Phase B Wave 1 (B1–B5) plans awaiting your approval — FORGE HEARTBEAT §Mike Decision Flags has 12 questions queued (B4-APPROVE is the cutover gate). - Heavy Hybrid Roadmap Q-HH-1..Q-HH-6 also queued. - P0 SL integrity alert (4 active wrong-side SLs from MrM/Dal historical signals) is GUARDIAN-owned remediation — separate track from this orchestrator. ```",
       "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_21-08-44.md"
-    },
-    {
-      "time_utc": "2026-04-19T18:53:55+00:00",
-      "time_local": "2026-04-19T20:53+02:00",
-      "header": "SPRINT STATUS @ 20:53 CEST (2026-04-19)",
-      "actions": [
-        "Verified A10 merge + canary file state (GUARDIAN self-started canary 20:31, no re-dispatch needed).",
-        "Dispatched OinkV Phase B Wave 1 staleness audit (B1-B5) — task eda27a23 running on main lane since 20:53. Orthogonal parallel prep per \"Human-Gate Blocked != Idle\" rule.",
-        "Wrote OINKV-AUDIT-PHASE-B-DISPATCHED.marker to prevent re-dispatch on next cycle.",
-        "First dispatch attempt hit \"Unknown agent id oinkv\" (OinkV is registered as `main`) — corrected, re-dispatched, verified via task_runs.",
-        "No zombies, no stuck running tasks, no Mike-direct dispatches this hour."
-      ],
-      "next": "poll for OINKV-AUDIT-PHASE-B-COMPLETE.marker and organic post-merge signals (id>2523) landing in A10-CANARY.md; respond to whichever lands first. [SILENT] if neither has moved.",
-      "blocker": "• **A10 ship-it: DONE** (Hermes executed append-only merge 18:29Z per council authority — no further ship-it action required). • **Phase B Wave 1 approval** still pending your review of /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md + 12 design questions. OinkV audit of plans now running in parallel — approval gate is yours alone once audit lands. • Separate: P0 SL Integrity alert (4 ACTIVE wrong-side-SL signals) escalated by GUARDIAN at 20:15Z is awaiting your remediation decision (not sprint-blocking). ```",
-      "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-19_20-53-55.md"
     }
   ],
   "plans": [
@@ -3966,21 +3960,15 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-20T09:21:18+00:00",
-    "time_local": "2026-04-20T11:21+02:00",
-    "header": "SPRINT STATUS @ 11:21 CEST (09:21 UTC)",
-    "actions": [
-      "Verified: A1/A2/A3 (and A4-A11 + B1/B2/B3/B5) all merged+canaried long ago; prompt's \"A1/A2/A3\" directive is stale — trusting filesystem state per skill.",
-      "Verified B5 canary is passive-clean (2/10 post-reset signals, zero P0/P1/P2), B6 self-gate is correct, B7 Phase 0 approved gated on B6 merge, B8 Phase 0 approved 09:38 CEST.",
-      "Detected ANVIL idle since 09:37 UTC (~1h45m) despite B8 acknowledged as \"independent, can start from main once approved\" in its own HEARTBEAT.",
-      "No Mike activity in last 60 min, no zombie running tasks, no blocking GH issues on target scope.",
-      "Dispatched ANVIL B8 Phase 1 nudge (task_runs confirms `running`) with distilled SQL parity + scope boundary constraints inlined from the consolidated approval marker."
-    ],
-    "next": "Next cycle — poll for `anvil/B8-dedup-consolidation` branch push / oinkfarm PR open; if present, dispatch VIGIL+GUARDIAN+Hermes Phase 1 reviews in parallel. Also check B5 T+24h checkpoint and B6 PR-open once B5 canary advances.",
+    "time_utc": "2026-04-20T09:45:11+00:00",
+    "time_local": "2026-04-20T11:45+02:00",
+    "header": "SPRINT STATUS @ 11:45",
+    "actions": [],
+    "next": "merge B8 PR (squash, `--delete-branch`, review scores in body), write `B8-MERGED.marker`, dispatch GUARDIAN canary (self-start expected per skill), dispatch ANVIL to await B5 T+24h checkpoint before opening B6 PR.",
     "blocker": null,
-    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_11-21-18.md"
+    "path": "/home/oinkv/.hermes/cron/output/c5fe3ace64fd/2026-04-20_11-45-11.md"
   },
-  "commit": "d8df7494b661",
+  "commit": "f60c3faf073c",
   "recent_events": [
     {
       "ts": "2026-04-20T00:43:57+00:00",

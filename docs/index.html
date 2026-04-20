@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-20T09:21:18+00:00">
+<body data-generated="2026-04-20T09:45:12+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-20T09:21:18+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-20T09:45:12+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-20T11:21:18+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-20T11:45:12+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 20, 11:21 CEST</span>
+        <span class="mono" id="last-regen">Apr 20, 11:45 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -2203,54 +2203,54 @@ future      </span>
       <span class="muted mono">heartbeat mtime</span>
     </div>
     <div class="agent-list">
-      <div class="agent agent-light-red">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🔥</span>
           <span class="agent-name">FORGE</span>
-          <span class="agent-light light-red" title="red"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Technical Execution Planner</div>
         <div class="agent-meta mono">
             idle
  · B        </div>
-        <div class="agent-meta mono muted">3h 25m ago</div>
+        <div class="agent-meta mono muted">2m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">⚒️</span>
           <span class="agent-name">ANVIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Implementation Lead</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 40m ago</div>
-          <div class="agent-meta mono muted">branch: anvil/B6-parser-extraction</div>
+        <div class="agent-meta mono muted">6m ago</div>
+          <div class="agent-meta mono muted">branch: anvil/B8-dedup-consolidation</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🔍</span>
           <span class="agent-name">VIGIL</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Code Review + Scoring</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 44m ago</div>
+        <div class="agent-meta mono muted">11m ago</div>
       </div>
-      <div class="agent agent-light-yellow">
+      <div class="agent agent-light-green">
         <div class="agent-top">
           <span class="agent-emoji">🛡️</span>
           <span class="agent-name">GUARDIAN</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
+          <span class="agent-light light-green" title="green"></span>
         </div>
         <div class="agent-meta muted">Data Integrity + Canary</div>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 21m ago</div>
+        <div class="agent-meta mono muted">8m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -2262,7 +2262,7 @@ future      </span>
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">0s ago</div>
+        <div class="agent-meta mono muted">1s ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -2274,7 +2274,7 @@ future      </span>
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">3h 25m ago</div>
+        <div class="agent-meta mono muted">3h 49m ago</div>
       </div>
     </div>
   </div>
@@ -2291,6 +2291,11 @@ future      </span>
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 20, 11:45 CEST</div>
+            <div class="narrative-header">SPRINT STATUS @ 11:45</div>
+            <div class="narrative-next"><span class="pill pill-info">next</span> merge B8 PR (squash, `--delete-branch`, review scores in body), write `B8-MERGED.marker`, dispatch GUARDIAN canary (self-start expected per skill), dispatch ANVIL to await B5 T+24h checkpoint before opening B6 PR.</div>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 20, 11:21 CEST</div>
             <div class="narrative-header">SPRINT STATUS @ 11:21 CEST (09:21 UTC)</div>
@@ -2564,14 +2569,6 @@ future      </span>
             <div class="narrative-next"><span class="pill pill-info">next</span> Poll /home/oinkv/forge-workspace/plans/OINKV-AUDIT-PHASE-B-COMPLETE.marker. If landed, — Poll A10 canary file for organic post-merge signals (id>2523).</div>
             <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> none new. Existing standing items (no new push needed): - Phase B Wave 1 (B1–B5) plans awaiting your approval — FORGE HEARTBEAT §Mike Decision Flags has 12 questions queued (B4-APPROVE is the cutover gate). - Heavy Hybrid Roadmap Q-HH-1..Q-HH-6 also queued. - P0 SL integrity alert (4 active wrong-side SLs from MrM/Dal historical signals) is GUARDIAN-owned remediation — separate track from this orchestrator. ```</div>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 19, 20:53 CEST</div>
-            <div class="narrative-header">SPRINT STATUS @ 20:53 CEST (2026-04-19)</div>
-            <ul class="narrative-actions">
-<li>Verified A10 merge + canary file state (GUARDIAN self-started canary 20:31, no re-dispatch needed).</li><li>Dispatched OinkV Phase B Wave 1 staleness audit (B1-B5) — task eda27a23 running on main lane since 20:53. Orthogonal parallel prep per "Human-Gate Blocked != Idle" rule.</li><li>Wrote OINKV-AUDIT-PHASE-B-DISPATCHED.marker to prevent re-dispatch on next cycle.</li><li>First dispatch attempt hit "Unknown agent id oinkv" (OinkV is registered as `main`) — corrected, re-dispatched, verified via task_runs.</li><li>No zombies, no stuck running tasks, no Mike-direct dispatches this hour.</li>            </ul>
-            <div class="narrative-next"><span class="pill pill-info">next</span> poll for OINKV-AUDIT-PHASE-B-COMPLETE.marker and organic post-merge signals (id>2523) landing in A10-CANARY.md; respond to whichever lands first. [SILENT] if neither has moved.</div>
-            <div class="narrative-blocker"><span class="pill pill-warn">blocker</span> • **A10 ship-it: DONE** (Hermes executed append-only merge 18:29Z per council authority — no further ship-it action required). • **Phase B Wave 1 approval** still pending your review of /home/oinkv/forge-workspace/plans/PHASE-B-SUMMARY.md + 12 design questions. OinkV audit of plans now running in parallel — approval gate is yours alone once audit lands. • Separate: P0 SL Integrity alert (4 ACTIVE wrong-side-SL signals) escalated by GUARDIAN at 20:15Z is awaiting your remediation decision (not sprint-blocking). ```</div>
-        </li>
       </ol>
     </div>
 
@@ -2814,12 +2811,12 @@ future      </span>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">d8df7494b661</span>    </div>
+checkpoint@<span class="mono">f60c3faf073c</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 20, 11:21 CEST
+        Last orchestrator cycle: Apr 20, 11:45 CEST
     </div>
     <div>
-      generated Apr 20, 11:21 CEST
+      generated Apr 20, 11:45 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
