@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-20 12:28 UTC · Read time: ~8 min*
+*Last updated: 2026-04-20 13:45 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,7 +8,7 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Where We Are Today (one paragraph)
 
-**Phase A is complete** — all 11 tasks (A1-A11) shipped in the last 48 hours, closing the data-correctness foundation. **Phase B is in flight** with 8 of 15 tasks merged (B1 database abstraction layer, B2 PostgreSQL schema + one-time migration, B3 parallel-write verification scaffold, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition). **FORGE has published all 15 Phase B plans plus a Phase C summary and a Heavy Hybrid roadmap.** Phase C is fully scoped (7 tasks), Phase D remains deferred under the rule decided today. **Live risks:** 5 Phase A canaries came back FAIL overnight on 2026-04-19 (A4, A6, A9, A10) — they are tagged BLOCKED on the dashboard and need GUARDIAN follow-up; B13 and B14 show "MERGED with no CANARY_STARTED within 2h" which is a gap the dashboard flagged. **Nine Mike-gates are open**, including the big one: B4 PostgreSQL cutover approval, earliest on **2026-04-26** (7 consecutive clean reconciliation days after B3 merged on 2026-04-19). Phase C starts **late May 2026** after Phase B quality gates pass.
+**Phase A is complete AND proven** — all 11 tasks (A1-A11) shipped in the last 48 hours, and as of 13:08 UTC today the four canary failures (A4, A6, A9, A10) that were red overnight have been re-run and all PASS, with A10 validating 17 live signals against the recovered historical dataset at zero drift. **Phase B is in flight** with 8 of 15 tasks merged (B1 database abstraction layer, B2 PostgreSQL schema + one-time migration, B3 parallel-write verification scaffold, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition). **FORGE has published all 15 Phase B plans plus a Phase C summary and a Heavy Hybrid roadmap.** Phase C is fully scoped (7 tasks), Phase D remains deferred. **Live risks are down to housekeeping:** GUARDIAN confirmed the B3 dual-write gap is intentional (`OINK_DB_DUAL_WRITE=false` is correct until B3 reconciliation tooling is live), and the remaining warnings are stale PR-metadata gaps on already-merged tasks, not real blockers. **Nine Mike-gates are open**, including the big one: B4 PostgreSQL cutover approval, earliest on **2026-04-26** (7 consecutive clean reconciliation days after B3 merged 2026-04-19; clock still clean). Phase C starts **late May 2026** after Phase B quality gates pass.
 
 ## Last 48 Hours — The Story
 
