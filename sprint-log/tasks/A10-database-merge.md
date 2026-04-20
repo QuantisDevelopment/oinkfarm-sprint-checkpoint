@@ -6,7 +6,7 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#135](https://github.com/QuantisDevelopment/oinkfarm/pull/135)  
-**Merge commit:** —
+**Merge commit:** [80f4fe0aabd4](https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13)
 
 ## One-liner
 
@@ -30,6 +30,7 @@ _None._
 ## Artifacts (Full Index)
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A10.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A10.md) — 27.5 KB
+- **Merge commit:** [`80f4fe0aabd4`](https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13) (oinkfarm PR #135)
 - **PR(s):** [oinkfarm#135](https://github.com/QuantisDevelopment/oinkfarm/pull/135)
 
 ## Lessons Learned

@@ -6,7 +6,7 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oink-sync#8](https://github.com/QuantisDevelopment/oink-sync/pull/8) + [oinkfarm#132](https://github.com/QuantisDevelopment/oinkfarm/pull/132)  
-**Merge commit:** —
+**Merge commit:** [27196487f966](https://github.com/QuantisDevelopment/oink-sync/commit/27196487f966fc6e24d2a412b7245ac8c9883c50) + [e7cfdb8e22ae](https://github.com/QuantisDevelopment/oinkfarm/commit/e7cfdb8e22aed4a3c41b33a126f9c58012f0bcf5)
 
 ## One-liner
 
@@ -30,6 +30,8 @@ _None._
 ## Artifacts (Full Index)
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A9.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A9.md) — 21.6 KB
+- **Merge commit:** [`27196487f966`](https://github.com/QuantisDevelopment/oink-sync/commit/27196487f966fc6e24d2a412b7245ac8c9883c50) (oink-sync PR #8)
+- **Merge commit:** [`e7cfdb8e22ae`](https://github.com/QuantisDevelopment/oinkfarm/commit/e7cfdb8e22aed4a3c41b33a126f9c58012f0bcf5) (oinkfarm PR #132)
 - **PR(s):** [oink-sync#8](https://github.com/QuantisDevelopment/oink-sync/pull/8) · [oinkfarm#132](https://github.com/QuantisDevelopment/oinkfarm/pull/132)
 
 ## Lessons Learned

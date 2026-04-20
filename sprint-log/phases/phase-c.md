@@ -25,7 +25,7 @@ _No waves yet for this phase._
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 49m | hard_reject · soft_flag |
+| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 51m | hard_reject · soft_flag |
 
 ---
 

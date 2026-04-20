@@ -68,20 +68,20 @@
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 49m | APPROVE · DEFER |
-| `Q-B1-1` | PostgreSQL driver: psycopg3 vs psycopg2? | `B1` | 49m | psycopg3 · psycopg2 |
-| `Q-B1-2` | oink_db.py location? | `B1` | 49m | canonical · other |
-| `Q-B2-1` | PostgreSQL hosting: same server or separate? | `B2` | 49m | same · separate |
-| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 49m | now · later |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 49m | backfill · accept · block |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 49m | pg_trigger · check_only |
-| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 49m | 7d · 14d |
-| `Q-B4-4` | signal-gateway.service systemd re-enable or keep manual? | `B4` | 49m | re-enable · keep_manual |
-| `Q-B4-5` | .openclaw/workspace fork-sync or re-point to canonical? | `B4` | 49m | fork_sync · repoint |
-| `Q-HH-1` | Redis hosting: same server or separate? | `B12` | 49m | same · separate |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 49m | maxlen · time_based |
-| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 49m | single · multi |
-| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 49m | db_revoke · app_guard |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 51m | APPROVE · DEFER |
+| `Q-B1-1` | PostgreSQL driver: psycopg3 vs psycopg2? | `B1` | 51m | psycopg3 · psycopg2 |
+| `Q-B1-2` | oink_db.py location? | `B1` | 51m | canonical · other |
+| `Q-B2-1` | PostgreSQL hosting: same server or separate? | `B2` | 51m | same · separate |
+| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 51m | now · later |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 51m | backfill · accept · block |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 51m | pg_trigger · check_only |
+| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 51m | 7d · 14d |
+| `Q-B4-4` | signal-gateway.service systemd re-enable or keep manual? | `B4` | 51m | re-enable · keep_manual |
+| `Q-B4-5` | .openclaw/workspace fork-sync or re-point to canonical? | `B4` | 51m | fork_sync · repoint |
+| `Q-HH-1` | Redis hosting: same server or separate? | `B12` | 51m | same · separate |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 51m | maxlen · time_based |
+| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 51m | single · multi |
+| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 51m | db_revoke · app_guard |
 
 ---
 

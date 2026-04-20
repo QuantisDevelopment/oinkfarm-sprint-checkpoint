@@ -12,7 +12,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (28 events)
+### Last 1 hour (26 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
@@ -31,7 +31,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B3` | forge | B3 Mike gate: Minimum verification period: 7 or 14 days? |
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: signal-gateway.service systemd re-enable or keep manual? |
 
-### Last 4 hours (41 events)
+### Last 4 hours (40 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
@@ -73,23 +73,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 49m | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 49m | APPROVE · DEFER | generic |
-| `Q-B1-1` | PostgreSQL driver: psycopg3 vs psycopg2? | `B1` | 49m | psycopg3 · psycopg2 | phase-b |
-| `Q-B1-2` | oink_db.py location? | `B1` | 49m | canonical · other | phase-b |
-| `Q-B2-1` | PostgreSQL hosting: same server or separate? | `B2` | 49m | same · separate | phase-b |
-| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 49m | now · later | phase-b |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 49m | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 49m | pg_trigger · check_only | phase-b |
-| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 49m | 7d · 14d | phase-b |
-| `Q-B4-4` | signal-gateway.service systemd re-enable or keep manual? | `B4` | 49m | re-enable · keep_manual | phase-b |
-| `Q-B4-5` | .openclaw/workspace fork-sync or re-point to canonical? | `B4` | 49m | fork_sync · repoint | phase-b |
-| `Q-HH-1` | Redis hosting: same server or separate? | `B12` | 49m | same · separate | heavy-hybrid |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 49m | maxlen · time_based | heavy-hybrid |
-| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 49m | single · multi | heavy-hybrid |
-| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 49m | db_revoke · app_guard | heavy-hybrid |
-| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 49m | hard_reject · soft_flag | heavy-hybrid |
-| `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | `—` | 49m | mike_guardian_joint | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 51m | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 51m | APPROVE · DEFER | generic |
+| `Q-B1-1` | PostgreSQL driver: psycopg3 vs psycopg2? | `B1` | 51m | psycopg3 · psycopg2 | phase-b |
+| `Q-B1-2` | oink_db.py location? | `B1` | 51m | canonical · other | phase-b |
+| `Q-B2-1` | PostgreSQL hosting: same server or separate? | `B2` | 51m | same · separate | phase-b |
+| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 51m | now · later | phase-b |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 51m | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 51m | pg_trigger · check_only | phase-b |
+| `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 51m | 7d · 14d | phase-b |
+| `Q-B4-4` | signal-gateway.service systemd re-enable or keep manual? | `B4` | 51m | re-enable · keep_manual | phase-b |
+| `Q-B4-5` | .openclaw/workspace fork-sync or re-point to canonical? | `B4` | 51m | fork_sync · repoint | phase-b |
+| `Q-HH-1` | Redis hosting: same server or separate? | `B12` | 51m | same · separate | heavy-hybrid |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 51m | maxlen · time_based | heavy-hybrid |
+| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 51m | single · multi | heavy-hybrid |
+| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 51m | db_revoke · app_guard | heavy-hybrid |
+| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 51m | hard_reject · soft_flag | heavy-hybrid |
+| `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | `—` | 51m | mike_guardian_joint | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -207,4 +207,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*5/27 tasks DONE · Last auto-regenerated: 12:45 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*5/27 tasks DONE · Last auto-regenerated: 12:47 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
