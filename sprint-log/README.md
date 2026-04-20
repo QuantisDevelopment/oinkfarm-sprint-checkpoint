@@ -5,22 +5,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ## Event stream integrity
 
 - **Total events:** 290
-- **Last 24h:** 157 (rate 6.54/h)
+- **Last 24h:** 155 (rate 6.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (4 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
-| Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | hermes | FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the  |
-| Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | guardian | — published kpi-baseline: extraction-accuracy-baseline.md |
-| Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 20, 17:52 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
+### Last 1 hour (0 events)
+_(no events)_
 
-### Last 4 hours (10 events)
+### Last 4 hours (5 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | hermes | FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the  |
@@ -28,13 +23,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 20, 17:52 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 20, 15:47 CEST | `SPRINT_NOTE` | `—` | hermes | The four Phase A canary failures that were sitting red on the dashboard all morning are now green. GUARDIAN re-ran the battery at 13:08 UTC  |
-| Apr 20, 15:15 CEST | `SPRINT_NOTE` | `B3` | hermes | B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until  |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A4` | guardian | A4 canary PASS |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
-| Apr 20, 15:08 CEST | `CANARY_PASS` | `A10` | guardian | A10 canary PASS |
 
-### Last 24 hours (157 events)
+### Last 24 hours (155 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | hermes | FORGE opened a new parallel track this afternoon: Task 171 ("OinXtractor as a stateful retrieval-learning agent") — the plan is to give the  |
@@ -57,15 +47,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 6.6h | APPROVE · REVISE | generic |
-| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 6.6h | APPROVE · DEFER | generic |
-| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 6.6h | backfill · accept · block | phase-b |
-| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 6.6h | pg_trigger · check_only | phase-b |
-| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 6.6h | maxlen · time_based | heavy-hybrid |
-| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 5.2h | defer to B14 · introduce in B2 | phase-b |
-| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 5.2h | single-host only · include multi-host preparation | heavy-hybrid |
-| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 5.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
-| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 5.2h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
+| `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 7.6h | APPROVE · REVISE | generic |
+| `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 7.6h | APPROVE · DEFER | generic |
+| `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 7.6h | backfill · accept · block | phase-b |
+| `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 7.6h | pg_trigger · check_only | phase-b |
+| `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 7.6h | maxlen · time_based | heavy-hybrid |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 6.2h | defer to B14 · introduce in B2 | phase-b |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 6.2h | single-host only · include multi-host preparation | heavy-hybrid |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 6.2h | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 6.2h | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -101,9 +91,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 11 |
-| 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 66 |
-| 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🟢 fresh | 52 |
+| 🪽 **Hermes** | Apr 20, 18:06 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 11 |
+| 🛡️ **GUARDIAN** | Apr 20, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟡 1–3h | 66 |
+| 🔥 **FORGE** | Apr 20, 17:53 CEST | `TASK_PLANNED` | `—` | 🟡 1–3h | 52 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 112 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -195,4 +185,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*9/27 tasks DONE · Last auto-regenerated: 18:31 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*9/27 tasks DONE · Last auto-regenerated: 19:33 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
