@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 311
+- **Total events:** 313
 - **Last 24h:** 180 (rate 7.5/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (28 events)
+### Last 1 hour (30 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
 | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
 | Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
@@ -28,12 +30,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
-| Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
-| Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
 
-### Last 4 hours (43 events)
+### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
 | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
 | Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
@@ -47,12 +49,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
-| Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
-| Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
 
 ### Last 24 hours (180 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
 | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
 | Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
@@ -66,8 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A10` | guardian | A10 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Lint-gap annotation: PR #133 has no GUARDIAN Phase 1 review to backfill from /home/oinkv/guardian-workspace/reviews/. Verified: A11-GUARDIAN |
-| Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
-| Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
 
 ## 🧭 Needs Mike
 
@@ -83,8 +83,8 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 31 |
-| 🛡️ **GUARDIAN** | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | 🟢 fresh | 83 |
+| 🪽 **Hermes** | Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 32 |
+| 🛡️ **GUARDIAN** | Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | 🟢 fresh | 84 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🟢 fresh | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🟡 1–3h | 2 |
@@ -179,4 +179,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*13/27 tasks DONE · Last auto-regenerated: 00:02 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 00:17 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
