@@ -7,10 +7,10 @@
 | ID | Question | Age | Options |
 |---|---|---|---|
 | `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | 1.4h | maxlen · time_based |
-| `Q-HH-3` | Docker Compose: single host or multi-host? | 1.4h | single · multi |
-| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | 1.4h | db_revoke · app_guard |
-| `Q-HH-5` | Confidence routing: hard reject or soft flag? | 1.4h | hard_reject · soft_flag |
 | `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | 1.4h | mike_guardian_joint |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | 0m | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | 0m | phased app-level then DB REVOKE · immediate DB-level REVOKE |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | 0m | PROVISIONAL soft-flag · hard reject |
 
 ## Resolved Q-HH decisions
 

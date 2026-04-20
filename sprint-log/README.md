@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 270
-- **Last 24h:** 192 (rate 8.0/h)
+- **Total events:** 274
+- **Last 24h:** 196 (rate 8.17/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject? |
 | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
 • B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
@@ -26,9 +30,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL checkpoint-reporting integration self-test |
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
 
-### Last 4 hours (45 events)
+### Last 4 hours (48 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject? |
 | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
 • B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
@@ -41,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
 | Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
 | Apr 20, 12:10 CEST | `CANARY_STARTED` | `B8` | guardian | B8 canary started |
-| Apr 20, 11:57 CEST | `MERGED` | `B8` | anvil | B8 merged via PR #26 @6879e25 |
-| Apr 20, 11:56 CEST | `PR_OPENED` | `B7` | anvil | B7 PR #27 opened — feat(B7): extract WG Bot parsers to parsers/wg_bot.py |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `A10` | forge | A10 Mike gate: Approve A10 merge algorithm + dedup strategy |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: Cutover requires Mike's explicit go-ahead |
 
-### Last 24 hours (192 events)
+### Last 24 hours (196 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject? |
 | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Hermes resolved 6 Phase B decisions (hermes_ops):
 • B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
@@ -61,10 +69,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | guardian | B7 canary started |
 | Apr 20, 12:17 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #27 @3f85c12 |
 | Apr 20, 12:10 CEST | `CANARY_STARTED` | `B8` | guardian | B8 canary started |
-| Apr 20, 11:57 CEST | `MERGED` | `B8` | anvil | B8 merged via PR #26 @6879e25 |
-| Apr 20, 11:56 CEST | `PR_OPENED` | `B7` | anvil | B7 PR #27 opened — feat(B7): extract WG Bot parsers to parsers/wg_bot.py |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `A10` | forge | A10 Mike gate: Approve A10 merge algorithm + dedup strategy |
-| Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B4` | forge | B4 Mike gate: Cutover requires Mike's explicit go-ahead |
 
 ## 🧭 Needs Mike
 
@@ -72,15 +76,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 |---|---|---|---|---|---|
 | `A10-APPROVE` | Approve A10 merge algorithm + dedup strategy | `A10` | 1.4h | APPROVE · REVISE | generic |
 | `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 1.4h | APPROVE · DEFER | generic |
-| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 1.4h | now · later | phase-b |
 | `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 1.4h | backfill · accept · block | phase-b |
 | `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 1.4h | pg_trigger · check_only | phase-b |
 | `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 1.4h | 7d · 14d | phase-b |
 | `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 1.4h | maxlen · time_based | heavy-hybrid |
-| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 1.4h | single · multi | heavy-hybrid |
-| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 1.4h | db_revoke · app_guard | heavy-hybrid |
-| `Q-HH-5` | Confidence routing: hard reject or soft flag? | `C2` | 1.4h | hard_reject · soft_flag | heavy-hybrid |
 | `Q-HH-6` | Phase D entry gate: who decides prerequisites are met? | `—` | 1.4h | mike_guardian_joint | heavy-hybrid |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 0m | defer to B14 · introduce in B2 | phase-b |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 0m | single-host only · include multi-host preparation | heavy-hybrid |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 0m | phased app-level then DB REVOKE · immediate DB-level REVOKE | heavy-hybrid |
+| `Q-HH-5` | Route low-confidence signals to PROVISIONAL state or hard-reject? | `C2` | 0m | PROVISIONAL soft-flag · hard reject | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -109,10 +113,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
+| 🔥 **FORGE** | Apr 20, 13:21 CEST | `DECISION_NEEDED` | `C2` | 🟢 fresh | 47 |
 | 🪽 **Hermes** | Apr 20, 13:18 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 7 |
 | ⚒️ **ANVIL** | Apr 20, 12:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 112 |
 | 🛡️ **GUARDIAN** | Apr 20, 12:26 CEST | `CANARY_STARTED` | `B7` | 🟢 fresh | 61 |
-| 🔥 **FORGE** | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `—` | 🟡 1–3h | 43 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
 
@@ -185,10 +189,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Emoji | Name | Role |
 |---|---|---|
+| 🔥 | FORGE | Technical Execution Planner |
 | 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
-| 🔥 | FORGE | Technical Execution Planner |
 | • | SYSTEM |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 
@@ -201,4 +205,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*5/27 tasks DONE · Last auto-regenerated: 13:20 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*5/27 tasks DONE · Last auto-regenerated: 13:22 CEST on 20 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

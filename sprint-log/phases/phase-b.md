@@ -10,18 +10,18 @@
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkfarm#121](https://github.com/QuantisDevelopment/oinkfarm/pull/121) + [oinkdb-api#1](https://github.com/QuantisDevelopment/oinkdb-api/pull/1) + [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
-| [B2](../tasks/B2-b2.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
+| [B2](../tasks/B2-b2.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 20, 13:21 CEST · `DECISION_NEEDED` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 20, 11:55 CEST · `DECISION_NEEDED` | anvil · forge · guardian · system |
 | [B4](../tasks/B4-b4.md) | 🟡 STANDARD | MERGED | — | [oinkdb-api#4](https://github.com/QuantisDevelopment/oinkdb-api/pull/4) | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | anvil · forge · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 20, 09:02 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | MERGED | — | — | Apr 20, 08:46 CEST · `MERGED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 20, 12:26 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | 🧪 CANARY | PENDING | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 20, 12:10 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
-| [B9](../tasks/B9-b9.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `DECISION_NEEDED` | forge |
+| [B9](../tasks/B9-b9.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 13:21 CEST · `DECISION_NEEDED` | forge |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:43 CEST · `TASK_PLANNED` | forge |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:45 CEST · `TASK_PLANNED` | forge |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 13:15 CEST · `DECISION_RESOLVED` | forge · hermes |
-| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | MERGED | — | [signal-gateway#3](https://github.com/QuantisDevelopment/signal-gateway/pull/3) + [signal-gateway#5](https://github.com/QuantisDevelopment/signal-gateway/pull/5) | Apr 20, 11:55 CEST · `DECISION_NEEDED` | anvil · forge |
+| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | MERGED | — | [signal-gateway#3](https://github.com/QuantisDevelopment/signal-gateway/pull/3) + [signal-gateway#5](https://github.com/QuantisDevelopment/signal-gateway/pull/5) | Apr 20, 13:21 CEST · `DECISION_NEEDED` | anvil · forge |
 | [B14](../tasks/B14-b14.md) | 🟡 STANDARD | MERGED | — | [signal-gateway#4](https://github.com/QuantisDevelopment/signal-gateway/pull/4) + [oinkfarm#63](https://github.com/QuantisDevelopment/oinkfarm/pull/63) | Apr 17, 11:46 CEST · `MERGED` | anvil |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
 
@@ -33,6 +33,9 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Defer TimescaleDB introduction from B2 to B14? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B13` | forge | B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+? |
+| Apr 20, 13:21 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE? |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B1` | hermes | B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a |
 | Apr 20, 13:15 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit |
@@ -60,22 +63,19 @@
 | Apr 20, 11:55 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: W1 enforcement level: DB REVOKE UPDATE, or app-level guard? |
 | Apr 20, 11:55 CEST | `TASK_PLANNED` | `B15` | forge | B15 plan published |
 | Apr 20, 11:54 CEST | `PR_OPENED` | `B8` | anvil | B8 PR #26 opened — feat(B8): cross-channel dedup consolidation — extract dedup.py |
-| Apr 20, 11:53 CEST | `TASK_PLANNED` | `B13` | forge | B13 plan published |
-| Apr 20, 11:52 CEST | `REVIEW_POSTED` | `B7` | guardian | B7 review by guardian — PASS (9.8) |
-| Apr 20, 11:46 CEST | `MERGED` | `B7` | anvil | B7 merged via PR #None @ef09652 |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
 | `B4-APPROVE` | Cutover requires Mike's explicit go-ahead | `B4` | 1.4h | APPROVE · DEFER |
-| `Q-B2-3` | TimescaleDB now or later (B14)? | `B2` | 1.4h | now · later |
 | `Q-B2-4` | 84 closed signals with NULL filled_at — backfill/accept/block? | `B2` | 1.4h | backfill · accept · block |
 | `Q-B2-5` | trg_entry_price_update REJECTED_AUDIT exception handling | `B2` | 1.4h | pg_trigger · check_only |
 | `Q-B3-2` | Minimum verification period: 7 or 14 days? | `B3` | 1.4h | 7d · 14d |
 | `Q-HH-2` | Redis Streams retention policy: MAXLEN or time-based? | `B12` | 1.4h | maxlen · time_based |
-| `Q-HH-3` | Docker Compose: single host or multi-host? | `B13` | 1.4h | single · multi |
-| `Q-HH-4` | W1 enforcement level: DB REVOKE UPDATE, or app-level guard? | `B9` | 1.4h | db_revoke · app_guard |
+| `Q-B2-3` | Defer TimescaleDB introduction from B2 to B14? | `B2` | 0m | defer to B14 · introduce in B2 |
+| `Q-HH-3` | Single-host Docker Compose for B13, defer multi-host to Phase D+? | `B13` | 0m | single-host only · include multi-host preparation |
+| `Q-HH-4` | Enforce W1 immutability via phased app-level then DB REVOKE? | `B9` | 0m | phased app-level then DB REVOKE · immediate DB-level REVOKE |
 
 ---
 
