@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 22:55 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 23:27 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Your 00:12 threshold directive (<50 / 50-75 / >=75) just collided with the already-ratified Q-HH-5 confidence bands, and FORGE flagged the collision as Q-C2-2 — a new question for you. It matters because the interpretation changes behavior: if the new thresholds are display-only on the dashboard, routing stays at 0.75 and nothing breaks; if they're meant to change routing, the live queue could empty on day one because almost no signals clear a 0.50 bar in bootstrap mode. FORGE paused finalization of the C3 plan until you clarify.
+Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11-4 and Q-B11-5 on the emit-stream back-end, Q-C2-2 on the threshold-vs-bootstrap collision flagged earlier tonight, and Q-189-1 on the micro-gate schema alignment). Within four minutes FORGE had surfaced five fresh questions — two on B9 (database mutation guard) and B12 (shadow-mode topic scope and schema-failure fallback), plus two more on TASK-189 (shared break-even threshold across all three artifacts, and requiring immutable evidence for the 143-trade auto-backfill). By 23:07Z all five had round-tripped through Hermes and come back resolved. That's unusually tight: ten Mike-gates opened and closed in under ten minutes.
 
-Meanwhile the pipeline shipped B6 (the Cornix/Chroma parser on signal-gateway, PR #29, commit ace226e). That one had actually been green for hours — VIGIL 9.85, GUARDIAN 10.00 — but sat unmerged because an ANVIL heartbeat went stale earlier in the evening. ANVIL caught it during the sprint poke, merged, deployed, and handed off to GUARDIAN for canary. Self-inflicted delay, worth noting so we can add a "don't leave approved-greens idle" check.
+Proposal verdicts were mixed. GUARDIAN signed off B12 (the shadow-mode Redis Streams emitter, 8 topics vs the 2 originally ratified — FORGE's Q-B12-shadow-1 was the call-out that the scope grew), so B12 is now cleared for code. B9 (the database-write mutation guard) split: VIGIL approved, GUARDIAN rejected — ANVIL will need a second pass before B9 can merge. TASK-189 (the stop-loss-moved-to-break-even fix with its 143-signal backfill) also got a VIGIL rejection, which means the micro-gate work goes back to FORGE/ANVIL for revision before any of the #189 Phase 1 artifacts can land.
 
-Four Phase-0 proposals got signed off in a tight window: GUARDIAN approved B10 (event-reducer dashboard) and B11 (emit-stream back-end), and VIGIL approved both TASK-189 (the stop-loss-moved-to-break-even micro-gate fix with the 143-trade backfill scope) and B4 (PostgreSQL cutover — method-only; actual execution is still gated on B2 merging, B3's 7-clean-day window, and your sign-off). A second question surfaced for you alongside #189 — Q-189-1 on whether Phase-1 Artifact A should pre-align the MICRO_GATE_DECISION / SL_UPDATE schema — but it's not time-critical.
+Housekeeping: FORGE's heartbeat is now stale past three hours — worth a poke if it hasn't ticked by the next cycle, because the Phase C planning queue runs through that agent. Five older PRs (A11 #133, B1 #149 and #21, B2 #24, B5 #25) still show as open without a recorded VIGIL/GUARDIAN review inside 24h; those are almost certainly metadata gaps on already-merged tasks rather than real review debt, but I'll keep flagging them until they clear.
 
 ## Where We Are Today (one paragraph)
 

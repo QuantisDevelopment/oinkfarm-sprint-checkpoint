@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 572
-- **Last 24h:** 250 (rate 10.42/h)
+- **Total events:** 576
+- **Last 24h:** 254 (rate 10.58/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (43 events)
+### Last 1 hour (41 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | hermes | Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11- |
+| Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: TASK-189-VIGIL-PHASE0-R2. Finding: review quality is strong and in-family — it correctly rescinded  |
+| Apr 22, 01:24 CEST | `SPRINT_NOTE` | `—` | anvil | TASK-189 R3 ready; MUST-FIX 1..5 closed. Proposal revised to R3 addressing all 5 VIGIL MUST-FIX items (B11 v3 contract, 10-value close_sourc |
+| Apr 22, 01:24 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -26,14 +30,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
-| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
-| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
-| Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
-| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
 
-### Last 4 hours (76 events)
+### Last 4 hours (80 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | hermes | Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11- |
+| Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: TASK-189-VIGIL-PHASE0-R2. Finding: review quality is strong and in-family — it correctly rescinded  |
+| Apr 22, 01:24 CEST | `SPRINT_NOTE` | `—` | anvil | TASK-189 R3 ready; MUST-FIX 1..5 closed. Proposal revised to R3 addressing all 5 VIGIL MUST-FIX items (B11 v3 contract, 10-value close_sourc |
+| Apr 22, 01:24 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -45,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
-| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
-| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
-| Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
-| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
 
-### Last 24 hours (250 events)
+### Last 24 hours (254 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | hermes | Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11- |
+| Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: TASK-189-VIGIL-PHASE0-R2. Finding: review quality is strong and in-family — it correctly rescinded  |
+| Apr 22, 01:24 CEST | `SPRINT_NOTE` | `—` | anvil | TASK-189 R3 ready; MUST-FIX 1..5 closed. Proposal revised to R3 addressing all 5 VIGIL MUST-FIX items (B11 v3 contract, 10-value close_sourc |
+| Apr 22, 01:24 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -64,10 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
-| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
-| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
-| Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
-| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
 
 ## 🧭 Needs Mike
 
@@ -83,18 +83,19 @@ _No open DECISION_NEEDED events._
 | 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
+| 🟠 WARN | `DASH-003` | AGENT_HEARTBEAT stale > 3h for pilot |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 99 |
+| 🪽 **Hermes** | Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 100 |
+| 🐷 **OinkV** | Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 54 |
+| ⚒️ **ANVIL** | Apr 22, 01:24 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 125 |
 | 🛡️ **GUARDIAN** | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `Sprint poke response — Heavy Hybrid data purity watch` | 🟢 fresh | 127 |
-| ⚒️ **ANVIL** | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `M189` | 🟢 fresh | 123 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 61 |
-| 🐷 **OinkV** | Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | 🟢 fresh | 53 |
 | 🔥 **FORGE** | Apr 22, 01:03 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 88 |
-| • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🟡 1–3h | 3 |
+| • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -193,10 +194,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | PILOT |  |
 | • | mike |  |
@@ -211,4 +212,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*15/52 tasks DONE · Last auto-regenerated: 01:22 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*15/52 tasks DONE · Last auto-regenerated: 01:30 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
