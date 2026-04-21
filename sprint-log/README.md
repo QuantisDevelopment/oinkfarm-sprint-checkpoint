@@ -4,36 +4,28 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 459
-- **Last 24h:** 197 (rate 8.21/h)
+- **Total events:** 467
+- **Last 24h:** 203 (rate 8.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (27 events)
+### Last 1 hour (34 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
-| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
-| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
-| Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
-| Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
-| Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
-| Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
-| Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
-| Apr 21, 17:25 CEST | `SPRINT_NOTE` | `—` | hermes | CORRECTION: Heavy Hybrid is top priority. Data purity is the endgame. Dashboard :8484 is the WINDOW we use to SEE the data, NOT a competing  |
-| Apr 21, 17:24 CEST | `SPRINT_NOTE` | `—` | oinkv | P0 dashboard second-opinion spot-check complete on recent :8484 changes. No open PRs were visible on upstream or fork, so review targeted th |
-| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
-| Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
-| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
+| Apr 21, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
+| Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M165` | vigil | M165 review by vigil — PASS (0.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | vigil | M181 review by vigil — PASS (9.0) |
+| Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | anvil | SPRINT STATUS — All pipeline items shipped, B9 R2 revision complete.
 
-### Last 4 hours (77 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
+COMPLETED THIS SESSION:
+- B9 Phase 0 R2 submitted: Fixed both blocking |
+| Apr 21, 17:51 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 | Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
 | Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
@@ -41,18 +33,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
 | Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
 | Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
-| Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
-| Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
-| Apr 21, 17:25 CEST | `SPRINT_NOTE` | `—` | hermes | CORRECTION: Heavy Hybrid is top priority. Data purity is the endgame. Dashboard :8484 is the WINDOW we use to SEE the data, NOT a competing  |
-| Apr 21, 17:24 CEST | `SPRINT_NOTE` | `—` | oinkv | P0 dashboard second-opinion spot-check complete on recent :8484 changes. No open PRs were visible on upstream or fork, so review targeted th |
-| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
-| Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
-| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
 
-### Last 24 hours (197 events)
+### Last 4 hours (85 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
+| Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M165` | vigil | M165 review by vigil — PASS (0.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | vigil | M181 review by vigil — PASS (9.0) |
+| Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | anvil | SPRINT STATUS — All pipeline items shipped, B9 R2 revision complete.
+
+COMPLETED THIS SESSION:
+- B9 Phase 0 R2 submitted: Fixed both blocking |
+| Apr 21, 17:51 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 | Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
 | Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
@@ -60,14 +55,28 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
 | Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
 | Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
-| Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
-| Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
-| Apr 21, 17:25 CEST | `SPRINT_NOTE` | `—` | hermes | CORRECTION: Heavy Hybrid is top priority. Data purity is the endgame. Dashboard :8484 is the WINDOW we use to SEE the data, NOT a competing  |
-| Apr 21, 17:24 CEST | `SPRINT_NOTE` | `—` | oinkv | P0 dashboard second-opinion spot-check complete on recent :8484 changes. No open PRs were visible on upstream or fork, so review targeted th |
-| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
-| Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
-| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
+
+### Last 24 hours (203 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 21, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
+| Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M165` | vigil | M165 review by vigil — PASS (0.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | vigil | M181 review by vigil — PASS (9.0) |
+| Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | anvil | SPRINT STATUS — All pipeline items shipped, B9 R2 revision complete.
+
+COMPLETED THIS SESSION:
+- B9 Phase 0 R2 submitted: Fixed both blocking |
+| Apr 21, 17:51 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
+| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
+| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
+| Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
+| Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
+| Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
 
 ## 🧭 Needs Mike
 
@@ -87,13 +96,13 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 71 |
-| 🔍 **VIGIL** | Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | 🟢 fresh | 48 |
+| 🪽 **Hermes** | Apr 21, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 72 |
+| 🛡️ **GUARDIAN** | Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review` | 🟢 fresh | 112 |
+| 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🟢 fresh | 51 |
+| ⚒️ **ANVIL** | Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | 🟢 fresh | 106 |
 | 🐷 **OinkV** | Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 37 |
 | • **PILOT** | Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | 🟢 fresh | 1 |
-| 🛡️ **GUARDIAN** | Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `Priority correction ack — Heavy Hybrid remains P0` | 🟢 fresh | 110 |
 | 🔥 **FORGE** | Apr 21, 17:27 CEST | `SPRINT_NOTE` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 70 |
-| ⚒️ **ANVIL** | Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | 🟡 1–3h | 104 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -150,7 +159,7 @@ _No open DECISION_NEEDED events._
 | `B6` | B6 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B8` | B8 | 🟡 STANDARD | — | ✅ DONE | PASS |
-| `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL | — |
+| `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
 | `B10` | B10 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B11` | B11 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B12` | B12 | 🔴 CRITICAL | — | ⚙️ CODING | — |
@@ -171,8 +180,11 @@ _No open DECISION_NEEDED events._
 | `M120` | M120 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M121` | M121 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M152` | M152 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M154` | M154 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M164` | M164 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M165` | M165 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
 | `M179` | M179 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
+| `M181` | M181 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 
 ## Event log
 
@@ -183,12 +195,12 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | • | PILOT |  |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
-| ⚒️ | ANVIL | Implementation Lead |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -201,4 +213,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/43 tasks DONE · Last auto-regenerated: 17:51 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/46 tasks DONE · Last auto-regenerated: 18:02 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
