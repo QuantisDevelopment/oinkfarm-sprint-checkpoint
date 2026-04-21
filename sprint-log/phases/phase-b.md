@@ -4,7 +4,7 @@
 
 > Phase B migrates OinkFarm from SQLite + monolith to PostgreSQL + decomposed services — the infrastructure layer that unlocks Redis, W1 governance, and multi-writer safety. Wave 1 (db abstraction) shipped; Wave 2 (parser extraction, Cornix/Chroma, dedup consolidation) is in flight.
 
-**Status:** 5/14 tasks shipped  
+**Status:** 4/14 tasks shipped  
 **Goal:** Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.  
 **Data source:** event-stream reducer (`events.jsonl`)  
 **Live:** [dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)
@@ -18,7 +18,7 @@
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 21:16 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 16:35 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
-| [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 21, 17:51 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
+| [B6](../tasks/B6-b6.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 22, 00:45 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
 | [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 22, 00:22 CEST · `PROPOSAL_READY` | anvil · forge · guardian · hermes |
@@ -36,6 +36,10 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:46 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke processed. State: (1) No REVISE on any anvil PR - checked last 8h of REVIEW_POSTED; only REVISE verdicts are against memory-wiki |
+| Apr 22, 00:45 CEST | `MERGED` | `B6` | anvil | B6 merged via PR #None @ace226e |
+| Apr 22, 00:45 CEST | `STATUS_CHANGED` | `B6` | anvil | B6 NOT_STARTED → CANARY |
+| Apr 22, 00:45 CEST | `CANARY_STARTED` | `B6` | anvil | B6 canary started |
 | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
 | Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 | Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
@@ -62,18 +66,14 @@
 | Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B11` | anvil | B11 proposal ready |
 | Apr 21, 19:10 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
 | Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
-| Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
-| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
-| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M165` | vigil | M165 review by vigil — PASS (0.0) |
-| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | vigil | M181 review by vigil — PASS (9.0) |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.8h | fixed_date · slo_gated_7day |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.8h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
-| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 20m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover |
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 2.0h | fixed_date · slo_gated_7day |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 2.0h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
+| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 34m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover |
 
 ---
 

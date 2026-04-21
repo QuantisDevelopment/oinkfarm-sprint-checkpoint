@@ -617,7 +617,13 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
     gaps: list[dict] = []
 
     def _age_hours(ev: dict) -> float:
-        return (now - _parse_ts(ev["ts"])).total_seconds() / 3600.0
+        ts = ev.get("ts") or ev.get("timestamp")
+        if not ts:
+            return 0.0
+        try:
+            return (now - _parse_ts(ts)).total_seconds() / 3600.0
+        except Exception:
+            return 0.0
 
     # --- MERGED without CANARY_STARTED within 2h (per task_id) ---
     merged_by_task: dict[str, dict] = {}
@@ -660,8 +666,22 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
             a = ev.get("agent")
             if a:
                 prev = heartbeat_by_agent.get(a)
-                if prev is None or _parse_ts(ev["ts"]) > _parse_ts(prev["ts"]):
+                ev_ts = ev.get("ts") or ev.get("timestamp")
+                if not ev_ts:
+                    continue
+                try:
+                    ev_parsed = _parse_ts(ev_ts)
+                except Exception:
+                    continue
+                if prev is None:
                     heartbeat_by_agent[a] = ev
+                else:
+                    prev_ts = prev.get("ts") or prev.get("timestamp")
+                    try:
+                        if ev_parsed > _parse_ts(prev_ts):
+                            heartbeat_by_agent[a] = ev
+                    except Exception:
+                        heartbeat_by_agent[a] = ev
         elif et == "DECISION_NEEDED":
             qid = extra.get("question_id")
             if qid:

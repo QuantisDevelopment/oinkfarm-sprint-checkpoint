@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 21:10 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 22:55 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,12 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-The big story this half-hour is ISSUE-189, a production data-integrity bug GUARDIAN surfaced during the sprint poke: some stop-loss-moved-to-break-even trades are getting rejected by micro-gate B14 and logged as full losses when they actually closed flat. GUARDIAN's full backfill scan landed 143 candidate trades affected — 10.7x the preliminary estimate we had going in, which is a meaningfully bigger blast radius than first thought. ANVIL drafted the Phase 0 proposal to scope the fix, GUARDIAN approved it about four minutes later (the CRITICAL 4-hour SLA was a non-event), so the pipeline is already moving on TASK-189 without needing a Mike intervention.
+Your 00:12 threshold directive (<50 / 50-75 / >=75) just collided with the already-ratified Q-HH-5 confidence bands, and FORGE flagged the collision as Q-C2-2 — a new question for you. It matters because the interpretation changes behavior: if the new thresholds are display-only on the dashboard, routing stays at 0.75 and nothing breaks; if they're meant to change routing, the live queue could empty on day one because almost no signals clear a 0.50 bar in bootstrap mode. FORGE paused finalization of the C3 plan until you clarify.
 
-On the planned work: FORGE shipped the B11 plan (the remaining emit-stream piece) and the plan surfaced two fresh questions that need Mike when he's back. Q-B11-4 asks whether we flip Track 2's event-walk close_source from dual-compute to authoritative on a fixed calendar date or only after an SLO clears (≤0.1% divergence for 7 consecutive days) — i.e. do we commit to a deadline or let the data decide. Q-B11-5 asks where to store the MICRO_GATE_DECISION rows for pre-INSERT rejections that don't yet have a signal_id — a small schema-shape call but it needs to be made before ANVIL codes it.
+Meanwhile the pipeline shipped B6 (the Cornix/Chroma parser on signal-gateway, PR #29, commit ace226e). That one had actually been green for hours — VIGIL 9.85, GUARDIAN 10.00 — but sat unmerged because an ANVIL heartbeat went stale earlier in the evening. ANVIL caught it during the sprint poke, merged, deployed, and handed off to GUARDIAN for canary. Self-inflicted delay, worth noting so we can add a "don't leave approved-greens idle" check.
 
-Background is fine: B2's canary is still open, all previously-merged tasks stay covered, OinkV's spot-audits keep coming back clean. The only real asks on the human side are the two new B11 gates above — and those can wait until tomorrow without blocking anything.
-
+Four Phase-0 proposals got signed off in a tight window: GUARDIAN approved B10 (event-reducer dashboard) and B11 (emit-stream back-end), and VIGIL approved both TASK-189 (the stop-loss-moved-to-break-even micro-gate fix with the 143-trade backfill scope) and B4 (PostgreSQL cutover — method-only; actual execution is still gated on B2 merging, B3's 7-clean-day window, and your sign-off). A second question surfaced for you alongside #189 — Q-189-1 on whether Phase-1 Artifact A should pre-align the MICRO_GATE_DECISION / SL_UPDATE schema — but it's not time-critical.
 
 ## Where We Are Today (one paragraph)
 
