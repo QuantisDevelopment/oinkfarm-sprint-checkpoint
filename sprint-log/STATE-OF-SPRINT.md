@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 02:14 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 04:21 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,12 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forward motion since the last check-in two hours ago. Everything else is parked.
+Still a quiet night on the sprint. The only new event since the last check-in is another routine dashboard artifact republish (the oinxtractor quality page), so nothing substantive has actually moved in the last 90 minutes — Guardian's B3 post-deploy canary at 03:04 UTC (05:04 CEST) is still the most recent real piece of forward progress.
 
-The review debt has grown from four PRs to seven. A11 (pr=133), B1's dedup groundwork (pr=149, 9, 21), and now B2's PostgreSQL schema + migration (pr=153, 11, 24) are all sitting more than 24 hours without a Vigil review. Vigil's last review landed roughly nineteen hours ago — that's a long enough gap that the reviewer agent, not the coders, is now the constraint on every next merge.
+The review backlog is unchanged and it's now the single clearest problem on the board: seven PRs are sitting more than 24 hours without a Vigil review — A11 (pr=133, leverage source tracking), all three pieces of B1 (dedup groundwork, prs 149 / 9 / 21), and all three pieces of B2 (PostgreSQL schema + migration, prs 153 / 11 / 24). Vigil itself hasn't posted a review in roughly 20 hours. Anvil, Forge and OinkV are also quiet — about 7 hours since any of them emitted anything — so effectively only Guardian is still ticking overnight.
 
-Anvil and Forge have also quieted down — about five hours since either posted. Guardian is the only tier still ticking. Nothing is technically blocked yet, but if Vigil stays offline through the morning the whole pipeline starts to back up behind it.
-
+Nothing is technically blocked and no decisions are waiting on Mike right now; the risk is purely that the longer Vigil stays offline, the more B2 and B1 merges pile up behind it. Next real inflection point is Vigil waking up and clearing that seven-deep queue, which unblocks B2 getting to canary and keeps the B4 cutover clock (earliest 2026-04-26) honest.
 ## Where We Are Today (one paragraph)
 
 **Phase A is complete AND proven** — all 11 tasks (A1-A11) shipped in the last 48 hours, and as of 13:08 UTC today the four canary failures (A4, A6, A9, A10) that were red overnight have been re-run and all PASS, with A10 validating 17 live signals against the recovered historical dataset at zero drift. **Phase B is in flight** with 8 of 15 tasks merged (B1 database abstraction layer, B2 PostgreSQL schema + one-time migration, B3 parallel-write verification scaffold, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition). **FORGE has published all 15 Phase B plans plus a Phase C summary and a Heavy Hybrid roadmap.** Phase C is fully scoped (7 tasks), Phase D remains deferred. **Live risks are down to housekeeping:** GUARDIAN confirmed the B3 dual-write gap is intentional (`OINK_DB_DUAL_WRITE=false` is correct until B3 reconciliation tooling is live), and the remaining warnings are stale PR-metadata gaps on already-merged tasks, not real blockers. **Nine Mike-gates are open**, including the big one: B4 PostgreSQL cutover approval, earliest on **2026-04-26** (7 consecutive clean reconciliation days after B3 merged 2026-04-19; clock still clean). Phase C starts **late May 2026** after Phase B quality gates pass.

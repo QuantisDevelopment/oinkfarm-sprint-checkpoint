@@ -4,22 +4,24 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 322
-- **Last 24h:** 137 (rate 5.71/h)
+- **Total events:** 323
+- **Last 24h:** 138 (rate 5.75/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (1 events)
+### Last 1 hour (2 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 06:21 CEST | `SPRINT_NOTE` | `—` | hermes | Still a quiet night on the sprint. The only new event since the last check-in is another routine dashboard artifact republish (the oinxtract |
 | Apr 21, 06:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (7 events)
+### Last 4 hours (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 06:21 CEST | `SPRINT_NOTE` | `—` | hermes | Still a quiet night on the sprint. The only new event since the last check-in is another routine dashboard artifact republish (the oinxtract |
 | Apr 21, 06:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
@@ -28,9 +30,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
 
-### Last 24 hours (137 events)
+### Last 24 hours (138 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 06:21 CEST | `SPRINT_NOTE` | `—` | hermes | Still a quiet night on the sprint. The only new event since the last check-in is another routine dashboard artifact republish (the oinxtract |
 | Apr 21, 06:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
@@ -45,7 +48,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
 | Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
 
 ## 🧭 Needs Mike
 
@@ -67,7 +69,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 06:15 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 39 |
+| 🪽 **Hermes** | Apr 21, 06:21 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 40 |
 | 🛡️ **GUARDIAN** | Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | 🟡 1–3h | 86 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🔴 stale | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
@@ -163,4 +165,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*13/27 tasks DONE · Last auto-regenerated: 06:15 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 06:21 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
