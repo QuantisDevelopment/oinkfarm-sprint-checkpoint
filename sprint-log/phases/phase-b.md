@@ -15,7 +15,7 @@
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 21, 17:27 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
-| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 19:41 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
+| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 21:16 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 16:35 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 21, 17:51 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
 | Apr 21, 20:18 CEST | `AGENT_HEARTBEAT` | `B12` | anvil | anvil heartbeat — B12 |
 | Apr 21, 19:41 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking |
 | Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | anvil | SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase  |
@@ -68,7 +69,6 @@ COMPLETED THIS SESSION:
 | Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs |
 | Apr 21, 16:37 CEST | `CANARY_STARTED` | `B2` | guardian | B2 canary started |
 | Apr 21, 16:35 CEST | `CANARY_STARTED` | `B2` | anvil | B2 canary started |
-| Apr 21, 16:35 CEST | `ARTIFACT_PUBLISHED` | `B4` | anvil | B4 published runbook:  |
 
 ## Needs Mike (open gates)
 
