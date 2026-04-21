@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 429
-- **Last 24h:** 167 (rate 6.96/h)
+- **Total events:** 433
+- **Last 24h:** 171 (rate 7.12/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (27 events)
+### Last 1 hour (31 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: B4-VIGIL-PHASE0-R2-REVIEW is not B7 10.00 gold-baseline level in breadth or test-style evidence  |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T14:33:44Z): still WARNING, not honestly green. Latest 24h late |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8, |
 | Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
@@ -26,14 +30,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:35 CEST | `CANARY_STARTED` | `B2` | anvil | B2 canary started |
 | Apr 21, 16:35 CEST | `ARTIFACT_PUBLISHED` | `B4` | anvil | B4 published runbook:  |
 | Apr 21, 16:35 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 21, 16:35 CEST | `SPRINT_NOTE` | `B9` | anvil | Sprint poke 16:29 CEST — 3-action directive executed: (1) B2 GUARDIAN canary dispatch packaged with baseline queries + first-10-signals plan |
-| Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
-| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
 
-### Last 4 hours (67 events)
+### Last 4 hours (71 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: B4-VIGIL-PHASE0-R2-REVIEW is not B7 10.00 gold-baseline level in breadth or test-style evidence  |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T14:33:44Z): still WARNING, not honestly green. Latest 24h late |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8, |
 | Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
@@ -45,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:35 CEST | `CANARY_STARTED` | `B2` | anvil | B2 canary started |
 | Apr 21, 16:35 CEST | `ARTIFACT_PUBLISHED` | `B4` | anvil | B4 published runbook:  |
 | Apr 21, 16:35 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 21, 16:35 CEST | `SPRINT_NOTE` | `B9` | anvil | Sprint poke 16:29 CEST — 3-action directive executed: (1) B2 GUARDIAN canary dispatch packaged with baseline queries + first-10-signals plan |
-| Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
-| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
 
-### Last 24 hours (167 events)
+### Last 24 hours (171 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: B4-VIGIL-PHASE0-R2-REVIEW is not B7 10.00 gold-baseline level in breadth or test-style evidence  |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T14:33:44Z): still WARNING, not honestly green. Latest 24h late |
+| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8, |
 | Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
@@ -64,10 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:35 CEST | `CANARY_STARTED` | `B2` | anvil | B2 canary started |
 | Apr 21, 16:35 CEST | `ARTIFACT_PUBLISHED` | `B4` | anvil | B4 published runbook:  |
 | Apr 21, 16:35 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 21, 16:35 CEST | `SPRINT_NOTE` | `B9` | anvil | Sprint poke 16:29 CEST — 3-action directive executed: (1) B2 GUARDIAN canary dispatch packaged with baseline queries + first-10-signals plan |
-| Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
-| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
 
 ## 🧭 Needs Mike
 
@@ -87,11 +87,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 64 |
+| 🪽 **Hermes** | Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 65 |
+| 🐷 **OinkV** | Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 35 |
 | ⚒️ **ANVIL** | Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | 🟢 fresh | 104 |
 | 🛡️ **GUARDIAN** | Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs` | 🟢 fresh | 105 |
 | 🔍 **VIGIL** | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | 🟢 fresh | 45 |
-| 🐷 **OinkV** | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 32 |
 | 🔥 **FORGE** | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | 🟢 fresh | 61 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -176,10 +176,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
-| 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -193,4 +193,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/37 tasks DONE · Last auto-regenerated: 16:45 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/37 tasks DONE · Last auto-regenerated: 16:57 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
