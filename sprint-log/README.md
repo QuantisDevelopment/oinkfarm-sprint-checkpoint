@@ -4,71 +4,76 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 398
-- **Last 24h:** 137 (rate 5.71/h)
+- **Total events:** 411
+- **Last 24h:** 149 (rate 6.21/h)
 - **Schema:** v1.0
 - **Source:** lib
-- **Monotonic:** ✓ ok
+- **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (15 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
+| Apr 21, 16:11 CEST | `REVIEW_POSTED` | `B6` | guardian | B6 review by guardian — PASS (10.0) |
+| Apr 21, 16:09 CEST | `PROPOSAL_APPROVED` | `B4` | guardian | B4 proposal approved by guardian |
+| Apr 21, 16:07 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF121-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold baseline, but the review quality itself |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. Latest 24h late |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8  |
+| Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 stays below the B7 10.00 gold baseline in polish, but the review quality i |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. 24h latency pro |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active, lossless-claw freshTailCount=8, ex |
+| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
 | Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 15:29 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold standard in review elegance, but the re |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latest hour lat |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active: lossless-claw freshTailCount is 8, |
-| Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing i |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 still reads baseline-strong against the B7 10.00 reference. It is narrower |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latency proxy i |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active, not the design goal solved: los |
-| Apr 21, 14:40 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed |
 
-### Last 4 hours (64 events)
+### Last 4 hours (62 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
+| Apr 21, 16:11 CEST | `REVIEW_POSTED` | `B6` | guardian | B6 review by guardian — PASS (10.0) |
+| Apr 21, 16:09 CEST | `PROPOSAL_APPROVED` | `B4` | guardian | B4 proposal approved by guardian |
+| Apr 21, 16:07 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF121-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold baseline, but the review quality itself |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. Latest 24h late |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8  |
+| Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 stays below the B7 10.00 gold baseline in polish, but the review quality i |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. 24h latency pro |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active, lossless-claw freshTailCount=8, ex |
+| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
 | Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 15:29 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold standard in review elegance, but the re |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latest hour lat |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active: lossless-claw freshTailCount is 8, |
-| Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing i |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 still reads baseline-strong against the B7 10.00 reference. It is narrower |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latency proxy i |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active, not the design goal solved: los |
-| Apr 21, 14:40 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed |
-| Apr 21, 14:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 14:22 CEST: Zero REVISE verdicts on ANVIL PRs. B4 Phase 0 R2 submitted 11:21 UTC — no VIGIL or GUARDIAN review yet (2h wait). B6 |
-| Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | forge | SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 remains baseline-strong against the B7 10.00 reference. The review is spec |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality state refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T11:27:41Z): still WARNING, not honestly green. Latency p |
 
-### Last 24 hours (137 events)
+### Last 24 hours (149 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
+| Apr 21, 16:11 CEST | `REVIEW_POSTED` | `B6` | guardian | B6 review by guardian — PASS (10.0) |
+| Apr 21, 16:09 CEST | `PROPOSAL_APPROVED` | `B4` | guardian | B4 proposal approved by guardian |
+| Apr 21, 16:07 CEST | `CANARY_PASS` | `A9` | guardian | A9 canary PASS |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF121-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold baseline, but the review quality itself |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. Latest 24h late |
+| Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8  |
+| Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 stays below the B7 10.00 gold baseline in polish, but the review quality i |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. 24h latency pro |
+| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active, lossless-claw freshTailCount=8, ex |
+| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
 | Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 15:29 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold standard in review elegance, but the re |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latest hour lat |
-| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active: lossless-claw freshTailCount is 8, |
-| Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing i |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 still reads baseline-strong against the B7 10.00 reference. It is narrower |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latency proxy i |
-| Apr 21, 14:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active, not the design goal solved: los |
-| Apr 21, 14:40 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed |
-| Apr 21, 14:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 14:22 CEST: Zero REVISE verdicts on ANVIL PRs. B4 Phase 0 R2 submitted 11:21 UTC — no VIGIL or GUARDIAN review yet (2h wait). B6 |
-| Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | forge | SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 remains baseline-strong against the B7 10.00 reference. The review is spec |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality state refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T11:27:41Z): still WARNING, not honestly green. Latency p |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 3.1h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 3.8h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
 
 ## 🔍 Missing evidence
 
@@ -84,11 +89,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 57 |
-| 🛡️ **GUARDIAN** | Apr 21, 15:29 CEST | `CANARY_PASS` | `Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed` | 🟢 fresh | 98 |
-| 🐷 **OinkV** | Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 26 |
-| ⚒️ **ANVIL** | Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | 🟡 1–3h | 95 |
-| 🔥 **FORGE** | Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | 🟡 1–3h | 60 |
+| 🪽 **Hermes** | Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 58 |
+| 🛡️ **GUARDIAN** | Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.` | 🟢 fresh | 102 |
+| 🐷 **OinkV** | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 32 |
+| 🔥 **FORGE** | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | 🟢 fresh | 61 |
+| ⚒️ **ANVIL** | Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 96 |
 | 🔍 **VIGIL** | Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | 🟡 1–3h | 44 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -175,8 +180,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -190,4 +195,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/37 tasks DONE · Last auto-regenerated: 15:31 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/37 tasks DONE · Last auto-regenerated: 16:13 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

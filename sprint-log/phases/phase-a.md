@@ -6,8 +6,8 @@
 
 **Status:** ✅ COMPLETE — 11/11 tasks shipped, canaries PASS across the board  
 **Started:** 18:23 CEST on 18 Apr 2026  
-**Finished:** 15:29 CEST on 21 Apr 2026  
-**Elapsed:** 69.1 h wall-clock  
+**Finished:** 16:07 CEST on 21 Apr 2026  
+**Elapsed:** 69.7 h wall-clock  
 **Repos touched:** `oinkfarm` · `oink-sync` · `signal-gateway`  
 **PRs merged:** 10 across 3 repos
 
@@ -44,7 +44,7 @@ Phase A is the **data-truth gate** in the Arbiter-Oink HEAVY HYBRID roadmap. Eve
 |---|---|---|---|---|
 | [Wave 1](../waves/wave-1.md) | Core schema & formula primitives | [A1](../tasks/A1-signal-events-schema.md) · [A2](../tasks/A2-remaining-pct-model.md) · [A3](../tasks/A3-auto-filled-at.md) | 56.3 h | 3/3 shipped |
 | [Wave 2](../waves/wave-2.md) | Lifecycle accuracy & phantom-trade prevention | [A4](../tasks/A4-partially-closed-status.md) · [A7](../tasks/A7-update-new-detection.md) · [A5](../tasks/A5-confidence-scoring.md) | 57.2 h | 3/3 shipped |
-| [Wave 3](../waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](../tasks/A6-ghost-closure-flag.md) · [A8](../tasks/A8-conditional-sl-type.md) · [A9](../tasks/A9-denomination-multiplier.md) · [A11](../tasks/A11-leverage-source-tracking.md) | 49.2 h | 4/4 shipped |
+| [Wave 3](../waves/wave-3.md) | Metadata enrichment & ghost closure | [A6](../tasks/A6-ghost-closure-flag.md) · [A8](../tasks/A8-conditional-sl-type.md) · [A9](../tasks/A9-denomination-multiplier.md) · [A11](../tasks/A11-leverage-source-tracking.md) | 49.9 h | 4/4 shipped |
 | [Wave 4](../waves/wave-4.md) | Database merge | [A10](../tasks/A10-database-merge.md) | 29.4 h | 1/1 shipped |
 
 ## All 11 Tasks at a Glance

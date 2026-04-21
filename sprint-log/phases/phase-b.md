@@ -16,11 +16,11 @@
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 21, 14:11 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 14:40 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
-| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 14:24 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
+| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 16:12 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
-| [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | — | Apr 21, 12:03 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
+| [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 21, 16:11 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
-| [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
+| [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
 | [B9](../tasks/B9-b9.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:43 CEST · `TASK_PLANNED` | forge |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:45 CEST · `TASK_PLANNED` | forge |
@@ -36,6 +36,11 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
+| Apr 21, 16:11 CEST | `REVIEW_POSTED` | `B6` | guardian | B6 review by guardian — PASS (10.0) |
+| Apr 21, 16:09 CEST | `PROPOSAL_APPROVED` | `B4` | guardian | B4 proposal approved by guardian |
+| Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
+| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
 | Apr 21, 14:40 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed |
 | Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 14:22 CEST: Zero REVISE verdicts on ANVIL PRs. B4 Phase 0 R2 submitted 11:21 UTC — no VIGIL or GUARDIAN review yet (2h wait). B6 |
 | Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | forge | SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag |
@@ -61,17 +66,12 @@
 | Apr 20, 23:31 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published kpi: b3-reconciliation-template.md |
 | Apr 20, 23:30 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
 | Apr 20, 23:30 CEST | `CANARY_STARTED` | `B6` | guardian | B6 canary started |
-| Apr 20, 23:30 CEST | `CANARY_PASS` | `B6` | guardian | B6 canary PASS |
-| Apr 20, 23:30 CEST | `CANARY_PASS` | `B7` | guardian | B7 canary PASS |
-| Apr 20, 23:30 CEST | `CANARY_PASS` | `B8` | guardian | B8 canary PASS |
-| Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | anvil | PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `B9` | forge | B9 plan published |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 3.1h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration |
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 3.8h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration |
 
 ---
 
