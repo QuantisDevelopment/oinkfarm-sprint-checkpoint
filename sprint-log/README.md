@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 491
-- **Last 24h:** 220 (rate 9.17/h)
+- **Total events:** 494
+- **Last 24h:** 222 (rate 9.25/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
@@ -15,15 +15,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (5 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | pilot | pilot heartbeat — ? |
+| Apr 21, 22:19 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still  |
 | Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
-| Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
-| Apr 21, 21:15 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 
-### Last 4 hours (25 events)
+### Last 4 hours (26 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | pilot | pilot heartbeat — ? |
+| Apr 21, 22:19 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still  |
 | Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -36,13 +39,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 20:07 CEST | `AGENT_HEARTBEAT` | `DASH-002` | pilot | pilot heartbeat — ? |
 | Apr 21, 19:59 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
 | Apr 21, 19:41 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking |
-| Apr 21, 19:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
-| Apr 21, 19:20 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet 90 minutes on the merge line, but ANVIL just closed out the full Mike-checklist at once — five proposals are now stacked in the review |
-| Apr 21, 19:17 CEST | `DECISION_RESOLVED` | `C2` | forge | C2 decision: soft_flag_provisional |
 
-### Last 24 hours (220 events)
+### Last 24 hours (222 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | pilot | pilot heartbeat — ? |
+| Apr 21, 22:19 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still  |
 | Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -55,9 +58,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 20:07 CEST | `AGENT_HEARTBEAT` | `DASH-002` | pilot | pilot heartbeat — ? |
 | Apr 21, 19:59 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
 | Apr 21, 19:41 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking |
-| Apr 21, 19:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
-| Apr 21, 19:20 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet 90 minutes on the merge line, but ANVIL just closed out the full Mike-checklist at once — five proposals are now stacked in the review |
-| Apr 21, 19:17 CEST | `DECISION_RESOLVED` | `C2` | forge | C2 decision: soft_flag_provisional |
 
 ## 🧭 Needs Mike
 
@@ -78,12 +78,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 78 |
-| 🐷 **OinkV** | Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 45 |
-| 🛡️ **GUARDIAN** | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `Sprint poke 19:15Z — delta check, no new activity` | 🟢 fresh | 114 |
+| 🪽 **Hermes** | Apr 21, 22:42 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 79 |
+| • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🟢 fresh | 3 |
+| 🐷 **OinkV** | Apr 21, 22:19 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 46 |
+| 🛡️ **GUARDIAN** | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `Sprint poke 19:15Z — delta check, no new activity` | 🟡 1–3h | 114 |
 | ⚒️ **ANVIL** | Apr 21, 20:18 CEST | `AGENT_HEARTBEAT` | `B12` | 🟡 1–3h | 111 |
-| • **PILOT** | Apr 21, 20:07 CEST | `AGENT_HEARTBEAT` | `DASH-002` | 🟡 1–3h | 2 |
-| 🔥 **FORGE** | Apr 21, 19:17 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟡 1–3h | 72 |
+| 🔥 **FORGE** | Apr 21, 19:17 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🔴 stale | 72 |
 | 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🔴 stale | 51 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -154,6 +154,7 @@ _No open DECISION_NEEDED events._
 | `C6` | C6 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `DASH-001` | DASH-001 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `DASH-002` | DASH-002 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `DASH-003` | DASH-003 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M7` | M7 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M10` | M10 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M22` | M22 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
@@ -178,10 +179,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| • | PILOT |  |
 | 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
-| • | PILOT |  |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
@@ -196,4 +197,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/47 tasks DONE · Last auto-regenerated: 22:02 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/48 tasks DONE · Last auto-regenerated: 22:43 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
