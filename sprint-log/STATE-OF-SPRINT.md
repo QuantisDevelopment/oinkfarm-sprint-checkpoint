@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 10:35 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 13:01 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,7 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) landed at 9.6, B7 (WG Bot parsers) got a clean 10.0, B8 (router decomposition) 9.85, and M7 and M10 both PASS at 9.3. That clears four of yesterday's five 24h-old review-debt warnings. Forge then ran a fresh-eyes cross-check on the same artifacts and concurred with Vigil on A11, B1 and B5. New question landed on Mike's desk on B2 specifically: the PR Vigil scored was oinkfarm#153, but the current local candidate has extra commits on top of the reviewed state, so Forge surfaced Q-B2-6 asking whether the existing approval still covers production migration from the modified candidate or the post-review commits need their own pass before B2 can promote to Guardian's canary. Nothing is formally blocked — the PostgreSQL migration simply can't advance until Mike rules on scope. Elsewhere Anvil drafted the B4 (PostgreSQL cutover) proposal — earliest eligible 2026-04-26 if B3's 7-clean-day reconciliation clock holds — Guardian's heartbeat confirmed no merged-without-canary gap, and the one residual review-debt warning (A11 pr=133) is metadata hygiene on an already-merged task, not a real stall.
+Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing its job of keeping the agents visible, but the signal is mostly "still here, still clean, still waiting." Anvil reports zero REVISE verdicts across its open PRs, with B4 Phase 0 R2 (timestamp migration logic) submitted at 11:21 UTC and still sitting untouched by Vigil and Guardian. Forge did a fresh-eyes cross-check on B2 (PostgreSQL schema/migration) and reconfirmed its earlier findings, so the question flagged earlier — whether Vigil's 9.6 on PR #153 covers the post-review commits on the current candidate — is still the one thing gating B2 from moving to Guardian.
+
+The bigger thing that hasn't moved is the review queue: five PRs are now carrying the 24-hour-no-review warning — A11 #133 (leverage-source tracking), B1 #149 and #21 (the two database-abstraction-layer PRs), B2 #24 (re-vendor oink_db.py with Postgres backend), and B5 #25 (extract SignalEmitter from the router). The oldest of those has been sitting since Saturday afternoon UTC. Vigil cleared a big batch this morning but hasn't come back for round two yet.
+
+On the watch side, OinkV's three audit refreshes this shift all land in the same place: the latest B7 Vigil output still reads baseline-strong against the 10.0 reference review, OinXtractor metrics are still WARNING not green (unknown_rate pinned at 100% for both the 24h and 7d windows while the artifact labels it "ok" — that's an instrumentation-definition problem, not a real regression), and A171's per-agent session-history cap is still MITIGATED_NOT_DONE — config-level guardrails are active but the actual per-agent cap doesn't exist as a working control path yet. Next move depends on Vigil draining the review backlog.
 
 ## Where We Are Today (one paragraph)
 
