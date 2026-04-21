@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
+| Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: expand_guard_block_phase1_until_proof |
@@ -64,8 +66,6 @@
 | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
 | Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 | Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
-| Apr 22, 00:22 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint checkpoint 1/4. TASK 1 B4 runbook v1.1 complete (rowcount baseline T-15min + pre/post verify T+5min + first-10-signal canary |
-| Apr 22, 00:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:14Z — TASK-189 TIER-1 subset written, B2/B3 close-outs pending |
 
 ## Needs Mike (open gates)
 
