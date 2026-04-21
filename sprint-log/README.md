@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 582
-- **Last 24h:** 260 (rate 10.83/h)
+- **Total events:** 586
+- **Last 24h:** 264 (rate 11.0/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (45 events)
+### Last 1 hour (43 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A |
+| Apr 22, 01:47 CEST | `ARTIFACT_PUBLISHED` | `—` | anvil | — published plan:  |
+| Apr 22, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV |
 | Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
@@ -26,14 +30,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:24 CEST | `SPRINT_NOTE` | `—` | anvil | TASK-189 R3 ready; MUST-FIX 1..5 closed. Proposal revised to R3 addressing all 5 VIGIL MUST-FIX items (B11 v3 contract, 10-value close_sourc |
 | Apr 22, 01:24 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
-| Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
 
-### Last 4 hours (85 events)
+### Last 4 hours (88 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A |
+| Apr 22, 01:47 CEST | `ARTIFACT_PUBLISHED` | `—` | anvil | — published plan:  |
+| Apr 22, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV |
 | Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
@@ -45,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:24 CEST | `SPRINT_NOTE` | `—` | anvil | TASK-189 R3 ready; MUST-FIX 1..5 closed. Proposal revised to R3 addressing all 5 VIGIL MUST-FIX items (B11 v3 contract, 10-value close_sourc |
 | Apr 22, 01:24 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
-| Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
 
-### Last 24 hours (260 events)
+### Last 24 hours (264 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A |
+| Apr 22, 01:47 CEST | `ARTIFACT_PUBLISHED` | `—` | anvil | — published plan:  |
+| Apr 22, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV |
 | Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
@@ -64,10 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:24 CEST | `SPRINT_NOTE` | `—` | anvil | TASK-189 R3 ready; MUST-FIX 1..5 closed. Proposal revised to R3 addressing all 5 VIGIL MUST-FIX items (B11 v3 contract, 10-value close_sourc |
 | Apr 22, 01:24 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
-| Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
 
 ## 🧭 Needs Mike
 
@@ -89,10 +89,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 102 |
+| 🪽 **Hermes** | Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 103 |
+| 🐷 **OinkV** | Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 55 |
+| ⚒️ **ANVIL** | Apr 22, 01:47 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 129 |
 | 🛡️ **GUARDIAN** | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `Sprint poke #2 response — TASK-189 R4 review completed` | 🟢 fresh | 129 |
-| ⚒️ **ANVIL** | Apr 22, 01:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 127 |
-| 🐷 **OinkV** | Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 54 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 61 |
 | 🔥 **FORGE** | Apr 22, 01:03 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 88 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
@@ -194,9 +194,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | PILOT |  |
@@ -212,4 +212,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*15/52 tasks DONE · Last auto-regenerated: 01:45 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*15/52 tasks DONE · Last auto-regenerated: 01:56 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
