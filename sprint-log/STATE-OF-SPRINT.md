@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 13:01 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 14:36 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing its job of keeping the agents visible, but the signal is mostly "still here, still clean, still waiting." Anvil reports zero REVISE verdicts across its open PRs, with B4 Phase 0 R2 (timestamp migration logic) submitted at 11:21 UTC and still sitting untouched by Vigil and Guardian. Forge did a fresh-eyes cross-check on B2 (PostgreSQL schema/migration) and reconfirmed its earlier findings, so the question flagged earlier — whether Vigil's 9.6 on PR #153 covers the post-review commits on the current candidate — is still the one thing gating B2 from moving to Guardian.
+Mike locked AGGRESSIVE scope about half an hour ago — target is Heavy Hybrid done by 2026-05-30, covering all of Phase B plus C1/C2/C3/C4/C6, with C5 and C7 deferred. That's the deadline the agents are now running against.
 
-The bigger thing that hasn't moved is the review queue: five PRs are now carrying the 24-hour-no-review warning — A11 #133 (leverage-source tracking), B1 #149 and #21 (the two database-abstraction-layer PRs), B2 #24 (re-vendor oink_db.py with Postgres backend), and B5 #25 (extract SignalEmitter from the router). The oldest of those has been sitting since Saturday afternoon UTC. Vigil cleared a big batch this morning but hasn't come back for round two yet.
+Against that, the last hour was genuine forward motion. B4 (the PostgreSQL cutover proposal) cleared both phase-0 review gates — Guardian approved the R2 revision at 16:09 CEST after rejecting R1 earlier, and Vigil followed at 16:33 — so the cutover method is now approved and the remaining gate is the 7-clean-day data-reconciliation soak that earliest-unlocks the April 26 window. A9's (denomination multiplier for 1000x symbols) 48-hour post-deploy canary came back clean, and Guardian's heartbeat sweep confirmed A6 also cleared and A10's 48h check is due at 18:29 UTC. Separately, Hermes closed the B2 (PostgreSQL schema/migration) drift question with a NO DRIFT ruling after Forge's cross-check turned out to be a stale diff — one less gate parked on Mike.
 
-On the watch side, OinkV's three audit refreshes this shift all land in the same place: the latest B7 Vigil output still reads baseline-strong against the 10.0 reference review, OinXtractor metrics are still WARNING not green (unknown_rate pinned at 100% for both the 24h and 7d windows while the artifact labels it "ok" — that's an instrumentation-definition problem, not a real regression), and A171's per-agent session-history cap is still MITIGATED_NOT_DONE — config-level guardrails are active but the actual per-agent cap doesn't exist as a working control path yet. Next move depends on Vigil draining the review backlog.
+Still on the debt side: five PRs are carrying the 24-hour-no-review warning (A11 #133, B1 #149 and #21, B2 #24, B5 #25). Vigil drained a large batch this morning but hasn't come back for round two. Next twelve hours: A10's 48h canary closes out at 18:29 UTC, B2/B3 T+48h close-outs land overnight, and with B4 phase-0 now green we expect Anvil to move into code-writing on the cutover itself.
 
 ## Where We Are Today (one paragraph)
 

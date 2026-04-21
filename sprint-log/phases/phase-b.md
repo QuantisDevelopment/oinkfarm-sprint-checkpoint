@@ -14,14 +14,14 @@
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
-| [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 21, 16:29 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
+| [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 21, 16:38 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 14:40 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
-| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 16:33 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian · hermes |
+| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 16:35 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 21, 16:11 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
-| [B9](../tasks/B9-b9.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
+| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 16:35 CEST · `SPRINT_NOTE` | anvil · forge · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:43 CEST · `TASK_PLANNED` | forge |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:45 CEST · `TASK_PLANNED` | forge |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
@@ -36,6 +36,12 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs |
+| Apr 21, 16:37 CEST | `CANARY_STARTED` | `B2` | guardian | B2 canary started |
+| Apr 21, 16:35 CEST | `CANARY_STARTED` | `B2` | anvil | B2 canary started |
+| Apr 21, 16:35 CEST | `ARTIFACT_PUBLISHED` | `B4` | anvil | B4 published runbook:  |
+| Apr 21, 16:35 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
+| Apr 21, 16:35 CEST | `SPRINT_NOTE` | `B9` | anvil | Sprint poke 16:29 CEST — 3-action directive executed: (1) B2 GUARDIAN canary dispatch packaged with baseline queries + first-10-signals plan |
 | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
 | Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
 | Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
@@ -60,12 +66,6 @@
 | Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
 | Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
 | Apr 21, 12:03 CEST | `SPRINT_NOTE` | `B6` | anvil | Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B6` | guardian | B6 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B7` | guardian | B7 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B8` | guardian | B8 canary PASS |
-| Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
 
 ## Needs Mike (open gates)
 
