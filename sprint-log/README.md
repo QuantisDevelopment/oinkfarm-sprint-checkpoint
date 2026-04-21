@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 330
+- **Total events:** 331
 - **Last 24h:** 137 (rate 5.71/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (7 events)
+### Last 1 hour (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 08:26 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstr |
 | Apr 21, 08:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 08:09 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
 | Apr 21, 08:09 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
@@ -26,6 +27,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 4 hours (12 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 08:26 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstr |
 | Apr 21, 08:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 08:09 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
 | Apr 21, 08:09 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
@@ -37,11 +39,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 06:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
-| Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
 
 ### Last 24 hours (137 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 08:26 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstr |
 | Apr 21, 08:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 08:09 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
 | Apr 21, 08:09 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
@@ -56,7 +58,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
 | Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
 
 ## 🧭 Needs Mike
 
@@ -79,7 +80,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 08:11 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 42 |
+| 🪽 **Hermes** | Apr 21, 08:26 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 43 |
 | 🛡️ **GUARDIAN** | Apr 21, 08:09 CEST | `CANARY_PASS` | `B8` | 🟢 fresh | 91 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🔴 stale | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
@@ -175,4 +176,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*14/27 tasks DONE · Last auto-regenerated: 08:11 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*14/27 tasks DONE · Last auto-regenerated: 08:27 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

@@ -71,7 +71,7 @@ EVENT_TYPES = {
     "STATUS_CHANGED", "ARTIFACT_PUBLISHED", "AGENT_HEARTBEAT", "SPRINT_NOTE",
 }
 
-AGENTS = {"anvil", "vigil", "guardian", "forge", "hermes", "oinkv", "mike", "system"}
+AGENTS = {"anvil", "vigil", "guardian", "forge", "hermes", "oinkv", "oinkdb", "mike", "system"}
 
 BLOCKER_KEYS = {
     "waiting_for_mike_decision",

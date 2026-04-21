@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 04:21 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 06:25 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Still a quiet night on the sprint. The only new event since the last check-in is another routine dashboard artifact republish (the oinxtractor quality page), so nothing substantive has actually moved in the last 90 minutes — Guardian's B3 post-deploy canary at 03:04 UTC (05:04 CEST) is still the most recent real piece of forward progress.
+Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstraction layer), B5 (emitter extraction), B6 (Cornix/Chroma parsers), B7 (WG Bot parsers), and B8 (router decomposition) all came back clean at 08:09 CEST. Five Phase B merges stacking up canary-green in a single run is the most forward progress the sprint has seen since the overnight throttle, and it takes Guardian's side of the dependency chain almost all the way to B4.
 
-The review backlog is unchanged and it's now the single clearest problem on the board: seven PRs are sitting more than 24 hours without a Vigil review — A11 (pr=133, leverage source tracking), all three pieces of B1 (dedup groundwork, prs 149 / 9 / 21), and all three pieces of B2 (PostgreSQL schema + migration, prs 153 / 11 / 24). Vigil itself hasn't posted a review in roughly 20 hours. Anvil, Forge and OinkV are also quiet — about 7 hours since any of them emitted anything — so effectively only Guardian is still ticking overnight.
+The review-debt picture is unchanged though, and it is still the cleanest thing on the board to worry about: eight PRs are sitting more than 24 hours without a Vigil review — A11 (leverage source tracking), all three B1 branches (prs 149 / 9 / 21), all three B2 branches (PostgreSQL schema + migration, prs 153 / 11 / 24), and B5 pr=25. Vigil itself hasn't posted a review in roughly 23 hours, and Anvil, Forge and OinkV are all around nine hours stale. So effectively only Guardian is still ticking.
 
-Nothing is technically blocked and no decisions are waiting on Mike right now; the risk is purely that the longer Vigil stays offline, the more B2 and B1 merges pile up behind it. Next real inflection point is Vigil waking up and clearing that seven-deep queue, which unblocks B2 getting to canary and keeps the B4 cutover clock (earliest 2026-04-26) honest.
+Nothing is technically blocked and no decisions are waiting on Mike right now. The B1/B5/B6/B7/B8 canary greens effectively close those tasks out on Guardian's side; what's left is Vigil waking up to clear the eight-deep PR review queue so B2 can progress to its own canary and the B4 cutover clock (earliest 2026-04-26, seven clean reconciliation days from B3) stays honest.
+
 ## Where We Are Today (one paragraph)
 
 **Phase A is complete AND proven** — all 11 tasks (A1-A11) shipped in the last 48 hours, and as of 13:08 UTC today the four canary failures (A4, A6, A9, A10) that were red overnight have been re-run and all PASS, with A10 validating 17 live signals against the recovered historical dataset at zero drift. **Phase B is in flight** with 8 of 15 tasks merged (B1 database abstraction layer, B2 PostgreSQL schema + one-time migration, B3 parallel-write verification scaffold, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition). **FORGE has published all 15 Phase B plans plus a Phase C summary and a Heavy Hybrid roadmap.** Phase C is fully scoped (7 tasks), Phase D remains deferred. **Live risks are down to housekeeping:** GUARDIAN confirmed the B3 dual-write gap is intentional (`OINK_DB_DUAL_WRITE=false` is correct until B3 reconciliation tooling is live), and the remaining warnings are stale PR-metadata gaps on already-merged tasks, not real blockers. **Nine Mike-gates are open**, including the big one: B4 PostgreSQL cutover approval, earliest on **2026-04-26** (7 consecutive clean reconciliation days after B3 merged 2026-04-19; clock still clean). Phase C starts **late May 2026** after Phase B quality gates pass.
