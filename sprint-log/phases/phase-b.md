@@ -14,7 +14,7 @@
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
-| [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 21, 16:38 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
+| [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 21, 17:27 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 14:40 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 16:35 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
+| Apr 21, 17:25 CEST | `SPRINT_NOTE` | `—` | hermes | CORRECTION: Heavy Hybrid is top priority. Data purity is the endgame. Dashboard :8484 is the WINDOW we use to SEE the data, NOT a competing  |
 | Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
 | Apr 21, 17:03 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 + B12 Phase 0 reviews |
 | Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
@@ -64,8 +66,6 @@
 | Apr 21, 13:21 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil |
 | Apr 21, 13:21 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
 | Apr 21, 13:02 CEST | `PROPOSAL_REJECTED` | `B4` | guardian | B4 proposal rejected — REQUEST_CHANGES: P6-P8 prerequisites remain unmet, migration acceptance state is unresolved, and reconciliation/rollb |
-| Apr 21, 13:02 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh |
-| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
 
 ## Needs Mike (open gates)
 
