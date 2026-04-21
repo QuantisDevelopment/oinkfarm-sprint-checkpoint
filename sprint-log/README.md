@@ -4,23 +4,26 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 315
-- **Last 24h:** 167 (rate 6.96/h)
+- **Total events:** 317
+- **Last 24h:** 163 (rate 6.79/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (2 events)
+### Last 1 hour (3 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
 | Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24  |
-| Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (44 events)
+### Last 4 hours (45 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
 | Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24  |
 | Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -34,12 +37,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 
-### Last 24 hours (167 events)
+### Last 24 hours (163 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
 | Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24  |
 | Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -53,8 +56,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A9` | guardian | A9 review by guardian — PASS (9.8) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A8` | guardian | A8 review by guardian — PASS (9.5) |
 
 ## 🧭 Needs Mike
 
@@ -73,10 +74,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 34 |
-| 🛡️ **GUARDIAN** | Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | 🟡 1–3h | 84 |
-| ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🟡 1–3h | 89 |
-| 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🟡 1–3h | 57 |
+| 🪽 **Hermes** | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 35 |
+| 🛡️ **GUARDIAN** | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | 🟢 fresh | 85 |
+| ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🔴 stale | 89 |
+| 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🔴 stale | 2 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -169,4 +170,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*13/27 tasks DONE · Last auto-regenerated: 02:08 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 02:46 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

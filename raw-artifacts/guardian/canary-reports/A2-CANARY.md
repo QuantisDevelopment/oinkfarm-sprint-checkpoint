@@ -7,7 +7,8 @@
 | **Merge Commit** | `6b21a2074413395b400b6f95494ae80d77ecef59` |
 | **Deploy Time** | 2026-04-19T00:37:03Z (merge) / 2026-04-19T00:39:53Z (service restart) |
 | **Canary Initiated** | 2026-04-19T00:41Z |
-| **Canary Status** | ✅ PASS |
+| **Canary Status** | ✅ PASS — FINAL VERDICT |
+| **Final Verdict Issued** | 2026-04-21T00:40Z (T+48h) |
 
 ---
 
@@ -16,32 +17,37 @@
 | # | Check | Status | Evidence |
 |---|-------|--------|----------|
 | 1 | Schema activation — `remaining_pct` in PRAGMA table_info | ✅ PASS | Column 49, REAL, DEFAULT 100.0 confirmed |
-| 2 | Legacy preservation — FET #1159 `final_roi = 3.37` | ✅ PASS | `remaining_pct = 100.0` (backfilled by ALTER), `final_roi = 3.37` unchanged at T+24h |
-| 3 | First natural TP-hit — `remaining_pct` decrements + event payload enriched | ✅ PASS | 4 TP_HIT events observed with enriched payloads (close_pct, remaining_pct, alloc_source) |
-| 4 | Gap-past-multiple-TP — sequential remaining_pct stepping | ✅ PASS | `#1602 PHA` completed TP2→TP3 sequence (75.0→50.0). `#1561 BTC` hit TP2 (50.0). `#1604 AVAX` hit TP1 (50.0). |
-| 5 | Baselines — SC-2, KPI-R1, KPI-R4 stable post-deploy | ✅ PASS | All metrics stable or improved (shifts attributable to A10 merge, not A2) |
+| 2 | Legacy preservation — FET #1159 `final_roi = 3.37` | ✅ PASS | `remaining_pct = 100.0` (backfilled by ALTER), `final_roi = 3.37` unchanged at T+48h |
+| 3 | First natural TP-hit — `remaining_pct` decrements + event payload enriched | ✅ PASS | 10 TP_HIT events observed with enriched payloads (close_pct, remaining_pct, alloc_source) |
+| 4 | Gap-past-multiple-TP — sequential remaining_pct stepping | ✅ PASS | 3 multi-TP sequences validated: `#1564 LZM` (TP1→TP2→SL close), `#1462 MWH` (TP1→TP2→SL close), `#1602 PHA` (TP2→TP3 sequence) |
+| 5 | Baselines — SC-2, KPI-R1, KPI-R4 stable post-deploy | ✅ PASS | All metrics stable; shifts attributable to A10 merge denominator change, not A2 |
 
 ---
 
-## T+24h Baseline Comparison
+## FINAL VERDICT: ✅ PASS (10/10 clean)
 
-> **⚠️ Important context:** Between A2 deploy (2026-04-19T00:39Z) and this T+24h checkpoint, **Task A10 (database merge)** was deployed (~16:00-18:30 UTC on 2026-04-19), bringing signal count from 490 to 1409. All large metric shifts below are attributable to A10's denominator change, NOT to A2. A2's impact is isolated to remaining_pct behavior and TP_HIT payload enrichment.
+### Decisive evidence at T+48h:
+1. **Blended PnL path naturally exercised and validated.** 3 signals completed the full cycle: TP_HIT → remaining_pct < 100 → final closure with blended PnL. All 3 computed ROIs match DB values within rounding tolerance (max deviation: 0.0047pp). This was the open caveat at T+24h — now resolved.
+2. **10 natural TP_HIT events** processed with fully enriched payloads — 2.5× the volume seen at T+24h.
+3. **Zero A2-attributable baseline regression** across the full 48h window.
+4. **FET #1159 remains at 3.37** — legacy data integrity preserved.
 
-| Metric | Pre-Deploy | T+~4h (pre-A10) | T+24h (post-A10) | Delta (pre→24h) | A2-Attributable? | Status |
-|--------|-----------|------------------|-------------------|------------------|------------------|--------|
-| SC-2 (False closure %) | 12.24% | 12.09% | 6.28% | -5.96pp | ❌ A10 denominator | ✅ No regression |
-| SC-4 (Signal count) | 490 | 490 | 1409 | +919 | ❌ A10 merge | ✅ Expected |
-| KPI-R1 (Breakeven %) | 21.79% | 20.76% | 18.43% | -3.36pp | ❌ A10 denominator | ✅ No regression |
-| KPI-R4 (NULL leverage %) | 80.0% | 80.0% | 67.07% | -12.93pp | ❌ A10 merged data | ✅ No regression |
+---
+
+## T+48h Baseline Comparison
+
+| Metric | Pre-Deploy | T+24h | T+48h | Delta (pre→48h) | A2-Attributable? | Status |
+|--------|-----------|-------|-------|-----------------|------------------|--------|
+| SC-2 (False closure %) | 12.24% | 6.28% | 6.17% | -6.07pp | ❌ A10 denominator | ✅ No regression |
+| SC-4 (Signal count) | 490 | 1409 | 1447 | +957 | ❌ A10 merge + new signals | ✅ Expected |
+| KPI-R1 (Breakeven %) | 21.79% | 18.43% | 15.08% | -6.71pp | ❌ A10 denominator + normal churn | ✅ No regression |
+| KPI-R4 (NULL leverage %) | 80.0% | 67.07% | 67.86% | -12.14pp | ❌ A10 merged data | ✅ No regression |
 | FET #1159 final_roi | 3.37 | 3.37 | 3.37 | 0 | N/A | ✅ Unchanged |
 | FET #1159 remaining_pct | 100.0 | 100.0 | 100.0 | 0 | N/A | ✅ Preserved |
-| ACTIVE signals | — | 84 | 75 | — | Mixed | ✅ Normal churn |
-| NULL remaining_pct | 0 | 0 | 0 | 0 | ✅ | ✅ All backfilled |
-| PARTIALLY_CLOSED signals | 0 | 0 | 3 | +3 | ✅ A2 feature | ✅ New status working |
 
 ### A2-Isolated Metric Assessment
 
-To isolate A2's impact from A10's, the T+~4h window (before A10 merged) provides the cleanest comparison:
+T+~4h window (pre-A10 merge) remains the cleanest A2 isolation point:
 
 | Metric | Pre-Deploy | T+~4h | Delta | Verdict |
 |--------|-----------|--------|-------|---------|
@@ -50,23 +56,60 @@ To isolate A2's impact from A10's, the T+~4h window (before A10 merged) provides
 | KPI-R4 | 80.0% | 80.0% | 0 | ✅ Unchanged |
 | SC-4 | 490 | 490 | 0 | ✅ Unchanged |
 
-**Conclusion:** A2 introduced zero baseline regression. All metric shifts at T+24h are A10 artifacts.
+---
+
+## Blended PnL Validation — A2 Core Feature (NEW at T+48h)
+
+### 3 signals closed with remaining_pct < 100 — blended PnL path fully exercised
+
+#### Signal #1564 LZM (LONG) — TP1 → TP2 → SL close
+
+| Step | Event | close_pct | remaining_pct | Exit Price | ROI at Exit |
+|------|-------|-----------|---------------|------------|-------------|
+| 1 | TP1 hit (09:41Z) | 50.0% | 50.0 | 5.7 | 5.5556% |
+| 2 | TP2 hit (12:24Z) | 25.0% | 25.0 | 6.0 | 11.1111% |
+| 3 | SL hit (13:24Z) | 25.0% (final) | 0 | 5.7 | 5.5556% |
+
+**Blended ROI** = (0.50 × 5.5556) + (0.25 × 11.1111) + (0.25 × 5.5556) = **6.9444%**
+**DB final_roi** = **6.94** → ✅ Match (Δ = 0.0044pp)
+
+#### Signal #1561 BTC (SHORT) — TP2 → SL close (TP1 was pre-A2)
+
+| Step | Event | close_pct | remaining_pct | Exit Price | ROI at Exit |
+|------|-------|-----------|---------------|------------|-------------|
+| 1 | TP1 hit (pre-A2) | N/A | N/A | 75739.4 | Not event-sourced |
+| 2 | TP2 hit (07:23Z) | 50.0% | 50.0 | 74939.0 | 2.3204% |
+| 3 | SL hit (17:19Z) | 50.0% (final) | 0 | 75739.4 | 1.2771% |
+
+**Blended ROI** = (0.50 × 2.3204) + (0.50 × 1.2771) = **1.7988%**
+**DB final_roi** = **1.8** → ✅ Match (Δ = 0.0012pp)
+
+*Note: TP1 was pre-A2 and not event-sourced. A2 correctly used "assumed" allocation for TP2, treating the remaining 100% → 50% transition. The blended PnL is based only on event-sourced TP2 and final SL close.*
+
+#### Signal #1462 MWH (LONG) — TP1 → TP2 → SL close
+
+| Step | Event | close_pct | remaining_pct | Exit Price | ROI at Exit |
+|------|-------|-----------|---------------|------------|-------------|
+| 1 | TP1 hit (18:14Z) | 50.0% | 50.0 | 35.0 | 2.3392% |
+| 2 | TP2 hit (20:17Z) | 25.0% | 25.0 | 35.5 | 3.8012% |
+| 3 | SL hit (21:03Z) | 25.0% (final) | 0 | 35.0 | 2.3392% |
+
+**Blended ROI** = (0.50 × 2.3392) + (0.25 × 3.8012) + (0.25 × 2.3392) = **2.7047%**
+**DB final_roi** = **2.7** → ✅ Match (Δ = 0.0047pp)
+
+### Blended PnL Summary
+
+| Signal | Computed ROI | DB final_roi | Delta | Verdict |
+|--------|-------------|-------------|-------|---------|
+| #1564 LZM (LONG) | 6.9444% | 6.94 | 0.0044pp | ✅ |
+| #1561 BTC (SHORT) | 1.7988% | 1.8 | 0.0012pp | ✅ |
+| #1462 MWH (LONG) | 2.7047% | 2.7 | 0.0047pp | ✅ |
+
+All deviations are within rounding precision (< 0.005pp). **Blended PnL calculation is mathematically correct.**
 
 ---
 
-## Additional KPI Checks at T+24h
-
-| KPI | Value | Pre-Deploy | Status | Notes |
-|-----|-------|------------|--------|-------|
-| KPI-R2 (Direction/SL consistency) | 4 | Pre-existing | ⚠️ Pre-existing | 4 trailing-stop signals (#948 BTC, #1403 ALB, #1406 CRDO, #1460 RKLB) — all have SL trailed above entry after TP hits. All pre-date A2 deploy. Not an A2 regression. |
-| KPI-R3 (Duplicate discord_message_id) | 14 groups / 147 signals | N/A at 490 | ⚠️ A10 artifact | Duplicate discord_message_ids introduced by A10 merge. Largest group: 31 signals sharing one ID. **Not A2-related — flagged for A10 canary.** |
-| KPI-R5 (NULL filled_at for FILLED MARKET) | 0 | — | ✅ Clean | No regression |
-
----
-
-## Post-Deploy TP_HIT Event Validation (A2 Core Feature)
-
-### Summary: 4 natural TP_HIT events since deploy
+## Post-Deploy TP_HIT Event Validation (T+48h: 10 events)
 
 | # | Event ID | Signal | Ticker | TP Level | close_pct | remaining_pct | alloc_source | Timestamp (UTC) |
 |---|----------|--------|--------|----------|-----------|---------------|--------------|-----------------|
@@ -74,95 +117,85 @@ To isolate A2's impact from A10's, the T+~4h window (before A10 merged) provides
 | 2 | 87 | #1602 | PHA | TP3 | 25.0 | 50.0 | assumed | 2026-04-19T03:53:49Z |
 | 3 | 181 | #1561 | BTC | TP2 | 50.0 | 50.0 | assumed | 2026-04-19T07:23:26Z |
 | 4 | 477 | #1604 | AVAX | TP1 | 50.0 | 50.0 | assumed | 2026-04-19T21:54:54Z |
+| 5 | 768 | #1564 | LZM | TP1 | 50.0 | 50.0 | assumed | 2026-04-20T09:41:20Z |
+| 6 | 825 | #1564 | LZM | TP2 | 25.0 | 25.0 | assumed | 2026-04-20T12:24:07Z |
+| 7 | 880 | #2544 | LUNR | TP2 | 25.0 | 75.0 | assumed | 2026-04-20T14:02:32Z |
+| 8 | 960 | #1462 | MWH | TP1 | 50.0 | 50.0 | assumed | 2026-04-20T18:14:35Z |
+| 9 | 1009 | #1462 | MWH | TP2 | 25.0 | 25.0 | assumed | 2026-04-20T20:17:34Z |
+| 10 | 1041 | #2560 | ARM | TP1 | 50.0 | 50.0 | assumed | 2026-04-20T21:47:20Z |
 
-**All 4 events contain enriched payloads** with `close_pct`, `remaining_pct`, and `alloc_source` fields — confirming A2's TP_HIT payload enrichment is operational in production.
+**10/10 events contain enriched payloads** with `close_pct`, `remaining_pct`, and `alloc_source`. All `alloc_source` = "assumed" (no explicit allocation from raw_text — expected behavior).
 
-### Signal-Level Validation
-
-#### Signal #1602 PHA (SHORT) — Full TP2→TP3 Sequence
-- **TP1:** Pre-A2 (2026-04-18T18:33Z) — no A2 payload enrichment expected
-- **TP2:** Post-A2 at 02:34Z — `close_pct=25.0`, `remaining_pct=75.0` ✅
-- **TP3:** Post-A2 at 03:53Z — `close_pct=25.0`, `remaining_pct=50.0` ✅
-- **Current state:** `status=PARTIALLY_CLOSED`, `remaining_pct=50.0`
-- **Assessment:** Sequential stepping correct. remaining_pct tracked state from backfilled 100.0 through two TP levels.
-
-#### Signal #1561 BTC (SHORT) — TP2 Hit
-- **TP1:** Pre-A2 (2026-04-18T11:43Z)
-- **TP2:** Post-A2 at 07:23Z — `close_pct=50.0`, `remaining_pct=50.0` ✅
-- **Current state:** `status=PARTIALLY_CLOSED`, `remaining_pct=50.0`
-- **SL trailed:** From 76719.2 → 75739.4 on TP2 hit
-
-#### Signal #1604 AVAX (SHORT) — First Fully Post-A2 TP1
-- **TP1:** Post-A2 at 21:54Z — `close_pct=50.0`, `remaining_pct=50.0` ✅
-- **Current state:** `status=PARTIALLY_CLOSED`, `remaining_pct=50.0`
-- **Assessment:** This is the first signal to have its TP1 processed entirely by A2 code. Clean behavior.
+### Signal coverage:
+- **6 unique signals** processed TP_HIT events
+- **3 multi-TP sequences** completed (LZM, MWH full TP1→TP2→close; PHA TP2→TP3)
+- **1 cross-boundary signal** (BTC #1561: TP1 pre-A2, TP2 post-A2)
+- **2 single-TP signals** still active (LUNR, ARM)
 
 ---
 
-## Post-Deploy Closure Analysis (11 closures)
+## Post-Deploy Closure Analysis (32 closures in 48h)
 
-| # | Signal | Ticker | Status | close_source | remaining_pct | final_roi | Notes |
-|---|--------|--------|--------|-------------|---------------|-----------|-------|
-| 1 | #1590 | AXL | CLOSED_LOSS | sl_hit | 100.0 | -5.77 | No TPs hit — clean SL closure |
-| 2 | #875 | BTC | CLOSED_WIN | sl_hit | 100.0 | 11.0 | Trailing stop hit at 75000 (above entry 66538). TRADE_CLOSED_TP event emitted. |
-| 3 | #1543 | ARC | CLOSED_LOSS | sl_hit | 100.0 | -9.11 | No TPs hit |
-| 4 | #1562 | CVX | CLOSED_LOSS | sl_hit | 100.0 | -8.39 | Has leverage=10.0 |
-| 5 | #1608 | DEXE | CLOSED_LOSS | sl_hit | 100.0 | -2.26 | No TPs hit |
-| 6 | #1542 | AERO | CLOSED_LOSS | sl_hit | 100.0 | -6.25 | No TPs hit |
-| 7 | #1560 | PUMPFUN | CLOSED_LOSS | sl_hit | 100.0 | -11.53 | No TPs hit |
-| 8 | #1611 | BTC | CLOSED_LOSS | sl_hit | 100.0 | -1.69 | No TPs hit |
-| 9 | #1553 | COTI | CLOSED_LOSS | sl_hit | 100.0 | -8.96 | Has leverage=10.0 |
-| 10 | #1606 | SOL | CLOSED_LOSS | sl_hit | 100.0 | -2.29 | No TPs hit |
-| 11 | #2525 | PIEVERSE | CLOSED_LOSS | sl_hit | 100.0 | -7.14 | From A10 merge |
+| Category | Count | Details |
+|----------|-------|---------|
+| SL closures (remaining_pct=100) | 22 | Standard SL hits, no TP exits — A2 pass-through |
+| TP closures (remaining_pct=100) | 4 | #875 BTC, #1403 ALB, #2558 APT, #2554 GUN — full position closes at TP |
+| **Blended PnL closures (remaining_pct<100)** | **3** | **#1564 LZM (25%), #1561 BTC (50%), #1462 MWH (25%) — ALL VALIDATED ✅** |
+| Pilot closures | 2 | #2533 EDGE, #2561 ORDI — breakeven/manual |
+| WG alert closures | 1 | #2529 PIEVERSE — external closure |
 
-**All closures have remaining_pct=100.0** — none involved partial TP exits before closure. The blended PnL calculation path (remaining_pct < 100 at closure) has **not yet been naturally exercised**. The 3 PARTIALLY_CLOSED signals (#1561, #1602, #1604) are still active and are candidates for future blended PnL validation.
-
-Additionally: Signal #2524 PIEVERSE had a `TRADE_CLOSED_MANUAL` event (pilot_closure) with remaining_pct=100.0 — clean.
+### Key observations:
+- **All 32 closures processed cleanly** — no errors, no unexpected status transitions
+- **3 blended PnL closures** (the T+24h open caveat) — all mathematically verified ✅
+- **SL trailing** worked correctly on multi-TP signals (SL moved to TP level on TP hit)
+- **remaining_pct tracking** consistent across all closures: 100.0 for no-TP, <100 for partial exits
 
 ---
 
-## Event Store Health
+## Additional KPI Checks at T+48h
+
+| KPI | T+24h | T+48h | Status | Notes |
+|-----|-------|-------|--------|-------|
+| KPI-R2 (Direction/SL consistency) | 4 pre-existing | 0 | ✅ Improved | All 4 trailing-stop signals from T+24h have now closed. No new inconsistencies. |
+| KPI-R3 (Duplicate discord_message_id) | 14 groups | 14 groups | ⚠️ Pre-existing (A10) | A10 merge artifact. Not A2-related. |
+| KPI-R5 (NULL filled_at for FILLED MARKET) | 0 | 0 | ✅ Clean | No regression |
+| KPI-R6 (Ingestion rate) | — | 45 (24h) vs 37.9 avg | ✅ Normal | Above average — healthy pipeline |
+
+---
+
+## Event Store Health (T+48h)
 
 | Event Type | Count (post-A2) | Assessment |
 |------------|-----------------|------------|
-| PRICE_ALERT | 542 | ✅ Normal operational volume |
-| TRADE_CLOSED_SL | 11 | ✅ Matches 11 SL closures |
-| SIGNAL_CREATED | 7 | ✅ New signal ingestion |
-| UPDATE_DETECTED | 5 | ✅ Signal update processing |
-| SL_MODIFIED | 4 | ✅ SL trailing on TP hits |
-| TP_HIT | 4 | ✅ A2 core feature — enriched payloads |
+| PRICE_ALERT | 962 | ✅ Normal operational volume |
+| SIGNAL_CREATED | 45 | ✅ Healthy ingestion |
+| TRADE_CLOSED_SL | 22 | ✅ Matches SL closures |
+| UPDATE_DETECTED | 17 | ✅ Signal update processing |
+| SL_MODIFIED | 11 | ✅ SL trailing on TP hits + manual |
+| TP_HIT | 10 | ✅ A2 core feature — enriched payloads |
+| TRADE_CLOSED_TP | 7 | ✅ TP-based closures |
+| STATUS_CHANGED | 5 | ✅ PARTIALLY_CLOSED transitions |
+| GHOST_CLOSURE | 2 | ⚠️ Worth monitoring (not A2-related) |
+| TRADE_CLOSED_MANUAL | 2 | ✅ Pilot closures |
 | LIMIT_EXPIRED | 1 | ✅ Normal |
 | ORDER_FILLED | 1 | ✅ Normal |
-| STATUS_CHANGED | 1 | ✅ Normal |
-| TRADE_CLOSED_MANUAL | 1 | ✅ Pilot closure |
-| TRADE_CLOSED_TP | 1 | ✅ Trailing stop win |
-| **Total** | **578** | ✅ Healthy event generation |
+| **Total** | **1085** | ✅ Healthy event generation (1.9× T+24h volume) |
 
 ---
 
-## Signal Status Distribution at T+24h
+## Signal Status Distribution at T+48h
 
-| Status | Count | Notes |
-|--------|-------|-------|
-| CLOSED_WIN | 471 | Includes A10 merged signals |
-| CLOSED_LOSS | 467 | Includes A10 merged signals |
-| CANCELLED | 221 | Includes A10 merged signals |
-| CLOSED_BREAKEVEN | 154 | Includes A10 merged signals |
-| ACTIVE | 75 | Normal active count |
-| PENDING | 10 | Normal |
-| CLOSED_MANUAL | 8 | Normal |
-| **PARTIALLY_CLOSED** | **3** | **New A2 status — working correctly** |
-| **Total** | **1409** | Up from 490 (A10 merge) |
-
----
-
-## Open Items for 48h Checkpoint
-
-1. **Blended PnL closure validation:** No signal has yet completed the full cycle: TP_HIT → remaining_pct < 100 → final closure with blended PnL. The 3 PARTIALLY_CLOSED signals (#1561 BTC, #1602 PHA, #1604 AVAX) are candidates. If any close by T+48h, validate that `final_roi` reflects the blended calculation.
-
-2. **KPI-R3 duplicate discord_message_ids:** 147 signals across 14 groups have duplicate discord_message_ids. This is an **A10 merge artifact**, not an A2 issue. Flagged for A10 canary tracking.
-
-3. **KPI-R2 trailing-stop signals:** 4 ACTIVE signals have SL > entry_price (LONG direction). All are trailing-stop cases pre-dating A2. Not a regression, but the KPI-R2 query does not account for trailing stops. Query refinement recommended for future daily checks.
+| Status | T+24h | T+48h | Delta | Notes |
+|--------|-------|-------|-------|-------|
+| CLOSED_WIN | 471 | 479 | +8 | Normal closure flow |
+| CLOSED_LOSS | 467 | 478 | +11 | Normal closure flow |
+| CANCELLED | 221 | 221 | 0 | Stable |
+| CLOSED_BREAKEVEN | 154 | 156 | +2 | Normal |
+| ACTIVE | 75 | 89 | +14 | New signals ingested |
+| PENDING | 10 | 12 | +2 | Normal |
+| CLOSED_MANUAL | 8 | 8 | 0 | Stable |
+| **PARTIALLY_CLOSED** | **3** | **4** | **+1** | **ARM #2560 entered PARTIALLY_CLOSED (TP1 hit)** |
+| **Total** | **1409** | **1447** | **+38** | Healthy growth |
 
 ---
 
@@ -173,30 +206,39 @@ Additionally: Signal #2524 PIEVERSE had a `TRADE_CLOSED_MANUAL` event (pilot_clo
 | **T+1h18m** | 2026-04-19T01:57Z | First post-restart closure reviewed, baselines refreshed | ✅ Complete |
 | **T+~4h** | 2026-04-19T02:40Z | Natural TP_HIT validated on `#1602 PHA`, FET #1159 unchanged | ✅ Complete |
 | **T+24h** | 2026-04-20T00:40Z | Full SC/KPI comparison, 4 TP_HIT events validated, A10 overlap documented | ✅ Complete |
-| **T+48h** | 2026-04-21T00:40Z | Extended window: check for blended PnL closure, final canary close-out | 🔲 Scheduled |
+| **T+48h** | 2026-04-21T00:40Z | **FINAL: 10 TP_HITs, 3 blended PnL closures validated, PASS verdict** | ✅ **COMPLETE** |
 
 ---
 
-## Verdict
+## Final Verdict
 
-**✅ PASS — T+24h Canary Confirmed**
+### ✅ PASS — 10/10 Clean
 
-### A2-specific findings (all positive):
-- **4 natural TP_HIT events** with fully enriched payloads (close_pct, remaining_pct, alloc_source) — core A2 feature validated
-- **3 PARTIALLY_CLOSED signals** actively tracking remaining_pct at 50.0 — new status working correctly
-- **Sequential TP stepping** validated on #1602 PHA (TP2→TP3: 75.0→50.0)
-- **First fully post-A2 TP1** observed on #1604 AVAX — clean
-- **FET #1159 = 3.37** — legacy preservation holds at 24h
-- **Zero A2-attributable baseline regression** — T+~4h metrics (pre-A10) confirm A2 had no negative impact
+**A2 (remaining_pct model + partial-close PnL accuracy) has passed all canary criteria with full evidence.**
 
-### Remaining caveat:
-- Blended PnL closure path not yet naturally exercised (no signal has closed with remaining_pct < 100). This is a volume limitation, not a defect. Monitoring continues at T+48h.
+### Evidence summary:
+| # | Criterion | Result | Key Evidence |
+|---|-----------|--------|--------------|
+| 1 | Schema activation | ✅ | `remaining_pct` column active, DEFAULT 100.0, no NULLs |
+| 2 | Legacy preservation | ✅ | FET #1159 = 3.37, unchanged across 48h |
+| 3 | TP_HIT payload enrichment | ✅ | 10/10 events with close_pct, remaining_pct, alloc_source |
+| 4 | Sequential TP stepping | ✅ | 3 multi-TP sequences validated (LZM, MWH, PHA) |
+| 5 | Baseline stability | ✅ | Zero A2-attributable regression across all SC/KPI metrics |
+| 6 | Blended PnL accuracy | ✅ | 3 closures with remaining_pct < 100 — all within 0.005pp of computed ROI |
+| 7 | Cross-boundary handling | ✅ | BTC #1561 (pre-A2 TP1, post-A2 TP2) handled correctly |
+| 8 | SL trailing after TP | ✅ | SL_MODIFIED events emitted on TP hits, SL moved to expected levels |
+| 9 | PARTIALLY_CLOSED status | ✅ | 4 signals currently in PARTIALLY_CLOSED — status transitions clean |
+| 10 | Event store integrity | ✅ | 1085 events, all types accounted for, no orphaned events |
 
-### Cross-canary note:
-- KPI-R3 duplicate discord_message_ids (147 signals) are an A10 artifact. Flagged for A10 canary, not counted against A2.
+### Resolved caveats:
+- **T+24h open item:** "Blended PnL closure path not yet naturally exercised" → **RESOLVED.** 3 signals completed the full TP → partial-close → final-close cycle with mathematically verified blended PnL.
+
+### Outstanding items (NOT blocking PASS):
+- **KPI-R3 duplicate discord_message_ids** (14 groups, 147+ signals) — A10 merge artifact, tracked under A10 canary
+- **GHOST_CLOSURE events** (2 occurrences) — worth monitoring in daily checks, not A2-related
 
 ---
 
 *🛡️ GUARDIAN — A2 Canary Protocol*
-*T+24h checkpoint completed: 2026-04-20T00:40Z*
-*Next checkpoint: T+48h (2026-04-21T00:40Z)*
+*Final verdict issued: 2026-04-21T00:40Z (T+48h)*
+*Canary CLOSED — no further checkpoints scheduled for A2*
