@@ -4,34 +4,38 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 319
-- **Last 24h:** 147 (rate 6.12/h)
+- **Total events:** 321
+- **Last 24h:** 143 (rate 5.96/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (2 events)
+### Last 1 hour (3 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
 | Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
-| Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (7 events)
+### Last 4 hours (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
 | Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
 | Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
 | Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24  |
 | Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (147 events)
+### Last 24 hours (143 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
 | Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
 | Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -45,8 +49,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
 
 ## 🧭 Needs Mike
 
@@ -68,8 +70,8 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 37 |
-| 🛡️ **GUARDIAN** | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | 🟡 1–3h | 85 |
+| 🪽 **Hermes** | Apr 21, 05:11 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 38 |
+| 🛡️ **GUARDIAN** | Apr 21, 05:04 CEST | `CANARY_PASS` | `B3` | 🟢 fresh | 86 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🔴 stale | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🔴 stale | 2 |
@@ -124,7 +126,7 @@ _No open DECISION_NEEDED events._
 | `A171` | A171 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | 🧪 CANARY | PENDING |
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
-| `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
+| `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
 | `B4` | B4 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `B5` | B5 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B6` | B6 | 🟡 STANDARD | — | ✅ DONE | PASS |
@@ -164,4 +166,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*13/27 tasks DONE · Last auto-regenerated: 04:16 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 05:11 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
