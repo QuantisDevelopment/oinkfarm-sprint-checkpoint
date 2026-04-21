@@ -4,17 +4,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 424
-- **Last 24h:** 162 (rate 6.75/h)
+- **Total events:** 429
+- **Last 24h:** 167 (rate 6.96/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (25 events)
+### Last 1 hour (27 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
+| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
+| Apr 21, 16:40 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
+| Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | anvil | AGGRESSIVE SCOPE directive items 4-5 executed. (4) B10 + B11 design notes pre-staged in anvil-workspace/designs/ — ready for Phase 0 dispatc |
 | Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs |
 | Apr 21, 16:37 CEST | `CANARY_STARTED` | `B2` | guardian | B2 canary started |
 | Apr 21, 16:36 CEST | `SPRINT_NOTE` | `—` | hermes | Mike locked AGGRESSIVE scope about half an hour ago — target is Heavy Hybrid done by 2026-05-30, covering all of Phase B plus C1/C2/C3/C4/C6 |
@@ -25,15 +30,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
 | Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
-| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
-| Apr 21, 16:26 CEST | `CANARY_PASS` | `—` | guardian | — canary PASS |
-| Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
 
-### Last 4 hours (62 events)
+### Last 4 hours (67 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
+| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
+| Apr 21, 16:40 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
+| Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | anvil | AGGRESSIVE SCOPE directive items 4-5 executed. (4) B10 + B11 design notes pre-staged in anvil-workspace/designs/ — ready for Phase 0 dispatc |
 | Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs |
 | Apr 21, 16:37 CEST | `CANARY_STARTED` | `B2` | guardian | B2 canary started |
 | Apr 21, 16:36 CEST | `SPRINT_NOTE` | `—` | hermes | Mike locked AGGRESSIVE scope about half an hour ago — target is Heavy Hybrid done by 2026-05-30, covering all of Phase B plus C1/C2/C3/C4/C6 |
@@ -44,15 +49,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
 | Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
-| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
-| Apr 21, 16:26 CEST | `CANARY_PASS` | `—` | guardian | — canary PASS |
-| Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
 
-### Last 24 hours (162 events)
+### Last 24 hours (167 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
+| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
+| Apr 21, 16:40 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
+| Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | anvil | AGGRESSIVE SCOPE directive items 4-5 executed. (4) B10 + B11 design notes pre-staged in anvil-workspace/designs/ — ready for Phase 0 dispatc |
 | Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs |
 | Apr 21, 16:37 CEST | `CANARY_STARTED` | `B2` | guardian | B2 canary started |
 | Apr 21, 16:36 CEST | `SPRINT_NOTE` | `—` | hermes | Mike locked AGGRESSIVE scope about half an hour ago — target is Heavy Hybrid done by 2026-05-30, covering all of Phase B plus C1/C2/C3/C4/C6 |
@@ -63,11 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
 | Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
-| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
-| Apr 21, 16:26 CEST | `CANARY_PASS` | `—` | guardian | — canary PASS |
-| Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
 
 ## 🧭 Needs Mike
 
@@ -87,9 +87,9 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
+| 🪽 **Hermes** | Apr 21, 16:45 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 64 |
+| ⚒️ **ANVIL** | Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | 🟢 fresh | 104 |
 | 🛡️ **GUARDIAN** | Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs` | 🟢 fresh | 105 |
-| 🪽 **Hermes** | Apr 21, 16:36 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 63 |
-| ⚒️ **ANVIL** | Apr 21, 16:35 CEST | `SPRINT_NOTE` | `B9` | 🟢 fresh | 100 |
 | 🔍 **VIGIL** | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | 🟢 fresh | 45 |
 | 🐷 **OinkV** | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 32 |
 | 🔥 **FORGE** | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | 🟢 fresh | 61 |
@@ -152,7 +152,7 @@ _No open DECISION_NEEDED events._
 | `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
 | `B10` | B10 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B11` | B11 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
-| `B12` | B12 | 🟡 STANDARD | — | 📋 PLANNED | — |
+| `B12` | B12 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
 | `B13` | B13 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `B15` | B15 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `C2` | C2 | 🟡 STANDARD | — | 📋 PLANNED | — |
@@ -175,9 +175,9 @@ _No open DECISION_NEEDED events._
 
 | Emoji | Name | Role |
 |---|---|---|
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -193,4 +193,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/37 tasks DONE · Last auto-regenerated: 16:39 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/37 tasks DONE · Last auto-regenerated: 16:45 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
