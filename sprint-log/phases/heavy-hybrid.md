@@ -10,7 +10,7 @@
 
 | ID | Question | Age | Options |
 |---|---|---|---|
-| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | 2m | hard_reject · soft_flag_provisional |
+| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | 8m | hard_reject · soft_flag_provisional |
 
 ## Resolved Q-HH decisions
 

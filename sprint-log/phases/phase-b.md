@@ -21,7 +21,7 @@
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 21, 16:11 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
-| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 17:03 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
+| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 17:12 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 21, 16:40 CEST · `ARTIFACT_PUBLISHED` | anvil · forge |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 21, 16:40 CEST · `ARTIFACT_PUBLISHED` | anvil · forge |
 | [B12](../tasks/B12-b12.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 17:03 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian · hermes |
@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
 | Apr 21, 17:03 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 + B12 Phase 0 reviews |
 | Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
 | Apr 21, 17:03 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
@@ -65,7 +66,6 @@
 | Apr 21, 13:02 CEST | `PROPOSAL_REJECTED` | `B4` | guardian | B4 proposal rejected — REQUEST_CHANGES: P6-P8 prerequisites remain unmet, migration acceptance state is unresolved, and reconciliation/rollb |
 | Apr 21, 13:02 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh |
 | Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
-| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
 
 ## Needs Mike (open gates)
 

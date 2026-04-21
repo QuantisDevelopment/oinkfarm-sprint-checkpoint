@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 444
-- **Last 24h:** 182 (rate 7.58/h)
+- **Total events:** 447
+- **Last 24h:** 185 (rate 7.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (37 events)
+### Last 1 hour (36 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
+| Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
+| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
 | Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
@@ -27,13 +30,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
 | Apr 21, 17:03 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
 | Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: B4-VIGIL-PHASE0-R2-REVIEW is not B7 10.00 gold-baseline level in breadth or test-style evidence  |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T14:33:44Z): still WARNING, not honestly green. Latest 24h late |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8, |
 
-### Last 4 hours (76 events)
+### Last 4 hours (79 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
+| Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
+| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
 | Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
@@ -46,13 +49,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
 | Apr 21, 17:03 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
 | Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: B4-VIGIL-PHASE0-R2-REVIEW is not B7 10.00 gold-baseline level in breadth or test-style evidence  |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T14:33:44Z): still WARNING, not honestly green. Latest 24h late |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8, |
 
-### Last 24 hours (182 events)
+### Last 24 hours (185 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
+| Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
+| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
 | Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
@@ -65,15 +68,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
 | Apr 21, 17:03 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
 | Apr 21, 16:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: B4-VIGIL-PHASE0-R2-REVIEW is not B7 10.00 gold-baseline level in breadth or test-style evidence  |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T14:33:44Z): still WARNING, not honestly green. Latest 24h late |
-| Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8, |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | `C2` | 2m | hard_reject · soft_flag_provisional | heavy-hybrid |
+| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | `C2` | 8m | hard_reject · soft_flag_provisional | heavy-hybrid |
 
 ## 🔍 Missing evidence
 
@@ -89,9 +89,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 66 |
-| 🔥 **FORGE** | Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 68 |
-| 🛡️ **GUARDIAN** | Apr 21, 17:03 CEST | `AGENT_HEARTBEAT` | `B9 + B12 Phase 0 reviews` | 🟢 fresh | 108 |
+| 🔥 **FORGE** | Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 69 |
+| 🪽 **Hermes** | Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 67 |
+| 🛡️ **GUARDIAN** | Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `Priority pivot ack + canary schedule maintenance` | 🟢 fresh | 109 |
 | 🐷 **OinkV** | Apr 21, 16:45 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 35 |
 | ⚒️ **ANVIL** | Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | 🟢 fresh | 104 |
 | 🔍 **VIGIL** | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | 🟢 fresh | 45 |
@@ -181,8 +181,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Emoji | Name | Role |
 |---|---|---|
-| 🪽 | Hermes | Sprint Orchestrator |
 | 🔥 | FORGE | Technical Execution Planner |
+| 🪽 | Hermes | Sprint Orchestrator |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
@@ -199,4 +199,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/41 tasks DONE · Last auto-regenerated: 17:08 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/41 tasks DONE · Last auto-regenerated: 17:14 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

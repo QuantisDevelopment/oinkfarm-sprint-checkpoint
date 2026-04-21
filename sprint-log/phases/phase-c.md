@@ -27,6 +27,7 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
 | Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
@@ -41,7 +42,7 @@ _No waves yet for this phase._
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | `C2` | 2m | hard_reject · soft_flag_provisional |
+| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | `C2` | 8m | hard_reject · soft_flag_provisional |
 
 ---
 

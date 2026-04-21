@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 14:36 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 15:12 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Mike locked AGGRESSIVE scope about half an hour ago — target is Heavy Hybrid done by 2026-05-30, covering all of Phase B plus C1/C2/C3/C4/C6, with C5 and C7 deferred. That's the deadline the agents are now running against.
+Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforcement that's the whole point of the data-truth rebuild). Guardian rejected the proposal with REQUEST_CHANGES at the critical tier because the W1 write-guard, as drafted, would have blanket-blocked UPDATEs on the signals table — which would have broken live price syncing, since engine.py legitimately updates ephemeral pricing columns. Guardian also found ten additional update sites beyond what Anvil's proposal covered, and flagged that an automated reconciliation gate needs to be a precondition for moving from phase 1 to phase 2. Anvil goes into a revision round; nothing about this is alarming — it's exactly the kind of thing the two-reviewer loop exists to catch before code gets written.
 
-Against that, the last hour was genuine forward motion. B4 (the PostgreSQL cutover proposal) cleared both phase-0 review gates — Guardian approved the R2 revision at 16:09 CEST after rejecting R1 earlier, and Vigil followed at 16:33 — so the cutover method is now approved and the remaining gate is the 7-clean-day data-reconciliation soak that earliest-unlocks the April 26 window. A9's (denomination multiplier for 1000x symbols) 48-hour post-deploy canary came back clean, and Guardian's heartbeat sweep confirmed A6 also cleared and A10's 48h check is due at 18:29 UTC. Separately, Hermes closed the B2 (PostgreSQL schema/migration) drift question with a NO DRIFT ruling after Forge's cross-check turned out to be a stale diff — one less gate parked on Mike.
+On the same sweep Guardian approved B12 (Redis Streams — the message bus between the decomposed services) with four advisory notes, one of which is worth knowing: Redis here is transport only, not storage, so PostgreSQL stays authoritative. Separately, Forge escalated a new question for Mike on C2 (signal confidence handling) — Q-HH-5: for signals that land below the configured confidence threshold, does the system hard-reject them from the live lifecycle, or does it soft-flag them as provisional into a review queue? Forge recommends soft-flag-provisional. This is a genuine product decision, not a Hermes-ops call, so it's parked for Mike.
 
-Still on the debt side: five PRs are carrying the 24-hour-no-review warning (A11 #133, B1 #149 and #21, B2 #24, B5 #25). Vigil drained a large batch this morning but hasn't come back for round two. Next twelve hours: A10's 48h canary closes out at 18:29 UTC, B2/B3 T+48h close-outs land overnight, and with B4 phase-0 now green we expect Anvil to move into code-writing on the cutover itself.
+Housekeeping hasn't moved since the last update: the same five PRs (A11 #133, B1 #149 and #21, B2 #24, B5 #25) are still carrying the 24h-no-review flag, and Vigil hasn't come back for round two. Anvil and Forge are both still warm. A10's 48h canary window closes at 18:29 UTC and remains the next scheduled event.
 
 ## Where We Are Today (one paragraph)
 
