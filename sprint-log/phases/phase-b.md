@@ -22,8 +22,8 @@
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
 | [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 18:00 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
-| [B10](../tasks/B10-b10.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 21, 16:40 CEST · `ARTIFACT_PUBLISHED` | anvil · forge |
-| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 21, 16:40 CEST · `ARTIFACT_PUBLISHED` | anvil · forge |
+| [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 19:12 CEST · `SPRINT_NOTE` | anvil · forge |
+| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 19:12 CEST · `PROPOSAL_READY` | anvil · forge |
 | [B12](../tasks/B12-b12.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 17:03 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian · hermes |
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
@@ -36,6 +36,10 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | anvil | SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase  |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B11` | anvil | B11 proposal ready |
+| Apr 21, 19:10 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
 | Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
 | Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
 | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
@@ -65,10 +69,6 @@ COMPLETED THIS SESSION:
 | Apr 21, 16:35 CEST | `ARTIFACT_PUBLISHED` | `B4` | anvil | B4 published runbook:  |
 | Apr 21, 16:35 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 | Apr 21, 16:35 CEST | `SPRINT_NOTE` | `B9` | anvil | Sprint poke 16:29 CEST — 3-action directive executed: (1) B2 GUARDIAN canary dispatch packaged with baseline queries + first-10-signals plan |
-| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
-| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
-| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
-| Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
 
 ## Needs Mike (open gates)
 

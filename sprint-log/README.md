@@ -4,46 +4,34 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 470
-- **Last 24h:** 204 (rate 8.5/h)
+- **Total events:** 475
+- **Last 24h:** 209 (rate 8.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (3 events)
+### Last 1 hour (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 19:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | anvil | SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase  |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B11` | anvil | B11 proposal ready |
+| Apr 21, 19:10 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
 | Apr 21, 19:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 18:53 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
 | Apr 21, 18:20 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Fresh spot-audit used OF181-VIGIL-PHASE1-R1 against the live PR and it is in-family and trustworthy: review scope matc |
 
-### Last 4 hours (77 events)
+### Last 4 hours (79 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 21, 19:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 18:53 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
-| Apr 21, 18:20 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Fresh spot-audit used OF181-VIGIL-PHASE1-R1 against the live PR and it is in-family and trustworthy: review scope matc |
-| Apr 21, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
-| Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
-| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
-| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M165` | vigil | M165 review by vigil — PASS (0.0) |
-| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | vigil | M181 review by vigil — PASS (9.0) |
-| Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | anvil | SPRINT STATUS — All pipeline items shipped, B9 R2 revision complete.
-
-COMPLETED THIS SESSION:
-- B9 Phase 0 R2 submitted: Fixed both blocking |
-| Apr 21, 17:51 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
-| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
-| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
-
-### Last 24 hours (204 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
+| Apr 21, 19:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | anvil | SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase  |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B11` | anvil | B11 proposal ready |
+| Apr 21, 19:10 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
 | Apr 21, 19:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 18:53 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
 | Apr 21, 18:20 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Fresh spot-audit used OF181-VIGIL-PHASE1-R1 against the live PR and it is in-family and trustworthy: review scope matc |
@@ -57,11 +45,28 @@ COMPLETED THIS SESSION:
 
 COMPLETED THIS SESSION:
 - B9 Phase 0 R2 submitted: Fixed both blocking |
-| Apr 21, 17:51 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
-| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
-| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
+
+### Last 24 hours (209 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 21, 19:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | anvil | SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase  |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
+| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B11` | anvil | B11 proposal ready |
+| Apr 21, 19:10 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
+| Apr 21, 19:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 18:53 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
+| Apr 21, 18:20 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Fresh spot-audit used OF181-VIGIL-PHASE1-R1 against the live PR and it is in-family and trustworthy: review scope matc |
+| Apr 21, 18:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
+| Apr 21, 18:00 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M165` | vigil | M165 review by vigil — PASS (0.0) |
+| Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | vigil | M181 review by vigil — PASS (9.0) |
+| Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | anvil | SPRINT STATUS — All pipeline items shipped, B9 R2 revision complete.
+
+COMPLETED THIS SESSION:
+- B9 Phase 0 R2 submitted: Fixed both blocking |
 
 ## 🧭 Needs Mike
 
@@ -81,11 +86,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 19:04 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 73 |
+| 🪽 **Hermes** | Apr 21, 19:15 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 74 |
+| ⚒️ **ANVIL** | Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | 🟢 fresh | 110 |
 | 🐷 **OinkV** | Apr 21, 18:53 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 39 |
 | 🛡️ **GUARDIAN** | Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review` | 🟡 1–3h | 112 |
 | 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🟡 1–3h | 51 |
-| ⚒️ **ANVIL** | Apr 21, 17:52 CEST | `SPRINT_NOTE` | `B9` | 🟡 1–3h | 106 |
 | • **PILOT** | Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | 🟡 1–3h | 1 |
 | 🔥 **FORGE** | Apr 21, 17:27 CEST | `SPRINT_NOTE` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟡 1–3h | 70 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -145,8 +150,8 @@ _No open DECISION_NEEDED events._
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B8` | B8 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
-| `B10` | B10 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
-| `B11` | B11 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
+| `B10` | B10 | 🟡 STANDARD | — | 📝 PROPOSAL REVIEW | — |
+| `B11` | B11 | 🟡 STANDARD | — | 📝 PROPOSAL REVIEW | — |
 | `B12` | B12 | 🔴 CRITICAL | — | ⚙️ CODING | — |
 | `B13` | B13 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `B15` | B15 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -180,10 +185,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
-| ⚒️ | ANVIL | Implementation Lead |
 | • | PILOT |  |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
@@ -198,4 +203,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/46 tasks DONE · Last auto-regenerated: 19:04 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/46 tasks DONE · Last auto-regenerated: 19:16 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
