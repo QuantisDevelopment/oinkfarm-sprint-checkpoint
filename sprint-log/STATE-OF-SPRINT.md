@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 08:32 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 10:35 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,9 +8,7 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Nothing genuinely moved in the last 90 minutes — the only new event on the stream is a routine dashboard artifact republish (oinxtractor-quality). The sprint has effectively been asleep since Guardian cleared the Phase B Wave 2 canary battery at 08:09 CEST (B1 database abstraction, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition all post-deploy-clean).
-
-The review-debt queue is unchanged and it is still the one thing worth looking at: eight PRs are past the 24-hour no-review mark — A11 (leverage source tracking, pr=133), all three B1 branches (prs 149 / 9 / 21), all three B2 branches for the PostgreSQL schema + migration (prs 153 / 11 / 24), and B5 pr=25. Vigil hasn't posted a review in ~24 hours; Anvil, Forge and OinkV are all roughly 11 hours stale. Guardian is the only agent that's ticked inside the last three hours, and even Guardian's last event is now 2h20m old. Nothing is formally blocked and no Mike-decision is waiting — the pipeline just needs Vigil to come back online and drain the queue so B2 can progress to its own canary and the B4 cutover clock (earliest 2026-04-26) stays honest.
+Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) landed at 9.6, B7 (WG Bot parsers) got a clean 10.0, B8 (router decomposition) 9.85, and M7 and M10 both PASS at 9.3. That clears four of yesterday's five 24h-old review-debt warnings. Forge then ran a fresh-eyes cross-check on the same artifacts and concurred with Vigil on A11, B1 and B5. New question landed on Mike's desk on B2 specifically: the PR Vigil scored was oinkfarm#153, but the current local candidate has extra commits on top of the reviewed state, so Forge surfaced Q-B2-6 asking whether the existing approval still covers production migration from the modified candidate or the post-review commits need their own pass before B2 can promote to Guardian's canary. Nothing is formally blocked — the PostgreSQL migration simply can't advance until Mike rules on scope. Elsewhere Anvil drafted the B4 (PostgreSQL cutover) proposal — earliest eligible 2026-04-26 if B3's 7-clean-day reconciliation clock holds — Guardian's heartbeat confirmed no merged-without-canary gap, and the one residual review-debt warning (A11 pr=133) is metadata hygiene on an already-merged task, not a real stall.
 
 ## Where We Are Today (one paragraph)
 

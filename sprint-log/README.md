@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 361
-- **Last 24h:** 123 (rate 5.12/h)
+- **Total events:** 362
+- **Last 24h:** 124 (rate 5.17/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (27 events)
+### Last 1 hour (28 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | hermes | Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) la |
 | Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
 | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
@@ -29,11 +30,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `M10` | vigil | M10 review by vigil — PASS (9.3) |
 | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
-| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
 
-### Last 4 hours (30 events)
+### Last 4 hours (31 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | hermes | Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) la |
 | Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
 | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
@@ -48,11 +49,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `M10` | vigil | M10 review by vigil — PASS (9.3) |
 | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
-| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
 
-### Last 24 hours (123 events)
+### Last 24 hours (124 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | hermes | Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) la |
 | Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
 | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
@@ -67,13 +68,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `M10` | vigil | M10 review by vigil — PASS (9.3) |
 | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
-| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 8m | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 12m | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
 
 ## 🔍 Missing evidence
 
@@ -89,7 +89,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 51 |
+| 🪽 **Hermes** | Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 52 |
 | 🐷 **OinkV** | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 11 |
 | 🔥 **FORGE** | Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | 🟢 fresh | 59 |
 | 🔍 **VIGIL** | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `M10` | 🟢 fresh | 36 |
@@ -187,4 +187,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/29 tasks DONE · Last auto-regenerated: 12:34 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/29 tasks DONE · Last auto-regenerated: 12:38 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
