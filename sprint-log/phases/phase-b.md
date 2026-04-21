@@ -23,7 +23,7 @@
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
 | [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 18:00 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 19:12 CEST · `SPRINT_NOTE` | anvil · forge |
-| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 19:12 CEST · `PROPOSAL_READY` | anvil · forge |
+| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 22:52 CEST · `DECISION_NEEDED` | anvil · forge |
 | [B12](../tasks/B12-b12.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 20:18 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
@@ -36,6 +36,12 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke 20:50Z — all MERGED covered, B2 canary open, ISSUE-189 audit shipped |
+| Apr 21, 22:52 CEST | `TASK_PLANNED` | `B11` | forge | B11 plan published |
+| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecuti |
+| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? |
+| Apr 21, 22:51 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — ISSUE-189: Full backfill candidate scan — 143 candidates found (10.7x Hermes preliminary) |
+| Apr 21, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | Issue #189 filed: SL-to-BE moves rejected by micro-gate B14, causing 11+ trades to log as CLOSED_LOSS when actually stopped flat. Forensic c |
 | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
 | Apr 21, 20:18 CEST | `AGENT_HEARTBEAT` | `B12` | anvil | anvil heartbeat — B12 |
 | Apr 21, 19:41 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking |
@@ -63,16 +69,13 @@ COMPLETED THIS SESSION:
 | Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
 | Apr 21, 17:03 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
 | Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B10` | anvil | B10 published design_notes:  |
-| Apr 21, 16:40 CEST | `ARTIFACT_PUBLISHED` | `B11` | anvil | B11 published design_notes:  |
-| Apr 21, 16:40 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
-| Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | anvil | AGGRESSIVE SCOPE directive items 4-5 executed. (4) B10 + B11 design notes pre-staged in anvil-workspace/designs/ — ready for Phase 0 dispatc |
-| Apr 21, 16:38 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs |
-| Apr 21, 16:37 CEST | `CANARY_STARTED` | `B2` | guardian | B2 canary started |
-| Apr 21, 16:35 CEST | `CANARY_STARTED` | `B2` | anvil | B2 canary started |
 
 ## Needs Mike (open gates)
 
-_No open DECISION_NEEDED for this phase._
+| Question ID | Question | Task | Age | Options |
+|---|---|---|---|---|
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 0m | fixed_date · slo_gated_7day |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 0m | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
 
 ---
 
