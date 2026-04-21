@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 20:00 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 21:10 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still sitting on its two finished proposals for B10 and B11 (the remaining retention + emit-stream work) waiting for Mike's approval, and has switched over to drafting B12 (proposal phase). No one has merged anything in the last ~2.5 hours and the forced heartbeat is really just confirming the sprint is idling on human-decision gates, not technical blockers.
+The big story this half-hour is ISSUE-189, a production data-integrity bug GUARDIAN surfaced during the sprint poke: some stop-loss-moved-to-break-even trades are getting rejected by micro-gate B14 and logged as full losses when they actually closed flat. GUARDIAN's full backfill scan landed 143 candidate trades affected — 10.7x the preliminary estimate we had going in, which is a meaningfully bigger blast radius than first thought. ANVIL drafted the Phase 0 proposal to scope the fix, GUARDIAN approved it about four minutes later (the CRITICAL 4-hour SLA was a non-event), so the pipeline is already moving on TASK-189 without needing a Mike intervention.
 
-The one soft concern is VIGIL's review queue: her last review posted at 15:59 UTC (four hours ago), and there's a small pile of older PRs — A11 (#133), B1 (#149/#21), B2 (#24), B5 (#25) — that the lint flags as never having had a formal REVIEW_POSTED event attached. Most of those are likely backfill artifacts from earlier sprint phases rather than real review debt, but worth noting so it doesn't fester. FORGE's heartbeat is also right at the 3h stale boundary since its C2 decision resolve at 17:17 UTC.
+On the planned work: FORGE shipped the B11 plan (the remaining emit-stream piece) and the plan surfaced two fresh questions that need Mike when he's back. Q-B11-4 asks whether we flip Track 2's event-walk close_source from dual-compute to authoritative on a fixed calendar date or only after an SLO clears (≤0.1% divergence for 7 consecutive days) — i.e. do we commit to a deadline or let the data decide. Q-B11-5 asks where to store the MICRO_GATE_DECISION rows for pre-INSERT rejections that don't yet have a signal_id — a small schema-shape call but it needs to be made before ANVIL codes it.
 
-Background churn is fine: GUARDIAN continues the B3 daily reconciliation, OinkV is running its spot-audit loop against the earlier OF181/SG28 review artifacts and finding them clean, PILOT is still waiting on review for DASH-002, and Hermes keeps republishing the Oinxtractor quality metrics. Nothing on fire — just needs Mike (or Dominik) to unblock the B10/B11 proposal queue when they're back.
+Background is fine: B2's canary is still open, all previously-merged tasks stay covered, OinkV's spot-audits keep coming back clean. The only real asks on the human side are the two new B11 gates above — and those can wait until tomorrow without blocking anything.
+
 
 ## Where We Are Today (one paragraph)
 

@@ -74,8 +74,8 @@ COMPLETED THIS SESSION:
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 16m | fixed_date · slo_gated_7day |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 16m | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 19m | fixed_date · slo_gated_7day |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 19m | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
 
 ---
 
