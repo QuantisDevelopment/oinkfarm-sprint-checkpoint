@@ -4,58 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 338
-- **Last 24h:** 103 (rate 4.29/h)
+- **Total events:** 349
+- **Last 24h:** 113 (rate 4.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (4 events)
+### Last 1 hour (15 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi |
+| Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh |
+| Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
+| Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed. |
+| Apr 21, 12:03 CEST | `SPRINT_NOTE` | `B6` | anvil | Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne |
 | Apr 21, 12:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 11:59 CEST | `CANARY_PASS` | `A7` | guardian | A7 canary PASS |
 | Apr 21, 11:59 CEST | `CANARY_PASS` | `A8` | guardian | A8 canary PASS |
 | Apr 21, 11:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (14 events)
+### Last 4 hours (19 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi |
+| Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh |
+| Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
+| Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed. |
+| Apr 21, 12:03 CEST | `SPRINT_NOTE` | `B6` | anvil | Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne |
 | Apr 21, 12:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 11:59 CEST | `CANARY_PASS` | `A7` | guardian | A7 canary PASS |
 | Apr 21, 11:59 CEST | `CANARY_PASS` | `A8` | guardian | A8 canary PASS |
 | Apr 21, 11:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 10:32 CEST | `SPRINT_NOTE` | `—` | hermes | Nothing genuinely moved in the last 90 minutes — the only new event on the stream is a routine dashboard artifact republish (oinxtractor-qua |
-| Apr 21, 10:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 09:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 08:26 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstr |
-| Apr 21, 08:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B6` | guardian | B6 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B7` | guardian | B7 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B8` | guardian | B8 canary PASS |
 
-### Last 24 hours (103 events)
+### Last 24 hours (113 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
+| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi |
+| Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh |
+| Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
+| Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc |
+| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed. |
+| Apr 21, 12:03 CEST | `SPRINT_NOTE` | `B6` | anvil | Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne |
 | Apr 21, 12:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 11:59 CEST | `CANARY_PASS` | `A7` | guardian | A7 canary PASS |
 | Apr 21, 11:59 CEST | `CANARY_PASS` | `A8` | guardian | A8 canary PASS |
 | Apr 21, 11:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 10:32 CEST | `SPRINT_NOTE` | `—` | hermes | Nothing genuinely moved in the last 90 minutes — the only new event on the stream is a routine dashboard artifact republish (oinxtractor-qua |
-| Apr 21, 10:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 09:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 08:26 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstr |
-| Apr 21, 08:11 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B1` | guardian | B1 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B5` | guardian | B5 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B6` | guardian | B6 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B7` | guardian | B7 canary PASS |
-| Apr 21, 08:09 CEST | `CANARY_PASS` | `B8` | guardian | B8 canary PASS |
-| Apr 21, 07:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -80,11 +92,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 12:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 48 |
-| 🛡️ **GUARDIAN** | Apr 21, 11:59 CEST | `CANARY_PASS` | `A8` | 🟢 fresh | 93 |
-| ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🔴 stale | 89 |
+| 🪽 **Hermes** | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 49 |
+| 🐷 **OinkV** | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 8 |
+| 🛡️ **GUARDIAN** | Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh` | 🟢 fresh | 94 |
+| ⚒️ **ANVIL** | Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 92 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
-| 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🔴 stale | 2 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 | 🔍 **VIGIL** | Apr 20, 09:36 CEST | `REVIEW_POSTED` | `B8` | 🔴 stale | 31 |
@@ -137,7 +149,7 @@ _No open DECISION_NEEDED events._
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | ✅ DONE | PASS |
 | `B2` | B2 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
 | `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
-| `B4` | B4 | 🟡 STANDARD | — | 📋 PLANNED | — |
+| `B4` | B4 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
 | `B5` | B5 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B6` | B6 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
@@ -159,10 +171,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
-| 🐷 | OinkV | Plan Auditor |
 | • | mike |  |
 | • | SYSTEM |  |
 | 🔍 | VIGIL | Code Review + Scoring |
@@ -176,4 +188,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/27 tasks DONE · Last auto-regenerated: 12:02 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/27 tasks DONE · Last auto-regenerated: 12:13 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

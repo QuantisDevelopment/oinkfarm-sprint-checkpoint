@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-21T10:02:17+00:00",
-  "generated_at_cest": "2026-04-21T12:02:17+02:00",
+  "generated_at_utc": "2026-04-21T10:12:52+00:00",
+  "generated_at_cest": "2026-04-21T12:12:52+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2385,6 +2385,635 @@
   ],
   "tasks": [
     {
+      "id": "A171",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T10:10:38.767632Z",
+      "timeline": [
+        {
+          "label": "A171 BLOCKED — design_clarification_needed",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-20T17:58:46Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKED"
+        },
+        {
+          "label": "A171 blocker cleared",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKER_RESOLVED"
+        },
+        {
+          "label": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-20T20:57:07Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed.",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-21T10:05:25.976029Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-21T10:10:38.767632Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 5,
+      "blocker": null,
+      "phase": "A",
+      "agents_touched": [
+        "hermes",
+        "oinkv"
+      ],
+      "last_event_type": "SPRINT_NOTE"
+    },
+    {
+      "id": "B3",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "CANARY",
+      "status_label": "Canary",
+      "prs": [
+        {
+          "repo": "oinkdb-api",
+          "number": 3,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/3",
+          "merge_commit": "401b770bc4f39494888a70b890b81e0d000ee2c2",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkdb-api/commit/401b770bc4f39494888a70b890b81e0d000ee2c2",
+          "live_state": "MERGED",
+          "live_merged_at": "2026-04-18T17:31:06Z"
+        }
+      ],
+      "scores": {
+        "vigil": 7.55,
+        "guardian": 9.6,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "REVISE",
+        "guardian": "PASS",
+        "hermes": null
+      },
+      "canary": {
+        "verdict": "PASS",
+        "path": null,
+        "mtime": "2026-04-21T03:04:00Z"
+      },
+      "merged_at": "2026-04-18T17:31:06Z",
+      "last_activity": "2026-04-21T10:09:23Z",
+      "timeline": [
+        {
+          "label": "B3 merged via PR #3 @401b770",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-18T17:31:06Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
+          "mtime": "2026-04-19T23:42:02Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B3 proposal ready",
+          "actor": "anvil",
+          "path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
+          "mtime": "2026-04-20T01:28:31Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_READY"
+        },
+        {
+          "label": "B3 review by vigil — PASS (9.5)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T01:32:43Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B3 review by guardian — PASS (9.5)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE0-REVIEW-R1.md",
+          "mtime": "2026-04-20T01:34:52Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B3 proposal approved by vigil+guardian",
+          "actor": "system",
+          "path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-APPROVED.marker",
+          "mtime": "2026-04-20T01:37:03Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_APPROVED"
+        },
+        {
+          "label": "B3 merged via PR #None @a91278a",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:47:32Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 merged via PR #None @92f7ada",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:47:40Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 merged via PR #None @07940ce",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:47:41Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 review by vigil — REVISE (7.55)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE1-REVIEW.md",
+          "mtime": "2026-04-20T01:57:21Z",
+          "verdict": "REVISE",
+          "score": 7.55,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B3 review by guardian — PASS (9.6)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW.md",
+          "mtime": "2026-04-20T02:19:26Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B3 review by guardian — PASS (9.6)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
+          "mtime": "2026-04-20T02:21:29Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B3 merged via PR #None @6af042f",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T02:24:30Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 merged via PR #None @73d074f",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T02:24:42Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 merged via PR #None @cc70e5b",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T02:24:46Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B3 canary started",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
+          "mtime": "2026-04-20T03:32:57Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "CANARY_STARTED"
+        },
+        {
+          "label": "B3 Mike gate: Minimum verification period: 7 or 14 days?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t",
+          "actor": "mike",
+          "path": null,
+          "mtime": "2026-04-20T11:32:15Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B3 plan published",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:35:21Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until ",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T13:15:36Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "B3 published kpi: b3-reconciliation-template.md",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/kpi/b3-reconciliation-template.md",
+          "mtime": "2026-04-20T21:31:16Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "ARTIFACT_PUBLISHED"
+        },
+        {
+          "label": "B3 canary PASS",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
+          "mtime": "2026-04-21T03:04:00Z",
+          "verdict": "PENDING_CLEAN_T24",
+          "score": null,
+          "event_type": "CANARY_PASS"
+        },
+        {
+          "label": "guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+          "actor": "guardian",
+          "path": null,
+          "mtime": "2026-04-21T10:09:23Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "AGENT_HEARTBEAT"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
+        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
+        "review_posted": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
+        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-APPROVED.marker",
+        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
+        "artifact_published": "/home/oinkv/guardian-workspace/kpi/b3-reconciliation-template.md",
+        "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md"
+      },
+      "_from_stream": true,
+      "event_count": 23,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "hermes",
+        "mike",
+        "system",
+        "vigil"
+      ],
+      "last_event_type": "AGENT_HEARTBEAT"
+    },
+    {
+      "id": "B4",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "PROPOSAL_REVIEW",
+      "status_label": "Proposal Review",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T10:08:44Z",
+      "timeline": [
+        {
+          "label": "B4 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md",
+          "mtime": "2026-04-20T03:16:02Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B4 Mike gate: Cutover requires Mike's explicit go-ahead",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B4 Mike gate: signal-gateway.service systemd re-enable or keep manual?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B4 plan published",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:35:21Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:55:19Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T21:18:58Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "B4 proposal ready",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-21T10:08:44Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_READY"
+        },
+        {
+          "label": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-21T10:08:44Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md"
+      },
+      "_from_stream": true,
+      "event_count": 11,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "hermes"
+      ],
+      "last_event_type": "SPRINT_NOTE"
+    },
+    {
+      "id": "B6",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "DONE",
+      "status_label": "Done",
+      "prs": [],
+      "scores": {
+        "vigil": 9.5,
+        "guardian": 9.5,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": "PASS",
+        "hermes": null
+      },
+      "canary": {
+        "verdict": "PASS",
+        "path": null,
+        "mtime": "2026-04-21T06:09:40Z"
+      },
+      "merged_at": "2026-04-20T06:46:18Z",
+      "last_activity": "2026-04-21T10:03:20Z",
+      "timeline": [
+        {
+          "label": "B6 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
+          "mtime": "2026-04-20T05:53:15Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B6 proposal ready",
+          "actor": "anvil",
+          "path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
+          "mtime": "2026-04-20T06:27:34Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_READY"
+        },
+        {
+          "label": "B6 review by vigil — PASS (9.5)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/B6-VIGIL-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T06:29:50Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B6 review by guardian — PASS (9.5)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T06:30:38Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B6 proposal approved by vigil+guardian",
+          "actor": "system",
+          "path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker",
+          "mtime": "2026-04-20T06:39:51Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_APPROVED"
+        },
+        {
+          "label": "B6 merged via PR #None @945b6a5",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T06:46:18Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B6 canary started",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
+          "mtime": "2026-04-20T21:30:45Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "CANARY_STARTED"
+        },
+        {
+          "label": "B6 canary PASS",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
+          "mtime": "2026-04-20T21:30:45Z",
+          "verdict": "PASS",
+          "score": null,
+          "event_type": "CANARY_PASS"
+        },
+        {
+          "label": "B6 canary PASS",
+          "actor": "guardian",
+          "path": null,
+          "mtime": "2026-04-21T06:09:40Z",
+          "verdict": "PASS",
+          "score": null,
+          "event_type": "CANARY_PASS"
+        },
+        {
+          "label": "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-21T10:03:20Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
+        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
+        "review_posted": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
+        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker",
+        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
+        "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md"
+      },
+      "_from_stream": true,
+      "event_count": 10,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "system",
+        "vigil"
+      ],
+      "last_event_type": "SPRINT_NOTE"
+    },
+    {
       "id": "A7",
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
@@ -3375,135 +4004,6 @@
       "last_event_type": "CANARY_PASS"
     },
     {
-      "id": "B6",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "DONE",
-      "status_label": "Done",
-      "prs": [],
-      "scores": {
-        "vigil": 9.5,
-        "guardian": 9.5,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": "PASS",
-        "guardian": "PASS",
-        "hermes": null
-      },
-      "canary": {
-        "verdict": "PASS",
-        "path": null,
-        "mtime": "2026-04-21T06:09:40Z"
-      },
-      "merged_at": "2026-04-20T06:46:18Z",
-      "last_activity": "2026-04-21T06:09:40Z",
-      "timeline": [
-        {
-          "label": "B6 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
-          "mtime": "2026-04-20T05:53:15Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B6 proposal ready",
-          "actor": "anvil",
-          "path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
-          "mtime": "2026-04-20T06:27:34Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_READY"
-        },
-        {
-          "label": "B6 review by vigil — PASS (9.5)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/B6-VIGIL-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T06:29:50Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B6 review by guardian — PASS (9.5)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T06:30:38Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B6 proposal approved by vigil+guardian",
-          "actor": "system",
-          "path": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker",
-          "mtime": "2026-04-20T06:39:51Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_APPROVED"
-        },
-        {
-          "label": "B6 merged via PR #None @945b6a5",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T06:46:18Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B6 canary started",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
-          "mtime": "2026-04-20T21:30:45Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "CANARY_STARTED"
-        },
-        {
-          "label": "B6 canary PASS",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
-          "mtime": "2026-04-20T21:30:45Z",
-          "verdict": "PASS",
-          "score": null,
-          "event_type": "CANARY_PASS"
-        },
-        {
-          "label": "B6 canary PASS",
-          "actor": "guardian",
-          "path": null,
-          "mtime": "2026-04-21T06:09:40Z",
-          "verdict": "PASS",
-          "score": null,
-          "event_type": "CANARY_PASS"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B6-plan.md",
-        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-PROPOSAL.md",
-        "review_posted": "/home/oinkv/guardian-workspace/reviews/B6-GUARDIAN-PHASE0-REVIEW.md",
-        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B6-PHASE0-APPROVED.marker",
-        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
-        "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md"
-      },
-      "_from_stream": true,
-      "event_count": 9,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "system",
-        "vigil"
-      ],
-      "last_event_type": "CANARY_PASS"
-    },
-    {
       "id": "B7",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
@@ -3664,265 +4164,6 @@
         "anvil",
         "forge",
         "guardian",
-        "system",
-        "vigil"
-      ],
-      "last_event_type": "CANARY_PASS"
-    },
-    {
-      "id": "B3",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "CANARY",
-      "status_label": "Canary",
-      "prs": [
-        {
-          "repo": "oinkdb-api",
-          "number": 3,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/3",
-          "merge_commit": "401b770bc4f39494888a70b890b81e0d000ee2c2",
-          "commit_url": "https://github.com/QuantisDevelopment/oinkdb-api/commit/401b770bc4f39494888a70b890b81e0d000ee2c2",
-          "live_state": "MERGED",
-          "live_merged_at": "2026-04-18T17:31:06Z"
-        }
-      ],
-      "scores": {
-        "vigil": 7.55,
-        "guardian": 9.6,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": "REVISE",
-        "guardian": "PASS",
-        "hermes": null
-      },
-      "canary": {
-        "verdict": "PASS",
-        "path": null,
-        "mtime": "2026-04-21T03:04:00Z"
-      },
-      "merged_at": "2026-04-18T17:31:06Z",
-      "last_activity": "2026-04-21T03:04:00Z",
-      "timeline": [
-        {
-          "label": "B3 merged via PR #3 @401b770",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-18T17:31:06Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
-          "mtime": "2026-04-19T23:42:02Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B3 proposal ready",
-          "actor": "anvil",
-          "path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
-          "mtime": "2026-04-20T01:28:31Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_READY"
-        },
-        {
-          "label": "B3 review by vigil — PASS (9.5)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T01:32:43Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B3 review by guardian — PASS (9.5)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE0-REVIEW-R1.md",
-          "mtime": "2026-04-20T01:34:52Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B3 proposal approved by vigil+guardian",
-          "actor": "system",
-          "path": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-APPROVED.marker",
-          "mtime": "2026-04-20T01:37:03Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_APPROVED"
-        },
-        {
-          "label": "B3 merged via PR #None @a91278a",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:47:32Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 merged via PR #None @92f7ada",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:47:40Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 merged via PR #None @07940ce",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:47:41Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 review by vigil — REVISE (7.55)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/B3-VIGIL-PHASE1-REVIEW.md",
-          "mtime": "2026-04-20T01:57:21Z",
-          "verdict": "REVISE",
-          "score": 7.55,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B3 review by guardian — PASS (9.6)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW.md",
-          "mtime": "2026-04-20T02:19:26Z",
-          "verdict": "PASS",
-          "score": 9.6,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B3 review by guardian — PASS (9.6)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
-          "mtime": "2026-04-20T02:21:29Z",
-          "verdict": "PASS",
-          "score": 9.6,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B3 merged via PR #None @6af042f",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T02:24:30Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 merged via PR #None @73d074f",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T02:24:42Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 merged via PR #None @cc70e5b",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T02:24:46Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B3 canary started",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
-          "mtime": "2026-04-20T03:32:57Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "CANARY_STARTED"
-        },
-        {
-          "label": "B3 Mike gate: Minimum verification period: 7 or 14 days?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t",
-          "actor": "mike",
-          "path": null,
-          "mtime": "2026-04-20T11:32:15Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B3 plan published",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:35:21Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until ",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T13:15:36Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        },
-        {
-          "label": "B3 published kpi: b3-reconciliation-template.md",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/kpi/b3-reconciliation-template.md",
-          "mtime": "2026-04-20T21:31:16Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "ARTIFACT_PUBLISHED"
-        },
-        {
-          "label": "B3 canary PASS",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
-          "mtime": "2026-04-21T03:04:00Z",
-          "verdict": "PENDING_CLEAN_T24",
-          "score": null,
-          "event_type": "CANARY_PASS"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B3-plan.md",
-        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-PROPOSAL.md",
-        "review_posted": "/home/oinkv/guardian-workspace/reviews/B3-GUARDIAN-PHASE1-REVIEW-R2.md",
-        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B3-PHASE0-APPROVED.marker",
-        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md",
-        "artifact_published": "/home/oinkv/guardian-workspace/kpi/b3-reconciliation-template.md",
-        "canary_pass": "/home/oinkv/guardian-workspace/canary-reports/B3-CANARY.md"
-      },
-      "_from_stream": true,
-      "event_count": 22,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "hermes",
-        "mike",
         "system",
         "vigil"
       ],
@@ -5371,128 +5612,6 @@
       "last_event_type": "REVIEW_POSTED"
     },
     {
-      "id": "B4",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "PLANNED",
-      "status_label": "Planned",
-      "prs": [],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": null,
-      "last_activity": "2026-04-20T21:18:58Z",
-      "timeline": [
-        {
-          "label": "B4 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md",
-          "mtime": "2026-04-20T03:16:02Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B4 Mike gate: Cutover requires Mike's explicit go-ahead",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B4 Mike gate: signal-gateway.service systemd re-enable or keep manual?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B4 Mike gate: .openclaw/workspace fork-sync or re-point to canonical?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B4 plan published",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:35:21Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B4 decision: RECLASSIFIED as scheduled gate, not live blocker. B4 cutover approval will re-surface as a fresh DECISION_NEEDED when (a) B3 du",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:55:19Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "PG installed (17.9) + psycopg 3.3.3 + B2 migration dry-run CLEAN on test DB. Row counts match: servers=11, traders=100, signals=1447, signal",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T21:18:58Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B4-plan.md"
-      },
-      "_from_stream": true,
-      "event_count": 9,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "hermes"
-      ],
-      "last_event_type": "SPRINT_NOTE"
-    },
-    {
       "id": "B9",
       "tier": "STANDARD",
       "tier_emoji": "🟡",
@@ -5829,71 +5948,6 @@
         "hermes"
       ],
       "last_event_type": "TASK_PLANNED"
-    },
-    {
-      "id": "A171",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
-      "repo_hint": null,
-      "status": "NOT_STARTED",
-      "status_label": "Not Started",
-      "prs": [],
-      "scores": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": null,
-        "guardian": null,
-        "hermes": null
-      },
-      "canary": {
-        "verdict": null,
-        "path": null,
-        "mtime": null
-      },
-      "merged_at": null,
-      "last_activity": "2026-04-20T20:57:07Z",
-      "timeline": [
-        {
-          "label": "A171 BLOCKED — design_clarification_needed",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-20T17:58:46Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "BLOCKED"
-        },
-        {
-          "label": "A171 blocker cleared",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:54:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "BLOCKER_RESOLVED"
-        },
-        {
-          "label": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-20T20:57:07Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        }
-      ],
-      "artifacts": {},
-      "_from_stream": true,
-      "event_count": 3,
-      "blocker": null,
-      "phase": "A",
-      "agents_touched": [
-        "hermes",
-        "oinkv"
-      ],
-      "last_event_type": "SPRINT_NOTE"
     },
     {
       "id": "B2",
@@ -6565,17 +6619,17 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-21T10:02:17Z",
+      "last_event_ts": "2026-04-21T10:12:52Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 0.00015333055555555555,
+      "age_hours": 0.00021621277777777778,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 48,
+      "event_count": 49,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-21T10:02:17Z",
+      "last_active": "2026-04-21T10:12:52Z",
       "last_active_human": "0s ago",
       "heartbeat": {
         "current_task": null,
@@ -6585,22 +6639,44 @@
       }
     },
     {
-      "id": "guardian",
-      "name": "GUARDIAN",
-      "last_event_ts": "2026-04-21T09:59:22Z",
-      "last_event_type": "CANARY_PASS",
-      "last_task_id": "A8",
-      "current_task": "A8",
-      "age_hours": 0.048764441666666665,
+      "id": "oinkv",
+      "name": "OinkV",
+      "last_event_ts": "2026-04-21T10:10:38.767632Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "A171",
+      "current_task": "A171",
+      "age_hours": 0.03722520388888889,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 93,
-      "emoji": "🛡️",
-      "role": "Data Integrity + Canary",
-      "last_active": "2026-04-21T09:59:22Z",
+      "event_count": 8,
+      "emoji": "🐷",
+      "role": "Plan Auditor",
+      "last_active": "2026-04-21T10:10:38.767632Z",
       "last_active_human": "2m ago",
       "heartbeat": {
-        "current_task": "A8",
+        "current_task": "A171",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "guardian",
+      "name": "GUARDIAN",
+      "last_event_ts": "2026-04-21T10:09:23Z",
+      "last_event_type": "AGENT_HEARTBEAT",
+      "last_task_id": "B3",
+      "current_task": "Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+      "age_hours": 0.058271768333333335,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 94,
+      "emoji": "🛡️",
+      "role": "Data Integrity + Canary",
+      "last_active": "2026-04-21T10:09:23Z",
+      "last_active_human": "3m ago",
+      "heartbeat": {
+        "current_task": "Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -6609,18 +6685,18 @@
     {
       "id": "anvil",
       "name": "ANVIL",
-      "last_event_ts": "2026-04-20T21:18:58Z",
+      "last_event_ts": "2026-04-21T10:08:44Z",
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 12.722097775,
-      "staleness_label": "red",
-      "light": "red",
-      "event_count": 89,
+      "age_hours": 0.06910510166666667,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 92,
       "emoji": "⚒️",
       "role": "Implementation Lead",
-      "last_active": "2026-04-20T21:18:58Z",
-      "last_active_human": "12h 43m ago",
+      "last_active": "2026-04-21T10:08:44Z",
+      "last_active_human": "4m ago",
       "heartbeat": {
         "current_task": "B4",
         "current_phase": null,
@@ -6635,38 +6711,16 @@
       "last_event_type": "TASK_PLANNED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 12.734875552777778,
+      "age_hours": 12.911327323888889,
       "staleness_label": "red",
       "light": "red",
       "event_count": 57,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-20T21:18:12Z",
-      "last_active_human": "12h 44m ago",
+      "last_active_human": "12h 54m ago",
       "heartbeat": {
         "current_task": null,
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "oinkv",
-      "name": "OinkV",
-      "last_event_ts": "2026-04-20T20:57:07Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": "A171",
-      "current_task": "A171",
-      "age_hours": 13.086264441666666,
-      "staleness_label": "red",
-      "light": "red",
-      "event_count": 2,
-      "emoji": "🐷",
-      "role": "Plan Auditor",
-      "last_active": "2026-04-20T20:57:07Z",
-      "last_active_human": "13h 5m ago",
-      "heartbeat": {
-        "current_task": "A171",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -6679,14 +6733,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 22.500708886111113,
+      "age_hours": 22.67716065722222,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "22h 30m ago",
+      "last_active_human": "22h 40m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6701,7 +6755,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 26.355986663888892,
+      "age_hours": 26.532438435,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -6723,7 +6777,7 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 26.435153330555558,
+      "age_hours": 26.611605101666665,
       "staleness_label": "red",
       "light": "red",
       "event_count": 31,
@@ -6740,6 +6794,94 @@
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-21T10:10:38.767632Z",
+      "time_local": "2026-04-21T12:10+02:00",
+      "header": null,
+      "actions": [
+        "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier finding, there is no working per-agent session-history cap for OinXtractor. agents.defaults.contextPruning is global-only, per-agent contextPruning rejects at runtime, and contextLimits only cover memory/tool budgets. Active mitigation is still the trimmed extractor tool allowlist, lossless-claw freshTailCount=8, and supermemory autoRecall for oinxtractor_patterns. That mitigation reduces overflow pressure and keeps turns completing, but A171 is not done. Correct state is mitigated, not solved."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T101038Z_000203"
+    },
+    {
+      "time_utc": "2026-04-21T10:10:38.767632Z",
+      "time_local": "2026-04-21T12:10+02:00",
+      "header": null,
+      "actions": [
+        "Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h p50 about 177.5s and the latest hourly sample at 129.6s p50 / 225.1s p95. But quality is not clean: unknown_rate is reporting 100.0% over both 24h (45/45) and 7d (230/230) while still labeled status=ok and carrying a target of <5%. That mismatch is itself a warning condition, either a broken metric or a real extraction-quality problem. Treat routine republishes as healthy delivery, but do not treat the quality state as green."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T101038Z_000202"
+    },
+    {
+      "time_utc": "2026-04-21T10:10:38.767632Z",
+      "time_local": "2026-04-21T12:10+02:00",
+      "header": null,
+      "actions": [
+        "Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cites exact moved functions/constants, test counts, rollback scope, and data-integrity boundaries, and lands a justified 10.00 PASS. There is still no newer persisted review artifact from the post-restart drain to prove an opus-4-7 quality jump, so the honest read is baseline intact, improvement unproven."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T101038Z_000201"
+    },
+    {
+      "time_utc": "2026-04-21T10:08:44Z",
+      "time_local": "2026-04-21T12:08+02:00",
+      "header": null,
+      "actions": [
+        "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting Phase 1 review (just opened, Phase 0 was PASS). B4 Phase 0 proposal drafted and submitted. All remaining B tasks (B9-B15) gate on B4. B4 itself gates on B3 canary (T+48h ~03:04 UTC tomorrow) + Mike Q-B2-4/Q-B2-5 + GUARDIAN migration sign-off + 7-day dual-write verification. Next: await B6 Phase 1 review + B4 Phase 0 review."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T100844Z_000002"
+    },
+    {
+      "time_utc": "2026-04-21T10:05:25.976029Z",
+      "time_local": "2026-04-21T12:05+02:00",
+      "header": null,
+      "actions": [
+        "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed. The runtime still has no working per-agent session-history cap for OinXtractor. Per-agent contextPruning was rejected at runtime, and the confirmed supported knobs are only global contextPruning plus per-agent contextLimits for memory/tool budgets. Active mitigation remains: extractor tool allowlist trimmed, lossless-claw freshTailCount reduced to 8, and supermemory autoRecall enabled for oinxtractor_patterns. That combination reduced overflow pressure enough to get post-patch turns through, but it does not satisfy the original A171 design goal. So the correct sprint read is: mitigated, not complete, and still carrying a real design gap until per-agent history control or an explicit alternate design is ratified."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T100525Z_000103"
+    },
+    {
+      "time_utc": "2026-04-21T10:05:25.976029Z",
+      "time_local": "2026-04-21T12:05+02:00",
+      "header": null,
+      "actions": [
+        "OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latency proxy is not alarming, with 24h p50 around 177.5s and same-day hourly samples down around 86s by 09:00Z. But there is a serious signal in the metrics payload that should not be ignored: unknown_rate shows 100.0% for both 24h (45/45) and 7d (230/230) even though the artifact still labels unknown_rate_status=ok and says the target is <5%. That is either a monitoring bug or a real quality regression, but in either case it is not a benign republish. I am flagging it as a quality-warning condition until the metric definition is reconciled. Separately, recent upstream extractor defects on sub-$1 assets and malformed HYPE payloads remain open evidence that extraction quality is not fully green."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T100525Z_000102"
+    },
+    {
+      "time_utc": "2026-04-21T10:05:25.976029Z",
+      "time_local": "2026-04-21T12:05+02:00",
+      "header": null,
+      "actions": [
+        "Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as an opus-4-7 upgrade yet. The latest completed review files remain the strong opus-4-6 baseline (for example B7 scored 10.00 and B5 scored 9.85 with evidence-dense reasoning and clean rollback/data-integrity checks). In-flight work on PRs #9 and #11 looks baseline-consistent, not worse: Vigil is verifying PR heads, separating pre-existing environment failures from change-caused failures, and not hand-waving evidence. One real anomaly: session telemetry is inconsistent right now, because the Vigil status card still reports claude-opus-4-6 while the current transcript contains fresh gpt-5.4 tool-trace turns. So my finding is: no review-quality regression observed yet, but the model-rotation state itself is not clean enough to claim an opus-4-7 improvement."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T100525Z_000101"
+    },
+    {
+      "time_utc": "2026-04-21T10:03:20Z",
+      "time_local": "2026-04-21T12:03+02:00",
+      "header": null,
+      "actions": [
+        "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase needed. B6 branch rebased onto main 3f85c12 (post-B7/B8), PR #29 opened (c6e8223, 429 tests pass, signal_router.py 3918→3697 LOC). B2 canary prep template created at anvil-workspace/canary-reports/B2-CANARY-prep.md. Next actions: (1) await VIGIL+GUARDIAN review on B6 PR #29, (2) B2 migration awaits Mike Q-B2-4/Q-B2-5 + GUARDIAN live sign-off, (3) B3 T+48h canary close-out ~03:04 UTC tomorrow."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T100320Z_000001"
+    },
     {
       "time_utc": "2026-04-21T08:32:00Z",
       "time_local": "2026-04-21T10:32+02:00",
@@ -6954,17 +7096,17 @@
   "audits": [],
   "blockers": [],
   "last_cron": {
-    "time_utc": "2026-04-21T08:32:00Z",
-    "time_local": "2026-04-21T10:32+02:00",
+    "time_utc": "2026-04-21T10:10:38.767632Z",
+    "time_local": "2026-04-21T12:10+02:00",
     "header": null,
     "actions": [
-      "Nothing genuinely moved in the last 90 minutes — the only new event on the stream is a routine dashboard artifact republish (oinxtractor-quality). The sprint has effectively been asleep since Guardian cleared the Phase B Wave 2 canary battery at 08:09 CEST (B1 database abstraction, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition all post-deploy-clean).\n\nThe review-debt queue is unchanged and it is still the one thing worth looking at: eight PRs are past the 24-hour no-review mark — A11 (leverage source tracking, pr=133), all three B1 branches (prs 149 / 9 / 21), all three B2 branches for the PostgreSQL schema + migration (prs 153 / 11 / 24), and B5 pr=25. Vigil hasn't posted a review in ~24 hours; Anvil, Forge and OinkV are all roughly 11 hours stale. Guardian is the only agent that's ticked inside the last three hours, and even Guardian's last event is now 2h20m old. Nothing is formally blocked and no Mike-decision is waiting — the pipeline just needs Vigil to come back online and drain the queue so B2 can progress to its own canary and the B4 cutover clock (earliest 2026-04-26) stays honest."
+      "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier finding, there is no working per-agent session-history cap for OinXtractor. agents.defaults.contextPruning is global-only, per-agent contextPruning rejects at runtime, and contextLimits only cover memory/tool budgets. Active mitigation is still the trimmed extractor tool allowlist, lossless-claw freshTailCount=8, and supermemory autoRecall for oinxtractor_patterns. That mitigation reduces overflow pressure and keeps turns completing, but A171 is not done. Correct state is mitigated, not solved."
     ],
     "next": null,
     "blocker": null,
-    "path": "evt_20260421T083200Z_000001"
+    "path": "evt_20260421T101038Z_000203"
   },
-  "commit": "5edad7c98ea3",
+  "commit": "872a48412193",
   "_from_stream": true,
   "_tasks_map": {
     "A1": {
@@ -8315,10 +8457,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-21T03:04:00Z",
-      "last_event_type": "CANARY_PASS",
+      "last_event_ts": "2026-04-21T10:09:23Z",
+      "last_event_type": "AGENT_HEARTBEAT",
       "last_agent": "guardian",
-      "event_count": 22,
+      "event_count": 23,
       "prs": [
         {
           "repo": "oinkdb-api",
@@ -8823,6 +8965,34 @@
             "checkpoint": "T+24h",
             "ghost_closure_events_observed": 2,
             "note": "T+24h checkpoint clean; organic ghost-closure path exercised successfully; final close-out due at T+48h"
+          }
+        },
+        {
+          "event_id": "evt_20260421T100923Z_000001",
+          "ts": "2026-04-21T10:09:23Z",
+          "event_type": "AGENT_HEARTBEAT",
+          "task_id": "B3",
+          "phase": "B",
+          "wave": null,
+          "agent": "guardian",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "CANARY",
+          "blocker": null,
+          "extra": {
+            "current_task": "Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+            "phase": "B",
+            "merged_without_canary_started_last_2h": 0,
+            "b3_closeout_due_utc": "2026-04-22T02:25:00Z",
+            "b3_closeout_status": "not_due",
+            "dashboard_publish_required": false,
+            "fresh_artifacts": {
+              "sprint_checkpoint_docs_data_json_mtime_utc": "2026-04-21T10:02:30Z",
+              "oinxtractor_metrics_ts": "2026-04-21T10:02:10Z"
+            },
+            "note": "Disabled older duplicate B2 T+48 closeout cron to avoid double finalization."
           }
         }
       ]
@@ -12495,14 +12665,14 @@
     },
     "B4": {
       "id": "B4",
-      "status": "PLANNED",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
+      "status": "PROPOSAL_REVIEW",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
       "phase": "B",
-      "last_event_ts": "2026-04-20T21:18:58Z",
+      "last_event_ts": "2026-04-21T10:08:44Z",
       "last_event_type": "SPRINT_NOTE",
       "last_agent": "anvil",
-      "event_count": 9,
+      "event_count": 11,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
@@ -12717,6 +12887,48 @@
               "quarantine": 58,
               "audit_log": 0
             }
+          }
+        },
+        {
+          "event_id": "evt_20260421T100844Z_000001",
+          "ts": "2026-04-21T10:08:44Z",
+          "event_type": "PROPOSAL_READY",
+          "task_id": "B4",
+          "phase": "B",
+          "wave": null,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B4-PHASE0-PROPOSAL.md",
+            "tier": "CRITICAL",
+            "text": "B4 Phase 0 proposal ready for VIGIL + GUARDIAN review. PostgreSQL cutover — configuration change only, no code changes. Prerequisites P1-P5 satisfied (PG 17.9 + psycopg 3.3.3 installed). P6-P8 still blocked on Mike Q-B2-4/Q-B2-5 decisions and dual-write verification period."
+          }
+        },
+        {
+          "event_id": "evt_20260421T100844Z_000002",
+          "ts": "2026-04-21T10:08:44Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "B4",
+          "phase": "B",
+          "wave": null,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "text": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting Phase 1 review (just opened, Phase 0 was PASS). B4 Phase 0 proposal drafted and submitted. All remaining B tasks (B9-B15) gate on B4. B4 itself gates on B3 canary (T+48h ~03:04 UTC tomorrow) + Mike Q-B2-4/Q-B2-5 + GUARDIAN migration sign-off + 7-day dual-write verification. Next: await B6 Phase 1 review + B4 Phase 0 review.",
+            "review_queue_status": "zero_revise_pending",
+            "next_task": "B4",
+            "b6_status": "pr_29_review_pending",
+            "critical_path": "B3_canary → B2_migration → DUAL_WRITE → 7d_reconciliation → B4_cutover"
           }
         }
       ]
@@ -13316,10 +13528,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "B",
-      "last_event_ts": "2026-04-21T06:09:40Z",
-      "last_event_type": "CANARY_PASS",
-      "last_agent": "guardian",
-      "event_count": 9,
+      "last_event_ts": "2026-04-21T10:03:20Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_agent": "anvil",
+      "event_count": 10,
       "prs": [],
       "canary_verdict": "PASS",
       "blocker": null,
@@ -13515,6 +13727,28 @@
             "report_path": "/home/oinkv/guardian-workspace/canary-reports/B6-CANARY.md",
             "signals_observed": 10,
             "verdict": "PASS"
+          }
+        },
+        {
+          "event_id": "evt_20260421T100320Z_000001",
+          "ts": "2026-04-21T10:03:20Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "B6",
+          "phase": "B",
+          "wave": null,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "text": "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase needed. B6 branch rebased onto main 3f85c12 (post-B7/B8), PR #29 opened (c6e8223, 429 tests pass, signal_router.py 3918→3697 LOC). B2 canary prep template created at anvil-workspace/canary-reports/B2-CANARY-prep.md. Next actions: (1) await VIGIL+GUARDIAN review on B6 PR #29, (2) B2 migration awaits Mike Q-B2-4/Q-B2-5 + GUARDIAN live sign-off, (3) B3 T+48h canary close-out ~03:04 UTC tomorrow.",
+            "b6_pr": "signal-gateway#29",
+            "b6_commit": "c6e8223",
+            "tests_passing": 429,
+            "router_loc": 3697
           }
         }
       ]
@@ -14173,10 +14407,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "A",
-      "last_event_ts": "2026-04-20T20:57:07Z",
+      "last_event_ts": "2026-04-21T10:10:38.767632Z",
       "last_event_type": "SPRINT_NOTE",
       "last_agent": "oinkv",
-      "event_count": 3,
+      "event_count": 5,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
@@ -14239,6 +14473,42 @@
           "extra": {
             "text": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPruning. Use global prune or trim extractor tools/recall.",
             "step": "1-diag"
+          }
+        },
+        {
+          "event_id": "evt_20260421T100525Z_000103",
+          "ts": "2026-04-21T10:05:25.976029Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "A171",
+          "phase": "A",
+          "wave": null,
+          "agent": "oinkv",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MITIGATED_NOT_DONE",
+          "blocker": "design_gap_persists",
+          "extra": {
+            "text": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed. The runtime still has no working per-agent session-history cap for OinXtractor. Per-agent contextPruning was rejected at runtime, and the confirmed supported knobs are only global contextPruning plus per-agent contextLimits for memory/tool budgets. Active mitigation remains: extractor tool allowlist trimmed, lossless-claw freshTailCount reduced to 8, and supermemory autoRecall enabled for oinxtractor_patterns. That combination reduced overflow pressure enough to get post-patch turns through, but it does not satisfy the original A171 design goal. So the correct sprint read is: mitigated, not complete, and still carrying a real design gap until per-agent history control or an explicit alternate design is ratified."
+          }
+        },
+        {
+          "event_id": "evt_20260421T101038Z_000203",
+          "ts": "2026-04-21T10:10:38.767632Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "A171",
+          "phase": "A",
+          "wave": null,
+          "agent": "oinkv",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": "MITIGATED_NOT_DONE",
+          "blocker": "design_gap_persists",
+          "extra": {
+            "text": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier finding, there is no working per-agent session-history cap for OinXtractor. agents.defaults.contextPruning is global-only, per-agent contextPruning rejects at runtime, and contextLimits only cover memory/tool budgets. Active mitigation is still the trimmed extractor tool allowlist, lossless-claw freshTailCount=8, and supermemory autoRecall for oinxtractor_patterns. That mitigation reduces overflow pressure and keeps turns completing, but A171 is not done. Correct state is mitigated, not solved."
           }
         }
       ]
@@ -21480,12 +21750,356 @@
         "accuracy_status": "proxy_only",
         "corrections_status": "pending"
       }
+    },
+    {
+      "event_id": "evt_20260421T100320Z_000001",
+      "ts": "2026-04-21T10:03:20Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "B6",
+      "phase": "B",
+      "wave": null,
+      "agent": "anvil",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase needed. B6 branch rebased onto main 3f85c12 (post-B7/B8), PR #29 opened (c6e8223, 429 tests pass, signal_router.py 3918→3697 LOC). B2 canary prep template created at anvil-workspace/canary-reports/B2-CANARY-prep.md. Next actions: (1) await VIGIL+GUARDIAN review on B6 PR #29, (2) B2 migration awaits Mike Q-B2-4/Q-B2-5 + GUARDIAN live sign-off, (3) B3 T+48h canary close-out ~03:04 UTC tomorrow.",
+        "b6_pr": "signal-gateway#29",
+        "b6_commit": "c6e8223",
+        "tests_passing": 429,
+        "router_loc": 3697
+      }
+    },
+    {
+      "event_id": "evt_20260421T100525Z_000101",
+      "ts": "2026-04-21T10:05:25.976029Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as an opus-4-7 upgrade yet. The latest completed review files remain the strong opus-4-6 baseline (for example B7 scored 10.00 and B5 scored 9.85 with evidence-dense reasoning and clean rollback/data-integrity checks). In-flight work on PRs #9 and #11 looks baseline-consistent, not worse: Vigil is verifying PR heads, separating pre-existing environment failures from change-caused failures, and not hand-waving evidence. One real anomaly: session telemetry is inconsistent right now, because the Vigil status card still reports claude-opus-4-6 while the current transcript contains fresh gpt-5.4 tool-trace turns. So my finding is: no review-quality regression observed yet, but the model-rotation state itself is not clean enough to claim an opus-4-7 improvement."
+      }
+    },
+    {
+      "event_id": "evt_20260421T100525Z_000102",
+      "ts": "2026-04-21T10:05:25.976029Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "/home/oinkv/sprint-checkpoint/docs/oinxtractor-metrics.json",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latency proxy is not alarming, with 24h p50 around 177.5s and same-day hourly samples down around 86s by 09:00Z. But there is a serious signal in the metrics payload that should not be ignored: unknown_rate shows 100.0% for both 24h (45/45) and 7d (230/230) even though the artifact still labels unknown_rate_status=ok and says the target is <5%. That is either a monitoring bug or a real quality regression, but in either case it is not a benign republish. I am flagging it as a quality-warning condition until the metric definition is reconciled. Separately, recent upstream extractor defects on sub-$1 assets and malformed HYPE payloads remain open evidence that extraction quality is not fully green."
+      }
+    },
+    {
+      "event_id": "evt_20260421T100525Z_000103",
+      "ts": "2026-04-21T10:05:25.976029Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "A171",
+      "phase": "A",
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": "MITIGATED_NOT_DONE",
+      "blocker": "design_gap_persists",
+      "extra": {
+        "text": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed. The runtime still has no working per-agent session-history cap for OinXtractor. Per-agent contextPruning was rejected at runtime, and the confirmed supported knobs are only global contextPruning plus per-agent contextLimits for memory/tool budgets. Active mitigation remains: extractor tool allowlist trimmed, lossless-claw freshTailCount reduced to 8, and supermemory autoRecall enabled for oinxtractor_patterns. That combination reduced overflow pressure enough to get post-patch turns through, but it does not satisfy the original A171 design goal. So the correct sprint read is: mitigated, not complete, and still carrying a real design gap until per-agent history control or an explicit alternate design is ratified."
+      }
+    },
+    {
+      "event_id": "evt_20260421T100844Z_000001",
+      "ts": "2026-04-21T10:08:44Z",
+      "event_type": "PROPOSAL_READY",
+      "task_id": "B4",
+      "phase": "B",
+      "wave": null,
+      "agent": "anvil",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "proposal_path": "/home/oinkv/anvil-workspace/proposals/B4-PHASE0-PROPOSAL.md",
+        "tier": "CRITICAL",
+        "text": "B4 Phase 0 proposal ready for VIGIL + GUARDIAN review. PostgreSQL cutover — configuration change only, no code changes. Prerequisites P1-P5 satisfied (PG 17.9 + psycopg 3.3.3 installed). P6-P8 still blocked on Mike Q-B2-4/Q-B2-5 decisions and dual-write verification period."
+      }
+    },
+    {
+      "event_id": "evt_20260421T100844Z_000002",
+      "ts": "2026-04-21T10:08:44Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "B4",
+      "phase": "B",
+      "wave": null,
+      "agent": "anvil",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting Phase 1 review (just opened, Phase 0 was PASS). B4 Phase 0 proposal drafted and submitted. All remaining B tasks (B9-B15) gate on B4. B4 itself gates on B3 canary (T+48h ~03:04 UTC tomorrow) + Mike Q-B2-4/Q-B2-5 + GUARDIAN migration sign-off + 7-day dual-write verification. Next: await B6 Phase 1 review + B4 Phase 0 review.",
+        "review_queue_status": "zero_revise_pending",
+        "next_task": "B4",
+        "b6_status": "pr_29_review_pending",
+        "critical_path": "B3_canary → B2_migration → DUAL_WRITE → 7d_reconciliation → B4_cutover"
+      }
+    },
+    {
+      "event_id": "evt_20260421T100923Z_000001",
+      "ts": "2026-04-21T10:09:23Z",
+      "event_type": "AGENT_HEARTBEAT",
+      "task_id": "B3",
+      "phase": "B",
+      "wave": null,
+      "agent": "guardian",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": "CANARY",
+      "blocker": null,
+      "extra": {
+        "current_task": "Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+        "phase": "B",
+        "merged_without_canary_started_last_2h": 0,
+        "b3_closeout_due_utc": "2026-04-22T02:25:00Z",
+        "b3_closeout_status": "not_due",
+        "dashboard_publish_required": false,
+        "fresh_artifacts": {
+          "sprint_checkpoint_docs_data_json_mtime_utc": "2026-04-21T10:02:30Z",
+          "oinxtractor_metrics_ts": "2026-04-21T10:02:10Z"
+        },
+        "note": "Disabled older duplicate B2 T+48 closeout cron to avoid double finalization."
+      }
+    },
+    {
+      "event_id": "evt_20260421T101038Z_000201",
+      "ts": "2026-04-21T10:10:38.767632Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "/home/oinkv/vigil-workspace/reviews/B7-VIGIL-PHASE1-R1.md",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cites exact moved functions/constants, test counts, rollback scope, and data-integrity boundaries, and lands a justified 10.00 PASS. There is still no newer persisted review artifact from the post-restart drain to prove an opus-4-7 quality jump, so the honest read is baseline intact, improvement unproven."
+      }
+    },
+    {
+      "event_id": "evt_20260421T101038Z_000202",
+      "ts": "2026-04-21T10:10:38.767632Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "/home/oinkv/sprint-checkpoint/docs/oinxtractor-metrics.json",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h p50 about 177.5s and the latest hourly sample at 129.6s p50 / 225.1s p95. But quality is not clean: unknown_rate is reporting 100.0% over both 24h (45/45) and 7d (230/230) while still labeled status=ok and carrying a target of <5%. That mismatch is itself a warning condition, either a broken metric or a real extraction-quality problem. Treat routine republishes as healthy delivery, but do not treat the quality state as green."
+      }
+    },
+    {
+      "event_id": "evt_20260421T101038Z_000203",
+      "ts": "2026-04-21T10:10:38.767632Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "A171",
+      "phase": "A",
+      "wave": null,
+      "agent": "oinkv",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": "MITIGATED_NOT_DONE",
+      "blocker": "design_gap_persists",
+      "extra": {
+        "text": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier finding, there is no working per-agent session-history cap for OinXtractor. agents.defaults.contextPruning is global-only, per-agent contextPruning rejects at runtime, and contextLimits only cover memory/tool budgets. Active mitigation is still the trimmed extractor tool allowlist, lossless-claw freshTailCount=8, and supermemory autoRecall for oinxtractor_patterns. That mitigation reduces overflow pressure and keeps turns completing, but A171 is not done. Correct state is mitigated, not solved."
+      }
+    },
+    {
+      "event_id": "evt_20260421T101252Z_000001",
+      "ts": "2026-04-21T10:12:52Z",
+      "event_type": "ARTIFACT_PUBLISHED",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "docs/oinxtractor-quality.html",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "category": "oinxtractor_quality",
+        "src_path": "docs/oinxtractor-metrics.json",
+        "latency_status": "ok",
+        "unknown_rate_status": "ok",
+        "accuracy_status": "proxy_only",
+        "corrections_status": "pending"
+      }
     }
   ],
   "open_decisions": [],
   "live_buckets": {
     "1h": [
       {
+        "ts": "2026-04-21T10:12:52Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00021621277777777778
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:09:23Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": "B3",
+        "agent": "guardian",
+        "summary": "guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.058271768333333335
+      },
+      {
+        "ts": "2026-04-21T10:08:44Z",
+        "event_type": "PROPOSAL_READY",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "B4 proposal ready",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.06910510166666667
+      },
+      {
+        "ts": "2026-04-21T10:08:44Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.06910510166666667
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed.",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:03:20Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B6",
+        "agent": "anvil",
+        "summary": "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.15910510166666667
+      },
+      {
         "ts": "2026-04-21T10:02:17Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -21494,7 +22108,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.00015333055555555555
+        "age_hours": 0.17660510166666668
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -21505,7 +22119,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.048764441666666665
+        "age_hours": 0.22521621277777779
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -21516,7 +22130,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.048764441666666665
+        "age_hours": 0.22521621277777779
       },
       {
         "ts": "2026-04-21T09:41:33Z",
@@ -21527,11 +22141,132 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.3457088861111111
+        "age_hours": 0.5221606572222223
       }
     ],
     "4h": [
       {
+        "ts": "2026-04-21T10:12:52Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00021621277777777778
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:09:23Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": "B3",
+        "agent": "guardian",
+        "summary": "guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.058271768333333335
+      },
+      {
+        "ts": "2026-04-21T10:08:44Z",
+        "event_type": "PROPOSAL_READY",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "B4 proposal ready",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.06910510166666667
+      },
+      {
+        "ts": "2026-04-21T10:08:44Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.06910510166666667
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed.",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:03:20Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B6",
+        "agent": "anvil",
+        "summary": "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.15910510166666667
+      },
+      {
         "ts": "2026-04-21T10:02:17Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -21540,7 +22275,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.00015333055555555555
+        "age_hours": 0.17660510166666668
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -21551,7 +22286,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.048764441666666665
+        "age_hours": 0.22521621277777779
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -21562,7 +22297,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.048764441666666665
+        "age_hours": 0.22521621277777779
       },
       {
         "ts": "2026-04-21T09:41:33Z",
@@ -21573,7 +22308,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.3457088861111111
+        "age_hours": 0.5221606572222223
       },
       {
         "ts": "2026-04-21T08:32:00Z",
@@ -21584,7 +22319,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.5048755527777777
+        "age_hours": 1.6813273238888888
       },
       {
         "ts": "2026-04-21T08:29:26Z",
@@ -21595,7 +22330,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.5476533305555555
+        "age_hours": 1.7241051016666666
       },
       {
         "ts": "2026-04-21T07:27:54Z",
@@ -21606,7 +22341,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.573208886111111
+        "age_hours": 2.7496606572222224
       },
       {
         "ts": "2026-04-21T06:26:17Z",
@@ -21617,77 +22352,132 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.6001533305555555
-      },
-      {
-        "ts": "2026-04-21T06:11:40Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.8437644416666665
-      },
-      {
-        "ts": "2026-04-21T06:09:40Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "B1",
-        "agent": "guardian",
-        "summary": "B1 canary PASS",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.877097775
-      },
-      {
-        "ts": "2026-04-21T06:09:40Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "B5",
-        "agent": "guardian",
-        "summary": "B5 canary PASS",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.877097775
-      },
-      {
-        "ts": "2026-04-21T06:09:40Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "B6",
-        "agent": "guardian",
-        "summary": "B6 canary PASS",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.877097775
-      },
-      {
-        "ts": "2026-04-21T06:09:40Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "B7",
-        "agent": "guardian",
-        "summary": "B7 canary PASS",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.877097775
-      },
-      {
-        "ts": "2026-04-21T06:09:40Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "B8",
-        "agent": "guardian",
-        "summary": "B8 canary PASS",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.877097775
+        "age_hours": 3.7766051016666666
       }
     ],
     "24h": [
       {
+        "ts": "2026-04-21T10:12:52Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00021621277777777778
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:10:38.767632Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.03722520388888889
+      },
+      {
+        "ts": "2026-04-21T10:09:23Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": "B3",
+        "agent": "guardian",
+        "summary": "guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.058271768333333335
+      },
+      {
+        "ts": "2026-04-21T10:08:44Z",
+        "event_type": "PROPOSAL_READY",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "B4 proposal ready",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.06910510166666667
+      },
+      {
+        "ts": "2026-04-21T10:08:44Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.06910510166666667
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": "OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:05:25.976029Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "A171",
+        "agent": "oinkv",
+        "summary": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed.",
+        "phase": "A",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12411176027777779
+      },
+      {
+        "ts": "2026-04-21T10:03:20Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B6",
+        "agent": "anvil",
+        "summary": "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase ne",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.15910510166666667
+      },
+      {
         "ts": "2026-04-21T10:02:17Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -21696,7 +22486,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.00015333055555555555
+        "age_hours": 0.17660510166666668
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -21707,7 +22497,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.048764441666666665
+        "age_hours": 0.22521621277777779
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -21718,7 +22508,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.048764441666666665
+        "age_hours": 0.22521621277777779
       },
       {
         "ts": "2026-04-21T09:41:33Z",
@@ -21729,7 +22519,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.3457088861111111
+        "age_hours": 0.5221606572222223
       },
       {
         "ts": "2026-04-21T08:32:00Z",
@@ -21740,7 +22530,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.5048755527777777
+        "age_hours": 1.6813273238888888
       },
       {
         "ts": "2026-04-21T08:29:26Z",
@@ -21751,7 +22541,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.5476533305555555
+        "age_hours": 1.7241051016666666
       },
       {
         "ts": "2026-04-21T07:27:54Z",
@@ -21762,7 +22552,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.573208886111111
+        "age_hours": 2.7496606572222224
       },
       {
         "ts": "2026-04-21T06:26:17Z",
@@ -21773,7 +22563,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.6001533305555555
+        "age_hours": 3.7766051016666666
       },
       {
         "ts": "2026-04-21T06:11:40Z",
@@ -21784,7 +22574,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.8437644416666665
+        "age_hours": 4.020216212777778
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -21795,7 +22585,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.877097775
+        "age_hours": 4.053549546111111
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -21806,7 +22596,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.877097775
+        "age_hours": 4.053549546111111
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -21817,7 +22607,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.877097775
+        "age_hours": 4.053549546111111
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -21828,7 +22618,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.877097775
+        "age_hours": 4.053549546111111
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -21839,7 +22629,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.877097775
+        "age_hours": 4.053549546111111
       },
       {
         "ts": "2026-04-21T05:30:05Z",
@@ -21850,7 +22640,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.5368199972222225
+        "age_hours": 4.713271768333333
       },
       {
         "ts": "2026-04-21T04:21:00Z",
@@ -21861,7 +22651,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.688208886111111
+        "age_hours": 5.864660657222222
       },
       {
         "ts": "2026-04-21T04:15:26Z",
@@ -21872,7 +22662,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.780986663888889
+        "age_hours": 5.957438434999999
       },
       {
         "ts": "2026-04-21T03:11:34Z",
@@ -21883,7 +22673,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.845431108333333
+        "age_hours": 7.021882879444444
       },
       {
         "ts": "2026-04-21T03:04:00Z",
@@ -21894,7 +22684,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 6.971542219444444
+        "age_hours": 7.147993990555555
       },
       {
         "ts": "2026-04-21T02:13:37Z",
@@ -21905,7 +22695,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.811264441666666
+        "age_hours": 7.987716212777777
       },
       {
         "ts": "2026-04-21T01:27:28Z",
@@ -21916,7 +22706,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.580431108333332
+        "age_hours": 8.756882879444444
       },
       {
         "ts": "2026-04-21T00:46:39Z",
@@ -21927,7 +22717,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.26070888611111
+        "age_hours": 9.437160657222222
       },
       {
         "ts": "2026-04-21T00:44:25Z",
@@ -21938,7 +22728,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 9.297931108333334
+        "age_hours": 9.474382879444445
       },
       {
         "ts": "2026-04-21T00:07:36Z",
@@ -21949,7 +22739,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.911542219444444
+        "age_hours": 10.087993990555555
       },
       {
         "ts": "2026-04-20T23:21:53Z",
@@ -21960,7 +22750,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.67348666388889
+        "age_hours": 10.849938435
       },
       {
         "ts": "2026-04-20T22:17:17Z",
@@ -21971,7 +22761,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.750153330555555
+        "age_hours": 11.926605101666667
       },
       {
         "ts": "2026-04-20T22:09:03Z",
@@ -21982,7 +22772,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 11.887375552777778
+        "age_hours": 12.063827323888889
       },
       {
         "ts": "2026-04-20T22:01:54Z",
@@ -21993,7 +22783,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.006542219444444
+        "age_hours": 12.182993990555556
       },
       {
         "ts": "2026-04-20T21:41:30Z",
@@ -22004,7 +22794,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.346542219444444
+        "age_hours": 12.522993990555555
       },
       {
         "ts": "2026-04-20T21:32:48Z",
@@ -22015,7 +22805,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 12.491542219444444
+        "age_hours": 12.667993990555555
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22026,7 +22816,7 @@
         "phase": "A",
         "pr": 5,
         "repo": "oink-sync",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22037,7 +22827,7 @@
         "phase": "A",
         "pr": 7,
         "repo": "oink-sync",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22048,7 +22838,7 @@
         "phase": "A",
         "pr": 130,
         "repo": "signal-gateway",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22059,7 +22849,7 @@
         "phase": "A",
         "pr": 131,
         "repo": "signal-gateway",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22070,7 +22860,7 @@
         "phase": "A",
         "pr": 20,
         "repo": "signal-gateway",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22081,7 +22871,7 @@
         "phase": "A",
         "pr": 8,
         "repo": "oink-sync",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22092,7 +22882,7 @@
         "phase": "A",
         "pr": 132,
         "repo": "oinkfarm",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22103,7 +22893,7 @@
         "phase": "A",
         "pr": 134,
         "repo": "oinkfarm",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22114,7 +22904,7 @@
         "phase": "A",
         "pr": 135,
         "repo": "oinkfarm",
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -22125,7 +22915,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 12.494042219444445
+        "age_hours": 12.670493990555554
       },
       {
         "ts": "2026-04-20T21:31:16Z",
@@ -22136,7 +22926,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.517097775
+        "age_hours": 12.693549546111111
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -22147,7 +22937,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.525708886111111
+        "age_hours": 12.702160657222223
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -22158,7 +22948,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.525708886111111
+        "age_hours": 12.702160657222223
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -22169,7 +22959,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.525708886111111
+        "age_hours": 12.702160657222223
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -22180,7 +22970,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.525708886111111
+        "age_hours": 12.702160657222223
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -22191,7 +22981,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.525708886111111
+        "age_hours": 12.702160657222223
       },
       {
         "ts": "2026-04-20T21:30:29Z",
@@ -22202,7 +22992,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.530153330555555
+        "age_hours": 12.706605101666666
       },
       {
         "ts": "2026-04-20T21:27:41Z",
@@ -22213,7 +23003,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.576819997222222
+        "age_hours": 12.753271768333333
       },
       {
         "ts": "2026-04-20T21:19:35Z",
@@ -22224,7 +23014,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.711819997222221
+        "age_hours": 12.888271768333333
       },
       {
         "ts": "2026-04-20T21:18:58Z",
@@ -22235,7 +23025,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.722097775
+        "age_hours": 12.898549546111111
       },
       {
         "ts": "2026-04-20T21:18:12Z",
@@ -22246,7 +23036,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 12.734875552777778
+        "age_hours": 12.911327323888889
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -22257,7 +23047,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.736542219444445
+        "age_hours": 12.912993990555556
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -22268,7 +23058,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.736542219444445
+        "age_hours": 12.912993990555556
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -22279,7 +23069,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 12.736542219444445
+        "age_hours": 12.912993990555556
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -22290,7 +23080,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 12.736542219444445
+        "age_hours": 12.912993990555556
       },
       {
         "ts": "2026-04-20T20:57:07Z",
@@ -22301,7 +23091,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 13.086264441666666
+        "age_hours": 13.262716212777777
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -22312,7 +23102,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.116264441666667
+        "age_hours": 13.292716212777778
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -22323,7 +23113,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 13.116264441666667
+        "age_hours": 13.292716212777778
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -22334,7 +23124,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.116264441666667
+        "age_hours": 13.292716212777778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22345,7 +23135,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22356,7 +23146,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22367,7 +23157,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22378,7 +23168,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22389,7 +23179,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22400,7 +23190,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -22411,7 +23201,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 13.123764441666667
+        "age_hours": 13.300216212777777
       },
       {
         "ts": "2026-04-20T20:20:23Z",
@@ -22422,7 +23212,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.69848666388889
+        "age_hours": 13.874938434999999
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -22433,7 +23223,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.310986663888889
+        "age_hours": 14.487438435
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -22444,7 +23234,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.407931108333333
+        "age_hours": 15.584382879444444
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -22455,7 +23245,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.832097775
+        "age_hours": 16.008549546111112
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -22466,7 +23256,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 16.058764441666668
+        "age_hours": 16.23521621277778
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -22477,7 +23267,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.212097775
+        "age_hours": 16.38854954611111
       },
       {
         "ts": "2026-04-20T16:06:27Z",
@@ -22488,7 +23278,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.930708886111113
+        "age_hours": 18.10716065722222
       },
       {
         "ts": "2026-04-20T16:02:34Z",
@@ -22499,7 +23289,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 17.99543110833333
+        "age_hours": 18.171882879444443
       },
       {
         "ts": "2026-04-20T15:53:52Z",
@@ -22510,7 +23300,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.140431108333335
+        "age_hours": 18.316882879444446
       },
       {
         "ts": "2026-04-20T15:52:02Z",
@@ -22521,7 +23311,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.17098666388889
+        "age_hours": 18.347438435
       },
       {
         "ts": "2026-04-20T13:47:28Z",
@@ -22532,7 +23322,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.247097775
+        "age_hours": 20.42354954611111
       },
       {
         "ts": "2026-04-20T13:15:36Z",
@@ -22543,7 +23333,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 20.778208886111113
+        "age_hours": 20.95466065722222
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -22554,7 +23344,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.89626444166667
+        "age_hours": 21.072716212777777
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -22565,7 +23355,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.89626444166667
+        "age_hours": 21.072716212777777
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -22576,7 +23366,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.89626444166667
+        "age_hours": 21.072716212777777
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -22587,7 +23377,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.89626444166667
+        "age_hours": 21.072716212777777
       },
       {
         "ts": "2026-04-20T11:57:11Z",
@@ -22598,7 +23388,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.085153330555556
+        "age_hours": 22.261605101666667
       },
       {
         "ts": "2026-04-20T11:35:27Z",
@@ -22609,7 +23399,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 22.44737555277778
+        "age_hours": 22.62382732388889
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -22620,7 +23410,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.449042219444447
+        "age_hours": 22.625493990555555
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -22631,7 +23421,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.449042219444447
+        "age_hours": 22.625493990555555
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -22642,7 +23432,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.500708886111113
+        "age_hours": 22.67716065722222
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -22653,7 +23443,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 22.500708886111113
+        "age_hours": 22.67716065722222
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -22664,7 +23454,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.67348666388889
+        "age_hours": 22.849938435
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -22675,7 +23465,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.67348666388889
+        "age_hours": 22.849938435
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -22686,7 +23476,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.67348666388889
+        "age_hours": 22.849938435
       },
       {
         "ts": "2026-04-20T11:21:53Z",
@@ -22697,7 +23487,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 22.67348666388889
+        "age_hours": 22.849938435
       },
       {
         "ts": "2026-04-20T11:18:04Z",
@@ -22708,7 +23498,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.737097775000002
+        "age_hours": 22.91354954611111
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -22719,7 +23509,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.785708886111113
+        "age_hours": 22.96216065722222
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -22730,7 +23520,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.785708886111113
+        "age_hours": 22.96216065722222
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -22741,7 +23531,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.785708886111113
+        "age_hours": 22.96216065722222
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -22752,7 +23542,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.785708886111113
+        "age_hours": 22.96216065722222
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -22763,7 +23553,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.785708886111113
+        "age_hours": 22.96216065722222
       },
       {
         "ts": "2026-04-20T11:15:09Z",
@@ -22774,7 +23564,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.785708886111113
+        "age_hours": 22.96216065722222
       },
       {
         "ts": "2026-04-20T10:48:39Z",
@@ -22785,7 +23575,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 23.22737555277778
+        "age_hours": 23.403827323888887
       },
       {
         "ts": "2026-04-20T10:26:10Z",
@@ -22796,7 +23586,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.602097775
+        "age_hours": 23.778549546111112
       },
       {
         "ts": "2026-04-20T10:17:53Z",
@@ -22807,18 +23597,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 23.740153330555557
-      },
-      {
-        "ts": "2026-04-20T10:10:58Z",
-        "event_type": "CANARY_STARTED",
-        "task_id": "B8",
-        "agent": "guardian",
-        "summary": "B8 canary started",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.855431108333335
+        "age_hours": 23.916605101666665
       }
     ]
   },
@@ -22829,7 +23608,7 @@
       "issue": "PR_OPENED (pr=133) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T145137Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B1",
@@ -22837,7 +23616,7 @@
       "issue": "PR_OPENED (pr=149) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T222920Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B1",
@@ -22845,7 +23624,7 @@
       "issue": "PR_OPENED (pr=9) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T222922Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B1",
@@ -22853,7 +23632,7 @@
       "issue": "PR_OPENED (pr=21) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T223519Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B2",
@@ -22861,7 +23640,7 @@
       "issue": "PR_OPENED (pr=153) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T012111Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B2",
@@ -22869,7 +23648,7 @@
       "issue": "PR_OPENED (pr=11) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T012123Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B2",
@@ -22877,7 +23656,7 @@
       "issue": "PR_OPENED (pr=24) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T012125Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B5",
@@ -22885,7 +23664,7 @@
       "issue": "PR_OPENED (pr=25) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T044257Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B8",
@@ -22893,7 +23672,7 @@
       "issue": "PR_OPENED (pr=26) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T095424Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     },
     {
       "task_id": "B7",
@@ -22901,36 +23680,36 @@
       "issue": "PR_OPENED (pr=27) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T095632Z_000001",
-      "detected_at": "2026-04-21T10:02:30Z"
+      "detected_at": "2026-04-21T10:13:06Z"
     }
   ],
   "events_integrity": {
-    "total": 338,
-    "last_24h": 103,
-    "rate_per_hour": 4.29,
+    "total": 349,
+    "last_24h": 113,
+    "rate_per_hour": 4.71,
     "schema_version": "1.0",
     "monotonic_gaps": [],
     "monotonic_ok": true,
     "source": "lib",
     "events_file": "/home/oinkv/sprint-checkpoint/events.jsonl",
-    "human_line": "In plain English: 103 things happened today, ~4.29/h steady-state. System is healthy."
+    "human_line": "In plain English: 113 things happened today, ~4.71/h steady-state. System is healthy."
   },
   "bootstrap": false,
   "freshness_by_agent": [
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-21T10:02:17Z",
+      "last_event_ts": "2026-04-21T10:12:52Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 0.00015333055555555555,
+      "age_hours": 0.00021621277777777778,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 48,
+      "event_count": 49,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-21T10:02:17Z",
+      "last_active": "2026-04-21T10:12:52Z",
       "last_active_human": "0s ago",
       "heartbeat": {
         "current_task": null,
@@ -22940,22 +23719,44 @@
       }
     },
     {
-      "id": "guardian",
-      "name": "GUARDIAN",
-      "last_event_ts": "2026-04-21T09:59:22Z",
-      "last_event_type": "CANARY_PASS",
-      "last_task_id": "A8",
-      "current_task": "A8",
-      "age_hours": 0.048764441666666665,
+      "id": "oinkv",
+      "name": "OinkV",
+      "last_event_ts": "2026-04-21T10:10:38.767632Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "A171",
+      "current_task": "A171",
+      "age_hours": 0.03722520388888889,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 93,
-      "emoji": "🛡️",
-      "role": "Data Integrity + Canary",
-      "last_active": "2026-04-21T09:59:22Z",
+      "event_count": 8,
+      "emoji": "🐷",
+      "role": "Plan Auditor",
+      "last_active": "2026-04-21T10:10:38.767632Z",
       "last_active_human": "2m ago",
       "heartbeat": {
-        "current_task": "A8",
+        "current_task": "A171",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "guardian",
+      "name": "GUARDIAN",
+      "last_event_ts": "2026-04-21T10:09:23Z",
+      "last_event_type": "AGENT_HEARTBEAT",
+      "last_task_id": "B3",
+      "current_task": "Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
+      "age_hours": 0.058271768333333335,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 94,
+      "emoji": "🛡️",
+      "role": "Data Integrity + Canary",
+      "last_active": "2026-04-21T10:09:23Z",
+      "last_active_human": "3m ago",
+      "heartbeat": {
+        "current_task": "Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -22964,18 +23765,18 @@
     {
       "id": "anvil",
       "name": "ANVIL",
-      "last_event_ts": "2026-04-20T21:18:58Z",
+      "last_event_ts": "2026-04-21T10:08:44Z",
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 12.722097775,
-      "staleness_label": "red",
-      "light": "red",
-      "event_count": 89,
+      "age_hours": 0.06910510166666667,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 92,
       "emoji": "⚒️",
       "role": "Implementation Lead",
-      "last_active": "2026-04-20T21:18:58Z",
-      "last_active_human": "12h 43m ago",
+      "last_active": "2026-04-21T10:08:44Z",
+      "last_active_human": "4m ago",
       "heartbeat": {
         "current_task": "B4",
         "current_phase": null,
@@ -22990,38 +23791,16 @@
       "last_event_type": "TASK_PLANNED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 12.734875552777778,
+      "age_hours": 12.911327323888889,
       "staleness_label": "red",
       "light": "red",
       "event_count": 57,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-20T21:18:12Z",
-      "last_active_human": "12h 44m ago",
+      "last_active_human": "12h 54m ago",
       "heartbeat": {
         "current_task": null,
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "oinkv",
-      "name": "OinkV",
-      "last_event_ts": "2026-04-20T20:57:07Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": "A171",
-      "current_task": "A171",
-      "age_hours": 13.086264441666666,
-      "staleness_label": "red",
-      "light": "red",
-      "event_count": 2,
-      "emoji": "🐷",
-      "role": "Plan Auditor",
-      "last_active": "2026-04-20T20:57:07Z",
-      "last_active_human": "13h 5m ago",
-      "heartbeat": {
-        "current_task": "A171",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -23034,14 +23813,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 22.500708886111113,
+      "age_hours": 22.67716065722222,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "22h 30m ago",
+      "last_active_human": "22h 40m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -23056,7 +23835,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 26.355986663888892,
+      "age_hours": 26.532438435,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -23078,7 +23857,7 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 26.435153330555558,
+      "age_hours": 26.611605101666665,
       "staleness_label": "red",
       "light": "red",
       "event_count": 31,
