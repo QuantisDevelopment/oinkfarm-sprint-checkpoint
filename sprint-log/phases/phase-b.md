@@ -71,7 +71,7 @@
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 3.8h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration |
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 4.0h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration |
 
 ---
 
