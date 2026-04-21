@@ -4,17 +4,24 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 452
-- **Last 24h:** 190 (rate 7.92/h)
+- **Total events:** 459
+- **Last 24h:** 197 (rate 8.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (38 events)
+### Last 1 hour (27 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
+| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
+| Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
+| Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
+| Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
 | Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
 | Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
@@ -23,17 +30,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
 | Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
 | Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
-| Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
-### Last 4 hours (73 events)
+### Last 4 hours (77 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
+| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
+| Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
+| Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
+| Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
 | Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
 | Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
@@ -42,17 +49,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
 | Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
 | Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
-| Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
-### Last 24 hours (190 events)
+### Last 24 hours (197 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `B6` | vigil | B6 review by vigil — PASS (9.85) |
+| Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
+| Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke check complete. Vigil spot-audit: B9-VIGIL-PHASE0-R1 is high quality and in-family with Guardian, with the same two real blocker |
+| Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
+| Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | pilot | pilot heartbeat — ? |
+| Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
 | Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
 | Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
@@ -61,19 +68,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
 | Apr 21, 17:12 CEST | `SPRINT_NOTE` | `—` | hermes | Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforce |
 | Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
-| Apr 21, 17:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 17:07 CEST | `SPRINT_NOTE` | `—` | forge | AGGRESSIVE scope C-plans delivered (C1, C2, C3, C4, C6 v1). C5 and C7 deferred post-launch per 2026-04-21 14:35 UTC scope lock. Q-HH-5 re-fl |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
 ## 🧭 Needs Mike
 
-| Question ID | Question | Task | Age | Options | Gate |
-|---|---|---|---|---|---|
-| `Q-HH-5` | For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_flag_provisional them into a review queue? | `C2` | 23m | hard_reject · soft_flag_provisional | heavy-hybrid |
+_No open DECISION_NEEDED events._
 
 ## 🔍 Missing evidence
 
@@ -89,12 +87,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 17:29 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 69 |
+| 🪽 **Hermes** | Apr 21, 17:51 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 71 |
+| 🔍 **VIGIL** | Apr 21, 17:51 CEST | `REVIEW_POSTED` | `M179` | 🟢 fresh | 48 |
+| 🐷 **OinkV** | Apr 21, 17:50 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 37 |
+| • **PILOT** | Apr 21, 17:42 CEST | `AGENT_HEARTBEAT` | `DASH-001` | 🟢 fresh | 1 |
 | 🛡️ **GUARDIAN** | Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `Priority correction ack — Heavy Hybrid remains P0` | 🟢 fresh | 110 |
 | 🔥 **FORGE** | Apr 21, 17:27 CEST | `SPRINT_NOTE` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 70 |
-| 🐷 **OinkV** | Apr 21, 17:24 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 36 |
-| ⚒️ **ANVIL** | Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | 🟢 fresh | 104 |
-| 🔍 **VIGIL** | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | 🟢 fresh | 45 |
+| ⚒️ **ANVIL** | Apr 21, 16:40 CEST | `SPRINT_NOTE` | `B12` | 🟡 1–3h | 104 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -151,7 +150,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `B6` | B6 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B8` | B8 | 🟡 STANDARD | — | ✅ DONE | PASS |
-| `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
+| `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL | — |
 | `B10` | B10 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B11` | B11 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `B12` | B12 | 🔴 CRITICAL | — | ⚙️ CODING | — |
@@ -162,6 +161,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `C3` | C3 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `C4` | C4 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `C6` | C6 | 🟡 STANDARD | — | 📋 PLANNED | — |
+| `DASH-001` | DASH-001 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M7` | M7 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M10` | M10 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M22` | M22 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
@@ -172,6 +172,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M121` | M121 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M152` | M152 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M164` | M164 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M179` | M179 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
 
 ## Event log
 
@@ -182,11 +183,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔍 | VIGIL | Code Review + Scoring |
+| 🐷 | OinkV | Plan Auditor |
+| • | PILOT |  |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
-| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -199,4 +201,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/41 tasks DONE · Last auto-regenerated: 17:29 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/43 tasks DONE · Last auto-regenerated: 17:51 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
