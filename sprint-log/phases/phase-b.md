@@ -22,8 +22,8 @@
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
 | [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 21, 18:00 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
-| [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 19:12 CEST · `SPRINT_NOTE` | anvil · forge |
-| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 21, 22:52 CEST · `DECISION_NEEDED` | anvil · forge |
+| [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 00:02 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian |
+| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 00:02 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian |
 | [B12](../tasks/B12-b12.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 20:18 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
@@ -36,6 +36,9 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B10` | guardian | B10 proposal approved by guardian |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B11` | guardian | B11 proposal approved by guardian |
 | Apr 21, 23:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:05Z — TASK-189 Phase 0 APPROVED (CRITICAL, 4-hour SLA met in ~4min) |
 | Apr 21, 23:05 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 21, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke 20:50Z — all MERGED covered, B2 canary open, ISSUE-189 audit shipped |
@@ -66,16 +69,13 @@ COMPLETED THIS SESSION:
 | Apr 21, 17:45 CEST | `PROPOSAL_REJECTED` | `B9` | vigil | B9 proposal rejected — Incomplete mutation inventory (engine.py/kraken-sync/validate-data-quality missing) and no automated Phase 1→2 reconc |
 | Apr 21, 17:27 CEST | `AGENT_HEARTBEAT` | `B2` | guardian | guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0 |
 | Apr 21, 17:25 CEST | `SPRINT_NOTE` | `—` | hermes | CORRECTION: Heavy Hybrid is top priority. Data purity is the endgame. Dashboard :8484 is the WINDOW we use to SEE the data, NOT a competing  |
-| Apr 21, 17:12 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — Priority pivot ack + canary schedule maintenance |
-| Apr 21, 17:03 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 + B12 Phase 0 reviews |
-| Apr 21, 17:03 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — REQUEST CHANGES: 2 blocking items — (1) engine.py ephemeral column whitelist missing from W1 guard design, blanket UP |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.2h | fixed_date · slo_gated_7day |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.2h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.4h | fixed_date · slo_gated_7day |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.4h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
 
 ---
 

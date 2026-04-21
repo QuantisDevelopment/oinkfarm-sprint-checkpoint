@@ -4,17 +4,39 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 510
-- **Last 24h:** 199 (rate 8.29/h)
+- **Total events:** 521
+- **Last 24h:** 205 (rate 8.54/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (7 events)
+### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B10` | guardian | B10 proposal approved by guardian |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B11` | guardian | B11 proposal approved by guardian |
+| Apr 22, 00:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 23:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
+
+### Last 4 hours (35 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 22, 00:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B10` | guardian | B10 proposal approved by guardian |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B11` | guardian | B11 proposal approved by guardian |
 | Apr 22, 00:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 23:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 21, 23:18 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still reads as trustworthy: scope matches the liv |
@@ -23,9 +45,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 23:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:05Z — TASK-189 Phase 0 APPROVED (CRITICAL, 4-hour SLA met in ~4min) |
 | Apr 21, 23:05 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 
-### Last 4 hours (29 events)
+### Last 24 hours (205 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
+| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B10` | guardian | B10 proposal approved by guardian |
+| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B11` | guardian | B11 proposal approved by guardian |
 | Apr 22, 00:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 23:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 21, 23:18 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still reads as trustworthy: scope matches the liv |
@@ -33,64 +63,34 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 23:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 23:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:05Z — TASK-189 Phase 0 APPROVED (CRITICAL, 4-hour SLA met in ~4min) |
 | Apr 21, 23:05 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
-| Apr 21, 23:01 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
-| Apr 21, 22:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke 20:50Z — all MERGED covered, B2 canary open, ISSUE-189 audit shipped |
-| Apr 21, 22:52 CEST | `TASK_PLANNED` | `B11` | forge | B11 plan published |
-| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecuti |
-| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? |
-| Apr 21, 22:51 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — ISSUE-189: Full backfill candidate scan — 143 candidates found (10.7x Hermes preliminary) |
-| Apr 21, 22:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 again and it still reads as a trustworthy review: scope matches live PR #181, |
-
-### Last 24 hours (199 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
-| Apr 22, 00:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 23:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 21, 23:18 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still reads as trustworthy: scope matches the liv |
-| Apr 21, 23:10 CEST | `SPRINT_NOTE` | `—` | hermes | The big story this half-hour is ISSUE-189, a production data-integrity bug GUARDIAN surfaced during the sprint poke: some stop-loss-moved-to |
-| Apr 21, 23:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 23:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:05Z — TASK-189 Phase 0 APPROVED (CRITICAL, 4-hour SLA met in ~4min) |
-| Apr 21, 23:05 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
-| Apr 21, 23:01 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
-| Apr 21, 22:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke 20:50Z — all MERGED covered, B2 canary open, ISSUE-189 audit shipped |
-| Apr 21, 22:52 CEST | `TASK_PLANNED` | `B11` | forge | B11 plan published |
-| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecuti |
-| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? |
-| Apr 21, 22:51 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — ISSUE-189: Full backfill candidate scan — 143 candidates found (10.7x Hermes preliminary) |
-| Apr 21, 22:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 again and it still reads as a trustworthy review: scope matches live PR #181, |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.2h | fixed_date · slo_gated_7day | phase-b |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.2h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table | phase-b |
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.4h | fixed_date · slo_gated_7day | phase-b |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.4h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table | phase-b |
+| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 0m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 | generic |
 
 ## 🔍 Missing evidence
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED (pr=133) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B1` | PR_OPENED (pr=149) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
-| 🟠 WARN | `B12` | AGENT_HEARTBEAT stale > 3h for anvil |
+| 🟠 WARN | `A11` | PR_OPENED 55.5h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (7.1h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (4.0h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 00:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 84 |
+| 🪽 **Hermes** | Apr 22, 00:18 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 85 |
+| 🔥 **FORGE** | Apr 22, 00:18 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 79 |
+| 🛡️ **GUARDIAN** | Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier` | 🟢 fresh | 121 |
 | 🐷 **OinkV** | Apr 21, 23:45 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 49 |
-| 🛡️ **GUARDIAN** | Apr 21, 23:05 CEST | `AGENT_HEARTBEAT` | `Heartbeat 21:05Z — TASK-189 Phase 0 APPROVED (CRITICAL, 4-hour SLA met in ~4min)` | 🟢 fresh | 118 |
 | ⚒️ **ANVIL** | Apr 21, 23:01 CEST | `PROPOSAL_READY` | `B12` | 🟡 1–3h | 112 |
-| 🔥 **FORGE** | Apr 21, 22:52 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟡 1–3h | 75 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🟡 1–3h | 3 |
-| 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🔴 stale | 51 |
+| 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🔴 stale | 54 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -127,6 +127,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Task | Name | Tier | Wave | Status | Canary |
 |---|---|---|---|---|---|
+| `189` | 189 | 🟡 STANDARD | — | ⚙️ CODING | — |
 | [A1](tasks/A1-signal-events-schema.md) | signal_events Table + 12 Event Type Instrumentation | 🔴 CRITICAL | 1 | ✅ DONE | PASS |
 | [A2](tasks/A2-remaining-pct-model.md) | remaining_pct Model + Blended PnL Fix | 🔴 CRITICAL | 1 | ✅ DONE | PASS |
 | [A3](tasks/A3-auto-filled-at.md) | Auto filled_at for MARKET Orders | 🟡 STANDARD | 1 | ✅ DONE | PASS |
@@ -185,10 +186,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🐷 | OinkV | Plan Auditor |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
 | • | PILOT |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
@@ -203,4 +204,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/48 tasks DONE · Last auto-regenerated: 00:03 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/49 tasks DONE · Last auto-regenerated: 00:19 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
