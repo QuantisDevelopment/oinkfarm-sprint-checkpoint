@@ -2,7 +2,7 @@
 
 **Tier:** 🔴 CRITICAL  
 **Wave:** B1  
-**Status:** 🧪 CANARY — Merged, canary in flight  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21)  
@@ -28,7 +28,7 @@ Thin wrapper module `oink_db.py` that makes every sqlite3 caller backend-agnosti
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -45,7 +45,7 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Phase 0 took 2 rounds** — GUARDIAN surfaced blast-radius concerns that reshaped scope before code was written. Cheaper to revise a proposal than a PR.
 
 ---
 

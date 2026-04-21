@@ -8,17 +8,17 @@
 
 | Task | Name | Tier | Status | Canary | Merge commit |
 |---|---|---|---|---|---|
-| [B1](../tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | 🧪 CANARY | PENDING | [`75a32f7`](https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186) |
+| [B1](../tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | ✅ DONE | PASS | [`75a32f7`](https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186) |
 
 ## Timing
 
 - Wave start: 18:03 CEST on 19 Apr 2026
-- Last activity: 13:15 CEST on 20 Apr 2026
-- Elapsed: 19.2 h
+- Last activity: 08:09 CEST on 21 Apr 2026
+- Elapsed: 38.1 h
 
 ## Canary Outcomes
 
-- **B1**: ⏳ PENDING
+- **B1**: ✅ PASS
 
 ## Deferred Follow-ups
 
