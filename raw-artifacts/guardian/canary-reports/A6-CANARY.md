@@ -68,31 +68,30 @@ Result: **9 / 9 passed**
 
 ## Current Canary State
 
-**PENDING (0 / 10 organic events observed)**
+**FINAL PASS (3 / 3 organic events validated clean at 48h checkpoint)**
 
 Interpretation:
 - deployment is live
 - database is healthy
 - A6 code path and tests are present
-- no organic `GHOST_CLOSURE` event has landed yet
-- no board-absent post-deploy close has occurred yet, so there is nothing to validate field-by-field
-
-This is a clean canary start, but **not yet a verdictable sample**.
+- 3 organic `GHOST_CLOSURE` events landed within the 48h window
+- all 3 validated cleanly against the A6 canary protocol
+- no A6-induced `close_source` mutation or financial-field corruption was observed
 
 ## Canary Event Log
 
 | # | Event ID | Signal ID | absent_count | entry_price_at_close | A6 note | close_source unchanged | financial fields unchanged | txn integrity | Verdict |
 |---|----------|-----------|--------------|----------------------|---------|------------------------|----------------------------|---------------|---------|
 | 1 | 741 | 1353 | 3 | protocol uses `entry=2300.0` | ✅ exactly once | ✅ `NULL` preserved | ✅ unchanged | ✅ consistent | Clean |
-| 2 | — | — | — | — | — | — | — | — | Awaiting |
-| 3 | — | — | — | — | — | — | — | — | Awaiting |
-| 4 | — | — | — | — | — | — | — | — | Awaiting |
-| 5 | — | — | — | — | — | — | — | — | Awaiting |
-| 6 | — | — | — | — | — | — | — | — | Awaiting |
-| 7 | — | — | — | — | — | — | — | — | Awaiting |
-| 8 | — | — | — | — | — | — | — | — | Awaiting |
-| 9 | — | — | — | — | — | — | — | — | Awaiting |
-| 10 | — | — | — | — | — | — | — | — | Awaiting |
+| 2 | 943 | 2550 | 3 | protocol uses `entry=1.434` | ✅ exactly once | ✅ preserved by A6 path, later legitimate `sl_hit` close | ✅ no same-timestamp corruption; later lifecycle close is expected | ✅ consistent | Clean |
+| 3 | 1174 | 2563 | 3 | protocol uses `entry=0.064832` | ✅ exactly once | ✅ `NULL` preserved | ✅ unchanged | ✅ consistent | Clean |
+| 4 | — | — | — | — | — | — | — | — | Not observed |
+| 5 | — | — | — | — | — | — | — | — | Not observed |
+| 6 | — | — | — | — | — | — | — | — | Not observed |
+| 7 | — | — | — | — | — | — | — | — | Not observed |
+| 8 | — | — | — | — | — | — | — | — | Not observed |
+| 9 | — | — | — | — | — | — | — | — | Not observed |
+| 10 | — | — | — | — | — | — | — | — | Not observed |
 
 ## 24h Checkpoint — 2026-04-20T13:17:42Z
 
@@ -124,16 +123,40 @@ Interpretation:
 - no blocker or regression is visible at the 24h checkpoint
 - minimum 48h sample threshold for a classical verdict is still not met (`1 < 3`), but the first real event materially de-risks the feature
 
+## 48h Checkpoint — 2026-04-21T13:17:42Z
+
+**Final verdict: PASS.**
+
+Observed post-deploy organic events within the 48h window:
+- `event_id=741`, `signal_id=1353`, created `2026-04-20T08:15:04.602Z`, ETH / Muzzagin
+- `event_id=943`, `signal_id=2550`, created `2026-04-20T17:37:15.129Z`, EDGE / Tareeq
+- `event_id=1174`, `signal_id=2563`, created `2026-04-21T06:31:42.382Z`, NAORIS / Eric
+
+48h validation summary:
+- all 3 events contain the expected `absent_count=3` payload structure
+- all 3 matching signals contain exactly one `[A6: ghost_closure absent_count=3]` note tag
+- signals `1353` and `2563` preserve `close_source=NULL`
+- signal `2550` now has `close_source='sl_hit'`, but the close happened later via a normal `TRADE_CLOSED_SL` event at `2026-04-20T22:11:08Z`, so this is not an A6 mutation
+- no same-timestamp financial-field corruption or duplicate note append was observed
+- `signal_events` total rows: **1346**
+- post-deploy `signal_events`: **1034**
+- post-deploy `GHOST_CLOSURE` events: **3**
+- signals with A6 tag: **3**
+- `close_source='board_absent'` signals: **18**
+
+Interpretation:
+- A6 is now validated on the minimum event threshold for a classical canary verdict
+- the ghost-marker write path is functioning on real production samples
+- the feature remains additive and non-destructive
+- no blocker or regression is visible at 48h
+
 ## Next Checks
 
-1. Monitor for additional organic `GHOST_CLOSURE` events until 48h deadline
-2. Re-validate idempotency if signal `1353` reappears in the ghost-closure path
-3. Confirm any subsequent samples preserve `close_source` and financial fields
-4. At 48h, issue final checkpoint summary based on observed event count and data quality
+None. A6 canary is complete.
 
 ---
-*🛡️ GUARDIAN — Canary Protocol Active*
-*Last updated: 2026-04-20T13:17:42Z*
+*🛡️ GUARDIAN — Canary Protocol Complete*
+*Last updated: 2026-04-21T13:17:42Z*
 
 ---
 

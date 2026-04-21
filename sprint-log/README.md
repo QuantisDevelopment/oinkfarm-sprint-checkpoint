@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 393
+- **Total events:** 398
 - **Last 24h:** 137 (rate 5.71/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,24 +12,28 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (11 events)
+### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 15:29 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold standard in review elegance, but the re |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latest hour lat |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active: lossless-claw freshTailCount is 8, |
 | Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing i |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 still reads baseline-strong against the B7 10.00 reference. It is narrower |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latency proxy i |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active, not the design goal solved: los |
 | Apr 21, 14:40 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed |
-| Apr 21, 14:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 14:22 CEST: Zero REVISE verdicts on ANVIL PRs. B4 Phase 0 R2 submitted 11:21 UTC — no VIGIL or GUARDIAN review yet (2h wait). B6 |
-| Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | forge | SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 remains baseline-strong against the B7 10.00 reference. The review is spec |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality state refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T11:27:41Z): still WARNING, not honestly green. Latency p |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Current runtime behavior is unchanged, there is still no working per-agent session-history ca |
 
-### Last 4 hours (59 events)
+### Last 4 hours (64 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 15:29 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold standard in review elegance, but the re |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latest hour lat |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active: lossless-claw freshTailCount is 8, |
 | Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing i |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 still reads baseline-strong against the B7 10.00 reference. It is narrower |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latency proxy i |
@@ -40,15 +44,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | forge | SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag |
 | Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 remains baseline-strong against the B7 10.00 reference. The review is spec |
 | Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality state refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T11:27:41Z): still WARNING, not honestly green. Latency p |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Current runtime behavior is unchanged, there is still no working per-agent session-history ca |
-| Apr 21, 13:38 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF152-VIGIL-PHASE1-R1 is baseline-strong against the B7 10.00 reference. It is specific, evidenc |
-| Apr 21, 13:38 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from the latest metrics artifact (2026-04-21T11:27:41Z): latency proxy is still acceptable, with p50_24h at 225. |
-| Apr 21, 13:38 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 blocker check refreshed: status is still MITIGATED_NOT_DONE. The runtime still has no working per-agent session-history cap for OinXtra |
-| Apr 21, 13:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 24 hours (137 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 15:29 CEST | `CANARY_PASS` | `A6` | guardian | A6 canary PASS |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 is clearly below the B7 10.00 gold standard in review elegance, but the re |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latest hour lat |
+| Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active: lossless-claw freshTailCount is 8, |
 | Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet couple of hours on the shipping front — nothing merged, no canary runs, no new decisions for Mike. The 30-minute poke cycle is doing i |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 still reads baseline-strong against the B7 10.00 reference. It is narrower |
 | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T12:29:39Z): still WARNING, not honestly green. Latency proxy i |
@@ -59,17 +63,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | forge | SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag |
 | Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF164-VIGIL-PHASE1-R1 remains baseline-strong against the B7 10.00 reference. The review is spec |
 | Apr 21, 14:08 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality state refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T11:27:41Z): still WARNING, not honestly green. Latency p |
-| Apr 21, 14:08 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Current runtime behavior is unchanged, there is still no working per-agent session-history ca |
-| Apr 21, 13:38 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF152-VIGIL-PHASE1-R1 is baseline-strong against the B7 10.00 reference. It is specific, evidenc |
-| Apr 21, 13:38 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from the latest metrics artifact (2026-04-21T11:27:41Z): latency proxy is still acceptable, with p50_24h at 225. |
-| Apr 21, 13:38 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 blocker check refreshed: status is still MITIGATED_NOT_DONE. The runtime still has no working per-agent session-history cap for OinXtra |
-| Apr 21, 13:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 2.6h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 3.1h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
 
 ## 🔍 Missing evidence
 
@@ -85,11 +84,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 15:01 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 56 |
-| 🐷 **OinkV** | Apr 21, 14:45 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 23 |
-| 🛡️ **GUARDIAN** | Apr 21, 14:40 CEST | `AGENT_HEARTBEAT` | `Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed` | 🟢 fresh | 97 |
-| ⚒️ **ANVIL** | Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 95 |
-| 🔥 **FORGE** | Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | 🟢 fresh | 60 |
+| 🪽 **Hermes** | Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 57 |
+| 🛡️ **GUARDIAN** | Apr 21, 15:29 CEST | `CANARY_PASS` | `Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed` | 🟢 fresh | 98 |
+| 🐷 **OinkV** | Apr 21, 15:04 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 26 |
+| ⚒️ **ANVIL** | Apr 21, 14:24 CEST | `SPRINT_NOTE` | `B4` | 🟡 1–3h | 95 |
+| 🔥 **FORGE** | Apr 21, 14:11 CEST | `SPRINT_NOTE` | `B2` | 🟡 1–3h | 60 |
 | 🔍 **VIGIL** | Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | 🟡 1–3h | 44 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -174,8 +173,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
@@ -191,4 +190,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/37 tasks DONE · Last auto-regenerated: 15:01 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/37 tasks DONE · Last auto-regenerated: 15:31 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
