@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-21T11:06:52+00:00",
-  "generated_at_cest": "2026-04-21T13:06:52+02:00",
+  "generated_at_utc": "2026-04-21T11:27:50+00:00",
+  "generated_at_cest": "2026-04-21T13:27:50+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2385,20 +2385,30 @@
   ],
   "tasks": [
     {
-      "id": "A171",
-      "tier": "STANDARD",
-      "tier_emoji": "🟡",
+      "id": "M105",
+      "tier": "LIGHTWEIGHT",
+      "tier_emoji": "🟢",
       "repo_hint": null,
-      "status": "NOT_STARTED",
-      "status_label": "Not Started",
-      "prs": [],
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 105,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/105",
+          "merge_commit": "df5b919fb9",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/df5b919fb9",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
       "scores": {
-        "vigil": null,
+        "vigil": 9.5,
         "guardian": null,
         "hermes": null
       },
       "verdicts": {
-        "vigil": null,
+        "vigil": "PASS",
         "guardian": null,
         "hermes": null
       },
@@ -2408,82 +2418,419 @@
         "mtime": null
       },
       "merged_at": null,
-      "last_activity": "2026-04-21T11:06:11.873967Z",
+      "last_activity": "2026-04-21T11:27:27Z",
       "timeline": [
         {
-          "label": "A171 BLOCKED — design_clarification_needed",
-          "actor": "oinkv",
+          "label": "M105 review by vigil — PASS (9.5)",
+          "actor": "vigil",
           "path": null,
-          "mtime": "2026-04-20T17:58:46Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "BLOCKED"
-        },
-        {
-          "label": "A171 blocker cleared",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:54:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "BLOCKER_RESOLVED"
-        },
-        {
-          "label": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-20T20:57:07Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        },
-        {
-          "label": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed.",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-21T10:05:25.976029Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        },
-        {
-          "label": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-21T10:10:38.767632Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        },
-        {
-          "label": "A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-21T10:33:43.946086Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        },
-        {
-          "label": "A171 blocker check: status is unchanged in substance. The runtime still has no working per-agent session-history cap for OinXtractor, per-ag",
-          "actor": "oinkv",
-          "path": null,
-          "mtime": "2026-04-21T11:06:11.873967Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
+          "mtime": "2026-04-21T11:27:27Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
         }
       ],
       "artifacts": {},
       "_from_stream": true,
-      "event_count": 7,
+      "event_count": 1,
       "blocker": null,
-      "phase": "A",
+      "phase": "M",
       "agents_touched": [
-        "hermes",
-        "oinkv"
+        "vigil"
       ],
-      "last_event_type": "SPRINT_NOTE"
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M152",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 152,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/152",
+          "merge_commit": "14faaf2e7c",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/14faaf2e7c",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 9.6,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M152 review by vigil — PASS (9.6)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M164",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 164,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/164",
+          "merge_commit": "3bdd93481a",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/3bdd93481a",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 9.6,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M164 review by vigil — PASS (9.6)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M120",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 120,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/120",
+          "merge_commit": "3f35c7b690",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/3f35c7b690",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 9.7,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M120 review by vigil — PASS (9.7)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "PASS",
+          "score": 9.7,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M111",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 111,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/111",
+          "merge_commit": "f0b249ff59",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/f0b249ff59",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 4.9,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "REVISE",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M111 review by vigil — REVISE (4.9)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "REVISE",
+          "score": 4.9,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M22",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 22,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/22",
+          "merge_commit": "661644183f",
+          "commit_url": "https://github.com/QuantisDevelopment/signal-gateway/commit/661644183f",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 5.35,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "REVISE",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M22 review by vigil — REVISE (5.35)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "REVISE",
+          "score": 5.35,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M23",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 23,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/23",
+          "merge_commit": "9354b4792b",
+          "commit_url": "https://github.com/QuantisDevelopment/signal-gateway/commit/9354b4792b",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 5.55,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "REVISE",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M23 review by vigil — REVISE (5.55)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "REVISE",
+          "score": 5.55,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
+    },
+    {
+      "id": "M121",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "PR_REVIEW",
+      "status_label": "PR Review",
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 121,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/121",
+          "merge_commit": "2bbccc044b",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/2bbccc044b",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "scores": {
+        "vigil": 8.2,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "REVISE",
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:26:33Z",
+      "timeline": [
+        {
+          "label": "M121 review by vigil — REVISE (8.2)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T11:26:33Z",
+          "verdict": "REVISE",
+          "score": 8.2,
+          "event_type": "REVIEW_POSTED"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 1,
+      "blocker": null,
+      "phase": "M",
+      "agents_touched": [
+        "vigil"
+      ],
+      "last_event_type": "REVIEW_POSTED"
     },
     {
       "id": "B4",
@@ -2509,7 +2856,7 @@
         "mtime": null
       },
       "merged_at": null,
-      "last_activity": "2026-04-21T11:02:12Z",
+      "last_activity": "2026-04-21T11:21:08Z",
       "timeline": [
         {
           "label": "B4 plan published",
@@ -2627,6 +2974,24 @@
           "verdict": null,
           "score": null,
           "event_type": "AGENT_HEARTBEAT"
+        },
+        {
+          "label": "B4 proposal ready",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-21T11:21:07Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_READY"
+        },
+        {
+          "label": "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-21T11:21:08Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
         }
       ],
       "artifacts": {
@@ -2634,7 +2999,7 @@
         "proposal_rejected": "/home/oinkv/guardian-workspace/reviews/B4-GUARDIAN-PHASE0-REVIEW.md"
       },
       "_from_stream": true,
-      "event_count": 13,
+      "event_count": 15,
       "blocker": null,
       "phase": "B",
       "agents_touched": [
@@ -2643,7 +3008,108 @@
         "guardian",
         "hermes"
       ],
-      "last_event_type": "AGENT_HEARTBEAT"
+      "last_event_type": "SPRINT_NOTE"
+    },
+    {
+      "id": "A171",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "repo_hint": null,
+      "status": "NOT_STARTED",
+      "status_label": "Not Started",
+      "prs": [],
+      "scores": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": null,
+        "guardian": null,
+        "hermes": null
+      },
+      "canary": {
+        "verdict": null,
+        "path": null,
+        "mtime": null
+      },
+      "merged_at": null,
+      "last_activity": "2026-04-21T11:06:11.873967Z",
+      "timeline": [
+        {
+          "label": "A171 BLOCKED — design_clarification_needed",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-20T17:58:46Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKED"
+        },
+        {
+          "label": "A171 blocker cleared",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "BLOCKER_RESOLVED"
+        },
+        {
+          "label": "Schema diag: no per-agent session-history cap key found. Per-agent contextPruning rejected; runtime only reads agents.defaults.contextPrunin",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-20T20:57:07Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "A171 current state: the original hard blocker was partially cleared only because a mitigation path was found, not because the design landed.",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-21T10:05:25.976029Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-21T10:10:38.767632Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-21T10:33:43.946086Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "A171 blocker check: status is unchanged in substance. The runtime still has no working per-agent session-history cap for OinXtractor, per-ag",
+          "actor": "oinkv",
+          "path": null,
+          "mtime": "2026-04-21T11:06:11.873967Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        }
+      ],
+      "artifacts": {},
+      "_from_stream": true,
+      "event_count": 7,
+      "blocker": null,
+      "phase": "A",
+      "agents_touched": [
+        "hermes",
+        "oinkv"
+      ],
+      "last_event_type": "SPRINT_NOTE"
     },
     {
       "id": "B2",
@@ -6816,20 +7282,64 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-21T11:06:52Z",
+      "last_event_ts": "2026-04-21T11:27:50Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 5.0449166666666665e-05,
+      "age_hours": 0.00012677083333333334,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 53,
+      "event_count": 54,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-21T11:06:52Z",
+      "last_active": "2026-04-21T11:27:50Z",
       "last_active_human": "0s ago",
       "heartbeat": {
         "current_task": null,
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "vigil",
+      "name": "VIGIL",
+      "last_event_ts": "2026-04-21T11:27:27Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_task_id": "M105",
+      "current_task": "M105",
+      "age_hours": 0.006515659722222222,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 44,
+      "emoji": "🔍",
+      "role": "Code Review + Scoring",
+      "last_active": "2026-04-21T11:27:27Z",
+      "last_active_human": "23s ago",
+      "heartbeat": {
+        "current_task": "M105",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "anvil",
+      "name": "ANVIL",
+      "last_event_ts": "2026-04-21T11:21:08Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "B4",
+      "current_task": "B4",
+      "age_hours": 0.1117934375,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 94,
+      "emoji": "⚒️",
+      "role": "Implementation Lead",
+      "last_active": "2026-04-21T11:21:08Z",
+      "last_active_human": "6m ago",
+      "heartbeat": {
+        "current_task": "B4",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -6842,14 +7352,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "A171",
       "current_task": "A171",
-      "age_hours": 0.011196569444444445,
+      "age_hours": 0.3607173355555556,
       "staleness_label": "green",
       "light": "green",
       "event_count": 14,
       "emoji": "🐷",
       "role": "Plan Auditor",
       "last_active": "2026-04-21T11:06:11.873967Z",
-      "last_active_human": "40s ago",
+      "last_active_human": "21m ago",
       "heartbeat": {
         "current_task": "A171",
         "current_phase": null,
@@ -6864,14 +7374,14 @@
       "last_event_type": "AGENT_HEARTBEAT",
       "last_task_id": "B4",
       "current_task": "Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh",
-      "age_hours": 0.07782822694444445,
+      "age_hours": 0.42734899305555557,
       "staleness_label": "green",
       "light": "green",
       "event_count": 96,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "last_active": "2026-04-21T11:02:12Z",
-      "last_active_human": "4m ago",
+      "last_active_human": "25m ago",
       "heartbeat": {
         "current_task": "Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh",
         "current_phase": null,
@@ -6886,60 +7396,16 @@
       "last_event_type": "DECISION_NEEDED",
       "last_task_id": "B2",
       "current_task": "B2",
-      "age_hours": 0.6817171158333334,
-      "staleness_label": "green",
-      "light": "green",
+      "age_hours": 1.0312378819444445,
+      "staleness_label": "yellow",
+      "light": "yellow",
       "event_count": 59,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-21T10:25:58Z",
-      "last_active_human": "40m ago",
+      "last_active_human": "1h 1m ago",
       "heartbeat": {
         "current_task": "B2",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "vigil",
-      "name": "VIGIL",
-      "last_event_ts": "2026-04-21T10:16:41Z",
-      "last_event_type": "REVIEW_POSTED",
-      "last_task_id": "M10",
-      "current_task": "M10",
-      "age_hours": 0.8364393380555556,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 36,
-      "emoji": "🔍",
-      "role": "Code Review + Scoring",
-      "last_active": "2026-04-21T10:16:41Z",
-      "last_active_human": "50m ago",
-      "heartbeat": {
-        "current_task": "M10",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "anvil",
-      "name": "ANVIL",
-      "last_event_ts": "2026-04-21T10:08:44Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": "B4",
-      "current_task": "B4",
-      "age_hours": 0.9689393380555557,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 92,
-      "emoji": "⚒️",
-      "role": "Implementation Lead",
-      "last_active": "2026-04-21T10:08:44Z",
-      "last_active_human": "58m ago",
-      "heartbeat": {
-        "current_task": "B4",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -6952,14 +7418,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 23.57699489361111,
+      "age_hours": 23.92651565972222,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "23h 34m ago",
+      "last_active_human": "23h 55m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -6974,7 +7440,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 27.432272671388887,
+      "age_hours": 27.7817934375,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -6991,6 +7457,17 @@
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-21T11:21:08Z",
+      "time_local": "2026-04-21T13:21+02:00",
+      "header": null,
+      "actions": [
+        "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review still pending. B6 PR #29 Phase 1 review pending from both. No REVISE verdicts on any active PR. FORGE Q-B2-6 (local B2 drift) acknowledged in B4 proposal — needs resolution before Stage 1. Critical path: B3 canary close-out (~02:25 UTC tomorrow) → Mike Q-B2-4/Q-B2-5/Q-B2-6 → GUARDIAN migration sign-off → dual-write → 7d verification → B4 cutover."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T112108Z_000001"
+    },
     {
       "time_utc": "2026-04-21T11:06:11.873967Z",
       "time_local": "2026-04-21T13:06+02:00",
@@ -7391,17 +7868,17 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-21T11:06:11.873967Z",
-    "time_local": "2026-04-21T13:06+02:00",
+    "time_utc": "2026-04-21T11:21:08Z",
+    "time_local": "2026-04-21T13:21+02:00",
     "header": null,
     "actions": [
-      "A171 blocker check: status is unchanged in substance. The runtime still has no working per-agent session-history cap for OinXtractor, per-agent contextPruning is still rejected, and the surviving controls remain global contextPruning plus contextLimits for memory/tool budgets. Active mitigation is unchanged too: trimmed extractor tool allowlist, lossless-claw freshTailCount=8, and supermemory autoRecall for oinxtractor_patterns. So the blocker is still mitigated rather than solved, and the original design gap remains open."
+      "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review still pending. B6 PR #29 Phase 1 review pending from both. No REVISE verdicts on any active PR. FORGE Q-B2-6 (local B2 drift) acknowledged in B4 proposal — needs resolution before Stage 1. Critical path: B3 canary close-out (~02:25 UTC tomorrow) → Mike Q-B2-4/Q-B2-5/Q-B2-6 → GUARDIAN migration sign-off → dual-write → 7d verification → B4 cutover."
     ],
     "next": null,
     "blocker": null,
-    "path": "evt_20260421T110611Z_000403"
+    "path": "evt_20260421T112108Z_000001"
   },
-  "commit": "7e137b39834d",
+  "commit": "2089d4370de5",
   "_from_stream": true,
   "_tasks_map": {
     "A1": {
@@ -13037,10 +13514,10 @@
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
       "phase": "B",
-      "last_event_ts": "2026-04-21T11:02:12Z",
-      "last_event_type": "AGENT_HEARTBEAT",
-      "last_agent": "guardian",
-      "event_count": 13,
+      "last_event_ts": "2026-04-21T11:21:08Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_agent": "anvil",
+      "event_count": 15,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
@@ -13342,6 +13819,49 @@
             "dashboard_publish_required": false,
             "proposal_review_action": "REQUEST_CHANGES",
             "proposal_task": "B4"
+          }
+        },
+        {
+          "event_id": "evt_20260421T112107Z_000001",
+          "ts": "2026-04-21T11:21:07Z",
+          "event_type": "PROPOSAL_READY",
+          "task_id": "B4",
+          "phase": "B",
+          "wave": null,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B4-PHASE0-PROPOSAL.md",
+            "tier": "CRITICAL",
+            "revision": "R2",
+            "text": "B4 Phase 0 proposal R2 re-submitted. Addresses all GUARDIAN REQUEST_CHANGES: staged approval framing, explicit go/no-go gates with evidence artifacts, reconciliation success criteria, 7 rollback triggers (RT-1 through RT-7), Q-B2-6 acknowledged."
+          }
+        },
+        {
+          "event_id": "evt_20260421T112108Z_000001",
+          "ts": "2026-04-21T11:21:08Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "B4",
+          "phase": "B",
+          "wave": null,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "text": "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review still pending. B6 PR #29 Phase 1 review pending from both. No REVISE verdicts on any active PR. FORGE Q-B2-6 (local B2 drift) acknowledged in B4 proposal — needs resolution before Stage 1. Critical path: B3 canary close-out (~02:25 UTC tomorrow) → Mike Q-B2-4/Q-B2-5/Q-B2-6 → GUARDIAN migration sign-off → dual-write → 7d verification → B4 cutover.",
+            "b4_proposal_revision": "R2",
+            "guardian_concerns_addressed": 5,
+            "blocking_on_mike": "Q-B2-4, Q-B2-5, Q-B2-6, B4-APPROVE",
+            "b3_closeout_due_utc": "2026-04-22T02:25:00Z"
           }
         }
       ]
@@ -15120,6 +15640,455 @@
             "issue_ref": "QuantisDevelopment/signal-gateway#10",
             "task_id_mapping": "M10 = Meta-track for Issue #10 (locked-trader attribution)",
             "commit_sha": "d79769069440fbb7bcf2af3ecf5d5026b26ca5f5"
+          }
+        }
+      ]
+    },
+    "M152": {
+      "id": "M152",
+      "status": "PR_REVIEW",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 152,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/152",
+          "merge_commit": "14faaf2e7c",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/14faaf2e7c",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000001",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M152",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "fix/micro-gate-fill-price-on-market-insert",
+          "pr": 152,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.6,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/OF152-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "CRITICAL",
+            "commit_sha": "14faaf2e7c",
+            "issue_ref": "QuantisDevelopment/oinkfarm#152",
+            "task_id_mapping": "M152 = Meta-track for oinkfarm PR #152 (micro-gate fill_price)"
+          }
+        }
+      ]
+    },
+    "M164": {
+      "id": "M164",
+      "status": "PR_REVIEW",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 164,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/164",
+          "merge_commit": "3bdd93481a",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/3bdd93481a",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000002",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M164",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "fix/144-orphan-update-handling",
+          "pr": 164,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.6,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/OF164-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "CRITICAL",
+            "commit_sha": "3bdd93481a",
+            "issue_ref": "QuantisDevelopment/oinkfarm#164",
+            "task_id_mapping": "M164 = Meta-track for oinkfarm PR #164 (orphan UPDATE skip)"
+          }
+        }
+      ]
+    },
+    "M120": {
+      "id": "M120",
+      "status": "PR_REVIEW",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 120,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/120",
+          "merge_commit": "3f35c7b690",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/3f35c7b690",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000003",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M120",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "fix/116-extractor-unknown-tag",
+          "pr": 120,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 9.7,
+            "verdict": "PASS",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/OF120-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "STANDARD",
+            "commit_sha": "3f35c7b690",
+            "issue_ref": "QuantisDevelopment/oinkfarm#120",
+            "task_id_mapping": "M120 = Meta-track for oinkfarm PR #120 (extraction_method inference)"
+          }
+        }
+      ]
+    },
+    "M111": {
+      "id": "M111",
+      "status": "PR_REVIEW",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 111,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/111",
+          "merge_commit": "f0b249ff59",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/f0b249ff59",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000004",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M111",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "fix/110-fill-metadata-backfill",
+          "pr": 111,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 4.9,
+            "verdict": "REVISE",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/OF111-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "CRITICAL",
+            "commit_sha": "f0b249ff59",
+            "issue_ref": "QuantisDevelopment/oinkfarm#111",
+            "task_id_mapping": "M111 = Meta-track for oinkfarm PR #111 (fill metadata backfill)",
+            "must_fix_count": 3,
+            "note": "Superseded by #152; no tests; column ordering conflict"
+          }
+        }
+      ]
+    },
+    "M22": {
+      "id": "M22",
+      "status": "PR_REVIEW",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 22,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/22",
+          "merge_commit": "661644183f",
+          "commit_url": "https://github.com/QuantisDevelopment/signal-gateway/commit/661644183f",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000005",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M22",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "signal-gateway",
+          "branch": "fix/signal-gateway-be-flicker-guard",
+          "pr": 22,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 5.35,
+            "verdict": "REVISE",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/SG22-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "CRITICAL",
+            "commit_sha": "661644183f",
+            "issue_ref": "QuantisDevelopment/signal-gateway#22",
+            "task_id_mapping": "M22 = Meta-track for signal-gateway PR #22 (BE flicker guard)",
+            "must_fix_count": 2,
+            "note": "Rebase required; branch base pre-dates B1/B5/B7/B8; would revert Phase B infrastructure"
+          }
+        }
+      ]
+    },
+    "M23": {
+      "id": "M23",
+      "status": "PR_REVIEW",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "signal-gateway",
+          "number": 23,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/23",
+          "merge_commit": "9354b4792b",
+          "commit_url": "https://github.com/QuantisDevelopment/signal-gateway/commit/9354b4792b",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000006",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M23",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "signal-gateway",
+          "branch": "fix/micro-gate-fill-price-on-market-insert",
+          "pr": 23,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 5.55,
+            "verdict": "REVISE",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/SG23-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "CRITICAL",
+            "commit_sha": "9354b4792b",
+            "issue_ref": "QuantisDevelopment/signal-gateway#23",
+            "task_id_mapping": "M23 = Meta-track for signal-gateway PR #23 (fill_price mirror)",
+            "must_fix_count": 2,
+            "note": "URGENT rebase required; branch would delete ~3800 lines of B1/B5/B7/B8 infrastructure"
+          }
+        }
+      ]
+    },
+    "M121": {
+      "id": "M121",
+      "status": "PR_REVIEW",
+      "tier": "STANDARD",
+      "tier_emoji": "🟡",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:26:33Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 121,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/121",
+          "merge_commit": "2bbccc044b",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/2bbccc044b",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112633Z_000007",
+          "ts": "2026-04-21T11:26:33Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M121",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "feat/16-signals-by-route-scaffold",
+          "pr": 121,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "score": 8.2,
+            "verdict": "REVISE",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/OF121-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "STANDARD",
+            "commit_sha": "2bbccc044b",
+            "issue_ref": "QuantisDevelopment/oinkfarm#121",
+            "task_id_mapping": "M121 = Meta-track for oinkfarm PR #121 (signals-by-route scaffold)",
+            "must_fix_count": 1,
+            "note": "Test coverage gap; 31-endpoint scaffold needs minimal regression fence"
+          }
+        }
+      ]
+    },
+    "M105": {
+      "id": "M105",
+      "status": "PR_REVIEW",
+      "tier": "LIGHTWEIGHT",
+      "tier_emoji": "🟢",
+      "phase": "M",
+      "last_event_ts": "2026-04-21T11:27:27Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_agent": "vigil",
+      "event_count": 1,
+      "prs": [
+        {
+          "repo": "oinkfarm",
+          "number": 105,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/105",
+          "merge_commit": "df5b919fb9",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/df5b919fb9",
+          "live_state": "OPEN",
+          "live_merged_at": null
+        }
+      ],
+      "canary_verdict": null,
+      "blocker": null,
+      "agents_touched": [
+        "vigil"
+      ],
+      "events": [
+        {
+          "event_id": "evt_20260421T112727Z_000001",
+          "ts": "2026-04-21T11:27:27Z",
+          "event_type": "REVIEW_POSTED",
+          "task_id": "M105",
+          "phase": "meta",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "feat/25-history-comments",
+          "pr": 105,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "reviewer": "vigil",
+            "verdict": "PASS",
+            "score": 9.5,
+            "review_path": "/home/oinkv/vigil-workspace/reviews/OF105-VIGIL-PHASE1-R1.md",
+            "phase_tag": "1",
+            "tier": "LIGHTWEIGHT",
+            "commit_sha": "df5b919fb9",
+            "issue_ref": "QuantisDevelopment/oinkfarm#105",
+            "task_id_mapping": "M105 = Meta-track for oinkfarm PR #105 (history comments UI)",
+            "score_note": "lightweight_no_score_sentinel_9.5"
           }
         }
       ]
@@ -23000,6 +23969,289 @@
         "accuracy_status": "proxy_only",
         "corrections_status": "pending"
       }
+    },
+    {
+      "event_id": "evt_20260421T112107Z_000001",
+      "ts": "2026-04-21T11:21:07Z",
+      "event_type": "PROPOSAL_READY",
+      "task_id": "B4",
+      "phase": "B",
+      "wave": null,
+      "agent": "anvil",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "proposal_path": "/home/oinkv/anvil-workspace/proposals/B4-PHASE0-PROPOSAL.md",
+        "tier": "CRITICAL",
+        "revision": "R2",
+        "text": "B4 Phase 0 proposal R2 re-submitted. Addresses all GUARDIAN REQUEST_CHANGES: staged approval framing, explicit go/no-go gates with evidence artifacts, reconciliation success criteria, 7 rollback triggers (RT-1 through RT-7), Q-B2-6 acknowledged."
+      }
+    },
+    {
+      "event_id": "evt_20260421T112108Z_000001",
+      "ts": "2026-04-21T11:21:08Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "B4",
+      "phase": "B",
+      "wave": null,
+      "agent": "anvil",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "text": "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review still pending. B6 PR #29 Phase 1 review pending from both. No REVISE verdicts on any active PR. FORGE Q-B2-6 (local B2 drift) acknowledged in B4 proposal — needs resolution before Stage 1. Critical path: B3 canary close-out (~02:25 UTC tomorrow) → Mike Q-B2-4/Q-B2-5/Q-B2-6 → GUARDIAN migration sign-off → dual-write → 7d verification → B4 cutover.",
+        "b4_proposal_revision": "R2",
+        "guardian_concerns_addressed": 5,
+        "blocking_on_mike": "Q-B2-4, Q-B2-5, Q-B2-6, B4-APPROVE",
+        "b3_closeout_due_utc": "2026-04-22T02:25:00Z"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000001",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M152",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "fix/micro-gate-fill-price-on-market-insert",
+      "pr": 152,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 9.6,
+        "verdict": "PASS",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/OF152-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "CRITICAL",
+        "commit_sha": "14faaf2e7c",
+        "issue_ref": "QuantisDevelopment/oinkfarm#152",
+        "task_id_mapping": "M152 = Meta-track for oinkfarm PR #152 (micro-gate fill_price)"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000002",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M164",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "fix/144-orphan-update-handling",
+      "pr": 164,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 9.6,
+        "verdict": "PASS",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/OF164-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "CRITICAL",
+        "commit_sha": "3bdd93481a",
+        "issue_ref": "QuantisDevelopment/oinkfarm#164",
+        "task_id_mapping": "M164 = Meta-track for oinkfarm PR #164 (orphan UPDATE skip)"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000003",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M120",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "fix/116-extractor-unknown-tag",
+      "pr": 120,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 9.7,
+        "verdict": "PASS",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/OF120-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "STANDARD",
+        "commit_sha": "3f35c7b690",
+        "issue_ref": "QuantisDevelopment/oinkfarm#120",
+        "task_id_mapping": "M120 = Meta-track for oinkfarm PR #120 (extraction_method inference)"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000004",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M111",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "fix/110-fill-metadata-backfill",
+      "pr": 111,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 4.9,
+        "verdict": "REVISE",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/OF111-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "CRITICAL",
+        "commit_sha": "f0b249ff59",
+        "issue_ref": "QuantisDevelopment/oinkfarm#111",
+        "task_id_mapping": "M111 = Meta-track for oinkfarm PR #111 (fill metadata backfill)",
+        "must_fix_count": 3,
+        "note": "Superseded by #152; no tests; column ordering conflict"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000005",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M22",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "signal-gateway",
+      "branch": "fix/signal-gateway-be-flicker-guard",
+      "pr": 22,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 5.35,
+        "verdict": "REVISE",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/SG22-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "CRITICAL",
+        "commit_sha": "661644183f",
+        "issue_ref": "QuantisDevelopment/signal-gateway#22",
+        "task_id_mapping": "M22 = Meta-track for signal-gateway PR #22 (BE flicker guard)",
+        "must_fix_count": 2,
+        "note": "Rebase required; branch base pre-dates B1/B5/B7/B8; would revert Phase B infrastructure"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000006",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M23",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "signal-gateway",
+      "branch": "fix/micro-gate-fill-price-on-market-insert",
+      "pr": 23,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 5.55,
+        "verdict": "REVISE",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/SG23-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "CRITICAL",
+        "commit_sha": "9354b4792b",
+        "issue_ref": "QuantisDevelopment/signal-gateway#23",
+        "task_id_mapping": "M23 = Meta-track for signal-gateway PR #23 (fill_price mirror)",
+        "must_fix_count": 2,
+        "note": "URGENT rebase required; branch would delete ~3800 lines of B1/B5/B7/B8 infrastructure"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112633Z_000007",
+      "ts": "2026-04-21T11:26:33Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M121",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "feat/16-signals-by-route-scaffold",
+      "pr": 121,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "score": 8.2,
+        "verdict": "REVISE",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/OF121-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "STANDARD",
+        "commit_sha": "2bbccc044b",
+        "issue_ref": "QuantisDevelopment/oinkfarm#121",
+        "task_id_mapping": "M121 = Meta-track for oinkfarm PR #121 (signals-by-route scaffold)",
+        "must_fix_count": 1,
+        "note": "Test coverage gap; 31-endpoint scaffold needs minimal regression fence"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112727Z_000001",
+      "ts": "2026-04-21T11:27:27Z",
+      "event_type": "REVIEW_POSTED",
+      "task_id": "M105",
+      "phase": "meta",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "feat/25-history-comments",
+      "pr": 105,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "reviewer": "vigil",
+        "verdict": "PASS",
+        "score": 9.5,
+        "review_path": "/home/oinkv/vigil-workspace/reviews/OF105-VIGIL-PHASE1-R1.md",
+        "phase_tag": "1",
+        "tier": "LIGHTWEIGHT",
+        "commit_sha": "df5b919fb9",
+        "issue_ref": "QuantisDevelopment/oinkfarm#105",
+        "task_id_mapping": "M105 = Meta-track for oinkfarm PR #105 (history comments UI)",
+        "score_note": "lightweight_no_score_sentinel_9.5"
+      }
+    },
+    {
+      "event_id": "evt_20260421T112750Z_000001",
+      "ts": "2026-04-21T11:27:50Z",
+      "event_type": "ARTIFACT_PUBLISHED",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "docs/oinxtractor-quality.html",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "category": "oinxtractor_quality",
+        "src_path": "docs/oinxtractor-metrics.json",
+        "latency_status": "ok",
+        "unknown_rate_status": "ok",
+        "accuracy_status": "proxy_only",
+        "corrections_status": "pending"
+      }
     }
   ],
   "open_decisions": [
@@ -23014,8 +24266,8 @@
       "task_id": "B2",
       "phase": "B",
       "ts": "2026-04-21T10:25:58Z",
-      "age_hours": 0.6817171158333334,
-      "age_human": "40m",
+      "age_hours": 1.0312378819444445,
+      "age_human": "1.0h",
       "agent": "forge",
       "gate_type": "phase-b"
     }
@@ -23023,6 +24275,127 @@
   "live_buckets": {
     "1h": [
       {
+        "ts": "2026-04-21T11:27:50Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00012677083333333334
+      },
+      {
+        "ts": "2026-04-21T11:27:27Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M105",
+        "agent": "vigil",
+        "summary": "M105 review by vigil — PASS (9.5)",
+        "phase": "meta",
+        "pr": 105,
+        "repo": "oinkfarm",
+        "age_hours": 0.006515659722222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M152",
+        "agent": "vigil",
+        "summary": "M152 review by vigil — PASS (9.6)",
+        "phase": "meta",
+        "pr": 152,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M164",
+        "agent": "vigil",
+        "summary": "M164 review by vigil — PASS (9.6)",
+        "phase": "meta",
+        "pr": 164,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M120",
+        "agent": "vigil",
+        "summary": "M120 review by vigil — PASS (9.7)",
+        "phase": "meta",
+        "pr": 120,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M111",
+        "agent": "vigil",
+        "summary": "M111 review by vigil — REVISE (4.9)",
+        "phase": "meta",
+        "pr": 111,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M22",
+        "agent": "vigil",
+        "summary": "M22 review by vigil — REVISE (5.35)",
+        "phase": "meta",
+        "pr": 22,
+        "repo": "signal-gateway",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M23",
+        "agent": "vigil",
+        "summary": "M23 review by vigil — REVISE (5.55)",
+        "phase": "meta",
+        "pr": 23,
+        "repo": "signal-gateway",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M121",
+        "agent": "vigil",
+        "summary": "M121 review by vigil — REVISE (8.2)",
+        "phase": "meta",
+        "pr": 121,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:21:08Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.1117934375
+      },
+      {
+        "ts": "2026-04-21T11:21:07Z",
+        "event_type": "PROPOSAL_READY",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "B4 proposal ready",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.11207121527777777
+      },
+      {
         "ts": "2026-04-21T11:06:52Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -23031,7 +24404,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.0449166666666665e-05
+        "age_hours": 0.3495712152777778
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23042,7 +24415,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23053,7 +24426,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23064,7 +24437,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -23075,7 +24448,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.07782822694444445
+        "age_hours": 0.42734899305555557
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -23086,7 +24459,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.07782822694444445
+        "age_hours": 0.42734899305555557
       },
       {
         "ts": "2026-04-21T10:37:10Z",
@@ -23097,7 +24470,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.49505044916666663
+        "age_hours": 0.8445712152777778
       },
       {
         "ts": "2026-04-21T10:34:14Z",
@@ -23108,7 +24481,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5439393380555555
+        "age_hours": 0.8934601041666668
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23119,7 +24492,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23130,7 +24503,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23141,176 +24514,132 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.5522876475
-      },
-      {
-        "ts": "2026-04-21T10:25:58Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "B2",
-        "agent": "forge",
-        "summary": "FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit ",
-        "phase": "B",
-        "pr": null,
-        "repo": "oinkfarm",
-        "age_hours": 0.6817171158333334
-      },
-      {
-        "ts": "2026-04-21T10:25:58Z",
-        "event_type": "DECISION_NEEDED",
-        "task_id": "B2",
-        "agent": "forge",
-        "summary": "B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-",
-        "phase": "B",
-        "pr": null,
-        "repo": "oinkfarm",
-        "age_hours": 0.6817171158333334
-      },
-      {
-        "ts": "2026-04-21T10:23:18Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.7261615602777778
-      },
-      {
-        "ts": "2026-04-21T10:16:41Z",
-        "event_type": "REVIEW_POSTED",
-        "task_id": "B2",
-        "agent": "vigil",
-        "summary": "B2 review by vigil — PASS (9.6)",
-        "phase": "B",
-        "pr": 153,
-        "repo": "oinkfarm",
-        "age_hours": 0.8364393380555556
-      },
-      {
-        "ts": "2026-04-21T10:16:41Z",
-        "event_type": "REVIEW_POSTED",
-        "task_id": "B7",
-        "agent": "vigil",
-        "summary": "B7 review by vigil — PASS (10.0)",
-        "phase": "B",
-        "pr": 27,
-        "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
-      },
-      {
-        "ts": "2026-04-21T10:16:41Z",
-        "event_type": "REVIEW_POSTED",
-        "task_id": "B8",
-        "agent": "vigil",
-        "summary": "B8 review by vigil — PASS (9.85)",
-        "phase": "B",
-        "pr": 26,
-        "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
-      },
-      {
-        "ts": "2026-04-21T10:16:41Z",
-        "event_type": "REVIEW_POSTED",
-        "task_id": "M7",
-        "agent": "vigil",
-        "summary": "M7 review by vigil — PASS (9.3)",
-        "phase": "meta",
-        "pr": 9,
-        "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
-      },
-      {
-        "ts": "2026-04-21T10:16:41Z",
-        "event_type": "REVIEW_POSTED",
-        "task_id": "M10",
-        "agent": "vigil",
-        "summary": "M10 review by vigil — PASS (9.3)",
-        "phase": "meta",
-        "pr": 11,
-        "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
-      },
-      {
-        "ts": "2026-04-21T10:12:52Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9000504491666668
-      },
-      {
-        "ts": "2026-04-21T10:10:38.767632Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": "Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9370594402777778
-      },
-      {
-        "ts": "2026-04-21T10:10:38.767632Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": "Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9370594402777778
-      },
-      {
-        "ts": "2026-04-21T10:10:38.767632Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "A171",
-        "agent": "oinkv",
-        "summary": "A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9370594402777778
-      },
-      {
-        "ts": "2026-04-21T10:09:23Z",
-        "event_type": "AGENT_HEARTBEAT",
-        "task_id": "B3",
-        "agent": "guardian",
-        "summary": "guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9581060047222223
-      },
-      {
-        "ts": "2026-04-21T10:08:44Z",
-        "event_type": "PROPOSAL_READY",
-        "task_id": "B4",
-        "agent": "anvil",
-        "summary": "B4 proposal ready",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9689393380555557
-      },
-      {
-        "ts": "2026-04-21T10:08:44Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "B4",
-        "agent": "anvil",
-        "summary": "Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.9689393380555557
+        "age_hours": 0.9018084136111111
       }
     ],
     "4h": [
       {
+        "ts": "2026-04-21T11:27:50Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00012677083333333334
+      },
+      {
+        "ts": "2026-04-21T11:27:27Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M105",
+        "agent": "vigil",
+        "summary": "M105 review by vigil — PASS (9.5)",
+        "phase": "meta",
+        "pr": 105,
+        "repo": "oinkfarm",
+        "age_hours": 0.006515659722222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M152",
+        "agent": "vigil",
+        "summary": "M152 review by vigil — PASS (9.6)",
+        "phase": "meta",
+        "pr": 152,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M164",
+        "agent": "vigil",
+        "summary": "M164 review by vigil — PASS (9.6)",
+        "phase": "meta",
+        "pr": 164,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M120",
+        "agent": "vigil",
+        "summary": "M120 review by vigil — PASS (9.7)",
+        "phase": "meta",
+        "pr": 120,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M111",
+        "agent": "vigil",
+        "summary": "M111 review by vigil — REVISE (4.9)",
+        "phase": "meta",
+        "pr": 111,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M22",
+        "agent": "vigil",
+        "summary": "M22 review by vigil — REVISE (5.35)",
+        "phase": "meta",
+        "pr": 22,
+        "repo": "signal-gateway",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M23",
+        "agent": "vigil",
+        "summary": "M23 review by vigil — REVISE (5.55)",
+        "phase": "meta",
+        "pr": 23,
+        "repo": "signal-gateway",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M121",
+        "agent": "vigil",
+        "summary": "M121 review by vigil — REVISE (8.2)",
+        "phase": "meta",
+        "pr": 121,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:21:08Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.1117934375
+      },
+      {
+        "ts": "2026-04-21T11:21:07Z",
+        "event_type": "PROPOSAL_READY",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "B4 proposal ready",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.11207121527777777
+      },
+      {
         "ts": "2026-04-21T11:06:52Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -23319,7 +24648,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.0449166666666665e-05
+        "age_hours": 0.3495712152777778
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23330,7 +24659,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23341,7 +24670,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23352,7 +24681,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -23363,7 +24692,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.07782822694444445
+        "age_hours": 0.42734899305555557
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -23374,7 +24703,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.07782822694444445
+        "age_hours": 0.42734899305555557
       },
       {
         "ts": "2026-04-21T10:37:10Z",
@@ -23385,7 +24714,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.49505044916666663
+        "age_hours": 0.8445712152777778
       },
       {
         "ts": "2026-04-21T10:34:14Z",
@@ -23396,7 +24725,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5439393380555555
+        "age_hours": 0.8934601041666668
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23407,7 +24736,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23418,7 +24747,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23429,7 +24758,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:25:58Z",
@@ -23440,7 +24769,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 0.6817171158333334
+        "age_hours": 1.0312378819444445
       },
       {
         "ts": "2026-04-21T10:25:58Z",
@@ -23451,7 +24780,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 0.6817171158333334
+        "age_hours": 1.0312378819444445
       },
       {
         "ts": "2026-04-21T10:23:18Z",
@@ -23462,7 +24791,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.7261615602777778
+        "age_hours": 1.075682326388889
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23473,7 +24802,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23484,7 +24813,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23495,7 +24824,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23506,7 +24835,7 @@
         "phase": "meta",
         "pr": 9,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23517,7 +24846,7 @@
         "phase": "meta",
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:12:52Z",
@@ -23528,7 +24857,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.9000504491666668
+        "age_hours": 1.2495712152777778
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -23539,7 +24868,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.9370594402777778
+        "age_hours": 1.2865802063888887
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -23550,7 +24879,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.9370594402777778
+        "age_hours": 1.2865802063888887
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -23561,7 +24890,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9370594402777778
+        "age_hours": 1.2865802063888887
       },
       {
         "ts": "2026-04-21T10:09:23Z",
@@ -23572,7 +24901,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9581060047222223
+        "age_hours": 1.3076267708333333
       },
       {
         "ts": "2026-04-21T10:08:44Z",
@@ -23583,7 +24912,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9689393380555557
+        "age_hours": 1.3184601041666666
       },
       {
         "ts": "2026-04-21T10:08:44Z",
@@ -23594,7 +24923,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9689393380555557
+        "age_hours": 1.3184601041666666
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -23605,7 +24934,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0239459966666666
+        "age_hours": 1.373466762777778
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -23616,7 +24945,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0239459966666666
+        "age_hours": 1.373466762777778
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -23627,7 +24956,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.0239459966666666
+        "age_hours": 1.373466762777778
       },
       {
         "ts": "2026-04-21T10:03:20Z",
@@ -23638,7 +24967,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 1.0589393380555556
+        "age_hours": 1.4084601041666667
       },
       {
         "ts": "2026-04-21T10:02:17Z",
@@ -23649,7 +24978,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0764393380555557
+        "age_hours": 1.4259601041666665
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -23660,7 +24989,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.1250504491666666
+        "age_hours": 1.4745712152777777
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -23671,7 +25000,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.1250504491666666
+        "age_hours": 1.4745712152777777
       },
       {
         "ts": "2026-04-21T09:41:33Z",
@@ -23682,7 +25011,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.421994893611111
+        "age_hours": 1.7715156597222221
       },
       {
         "ts": "2026-04-21T08:32:00Z",
@@ -23693,7 +25022,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.5811615602777778
+        "age_hours": 2.930682326388889
       },
       {
         "ts": "2026-04-21T08:29:26Z",
@@ -23704,7 +25033,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.6239393380555556
+        "age_hours": 2.9734601041666666
       },
       {
         "ts": "2026-04-21T07:27:54Z",
@@ -23715,11 +25044,132 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.649494893611111
+        "age_hours": 3.999015659722222
       }
     ],
     "24h": [
       {
+        "ts": "2026-04-21T11:27:50Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00012677083333333334
+      },
+      {
+        "ts": "2026-04-21T11:27:27Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M105",
+        "agent": "vigil",
+        "summary": "M105 review by vigil — PASS (9.5)",
+        "phase": "meta",
+        "pr": 105,
+        "repo": "oinkfarm",
+        "age_hours": 0.006515659722222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M152",
+        "agent": "vigil",
+        "summary": "M152 review by vigil — PASS (9.6)",
+        "phase": "meta",
+        "pr": 152,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M164",
+        "agent": "vigil",
+        "summary": "M164 review by vigil — PASS (9.6)",
+        "phase": "meta",
+        "pr": 164,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M120",
+        "agent": "vigil",
+        "summary": "M120 review by vigil — PASS (9.7)",
+        "phase": "meta",
+        "pr": 120,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M111",
+        "agent": "vigil",
+        "summary": "M111 review by vigil — REVISE (4.9)",
+        "phase": "meta",
+        "pr": 111,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M22",
+        "agent": "vigil",
+        "summary": "M22 review by vigil — REVISE (5.35)",
+        "phase": "meta",
+        "pr": 22,
+        "repo": "signal-gateway",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M23",
+        "agent": "vigil",
+        "summary": "M23 review by vigil — REVISE (5.55)",
+        "phase": "meta",
+        "pr": 23,
+        "repo": "signal-gateway",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:26:33Z",
+        "event_type": "REVIEW_POSTED",
+        "task_id": "M121",
+        "agent": "vigil",
+        "summary": "M121 review by vigil — REVISE (8.2)",
+        "phase": "meta",
+        "pr": 121,
+        "repo": "oinkfarm",
+        "age_hours": 0.02151565972222222
+      },
+      {
+        "ts": "2026-04-21T11:21:08Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.1117934375
+      },
+      {
+        "ts": "2026-04-21T11:21:07Z",
+        "event_type": "PROPOSAL_READY",
+        "task_id": "B4",
+        "agent": "anvil",
+        "summary": "B4 proposal ready",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.11207121527777777
+      },
+      {
         "ts": "2026-04-21T11:06:52Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -23728,7 +25178,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.0449166666666665e-05
+        "age_hours": 0.3495712152777778
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23739,7 +25189,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23750,7 +25200,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -23761,7 +25211,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.011196569444444445
+        "age_hours": 0.3607173355555556
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -23772,7 +25222,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.07782822694444445
+        "age_hours": 0.42734899305555557
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -23783,7 +25233,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.07782822694444445
+        "age_hours": 0.42734899305555557
       },
       {
         "ts": "2026-04-21T10:37:10Z",
@@ -23794,7 +25244,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.49505044916666663
+        "age_hours": 0.8445712152777778
       },
       {
         "ts": "2026-04-21T10:34:14Z",
@@ -23805,7 +25255,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5439393380555555
+        "age_hours": 0.8934601041666668
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23816,7 +25266,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23827,7 +25277,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -23838,7 +25288,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.5522876475
+        "age_hours": 0.9018084136111111
       },
       {
         "ts": "2026-04-21T10:25:58Z",
@@ -23849,7 +25299,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 0.6817171158333334
+        "age_hours": 1.0312378819444445
       },
       {
         "ts": "2026-04-21T10:25:58Z",
@@ -23860,7 +25310,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 0.6817171158333334
+        "age_hours": 1.0312378819444445
       },
       {
         "ts": "2026-04-21T10:23:18Z",
@@ -23871,7 +25321,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.7261615602777778
+        "age_hours": 1.075682326388889
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23882,7 +25332,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23893,7 +25343,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23904,7 +25354,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23915,7 +25365,7 @@
         "phase": "meta",
         "pr": 9,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -23926,7 +25376,7 @@
         "phase": "meta",
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 0.8364393380555556
+        "age_hours": 1.1859601041666665
       },
       {
         "ts": "2026-04-21T10:12:52Z",
@@ -23937,7 +25387,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.9000504491666668
+        "age_hours": 1.2495712152777778
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -23948,7 +25398,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.9370594402777778
+        "age_hours": 1.2865802063888887
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -23959,7 +25409,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.9370594402777778
+        "age_hours": 1.2865802063888887
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -23970,7 +25420,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9370594402777778
+        "age_hours": 1.2865802063888887
       },
       {
         "ts": "2026-04-21T10:09:23Z",
@@ -23981,7 +25431,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9581060047222223
+        "age_hours": 1.3076267708333333
       },
       {
         "ts": "2026-04-21T10:08:44Z",
@@ -23992,7 +25442,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9689393380555557
+        "age_hours": 1.3184601041666666
       },
       {
         "ts": "2026-04-21T10:08:44Z",
@@ -24003,7 +25453,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.9689393380555557
+        "age_hours": 1.3184601041666666
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -24014,7 +25464,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0239459966666666
+        "age_hours": 1.373466762777778
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -24025,7 +25475,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0239459966666666
+        "age_hours": 1.373466762777778
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -24036,7 +25486,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.0239459966666666
+        "age_hours": 1.373466762777778
       },
       {
         "ts": "2026-04-21T10:03:20Z",
@@ -24047,7 +25497,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 1.0589393380555556
+        "age_hours": 1.4084601041666667
       },
       {
         "ts": "2026-04-21T10:02:17Z",
@@ -24058,7 +25508,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0764393380555557
+        "age_hours": 1.4259601041666665
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -24069,7 +25519,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.1250504491666666
+        "age_hours": 1.4745712152777777
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -24080,7 +25530,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.1250504491666666
+        "age_hours": 1.4745712152777777
       },
       {
         "ts": "2026-04-21T09:41:33Z",
@@ -24091,7 +25541,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.421994893611111
+        "age_hours": 1.7715156597222221
       },
       {
         "ts": "2026-04-21T08:32:00Z",
@@ -24102,7 +25552,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.5811615602777778
+        "age_hours": 2.930682326388889
       },
       {
         "ts": "2026-04-21T08:29:26Z",
@@ -24113,7 +25563,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.6239393380555556
+        "age_hours": 2.9734601041666666
       },
       {
         "ts": "2026-04-21T07:27:54Z",
@@ -24124,7 +25574,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.649494893611111
+        "age_hours": 3.999015659722222
       },
       {
         "ts": "2026-04-21T06:26:17Z",
@@ -24135,7 +25585,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.676439338055555
+        "age_hours": 5.025960104166667
       },
       {
         "ts": "2026-04-21T06:11:40Z",
@@ -24146,7 +25596,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.920050449166666
+        "age_hours": 5.269571215277778
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -24157,7 +25607,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.9533837824999996
+        "age_hours": 5.302904548611112
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -24168,7 +25618,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.9533837824999996
+        "age_hours": 5.302904548611112
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -24179,7 +25629,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.9533837824999996
+        "age_hours": 5.302904548611112
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -24190,7 +25640,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.9533837824999996
+        "age_hours": 5.302904548611112
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -24201,7 +25651,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.9533837824999996
+        "age_hours": 5.302904548611112
       },
       {
         "ts": "2026-04-21T05:30:05Z",
@@ -24212,7 +25662,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.613106004722222
+        "age_hours": 5.962626770833333
       },
       {
         "ts": "2026-04-21T04:21:00Z",
@@ -24223,7 +25673,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.7644948936111104
+        "age_hours": 7.114015659722223
       },
       {
         "ts": "2026-04-21T04:15:26Z",
@@ -24234,7 +25684,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.8572726713888885
+        "age_hours": 7.2067934375
       },
       {
         "ts": "2026-04-21T03:11:34Z",
@@ -24245,7 +25695,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.921717115833333
+        "age_hours": 8.271237881944446
       },
       {
         "ts": "2026-04-21T03:04:00Z",
@@ -24256,7 +25706,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.047828226944445
+        "age_hours": 8.397348993055555
       },
       {
         "ts": "2026-04-21T02:13:37Z",
@@ -24267,7 +25717,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.887550449166666
+        "age_hours": 9.237071215277778
       },
       {
         "ts": "2026-04-21T01:27:28Z",
@@ -24278,7 +25728,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.656717115833334
+        "age_hours": 10.006237881944445
       },
       {
         "ts": "2026-04-21T00:46:39Z",
@@ -24289,7 +25739,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.336994893611111
+        "age_hours": 10.686515659722224
       },
       {
         "ts": "2026-04-21T00:44:25Z",
@@ -24300,7 +25750,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 10.374217115833334
+        "age_hours": 10.723737881944444
       },
       {
         "ts": "2026-04-21T00:07:36Z",
@@ -24311,7 +25761,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.987828226944446
+        "age_hours": 11.337348993055556
       },
       {
         "ts": "2026-04-20T23:21:53Z",
@@ -24322,7 +25772,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.74977267138889
+        "age_hours": 12.0992934375
       },
       {
         "ts": "2026-04-20T22:17:17Z",
@@ -24333,7 +25783,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.826439338055556
+        "age_hours": 13.175960104166666
       },
       {
         "ts": "2026-04-20T22:09:03Z",
@@ -24344,7 +25794,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 12.963661560277778
+        "age_hours": 13.313182326388889
       },
       {
         "ts": "2026-04-20T22:01:54Z",
@@ -24355,7 +25805,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.082828226944445
+        "age_hours": 13.432348993055555
       },
       {
         "ts": "2026-04-20T21:41:30Z",
@@ -24366,7 +25816,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.422828226944445
+        "age_hours": 13.772348993055555
       },
       {
         "ts": "2026-04-20T21:32:48Z",
@@ -24377,7 +25827,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 13.567828226944444
+        "age_hours": 13.917348993055557
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24388,7 +25838,7 @@
         "phase": "A",
         "pr": 5,
         "repo": "oink-sync",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24399,7 +25849,7 @@
         "phase": "A",
         "pr": 7,
         "repo": "oink-sync",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24410,7 +25860,7 @@
         "phase": "A",
         "pr": 130,
         "repo": "signal-gateway",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24421,7 +25871,7 @@
         "phase": "A",
         "pr": 131,
         "repo": "signal-gateway",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24432,7 +25882,7 @@
         "phase": "A",
         "pr": 20,
         "repo": "signal-gateway",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24443,7 +25893,7 @@
         "phase": "A",
         "pr": 8,
         "repo": "oink-sync",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24454,7 +25904,7 @@
         "phase": "A",
         "pr": 132,
         "repo": "oinkfarm",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24465,7 +25915,7 @@
         "phase": "A",
         "pr": 134,
         "repo": "oinkfarm",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24476,7 +25926,7 @@
         "phase": "A",
         "pr": 135,
         "repo": "oinkfarm",
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -24487,7 +25937,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 13.570328226944445
+        "age_hours": 13.919848993055556
       },
       {
         "ts": "2026-04-20T21:31:16Z",
@@ -24498,7 +25948,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.5933837825
+        "age_hours": 13.94290454861111
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -24509,7 +25959,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.601994893611112
+        "age_hours": 13.951515659722222
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -24520,7 +25970,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.601994893611112
+        "age_hours": 13.951515659722222
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -24531,7 +25981,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.601994893611112
+        "age_hours": 13.951515659722222
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -24542,7 +25992,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.601994893611112
+        "age_hours": 13.951515659722222
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -24553,7 +26003,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.601994893611112
+        "age_hours": 13.951515659722222
       },
       {
         "ts": "2026-04-20T21:30:29Z",
@@ -24564,7 +26014,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.606439338055557
+        "age_hours": 13.955960104166667
       },
       {
         "ts": "2026-04-20T21:27:41Z",
@@ -24575,7 +26025,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.653106004722222
+        "age_hours": 14.002626770833334
       },
       {
         "ts": "2026-04-20T21:19:35Z",
@@ -24586,7 +26036,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.788106004722223
+        "age_hours": 14.137626770833334
       },
       {
         "ts": "2026-04-20T21:18:58Z",
@@ -24597,7 +26047,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.7983837825
+        "age_hours": 14.14790454861111
       },
       {
         "ts": "2026-04-20T21:18:12Z",
@@ -24608,7 +26058,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 13.811161560277778
+        "age_hours": 14.160682326388889
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -24619,7 +26069,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.812828226944445
+        "age_hours": 14.162348993055556
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -24630,7 +26080,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.812828226944445
+        "age_hours": 14.162348993055556
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -24641,7 +26091,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 13.812828226944445
+        "age_hours": 14.162348993055556
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -24652,7 +26102,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 13.812828226944445
+        "age_hours": 14.162348993055556
       },
       {
         "ts": "2026-04-20T20:57:07Z",
@@ -24663,7 +26113,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 14.162550449166668
+        "age_hours": 14.512071215277778
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -24674,7 +26124,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.192550449166667
+        "age_hours": 14.542071215277778
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -24685,7 +26135,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 14.192550449166667
+        "age_hours": 14.542071215277778
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -24696,7 +26146,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.192550449166667
+        "age_hours": 14.542071215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24707,7 +26157,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24718,7 +26168,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24729,7 +26179,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24740,7 +26190,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24751,7 +26201,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24762,7 +26212,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -24773,7 +26223,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 14.200050449166667
+        "age_hours": 14.549571215277778
       },
       {
         "ts": "2026-04-20T20:20:23Z",
@@ -24784,7 +26234,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.77477267138889
+        "age_hours": 15.1242934375
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -24795,7 +26245,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.387272671388889
+        "age_hours": 15.736793437500001
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -24806,7 +26256,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.484217115833335
+        "age_hours": 16.833737881944444
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -24817,7 +26267,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.9083837825
+        "age_hours": 17.257904548611112
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -24828,7 +26278,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 17.135050449166666
+        "age_hours": 17.48457121527778
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -24839,7 +26289,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.288383782500002
+        "age_hours": 17.63790454861111
       },
       {
         "ts": "2026-04-20T16:06:27Z",
@@ -24850,7 +26300,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 19.00699489361111
+        "age_hours": 19.35651565972222
       },
       {
         "ts": "2026-04-20T16:02:34Z",
@@ -24861,7 +26311,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 19.071717115833334
+        "age_hours": 19.421237881944442
       },
       {
         "ts": "2026-04-20T15:53:52Z",
@@ -24872,7 +26322,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.216717115833333
+        "age_hours": 19.566237881944442
       },
       {
         "ts": "2026-04-20T15:52:02Z",
@@ -24883,7 +26333,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 19.247272671388888
+        "age_hours": 19.596793437499997
       },
       {
         "ts": "2026-04-20T13:47:28Z",
@@ -24894,7 +26344,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 21.3233837825
+        "age_hours": 21.67290454861111
       },
       {
         "ts": "2026-04-20T13:15:36Z",
@@ -24905,7 +26355,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 21.85449489361111
+        "age_hours": 22.20401565972222
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -24916,7 +26366,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 21.972550449166665
+        "age_hours": 22.322071215277777
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -24927,7 +26377,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 21.972550449166665
+        "age_hours": 22.322071215277777
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -24938,7 +26388,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 21.972550449166665
+        "age_hours": 22.322071215277777
       },
       {
         "ts": "2026-04-20T13:08:31Z",
@@ -24949,7 +26399,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 21.972550449166665
+        "age_hours": 22.322071215277777
       },
       {
         "ts": "2026-04-20T11:57:11Z",
@@ -24960,7 +26410,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 23.161439338055555
+        "age_hours": 23.510960104166664
       },
       {
         "ts": "2026-04-20T11:35:27Z",
@@ -24971,7 +26421,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 23.523661560277777
+        "age_hours": 23.873182326388886
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -24982,7 +26432,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.525328226944442
+        "age_hours": 23.874848993055554
       },
       {
         "ts": "2026-04-20T11:35:21Z",
@@ -24993,7 +26443,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.525328226944442
+        "age_hours": 23.874848993055554
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -25004,7 +26454,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 23.57699489361111
+        "age_hours": 23.92651565972222
       },
       {
         "ts": "2026-04-20T11:32:15Z",
@@ -25015,128 +26465,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 23.57699489361111
-      },
-      {
-        "ts": "2026-04-20T11:21:53Z",
-        "event_type": "DECISION_NEEDED",
-        "task_id": "B2",
-        "agent": "forge",
-        "summary": "B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.749772671388886
-      },
-      {
-        "ts": "2026-04-20T11:21:53Z",
-        "event_type": "DECISION_NEEDED",
-        "task_id": "B13",
-        "agent": "forge",
-        "summary": "B13 Mike gate: Single-host Docker Compose for B13, defer multi-host to Phase D+?",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.749772671388886
-      },
-      {
-        "ts": "2026-04-20T11:21:53Z",
-        "event_type": "DECISION_NEEDED",
-        "task_id": "B9",
-        "agent": "forge",
-        "summary": "B9 Mike gate: Enforce W1 immutability via phased app-level then DB REVOKE?",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.749772671388886
-      },
-      {
-        "ts": "2026-04-20T11:21:53Z",
-        "event_type": "DECISION_NEEDED",
-        "task_id": "C2",
-        "agent": "forge",
-        "summary": "C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject?",
-        "phase": "C",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.749772671388886
-      },
-      {
-        "ts": "2026-04-20T11:18:04Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "🪽 Hermes resolved 6 Phase B decisions (hermes_ops):\n• B1: adopt psycopg3; canonical oink_db.py in oinkfarm/scripts + CI fork-sync to vendore",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.813383782499997
-      },
-      {
-        "ts": "2026-04-20T11:15:09Z",
-        "event_type": "DECISION_RESOLVED",
-        "task_id": "B1",
-        "agent": "hermes",
-        "summary": "B1 decision: Adopt psycopg3 (`psycopg[binary]`). It is the actively maintained upstream (psycopg2 is in maintenance mode), has a cleaner Con",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.861994893611108
-      },
-      {
-        "ts": "2026-04-20T11:15:09Z",
-        "event_type": "DECISION_RESOLVED",
-        "task_id": "B1",
-        "agent": "hermes",
-        "summary": "B1 decision: Canonical oink_db.py lives in oinkfarm scripts/ (/home/oinkv/oinkfarm/scripts/oink_db.py), with vendored copies in oink-sync/ a",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.861994893611108
-      },
-      {
-        "ts": "2026-04-20T11:15:09Z",
-        "event_type": "DECISION_RESOLVED",
-        "task_id": "B2",
-        "agent": "hermes",
-        "summary": "B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.861994893611108
-      },
-      {
-        "ts": "2026-04-20T11:15:09Z",
-        "event_type": "DECISION_RESOLVED",
-        "task_id": "B4",
-        "agent": "hermes",
-        "summary": "B4 decision: Re-enable the systemd unit before B4 cutover. Reasons: (1) Arbiter PHASE-0 §Resilience explicitly models signal-gateway supervi",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.861994893611108
-      },
-      {
-        "ts": "2026-04-20T11:15:09Z",
-        "event_type": "DECISION_RESOLVED",
-        "task_id": "B4",
-        "agent": "hermes",
-        "summary": "B4 decision: Fork-sync for B4; schedule re-point for B13 (Docker Compose). Rationale: (1) B4 is a CRITICAL cutover window — re-pointing serv",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.861994893611108
-      },
-      {
-        "ts": "2026-04-20T11:15:09Z",
-        "event_type": "DECISION_RESOLVED",
-        "task_id": "B12",
-        "agent": "hermes",
-        "summary": "B12 decision: Same server (barn) as Docker container, 127.0.0.1 binding, internal-only port exposure. Matches Arbiter V3 PHASE-4 §2 single-t",
-        "phase": "B",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.861994893611108
+        "age_hours": 23.92651565972222
       }
     ]
   },
@@ -25147,7 +26476,7 @@
       "issue": "PR_OPENED (pr=133) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T145137Z_000001",
-      "detected_at": "2026-04-21T11:07:05Z"
+      "detected_at": "2026-04-21T11:28:08Z"
     },
     {
       "task_id": "B1",
@@ -25155,7 +26484,7 @@
       "issue": "PR_OPENED (pr=149) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T222920Z_000001",
-      "detected_at": "2026-04-21T11:07:05Z"
+      "detected_at": "2026-04-21T11:28:08Z"
     },
     {
       "task_id": "B1",
@@ -25163,7 +26492,7 @@
       "issue": "PR_OPENED (pr=21) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T223519Z_000001",
-      "detected_at": "2026-04-21T11:07:05Z"
+      "detected_at": "2026-04-21T11:28:08Z"
     },
     {
       "task_id": "B2",
@@ -25171,7 +26500,7 @@
       "issue": "PR_OPENED (pr=24) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T012125Z_000001",
-      "detected_at": "2026-04-21T11:07:05Z"
+      "detected_at": "2026-04-21T11:28:08Z"
     },
     {
       "task_id": "B5",
@@ -25179,11 +26508,11 @@
       "issue": "PR_OPENED (pr=25) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T044257Z_000001",
-      "detected_at": "2026-04-21T11:07:05Z"
+      "detected_at": "2026-04-21T11:28:08Z"
     }
   ],
   "events_integrity": {
-    "total": 368,
+    "total": 379,
     "last_24h": 129,
     "rate_per_hour": 5.38,
     "schema_version": "1.0",
@@ -25198,20 +26527,64 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-21T11:06:52Z",
+      "last_event_ts": "2026-04-21T11:27:50Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 5.0449166666666665e-05,
+      "age_hours": 0.00012677083333333334,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 53,
+      "event_count": 54,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-21T11:06:52Z",
+      "last_active": "2026-04-21T11:27:50Z",
       "last_active_human": "0s ago",
       "heartbeat": {
         "current_task": null,
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "vigil",
+      "name": "VIGIL",
+      "last_event_ts": "2026-04-21T11:27:27Z",
+      "last_event_type": "REVIEW_POSTED",
+      "last_task_id": "M105",
+      "current_task": "M105",
+      "age_hours": 0.006515659722222222,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 44,
+      "emoji": "🔍",
+      "role": "Code Review + Scoring",
+      "last_active": "2026-04-21T11:27:27Z",
+      "last_active_human": "23s ago",
+      "heartbeat": {
+        "current_task": "M105",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "anvil",
+      "name": "ANVIL",
+      "last_event_ts": "2026-04-21T11:21:08Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "B4",
+      "current_task": "B4",
+      "age_hours": 0.1117934375,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 94,
+      "emoji": "⚒️",
+      "role": "Implementation Lead",
+      "last_active": "2026-04-21T11:21:08Z",
+      "last_active_human": "6m ago",
+      "heartbeat": {
+        "current_task": "B4",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -25224,14 +26597,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "A171",
       "current_task": "A171",
-      "age_hours": 0.011196569444444445,
+      "age_hours": 0.3607173355555556,
       "staleness_label": "green",
       "light": "green",
       "event_count": 14,
       "emoji": "🐷",
       "role": "Plan Auditor",
       "last_active": "2026-04-21T11:06:11.873967Z",
-      "last_active_human": "40s ago",
+      "last_active_human": "21m ago",
       "heartbeat": {
         "current_task": "A171",
         "current_phase": null,
@@ -25246,14 +26619,14 @@
       "last_event_type": "AGENT_HEARTBEAT",
       "last_task_id": "B4",
       "current_task": "Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh",
-      "age_hours": 0.07782822694444445,
+      "age_hours": 0.42734899305555557,
       "staleness_label": "green",
       "light": "green",
       "event_count": 96,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
       "last_active": "2026-04-21T11:02:12Z",
-      "last_active_human": "4m ago",
+      "last_active_human": "25m ago",
       "heartbeat": {
         "current_task": "Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh",
         "current_phase": null,
@@ -25268,60 +26641,16 @@
       "last_event_type": "DECISION_NEEDED",
       "last_task_id": "B2",
       "current_task": "B2",
-      "age_hours": 0.6817171158333334,
-      "staleness_label": "green",
-      "light": "green",
+      "age_hours": 1.0312378819444445,
+      "staleness_label": "yellow",
+      "light": "yellow",
       "event_count": 59,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-21T10:25:58Z",
-      "last_active_human": "40m ago",
+      "last_active_human": "1h 1m ago",
       "heartbeat": {
         "current_task": "B2",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "vigil",
-      "name": "VIGIL",
-      "last_event_ts": "2026-04-21T10:16:41Z",
-      "last_event_type": "REVIEW_POSTED",
-      "last_task_id": "M10",
-      "current_task": "M10",
-      "age_hours": 0.8364393380555556,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 36,
-      "emoji": "🔍",
-      "role": "Code Review + Scoring",
-      "last_active": "2026-04-21T10:16:41Z",
-      "last_active_human": "50m ago",
-      "heartbeat": {
-        "current_task": "M10",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "anvil",
-      "name": "ANVIL",
-      "last_event_ts": "2026-04-21T10:08:44Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": "B4",
-      "current_task": "B4",
-      "age_hours": 0.9689393380555557,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 92,
-      "emoji": "⚒️",
-      "role": "Implementation Lead",
-      "last_active": "2026-04-21T10:08:44Z",
-      "last_active_human": "58m ago",
-      "heartbeat": {
-        "current_task": "B4",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -25334,14 +26663,14 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 23.57699489361111,
+      "age_hours": 23.92651565972222,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-20T11:32:15Z",
-      "last_active_human": "23h 34m ago",
+      "last_active_human": "23h 55m ago",
       "heartbeat": {
         "current_task": null,
         "current_phase": null,
@@ -25356,7 +26685,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 27.432272671388887,
+      "age_hours": 27.7817934375,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -25374,8 +26703,8 @@
   ],
   "narrative": {
     "mission": "OinkFarm is the pipeline that watches Discord and Telegram for trading signals, parses them with a mix of deterministic parsers and a local LLM (Gemma), checks them against live prices from four exchanges, and tracks every signal from post to close. It runs about 1,000 signals/day across crypto and a handful of non-crypto assets, on a single server (\"the barn\"). The thing that's broken is **trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.",
-    "today": "Today: nine canary PASSes and five reviews posted. Tasks on the board: A2 🔴 remaining_pct model, B3 🟡 parallel-write verification, and B1 🔴 db abstraction layer all moved forward. One new gate opened for Mike: Q-B2-6.",
-    "week": "Over the last three days, the stream recorded 52 merges, 41 canary events, and 80 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🔴 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 39 decision events flowed through the Mike-gate process.",
+    "today": "Today: nine canary PASSes and 13 reviews posted. Tasks on the board: A2 🔴 remaining_pct model, B3 🟡 parallel-write verification, and B1 🔴 db abstraction layer all moved forward. One new gate opened for Mike: Q-B2-6.",
+    "week": "Over the last three days, the stream recorded 52 merges, 41 canary events, and 88 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🔴 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 39 decision events flowed through the Mike-gate process.",
     "whats_next": "**Next merges expected (this week):** B2 canary result (currently CANARY_PENDING), B3 verification window opens, B6/B7/B8 canary results land. Phase B Wave 2 decomposition is essentially done — next real code merge is B4 (cutover) itself, which is a one-day task gated on B3's 7-clean-day soak. **The April 26 cutover gate (B4):** B3 merged 2026-04-19. Under the **7-day + reset rule**, earliest B4 cutover is **2026-04-26** if every daily reconciliation report shows zero row-count and zero event-count discrepancies. Any single discrepancy resets the clock. Mike's explicit go-ahead is still required on the day. **Phase C start (late May 2026):** Begins after Phase B quality gate (all Wave 3 + Wave 4 tasks green, W1 immutable records live on PostgreSQL, W4 trace…",
     "sos_exists": true,
     "sos_link": "sprint-log/STATE-OF-SPRINT.md",

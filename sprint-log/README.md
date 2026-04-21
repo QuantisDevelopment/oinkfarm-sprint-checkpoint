@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 368
+- **Total events:** 379
 - **Last 24h:** 129 (rate 5.38/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,68 +12,68 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (26 events)
+### Last 1 hour (22 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 13:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | vigil | M105 review by vigil — PASS (9.5) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.6) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M164` | vigil | M164 review by vigil — PASS (9.6) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M120` | vigil | M120 review by vigil — PASS (9.7) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M111` | vigil | M111 review by vigil — REVISE (4.9) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M22` | vigil | M22 review by vigil — REVISE (5.35) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M23` | vigil | M23 review by vigil — REVISE (5.55) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M121` | vigil | M121 review by vigil — REVISE (8.2) |
+| Apr 21, 13:21 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil |
+| Apr 21, 13:21 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
 | Apr 21, 13:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete: ISSUE10-VIGIL-PHASE1-REVIEW holds baseline quality. It is not as flawless as the B7 10.00 review, but the 9.30 PASS is  |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality check refreshed from the latest metrics artifact (2026-04-21T10:34:05Z). Latency proxy is still acceptable, with p50_24h |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 blocker check: status is unchanged in substance. The runtime still has no working per-agent session-history cap for OinXtractor, per-ag |
-| Apr 21, 13:02 CEST | `PROPOSAL_REJECTED` | `B4` | guardian | B4 proposal rejected — REQUEST_CHANGES: P6-P8 prerequisites remain unmet, migration acceptance state is unresolved, and reconciliation/rollb |
-| Apr 21, 13:02 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh |
-| Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | hermes | Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) la |
-| Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl |
-| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
-| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
-| Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B2` | vigil | B2 review by vigil — PASS (9.6) |
 
-### Last 4 hours (37 events)
+### Last 4 hours (48 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 13:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | vigil | M105 review by vigil — PASS (9.5) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.6) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M164` | vigil | M164 review by vigil — PASS (9.6) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M120` | vigil | M120 review by vigil — PASS (9.7) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M111` | vigil | M111 review by vigil — REVISE (4.9) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M22` | vigil | M22 review by vigil — REVISE (5.35) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M23` | vigil | M23 review by vigil — REVISE (5.55) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M121` | vigil | M121 review by vigil — REVISE (8.2) |
+| Apr 21, 13:21 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil |
+| Apr 21, 13:21 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
 | Apr 21, 13:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete: ISSUE10-VIGIL-PHASE1-REVIEW holds baseline quality. It is not as flawless as the B7 10.00 review, but the 9.30 PASS is  |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality check refreshed from the latest metrics artifact (2026-04-21T10:34:05Z). Latency proxy is still acceptable, with p50_24h |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 blocker check: status is unchanged in substance. The runtime still has no working per-agent session-history cap for OinXtractor, per-ag |
-| Apr 21, 13:02 CEST | `PROPOSAL_REJECTED` | `B4` | guardian | B4 proposal rejected — REQUEST_CHANGES: P6-P8 prerequisites remain unmet, migration acceptance state is unresolved, and reconciliation/rollb |
-| Apr 21, 13:02 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh |
-| Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | hermes | Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) la |
-| Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl |
-| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
-| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
-| Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B2` | vigil | B2 review by vigil — PASS (9.6) |
 
 ### Last 24 hours (129 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 13:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | vigil | M105 review by vigil — PASS (9.5) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.6) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M164` | vigil | M164 review by vigil — PASS (9.6) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M120` | vigil | M120 review by vigil — PASS (9.7) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M111` | vigil | M111 review by vigil — REVISE (4.9) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M22` | vigil | M22 review by vigil — REVISE (5.35) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M23` | vigil | M23 review by vigil — REVISE (5.55) |
+| Apr 21, 13:26 CEST | `REVIEW_POSTED` | `M121` | vigil | M121 review by vigil — REVISE (8.2) |
+| Apr 21, 13:21 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke R2: GUARDIAN rejected B4 Phase 0 R1 with REQUEST_CHANGES — all 5 concerns addressed in R2 proposal. VIGIL B4 Phase 0 review stil |
+| Apr 21, 13:21 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
 | Apr 21, 13:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete: ISSUE10-VIGIL-PHASE1-REVIEW holds baseline quality. It is not as flawless as the B7 10.00 review, but the 9.30 PASS is  |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality check refreshed from the latest metrics artifact (2026-04-21T10:34:05Z). Latency proxy is still acceptable, with p50_24h |
 | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 blocker check: status is unchanged in substance. The runtime still has no working per-agent session-history cap for OinXtractor, per-ag |
-| Apr 21, 13:02 CEST | `PROPOSAL_REJECTED` | `B4` | guardian | B4 proposal rejected — REQUEST_CHANGES: P6-P8 prerequisites remain unmet, migration acceptance state is unresolved, and reconciliation/rollb |
-| Apr 21, 13:02 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh |
-| Apr 21, 12:37 CEST | `SPRINT_NOTE` | `—` | hermes | Vigil came back online in the last half hour and drained most of the stale review queue in one batch — B2 (PostgreSQL schema + migration) la |
-| Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
-| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl |
-| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
-| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
-| Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B2` | vigil | B2 review by vigil — PASS (9.6) |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 40m | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 1.0h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
 
 ## 🔍 Missing evidence
 
@@ -89,12 +89,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 13:06 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 53 |
+| 🪽 **Hermes** | Apr 21, 13:27 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 54 |
+| 🔍 **VIGIL** | Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | 🟢 fresh | 44 |
+| ⚒️ **ANVIL** | Apr 21, 13:21 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 94 |
 | 🐷 **OinkV** | Apr 21, 13:06 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 14 |
 | 🛡️ **GUARDIAN** | Apr 21, 13:02 CEST | `AGENT_HEARTBEAT` | `Heartbeat sweep completed; B4 Phase 0 proposal reviewed with REQUEST_CHANGES; no fresh merged tasks missing CANARY_STARTED; KPI artifacts fresh` | 🟢 fresh | 96 |
-| 🔥 **FORGE** | Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | 🟢 fresh | 59 |
-| 🔍 **VIGIL** | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `M10` | 🟢 fresh | 36 |
-| ⚒️ **ANVIL** | Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 92 |
+| 🔥 **FORGE** | Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | 🟡 1–3h | 59 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -160,6 +160,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `C2` | C2 | 🟡 STANDARD | — | 📋 PLANNED | — |
 | `M7` | M7 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M10` | M10 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `M22` | M22 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M23` | M23 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M105` | M105 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
+| `M111` | M111 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M120` | M120 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `M121` | M121 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `M152` | M152 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M164` | M164 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 
 ## Event log
 
@@ -170,11 +178,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔍 | VIGIL | Code Review + Scoring |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
-| 🔍 | VIGIL | Code Review + Scoring |
-| ⚒️ | ANVIL | Implementation Lead |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -187,4 +195,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/29 tasks DONE · Last auto-regenerated: 13:07 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/37 tasks DONE · Last auto-regenerated: 13:28 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
