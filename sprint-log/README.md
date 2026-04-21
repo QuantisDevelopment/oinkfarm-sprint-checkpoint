@@ -4,17 +4,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 569
-- **Last 24h:** 249 (rate 10.38/h)
+- **Total events:** 572
+- **Last 24h:** 250 (rate 10.42/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (49 events)
+### Last 1 hour (43 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
@@ -28,12 +30,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
 | Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
 | Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
 
 ### Last 4 hours (76 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
@@ -47,12 +49,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
 | Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
 | Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
 
-### Last 24 hours (249 events)
+### Last 24 hours (250 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
 | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
 | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
@@ -66,8 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
 | Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
 | Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
 
 ## 🧭 Needs Mike
 
@@ -88,10 +88,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 98 |
-| 🛡️ **GUARDIAN** | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline)` | 🟢 fresh | 126 |
+| 🪽 **Hermes** | Apr 22, 01:22 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 99 |
+| 🛡️ **GUARDIAN** | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `Sprint poke response — Heavy Hybrid data purity watch` | 🟢 fresh | 127 |
 | ⚒️ **ANVIL** | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `M189` | 🟢 fresh | 123 |
-| 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 60 |
+| 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 61 |
 | 🐷 **OinkV** | Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | 🟢 fresh | 53 |
 | 🔥 **FORGE** | Apr 22, 01:03 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 88 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🟡 1–3h | 3 |
@@ -211,4 +211,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*15/52 tasks DONE · Last auto-regenerated: 01:08 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*15/52 tasks DONE · Last auto-regenerated: 01:22 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
