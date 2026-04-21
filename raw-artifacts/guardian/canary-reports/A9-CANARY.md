@@ -11,7 +11,7 @@
 | **Service** | `signal-gateway.service` PID `4189274`, reported active/running clean |
 | **Deploy method** | `cp` from oinkfarm workspace to signal-gateway prod path + `systemctl restart` |
 | **Canary initialized** | 2026-04-19 16:24 CEST |
-| **Canary status** | CLOSED — INCONCLUSIVE (code-evidence PASS) |
+| **Canary status** | CLOSED 2026-04-21T14:25:00Z — INCONCLUSIVE (organic) / PASS (code-evidence) |
 | **Canary start time** | `2026-04-19T14:25:00Z` |
 | **Target** | First 10 post-deploy ingested `1000*USDT` signals |
 | **Minimum valid sample** | 3 signals within 48h |
@@ -301,4 +301,61 @@ The canary’s inability to organically validate is purely a function of rare ti
 
 *🛡️ GUARDIAN — 48h Checkpoint Complete — Canary Closed*
 *Last updated: 2026-04-21T13:58:00Z*
+
+---
+
+## 48h Final Boundary Re-Verification — 2026-04-21T14:25:00Z
+
+Scheduled cron fired at the exact 48h boundary. Re-ran all A9 validation queries against production DB to confirm no last-minute organic ingests or regressions slipped in between 13:58Z and 14:25Z.
+
+### Final Boundary Query Results
+| Check | Result | Status |
+|-------|--------|--------|
+| Post-deploy qualifying `1000*` ingests (since 2026-04-19T14:25:00Z) | **0** | ⏳ No organic traffic in full 48h |
+| Post-deploy A9-note rows | **0** | ⏳ Expected (no 1000x ingests) |
+| Mixed-denomination rows (entry<1e-4 + SL>1e-3), DB-wide | **0** | ✅ Clean |
+| Mixed-denomination rows post-deploy | **0** | ✅ Clean |
+| Post-deploy `SL_DEVIATION` rejections (qualifying symbols) | **0** | ✅ Clean |
+| Total `SL_DEVIATION` entries in rejection log | **0** | ✅ Clean |
+| Post-deploy total signals ingested | **68** | ✅ Healthy flow (+3 since 13:58Z) |
+| SC-1 total signal_events | **1,391** | ✅ +15 since 13:58Z — normal growth |
+| SC-1 distinct signals with events | **106** | ✅ +3 since 13:58Z — normal growth |
+| SC-4 total signals | **1,473** | ✅ +3 since 13:58Z — normal growth |
+
+### Existing 1000x Rows in DB (unchanged)
+| ID | Ticker | exchange_ticker | entry_price | SL | posted_at | Status |
+|----|--------|-----------------|-------------|-----|-----------|--------|
+| 2424 | PEPE | 1000PEPE | 0.00365 | 0.00365 | 2026-03-17 | CLOSED_BREAKEVEN (pre-deploy) |
+| 1497 | PEPE | 1000PEPEUSDT | 3.657e-06 | 3.287e-06 | 2026-04-15 | CLOSED_WIN (pre-deploy) |
+
+Neither row falls within the canary window. No new 1000x rows have been added.
+
+### Final Boundary Interpretation
+No state change between the 13:58Z checkpoint and the 14:25Z true boundary. The window is officially closed with zero qualifying organic 1000x ingests.
+
+---
+
+## 🛡️ FINAL A9 CANARY VERDICT — 2026-04-21T14:25:00Z
+
+### Verdict: **INCONCLUSIVE for field-level organic validation / PASS on code evidence**
+
+Per canary scope, <3 qualifying signals in 48h = **INCONCLUSIVE**. However, Hermes disposition (2026-04-19T20:38:48Z) and GUARDIAN false-fail resolution (2026-04-20T13:12:00Z) established the code-evidence PASS path. All supporting evidence confirms PASS:
+
+1. ✅ 27+ unit tests cover A9 normalization logic
+2. ✅ 0 mixed-denomination rows in entire DB at any point in the 48h window
+3. ✅ 0 post-deploy `SL_DEVIATION` rejections in gate-rejections log
+4. ✅ 0 post-deploy qualifying `1000*` rejections
+5. ✅ 68 post-deploy non-1000x signals processed cleanly — pipeline healthy
+6. ✅ All SC/KPI metrics improved or stable across the full 48h window
+7. ✅ A9 logic verified present in live gateway files at both canonical paths
+8. ✅ No regression signal of any kind (data, pipeline, or performance)
+
+**Root cause of INCONCLUSIVE:** Rare ticker traffic. `1000PEPEUSDT`, `1000SHIBUSDT`, `1000BONKUSDT` etc. are traded infrequently on monitored channels. This is a sampling limitation, not a code deficiency.
+
+**Canary Status: CLOSED — INCONCLUSIVE (organic) / PASS (code-evidence) — no further action required.**
+
+**Blocking issues: NONE.**
+
+*🛡️ GUARDIAN — A9 Canary Protocol Complete — Final Verdict Issued*
+*Last updated: 2026-04-21T14:25:00Z*
 

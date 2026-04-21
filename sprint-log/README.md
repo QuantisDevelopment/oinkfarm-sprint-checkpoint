@@ -4,17 +4,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 412
-- **Last 24h:** 150 (rate 6.25/h)
+- **Total events:** 417
+- **Last 24h:** 155 (rate 6.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (16 events)
+### Last 1 hour (19 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
+| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
+| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
+| Apr 21, 16:26 CEST | `CANARY_PASS` | `—` | guardian | — canary PASS |
 | Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
@@ -25,15 +30,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. Latest 24h late |
 | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8  |
 | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 stays below the B7 10.00 gold baseline in polish, but the review quality i |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. 24h latency pro |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active, lossless-claw freshTailCount=8, ex |
-| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
-| Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 4 hours (57 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
+| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
+| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
+| Apr 21, 16:26 CEST | `CANARY_PASS` | `—` | guardian | — canary PASS |
 | Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
@@ -44,15 +49,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. Latest 24h late |
 | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8  |
 | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 stays below the B7 10.00 gold baseline in polish, but the review quality i |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. 24h latency pro |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active, lossless-claw freshTailCount=8, ex |
-| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
-| Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (150 events)
+### Last 24 hours (155 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | vigil | B4 proposal approved by vigil |
+| Apr 21, 16:32 CEST | `SPRINT_NOTE` | `—` | hermes | AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po |
+| Apr 21, 16:29 CEST | `DECISION_RESOLVED` | `B2` | hermes | B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu |
+| Apr 21, 16:26 CEST | `CANARY_PASS` | `—` | guardian | — canary PASS |
 | Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `B4` | guardian | guardian heartbeat — Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC. |
@@ -63,17 +68,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. Latest 24h late |
 | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8  |
 | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | forge | Fresh-eyes poke complete. Cross-checked recent VIGIL REVIEW_POSTED items beyond the earlier B2 audit: B7 (cfb23fb, score 10.0 PASS) and B8 ( |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit complete on recent Vigil output: OF111-VIGIL-PHASE1-R1 stays below the B7 10.00 gold baseline in polish, but the review quality i |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor quality refresh from docs/oinxtractor-metrics.json (ts 2026-04-21T13:30:40Z): still WARNING, not honestly green. 24h latency pro |
-| Apr 21, 15:42 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence shows the mitigation path is active, lossless-claw freshTailCount=8, ex |
-| Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke 15:33 CEST: No change from 14:22 poke. Zero REVISE verdicts on ANVIL PRs. Zero new REVIEW_POSTED events since last check. B4 Pha |
-| Apr 21, 15:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
-| Question ID | Question | Task | Age | Options | Gate |
-|---|---|---|---|---|---|
-| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 4.0h | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
+_No open DECISION_NEEDED events._
 
 ## 🔍 Missing evidence
 
@@ -89,12 +87,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 16:23 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 59 |
-| 🛡️ **GUARDIAN** | Apr 21, 16:12 CEST | `AGENT_HEARTBEAT` | `Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.` | 🟢 fresh | 102 |
+| 🪽 **Hermes** | Apr 21, 16:33 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 62 |
+| 🔍 **VIGIL** | Apr 21, 16:33 CEST | `PROPOSAL_APPROVED` | `B4` | 🟢 fresh | 45 |
+| 🛡️ **GUARDIAN** | Apr 21, 16:26 CEST | `CANARY_PASS` | `Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.` | 🟢 fresh | 103 |
 | 🐷 **OinkV** | Apr 21, 16:05 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 32 |
 | 🔥 **FORGE** | Apr 21, 15:57 CEST | `SPRINT_NOTE` | `B8` | 🟢 fresh | 61 |
 | ⚒️ **ANVIL** | Apr 21, 15:34 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 96 |
-| 🔍 **VIGIL** | Apr 21, 13:27 CEST | `REVIEW_POSTED` | `M105` | 🟡 1–3h | 44 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -146,7 +144,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | ✅ DONE | PASS |
 | `B2` | B2 | 🔴 CRITICAL | — | 🧪 CANARY | PENDING |
 | `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
-| `B4` | B4 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
+| `B4` | B4 | 🔴 CRITICAL | — | ⚙️ CODING | — |
 | `B5` | B5 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B6` | B6 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
@@ -178,11 +176,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -195,4 +193,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/37 tasks DONE · Last auto-regenerated: 16:23 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/37 tasks DONE · Last auto-regenerated: 16:34 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

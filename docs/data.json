@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-21T14:23:23+00:00",
-  "generated_at_cest": "2026-04-21T16:23:23+02:00",
+  "generated_at_utc": "2026-04-21T14:33:54+00:00",
+  "generated_at_cest": "2026-04-21T16:33:54+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2407,8 +2407,8 @@
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
       "repo_hint": null,
-      "status": "PROPOSAL_REVIEW",
-      "status_label": "Proposal Review",
+      "status": "CODE",
+      "status_label": "Coding",
       "prs": [],
       "scores": {
         "vigil": null,
@@ -2426,7 +2426,7 @@
         "mtime": null
       },
       "merged_at": null,
-      "last_activity": "2026-04-21T14:12:04Z",
+      "last_activity": "2026-04-21T14:33:07Z",
       "timeline": [
         {
           "label": "B4 plan published",
@@ -2598,6 +2598,15 @@
           "verdict": null,
           "score": null,
           "event_type": "AGENT_HEARTBEAT"
+        },
+        {
+          "label": "B4 proposal approved by vigil",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T14:33:07Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_APPROVED"
         }
       ],
       "artifacts": {
@@ -2606,16 +2615,383 @@
         "proposal_approved": "/home/oinkv/guardian-workspace/reviews/B4-GUARDIAN-PHASE0-R2-REVIEW.md"
       },
       "_from_stream": true,
-      "event_count": 19,
+      "event_count": 20,
       "blocker": null,
       "phase": "B",
       "agents_touched": [
         "anvil",
         "forge",
         "guardian",
-        "hermes"
+        "hermes",
+        "vigil"
       ],
-      "last_event_type": "AGENT_HEARTBEAT"
+      "last_event_type": "PROPOSAL_APPROVED"
+    },
+    {
+      "id": "B2",
+      "tier": "CRITICAL",
+      "tier_emoji": "🔴",
+      "repo_hint": null,
+      "status": "CANARY",
+      "status_label": "Canary",
+      "prs": [
+        {
+          "repo": "oinkdb-api",
+          "number": 2,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/2",
+          "merge_commit": "f1f5544fe1f2f935f66de745a7772c052183d5e4",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkdb-api/commit/f1f5544fe1f2f935f66de745a7772c052183d5e4",
+          "live_state": "MERGED",
+          "live_merged_at": "2026-04-18T16:56:57Z"
+        },
+        {
+          "repo": "oinkfarm",
+          "number": 153,
+          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/153",
+          "merge_commit": "14563d2900bb",
+          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13",
+          "live_state": "MERGED",
+          "live_merged_at": "2026-04-20T01:21:52Z"
+        },
+        {
+          "repo": "oink-sync",
+          "number": 11,
+          "pr_url": "https://github.com/QuantisDevelopment/oink-sync/pull/11",
+          "merge_commit": "80288bb78d5d",
+          "commit_url": "https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5",
+          "live_state": "MERGED",
+          "live_merged_at": "2026-04-20T01:21:55Z"
+        },
+        {
+          "repo": "signal-gateway",
+          "number": 24,
+          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/24",
+          "merge_commit": "df8112dd7d02",
+          "commit_url": "https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6",
+          "live_state": "MERGED",
+          "live_merged_at": "2026-04-20T01:21:58Z"
+        }
+      ],
+      "scores": {
+        "vigil": 9.6,
+        "guardian": 9.6,
+        "hermes": null
+      },
+      "verdicts": {
+        "vigil": "PASS",
+        "guardian": "PASS",
+        "hermes": null
+      },
+      "canary": {
+        "verdict": "PENDING",
+        "path": null,
+        "mtime": "2026-04-20T02:30:26Z"
+      },
+      "merged_at": "2026-04-18T16:56:57Z",
+      "last_activity": "2026-04-21T14:29:02Z",
+      "timeline": [
+        {
+          "label": "B2 merged via PR #2 @f1f5544",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-18T16:56:57Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 plan published",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
+          "mtime": "2026-04-19T23:43:45Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "TASK_PLANNED"
+        },
+        {
+          "label": "B2 review by guardian — REVISE (5.0)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T00:32:41Z",
+          "verdict": "REVISE",
+          "score": 5.0,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 review by vigil — PASS (9.5)",
+          "actor": "vigil",
+          "path": "/home/oinkv/vigil-workspace/reviews/B2-VIGIL-PHASE0-REVIEW.md",
+          "mtime": "2026-04-20T00:34:38Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 proposal ready",
+          "actor": "anvil",
+          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
+          "mtime": "2026-04-20T00:41:56Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_READY"
+        },
+        {
+          "label": "B2 review by guardian — PASS (9.5)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW-R2.md",
+          "mtime": "2026-04-20T00:45:52Z",
+          "verdict": "PASS",
+          "score": 9.5,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 proposal approved by vigil+guardian",
+          "actor": "system",
+          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
+          "mtime": "2026-04-20T00:54:22Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PROPOSAL_APPROVED"
+        },
+        {
+          "label": "B2 merged via PR #None @9bf9c5f",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:07:01Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 merged via PR #None @92cdfef",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:07:12Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 review by guardian — PASS (9.6)",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
+          "mtime": "2026-04-20T01:16:45Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "B2 PR #153 opened — feat(B2): PostgreSQL schema translation + one-time data migration",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:11Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 PR #11 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:23Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 PR #24 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:25Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "PR_OPENED"
+        },
+        {
+          "label": "B2 merged via PR #153 @14563d2",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 merged via PR #11 @80288bb",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:55Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 merged via PR #24 @df8112d",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-20T01:21:58Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "MERGED"
+        },
+        {
+          "label": "B2 canary started",
+          "actor": "guardian",
+          "path": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md",
+          "mtime": "2026-04-20T02:30:26Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "CANARY_STARTED"
+        },
+        {
+          "label": "B2 Mike gate: PostgreSQL hosting: same server or separate?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 Mike gate: TimescaleDB now or later (B14)?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T09:55:50Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T11:15:09Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-20T11:21:53Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:54:52Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses ",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-20T20:55:19Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        },
+        {
+          "label": "B2 review by vigil — PASS (9.6)",
+          "actor": "vigil",
+          "path": null,
+          "mtime": "2026-04-21T10:16:41Z",
+          "verdict": "PASS",
+          "score": 9.6,
+          "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit ",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
+          "mtime": "2026-04-21T10:25:58Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
+          "mtime": "2026-04-21T10:25:58Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
+        },
+        {
+          "label": "SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag",
+          "actor": "forge",
+          "path": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
+          "mtime": "2026-04-21T12:11:01Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu",
+          "actor": "hermes",
+          "path": null,
+          "mtime": "2026-04-21T14:29:02Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_RESOLVED"
+        }
+      ],
+      "artifacts": {
+        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
+        "review_posted": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
+        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
+        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
+        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md",
+        "sprint_note": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
+        "decision_needed": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md"
+      },
+      "_from_stream": true,
+      "event_count": 31,
+      "blocker": null,
+      "phase": "B",
+      "agents_touched": [
+        "anvil",
+        "forge",
+        "guardian",
+        "hermes",
+        "system",
+        "vigil"
+      ],
+      "last_event_type": "DECISION_RESOLVED"
     },
     {
       "id": "B6",
@@ -3777,363 +4153,6 @@
         "vigil"
       ],
       "last_event_type": "AGENT_HEARTBEAT"
-    },
-    {
-      "id": "B2",
-      "tier": "CRITICAL",
-      "tier_emoji": "🔴",
-      "repo_hint": null,
-      "status": "CANARY",
-      "status_label": "Canary",
-      "prs": [
-        {
-          "repo": "oinkdb-api",
-          "number": 2,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkdb-api/pull/2",
-          "merge_commit": "f1f5544fe1f2f935f66de745a7772c052183d5e4",
-          "commit_url": "https://github.com/QuantisDevelopment/oinkdb-api/commit/f1f5544fe1f2f935f66de745a7772c052183d5e4",
-          "live_state": "MERGED",
-          "live_merged_at": "2026-04-18T16:56:57Z"
-        },
-        {
-          "repo": "oinkfarm",
-          "number": 153,
-          "pr_url": "https://github.com/QuantisDevelopment/oinkfarm/pull/153",
-          "merge_commit": "14563d2900bb",
-          "commit_url": "https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13",
-          "live_state": "MERGED",
-          "live_merged_at": "2026-04-20T01:21:52Z"
-        },
-        {
-          "repo": "oink-sync",
-          "number": 11,
-          "pr_url": "https://github.com/QuantisDevelopment/oink-sync/pull/11",
-          "merge_commit": "80288bb78d5d",
-          "commit_url": "https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5",
-          "live_state": "MERGED",
-          "live_merged_at": "2026-04-20T01:21:55Z"
-        },
-        {
-          "repo": "signal-gateway",
-          "number": 24,
-          "pr_url": "https://github.com/QuantisDevelopment/signal-gateway/pull/24",
-          "merge_commit": "df8112dd7d02",
-          "commit_url": "https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6",
-          "live_state": "MERGED",
-          "live_merged_at": "2026-04-20T01:21:58Z"
-        }
-      ],
-      "scores": {
-        "vigil": 9.6,
-        "guardian": 9.6,
-        "hermes": null
-      },
-      "verdicts": {
-        "vigil": "PASS",
-        "guardian": "PASS",
-        "hermes": null
-      },
-      "canary": {
-        "verdict": "PENDING",
-        "path": null,
-        "mtime": "2026-04-20T02:30:26Z"
-      },
-      "merged_at": "2026-04-18T16:56:57Z",
-      "last_activity": "2026-04-21T12:11:01Z",
-      "timeline": [
-        {
-          "label": "B2 merged via PR #2 @f1f5544",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-18T16:56:57Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 plan published",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
-          "mtime": "2026-04-19T23:43:45Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "TASK_PLANNED"
-        },
-        {
-          "label": "B2 review by guardian — REVISE (5.0)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T00:32:41Z",
-          "verdict": "REVISE",
-          "score": 5.0,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 review by vigil — PASS (9.5)",
-          "actor": "vigil",
-          "path": "/home/oinkv/vigil-workspace/reviews/B2-VIGIL-PHASE0-REVIEW.md",
-          "mtime": "2026-04-20T00:34:38Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 proposal ready",
-          "actor": "anvil",
-          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
-          "mtime": "2026-04-20T00:41:56Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_READY"
-        },
-        {
-          "label": "B2 review by guardian — PASS (9.5)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE0-REVIEW-R2.md",
-          "mtime": "2026-04-20T00:45:52Z",
-          "verdict": "PASS",
-          "score": 9.5,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 proposal approved by vigil+guardian",
-          "actor": "system",
-          "path": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
-          "mtime": "2026-04-20T00:54:22Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PROPOSAL_APPROVED"
-        },
-        {
-          "label": "B2 merged via PR #None @9bf9c5f",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:07:01Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 merged via PR #None @92cdfef",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:07:12Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 review by guardian — PASS (9.6)",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
-          "mtime": "2026-04-20T01:16:45Z",
-          "verdict": "PASS",
-          "score": 9.6,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "B2 PR #153 opened — feat(B2): PostgreSQL schema translation + one-time data migration",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:11Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 PR #11 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:23Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 PR #24 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:25Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "PR_OPENED"
-        },
-        {
-          "label": "B2 merged via PR #153 @14563d2",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 merged via PR #11 @80288bb",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:55Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 merged via PR #24 @df8112d",
-          "actor": "anvil",
-          "path": null,
-          "mtime": "2026-04-20T01:21:58Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "MERGED"
-        },
-        {
-          "label": "B2 canary started",
-          "actor": "guardian",
-          "path": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md",
-          "mtime": "2026-04-20T02:30:26Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "CANARY_STARTED"
-        },
-        {
-          "label": "B2 Mike gate: PostgreSQL hosting: same server or separate?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 Mike gate: TimescaleDB now or later (B14)?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T09:55:50Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T11:15:09Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?",
-          "actor": "forge",
-          "path": null,
-          "mtime": "2026-04-20T11:21:53Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:54:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:54:52Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses ",
-          "actor": "hermes",
-          "path": null,
-          "mtime": "2026-04-20T20:55:19Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_RESOLVED"
-        },
-        {
-          "label": "B2 review by vigil — PASS (9.6)",
-          "actor": "vigil",
-          "path": null,
-          "mtime": "2026-04-21T10:16:41Z",
-          "verdict": "PASS",
-          "score": 9.6,
-          "event_type": "REVIEW_POSTED"
-        },
-        {
-          "label": "FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit ",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
-          "mtime": "2026-04-21T10:25:58Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        },
-        {
-          "label": "B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
-          "mtime": "2026-04-21T10:25:58Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "DECISION_NEEDED"
-        },
-        {
-          "label": "SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag",
-          "actor": "forge",
-          "path": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
-          "mtime": "2026-04-21T12:11:01Z",
-          "verdict": null,
-          "score": null,
-          "event_type": "SPRINT_NOTE"
-        }
-      ],
-      "artifacts": {
-        "task_planned": "/home/oinkv/forge-workspace/plans/TASK-B2-plan.md",
-        "review_posted": "/home/oinkv/guardian-workspace/reviews/B2-GUARDIAN-PHASE1-REVIEW.md",
-        "proposal_ready": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-PROPOSAL.md",
-        "proposal_approved": "/home/oinkv/anvil-workspace/proposals/B2-PHASE0-APPROVED.marker",
-        "canary_started": "/home/oinkv/guardian-workspace/canary-reports/B2-CANARY.md",
-        "sprint_note": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md",
-        "decision_needed": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md"
-      },
-      "_from_stream": true,
-      "event_count": 30,
-      "blocker": null,
-      "phase": "B",
-      "agents_touched": [
-        "anvil",
-        "forge",
-        "guardian",
-        "hermes",
-        "system",
-        "vigil"
-      ],
-      "last_event_type": "SPRINT_NOTE"
     },
     {
       "id": "M105",
@@ -7458,17 +7477,17 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-21T14:23:23Z",
+      "last_event_ts": "2026-04-21T14:33:54Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 0.00023724777777777776,
+      "age_hours": 0.00018500305555555556,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 59,
+      "event_count": 62,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-21T14:23:23Z",
+      "last_active": "2026-04-21T14:33:54Z",
       "last_active_human": "0s ago",
       "heartbeat": {
         "current_task": null,
@@ -7478,20 +7497,42 @@
       }
     },
     {
-      "id": "guardian",
-      "name": "GUARDIAN",
-      "last_event_ts": "2026-04-21T14:12:04Z",
-      "last_event_type": "AGENT_HEARTBEAT",
+      "id": "vigil",
+      "name": "VIGIL",
+      "last_event_ts": "2026-04-21T14:33:07Z",
+      "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B4",
-      "current_task": "Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.",
-      "age_hours": 0.1888483588888889,
+      "current_task": "B4",
+      "age_hours": 0.01324055861111111,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 102,
+      "event_count": 45,
+      "emoji": "🔍",
+      "role": "Code Review + Scoring",
+      "last_active": "2026-04-21T14:33:07Z",
+      "last_active_human": "47s ago",
+      "heartbeat": {
+        "current_task": "B4",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "guardian",
+      "name": "GUARDIAN",
+      "last_event_ts": "2026-04-21T14:26:27Z",
+      "last_event_type": "CANARY_PASS",
+      "last_task_id": null,
+      "current_task": "Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.",
+      "age_hours": 0.12435166972222222,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 103,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
-      "last_active": "2026-04-21T14:12:04Z",
-      "last_active_human": "11m ago",
+      "last_active": "2026-04-21T14:26:27Z",
+      "last_active_human": "7m ago",
       "heartbeat": {
         "current_task": "Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.",
         "current_phase": null,
@@ -7506,14 +7547,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "A171",
       "current_task": "A171",
-      "age_hours": 0.30662613666666666,
+      "age_hours": 0.4818516697222222,
       "staleness_label": "green",
       "light": "green",
       "event_count": 32,
       "emoji": "🐷",
       "role": "Plan Auditor",
       "last_active": "2026-04-21T14:05:00Z",
-      "last_active_human": "18m ago",
+      "last_active_human": "28m ago",
       "heartbeat": {
         "current_task": "A171",
         "current_phase": null,
@@ -7528,14 +7569,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 0.4302372477777778,
+      "age_hours": 0.6054627808333333,
       "staleness_label": "green",
       "light": "green",
       "event_count": 61,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-21T13:57:35Z",
-      "last_active_human": "25m ago",
+      "last_active_human": "36m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -7550,38 +7591,16 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 0.8127372477777778,
+      "age_hours": 0.9879627808333333,
       "staleness_label": "green",
       "light": "green",
       "event_count": 96,
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "last_active": "2026-04-21T13:34:38Z",
-      "last_active_human": "48m ago",
+      "last_active_human": "59m ago",
       "heartbeat": {
         "current_task": "B4",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "vigil",
-      "name": "VIGIL",
-      "last_event_ts": "2026-04-21T11:27:27Z",
-      "last_event_type": "REVIEW_POSTED",
-      "last_task_id": "M105",
-      "current_task": "M105",
-      "age_hours": 2.93245947,
-      "staleness_label": "yellow",
-      "light": "yellow",
-      "event_count": 44,
-      "emoji": "🔍",
-      "role": "Code Review + Scoring",
-      "last_active": "2026-04-21T11:27:27Z",
-      "last_active_human": "2h 55m ago",
-      "heartbeat": {
-        "current_task": "M105",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -7594,7 +7613,7 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 26.85245947,
+      "age_hours": 27.027685003055552,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
@@ -7616,7 +7635,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 30.707737247777775,
+      "age_hours": 30.88296278083333,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -7633,6 +7652,17 @@
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-21T14:32:57Z",
+      "time_local": "2026-04-21T16:32+02:00",
+      "header": null,
+      "actions": [
+        "AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred post-launch. FORGE: deprioritize C5/C7 plans, accelerate C1-C4/C6 scoping. ANVIL: B4 runbook + B9 Phase 0 in parallel. GUARDIAN: B2 canary today, then B4 canary prep. VIGIL: drain review queue to GitHub, vote B4 R2, then B9 proposal review pipeline."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260421T143257Z_000001"
+    },
     {
       "time_utc": "2026-04-21T14:05:00Z",
       "time_local": "2026-04-21T16:05+02:00",
@@ -8061,44 +8091,23 @@
       "next": null,
       "blocker": null,
       "path": "evt_20260421T100525Z_000101"
-    },
-    {
-      "time_utc": "2026-04-21T10:03:20Z",
-      "time_local": "2026-04-21T12:03+02:00",
-      "header": null,
-      "actions": [
-        "Sprint check-in response: All 8 PRs Mike listed (oinkfarm#133,#149,#153; signal-gateway#9,#11,#21,#24,#25) are already MERGED — no rebase needed. B6 branch rebased onto main 3f85c12 (post-B7/B8), PR #29 opened (c6e8223, 429 tests pass, signal_router.py 3918→3697 LOC). B2 canary prep template created at anvil-workspace/canary-reports/B2-CANARY-prep.md. Next actions: (1) await VIGIL+GUARDIAN review on B6 PR #29, (2) B2 migration awaits Mike Q-B2-4/Q-B2-5 + GUARDIAN live sign-off, (3) B3 T+48h canary close-out ~03:04 UTC tomorrow."
-      ],
-      "next": null,
-      "blocker": null,
-      "path": "evt_20260421T100320Z_000001"
     }
   ],
   "plans": [],
   "audits": [],
-  "blockers": [
-    {
-      "agent": "Mike",
-      "agent_emoji": "🧭",
-      "raw": "Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first?",
-      "label": "Q-B2-6: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the",
-      "severity": "mike",
-      "current_task": "B2",
-      "current_phase": "B"
-    }
-  ],
+  "blockers": [],
   "last_cron": {
-    "time_utc": "2026-04-21T14:05:00Z",
-    "time_local": "2026-04-21T16:05+02:00",
+    "time_utc": "2026-04-21T14:32:57Z",
+    "time_local": "2026-04-21T16:32+02:00",
     "header": null,
     "actions": [
-      "A171 status refresh: still MITIGATED_NOT_DONE. Fresh config evidence confirms the mitigation path is active: lossless-claw freshTailCount=8 and openclaw-supermemory is enabled with containerTag oinxtractor_patterns plus autoRecall=true. But the design goal is still unsolved, there is still no working per-agent session-history cap for OinXtractor, and contextPruning remains a global runtime control rather than a valid per-agent setting. So the immediate config mitigation is live, but the underlying design gap persists."
+      "AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred post-launch. FORGE: deprioritize C5/C7 plans, accelerate C1-C4/C6 scoping. ANVIL: B4 runbook + B9 Phase 0 in parallel. GUARDIAN: B2 canary today, then B4 canary prep. VIGIL: drain review queue to GitHub, vote B4 R2, then B9 proposal review pipeline."
     ],
     "next": null,
     "blocker": null,
-    "path": "evt_20260421T140500Z_000003"
+    "path": "evt_20260421T143257Z_000001"
   },
-  "commit": "25a269cdeab9",
+  "commit": "183f6d0ba58c",
   "_from_stream": true,
   "_tasks_map": {
     "A1": {
@@ -8819,10 +8828,10 @@
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
       "phase": "B",
-      "last_event_ts": "2026-04-21T12:11:01Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_agent": "forge",
-      "event_count": 30,
+      "last_event_ts": "2026-04-21T14:29:02Z",
+      "last_event_type": "DECISION_RESOLVED",
+      "last_agent": "hermes",
+      "event_count": 31,
       "prs": [
         {
           "repo": "oinkdb-api",
@@ -9530,6 +9539,42 @@
           "blocker": null,
           "extra": {
             "text": "SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disagreement on B2 applicability because the current deployment candidate has drifted beyond reviewed PR 17073d12 via uncommitted schema/migration deltas. Rollback audit complete: pre-commit rollback is sound, post-commit reruns are operational not idempotent. Dual-write remains intentionally OFF; psycopg is present on system Python but absent from signal-gateway venv, so prerequisite gating is runtime-valid today but reproducibility remains weak. Existing Mike gate Q-B2-6 remains the key decision."
+          }
+        },
+        {
+          "event_id": "evt_20260421T142902Z_000001",
+          "ts": "2026-04-21T14:29:02Z",
+          "event_type": "DECISION_RESOLVED",
+          "task_id": "B2",
+          "phase": "B",
+          "wave": 1,
+          "agent": "hermes",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-B2-6",
+            "answer": "NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, but the 6-file diff (oink_db.py +380, reconcile_stores.py +573, test_b3_*.py, micro-gate-v3.py) is entirely attributable to B3 dual-write + reconciliation layer (merged commit 6af042f7, already CANARY_PASS) plus #166 micro-gate fix. The discord_message_id/channel_id 'VARCHAR' references Forge observed are in B3 test fixtures, not production PG schema. Production B2 schema = approved PR 17073d12 = green. B2 Guardian canary may proceed once Guardian has baseline + first 10 signals post-migration. No re-review required.",
+            "authority": "hermes_mike_granted_autonomy",
+            "decided_at": "2026-04-21T14:30:00Z",
+            "evidence": {
+              "base_commit": "17073d12",
+              "head_commit": "be2ff3b7",
+              "diff_files": [
+                "scripts/oink_db.py",
+                "scripts/reconcile_stores.py",
+                "scripts/micro-gate-v3.py",
+                "tests/test_b3_dual_write.py",
+                "tests/test_b3_reconcile.py",
+                "scripts/oink_config.py"
+              ],
+              "b3_merged_at": "6af042f7",
+              "b3_canary_state": "PASS (T+24h clean, T+48h pending)",
+              "forge_cross_check": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md"
+            }
           }
         }
       ]
@@ -13823,14 +13868,14 @@
     },
     "B4": {
       "id": "B4",
-      "status": "PROPOSAL_REVIEW",
+      "status": "CODE",
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
       "phase": "B",
-      "last_event_ts": "2026-04-21T14:12:04Z",
-      "last_event_type": "AGENT_HEARTBEAT",
-      "last_agent": "guardian",
-      "event_count": 19,
+      "last_event_ts": "2026-04-21T14:33:07Z",
+      "last_event_type": "PROPOSAL_APPROVED",
+      "last_agent": "vigil",
+      "event_count": 20,
       "prs": [],
       "canary_verdict": null,
       "blocker": null,
@@ -13838,7 +13883,8 @@
         "anvil",
         "forge",
         "guardian",
-        "hermes"
+        "hermes",
+        "vigil"
       ],
       "events": [
         {
@@ -14305,6 +14351,29 @@
               "Q-B2-6",
               "B4-APPROVE"
             ]
+          }
+        },
+        {
+          "event_id": "evt_20260421T143307Z_000001",
+          "ts": "2026-04-21T14:33:07Z",
+          "event_type": "PROPOSAL_APPROVED",
+          "task_id": "B4",
+          "phase": "B",
+          "wave": null,
+          "agent": "vigil",
+          "repo": "oinkfarm",
+          "branch": "anvil/B4-pg-cutover",
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "approver": "vigil",
+            "review_path": "/home/oinkv/vigil-workspace/reviews/B4-VIGIL-PHASE0-R2-REVIEW.md",
+            "proposal_path": "/home/oinkv/anvil-workspace/proposals/B4-PHASE0-PROPOSAL.md",
+            "round": 2,
+            "method_only": true,
+            "note": "Execution remains separately gated on stage evidence artifacts and Mike/GUARDIAN sign-off."
           }
         }
       ]
@@ -25550,28 +25619,209 @@
         "accuracy_status": "proxy_only",
         "corrections_status": "pending"
       }
-    }
-  ],
-  "open_decisions": [
+    },
     {
-      "question_id": "Q-B2-6",
-      "question": "Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first?",
-      "options": [
-        "commit_deltas_and_re_review",
-        "ratify_current_local_candidate_as_exception",
-        "revert_to_reviewed_pr_17073d12_before_migration"
-      ],
+      "event_id": "evt_20260421T142627Z_000001",
+      "ts": "2026-04-21T14:26:27Z",
+      "event_type": "CANARY_PASS",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "guardian",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "task": "A9",
+        "canary": "A9 denomination multiplier table",
+        "verdict": "INCONCLUSIVE_ORGANIC_PASS_CODE_EVIDENCE",
+        "reviewer": "guardian",
+        "report_path": "/home/oinkv/guardian-workspace/canary-reports/A9-CANARY.md",
+        "signals_observed": 0,
+        "closed_at": "2026-04-21T14:25:00Z",
+        "minimum_required": 3,
+        "mixed_denom_rows": 0,
+        "sl_deviation_rejections": 0,
+        "post_deploy_total_signals": 68,
+        "notes": "INCONCLUSIVE due to rare 1000x ticker traffic; PASS per Hermes disposition and code evidence (27+ unit tests, 0 regressions, 0 mixed-denom rows, 0 SL_DEVIATION)"
+      }
+    },
+    {
+      "event_id": "evt_20260421T142902Z_000001",
+      "ts": "2026-04-21T14:29:02Z",
+      "event_type": "DECISION_RESOLVED",
       "task_id": "B2",
       "phase": "B",
-      "ts": "2026-04-21T10:25:58Z",
-      "age_hours": 3.957181692222222,
-      "age_human": "4.0h",
-      "agent": "forge",
-      "gate_type": "phase-b"
+      "wave": 1,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-B2-6",
+        "answer": "NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, but the 6-file diff (oink_db.py +380, reconcile_stores.py +573, test_b3_*.py, micro-gate-v3.py) is entirely attributable to B3 dual-write + reconciliation layer (merged commit 6af042f7, already CANARY_PASS) plus #166 micro-gate fix. The discord_message_id/channel_id 'VARCHAR' references Forge observed are in B3 test fixtures, not production PG schema. Production B2 schema = approved PR 17073d12 = green. B2 Guardian canary may proceed once Guardian has baseline + first 10 signals post-migration. No re-review required.",
+        "authority": "hermes_mike_granted_autonomy",
+        "decided_at": "2026-04-21T14:30:00Z",
+        "evidence": {
+          "base_commit": "17073d12",
+          "head_commit": "be2ff3b7",
+          "diff_files": [
+            "scripts/oink_db.py",
+            "scripts/reconcile_stores.py",
+            "scripts/micro-gate-v3.py",
+            "tests/test_b3_dual_write.py",
+            "tests/test_b3_reconcile.py",
+            "scripts/oink_config.py"
+          ],
+          "b3_merged_at": "6af042f7",
+          "b3_canary_state": "PASS (T+24h clean, T+48h pending)",
+          "forge_cross_check": "/home/oinkv/forge-workspace/plans/SPRINT-2026-04-21-B2-CROSSCHECK.md"
+        }
+      }
+    },
+    {
+      "event_id": "evt_20260421T143257Z_000001",
+      "ts": "2026-04-21T14:32:57Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": null,
+      "phase": "B",
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "note_type": "SCOPE_DIRECTIVE",
+        "directive": "AGGRESSIVE",
+        "authority": "mike_direct",
+        "decided_at": "2026-04-21T14:35:00Z",
+        "target_completion": "2026-05-30",
+        "in_scope": [
+          "All Phase B (B1-B15 except noted)",
+          "Phase C: C1 (KPI expansion), C2 (Confidence routing), C3 (Urgency), C4 (Differentiated SLA), C6 (Per-trader metrics)"
+        ],
+        "deferred_post_launch": [
+          "C5 (Anomaly detection) — post-launch PR, lands after 30d PG KPI history accrues",
+          "C7 (Chaos testing) — pure hygiene, defer indefinitely until operational need"
+        ],
+        "rationale": "Mike: ship Heavy Hybrid substrate + KPI/routing layers that unlock Phase D readiness tracking. Cuts ~4 weeks vs DEFAULT without compromising data-trust story. C5 and C7 do not block Phase D gate.",
+        "text": "AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred post-launch. FORGE: deprioritize C5/C7 plans, accelerate C1-C4/C6 scoping. ANVIL: B4 runbook + B9 Phase 0 in parallel. GUARDIAN: B2 canary today, then B4 canary prep. VIGIL: drain review queue to GitHub, vote B4 R2, then B9 proposal review pipeline."
+      }
+    },
+    {
+      "event_id": "evt_20260421T143307Z_000001",
+      "ts": "2026-04-21T14:33:07Z",
+      "event_type": "PROPOSAL_APPROVED",
+      "task_id": "B4",
+      "phase": "B",
+      "wave": null,
+      "agent": "vigil",
+      "repo": "oinkfarm",
+      "branch": "anvil/B4-pg-cutover",
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "approver": "vigil",
+        "review_path": "/home/oinkv/vigil-workspace/reviews/B4-VIGIL-PHASE0-R2-REVIEW.md",
+        "proposal_path": "/home/oinkv/anvil-workspace/proposals/B4-PHASE0-PROPOSAL.md",
+        "round": 2,
+        "method_only": true,
+        "note": "Execution remains separately gated on stage evidence artifacts and Mike/GUARDIAN sign-off."
+      }
+    },
+    {
+      "event_id": "evt_20260421T143354Z_000001",
+      "ts": "2026-04-21T14:33:54Z",
+      "event_type": "ARTIFACT_PUBLISHED",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "docs/oinxtractor-quality.html",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "category": "oinxtractor_quality",
+        "src_path": "docs/oinxtractor-metrics.json",
+        "latency_status": "ok",
+        "unknown_rate_status": "ok",
+        "accuracy_status": "proxy_only",
+        "corrections_status": "pending"
+      }
     }
   ],
+  "open_decisions": [],
   "live_buckets": {
     "1h": [
+      {
+        "ts": "2026-04-21T14:33:54Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00018500305555555556
+      },
+      {
+        "ts": "2026-04-21T14:33:07Z",
+        "event_type": "PROPOSAL_APPROVED",
+        "task_id": "B4",
+        "agent": "vigil",
+        "summary": "B4 proposal approved by vigil",
+        "phase": "B",
+        "pr": null,
+        "repo": "oinkfarm",
+        "age_hours": 0.01324055861111111
+      },
+      {
+        "ts": "2026-04-21T14:32:57Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.016018336388888887
+      },
+      {
+        "ts": "2026-04-21T14:29:02Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.08129611416666667
+      },
+      {
+        "ts": "2026-04-21T14:26:27Z",
+        "event_type": "CANARY_PASS",
+        "task_id": null,
+        "agent": "guardian",
+        "summary": "— canary PASS",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12435166972222222
+      },
       {
         "ts": "2026-04-21T14:23:23Z",
         "event_type": "ARTIFACT_PUBLISHED",
@@ -25581,7 +25831,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.00023724777777777776
+        "age_hours": 0.17546278083333333
       },
       {
         "ts": "2026-04-21T14:13:33Z",
@@ -25592,7 +25842,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.16412613666666667
+        "age_hours": 0.33935166972222225
       },
       {
         "ts": "2026-04-21T14:12:04Z",
@@ -25603,7 +25853,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1888483588888889
+        "age_hours": 0.36407389194444445
       },
       {
         "ts": "2026-04-21T14:11:50Z",
@@ -25614,7 +25864,7 @@
         "phase": "B",
         "pr": 29,
         "repo": "signal-gateway",
-        "age_hours": 0.1927372477777778
+        "age_hours": 0.36796278083333334
       },
       {
         "ts": "2026-04-21T14:09:44Z",
@@ -25625,7 +25875,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.2277372477777778
+        "age_hours": 0.40296278083333337
       },
       {
         "ts": "2026-04-21T14:07:59Z",
@@ -25636,7 +25886,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.25690391444444444
+        "age_hours": 0.4321294475
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -25647,7 +25897,7 @@
         "phase": null,
         "pr": 121,
         "repo": "oinkfarm",
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -25658,7 +25908,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -25669,7 +25919,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T13:57:35Z",
@@ -25680,7 +25930,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 0.4302372477777778
+        "age_hours": 0.6054627808333333
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -25691,7 +25941,7 @@
         "phase": null,
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -25702,7 +25952,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -25713,7 +25963,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:34:38Z",
@@ -25724,33 +25974,66 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8127372477777778
-      },
-      {
-        "ts": "2026-04-21T13:30:50Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.8760705811111111
-      },
-      {
-        "ts": "2026-04-21T13:29:40Z",
-        "event_type": "CANARY_PASS",
-        "task_id": "A6",
-        "agent": "guardian",
-        "summary": "A6 canary PASS",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.8955150255555555
+        "age_hours": 0.9879627808333333
       }
     ],
     "4h": [
       {
+        "ts": "2026-04-21T14:33:54Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00018500305555555556
+      },
+      {
+        "ts": "2026-04-21T14:33:07Z",
+        "event_type": "PROPOSAL_APPROVED",
+        "task_id": "B4",
+        "agent": "vigil",
+        "summary": "B4 proposal approved by vigil",
+        "phase": "B",
+        "pr": null,
+        "repo": "oinkfarm",
+        "age_hours": 0.01324055861111111
+      },
+      {
+        "ts": "2026-04-21T14:32:57Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.016018336388888887
+      },
+      {
+        "ts": "2026-04-21T14:29:02Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.08129611416666667
+      },
+      {
+        "ts": "2026-04-21T14:26:27Z",
+        "event_type": "CANARY_PASS",
+        "task_id": null,
+        "agent": "guardian",
+        "summary": "— canary PASS",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12435166972222222
+      },
+      {
         "ts": "2026-04-21T14:23:23Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -25759,7 +26042,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.00023724777777777776
+        "age_hours": 0.17546278083333333
       },
       {
         "ts": "2026-04-21T14:13:33Z",
@@ -25770,7 +26053,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.16412613666666667
+        "age_hours": 0.33935166972222225
       },
       {
         "ts": "2026-04-21T14:12:04Z",
@@ -25781,7 +26064,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1888483588888889
+        "age_hours": 0.36407389194444445
       },
       {
         "ts": "2026-04-21T14:11:50Z",
@@ -25792,7 +26075,7 @@
         "phase": "B",
         "pr": 29,
         "repo": "signal-gateway",
-        "age_hours": 0.1927372477777778
+        "age_hours": 0.36796278083333334
       },
       {
         "ts": "2026-04-21T14:09:44Z",
@@ -25803,7 +26086,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.2277372477777778
+        "age_hours": 0.40296278083333337
       },
       {
         "ts": "2026-04-21T14:07:59Z",
@@ -25814,7 +26097,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.25690391444444444
+        "age_hours": 0.4321294475
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -25825,7 +26108,7 @@
         "phase": null,
         "pr": 121,
         "repo": "oinkfarm",
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -25836,7 +26119,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -25847,7 +26130,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T13:57:35Z",
@@ -25858,7 +26141,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 0.4302372477777778
+        "age_hours": 0.6054627808333333
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -25869,7 +26152,7 @@
         "phase": null,
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -25880,7 +26163,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -25891,7 +26174,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:34:38Z",
@@ -25902,7 +26185,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8127372477777778
+        "age_hours": 0.9879627808333333
       },
       {
         "ts": "2026-04-21T13:30:50Z",
@@ -25913,7 +26196,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.8760705811111111
+        "age_hours": 1.0512961141666666
       },
       {
         "ts": "2026-04-21T13:29:40Z",
@@ -25924,7 +26207,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8955150255555555
+        "age_hours": 1.070740558611111
       },
       {
         "ts": "2026-04-21T13:04:33.548280Z",
@@ -25935,7 +26218,7 @@
         "phase": null,
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 1.3139738366666665
+        "age_hours": 1.4891993697222223
       },
       {
         "ts": "2026-04-21T13:04:33.548280Z",
@@ -25946,7 +26229,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.3139738366666665
+        "age_hours": 1.4891993697222223
       },
       {
         "ts": "2026-04-21T13:04:33.548280Z",
@@ -25957,7 +26240,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.3139738366666665
+        "age_hours": 1.4891993697222223
       },
       {
         "ts": "2026-04-21T13:01:06Z",
@@ -25968,7 +26251,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.3716261366666664
+        "age_hours": 1.5468516697222223
       },
       {
         "ts": "2026-04-21T12:45:27.140395Z",
@@ -25979,7 +26262,7 @@
         "phase": null,
         "pr": 164,
         "repo": "oinkfarm",
-        "age_hours": 1.632420471388889
+        "age_hours": 1.8076460044444445
       },
       {
         "ts": "2026-04-21T12:45:27.140395Z",
@@ -25990,7 +26273,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.632420471388889
+        "age_hours": 1.8076460044444445
       },
       {
         "ts": "2026-04-21T12:45:27.140395Z",
@@ -26001,7 +26284,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.632420471388889
+        "age_hours": 1.8076460044444445
       },
       {
         "ts": "2026-04-21T12:40:09Z",
@@ -26012,7 +26295,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 1.7207928033333333
+        "age_hours": 1.896018336388889
       },
       {
         "ts": "2026-04-21T12:29:47Z",
@@ -26023,7 +26306,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.893570581111111
+        "age_hours": 2.0687961141666666
       },
       {
         "ts": "2026-04-21T12:24:42Z",
@@ -26034,7 +26317,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 1.9782928033333331
+        "age_hours": 2.153518336388889
       },
       {
         "ts": "2026-04-21T12:11:01Z",
@@ -26045,7 +26328,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 2.2063483588888886
+        "age_hours": 2.3815738919444445
       },
       {
         "ts": "2026-04-21T12:08:50.356951Z",
@@ -26056,7 +26339,7 @@
         "phase": null,
         "pr": 164,
         "repo": "oinkfarm",
-        "age_hours": 2.242638094722222
+        "age_hours": 2.417863627777778
       },
       {
         "ts": "2026-04-21T12:08:50.356951Z",
@@ -26067,7 +26350,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.242638094722222
+        "age_hours": 2.417863627777778
       },
       {
         "ts": "2026-04-21T12:08:50.356951Z",
@@ -26078,7 +26361,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.242638094722222
+        "age_hours": 2.417863627777778
       },
       {
         "ts": "2026-04-21T11:38:01.983593Z",
@@ -26089,7 +26372,7 @@
         "phase": null,
         "pr": 152,
         "repo": "oinkfarm",
-        "age_hours": 2.756075138611111
+        "age_hours": 2.931300671666667
       },
       {
         "ts": "2026-04-21T11:38:01.983593Z",
@@ -26100,7 +26383,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.756075138611111
+        "age_hours": 2.931300671666667
       },
       {
         "ts": "2026-04-21T11:38:01.983593Z",
@@ -26111,7 +26394,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.756075138611111
+        "age_hours": 2.931300671666667
       },
       {
         "ts": "2026-04-21T11:27:50Z",
@@ -26122,7 +26405,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.926070581111111
+        "age_hours": 3.1012961141666664
       },
       {
         "ts": "2026-04-21T11:27:27Z",
@@ -26133,7 +26416,7 @@
         "phase": "meta",
         "pr": 105,
         "repo": "oinkfarm",
-        "age_hours": 2.93245947
+        "age_hours": 3.1076850030555554
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26144,7 +26427,7 @@
         "phase": "meta",
         "pr": 152,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26155,7 +26438,7 @@
         "phase": "meta",
         "pr": 164,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26166,7 +26449,7 @@
         "phase": "meta",
         "pr": 120,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26177,7 +26460,7 @@
         "phase": "meta",
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26188,7 +26471,7 @@
         "phase": "meta",
         "pr": 22,
         "repo": "signal-gateway",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26199,7 +26482,7 @@
         "phase": "meta",
         "pr": 23,
         "repo": "signal-gateway",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26210,7 +26493,7 @@
         "phase": "meta",
         "pr": 121,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:21:08Z",
@@ -26221,7 +26504,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.0377372477777778
+        "age_hours": 3.212962780833333
       },
       {
         "ts": "2026-04-21T11:21:07Z",
@@ -26232,7 +26515,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.0380150255555556
+        "age_hours": 3.213240558611111
       },
       {
         "ts": "2026-04-21T11:06:52Z",
@@ -26243,7 +26526,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.2755150255555554
+        "age_hours": 3.450740558611111
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -26254,7 +26537,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 3.2866611458333335
+        "age_hours": 3.461886678888889
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -26265,7 +26548,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.2866611458333335
+        "age_hours": 3.461886678888889
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -26276,7 +26559,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 3.2866611458333335
+        "age_hours": 3.461886678888889
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -26287,7 +26570,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.3532928033333333
+        "age_hours": 3.528518336388889
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -26298,7 +26581,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.3532928033333333
+        "age_hours": 3.528518336388889
       },
       {
         "ts": "2026-04-21T10:37:10Z",
@@ -26309,7 +26592,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.7705150255555555
+        "age_hours": 3.945740558611111
       },
       {
         "ts": "2026-04-21T10:34:14Z",
@@ -26320,66 +26603,66 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.8194039144444445
-      },
-      {
-        "ts": "2026-04-21T10:33:43.946086Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": "Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed, ",
-        "phase": null,
-        "pr": 11,
-        "repo": "signal-gateway",
-        "age_hours": 3.8277522238888886
-      },
-      {
-        "ts": "2026-04-21T10:33:43.946086Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": "Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.8277522238888886
-      },
-      {
-        "ts": "2026-04-21T10:33:43.946086Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "A171",
-        "agent": "oinkv",
-        "summary": "A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl",
-        "phase": "A",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.8277522238888886
-      },
-      {
-        "ts": "2026-04-21T10:25:58Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "B2",
-        "agent": "forge",
-        "summary": "FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit ",
-        "phase": "B",
-        "pr": null,
-        "repo": "oinkfarm",
-        "age_hours": 3.957181692222222
-      },
-      {
-        "ts": "2026-04-21T10:25:58Z",
-        "event_type": "DECISION_NEEDED",
-        "task_id": "B2",
-        "agent": "forge",
-        "summary": "B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-",
-        "phase": "B",
-        "pr": null,
-        "repo": "oinkfarm",
-        "age_hours": 3.957181692222222
+        "age_hours": 3.9946294475
       }
     ],
     "24h": [
       {
+        "ts": "2026-04-21T14:33:54Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00018500305555555556
+      },
+      {
+        "ts": "2026-04-21T14:33:07Z",
+        "event_type": "PROPOSAL_APPROVED",
+        "task_id": "B4",
+        "agent": "vigil",
+        "summary": "B4 proposal approved by vigil",
+        "phase": "B",
+        "pr": null,
+        "repo": "oinkfarm",
+        "age_hours": 0.01324055861111111
+      },
+      {
+        "ts": "2026-04-21T14:32:57Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "AGGRESSIVE scope locked 2026-04-21 14:35 UTC by Mike. Target: Heavy Hybrid done 2026-05-30. Full Phase B + C1/C2/C3/C4/C6. C5+C7 deferred po",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.016018336388888887
+      },
+      {
+        "ts": "2026-04-21T14:29:02Z",
+        "event_type": "DECISION_RESOLVED",
+        "task_id": "B2",
+        "agent": "hermes",
+        "summary": "B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.08129611416666667
+      },
+      {
+        "ts": "2026-04-21T14:26:27Z",
+        "event_type": "CANARY_PASS",
+        "task_id": null,
+        "agent": "guardian",
+        "summary": "— canary PASS",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.12435166972222222
+      },
+      {
         "ts": "2026-04-21T14:23:23Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -26388,7 +26671,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.00023724777777777776
+        "age_hours": 0.17546278083333333
       },
       {
         "ts": "2026-04-21T14:13:33Z",
@@ -26399,7 +26682,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.16412613666666667
+        "age_hours": 0.33935166972222225
       },
       {
         "ts": "2026-04-21T14:12:04Z",
@@ -26410,7 +26693,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1888483588888889
+        "age_hours": 0.36407389194444445
       },
       {
         "ts": "2026-04-21T14:11:50Z",
@@ -26421,7 +26704,7 @@
         "phase": "B",
         "pr": 29,
         "repo": "signal-gateway",
-        "age_hours": 0.1927372477777778
+        "age_hours": 0.36796278083333334
       },
       {
         "ts": "2026-04-21T14:09:44Z",
@@ -26432,7 +26715,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.2277372477777778
+        "age_hours": 0.40296278083333337
       },
       {
         "ts": "2026-04-21T14:07:59Z",
@@ -26443,7 +26726,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.25690391444444444
+        "age_hours": 0.4321294475
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -26454,7 +26737,7 @@
         "phase": null,
         "pr": 121,
         "repo": "oinkfarm",
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -26465,7 +26748,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T14:05:00Z",
@@ -26476,7 +26759,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.30662613666666666
+        "age_hours": 0.4818516697222222
       },
       {
         "ts": "2026-04-21T13:57:35Z",
@@ -26487,7 +26770,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 0.4302372477777778
+        "age_hours": 0.6054627808333333
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -26498,7 +26781,7 @@
         "phase": null,
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -26509,7 +26792,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:42:52Z",
@@ -26520,7 +26803,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.6755150255555555
+        "age_hours": 0.8507405586111111
       },
       {
         "ts": "2026-04-21T13:34:38Z",
@@ -26531,7 +26814,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8127372477777778
+        "age_hours": 0.9879627808333333
       },
       {
         "ts": "2026-04-21T13:30:50Z",
@@ -26542,7 +26825,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.8760705811111111
+        "age_hours": 1.0512961141666666
       },
       {
         "ts": "2026-04-21T13:29:40Z",
@@ -26553,7 +26836,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8955150255555555
+        "age_hours": 1.070740558611111
       },
       {
         "ts": "2026-04-21T13:04:33.548280Z",
@@ -26564,7 +26847,7 @@
         "phase": null,
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 1.3139738366666665
+        "age_hours": 1.4891993697222223
       },
       {
         "ts": "2026-04-21T13:04:33.548280Z",
@@ -26575,7 +26858,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.3139738366666665
+        "age_hours": 1.4891993697222223
       },
       {
         "ts": "2026-04-21T13:04:33.548280Z",
@@ -26586,7 +26869,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.3139738366666665
+        "age_hours": 1.4891993697222223
       },
       {
         "ts": "2026-04-21T13:01:06Z",
@@ -26597,7 +26880,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.3716261366666664
+        "age_hours": 1.5468516697222223
       },
       {
         "ts": "2026-04-21T12:45:27.140395Z",
@@ -26608,7 +26891,7 @@
         "phase": null,
         "pr": 164,
         "repo": "oinkfarm",
-        "age_hours": 1.632420471388889
+        "age_hours": 1.8076460044444445
       },
       {
         "ts": "2026-04-21T12:45:27.140395Z",
@@ -26619,7 +26902,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.632420471388889
+        "age_hours": 1.8076460044444445
       },
       {
         "ts": "2026-04-21T12:45:27.140395Z",
@@ -26630,7 +26913,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 1.632420471388889
+        "age_hours": 1.8076460044444445
       },
       {
         "ts": "2026-04-21T12:40:09Z",
@@ -26641,7 +26924,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 1.7207928033333333
+        "age_hours": 1.896018336388889
       },
       {
         "ts": "2026-04-21T12:29:47Z",
@@ -26652,7 +26935,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.893570581111111
+        "age_hours": 2.0687961141666666
       },
       {
         "ts": "2026-04-21T12:24:42Z",
@@ -26663,7 +26946,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 1.9782928033333331
+        "age_hours": 2.153518336388889
       },
       {
         "ts": "2026-04-21T12:11:01Z",
@@ -26674,7 +26957,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 2.2063483588888886
+        "age_hours": 2.3815738919444445
       },
       {
         "ts": "2026-04-21T12:08:50.356951Z",
@@ -26685,7 +26968,7 @@
         "phase": null,
         "pr": 164,
         "repo": "oinkfarm",
-        "age_hours": 2.242638094722222
+        "age_hours": 2.417863627777778
       },
       {
         "ts": "2026-04-21T12:08:50.356951Z",
@@ -26696,7 +26979,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.242638094722222
+        "age_hours": 2.417863627777778
       },
       {
         "ts": "2026-04-21T12:08:50.356951Z",
@@ -26707,7 +26990,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.242638094722222
+        "age_hours": 2.417863627777778
       },
       {
         "ts": "2026-04-21T11:38:01.983593Z",
@@ -26718,7 +27001,7 @@
         "phase": null,
         "pr": 152,
         "repo": "oinkfarm",
-        "age_hours": 2.756075138611111
+        "age_hours": 2.931300671666667
       },
       {
         "ts": "2026-04-21T11:38:01.983593Z",
@@ -26729,7 +27012,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.756075138611111
+        "age_hours": 2.931300671666667
       },
       {
         "ts": "2026-04-21T11:38:01.983593Z",
@@ -26740,7 +27023,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 2.756075138611111
+        "age_hours": 2.931300671666667
       },
       {
         "ts": "2026-04-21T11:27:50Z",
@@ -26751,7 +27034,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.926070581111111
+        "age_hours": 3.1012961141666664
       },
       {
         "ts": "2026-04-21T11:27:27Z",
@@ -26762,7 +27045,7 @@
         "phase": "meta",
         "pr": 105,
         "repo": "oinkfarm",
-        "age_hours": 2.93245947
+        "age_hours": 3.1076850030555554
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26773,7 +27056,7 @@
         "phase": "meta",
         "pr": 152,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26784,7 +27067,7 @@
         "phase": "meta",
         "pr": 164,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26795,7 +27078,7 @@
         "phase": "meta",
         "pr": 120,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26806,7 +27089,7 @@
         "phase": "meta",
         "pr": 111,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26817,7 +27100,7 @@
         "phase": "meta",
         "pr": 22,
         "repo": "signal-gateway",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26828,7 +27111,7 @@
         "phase": "meta",
         "pr": 23,
         "repo": "signal-gateway",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:26:33Z",
@@ -26839,7 +27122,7 @@
         "phase": "meta",
         "pr": 121,
         "repo": "oinkfarm",
-        "age_hours": 2.94745947
+        "age_hours": 3.1226850030555555
       },
       {
         "ts": "2026-04-21T11:21:08Z",
@@ -26850,7 +27133,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.0377372477777778
+        "age_hours": 3.212962780833333
       },
       {
         "ts": "2026-04-21T11:21:07Z",
@@ -26861,7 +27144,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.0380150255555556
+        "age_hours": 3.213240558611111
       },
       {
         "ts": "2026-04-21T11:06:52Z",
@@ -26872,7 +27155,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.2755150255555554
+        "age_hours": 3.450740558611111
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -26883,7 +27166,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 3.2866611458333335
+        "age_hours": 3.461886678888889
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -26894,7 +27177,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.2866611458333335
+        "age_hours": 3.461886678888889
       },
       {
         "ts": "2026-04-21T11:06:11.873967Z",
@@ -26905,7 +27188,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 3.2866611458333335
+        "age_hours": 3.461886678888889
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -26916,7 +27199,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.3532928033333333
+        "age_hours": 3.528518336388889
       },
       {
         "ts": "2026-04-21T11:02:12Z",
@@ -26927,7 +27210,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 3.3532928033333333
+        "age_hours": 3.528518336388889
       },
       {
         "ts": "2026-04-21T10:37:10Z",
@@ -26938,7 +27221,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.7705150255555555
+        "age_hours": 3.945740558611111
       },
       {
         "ts": "2026-04-21T10:34:14Z",
@@ -26949,7 +27232,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.8194039144444445
+        "age_hours": 3.9946294475
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -26960,7 +27243,7 @@
         "phase": null,
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 3.8277522238888886
+        "age_hours": 4.0029777569444445
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -26971,7 +27254,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.8277522238888886
+        "age_hours": 4.0029777569444445
       },
       {
         "ts": "2026-04-21T10:33:43.946086Z",
@@ -26982,7 +27265,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 3.8277522238888886
+        "age_hours": 4.0029777569444445
       },
       {
         "ts": "2026-04-21T10:25:58Z",
@@ -26993,7 +27276,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 3.957181692222222
+        "age_hours": 4.1324072252777775
       },
       {
         "ts": "2026-04-21T10:25:58Z",
@@ -27004,7 +27287,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 3.957181692222222
+        "age_hours": 4.1324072252777775
       },
       {
         "ts": "2026-04-21T10:23:18Z",
@@ -27015,7 +27298,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.001626136666666
+        "age_hours": 4.176851669722222
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -27026,7 +27309,7 @@
         "phase": "B",
         "pr": 153,
         "repo": "oinkfarm",
-        "age_hours": 4.1119039144444445
+        "age_hours": 4.2871294475
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -27037,7 +27320,7 @@
         "phase": "B",
         "pr": 27,
         "repo": "signal-gateway",
-        "age_hours": 4.1119039144444445
+        "age_hours": 4.2871294475
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -27048,7 +27331,7 @@
         "phase": "B",
         "pr": 26,
         "repo": "signal-gateway",
-        "age_hours": 4.1119039144444445
+        "age_hours": 4.2871294475
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -27059,7 +27342,7 @@
         "phase": "meta",
         "pr": 9,
         "repo": "signal-gateway",
-        "age_hours": 4.1119039144444445
+        "age_hours": 4.2871294475
       },
       {
         "ts": "2026-04-21T10:16:41Z",
@@ -27070,7 +27353,7 @@
         "phase": "meta",
         "pr": 11,
         "repo": "signal-gateway",
-        "age_hours": 4.1119039144444445
+        "age_hours": 4.2871294475
       },
       {
         "ts": "2026-04-21T10:12:52Z",
@@ -27081,7 +27364,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.175515025555556
+        "age_hours": 4.350740558611111
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -27092,7 +27375,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.212524016666666
+        "age_hours": 4.387749549722222
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -27103,7 +27386,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.212524016666666
+        "age_hours": 4.387749549722222
       },
       {
         "ts": "2026-04-21T10:10:38.767632Z",
@@ -27114,7 +27397,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 4.212524016666666
+        "age_hours": 4.387749549722222
       },
       {
         "ts": "2026-04-21T10:09:23Z",
@@ -27125,7 +27408,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.233570581111111
+        "age_hours": 4.408796114166666
       },
       {
         "ts": "2026-04-21T10:08:44Z",
@@ -27136,7 +27419,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.244403914444445
+        "age_hours": 4.4196294475
       },
       {
         "ts": "2026-04-21T10:08:44Z",
@@ -27147,7 +27430,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.244403914444445
+        "age_hours": 4.4196294475
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -27158,7 +27441,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.299410573055556
+        "age_hours": 4.474636106111111
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -27169,7 +27452,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.299410573055556
+        "age_hours": 4.474636106111111
       },
       {
         "ts": "2026-04-21T10:05:25.976029Z",
@@ -27180,7 +27463,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 4.299410573055556
+        "age_hours": 4.474636106111111
       },
       {
         "ts": "2026-04-21T10:03:20Z",
@@ -27191,7 +27474,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 4.334403914444445
+        "age_hours": 4.5096294475
       },
       {
         "ts": "2026-04-21T10:02:17Z",
@@ -27202,7 +27485,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.351903914444445
+        "age_hours": 4.5271294475
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -27213,7 +27496,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 4.400515025555555
+        "age_hours": 4.575740558611112
       },
       {
         "ts": "2026-04-21T09:59:22Z",
@@ -27224,7 +27507,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 4.400515025555555
+        "age_hours": 4.575740558611112
       },
       {
         "ts": "2026-04-21T09:41:33Z",
@@ -27235,7 +27518,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.69745947
+        "age_hours": 4.8726850030555555
       },
       {
         "ts": "2026-04-21T08:32:00Z",
@@ -27246,7 +27529,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.856626136666667
+        "age_hours": 6.031851669722222
       },
       {
         "ts": "2026-04-21T08:29:26Z",
@@ -27257,7 +27540,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.899403914444445
+        "age_hours": 6.0746294475000004
       },
       {
         "ts": "2026-04-21T07:27:54Z",
@@ -27268,7 +27551,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.92495947
+        "age_hours": 7.1001850030555556
       },
       {
         "ts": "2026-04-21T06:26:17Z",
@@ -27279,7 +27562,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.951903914444445
+        "age_hours": 8.1271294475
       },
       {
         "ts": "2026-04-21T06:11:40Z",
@@ -27290,7 +27573,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.195515025555556
+        "age_hours": 8.37074055861111
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -27301,7 +27584,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.22884835888889
+        "age_hours": 8.404073891944444
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -27312,7 +27595,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.22884835888889
+        "age_hours": 8.404073891944444
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -27323,7 +27606,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.22884835888889
+        "age_hours": 8.404073891944444
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -27334,7 +27617,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.22884835888889
+        "age_hours": 8.404073891944444
       },
       {
         "ts": "2026-04-21T06:09:40Z",
@@ -27345,7 +27628,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 8.22884835888889
+        "age_hours": 8.404073891944444
       },
       {
         "ts": "2026-04-21T05:30:05Z",
@@ -27356,7 +27639,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.88857058111111
+        "age_hours": 9.063796114166667
       },
       {
         "ts": "2026-04-21T04:21:00Z",
@@ -27367,7 +27650,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.039959470000001
+        "age_hours": 10.215185003055556
       },
       {
         "ts": "2026-04-21T04:15:26Z",
@@ -27378,7 +27661,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.132737247777778
+        "age_hours": 10.307962780833334
       },
       {
         "ts": "2026-04-21T03:11:34Z",
@@ -27389,7 +27672,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.197181692222223
+        "age_hours": 11.372407225277778
       },
       {
         "ts": "2026-04-21T03:04:00Z",
@@ -27400,7 +27683,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 11.323292803333334
+        "age_hours": 11.498518336388889
       },
       {
         "ts": "2026-04-21T02:13:37Z",
@@ -27411,7 +27694,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.163015025555556
+        "age_hours": 12.338240558611112
       },
       {
         "ts": "2026-04-21T01:27:28Z",
@@ -27422,7 +27705,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.932181692222223
+        "age_hours": 13.107407225277779
       },
       {
         "ts": "2026-04-21T00:46:39Z",
@@ -27433,7 +27716,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.612459470000001
+        "age_hours": 13.787685003055556
       },
       {
         "ts": "2026-04-21T00:44:25Z",
@@ -27444,7 +27727,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 13.649681692222222
+        "age_hours": 13.824907225277778
       },
       {
         "ts": "2026-04-21T00:07:36Z",
@@ -27455,7 +27738,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.263292803333334
+        "age_hours": 14.438518336388888
       },
       {
         "ts": "2026-04-20T23:21:53Z",
@@ -27466,7 +27749,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.025237247777778
+        "age_hours": 15.200462780833334
       },
       {
         "ts": "2026-04-20T22:17:17Z",
@@ -27477,7 +27760,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.101903914444446
+        "age_hours": 16.277129447500002
       },
       {
         "ts": "2026-04-20T22:09:03Z",
@@ -27488,7 +27771,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 16.239126136666666
+        "age_hours": 16.414351669722222
       },
       {
         "ts": "2026-04-20T22:01:54Z",
@@ -27499,7 +27782,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.358292803333335
+        "age_hours": 16.53351833638889
       },
       {
         "ts": "2026-04-20T21:41:30Z",
@@ -27510,7 +27793,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.698292803333334
+        "age_hours": 16.87351833638889
       },
       {
         "ts": "2026-04-20T21:32:48Z",
@@ -27521,7 +27804,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 16.843292803333334
+        "age_hours": 17.01851833638889
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27532,7 +27815,7 @@
         "phase": "A",
         "pr": 5,
         "repo": "oink-sync",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27543,7 +27826,7 @@
         "phase": "A",
         "pr": 7,
         "repo": "oink-sync",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27554,7 +27837,7 @@
         "phase": "A",
         "pr": 130,
         "repo": "signal-gateway",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27565,7 +27848,7 @@
         "phase": "A",
         "pr": 131,
         "repo": "signal-gateway",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27576,7 +27859,7 @@
         "phase": "A",
         "pr": 20,
         "repo": "signal-gateway",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27587,7 +27870,7 @@
         "phase": "A",
         "pr": 8,
         "repo": "oink-sync",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27598,7 +27881,7 @@
         "phase": "A",
         "pr": 132,
         "repo": "oinkfarm",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27609,7 +27892,7 @@
         "phase": "A",
         "pr": 134,
         "repo": "oinkfarm",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27620,7 +27903,7 @@
         "phase": "A",
         "pr": 135,
         "repo": "oinkfarm",
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:32:39Z",
@@ -27631,7 +27914,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 16.845792803333335
+        "age_hours": 17.021018336388888
       },
       {
         "ts": "2026-04-20T21:31:16Z",
@@ -27642,7 +27925,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.86884835888889
+        "age_hours": 17.044073891944446
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -27653,7 +27936,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.87745947
+        "age_hours": 17.052685003055554
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -27664,7 +27947,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.87745947
+        "age_hours": 17.052685003055554
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -27675,7 +27958,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.87745947
+        "age_hours": 17.052685003055554
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -27686,7 +27969,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.87745947
+        "age_hours": 17.052685003055554
       },
       {
         "ts": "2026-04-20T21:30:45Z",
@@ -27697,7 +27980,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 16.87745947
+        "age_hours": 17.052685003055554
       },
       {
         "ts": "2026-04-20T21:30:29Z",
@@ -27708,7 +27991,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.881903914444443
+        "age_hours": 17.0571294475
       },
       {
         "ts": "2026-04-20T21:27:41Z",
@@ -27719,7 +28002,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.92857058111111
+        "age_hours": 17.103796114166666
       },
       {
         "ts": "2026-04-20T21:19:35Z",
@@ -27730,7 +28013,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.06357058111111
+        "age_hours": 17.238796114166668
       },
       {
         "ts": "2026-04-20T21:18:58Z",
@@ -27741,7 +28024,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.07384835888889
+        "age_hours": 17.249073891944445
       },
       {
         "ts": "2026-04-20T21:18:12Z",
@@ -27752,7 +28035,7 @@
         "phase": "D",
         "pr": null,
         "repo": null,
-        "age_hours": 17.086626136666666
+        "age_hours": 17.261851669722223
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -27763,7 +28046,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.088292803333335
+        "age_hours": 17.263518336388888
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -27774,7 +28057,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.088292803333335
+        "age_hours": 17.263518336388888
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -27785,7 +28068,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.088292803333335
+        "age_hours": 17.263518336388888
       },
       {
         "ts": "2026-04-20T21:18:06Z",
@@ -27796,7 +28079,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 17.088292803333335
+        "age_hours": 17.263518336388888
       },
       {
         "ts": "2026-04-20T20:57:07Z",
@@ -27807,7 +28090,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 17.438015025555558
+        "age_hours": 17.61324055861111
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -27818,7 +28101,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.468015025555555
+        "age_hours": 17.64324055861111
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -27829,7 +28112,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 17.468015025555555
+        "age_hours": 17.64324055861111
       },
       {
         "ts": "2026-04-20T20:55:19Z",
@@ -27840,7 +28123,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.468015025555555
+        "age_hours": 17.64324055861111
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27851,7 +28134,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27862,7 +28145,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27873,7 +28156,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27884,7 +28167,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27895,7 +28178,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27906,7 +28189,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:54:52Z",
@@ -27917,7 +28200,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 17.475515025555556
+        "age_hours": 17.650740558611112
       },
       {
         "ts": "2026-04-20T20:20:23Z",
@@ -27928,7 +28211,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.05023724777778
+        "age_hours": 18.225462780833332
       },
       {
         "ts": "2026-04-20T19:43:38Z",
@@ -27939,7 +28222,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.662737247777777
+        "age_hours": 18.837962780833333
       },
       {
         "ts": "2026-04-20T18:37:49Z",
@@ -27950,7 +28233,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 19.75968169222222
+        "age_hours": 19.934907225277776
       },
       {
         "ts": "2026-04-20T18:12:22Z",
@@ -27961,7 +28244,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.183848358888888
+        "age_hours": 20.359073891944444
       },
       {
         "ts": "2026-04-20T17:58:46Z",
@@ -27972,7 +28255,7 @@
         "phase": "A",
         "pr": null,
         "repo": null,
-        "age_hours": 20.410515025555554
+        "age_hours": 20.58574055861111
       },
       {
         "ts": "2026-04-20T17:49:34Z",
@@ -27983,7 +28266,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.563848358888887
+        "age_hours": 20.739073891944443
       },
       {
         "ts": "2026-04-20T16:06:27Z",
@@ -27994,7 +28277,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.28245947
+        "age_hours": 22.457685003055555
       },
       {
         "ts": "2026-04-20T16:02:34Z",
@@ -28005,7 +28288,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 22.34718169222222
+        "age_hours": 22.522407225277775
       },
       {
         "ts": "2026-04-20T15:53:52Z",
@@ -28016,7 +28299,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.49218169222222
+        "age_hours": 22.667407225277778
       },
       {
         "ts": "2026-04-20T15:52:02Z",
@@ -28027,7 +28310,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 22.522737247777776
+        "age_hours": 22.697962780833333
       }
     ]
   },
@@ -28038,7 +28321,7 @@
       "issue": "PR_OPENED (pr=133) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T145137Z_000001",
-      "detected_at": "2026-04-21T14:23:42Z"
+      "detected_at": "2026-04-21T14:34:14Z"
     },
     {
       "task_id": "B1",
@@ -28046,7 +28329,7 @@
       "issue": "PR_OPENED (pr=149) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T222920Z_000001",
-      "detected_at": "2026-04-21T14:23:42Z"
+      "detected_at": "2026-04-21T14:34:14Z"
     },
     {
       "task_id": "B1",
@@ -28054,7 +28337,7 @@
       "issue": "PR_OPENED (pr=21) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T223519Z_000001",
-      "detected_at": "2026-04-21T14:23:42Z"
+      "detected_at": "2026-04-21T14:34:14Z"
     },
     {
       "task_id": "B2",
@@ -28062,7 +28345,7 @@
       "issue": "PR_OPENED (pr=24) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T012125Z_000001",
-      "detected_at": "2026-04-21T14:23:42Z"
+      "detected_at": "2026-04-21T14:34:14Z"
     },
     {
       "task_id": "B5",
@@ -28070,13 +28353,13 @@
       "issue": "PR_OPENED (pr=25) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T044257Z_000001",
-      "detected_at": "2026-04-21T14:23:42Z"
+      "detected_at": "2026-04-21T14:34:14Z"
     }
   ],
   "events_integrity": {
-    "total": 412,
-    "last_24h": 150,
-    "rate_per_hour": 6.25,
+    "total": 417,
+    "last_24h": 155,
+    "rate_per_hour": 6.46,
     "schema_version": "1.0",
     "monotonic_gaps": [
       "evt_20260421T140500Z_000001 came after evt_20260421T140759Z_000001"
@@ -28084,24 +28367,24 @@
     "monotonic_ok": false,
     "source": "lib",
     "events_file": "/home/oinkv/sprint-checkpoint/events.jsonl",
-    "human_line": "In plain English: 150 things happened today, ~6.25/h steady-state. Event stream has order gaps — review needed."
+    "human_line": "In plain English: 155 things happened today, ~6.46/h steady-state. Event stream has order gaps — review needed."
   },
   "bootstrap": false,
   "freshness_by_agent": [
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-21T14:23:23Z",
+      "last_event_ts": "2026-04-21T14:33:54Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 0.00023724777777777776,
+      "age_hours": 0.00018500305555555556,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 59,
+      "event_count": 62,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-21T14:23:23Z",
+      "last_active": "2026-04-21T14:33:54Z",
       "last_active_human": "0s ago",
       "heartbeat": {
         "current_task": null,
@@ -28111,20 +28394,42 @@
       }
     },
     {
-      "id": "guardian",
-      "name": "GUARDIAN",
-      "last_event_ts": "2026-04-21T14:12:04Z",
-      "last_event_type": "AGENT_HEARTBEAT",
+      "id": "vigil",
+      "name": "VIGIL",
+      "last_event_ts": "2026-04-21T14:33:07Z",
+      "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B4",
-      "current_task": "Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.",
-      "age_hours": 0.1888483588888889,
+      "current_task": "B4",
+      "age_hours": 0.01324055861111111,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 102,
+      "event_count": 45,
+      "emoji": "🔍",
+      "role": "Code Review + Scoring",
+      "last_active": "2026-04-21T14:33:07Z",
+      "last_active_human": "47s ago",
+      "heartbeat": {
+        "current_task": "B4",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "guardian",
+      "name": "GUARDIAN",
+      "last_event_ts": "2026-04-21T14:26:27Z",
+      "last_event_type": "CANARY_PASS",
+      "last_task_id": null,
+      "current_task": "Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.",
+      "age_hours": 0.12435166972222222,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 103,
       "emoji": "🛡️",
       "role": "Data Integrity + Canary",
-      "last_active": "2026-04-21T14:12:04Z",
-      "last_active_human": "11m ago",
+      "last_active": "2026-04-21T14:26:27Z",
+      "last_active_human": "7m ago",
       "heartbeat": {
         "current_task": "Heartbeat sweep 13:58–14:11 UTC: A6 48h canary DONE (CANARY_PASS), A9 48h canary DONE (INCONCLUSIVE_CODE_PASS), B4 Phase 0 R2 APPROVED (method-only), B6 Phase 1 PASS (10.00). Next due: A10 48h at 18:29 UTC, B2 T+48h at 01:22 UTC, B3 T+48h at 02:25 UTC.",
         "current_phase": null,
@@ -28139,14 +28444,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "A171",
       "current_task": "A171",
-      "age_hours": 0.30662613666666666,
+      "age_hours": 0.4818516697222222,
       "staleness_label": "green",
       "light": "green",
       "event_count": 32,
       "emoji": "🐷",
       "role": "Plan Auditor",
       "last_active": "2026-04-21T14:05:00Z",
-      "last_active_human": "18m ago",
+      "last_active_human": "28m ago",
       "heartbeat": {
         "current_task": "A171",
         "current_phase": null,
@@ -28161,14 +28466,14 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 0.4302372477777778,
+      "age_hours": 0.6054627808333333,
       "staleness_label": "green",
       "light": "green",
       "event_count": 61,
       "emoji": "🔥",
       "role": "Technical Execution Planner",
       "last_active": "2026-04-21T13:57:35Z",
-      "last_active_human": "25m ago",
+      "last_active_human": "36m ago",
       "heartbeat": {
         "current_task": "B8",
         "current_phase": null,
@@ -28183,38 +28488,16 @@
       "last_event_type": "SPRINT_NOTE",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 0.8127372477777778,
+      "age_hours": 0.9879627808333333,
       "staleness_label": "green",
       "light": "green",
       "event_count": 96,
       "emoji": "⚒️",
       "role": "Implementation Lead",
       "last_active": "2026-04-21T13:34:38Z",
-      "last_active_human": "48m ago",
+      "last_active_human": "59m ago",
       "heartbeat": {
         "current_task": "B4",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "vigil",
-      "name": "VIGIL",
-      "last_event_ts": "2026-04-21T11:27:27Z",
-      "last_event_type": "REVIEW_POSTED",
-      "last_task_id": "M105",
-      "current_task": "M105",
-      "age_hours": 2.93245947,
-      "staleness_label": "yellow",
-      "light": "yellow",
-      "event_count": 44,
-      "emoji": "🔍",
-      "role": "Code Review + Scoring",
-      "last_active": "2026-04-21T11:27:27Z",
-      "last_active_human": "2h 55m ago",
-      "heartbeat": {
-        "current_task": "M105",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -28227,7 +28510,7 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 26.85245947,
+      "age_hours": 27.027685003055552,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
@@ -28249,7 +28532,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 30.707737247777775,
+      "age_hours": 30.88296278083333,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -28267,8 +28550,8 @@
   ],
   "narrative": {
     "mission": "OinkFarm is the pipeline that watches Discord and Telegram for trading signals, parses them with a mix of deterministic parsers and a local LLM (Gemma), checks them against live prices from four exchanges, and tracks every signal from post to close. It runs about 1,000 signals/day across crypto and a handful of non-crypto assets, on a single server (\"the barn\"). The thing that's broken is **trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.",
-    "today": "Today: eleven canary PASSes and 14 reviews posted. Tasks on the board: A2 🔴 remaining_pct model, B3 🟡 parallel-write verification, and B1 🔴 db abstraction layer all moved forward. One new gate opened for Mike: Q-B2-6.",
-    "week": "Over the last three days, the stream recorded 52 merges, 43 canary events, and 89 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🔴 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 39 decision events flowed through the Mike-gate process.",
+    "today": "Today: twelve canary PASSes and 14 reviews posted. Tasks on the board: A2 🔴 remaining_pct model, B3 🟡 parallel-write verification, and B1 🔴 db abstraction layer all moved forward. Mike weighed in: Q-B2-6 resolved (NO DRIFT. Forge's fresh-eyes cross-check flagged apparent de). One new gate opened for Mike: Q-B2-6.",
+    "week": "Over the last three days, the stream recorded 52 merges, 43 canary events, and 89 reviews posted across the board. Phase A work continued to settle with A1 🔴 signal_events schema, A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, and A2 🔴 remaining_pct model reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🔴 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 40 decision events flowed through the Mike-gate process.",
     "whats_next": "**Next merges expected (this week):** B2 canary result (currently CANARY_PENDING), B3 verification window opens, B6/B7/B8 canary results land. Phase B Wave 2 decomposition is essentially done — next real code merge is B4 (cutover) itself, which is a one-day task gated on B3's 7-clean-day soak. **The April 26 cutover gate (B4):** B3 merged 2026-04-19. Under the **7-day + reset rule**, earliest B4 cutover is **2026-04-26** if every daily reconciliation report shows zero row-count and zero event-count discrepancies. Any single discrepancy resets the clock. Mike's explicit go-ahead is still required on the day. **Phase C start (late May 2026):** Begins after Phase B quality gate (all Wave 3 + Wave 4 tasks green, W1 immutable records live on PostgreSQL, W4 trace…",
     "sos_exists": true,
     "sos_link": "sprint-log/STATE-OF-SPRINT.md",
