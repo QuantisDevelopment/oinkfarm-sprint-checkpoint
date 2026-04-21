@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 15:12 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 17:21 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Guardian just ran back-to-back phase-0 reviews and the headline is a good catch on B9 (W1 immutable signal records — the INSERT-only enforcement that's the whole point of the data-truth rebuild). Guardian rejected the proposal with REQUEST_CHANGES at the critical tier because the W1 write-guard, as drafted, would have blanket-blocked UPDATEs on the signals table — which would have broken live price syncing, since engine.py legitimately updates ephemeral pricing columns. Guardian also found ten additional update sites beyond what Anvil's proposal covered, and flagged that an automated reconciliation gate needs to be a precondition for moving from phase 1 to phase 2. Anvil goes into a revision round; nothing about this is alarming — it's exactly the kind of thing the two-reviewer loop exists to catch before code gets written.
+Quiet 90 minutes on the merge line, but ANVIL just closed out the full Mike-checklist at once — five proposals are now stacked in the review queue. B4 R2 (the PostgreSQL cutover) is back in, B9 R2 (W1 immutable signal records — the INSERT-only guard that anchors the data-truth rebuild) is re-submitted after Guardian's R1 request-for-changes, plus fresh Phase 0 drafts for B10 (W3 materialized views, with a compute_blended_pnl() SQL function to verify PnL continuity through the cutover) and B11 (adjacent Wave 3 scope), and B12 (Redis Streams transport) R1 is still open. B2's T+48h post-deploy canary is dispatched for ~01:22 UTC tonight, B3's at ~02:25 UTC. The whole backlog is bottlenecked on VIGIL.
 
-On the same sweep Guardian approved B12 (Redis Streams — the message bus between the decomposed services) with four advisory notes, one of which is worth knowing: Redis here is transport only, not storage, so PostgreSQL stays authoritative. Separately, Forge escalated a new question for Mike on C2 (signal confidence handling) — Q-HH-5: for signals that land below the configured confidence threshold, does the system hard-reject them from the live lifecycle, or does it soft-flag them as provisional into a review queue? Forge recommends soft-flag-provisional. This is a genuine product decision, not a Hermes-ops call, so it's parked for Mike.
+Guardian came back on B9 and APPROVED the R2 revision — both critical-tier R1 blockers are resolved: the write-guard now uses a 3-tier column classification so engine.py's live-price UPDATEs don't get blanket-blocked, and Anvil added a reconcile_w1.py gate that requires 14 consecutive reconciliation PASSes plus at least 10 sample signals before Phase 2 can cut over. B9 is now waiting on VIGIL's R2 alongside the other four. Separately, Forge resolved Q-HH-5 on C2 (signal confidence handling) without parking it on Mike — below-threshold signals will pass through as PROVISIONAL with dashboard and API visibility, no hard-reject path, per Forge's original recommendation. One fewer Mike-gate open as of this update.
 
-Housekeeping hasn't moved since the last update: the same five PRs (A11 #133, B1 #149 and #21, B2 #24, B5 #25) are still carrying the 24h-no-review flag, and Vigil hasn't come back for round two. Anvil and Forge are both still warm. A10's 48h canary window closes at 18:29 UTC and remains the next scheduled event.
+Housekeeping hasn't budged: the same five PRs (A11 #133, B1 #149 and #21, B2 #24, B5 #25) are still flagged for 24-hour-no-review, all waiting on Vigil. OinXtractor's quality monitor stays WARNING — 100% unknown-rate across both 24h and 7d windows — but OinkV's fresh spot-audit confirms this reads as instrumentation-definition drift, not the extractor itself failing. Next real events are the two canary close-outs overnight (B2 01:22 UTC, B3 02:25 UTC); after that, Vigil's review queue is the gating path for Phase B Wave 2 to advance.
 
 ## Where We Are Today (one paragraph)
 
