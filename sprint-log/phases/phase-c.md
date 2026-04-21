@@ -39,7 +39,6 @@ _No waves yet for this phase._
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 21, 17:05 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_fla |
-| Apr 20, 23:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 
 ## Needs Mike (open gates)
 
