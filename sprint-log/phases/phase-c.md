@@ -48,7 +48,7 @@ _No waves yet for this phase._
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 11m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 |
+| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 22m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 |
 
 ---
 

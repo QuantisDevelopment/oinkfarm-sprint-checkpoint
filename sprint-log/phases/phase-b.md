@@ -71,9 +71,9 @@
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.6h | fixed_date · slo_gated_7day |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.6h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
-| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 9m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover |
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.8h | fixed_date · slo_gated_7day |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.8h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
+| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 20m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover |
 
 ---
 

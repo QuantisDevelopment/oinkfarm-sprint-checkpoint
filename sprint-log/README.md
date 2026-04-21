@@ -4,17 +4,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 531
-- **Last 24h:** 214 (rate 8.92/h)
+- **Total events:** 534
+- **Last 24h:** 216 (rate 9.0/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (19 events)
+### Last 1 hour (21 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
@@ -28,12 +30,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 | Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
-| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
-| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
 
-### Last 4 hours (43 events)
+### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
@@ -47,12 +49,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 | Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
-| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
-| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
 
-### Last 24 hours (214 events)
+### Last 24 hours (216 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
 | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
@@ -66,37 +68,35 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 | Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
-| Apr 22, 00:18 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
-| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.6h | fixed_date · slo_gated_7day | phase-b |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.6h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table | phase-b |
-| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 11m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 | generic |
-| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 9m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover | generic |
+| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 1.8h | fixed_date · slo_gated_7day | phase-b |
+| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 1.8h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table | phase-b |
+| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 22m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 | generic |
+| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 20m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover | generic |
 
 ## 🔍 Missing evidence
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 55.6h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (7.3h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (4.2h) |
+| 🟠 WARN | `A11` | PR_OPENED 55.8h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (7.5h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (4.4h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 86 |
-| 🐷 **OinkV** | Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 50 |
+| 🪽 **Hermes** | Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 87 |
+| 🐷 **OinkV** | Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 51 |
 | 🛡️ **GUARDIAN** | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `Heartbeat 22:20Z — All 4 tasks dispatched` | 🟢 fresh | 123 |
 | ⚒️ **ANVIL** | Apr 22, 00:22 CEST | `SPRINT_NOTE` | `B12` | 🟢 fresh | 115 |
 | 🔥 **FORGE** | Apr 22, 00:20 CEST | `SPRINT_NOTE` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 81 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🟡 1–3h | 3 |
-| 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🔴 stale | 55 |
+| 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🔴 stale | 56 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -211,4 +211,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*16/50 tasks DONE · Last auto-regenerated: 00:30 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/50 tasks DONE · Last auto-regenerated: 00:41 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
