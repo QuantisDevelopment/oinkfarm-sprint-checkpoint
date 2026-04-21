@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 355
-- **Last 24h:** 118 (rate 4.92/h)
+- **Total events:** 361
+- **Last 24h:** 123 (rate 5.12/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (21 events)
+### Last 1 hour (27 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl |
+| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
+| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
 | Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B2` | vigil | B2 review by vigil — PASS (9.6) |
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B7` | vigil | B7 review by vigil — PASS (10.0) |
@@ -24,16 +30,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
-| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi |
-| Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh |
-| Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
-| Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
-| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a |
-| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc |
 
-### Last 4 hours (25 events)
+### Last 4 hours (30 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl |
+| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
+| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
 | Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B2` | vigil | B2 review by vigil — PASS (9.6) |
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B7` | vigil | B7 review by vigil — PASS (10.0) |
@@ -43,16 +49,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
-| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi |
-| Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh |
-| Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
-| Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
-| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a |
-| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc |
 
-### Last 24 hours (118 events)
+### Last 24 hours (123 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on recent Vigil output: ISSUE10-VIGIL-PHASE1-REVIEW is still baseline-strong, not a regression. It is specific, evidence-backed,  |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state from the latest metrics artifact (2026-04-21T10:23:10Z): latency proxy remains acceptable and is improving |
+| Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 update: the original design blocker is still unresolved. Runtime still has no working per-agent session-history cap for OinXtractor. Gl |
+| Apr 21, 12:25 CEST | `SPRINT_NOTE` | `B2` | forge | FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit  |
+| Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | forge | B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post- |
 | Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B2` | vigil | B2 review by vigil — PASS (9.6) |
 | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `B7` | vigil | B7 review by vigil — PASS (10.0) |
@@ -62,16 +68,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 12:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit of recent Vigil review: B7 Phase 1 remains a strong baseline-quality review, not a regression. The writeup is evidence-dense, cit |
 | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `—` | oinkv | Current OinXtractor quality state: latest metrics artifact timestamp is 2026-04-21T10:02:10Z. Latency proxy still looks acceptable, with 24h |
-| Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | oinkv | A171 status update: the original blocker is still unresolved at design level. Confirmed runtime behavior is unchanged from the earlier findi |
-| Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh |
-| Apr 21, 12:08 CEST | `PROPOSAL_READY` | `B4` | anvil | B4 proposal ready |
-| Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | anvil | Sprint poke response: Zero REVISE verdicts pending — all old REVISE items (A4/A10/B2/B3) subsequently resolved with PASS. B6 PR #29 awaiting |
-| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit on Vigil: there are still no newly persisted review artifacts from the post-restart drain, so there is nothing real to score as a |
-| Apr 21, 12:05 CEST | `SPRINT_NOTE` | `—` | oinkv | OinXtractor monitoring check: routine artifact republishes are healthy and the latest quality artifacts refreshed at 12:02 local. The latenc |
 
 ## 🧭 Needs Mike
 
-_No open DECISION_NEEDED events._
+| Question ID | Question | Task | Age | Options | Gate |
+|---|---|---|---|---|---|
+| `Q-B2-6` | Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-review schema/migration deltas be committed and re-reviewed first? | `B2` | 8m | commit_deltas_and_re_review · ratify_current_local_candidate_as_exception · revert_to_reviewed_pr_17073d12_before_migration | phase-b |
 
 ## 🔍 Missing evidence
 
@@ -87,12 +89,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 12:23 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 50 |
+| 🪽 **Hermes** | Apr 21, 12:34 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 51 |
+| 🐷 **OinkV** | Apr 21, 12:33 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 11 |
+| 🔥 **FORGE** | Apr 21, 12:25 CEST | `DECISION_NEEDED` | `B2` | 🟢 fresh | 59 |
 | 🔍 **VIGIL** | Apr 21, 12:16 CEST | `REVIEW_POSTED` | `M10` | 🟢 fresh | 36 |
-| 🐷 **OinkV** | Apr 21, 12:10 CEST | `SPRINT_NOTE` | `A171` | 🟢 fresh | 8 |
 | 🛡️ **GUARDIAN** | Apr 21, 12:09 CEST | `AGENT_HEARTBEAT` | `Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh` | 🟢 fresh | 94 |
 | ⚒️ **ANVIL** | Apr 21, 12:08 CEST | `SPRINT_NOTE` | `B4` | 🟢 fresh | 92 |
-| 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -168,11 +170,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
+| 🔥 | FORGE | Technical Execution Planner |
+| 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -185,4 +187,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/29 tasks DONE · Last auto-regenerated: 12:23 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/29 tasks DONE · Last auto-regenerated: 12:34 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
