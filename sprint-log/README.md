@@ -4,24 +4,35 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 318
-- **Last 24h:** 154 (rate 6.42/h)
+- **Total events:** 319
+- **Last 24h:** 147 (rate 6.12/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (3 events)
+### Last 1 hour (2 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
+| Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+
+### Last 4 hours (7 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
 | Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
+| Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24  |
+| Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (28 events)
+### Last 24 hours (147 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forwar |
 | Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
@@ -36,26 +47,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
 | Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
-
-### Last 24 hours (154 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
-| Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 02:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | guardian | A2 canary PASS |
-| Apr 21, 02:07 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24  |
-| Apr 21, 01:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 21, 00:09 CEST | `CANARY_PASS` | `A3` | guardian | A3 canary PASS |
-| Apr 21, 00:01 CEST | `SPRINT_NOTE` | `—` | hermes | GUARDIAN came in hot in the last half hour and cleared two separate backlogs. First, the Phase B Wave 2 canary battery: B5 (emitter extracti |
-| Apr 20, 23:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 20, 23:32 CEST | `SPRINT_NOTE` | `A11` | guardian | Final lint disposition for PR #133: leave as backfill artifact / ignore for GUARDIAN. Evidence: no /home/oinkv/guardian-workspace/reviews/A1 |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A2` | guardian | A2 review by guardian — PASS (9.55) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A4` | guardian | A4 review by guardian — PASS (9.9) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A7` | guardian | A7 review by guardian — PASS (10.0) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A5` | guardian | A5 review by guardian — PASS (10.0) |
-| Apr 20, 23:32 CEST | `REVIEW_POSTED` | `A6` | guardian | A6 review by guardian — PASS (9.8) |
 
 ## 🧭 Needs Mike
 
@@ -77,8 +68,8 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 03:27 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 36 |
-| 🛡️ **GUARDIAN** | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | 🟢 fresh | 85 |
+| 🪽 **Hermes** | Apr 21, 04:13 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 37 |
+| 🛡️ **GUARDIAN** | Apr 21, 02:44 CEST | `CANARY_PASS` | `A2` | 🟡 1–3h | 85 |
 | ⚒️ **ANVIL** | Apr 20, 23:18 CEST | `SPRINT_NOTE` | `B4` | 🔴 stale | 89 |
 | 🔥 **FORGE** | Apr 20, 23:18 CEST | `TASK_PLANNED` | `—` | 🔴 stale | 57 |
 | 🐷 **OinkV** | Apr 20, 22:57 CEST | `SPRINT_NOTE` | `A171` | 🔴 stale | 2 |
@@ -173,4 +164,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*13/27 tasks DONE · Last auto-regenerated: 03:27 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*13/27 tasks DONE · Last auto-regenerated: 04:16 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 00:06 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 02:14 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,9 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet stretch overnight — no new events in the last 90 minutes. The real signal right now is review debt: four PRs are sitting more than 24 hours without a review from Vigil. A11 (pr=133) on the A-phase work, and B1 (the dedup groundwork, at pr=149, pr=9, and pr=21) has three of its own parked. Vigil's last review landed about 16.5 hours ago, so the reviewer agent is the bottleneck, not the authors.
+Still quiet overnight. Guardian cleared A2's post-deploy canary (the partial-close PnL fix) around 02:44 CEST, which is the only real forward motion since the last check-in two hours ago. Everything else is parked.
 
-The rest of the pool isn't stuck, just paused. Anvil filed a sprint note and Forge planned a task around three hours ago, and Guardian's post-deploy monitoring came back clean about two hours back. OinkV has gone silent for roughly three hours. Nothing urgent, nothing blocked — but if Vigil stays quiet through the morning, those four PRs turn into a drag on everything downstream.
+The review debt has grown from four PRs to seven. A11 (pr=133), B1's dedup groundwork (pr=149, 9, 21), and now B2's PostgreSQL schema + migration (pr=153, 11, 24) are all sitting more than 24 hours without a Vigil review. Vigil's last review landed roughly nineteen hours ago — that's a long enough gap that the reviewer agent, not the coders, is now the constraint on every next merge.
+
+Anvil and Forge have also quieted down — about five hours since either posted. Guardian is the only tier still ticking. Nothing is technically blocked yet, but if Vigil stays offline through the morning the whole pipeline starts to back up behind it.
 
 ## Where We Are Today (one paragraph)
 
