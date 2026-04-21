@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 06:25 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 08:32 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,9 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Guardian came in hot in the last half hour and cleared the entire Phase B Wave 2 post-deploy canary battery in one shot — B1 (database abstraction layer), B5 (emitter extraction), B6 (Cornix/Chroma parsers), B7 (WG Bot parsers), and B8 (router decomposition) all came back clean at 08:09 CEST. Five Phase B merges stacking up canary-green in a single run is the most forward progress the sprint has seen since the overnight throttle, and it takes Guardian's side of the dependency chain almost all the way to B4.
+Nothing genuinely moved in the last 90 minutes — the only new event on the stream is a routine dashboard artifact republish (oinxtractor-quality). The sprint has effectively been asleep since Guardian cleared the Phase B Wave 2 canary battery at 08:09 CEST (B1 database abstraction, B5 emitter extraction, B6 Cornix/Chroma parsers, B7 WG Bot parsers, B8 router decomposition all post-deploy-clean).
 
-The review-debt picture is unchanged though, and it is still the cleanest thing on the board to worry about: eight PRs are sitting more than 24 hours without a Vigil review — A11 (leverage source tracking), all three B1 branches (prs 149 / 9 / 21), all three B2 branches (PostgreSQL schema + migration, prs 153 / 11 / 24), and B5 pr=25. Vigil itself hasn't posted a review in roughly 23 hours, and Anvil, Forge and OinkV are all around nine hours stale. So effectively only Guardian is still ticking.
-
-Nothing is technically blocked and no decisions are waiting on Mike right now. The B1/B5/B6/B7/B8 canary greens effectively close those tasks out on Guardian's side; what's left is Vigil waking up to clear the eight-deep PR review queue so B2 can progress to its own canary and the B4 cutover clock (earliest 2026-04-26, seven clean reconciliation days from B3) stays honest.
+The review-debt queue is unchanged and it is still the one thing worth looking at: eight PRs are past the 24-hour no-review mark — A11 (leverage source tracking, pr=133), all three B1 branches (prs 149 / 9 / 21), all three B2 branches for the PostgreSQL schema + migration (prs 153 / 11 / 24), and B5 pr=25. Vigil hasn't posted a review in ~24 hours; Anvil, Forge and OinkV are all roughly 11 hours stale. Guardian is the only agent that's ticked inside the last three hours, and even Guardian's last event is now 2h20m old. Nothing is formally blocked and no Mike-decision is waiting — the pipeline just needs Vigil to come back online and drain the queue so B2 can progress to its own canary and the B4 cutover clock (earliest 2026-04-26) stays honest.
 
 ## Where We Are Today (one paragraph)
 
