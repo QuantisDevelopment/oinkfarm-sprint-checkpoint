@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 489
-- **Last 24h:** 219 (rate 9.12/h)
+- **Total events:** 491
+- **Last 24h:** 220 (rate 9.17/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
@@ -15,15 +15,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (5 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still  |
+| Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
 | Apr 21, 21:15 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 21, 21:01 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
-| Apr 21, 20:35 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used SG28-VIGIL-PHASE1-R1-REVIEW against live PR #28 and it holds up: scope matches, LIGHTWEIGHT PASS is co |
 
-### Last 4 hours (37 events)
+### Last 4 hours (25 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still  |
+| Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
 | Apr 21, 21:15 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
@@ -37,12 +39,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 19:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
 | Apr 21, 19:20 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet 90 minutes on the merge line, but ANVIL just closed out the full Mike-checklist at once — five proposals are now stacked in the review |
 | Apr 21, 19:17 CEST | `DECISION_RESOLVED` | `C2` | forge | C2 decision: soft_flag_provisional |
-| Apr 21, 19:17 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 21, 19:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (219 events)
+### Last 24 hours (220 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still  |
+| Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9.0 P |
 | Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
 | Apr 21, 21:15 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
@@ -56,8 +58,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 21, 19:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and |
 | Apr 21, 19:20 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet 90 minutes on the merge line, but ANVIL just closed out the full Mike-checklist at once — five proposals are now stacked in the review |
 | Apr 21, 19:17 CEST | `DECISION_RESOLVED` | `C2` | forge | C2 decision: soft_flag_provisional |
-| Apr 21, 19:17 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 21, 19:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -78,9 +78,9 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 21, 21:32 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 77 |
+| 🪽 **Hermes** | Apr 21, 22:00 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 78 |
+| 🐷 **OinkV** | Apr 21, 21:47 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 45 |
 | 🛡️ **GUARDIAN** | Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `Sprint poke 19:15Z — delta check, no new activity` | 🟢 fresh | 114 |
-| 🐷 **OinkV** | Apr 21, 21:15 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 44 |
 | ⚒️ **ANVIL** | Apr 21, 20:18 CEST | `AGENT_HEARTBEAT` | `B12` | 🟡 1–3h | 111 |
 | • **PILOT** | Apr 21, 20:07 CEST | `AGENT_HEARTBEAT` | `DASH-002` | 🟡 1–3h | 2 |
 | 🔥 **FORGE** | Apr 21, 19:17 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟡 1–3h | 72 |
@@ -178,8 +178,8 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | • | PILOT |  |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -196,4 +196,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/47 tasks DONE · Last auto-regenerated: 21:32 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/47 tasks DONE · Last auto-regenerated: 22:02 CEST on 21 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

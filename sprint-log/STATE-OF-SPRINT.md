@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 17:21 UTC · Read time: ~8 min*
+*Last updated: 2026-04-21 20:00 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet 90 minutes on the merge line, but ANVIL just closed out the full Mike-checklist at once — five proposals are now stacked in the review queue. B4 R2 (the PostgreSQL cutover) is back in, B9 R2 (W1 immutable signal records — the INSERT-only guard that anchors the data-truth rebuild) is re-submitted after Guardian's R1 request-for-changes, plus fresh Phase 0 drafts for B10 (W3 materialized views, with a compute_blended_pnl() SQL function to verify PnL continuity through the cutover) and B11 (adjacent Wave 3 scope), and B12 (Redis Streams transport) R1 is still open. B2's T+48h post-deploy canary is dispatched for ~01:22 UTC tonight, B3's at ~02:25 UTC. The whole backlog is bottlenecked on VIGIL.
+Quiet stretch — the merge line hasn't moved since the 17:20 scribe post, which is the story here more than any single event. ANVIL is still sitting on its two finished proposals for B10 and B11 (the remaining retention + emit-stream work) waiting for Mike's approval, and has switched over to drafting B12 (proposal phase). No one has merged anything in the last ~2.5 hours and the forced heartbeat is really just confirming the sprint is idling on human-decision gates, not technical blockers.
 
-Guardian came back on B9 and APPROVED the R2 revision — both critical-tier R1 blockers are resolved: the write-guard now uses a 3-tier column classification so engine.py's live-price UPDATEs don't get blanket-blocked, and Anvil added a reconcile_w1.py gate that requires 14 consecutive reconciliation PASSes plus at least 10 sample signals before Phase 2 can cut over. B9 is now waiting on VIGIL's R2 alongside the other four. Separately, Forge resolved Q-HH-5 on C2 (signal confidence handling) without parking it on Mike — below-threshold signals will pass through as PROVISIONAL with dashboard and API visibility, no hard-reject path, per Forge's original recommendation. One fewer Mike-gate open as of this update.
+The one soft concern is VIGIL's review queue: her last review posted at 15:59 UTC (four hours ago), and there's a small pile of older PRs — A11 (#133), B1 (#149/#21), B2 (#24), B5 (#25) — that the lint flags as never having had a formal REVIEW_POSTED event attached. Most of those are likely backfill artifacts from earlier sprint phases rather than real review debt, but worth noting so it doesn't fester. FORGE's heartbeat is also right at the 3h stale boundary since its C2 decision resolve at 17:17 UTC.
 
-Housekeeping hasn't budged: the same five PRs (A11 #133, B1 #149 and #21, B2 #24, B5 #25) are still flagged for 24-hour-no-review, all waiting on Vigil. OinXtractor's quality monitor stays WARNING — 100% unknown-rate across both 24h and 7d windows — but OinkV's fresh spot-audit confirms this reads as instrumentation-definition drift, not the extractor itself failing. Next real events are the two canary close-outs overnight (B2 01:22 UTC, B3 02:25 UTC); after that, Vigil's review queue is the gating path for Phase B Wave 2 to advance.
+Background churn is fine: GUARDIAN continues the B3 daily reconciliation, OinkV is running its spot-audit loop against the earlier OF181/SG28 review artifacts and finding them clean, PILOT is still waiting on review for DASH-002, and Hermes keeps republishing the Oinxtractor quality metrics. Nothing on fire — just needs Mike (or Dominik) to unblock the B10/B11 proposal queue when they're back.
 
 ## Where We Are Today (one paragraph)
 
