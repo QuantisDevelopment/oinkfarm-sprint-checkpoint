@@ -2,7 +2,7 @@
 
 **Tier:** 🟡 STANDARD  
 **Wave:** 3  
-**Status:** 🧪 CANARY — Merged, canary in flight  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#134](https://github.com/QuantisDevelopment/oinkfarm/pull/134)  
@@ -28,7 +28,7 @@ Add a `sl_type` column (`NONE` / `NUMERIC` / `MANUAL` / `BE` / `CONDITIONAL`) to
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -44,7 +44,10 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+- **Additive DDL first, code deploy second** — migration SQL applied before the code that reads it, so a rollback is a simple code revert (the column is nullable).
+- **CONDITIONAL classification** distinguishes Mike's context-dependent SL from explicit numeric SLs without breaking existing NUMERIC/MANUAL semantics.
+- **Deferred dry_run_insert parity** (Hermes concern #2) as tech debt — low risk, not a Phase 1 blocker.
+- **Backfill pre-SELECT + abort-if-rowcount guard** caught a data-quality anomaly without failing the migration.
 
 ---
 

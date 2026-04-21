@@ -2,7 +2,7 @@
 
 **Tier:** 🔴 CRITICAL — Financial Hotpath from inception  
 **Wave:** 2  
-**Status:** 🧪 CANARY — Merged, canary in flight  
+**Status:** ✅ DONE — Shipped, canary PASS  
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [oinkfarm#130](https://github.com/QuantisDevelopment/oinkfarm/pull/130) + [signal-gateway#130](https://github.com/QuantisDevelopment/signal-gateway/pull/130)  
@@ -27,7 +27,7 @@ UPDATE→NEW Detection (Phantom Trade Prevention) — see plan for details.
 
 ## Key Decisions
 
-_(Pending — will be distilled after merge.)_
+_(No structured decision list extractable from merge artifacts — see the MERGED marker + FORGE plan for decision trail.)_
 
 ## Deferrals (Follow-up Tasks)
 
@@ -42,7 +42,7 @@ _None._
 
 ## Lessons Learned
 
-_(Written after canary verdict.)_
+_(Lessons distilled at wave close.)_
 
 ---
 
