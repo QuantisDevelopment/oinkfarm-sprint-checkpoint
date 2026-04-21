@@ -6,7 +6,7 @@
 **Repo target:** oink-sync  
 **Branch:** —  
 **PR:** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)  
-**Merge commit:** —
+**Merge commit:** [e9be741a7a0c](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a)
 
 ## In plain English
 
@@ -44,6 +44,7 @@ _None._
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A4.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A4.md) — 13.1 KB
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW.md) · [Phase 0 R1](../../raw-artifacts/guardian/reviews/A4-GUARDIAN-PHASE0-REVIEW-R1.md)
 - **Backfill log:** [A4-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A4-BACKFILL-LOG.md)
+- **Merge commit:** [`e9be741a7a0c`](https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a) (oink-sync PR #7)
 - **PR(s):** [oink-sync#7](https://github.com/QuantisDevelopment/oink-sync/pull/7)
 
 ## Lessons Learned
