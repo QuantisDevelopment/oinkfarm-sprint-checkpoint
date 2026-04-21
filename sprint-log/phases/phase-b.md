@@ -21,10 +21,10 @@
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 22, 00:45 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
-| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | 📝 PROPOSAL REVIEW | — | — | Apr 22, 00:22 CEST · `PROPOSAL_READY` | anvil · forge · guardian · hermes |
+| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 22, 01:06 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 00:02 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian |
-| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 00:02 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian |
-| [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 22, 00:22 CEST · `PROPOSAL_READY` | anvil · forge · guardian · hermes |
+| [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 01:03 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
+| [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 22, 01:06 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
 
@@ -36,6 +36,26 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: expand_guard_block_phase1_until_proof |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: constrain_shadow_to_2_topics_until_b15 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: require_contract_valid_for_lifecycle_and_validation |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
+| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
+| Apr 22, 01:03 CEST | `PROPOSAL_READY` | `M189` | anvil | M189 proposal ready |
+| Apr 22, 01:03 CEST | `TASK_PLANNED` | `B11` | forge | B11 plan published |
+| Apr 22, 01:03 CEST | `DECISION_NEEDED` | `B9` | forge | B9 Mike gate: Expand B9 mutation guard from OinkConnection.execute() only to all write surfaces (cursor.execute, executemany, wrapper/cursor |
+| Apr 22, 01:03 CEST | `DECISION_NEEDED` | `B12` | forge | B12 Mike gate: B12 shadow-mode publishes 8 topics vs ratified B12 plan's 2 topics. Ratify scope expansion, or constrain shadow to 2 topics u |
+| Apr 22, 01:03 CEST | `DECISION_NEEDED` | `B12` | forge | B12 Mike gate: Shadow publish_to_stream logs schema failure then publishes anyway. For topics informing B11/B12 consumer design (lifecycle.e |
+| Apr 22, 00:59 CEST | `DECISION_RESOLVED` | `B11` | hermes | B11 decision: slo_gated_7day |
+| Apr 22, 00:59 CEST | `DECISION_RESOLVED` | `B11` | hermes | B11 decision: signal_events_with_null_signal_id |
+| Apr 22, 00:59 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: pre_align_phase1_with_b11_v2_schema |
 | Apr 22, 00:46 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke processed. State: (1) No REVISE on any anvil PR - checked last 8h of REVIEW_POSTED; only REVISE verdicts are against memory-wiki |
 | Apr 22, 00:45 CEST | `MERGED` | `B6` | anvil | B6 merged via PR #None @ace226e |
 | Apr 22, 00:45 CEST | `STATUS_CHANGED` | `B6` | anvil | B6 NOT_STARTED → CANARY |
@@ -46,34 +66,10 @@
 | Apr 22, 00:22 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint checkpoint 1/4. TASK 1 B4 runbook v1.1 complete (rowcount baseline T-15min + pre/post verify T+5min + first-10-signal canary |
 | Apr 22, 00:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:14Z — TASK-189 TIER-1 subset written, B2/B3 close-outs pending |
 | Apr 22, 00:20 CEST | `DECISION_NEEDED` | `M189` | forge | M189 Mike gate: Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, |
-| Apr 22, 00:20 CEST | `SPRINT_NOTE` | `—` | forge | FORGE checked anvil-workspace/proposals/ for TASK-B12-shadow-proposal.md per Mike 2026-04-22 00:12 poke. Only B12-PHASE0-PROPOSAL.md (2-topi |
-| Apr 22, 00:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:57Z — B10 + B11 Phase 0 APPROVED, TASK-189 approved earlier |
-| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B10` | guardian | B10 proposal approved by guardian |
-| Apr 22, 00:02 CEST | `PROPOSAL_APPROVED` | `B11` | guardian | B11 proposal approved by guardian |
-| Apr 21, 23:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 21:05Z — TASK-189 Phase 0 APPROVED (CRITICAL, 4-hour SLA met in ~4min) |
-| Apr 21, 23:05 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
-| Apr 21, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke 20:50Z — all MERGED covered, B2 canary open, ISSUE-189 audit shipped |
-| Apr 21, 22:52 CEST | `TASK_PLANNED` | `B11` | forge | B11 plan published |
-| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecuti |
-| Apr 21, 22:52 CEST | `DECISION_NEEDED` | `B11` | forge | B11 Mike gate: Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? |
-| Apr 21, 22:51 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — ISSUE-189: Full backfill candidate scan — 143 candidates found (10.7x Hermes preliminary) |
-| Apr 21, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | Issue #189 filed: SL-to-BE moves rejected by micro-gate B14, causing 11+ trades to log as CLOSED_LOSS when actually stopped flat. Forensic c |
-| Apr 21, 21:16 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity |
-| Apr 21, 20:18 CEST | `AGENT_HEARTBEAT` | `B12` | anvil | anvil heartbeat — B12 |
-| Apr 21, 19:41 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking |
-| Apr 21, 19:12 CEST | `SPRINT_NOTE` | `B10` | anvil | SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase  |
-| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
-| Apr 21, 19:12 CEST | `PROPOSAL_READY` | `B11` | anvil | B11 proposal ready |
-| Apr 21, 19:10 CEST | `PROPOSAL_READY` | `B10` | anvil | B10 proposal ready |
-| Apr 21, 18:00 CEST | `AGENT_HEARTBEAT` | `B9` | guardian | guardian heartbeat — B9 R2 Phase 0 APPROVED; awaiting VIGIL R2 review |
 
 ## Needs Mike (open gates)
 
-| Question ID | Question | Task | Age | Options |
-|---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 2.0h | fixed_date · slo_gated_7day |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 2.0h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table |
-| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 34m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover |
+_No open DECISION_NEEDED for this phase._
 
 ---
 

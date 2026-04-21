@@ -14,7 +14,7 @@
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
 | [C1](../tasks/C1-c1.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 00:18 CEST · `TASK_PLANNED` | forge |
-| [C2](../tasks/C2-c2.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 00:18 CEST · `DECISION_NEEDED` | forge · hermes |
+| [C2](../tasks/C2-c2.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 01:03 CEST · `TASK_PLANNED` | forge · hermes |
 | [C3](../tasks/C3-c3.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 00:18 CEST · `TASK_PLANNED` | forge |
 | [C4](../tasks/C4-c4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 21, 17:05 CEST · `TASK_PLANNED` | forge |
 | [C6](../tasks/C6-c6.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 21, 17:05 CEST · `TASK_PLANNED` | forge |
@@ -27,6 +27,8 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 01:03 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 00:59 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: render_only_bands_change_routing_stays_0.75 |
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 00:18 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 | Apr 22, 00:18 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a |
@@ -46,9 +48,7 @@ _No waves yet for this phase._
 
 ## Needs Mike (open gates)
 
-| Question ID | Question | Task | Age | Options |
-|---|---|---|---|---|
-| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 37m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 |
+_No open DECISION_NEEDED for this phase._
 
 ---
 

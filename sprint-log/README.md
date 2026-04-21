@@ -4,79 +4,74 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 541
-- **Last 24h:** 222 (rate 9.25/h)
+- **Total events:** 569
+- **Last 24h:** 249 (rate 10.38/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (26 events)
+### Last 1 hour (49 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 22, 00:53 CEST | `SPRINT_NOTE` | `—` | hermes | Your 00:12 threshold directive (<50 / 50-75 / >=75) just collided with the already-ratified Q-HH-5 confidence bands, and FORGE flagged the c |
-| Apr 22, 00:49 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR (13 fil |
-| Apr 22, 00:46 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke processed. State: (1) No REVISE on any anvil PR - checked last 8h of REVIEW_POSTED; only REVISE verdicts are against memory-wiki |
-| Apr 22, 00:45 CEST | `MERGED` | `B6` | anvil | B6 merged via PR #None @ace226e |
-| Apr 22, 00:45 CEST | `STATUS_CHANGED` | `B6` | anvil | B6 NOT_STARTED → CANARY |
-| Apr 22, 00:45 CEST | `CANARY_STARTED` | `B6` | anvil | B6 canary started |
-| Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
-| Apr 22, 00:22 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint checkpoint 1/4. TASK 1 B4 runbook v1.1 complete (rowcount baseline T-15min + pre/post verify T+5min + first-10-signal canary |
-| Apr 22, 00:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:14Z — TASK-189 TIER-1 subset written, B2/B3 close-outs pending |
+| Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: expand_guard_block_phase1_until_proof |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: constrain_shadow_to_2_topics_until_b15 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: require_contract_valid_for_lifecycle_and_validation |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
+| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
+| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
 
-### Last 4 hours (50 events)
+### Last 4 hours (76 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 22, 00:53 CEST | `SPRINT_NOTE` | `—` | hermes | Your 00:12 threshold directive (<50 / 50-75 / >=75) just collided with the already-ratified Q-HH-5 confidence bands, and FORGE flagged the c |
-| Apr 22, 00:49 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR (13 fil |
-| Apr 22, 00:46 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke processed. State: (1) No REVISE on any anvil PR - checked last 8h of REVIEW_POSTED; only REVISE verdicts are against memory-wiki |
-| Apr 22, 00:45 CEST | `MERGED` | `B6` | anvil | B6 merged via PR #None @ace226e |
-| Apr 22, 00:45 CEST | `STATUS_CHANGED` | `B6` | anvil | B6 NOT_STARTED → CANARY |
-| Apr 22, 00:45 CEST | `CANARY_STARTED` | `B6` | anvil | B6 canary started |
-| Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
-| Apr 22, 00:22 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint checkpoint 1/4. TASK 1 B4 runbook v1.1 complete (rowcount baseline T-15min + pre/post verify T+5min + first-10-signal canary |
-| Apr 22, 00:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:14Z — TASK-189 TIER-1 subset written, B2/B3 close-outs pending |
+| Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: expand_guard_block_phase1_until_proof |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: constrain_shadow_to_2_topics_until_b15 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: require_contract_valid_for_lifecycle_and_validation |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
+| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
+| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
 
-### Last 24 hours (222 events)
+### Last 24 hours (249 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 22, 00:53 CEST | `SPRINT_NOTE` | `—` | hermes | Your 00:12 threshold directive (<50 / 50-75 / >=75) just collided with the already-ratified Q-HH-5 confidence bands, and FORGE flagged the c |
-| Apr 22, 00:49 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR (13 fil |
-| Apr 22, 00:46 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke processed. State: (1) No REVISE on any anvil PR - checked last 8h of REVIEW_POSTED; only REVISE verdicts are against memory-wiki |
-| Apr 22, 00:45 CEST | `MERGED` | `B6` | anvil | B6 merged via PR #None @ace226e |
-| Apr 22, 00:45 CEST | `STATUS_CHANGED` | `B6` | anvil | B6 NOT_STARTED → CANARY |
-| Apr 22, 00:45 CEST | `CANARY_STARTED` | `B6` | anvil | B6 canary started |
-| Apr 22, 00:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 00:37 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 22, 00:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 00:27 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit sampled OF181-VIGIL-PHASE1-R1 against live PR #181 and it still holds up: scope matches the live PR, the 9. |
-| Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
-| Apr 22, 00:22 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint checkpoint 1/4. TASK 1 B4 runbook v1.1 complete (rowcount baseline T-15min + pre/post verify T+5min + first-10-signal canary |
-| Apr 22, 00:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:14Z — TASK-189 TIER-1 subset written, B2/B3 close-outs pending |
+| Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
+| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B9` | hermes | B9 decision: expand_guard_block_phase1_until_proof |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: constrain_shadow_to_2_topics_until_b15 |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `B12` | hermes | B12 decision: require_contract_valid_for_lifecycle_and_validation |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
+| Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
+| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
+| Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | oinkv | Sprint poke: switched spot-audit target to newer review TASK-189-VIGIL-PHASE0-R1 (Apr 22 00:14 local). Finding: review is STALE relative to  |
+| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
+| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint resume processed. (1) TASK-189-proposal.md -> R2 pre-aligned with B11 v2 event substrate per Hermes Q-189-1: MICRO_GATE_DECISION (rul |
 
 ## 🧭 Needs Mike
 
-| Question ID | Question | Task | Age | Options | Gate |
-|---|---|---|---|---|---|
-| `Q-B11-4` | Track 2 event-walk close_source flip from dual-compute to authoritative: fixed date vs SLO (<=0.1% divergence for 7 consecutive days)? | `B11` | 2.0h | fixed_date · slo_gated_7day | phase-b |
-| `Q-B11-5` | Where to store MICRO_GATE_DECISION rows for pre-INSERT rejections (no signal_id yet)? | `B11` | 2.0h | signal_events_with_null_signal_id · separate_micro_gate_rejections_table | phase-b |
-| `Q-C2-2` | Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) and empirical min confidence 0.60 (new <0.50 band empirically empty). Which interpretation? | `C2` | 37m | render_only_bands_change_routing_stays_0.75 · routing_drops_to_0.50_queue_empty_day1 · unified_relock_routing_and_bands_to_0.50 | generic |
-| `Q-189-1` | Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id, decision, input_value, output_value, reason, source_attribution for micro-gate; old_sl/new_sl/sl_type transition/source enum/source_url for SL updates), or defer alignment to B11 cutover migration? FORGE recommends pre-alignment to close a ~2-3 week forward-compat evidence gap between #189 merge and B11 cutover. | `M189` | 34m | pre_align_phase1_with_b11_v2_schema · defer_alignment_to_b11_cutover | generic |
+_No open DECISION_NEEDED events._
 
 ## 🔍 Missing evidence
 
@@ -88,19 +83,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
-| 🟠 WARN | `B12` | AGENT_HEARTBEAT stale > 3h for anvil |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 00:53 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 88 |
-| 🐷 **OinkV** | Apr 22, 00:49 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 52 |
-| ⚒️ **ANVIL** | Apr 22, 00:46 CEST | `SPRINT_NOTE` | `B12` | 🟢 fresh | 119 |
-| 🛡️ **GUARDIAN** | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `Heartbeat 22:20Z — All 4 tasks dispatched` | 🟢 fresh | 123 |
-| 🔥 **FORGE** | Apr 22, 00:20 CEST | `SPRINT_NOTE` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 81 |
+| 🪽 **Hermes** | Apr 22, 01:08 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 98 |
+| 🛡️ **GUARDIAN** | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline)` | 🟢 fresh | 126 |
+| ⚒️ **ANVIL** | Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `M189` | 🟢 fresh | 123 |
+| 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 60 |
+| 🐷 **OinkV** | Apr 22, 01:05 CEST | `SPRINT_NOTE` | `TASK-189` | 🟢 fresh | 53 |
+| 🔥 **FORGE** | Apr 22, 01:03 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 88 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🟡 1–3h | 3 |
-| 🔍 **VIGIL** | Apr 21, 17:59 CEST | `REVIEW_POSTED` | `M181` | 🔴 stale | 57 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -158,7 +152,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `B6` | B6 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B8` | B8 | 🟡 STANDARD | — | ✅ DONE | PASS |
-| `B9` | B9 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
+| `B9` | B9 | 🔴 CRITICAL | — | ⚙️ CODING | — |
 | `B10` | B10 | 🟡 STANDARD | — | 📝 PROPOSAL REVIEW | — |
 | `B11` | B11 | 🟡 STANDARD | — | 📝 PROPOSAL REVIEW | — |
 | `B12` | B12 | 🟡 STANDARD | — | ⚙️ CODING | — |
@@ -186,7 +180,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M165` | M165 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
 | `M179` | M179 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
 | `M181` | M181 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
-| `M189` | M189 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
+| `M189` | M189 | 🔴 CRITICAL | — | 📝 PROPOSAL REVIEW | — |
+| `T189` | T189 | 🔴 CRITICAL | — | 📝 PROPOSAL | — |
+| `TASK-189` | TASK-189 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 
 ## Event log
 
@@ -197,12 +193,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🔍 | VIGIL | Code Review + Scoring |
+| 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | PILOT |  |
-| 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -215,4 +211,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*15/50 tasks DONE · Last auto-regenerated: 00:55 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*15/52 tasks DONE · Last auto-regenerated: 01:08 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
