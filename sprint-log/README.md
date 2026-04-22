@@ -4,17 +4,24 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 635
-- **Last 24h:** 308 (rate 12.83/h)
+- **Total events:** 642
+- **Last 24h:** 315 (rate 13.12/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (23 events)
+### Last 1 hour (25 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:50 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:49Z. Event scan since 02:31:44Z: 7 events, all informational. (1) VIGIL #189 R4: no verdict (~43min left on 03:32Z SLA) —  |
+| Apr 22, 04:49 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: B9-VIGIL-PHASE0-R3 still TRUSTWORTHY / APPROVE 9.15; no new review drift. OinXtractor metrics refreshed at 02:41:59Z with same e |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 04:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 04:38 CEST | `SPRINT_NOTE` | `—` | oinkv | Metrics regenerated at 02:30:47Z. p50_24h flat at 737.2s but p95_24h rose 22662.5s->38571.6s; p50_7d 4556.1s->5279.8s; p95_7d flat at 75151. |
 | Apr 22, 04:31 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:29Z. Event scan since 02:10:37Z: 8 events. (1) VIGIL #189 R4: still pending (~62min left on 03:32Z SLA); TASK 4 remains he |
@@ -23,17 +30,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:14Z note. No file changes, no metric changes, no config changes. B9-R3 TRUSTWORTHY, OinXtractor WARNING (100% unknown_ |
 | Apr 22, 04:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING_CRON |
 | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
-| Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
-| Apr 22, 04:10 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:07Z. Event scan since 01:54:17Z: 5 events — 2 anvil (B9 v3 filing), 1 guardian AGENT_HEARTBEAT (B2 T+48 PASS confirmed, b3 |
-| Apr 22, 04:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 02:04Z. Vigil spot-audit re-confirmed B9-VIGIL-PHASE0-R3 as TRUSTWORTHY (APPROVE 9.15; B9/B11 coupling still sound). OinXtractor |
-| Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING |
 
-### Last 4 hours (98 events)
+### Last 4 hours (100 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:50 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:49Z. Event scan since 02:31:44Z: 7 events, all informational. (1) VIGIL #189 R4: no verdict (~43min left on 03:32Z SLA) —  |
+| Apr 22, 04:49 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: B9-VIGIL-PHASE0-R3 still TRUSTWORTHY / APPROVE 9.15; no new review drift. OinXtractor metrics refreshed at 02:41:59Z with same e |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 04:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 04:38 CEST | `SPRINT_NOTE` | `—` | oinkv | Metrics regenerated at 02:30:47Z. p50_24h flat at 737.2s but p95_24h rose 22662.5s->38571.6s; p50_7d 4556.1s->5279.8s; p95_7d flat at 75151. |
 | Apr 22, 04:31 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:29Z. Event scan since 02:10:37Z: 8 events. (1) VIGIL #189 R4: still pending (~62min left on 03:32Z SLA); TASK 4 remains he |
@@ -42,17 +49,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:14Z note. No file changes, no metric changes, no config changes. B9-R3 TRUSTWORTHY, OinXtractor WARNING (100% unknown_ |
 | Apr 22, 04:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING_CRON |
 | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
-| Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
-| Apr 22, 04:10 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:07Z. Event scan since 01:54:17Z: 5 events — 2 anvil (B9 v3 filing), 1 guardian AGENT_HEARTBEAT (B2 T+48 PASS confirmed, b3 |
-| Apr 22, 04:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 02:04Z. Vigil spot-audit re-confirmed B9-VIGIL-PHASE0-R3 as TRUSTWORTHY (APPROVE 9.15; B9/B11 coupling still sound). OinXtractor |
-| Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING |
 
-### Last 24 hours (308 events)
+### Last 24 hours (315 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:50 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:49Z. Event scan since 02:31:44Z: 7 events, all informational. (1) VIGIL #189 R4: no verdict (~43min left on 03:32Z SLA) —  |
+| Apr 22, 04:49 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: B9-VIGIL-PHASE0-R3 still TRUSTWORTHY / APPROVE 9.15; no new review drift. OinXtractor metrics refreshed at 02:41:59Z with same e |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 04:46 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 04:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 04:38 CEST | `SPRINT_NOTE` | `—` | oinkv | Metrics regenerated at 02:30:47Z. p50_24h flat at 737.2s but p95_24h rose 22662.5s->38571.6s; p50_7d 4556.1s->5279.8s; p95_7d flat at 75151. |
 | Apr 22, 04:31 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:29Z. Event scan since 02:10:37Z: 8 events. (1) VIGIL #189 R4: still pending (~62min left on 03:32Z SLA); TASK 4 remains he |
@@ -61,13 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:14Z note. No file changes, no metric changes, no config changes. B9-R3 TRUSTWORTHY, OinXtractor WARNING (100% unknown_ |
 | Apr 22, 04:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING_CRON |
 | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
-| Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
-| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
-| Apr 22, 04:10 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:07Z. Event scan since 01:54:17Z: 5 events — 2 anvil (B9 v3 filing), 1 guardian AGENT_HEARTBEAT (B2 T+48 PASS confirmed, b3 |
-| Apr 22, 04:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 02:04Z. Vigil spot-audit re-confirmed B9-VIGIL-PHASE0-R3 as TRUSTWORTHY (APPROVE 9.15; B9/B11 coupling still sound). OinXtractor |
-| Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING |
 
 ## 🧭 Needs Mike
 
@@ -77,20 +77,20 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 59.8h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (11.5h) |
-| ⚪ INFO | `—` | agent pilot heartbeat stale (6.3h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (3.6h) |
+| 🟠 WARN | `A11` | PR_OPENED 60.0h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (11.7h) |
+| ⚪ INFO | `—` | agent pilot heartbeat stale (6.5h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (3.8h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 04:42 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 115 |
-| 🐷 **OinkV** | Apr 22, 04:38 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 66 |
-| ⚒️ **ANVIL** | Apr 22, 04:31 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 139 |
+| 🪽 **Hermes** | Apr 22, 04:53 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 116 |
+| ⚒️ **ANVIL** | Apr 22, 04:50 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 140 |
+| 🐷 **OinkV** | Apr 22, 04:49 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 67 |
+| 🔥 **FORGE** | Apr 22, 04:46 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 101 |
 | 🛡️ **GUARDIAN** | Apr 22, 04:29 CEST | `CANARY_PASS` | `B3_T48_AWAITING_CRON` | 🟢 fresh | 136 |
-| 🔥 **FORGE** | Apr 22, 04:13 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 97 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🔴 stale | 61 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -191,10 +191,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | PILOT |  |
 | • | mike |  |
@@ -209,4 +209,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/52 tasks DONE · Last auto-regenerated: 04:42 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/52 tasks DONE · Last auto-regenerated: 04:53 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
