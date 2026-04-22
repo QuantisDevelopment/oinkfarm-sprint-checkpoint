@@ -22,7 +22,7 @@
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
 | [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 22, 08:44 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
-| [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 08:48 CEST · `TASK_PLANNED` | anvil · forge · guardian |
+| [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 09:15 CEST · `TASK_PLANNED` | anvil · forge · guardian |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 01:03 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 22, 01:06 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 20, 23:18 CEST · `TASK_PLANNED` | forge · hermes |
@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 09:15 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 08:48 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
 | Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
@@ -65,7 +66,6 @@
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: block_phase1_until_shared_helper |
 | Apr 22, 01:06 CEST | `DECISION_RESOLVED` | `—` | hermes | — decision: require_immutable_corroboration_for_auto_backfill |
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
-| Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
 
 ## Needs Mike (open gates)
 
