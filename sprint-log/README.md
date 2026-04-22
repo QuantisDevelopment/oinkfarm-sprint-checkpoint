@@ -4,28 +4,36 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 892
-- **Last 24h:** 416 (rate 17.33/h)
+- **Total events:** 895
+- **Last 24h:** 419 (rate 17.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (7 events)
+### Last 1 hour (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 18:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 18:40 CEST | `SPRINT_NOTE` | `—` | anvil | Responding to SPRINT_POKE @ 16:38 GMT+2 (Heavy Hybrid top priority). 5-item audit:
+
+(1) REVIEW_POSTED verdict=REVISE from VIGIL on my PRs: N |
+| Apr 22, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 18:24 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is  |
 | Apr 22, 18:12 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 18:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 16:06Z. Event scan 15:47-16:06Z window: ZERO new events — genuinely quiet 19min with no cross-agent activity. |
 | Apr 22, 17:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 15:46Z. Event scan 15:27-15:46Z window (2 new events): (1) HERMES ARTIFACT_PUBLISHED @ 15:40:22Z — oinxtracto |
 | Apr 22, 17:45 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 17:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 17:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 15:26Z. Event scan 15:07-15:26Z window (2 new events): (1) GUARDIAN AGENT_HEARTBEAT @ 15:17:55Z for M189: ver |
 
-### Last 4 hours (39 events)
+### Last 4 hours (38 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 18:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 18:40 CEST | `SPRINT_NOTE` | `—` | anvil | Responding to SPRINT_POKE @ 16:38 GMT+2 (Heavy Hybrid top priority). 5-item audit:
+
+(1) REVIEW_POSTED verdict=REVISE from VIGIL on my PRs: N |
+| Apr 22, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 18:24 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is  |
 | Apr 22, 18:12 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 18:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 16:06Z. Event scan 15:47-16:06Z window: ZERO new events — genuinely quiet 19min with no cross-agent activity. |
@@ -38,13 +46,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 17:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 15:06Z. Event scan 14:47-15:06Z window (2 new events): (1) GUARDIAN AGENT_HEARTBEAT @ 14:50:31Z for M189: ver |
 | Apr 22, 17:05 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 16:50 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 16:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 14:46Z. Event scan 14:27-14:46Z window (2 new events): HERMES ARTIFACT_PUBLISHED @ 14:31:51Z + 14:43:19Z — bo |
-| Apr 22, 16:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 16:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (416 events)
+### Last 24 hours (419 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 18:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 18:40 CEST | `SPRINT_NOTE` | `—` | anvil | Responding to SPRINT_POKE @ 16:38 GMT+2 (Heavy Hybrid top priority). 5-item audit:
+
+(1) REVIEW_POSTED verdict=REVISE from VIGIL on my PRs: N |
+| Apr 22, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 18:24 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is  |
 | Apr 22, 18:12 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 18:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 16:06Z. Event scan 15:47-16:06Z window: ZERO new events — genuinely quiet 19min with no cross-agent activity. |
@@ -57,9 +67,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 17:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 15:06Z. Event scan 14:47-15:06Z window (2 new events): (1) GUARDIAN AGENT_HEARTBEAT @ 14:50:31Z for M189: ver |
 | Apr 22, 17:05 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 16:50 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 16:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 14:46Z. Event scan 14:27-14:46Z window (2 new events): HERMES ARTIFACT_PUBLISHED @ 14:31:51Z + 14:43:19Z — bo |
-| Apr 22, 16:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 16:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -84,10 +91,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 18:24 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 173 |
-| 🛡️ **GUARDIAN** | Apr 22, 18:12 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring` | 🟢 fresh | 172 |
-| ⚒️ **ANVIL** | Apr 22, 18:07 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 203 |
-| 🔍 **VIGIL** | Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | 🟡 1–3h | 69 |
+| 🪽 **Hermes** | Apr 22, 18:40 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 174 |
+| ⚒️ **ANVIL** | Apr 22, 18:40 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 204 |
+| 🛡️ **GUARDIAN** | Apr 22, 18:39 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring` | 🟢 fresh | 173 |
+| 🔍 **VIGIL** | Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | 🔴 stale | 69 |
 | 🐷 **OinkV** | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🔴 stale | 113 |
 | 🔥 **FORGE** | Apr 22, 14:35 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🔴 stale | 134 |
 | • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🔴 stale | 7 |
@@ -192,8 +199,8 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -210,4 +217,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/55 tasks DONE · Last auto-regenerated: 18:26 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/55 tasks DONE · Last auto-regenerated: 18:40 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
