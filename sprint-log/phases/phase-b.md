@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
 | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `M197` | forge | FORGE agrees with VIGIL REVISE 4.9 on M197 — no disagreement, no DECISION_NEEDED. Adding Phase C purity implication VIGIL did not escalate:  |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M197` | vigil | M197 review by vigil — REVISE (4.9) |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.7) |
@@ -65,7 +66,6 @@
 | Apr 22, 04:29 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
 | Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
 | Apr 22, 03:25 CEST | `CANARY_PASS` | `B2` | guardian | B2 canary PASS |
-| Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete |
 
 ## Needs Mike (open gates)
 
