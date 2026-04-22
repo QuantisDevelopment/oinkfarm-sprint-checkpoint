@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 20:47 UTC*
+*Last updated: 2026-04-22 23:11 UTC*
 
 ## The Mission (one paragraph)
 
@@ -8,12 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20:30 UTC: an M197 REVISE at 4.9 (the close-source upgrade fix for the OinXtractor — it needs to emit a signal_event when it upgrades a signal's source tier, otherwise B11's event-walk silently diverges from the legacy column) and an M152 PASS at 9.7 on round two, which means that OinXtractor-quality fix is cleared to merge. FORGE chimed in right after and backed VIGIL's M197 REVISE rather than escalating it as a disagreement — same call, with an added Phase C purity note. Net effect: no VIGIL outage to worry about anymore, one small OinXtractor fix ready to ship, and one queued for a second draft from ANVIL.
+The one real event in the last two hours: VIGIL self-corrected an M154 review it posted yesterday afternoon. M154 is the delayed-passthrough replay fix (PR #176). VIGIL's original Round-1 review on April 21 scored it 9.0 and labeled it PASS — but M154 is CRITICAL-tier, and under our own review rules that requires a 9.5-or-higher for a PASS. Tonight at 22:36 UTC VIGIL re-emitted the same review as REVISE with the same 9.0 score, citing the mislabel. Two concrete items came out of it: a must-fix on a module-import crash risk if the MICRO_GATE_STALE_INGEST_SECONDS env var is set to something non-integer, and a should-fix noting the replay false-positive policy needs your sign-off before M154 merges. So M154 is now correctly parked in REVISE rather than incorrectly sitting as PASS-ready.
 
-M189 (the stop-loss / breakeven-misclassification canary) is still where it was at the last update — APT #2606 hit its TP, ETH #2605 and AERO #2608 are still sitting as unfilled limits, so we're at 1 of 3 fills with zero false-breakeven misclassifications and zero P0/P1 alerts. GUARDIAN posted its on-time heartbeat at 20:27 UTC confirming that. The verdict window closes at 08:00 UTC tomorrow — roughly eleven and a half hours from now — and we still want at least one more fill before GUARDIAN has to rule. If ETH and AERO stay unfilled overnight, expect a "extend or call on thin evidence" question from GUARDIAN in the morning.
+Everything else is quiet. M189 (the stop-loss / breakeven-misclassification canary) is still at 1-of-3 fills — APT #2606 remains the only closed trade, ETH #2605 and AERO #2608 are still unfilled limits. GUARDIAN posted two more on-time canary heartbeats at 20:58Z and 22:49Z, both confirming zero merges-without-canary and no P0/P1 alerts. Verdict window closes in about nine hours (08:00 UTC). If ETH and AERO stay unfilled overnight, expect a GUARDIAN ask in the morning about whether to extend the window or call on thin evidence.
 
-ANVIL is now on its eighth consecutive "zero new events" parallel-sprint tick, which is the expected idle signal rather than a problem — there's genuinely nothing moving until M189 closes out or more reviews land. The one open decision parked on Mike is unchanged: serialize vs run AP-11 in parallel with B9 Phase 1; we're defaulting to serialize unless you say otherwise. Housekeeping stays the same — a handful of historical PR-metadata gaps (A11/B1/B2/B5) and B4 + M189 formally blocked on external dependencies (the B3 soak and the canary, respectively). Nothing needs you tonight.
-
+ANVIL is on its tenth-ish consecutive "no-change" idle tick — that's the expected idle pattern, not a problem. Nothing waiting on you tonight. The one open process flag is that VIGIL's self-correction on M154 is a good sign for review discipline but raises the question of whether other recent high-9s on CRITICAL-tier PRs should be re-audited against the 9.5 bar; I'll flag that for a morning check rather than chase it now.
 
 ## Where We Are Today (one paragraph)
 
