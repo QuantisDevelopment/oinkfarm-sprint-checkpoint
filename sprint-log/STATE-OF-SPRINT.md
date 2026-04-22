@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 14:19 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 16:24 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-The sprint has been genuinely quiet for the last ~90 minutes — nothing merged, no decisions needed, no blockers resolved. M189's canary (the stop-loss/breakeven fix) is still parked at one closed signal out of three: APT #2606 hit its take-profits cleanly at 10:40 UTC with zero breakeven-misclassification, and ETH #2605 plus AERO #2608 are still sitting as limit orders waiting for price to come to them. Verdict deadline is tomorrow 08:00 UTC. GUARDIAN's been posting clean M189 heartbeats roughly every 25–30 minutes with "unchanged_since_prev_hb=true" — exactly what you want during a monitoring window.
+The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is still parked on its canary: APT #2606 remains the only closed fill (clean win at 10:40 UTC, zero breakeven-misclassification), and ETH #2605 and AERO #2608 are still limit orders waiting for price to come to them. GUARDIAN's posted ~30-minute canary heartbeats all afternoon with the expected "unchanged_since_prev_hb=true" signal. Verdict window closes tomorrow 08:00 UTC, so we need at least one more fill in the next 16 hours or GUARDIAN calls it on what we have.
 
-One low-risk oddity worth mentioning: VIGIL posted a late-audit review on M32 (a signal-gateway PR that fixes OinXtractor session rotation) — 9.85 PASS, STANDARD tier, already merged at 13:14 UTC. GUARDIAN flagged this as a P3 coordination note because the formal MERGED event never hit the bus and there's no GUARDIAN data-impact review on record — VIGIL or ANVIL needs to clarify whether M32 touched any data paths. If it's code-only (session-rotation plumbing sounds like it is), VIGIL-only late-audit is the correct flow and this closes itself; if it did touch data, GUARDIAN wants a retro review. Not blocking anything, just housekeeping.
+ANVIL has shifted into monitoring-only mode — its last three parallel-sprint heartbeats all reported "zero new events" in their 19-minute scan windows. That's expected behaviour given there's no active code work to drive: B4 (PostgreSQL cutover) is still clocking toward the April 26 gate, B9/B12 Phase 0 are waiting on VIGIL's second review, and FORGE has nothing left to plan until Phase B clears. The one caveat is that VIGIL's own heartbeat has now been stale past 3 hours — not a fire yet (VIGIL's last real work was the M32 late-audit review at 13:35), but worth flagging if it stretches past the end of business day.
 
-Everything else on the watchlist is unchanged since this morning's update: B9 Phase 0 still fully approved at 9.60, B12 shadow still half-approved (VIGIL pending), five historical PR-metadata gaps still carried over, and B4 still clocking toward the April 26 PostgreSQL cutover gate with B3's daily reconciliation verdict coming back CLEAN today. The OinXtractor quality dashboard remains at WARNING — 23 unknown parses over 24h, zero corrections logged yet — which is the quietest actionable signal on the board right now.
+Open housekeeping is unchanged from the last update: five historical PR-metadata gaps (A11/B1/B2/B5 PRs that merged without review events on the bus), B4 and M189 both still formally BLOCKED on external dependencies (the B3 7-day soak and the M189 canary respectively), and the OinXtractor quality dashboard still at WARNING with 23 unknown parses and zero corrections logged. Nothing here needs Mike's attention tonight — the sprint is correctly idle, not stuck.
 
 
 ## Where We Are Today (one paragraph)
