@@ -715,7 +715,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                     "agent": started.get("agent"),
                     "issue": "CANARY_STARTED with no verdict within 48h",
                     "severity": "warn",
-                    "event_id": started["event_id"],
+                    "event_id": started.get("event_id", ""),
                     "detected_at": _iso_z(now),
                 })
 
@@ -729,7 +729,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                     "agent": opened.get("agent"),
                     "issue": f"PR_OPENED (pr={pr}) with no REVIEW_POSTED within 24h",
                     "severity": "warn",
-                    "event_id": opened["event_id"],
+                    "event_id": opened.get("event_id", ""),
                     "detected_at": _iso_z(now),
                 })
 
@@ -747,7 +747,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                         f"(reason={(blocked.get('extra') or {}).get('reason')})"
                     ),
                     "severity": "warn",
-                    "event_id": blocked["event_id"],
+                    "event_id": blocked.get("event_id", ""),
                     "detected_at": _iso_z(now),
                 })
 
@@ -762,7 +762,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                 "agent": a,
                 "issue": f"AGENT_HEARTBEAT stale > 3h for {a}",
                 "severity": "warn",
-                "event_id": hb["event_id"],
+                "event_id": hb.get("event_id", ""),
                 "detected_at": _iso_z(now),
             })
 
@@ -776,7 +776,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                     "agent": need.get("agent"),
                     "issue": f"DECISION_NEEDED (qid={qid}) unresolved > 24h",
                     "severity": "error",
-                    "event_id": need["event_id"],
+                    "event_id": need.get("event_id", ""),
                     "detected_at": _iso_z(now),
                 })
 

@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 03:41 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 04:16 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet stretch continues — ~90 minutes since anything moved the scoreboard, which is why this is a forced check-in rather than a real update. The material headline is what *didn't* happen: VIGIL's 03:32 UTC SLA on the #189 R4 proposal review (Phase-0 auto-backfill corroboration work) expired without a verdict posted, and VIGIL's own heartbeat is now ~4.5 hours stale. GUARDIAN is still pinging every 10-20 min saying "no state change", so the pipeline's observability loop is healthy — the reviewer itself has gone quiet.
+Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA by about 23 minutes — ANVIL went formally BLOCKED at 03:51 and filed an escalation to Mike. VIGIL then posted at 03:56 with an APPROVE at 9.6 (above the 9.5 critical-tier bar) that explicitly acknowledges the SLA breach in the review body. ANVIL cleared the blocker at 04:12 and inside fifteen seconds started coding Step 0 — the shared `be_tolerance.py` helper — on branch `fix/189-b14-sl-to-be-legit`. That helper is the gating piece: micro-gate, lifecycle, and the #189 backfill all have to consume the same tolerance constant per Hermes Q-189-1, and VIGIL+GUARDIAN want a standalone review of it before Artifacts A/B/C roll out in the 3-PR split.
 
-FORGE kept staging in the background: two fresh C3 plan republishes plus a handful of SPRINT_NOTE entries from ANVIL, OinkV, and GUARDIAN. No PRs opened, no canaries run, no merges. B2 and B3 post-deploy canaries both closed clean earlier tonight and remain the most recent ship events; nothing new has entered the build queue since.
+Background stayed quiet — FORGE republished a few C-series plans, GUARDIAN kept ticking 10-20 min heartbeats, no PRs opened or merged in this window. B2 and B3 canaries remain the most recent ship events.
 
-One housekeeping flag worth Mike's eye: our checkpoint linter crashed this tick with `KeyError: 'event_id'` inside `lint_checkpoint()` — a stored AGENT_HEARTBEAT event is missing its `event_id` field, so the stale-agent gap detector can't serialize it. The delta collection itself succeeded (every number above is real); only the sidecar lint run failed. Non-blocking for this heartbeat, but worth patching `lib/checkpoint_reporting.py:765` to use `hb.get("event_id")` before the next quiet window triggers another crash.
+Housekeeping: last run's crash report was real — the linter was choking on legacy `AGENT_HEARTBEAT` rows missing `event_id`. Patched `lib/checkpoint_reporting.py` so all five gap-append sites use `.get("event_id", "")`; scribe is clean and the gap detector is back (currently flagging stale VIGIL/FORGE/pilot heartbeats plus five old PRs without reviews — none new).
 
 ## Where We Are Today (one paragraph)
 

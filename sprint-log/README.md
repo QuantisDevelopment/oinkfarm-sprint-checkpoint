@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 664
-- **Last 24h:** 335 (rate 13.96/h)
+- **Total events:** 670
+- **Last 24h:** 340 (rate 14.17/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (22 events)
+### Last 1 hour (21 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | hermes | Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA  |
+| Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | oinkv | State change since 04:01Z note: ANVIL unblocked on #189. VIGIL R4 APPROVE (9.60) landed at 03:56:50Z (SLA-breached but sound). ANVIL emitted |
+| Apr 22, 06:12 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on fix/189-b14-sl-to-be-legit |
+| Apr 22, 06:12 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 NOT_STARTED → CODE |
+| Apr 22, 06:12 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 22, 06:01 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited fresh review TASK-189-VIGIL-PHASE0-R4: quality is strong/trustworthy. APPROVE 9.60 is well-supported by explicit MUST-FIX closu |
 | Apr 22, 05:59 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 05:56 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
 | Apr 22, 05:56 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid sprint poke #3 response |
@@ -24,16 +30,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 05:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 03:49Z. **VIGIL #189 R4 SLA breached at 03:32:57Z with no verdict.** Hermes evt_20260422T034000Z_000001 confirms: VIGIL heart |
 | Apr 22, 05:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited B9-VIGIL-PHASE0-R3: still trustworthy/high-quality; it cites the exact R1 blockers cleared (22-site mutation inventory, immutab |
 | Apr 22, 05:40 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch continues — ~90 minutes since anything moved the scoreboard, which is why this is a forced check-in rather than a real update. |
-| Apr 22, 05:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 05:33 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 03:22Z poke. Metrics file refreshed 03:26:11Z but values identical: p50_24h=722.9, p95_24h=38571.6, p50_7d=5279.8, p95 |
-| Apr 22, 05:30 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 03:29Z. Event scan since 03:10:27Z: 6 events, all informational, zero state delta. (1) VIGIL #189 R4: **SLA expires in ~3 min |
-| Apr 22, 05:29 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid sprint poke #2 response - no state change since 03:01:12Z |
-| Apr 22, 05:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 05:24 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 03:11Z poke. Metrics file unchanged (ts 03:04:12Z): p50_24h=722.9, p95_24h=38571.6, p50_7d=5279.8, p95_7d=75151.9, unk |
 
-### Last 4 hours (78 events)
+### Last 4 hours (79 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | hermes | Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA  |
+| Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | oinkv | State change since 04:01Z note: ANVIL unblocked on #189. VIGIL R4 APPROVE (9.60) landed at 03:56:50Z (SLA-breached but sound). ANVIL emitted |
+| Apr 22, 06:12 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on fix/189-b14-sl-to-be-legit |
+| Apr 22, 06:12 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 NOT_STARTED → CODE |
+| Apr 22, 06:12 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 22, 06:01 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited fresh review TASK-189-VIGIL-PHASE0-R4: quality is strong/trustworthy. APPROVE 9.60 is well-supported by explicit MUST-FIX closu |
 | Apr 22, 05:59 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 05:56 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
 | Apr 22, 05:56 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid sprint poke #3 response |
@@ -43,16 +49,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 05:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 03:49Z. **VIGIL #189 R4 SLA breached at 03:32:57Z with no verdict.** Hermes evt_20260422T034000Z_000001 confirms: VIGIL heart |
 | Apr 22, 05:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited B9-VIGIL-PHASE0-R3: still trustworthy/high-quality; it cites the exact R1 blockers cleared (22-site mutation inventory, immutab |
 | Apr 22, 05:40 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch continues — ~90 minutes since anything moved the scoreboard, which is why this is a forced check-in rather than a real update. |
-| Apr 22, 05:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 05:33 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 03:22Z poke. Metrics file refreshed 03:26:11Z but values identical: p50_24h=722.9, p95_24h=38571.6, p50_7d=5279.8, p95 |
-| Apr 22, 05:30 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 03:29Z. Event scan since 03:10:27Z: 6 events, all informational, zero state delta. (1) VIGIL #189 R4: **SLA expires in ~3 min |
-| Apr 22, 05:29 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid sprint poke #2 response - no state change since 03:01:12Z |
-| Apr 22, 05:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 05:24 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 03:11Z poke. Metrics file unchanged (ts 03:04:12Z): p50_24h=722.9, p95_24h=38571.6, p50_7d=5279.8, p95_7d=75151.9, unk |
 
-### Last 24 hours (335 events)
+### Last 24 hours (340 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | hermes | Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA  |
+| Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | oinkv | State change since 04:01Z note: ANVIL unblocked on #189. VIGIL R4 APPROVE (9.60) landed at 03:56:50Z (SLA-breached but sound). ANVIL emitted |
+| Apr 22, 06:12 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on fix/189-b14-sl-to-be-legit |
+| Apr 22, 06:12 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 NOT_STARTED → CODE |
+| Apr 22, 06:12 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 22, 06:01 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited fresh review TASK-189-VIGIL-PHASE0-R4: quality is strong/trustworthy. APPROVE 9.60 is well-supported by explicit MUST-FIX closu |
 | Apr 22, 05:59 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 05:56 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
 | Apr 22, 05:56 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid sprint poke #3 response |
@@ -62,12 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 05:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 03:49Z. **VIGIL #189 R4 SLA breached at 03:32:57Z with no verdict.** Hermes evt_20260422T034000Z_000001 confirms: VIGIL heart |
 | Apr 22, 05:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited B9-VIGIL-PHASE0-R3: still trustworthy/high-quality; it cites the exact R1 blockers cleared (22-site mutation inventory, immutab |
 | Apr 22, 05:40 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch continues — ~90 minutes since anything moved the scoreboard, which is why this is a forced check-in rather than a real update. |
-| Apr 22, 05:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 05:33 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 03:22Z poke. Metrics file refreshed 03:26:11Z but values identical: p50_24h=722.9, p95_24h=38571.6, p50_7d=5279.8, p95 |
-| Apr 22, 05:30 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 03:29Z. Event scan since 03:10:27Z: 6 events, all informational, zero state delta. (1) VIGIL #189 R4: **SLA expires in ~3 min |
-| Apr 22, 05:29 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid sprint poke #2 response - no state change since 03:01:12Z |
-| Apr 22, 05:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 05:24 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 03:11Z poke. Metrics file unchanged (ts 03:04:12Z): p50_24h=722.9, p95_24h=38571.6, p50_7d=5279.8, p95_7d=75151.9, unk |
 
 ## 🧭 Needs Mike
 
@@ -77,21 +77,26 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 61.1h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (12.8h) |
-| ⚪ INFO | `—` | agent pilot heartbeat stale (7.6h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (4.9h) |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
+| 🟠 WARN | `A11` | PR_OPENED (pr=133) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=149) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
+| 🟠 WARN | `DASH-003` | AGENT_HEARTBEAT stale > 3h for pilot |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for anvil |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 05:59 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 121 |
+| 🪽 **Hermes** | Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 122 |
+| 🐷 **OinkV** | Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 74 |
+| ⚒️ **ANVIL** | Apr 22, 06:12 CEST | `STATUS_CHANGED` | `M189` | 🟢 fresh | 147 |
 | 🔍 **VIGIL** | Apr 22, 05:56 CEST | `PROPOSAL_APPROVED` | `M189` | 🟢 fresh | 62 |
 | 🛡️ **GUARDIAN** | Apr 22, 05:56 CEST | `AGENT_HEARTBEAT` | `Heavy Hybrid sprint poke #3 response` | 🟢 fresh | 139 |
 | 🔥 **FORGE** | Apr 22, 05:53 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 105 |
-| ⚒️ **ANVIL** | Apr 22, 05:51 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 144 |
-| 🐷 **OinkV** | Apr 22, 05:50 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 72 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -191,11 +196,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🐷 | OinkV | Plan Auditor |
 | • | PILOT |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -209,4 +214,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/52 tasks DONE · Last auto-regenerated: 05:59 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/52 tasks DONE · Last auto-regenerated: 06:17 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
