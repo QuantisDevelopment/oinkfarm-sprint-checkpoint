@@ -180,6 +180,28 @@ def _parse_ts(ts: str) -> datetime:
     return datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
 
+def _pr_key(pr) -> object | None:
+    """Normalize a PR identifier into a stable dict key.
+
+    Accepts bare integers (42), numeric strings ("42"), or repo-qualified
+    references like "QuantisDevelopment/oink-sync#10". Returns None for empty
+    / unparseable values so callers can skip them safely. Historically this
+    was `int(pr)`, which blew up on the repo-qualified form — that crash is
+    what prompted this helper.
+    """
+    if pr is None:
+        return None
+    if isinstance(pr, int):
+        return pr
+    s = str(pr).strip()
+    if not s:
+        return None
+    try:
+        return int(s)
+    except (TypeError, ValueError):
+        return s  # repo-qualified string like "owner/repo#123"
+
+
 def _scan_max_counter_for_ts(ts_token: str) -> int:
     """Return the highest counter N observed for the given ts_token in events.jsonl.
 
@@ -662,15 +684,17 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
             canary_verdict_by_task[tid] = ev
         elif et == "PR_OPENED":
             pr = extra.get("pr") or ev.get("pr")
-            if pr is not None:
-                pr_opened_by_pr[int(pr)] = ev
+            pr_key = _pr_key(pr)
+            if pr_key is not None:
+                pr_opened_by_pr[pr_key] = ev
         elif et == "REVIEW_POSTED":
             pr = ev.get("pr") or extra.get("pr")
-            if pr is not None:
+            pr_key = _pr_key(pr)
+            if pr_key is not None:
                 # Keep the EARLIEST review so PR_OPENED→first-review latency is captured.
-                existing = review_by_pr.get(int(pr))
+                existing = review_by_pr.get(pr_key)
                 if existing is None or _parse_ts(ev["ts"]) < _parse_ts(existing["ts"]):
-                    review_by_pr[int(pr)] = ev
+                    review_by_pr[pr_key] = ev
         elif et == "BLOCKED" and tid:
             blocked_by_task[tid] = ev
         elif et == "BLOCKER_RESOLVED" and tid:

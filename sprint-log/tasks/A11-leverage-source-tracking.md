@@ -6,7 +6,7 @@
 **Repo target:** oinkfarm  
 **Branch:** —  
 **PR:** [oinkfarm#133](https://github.com/QuantisDevelopment/oinkfarm/pull/133)  
-**Merge commit:** [45a6931d4436](https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae)
+**Merge commit:** —
 
 ## In plain English
 
@@ -37,7 +37,6 @@ _None._
 
 - **OinkV audit:** [OINKV-AUDIT-WAVE3-A11.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE3-A11.md) — 14.8 KB
 - **Backfill log:** [A11-BACKFILL-LOG.md](../../raw-artifacts/anvil/backfill-logs/A11-BACKFILL-LOG.md)
-- **Merge commit:** [`45a6931d4436`](https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae) (oinkfarm PR #133)
 - **PR(s):** [oinkfarm#133](https://github.com/QuantisDevelopment/oinkfarm/pull/133)
 
 ## Lessons Learned

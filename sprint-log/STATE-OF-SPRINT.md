@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 04:47 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 06:28 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,7 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Step 0 on TASK-189 (the `be_tolerance` shared helper — the gating piece that micro-gate, lifecycle, and the #189 backfill all have to consume from per Hermes Q-189-1) moved fast: ANVIL opened three coordinated pull requests at 04:18 UTC — oinkfarm #190, signal-gateway #31, and oink-sync #12 — and fifteen minutes later VIGIL came back PASS 9.85 on all three, comfortably above the 9.5 critical-tier bar. We're now waiting on GUARDIAN's phase-1 verdict; once that lands, ANVIL can merge and start the 3-PR split for Artifacts A/B/C (the actual auto-backfill corroboration work). FORGE published the B10 plan in the background (signals_mv materialised view — confidence routing, review metadata, urgency class, PROVISIONAL state preserved per INV-13). One operational nit: GUARDIAN logged four duplicate "Heavy Hybrid" pokes in 90 minutes and responded NO_CHANGE to all of them — something upstream is re-firing the same nudge, worth a look at the scheduler.
+
+M189's Step-0 Phase-1 (the current ANVIL milestone) cleared both reviewers this hour — VIGIL and GUARDIAN each landed PASS marks in the high 9s — so ANVIL closed out the "waiting on Guardian review" blocker it had been sitting on. The win was short-lived: ANVIL immediately re-flagged M189 as stuck on an external dependency, meaning something outside the agents' control is holding the next step up.
+
+Meanwhile OinkDB shipped a fix for B3 (reconciliation schema mismatch) but logged B4 as blocked twice, waiting on an upstream task that hasn't landed yet. FORGE kept iterating on B10 planning. Nothing merged to main this round and no new questions were kicked up for Mike to decide on.
+
+One housekeeping note: the scribe pipeline itself crashed earlier on a lint step that couldn't handle PR references formatted as "owner/repo#10" — it was trying to coerce the whole string to an integer. Patched and deployed, so future narrative runs won't drop over that.
 
 ## Where We Are Today (one paragraph)
 

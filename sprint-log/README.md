@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 727
-- **Last 24h:** 389 (rate 16.21/h)
+- **Total events:** 730
+- **Last 24h:** 391 (rate 16.29/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (27 events)
+### Last 1 hour (30 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:28 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:22Z consolidated status. CRITICAL-PATH TOPLINE: (1) **M189 Step-0 Phase-1 APPROVED by both reviewers** — VIGIL 3x PASS 9.85 @ 0 |
+| Apr 22, 08:27 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
+| Apr 22, 08:27 CEST | `SPRINT_NOTE` | `—` | hermes | M189's Step-0 Phase-1 (the current ANVIL milestone) cleared both reviewers this hour — VIGIL and GUARDIAN each landed PASS marks in the high |
 | Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 08:24 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 06:22Z. Scanned events since last SPRINT_NOTE evt_20260422T061802Z_000002: only 3 new events (2 self-emitted BLOCKED/STATUS_CHANGE |
 | Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
@@ -27,13 +30,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
 
-### Last 4 hours (98 events)
+### Last 4 hours (100 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:28 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:22Z consolidated status. CRITICAL-PATH TOPLINE: (1) **M189 Step-0 Phase-1 APPROVED by both reviewers** — VIGIL 3x PASS 9.85 @ 0 |
+| Apr 22, 08:27 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
+| Apr 22, 08:27 CEST | `SPRINT_NOTE` | `—` | hermes | M189's Step-0 Phase-1 (the current ANVIL milestone) cleared both reviewers this hour — VIGIL and GUARDIAN each landed PASS marks in the high |
 | Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 08:24 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 06:22Z. Scanned events since last SPRINT_NOTE evt_20260422T061802Z_000002: only 3 new events (2 self-emitted BLOCKED/STATUS_CHANGE |
 | Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
@@ -46,13 +49,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
 
-### Last 24 hours (389 events)
+### Last 24 hours (391 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:28 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:22Z consolidated status. CRITICAL-PATH TOPLINE: (1) **M189 Step-0 Phase-1 APPROVED by both reviewers** — VIGIL 3x PASS 9.85 @ 0 |
+| Apr 22, 08:27 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
+| Apr 22, 08:27 CEST | `SPRINT_NOTE` | `—` | hermes | M189's Step-0 Phase-1 (the current ANVIL milestone) cleared both reviewers this hour — VIGIL and GUARDIAN each landed PASS marks in the high |
 | Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 08:24 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 06:22Z. Scanned events since last SPRINT_NOTE evt_20260422T061802Z_000002: only 3 new events (2 self-emitted BLOCKED/STATUS_CHANGE |
 | Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
@@ -65,9 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
 
 ## 🧭 Needs Mike
 
@@ -77,17 +77,22 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 63.6h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (15.2h) |
-| ⚪ INFO | `—` | agent pilot heartbeat stale (10.0h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (7.3h) |
+| 🟠 WARN | `A11` | PR_OPENED (pr=133) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=149) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
+| 🟠 WARN | `DASH-003` | AGENT_HEARTBEAT stale > 3h for pilot |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for anvil |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 132 |
-| ⚒️ **ANVIL** | Apr 22, 08:24 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 162 |
+| ⚒️ **ANVIL** | Apr 22, 08:28 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 164 |
+| 🪽 **Hermes** | Apr 22, 08:27 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 133 |
 | 🔥 **FORGE** | Apr 22, 08:23 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 110 |
 | 🐷 **OinkV** | Apr 22, 08:16 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 84 |
 | • **OINKDB** | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | 🟢 fresh | 4 |
@@ -192,8 +197,8 @@ _No open DECISION_NEEDED events._
 
 | Emoji | Name | Role |
 |---|---|---|
-| 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🪽 | Hermes | Sprint Orchestrator |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
 | • | OINKDB |  |
@@ -212,4 +217,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/53 tasks DONE · Last auto-regenerated: 08:25 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 08:28 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
