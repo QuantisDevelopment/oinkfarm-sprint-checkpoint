@@ -4,70 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 705
-- **Last 24h:** 373 (rate 15.54/h)
+- **Total events:** 715
+- **Last 24h:** 377 (rate 15.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (19 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily cron 06:00Z + M189 Step-0 Phase-1 review posted |
+| Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:53Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
+| Apr 22, 07:54 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M140-VIGIL-PHASE1-R1 (oink-sync#10, PASS 9.60), and it still reads as trustworthy/high-quality. Re |
+| Apr 22, 07:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #7 heavy-hybrid - flat state |
+| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Explicit GUARDIAN review request for M189 Step-0 Phase-1. VIGIL posted 3x PASS 9.85 for M189 Step-0 Phase-1 PRs: oinkfarm#190, signal-gatewa |
+| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 05:49Z. Event scan since evt_20260422T053117Z_000001 = 3 events, zero M189 verdicts: hermes ARTIFACT_PUBLISHED 05:41Z, oinkv  |
 | Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 05:22Z poke. Latest Vigil artifact remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy). |
 | Apr 22, 07:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:29Z (19min after prior note): **M189 critical path still held on GUARDIAN Step-0**, but a potential process gap surfaced.  |
-| Apr 22, 07:24 CEST | `REVIEW_POSTED` | `M140` | guardian | M140 review by guardian — PASS (9.55) |
-| Apr 22, 07:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #6 heavy-hybrid - M140 Phase 1 review completed and posted |
-| Apr 22, 07:22 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:10Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
-| Apr 22, 07:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:12 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 07:11 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since prior poke (04:59Z). Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, already audited). OinXtractor metric |
-| Apr 22, 07:10 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:09Z (18min after prior anvil note 04:51Z): **no state change on M189 critical path.** Event scan since evt_20260422T045115 |
-| Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M140-VIGIL-PHASE1-R1 (oink-sync#10, posted ~04:58Z, PASS 9.60). Trustworthy: reviewer did independent merge simulati |
-| Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue |
 
-### Last 4 hours (88 events)
+### Last 4 hours (89 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily cron 06:00Z + M189 Step-0 Phase-1 review posted |
+| Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:53Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
+| Apr 22, 07:54 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M140-VIGIL-PHASE1-R1 (oink-sync#10, PASS 9.60), and it still reads as trustworthy/high-quality. Re |
+| Apr 22, 07:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #7 heavy-hybrid - flat state |
+| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Explicit GUARDIAN review request for M189 Step-0 Phase-1. VIGIL posted 3x PASS 9.85 for M189 Step-0 Phase-1 PRs: oinkfarm#190, signal-gatewa |
+| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 05:49Z. Event scan since evt_20260422T053117Z_000001 = 3 events, zero M189 verdicts: hermes ARTIFACT_PUBLISHED 05:41Z, oinkv  |
 | Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 05:22Z poke. Latest Vigil artifact remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy). |
 | Apr 22, 07:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:29Z (19min after prior note): **M189 critical path still held on GUARDIAN Step-0**, but a potential process gap surfaced.  |
-| Apr 22, 07:24 CEST | `REVIEW_POSTED` | `M140` | guardian | M140 review by guardian — PASS (9.55) |
-| Apr 22, 07:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #6 heavy-hybrid - M140 Phase 1 review completed and posted |
-| Apr 22, 07:22 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:10Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
-| Apr 22, 07:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:12 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 07:11 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since prior poke (04:59Z). Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, already audited). OinXtractor metric |
-| Apr 22, 07:10 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:09Z (18min after prior anvil note 04:51Z): **no state change on M189 critical path.** Event scan since evt_20260422T045115 |
-| Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M140-VIGIL-PHASE1-R1 (oink-sync#10, posted ~04:58Z, PASS 9.60). Trustworthy: reviewer did independent merge simulati |
-| Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue |
 
-### Last 24 hours (373 events)
+### Last 24 hours (377 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
+| Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily cron 06:00Z + M189 Step-0 Phase-1 review posted |
+| Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:53Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
+| Apr 22, 07:54 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M140-VIGIL-PHASE1-R1 (oink-sync#10, PASS 9.60), and it still reads as trustworthy/high-quality. Re |
+| Apr 22, 07:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #7 heavy-hybrid - flat state |
+| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Explicit GUARDIAN review request for M189 Step-0 Phase-1. VIGIL posted 3x PASS 9.85 for M189 Step-0 Phase-1 PRs: oinkfarm#190, signal-gatewa |
+| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 05:49Z. Event scan since evt_20260422T053117Z_000001 = 3 events, zero M189 verdicts: hermes ARTIFACT_PUBLISHED 05:41Z, oinkv  |
 | Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 05:22Z poke. Latest Vigil artifact remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy). |
 | Apr 22, 07:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:29Z (19min after prior note): **M189 critical path still held on GUARDIAN Step-0**, but a potential process gap surfaced.  |
-| Apr 22, 07:24 CEST | `REVIEW_POSTED` | `M140` | guardian | M140 review by guardian — PASS (9.55) |
-| Apr 22, 07:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #6 heavy-hybrid - M140 Phase 1 review completed and posted |
-| Apr 22, 07:22 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:10Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
-| Apr 22, 07:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:12 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 07:11 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since prior poke (04:59Z). Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, already audited). OinXtractor metric |
-| Apr 22, 07:10 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:09Z (18min after prior anvil note 04:51Z): **no state change on M189 critical path.** Event scan since evt_20260422T045115 |
-| Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M140-VIGIL-PHASE1-R1 (oink-sync#10, posted ~04:58Z, PASS 9.60). Trustworthy: reviewer did independent merge simulati |
-| Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue |
 
 ## 🧭 Needs Mike
 
@@ -77,21 +77,21 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 63.0h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (14.7h) |
-| ⚪ INFO | `—` | agent pilot heartbeat stale (9.5h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (6.8h) |
+| 🟠 WARN | `A11` | PR_OPENED 63.4h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (15.0h) |
+| ⚪ INFO | `—` | agent pilot heartbeat stale (9.8h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (7.1h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 130 |
+| 🪽 **Hermes** | Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 131 |
+| 🛡️ **GUARDIAN** | Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `Daily cron 06:00Z + M189 Step-0 Phase-1 review posted` | 🟢 fresh | 148 |
+| 🐷 **OinkV** | Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 83 |
+| ⚒️ **ANVIL** | Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 157 |
 | 🔥 **FORGE** | Apr 22, 07:44 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 109 |
-| 🐷 **OinkV** | Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 81 |
-| ⚒️ **ANVIL** | Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 155 |
-| 🛡️ **GUARDIAN** | Apr 22, 07:24 CEST | `AGENT_HEARTBEAT` | `Poke #6 heavy-hybrid - M140 Phase 1 review completed and posted` | 🟢 fresh | 143 |
-| 🔍 **VIGIL** | Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | 🟢 fresh | 66 |
+| 🔍 **VIGIL** | Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | 🟡 1–3h | 66 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -192,10 +192,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔥 | FORGE | Technical Execution Planner |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | PILOT |  |
 | • | mike |  |
@@ -210,4 +210,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/53 tasks DONE · Last auto-regenerated: 07:52 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 08:14 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
