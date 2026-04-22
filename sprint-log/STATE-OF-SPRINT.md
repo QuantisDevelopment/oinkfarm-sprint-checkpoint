@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 04:16 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 04:47 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,7 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA by about 23 minutes — ANVIL went formally BLOCKED at 03:51 and filed an escalation to Mike. VIGIL then posted at 03:56 with an APPROVE at 9.6 (above the 9.5 critical-tier bar) that explicitly acknowledges the SLA breach in the review body. ANVIL cleared the blocker at 04:12 and inside fifteen seconds started coding Step 0 — the shared `be_tolerance.py` helper — on branch `fix/189-b14-sl-to-be-legit`. That helper is the gating piece: micro-gate, lifecycle, and the #189 backfill all have to consume the same tolerance constant per Hermes Q-189-1, and VIGIL+GUARDIAN want a standalone review of it before Artifacts A/B/C roll out in the 3-PR split.
-
-Background stayed quiet — FORGE republished a few C-series plans, GUARDIAN kept ticking 10-20 min heartbeats, no PRs opened or merged in this window. B2 and B3 canaries remain the most recent ship events.
-
-Housekeeping: last run's crash report was real — the linter was choking on legacy `AGENT_HEARTBEAT` rows missing `event_id`. Patched `lib/checkpoint_reporting.py` so all five gap-append sites use `.get("event_id", "")`; scribe is clean and the gap detector is back (currently flagging stale VIGIL/FORGE/pilot heartbeats plus five old PRs without reviews — none new).
+Step 0 on TASK-189 (the `be_tolerance` shared helper — the gating piece that micro-gate, lifecycle, and the #189 backfill all have to consume from per Hermes Q-189-1) moved fast: ANVIL opened three coordinated pull requests at 04:18 UTC — oinkfarm #190, signal-gateway #31, and oink-sync #12 — and fifteen minutes later VIGIL came back PASS 9.85 on all three, comfortably above the 9.5 critical-tier bar. We're now waiting on GUARDIAN's phase-1 verdict; once that lands, ANVIL can merge and start the 3-PR split for Artifacts A/B/C (the actual auto-backfill corroboration work). FORGE published the B10 plan in the background (signals_mv materialised view — confidence routing, review metadata, urgency class, PROVISIONAL state preserved per INV-13). One operational nit: GUARDIAN logged four duplicate "Heavy Hybrid" pokes in 90 minutes and responded NO_CHANGE to all of them — something upstream is re-firing the same nudge, worth a look at the scheduler.
 
 ## Where We Are Today (one paragraph)
 

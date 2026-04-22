@@ -597,6 +597,19 @@ def read_events(
 # Lint — detect gaps per schema §lint_checkpoint
 # -----------------------------------------------------------------------------
 
+def _synth_event_id(ev: dict) -> str:
+    """Return ev['event_id'] if present, else a sortable synthetic id derived
+    from ts. Legacy rows (pre-schema-freeze) may lack event_id; we must never
+    KeyError in gap emitters downstream. See skill: checkpoint-reporting §5."""
+    eid = ev.get("event_id")
+    if eid:
+        return eid
+    ts = ev.get("ts") or ev.get("timestamp") or ""
+    # Normalize "2026-04-21T22:16:53.148551+00:00" or "2026-04-21T22:16:53Z" → "20260421T221653"
+    compact = ts.replace("-", "").replace(":", "").replace("+00:00", "").rstrip("Z").split(".")[0]
+    return f"evt_{compact}_synthetic"
+
+
 def lint_checkpoint(now: datetime | None = None) -> list[dict]:
     """Return a list of {task_id, agent, issue, severity, event_id, detected_at}
     for each gap pattern defined in the frozen schema.
@@ -715,7 +728,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                     "agent": started.get("agent"),
                     "issue": "CANARY_STARTED with no verdict within 48h",
                     "severity": "warn",
-                    "event_id": started.get("event_id", ""),
+                    "event_id": _synth_event_id(started),
                     "detected_at": _iso_z(now),
                 })
 
@@ -729,7 +742,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                     "agent": opened.get("agent"),
                     "issue": f"PR_OPENED (pr={pr}) with no REVIEW_POSTED within 24h",
                     "severity": "warn",
-                    "event_id": opened.get("event_id", ""),
+                    "event_id": _synth_event_id(opened),
                     "detected_at": _iso_z(now),
                 })
 
@@ -747,7 +760,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                         f"(reason={(blocked.get('extra') or {}).get('reason')})"
                     ),
                     "severity": "warn",
-                    "event_id": blocked.get("event_id", ""),
+                    "event_id": _synth_event_id(blocked),
                     "detected_at": _iso_z(now),
                 })
 
@@ -762,7 +775,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                 "agent": a,
                 "issue": f"AGENT_HEARTBEAT stale > 3h for {a}",
                 "severity": "warn",
-                "event_id": hb.get("event_id", ""),
+                "event_id": _synth_event_id(hb),
                 "detected_at": _iso_z(now),
             })
 
@@ -776,7 +789,7 @@ def lint_checkpoint(now: datetime | None = None) -> list[dict]:
                     "agent": need.get("agent"),
                     "issue": f"DECISION_NEEDED (qid={qid}) unresolved > 24h",
                     "severity": "error",
-                    "event_id": need.get("event_id", ""),
+                    "event_id": _synth_event_id(need),
                     "detected_at": _iso_z(now),
                 })
 

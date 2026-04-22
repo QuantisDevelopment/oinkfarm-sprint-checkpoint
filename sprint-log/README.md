@@ -4,17 +4,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 682
-- **Last 24h:** 351 (rate 14.62/h)
+- **Total events:** 687
+- **Last 24h:** 356 (rate 14.83/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (29 events)
+### Last 1 hour (30 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
+| Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z); it remains the freshest review and still reads as t |
+| Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 06:36 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z, 3 PRs: oinkfarm#190, signal-gateway#31, oink-sync#12). PASS 9.85 is tr |
+| Apr 22, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:29Z: **VIGIL Step-0 Phase-1 R1 PASS across all 3 PRs** at 04:27:53Z (score 9.85/9.5 CRITICAL threshold, zero MUST-FIX, evt |
 | Apr 22, 06:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
@@ -25,15 +30,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #190 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
 | Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #31 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #12 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:09Z: **#189 UNBLOCKED + STEP 0 COMPLETE.** VIGIL R4 APPROVED 9.60 at 03:56:50Z (evt_20260422T035650Z_000001) after Mike nu |
-| Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | hermes | Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA  |
-| Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | oinkv | State change since 04:01Z note: ANVIL unblocked on #189. VIGIL R4 APPROVE (9.60) landed at 03:56:50Z (SLA-breached but sound). ANVIL emitted |
-| Apr 22, 06:12 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on fix/189-b14-sl-to-be-legit |
 
-### Last 4 hours (87 events)
+### Last 4 hours (90 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
+| Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z); it remains the freshest review and still reads as t |
+| Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 06:36 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z, 3 PRs: oinkfarm#190, signal-gateway#31, oink-sync#12). PASS 9.85 is tr |
+| Apr 22, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:29Z: **VIGIL Step-0 Phase-1 R1 PASS across all 3 PRs** at 04:27:53Z (score 9.85/9.5 CRITICAL threshold, zero MUST-FIX, evt |
 | Apr 22, 06:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
@@ -44,15 +49,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #190 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
 | Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #31 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #12 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:09Z: **#189 UNBLOCKED + STEP 0 COMPLETE.** VIGIL R4 APPROVED 9.60 at 03:56:50Z (evt_20260422T035650Z_000001) after Mike nu |
-| Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | hermes | Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA  |
-| Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | oinkv | State change since 04:01Z note: ANVIL unblocked on #189. VIGIL R4 APPROVE (9.60) landed at 03:56:50Z (SLA-breached but sound). ANVIL emitted |
-| Apr 22, 06:12 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on fix/189-b14-sl-to-be-legit |
 
-### Last 24 hours (351 events)
+### Last 24 hours (356 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
+| Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z); it remains the freshest review and still reads as t |
+| Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 06:36 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z, 3 PRs: oinkfarm#190, signal-gateway#31, oink-sync#12). PASS 9.85 is tr |
+| Apr 22, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:29Z: **VIGIL Step-0 Phase-1 R1 PASS across all 3 PRs** at 04:27:53Z (score 9.85/9.5 CRITICAL threshold, zero MUST-FIX, evt |
 | Apr 22, 06:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
@@ -63,11 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #190 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
 | Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #31 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #12 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:09Z: **#189 UNBLOCKED + STEP 0 COMPLETE.** VIGIL R4 APPROVED 9.60 at 03:56:50Z (evt_20260422T035650Z_000001) after Mike nu |
-| Apr 22, 06:16 CEST | `SPRINT_NOTE` | `—` | hermes | Phase-0 on TASK-189 (auto-backfill corroboration + shared BE-tolerance helper) finally unstuck. VIGIL's R4 verdict missed its 03:32 UTC SLA  |
-| Apr 22, 06:13 CEST | `SPRINT_NOTE` | `—` | oinkv | State change since 04:01Z note: ANVIL unblocked on #189. VIGIL R4 APPROVE (9.60) landed at 03:56:50Z (SLA-breached but sound). ANVIL emitted |
-| Apr 22, 06:12 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on fix/189-b14-sl-to-be-legit |
 
 ## 🧭 Needs Mike
 
@@ -91,12 +91,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 06:32 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 124 |
+| 🪽 **Hermes** | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 125 |
+| 🐷 **OinkV** | Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 77 |
+| 🔥 **FORGE** | Apr 22, 06:48 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 107 |
+| ⚒️ **ANVIL** | Apr 22, 06:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 152 |
 | 🔍 **VIGIL** | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | 🟢 fresh | 65 |
-| 🐷 **OinkV** | Apr 22, 06:26 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 75 |
 | 🛡️ **GUARDIAN** | Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h` | 🟢 fresh | 140 |
-| 🔥 **FORGE** | Apr 22, 06:21 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 106 |
-| ⚒️ **ANVIL** | Apr 22, 06:18 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 151 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -196,11 +196,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🔍 | VIGIL | Code Review + Scoring |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | PILOT |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -214,4 +214,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/52 tasks DONE · Last auto-regenerated: 06:32 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/52 tasks DONE · Last auto-regenerated: 06:51 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
