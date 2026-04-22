@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 595
-- **Last 24h:** 272 (rate 11.33/h)
+- **Total events:** 598
+- **Last 24h:** 273 (rate 11.38/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (19 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 02:44 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:43Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC,  |
+| Apr 22, 02:39 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #4 response 00:39Z — nothing new |
 | Apr 22, 02:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:23Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC,  |
 | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: spot-audited B9-VIGIL-PHASE0-R3-REVIEW.md and it remains trustworthy. APPROVE 9.15 for B9 v2 is defensible: R1 blockers were cl |
@@ -25,15 +28,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 02:04 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:03Z status. (1) #189 R4 review status unchanged from 23:43Z tick: GUARDIAN APPROVE 23:41:14Z, VIGIL R4 verdict still NOT i |
 | Apr 22, 02:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: SG28-VIGIL-PHASE1-R1-REVIEW.md (camofox-worker MemoryGuard pressure, signal-gateway#28). Finding: r |
 | Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A |
-| Apr 22, 01:47 CEST | `ARTIFACT_PUBLISHED` | `—` | anvil | — published plan:  |
-| Apr 22, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV |
-| Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 
-### Last 4 hours (94 events)
+### Last 4 hours (93 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 02:44 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:43Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC,  |
+| Apr 22, 02:39 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #4 response 00:39Z — nothing new |
 | Apr 22, 02:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:23Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC,  |
 | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: spot-audited B9-VIGIL-PHASE0-R3-REVIEW.md and it remains trustworthy. APPROVE 9.15 for B9 v2 is defensible: R1 blockers were cl |
@@ -46,13 +47,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A |
 | Apr 22, 01:47 CEST | `ARTIFACT_PUBLISHED` | `—` | anvil | — published plan:  |
-| Apr 22, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV |
-| Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 
-### Last 24 hours (272 events)
+### Last 24 hours (273 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 02:44 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:43Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC,  |
+| Apr 22, 02:39 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #4 response 00:39Z — nothing new |
 | Apr 22, 02:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:23Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC,  |
 | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: spot-audited B9-VIGIL-PHASE0-R3-REVIEW.md and it remains trustworthy. APPROVE 9.15 for B9 v2 is defensible: R1 blockers were cl |
@@ -65,9 +66,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:50 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A |
 | Apr 22, 01:47 CEST | `ARTIFACT_PUBLISHED` | `—` | anvil | — published plan:  |
-| Apr 22, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV |
-| Apr 22, 01:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 
 ## 🧭 Needs Mike
 
@@ -89,10 +87,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 02:29 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 106 |
-| ⚒️ **ANVIL** | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 131 |
+| 🪽 **Hermes** | Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 107 |
+| ⚒️ **ANVIL** | Apr 22, 02:44 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 132 |
+| 🛡️ **GUARDIAN** | Apr 22, 02:39 CEST | `AGENT_HEARTBEAT` | `Sprint poke #4 response 00:39Z — nothing new` | 🟢 fresh | 131 |
 | 🐷 **OinkV** | Apr 22, 02:23 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 58 |
-| 🛡️ **GUARDIAN** | Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `Sprint poke #3 response 00:11Z — triage complete` | 🟢 fresh | 130 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟡 1–3h | 61 |
 | 🔥 **FORGE** | Apr 22, 01:03 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟡 1–3h | 88 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
@@ -195,8 +193,8 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🐷 | OinkV | Plan Auditor |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | PILOT |  |
@@ -212,4 +210,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*15/52 tasks DONE · Last auto-regenerated: 02:30 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*15/52 tasks DONE · Last auto-regenerated: 02:51 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
