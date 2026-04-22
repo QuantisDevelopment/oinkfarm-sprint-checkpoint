@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 855
-- **Last 24h:** 459 (rate 19.12/h)
+- **Total events:** 858
+- **Last 24h:** 461 (rate 19.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (16 events)
+### Last 1 hour (17 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
 | Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 14:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:26Z. Event scan 12:07-12:26Z window (6 events): (1) GUARDIAN 12:23:06Z heartbeat — M189 canary verdict='mo |
 | Apr 22, 14:24 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
@@ -27,13 +30,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 14:05 CEST | `SPRINT_NOTE` | `—` | hermes | The morning's one real signal: M189's canary got its first closed trade. APT #2606 hit all its take-profits cleanly at 10:40 UTC with no bre |
 | Apr 22, 13:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 13:55 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 13:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 11:46Z. Event scan 11:27-11:46Z window (3 events, all OOS for anvil): 2x forge TASK_PLANNED (C2, C3) + 1x her |
-| Apr 22, 13:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 13:34 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 
 ### Last 4 hours (72 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
 | Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 14:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:26Z. Event scan 12:07-12:26Z window (6 events): (1) GUARDIAN 12:23:06Z heartbeat — M189 canary verdict='mo |
 | Apr 22, 14:24 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
@@ -46,13 +49,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 14:05 CEST | `SPRINT_NOTE` | `—` | hermes | The morning's one real signal: M189's canary got its first closed trade. APT #2606 hit all its take-profits cleanly at 10:40 UTC with no bre |
 | Apr 22, 13:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 13:55 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 13:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 11:46Z. Event scan 11:27-11:46Z window (3 events, all OOS for anvil): 2x forge TASK_PLANNED (C2, C3) + 1x her |
-| Apr 22, 13:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 13:34 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 
-### Last 24 hours (459 events)
+### Last 24 hours (461 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
 | Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 14:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:26Z. Event scan 12:07-12:26Z window (6 events): (1) GUARDIAN 12:23:06Z heartbeat — M189 canary verdict='mo |
 | Apr 22, 14:24 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
@@ -65,9 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 14:05 CEST | `SPRINT_NOTE` | `—` | hermes | The morning's one real signal: M189's canary got its first closed trade. APT #2606 hit all its take-profits cleanly at 10:40 UTC with no bre |
 | Apr 22, 13:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 13:55 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 13:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 11:46Z. Event scan 11:27-11:46Z window (3 events, all OOS for anvil): 2x forge TASK_PLANNED (C2, C3) + 1x her |
-| Apr 22, 13:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 13:34 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 
 ## 🧭 Needs Mike
 
@@ -92,11 +92,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 161 |
+| 🪽 **Hermes** | Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 162 |
+| 🔥 **FORGE** | Apr 22, 14:35 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🟢 fresh | 134 |
+| 🐷 **OinkV** | Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🟢 fresh | 110 |
 | ⚒️ **ANVIL** | Apr 22, 14:27 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 192 |
-| 🐷 **OinkV** | Apr 22, 14:24 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🟢 fresh | 109 |
 | 🛡️ **GUARDIAN** | Apr 22, 14:23 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring` | 🟢 fresh | 164 |
-| 🔥 **FORGE** | Apr 22, 14:08 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🟢 fresh | 133 |
 | 🔍 **VIGIL** | Apr 22, 10:29 CEST | `—` | `—` | 🔴 stale | 68 |
 | • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🔴 stale | 7 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -199,10 +199,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🐷 | OinkV | Plan Auditor |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
+| 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | • | mike |  |
@@ -217,4 +217,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/54 tasks DONE · Last auto-regenerated: 14:32 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/54 tasks DONE · Last auto-regenerated: 14:43 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
