@@ -15,7 +15,7 @@
 |---|---|---|---|---|---|---|
 | [C1](../tasks/C1-c1.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 04:46 CEST · `TASK_PLANNED` | forge |
 | [C2](../tasks/C2-c2.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 04:13 CEST · `TASK_PLANNED` | forge · hermes |
-| [C3](../tasks/C3-c3.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 04:46 CEST · `TASK_PLANNED` | forge |
+| [C3](../tasks/C3-c3.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 05:16 CEST · `TASK_PLANNED` | forge |
 | [C4](../tasks/C4-c4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 04:46 CEST · `TASK_PLANNED` | forge |
 | [C6](../tasks/C6-c6.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 04:46 CEST · `TASK_PLANNED` | forge |
 
@@ -27,6 +27,8 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 05:16 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
+| Apr 22, 05:16 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
 | Apr 22, 04:46 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 04:46 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
 | Apr 22, 04:46 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
@@ -55,8 +57,6 @@ _No waves yet for this phase._
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C3` | forge | C3 plan published |
 | Apr 21, 17:05 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 21, 17:05 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 21, 17:05 CEST | `DECISION_NEEDED` | `C2` | forge | C2 Mike gate: For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_fla |
 
 ## Needs Mike (open gates)
 
