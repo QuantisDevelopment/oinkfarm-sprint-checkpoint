@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 810
-- **Last 24h:** 465 (rate 19.38/h)
+- **Total events:** 811
+- **Last 24h:** 464 (rate 19.33/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (22 events)
+### Last 1 hour (23 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 12:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 12:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch since the M189 three-repo merge train shipped at 08:01 UTC. Nothing new has merged and no canaries have come back in the last  |
 | Apr 22, 11:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary accumulating — 1 PASS, 2 PENDING (ETH/AERO LIMITs awaiting fill) |
 | Apr 22, 11:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -29,11 +30,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 11:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 11:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 09:26Z. Event scan 09:07-09:26Z window: (1) GUARDIAN 09:25Z heartbeat: M189 canary now at 2/3 live signals (u |
 | Apr 22, 11:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary progressing — 2/3 validated live signals (+ 1 WG reconciler OOS) |
-| Apr 22, 11:24 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since evt_20260422T091459Z_000001 (10m ago). Vigil: B9-VIGIL-v3 APPROVE 9.60 still newest, trustworthy. OinXtractor: WARNING |
 
-### Last 4 hours (101 events)
+### Last 4 hours (102 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 12:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 12:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch since the M189 three-repo merge train shipped at 08:01 UTC. Nothing new has merged and no canaries have come back in the last  |
 | Apr 22, 11:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary accumulating — 1 PASS, 2 PENDING (ETH/AERO LIMITs awaiting fill) |
 | Apr 22, 11:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -48,11 +49,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 11:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 11:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 09:26Z. Event scan 09:07-09:26Z window: (1) GUARDIAN 09:25Z heartbeat: M189 canary now at 2/3 live signals (u |
 | Apr 22, 11:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary progressing — 2/3 validated live signals (+ 1 WG reconciler OOS) |
-| Apr 22, 11:24 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since evt_20260422T091459Z_000001 (10m ago). Vigil: B9-VIGIL-v3 APPROVE 9.60 still newest, trustworthy. OinXtractor: WARNING |
 
-### Last 24 hours (465 events)
+### Last 24 hours (464 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 12:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 12:01 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch since the M189 three-repo merge train shipped at 08:01 UTC. Nothing new has merged and no canaries have come back in the last  |
 | Apr 22, 11:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary accumulating — 1 PASS, 2 PENDING (ETH/AERO LIMITs awaiting fill) |
 | Apr 22, 11:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -67,7 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 11:29 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 11:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 09:26Z. Event scan 09:07-09:26Z window: (1) GUARDIAN 09:25Z heartbeat: M189 canary now at 2/3 live signals (u |
 | Apr 22, 11:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary progressing — 2/3 validated live signals (+ 1 WG reconciler OOS) |
-| Apr 22, 11:24 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since evt_20260422T091459Z_000001 (10m ago). Vigil: B9-VIGIL-v3 APPROVE 9.60 still newest, trustworthy. OinXtractor: WARNING |
 
 ## 🧭 Needs Mike
 
@@ -88,7 +88,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 12:01 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 148 |
+| 🪽 **Hermes** | Apr 22, 12:04 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 149 |
 | 🛡️ **GUARDIAN** | Apr 22, 11:54 CEST | `AGENT_HEARTBEAT` | `M189 canary accumulating — 1 PASS, 2 PENDING (ETH/AERO LIMITs awaiting fill)` | 🟢 fresh | 159 |
 | 🐷 **OinkV** | Apr 22, 11:49 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 101 |
 | ⚒️ **ANVIL** | Apr 22, 11:47 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 184 |
@@ -212,4 +212,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/53 tasks DONE · Last auto-regenerated: 12:02 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 12:04 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
