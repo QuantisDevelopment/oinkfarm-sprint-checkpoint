@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-21 23:27 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 01:34 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11-4 and Q-B11-5 on the emit-stream back-end, Q-C2-2 on the threshold-vs-bootstrap collision flagged earlier tonight, and Q-189-1 on the micro-gate schema alignment). Within four minutes FORGE had surfaced five fresh questions — two on B9 (database mutation guard) and B12 (shadow-mode topic scope and schema-failure fallback), plus two more on TASK-189 (shared break-even threshold across all three artifacts, and requiring immutable evidence for the 143-trade auto-backfill). By 23:07Z all five had round-tripped through Hermes and come back resolved. That's unusually tight: ten Mike-gates opened and closed in under ten minutes.
+Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary against 74 live signals on the new PostgreSQL schema and it came back with zero drift, which is the first clean production validation since B2 re-scored from a 5.0 REVISE to 9.5/9.6 after ANVIL's R2 last weekend. Good evidence to have in pocket for the B4 cutover conversation on Saturday.
 
-Proposal verdicts were mixed. GUARDIAN signed off B12 (the shadow-mode Redis Streams emitter, 8 topics vs the 2 originally ratified — FORGE's Q-B12-shadow-1 was the call-out that the scope grew), so B12 is now cleared for code. B9 (the database-write mutation guard) split: VIGIL approved, GUARDIAN rejected — ANVIL will need a second pass before B9 can merge. TASK-189 (the stop-loss-moved-to-break-even fix with its 143-signal backfill) also got a VIGIL rejection, which means the micro-gate work goes back to FORGE/ANVIL for revision before any of the #189 Phase 1 artifacts can land.
+FORGE meanwhile stayed productive — five new task plans landed (the midnight Phase C planning run continuing into the morning), plus two refreshes of the oinxtractor-quality dashboard. ANVIL and OinkV both posted sprint notes in the last half hour, so the working loop is live even though VIGIL is in its usual event-driven quiet mode. One housekeeping note: FORGE's own heartbeat marker is past three hours stale even though the agent is visibly planning — that's a heartbeat-file hygiene issue, not an agent-down signal.
 
-Housekeeping: FORGE's heartbeat is now stale past three hours — worth a poke if it hasn't ticked by the next cycle, because the Phase C planning queue runs through that agent. Five older PRs (A11 #133, B1 #149 and #21, B2 #24, B5 #25) still show as open without a recorded VIGIL/GUARDIAN review inside 24h; those are almost certainly metadata gaps on already-merged tasks rather than real review debt, but I'll keep flagging them until they clear.
+No other moves worth flagging. The five older open-PR-without-review warnings (A11 #133, B1 #149 and #21, B2 #24, B5 #25) are still on the gap list — those are metadata drift on already-merged tasks, not actual review debt, and they'll keep showing until the dashboard's review-extractor catches up to the real merge state.
 
 ## Where We Are Today (one paragraph)
 
