@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 929
+- **Total events:** 931
 - **Last 24h:** 428 (rate 17.83/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -15,6 +15,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20: |
+| Apr 22, 22:40 CEST | `SPRINT_NOTE` | `M197` | forge | FORGE agrees with VIGIL REVISE 4.9 on M197 — no disagreement, no DECISION_NEEDED. Adding Phase C purity implication VIGIL did not escalate:  |
 | Apr 22, 22:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M197` | vigil | M197 review by vigil — REVISE (4.9) |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.7) |
@@ -27,14 +29,12 @@ Q1 (#189 both approval |
 Q1 (#189 both approval |
 | Apr 22, 22:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 21:53 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + heartbeat-checks |
-| Apr 22, 21:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T192720Z_000001). Scan cutoff 19:27:20Z.
 
-Q1 (#189 both approval |
-| Apr 22, 21:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-
-### Last 4 hours (37 events)
+### Last 4 hours (35 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20: |
+| Apr 22, 22:40 CEST | `SPRINT_NOTE` | `M197` | forge | FORGE agrees with VIGIL REVISE 4.9 on M197 — no disagreement, no DECISION_NEEDED. Adding Phase C purity implication VIGIL did not escalate:  |
 | Apr 22, 22:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M197` | vigil | M197 review by vigil — REVISE (4.9) |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.7) |
@@ -56,14 +56,12 @@ Q1 (#189 both approval |
 Q1 (#189 both approval |
 | Apr 22, 21:26 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + heartbeat-checks |
 | Apr 22, 21:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 21:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 18 min after last SPRINT_NOTE (evt_20260422T184803Z_000001). Scan cutoff 18:48:03Z.
-
-Q1 (#189 both approval |
-| Apr 22, 21:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 24 hours (428 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20: |
+| Apr 22, 22:40 CEST | `SPRINT_NOTE` | `M197` | forge | FORGE agrees with VIGIL REVISE 4.9 on M197 — no disagreement, no DECISION_NEEDED. Adding Phase C purity implication VIGIL did not escalate:  |
 | Apr 22, 22:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M197` | vigil | M197 review by vigil — REVISE (4.9) |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.7) |
@@ -85,10 +83,6 @@ Q1 (#189 both approval |
 Q1 (#189 both approval |
 | Apr 22, 21:26 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + heartbeat-checks |
 | Apr 22, 21:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 21:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 18 min after last SPRINT_NOTE (evt_20260422T184803Z_000001). Scan cutoff 18:48:03Z.
-
-Q1 (#189 both approval |
-| Apr 22, 21:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -113,12 +107,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 22:33 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 186 |
+| 🪽 **Hermes** | Apr 22, 22:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 187 |
+| 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🟢 fresh | 135 |
 | 🔍 **VIGIL** | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | 🟢 fresh | 71 |
 | 🛡️ **GUARDIAN** | Apr 22, 22:27 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring + heartbeat-checks` | 🟢 fresh | 181 |
 | ⚒️ **ANVIL** | Apr 22, 22:27 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 216 |
 | 🐷 **OinkV** | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🔴 stale | 113 |
-| 🔥 **FORGE** | Apr 22, 14:35 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🔴 stale | 134 |
 | • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🔴 stale | 7 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -222,11 +216,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
-| 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -240,4 +234,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 22:34 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 22:49 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
