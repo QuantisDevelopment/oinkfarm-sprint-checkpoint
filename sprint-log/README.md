@@ -4,17 +4,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 945
-- **Last 24h:** 403 (rate 16.79/h)
+- **Total events:** 947
+- **Last 24h:** 400 (rate 16.67/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (7 events)
+### Last 1 hour (9 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:49 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
 | Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 00:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T222715Z_000001). Scan cutoff 22:27:15Z.
 
@@ -29,38 +31,11 @@ Q1 (#189 both approvals?): N/ |
 Q1 (#189 both approvals?): N/ |
 | Apr 23, 00:00 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
 
-### Last 4 hours (32 events)
+### Last 4 hours (33 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 00:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T222715Z_000001). Scan cutoff 22:27:15Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
-| Apr 23, 00:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T220719Z_000001). Scan cutoff 22:07:19Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 00:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 00:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T214734Z_000001). Scan cutoff 21:47:34Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 00:00 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
-| Apr 22, 23:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~18min since last note (evt_20260422T212804Z_000001). Scan cutoff 21:28:04Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 22, 23:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 23:32 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + M152-review-gap-flagged |
-| Apr 22, 23:28 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T210716Z_000001, CRON_TICK_21_06Z_NO_CHANGE). Scan cutoff 21:07:16Z.
-
-Q |
-| Apr 22, 23:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 2 min after last SPRINT_NOTE (evt_20260422T210449Z_000001, the POKE_MISADDRESSED_CLARIFICATION). Scan cutof |
-| Apr 22, 23:04 CEST | `SPRINT_NOTE` | `—` | anvil | Received SPRINT POKE @ 23:02 GMT+2 (21:02Z) referencing Heavy Hybrid / forge Phase-B audit tasks (B2/B4/B9) + forge-workspace/plans/. That p |
-| Apr 22, 22:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + heartbeat-checks |
-| Apr 22, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20: |
-
-### Last 24 hours (403 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
+| Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:49 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
 | Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 00:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T222715Z_000001). Scan cutoff 22:27:15Z.
 
@@ -84,8 +59,35 @@ Q1 (#189 both approvals?): N/ |
 Q |
 | Apr 22, 23:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 2 min after last SPRINT_NOTE (evt_20260422T210449Z_000001, the POKE_MISADDRESSED_CLARIFICATION). Scan cutof |
 | Apr 22, 23:04 CEST | `SPRINT_NOTE` | `—` | anvil | Received SPRINT POKE @ 23:02 GMT+2 (21:02Z) referencing Heavy Hybrid / forge Phase-B audit tasks (B2/B4/B9) + forge-workspace/plans/. That p |
-| Apr 22, 22:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + heartbeat-checks |
-| Apr 22, 22:48 CEST | `SPRINT_NOTE` | `—` | hermes | VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20: |
+
+### Last 24 hours (400 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:49 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
+| Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T222715Z_000001). Scan cutoff 22:27:15Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
+| Apr 23, 00:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T220719Z_000001). Scan cutoff 22:07:19Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 23, 00:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T214734Z_000001). Scan cutoff 21:47:34Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 23, 00:00 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
+| Apr 22, 23:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~18min since last note (evt_20260422T212804Z_000001). Scan cutoff 21:28:04Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 22, 23:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 23:32 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring + M152-review-gap-flagged |
+| Apr 22, 23:28 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T210716Z_000001, CRON_TICK_21_06Z_NO_CHANGE). Scan cutoff 21:07:16Z.
+
+Q |
+| Apr 22, 23:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 2 min after last SPRINT_NOTE (evt_20260422T210449Z_000001, the POKE_MISADDRESSED_CLARIFICATION). Scan cutof |
+| Apr 22, 23:04 CEST | `SPRINT_NOTE` | `—` | anvil | Received SPRINT POKE @ 23:02 GMT+2 (21:02Z) referencing Heavy Hybrid / forge Phase-B audit tasks (B2/B4/B9) + forge-workspace/plans/. That p |
 
 ## 🧭 Needs Mike
 
@@ -110,10 +112,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 190 |
+| 🪽 **Hermes** | Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 191 |
+| 🛡️ **GUARDIAN** | Apr 23, 00:49 CEST | `AGENT_HEARTBEAT` | `nightly-heartbeat-checks + M189-canary-monitoring` | 🟢 fresh | 185 |
 | ⚒️ **ANVIL** | Apr 23, 00:47 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 223 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🟢 fresh | 72 |
-| 🛡️ **GUARDIAN** | Apr 23, 00:00 CEST | `AGENT_HEARTBEAT` | `nightly-heartbeat-checks + M189-canary-monitoring` | 🟢 fresh | 184 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🟡 1–3h | 135 |
 | 🐷 **OinkV** | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🔴 stale | 113 |
 | • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🔴 stale | 7 |
@@ -219,9 +221,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
 | • | OINKDB |  |
@@ -237,4 +239,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 00:49 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 01:01 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
