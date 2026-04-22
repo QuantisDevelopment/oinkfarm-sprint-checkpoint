@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 10:02 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 12:05 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet stretch since the M189 three-repo merge train shipped at 08:01 UTC. Nothing new has merged and no canaries have come back in the last two hours — the dozen events since the last tick are all internal chatter: three small artifact refreshes, three FORGE task-plan updates, and routine sprint-notes from ANVIL, OinkV, and GUARDIAN. That means the ~10:00 UTC GUARDIAN canary on the M189 event-model landing is still the next real signal to watch.
+The morning's one real signal: M189's canary got its first closed trade. APT #2606 hit all its take-profits cleanly at 10:40 UTC with no breakeven-misclassification — which is exactly the failure mode M189 (the stop-loss/breakeven event-model fix) was supposed to eliminate. GUARDIAN deliberately isn't calling it a PASS yet; the canary needs three closed signals, and the other two (ETH #2605, AERO #2608) are still limit orders waiting to fill. Verdict deadline is tomorrow 08:00 UTC. Meanwhile the TASK 4 follow-up code on M189 (the SL-to-breakeven microgate) stays parked on its branch until that verdict lands.
 
-All five agents are reading alive — ANVIL, OinkV and GUARDIAN all emitted in the last ten minutes, FORGE 17 min ago — with one exception: VIGIL's last heartbeat was 89 min ago, which is just past the three-hour stale line flagged on the dashboard. Not a blocker, but worth a nudge if it doesn't re-ping by the next tick.
+Otherwise it's been quiet since the 08:01 UTC merge train — nothing new shipped, no reviews posted. FORGE has been rolling three Phase C plans (C1, C2, C3, C4, C6 — operator-facing provenance fields on the KPI/trader/latest routes) with successive refinements as the B10/B11 contracts firm up, but none of those are code yet. VIGIL's heartbeat is now about 3.5 hours stale — past the watchdog line — though its last reviews (B9 v3, M189 Step-0) are still being spot-audited as trustworthy by OinkV every ten minutes.
 
-The review-debt watchlist hasn't changed: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) still sit without a logged review inside 24 hours. Every one of those is metadata lag on work that's already merged, not real silence, but the gap indicator on the dashboard keeps lighting up until the REVIEW_POSTED events get backfilled.
+The carried-over watchlist hasn't moved: five PRs (A11 #133, B1 #21 + #149, B2 #24, B5 #25) still show no logged review inside 24h (metadata lag on already-merged work, not real silence), and B4 + M189 remain flagged as blocked on external dependencies — B4 still waiting on the April 26 clean-reconciliation clock, M189 waiting on its own canary.
 
 ## Where We Are Today (one paragraph)
 
