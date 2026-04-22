@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 687
-- **Last 24h:** 356 (rate 14.83/h)
+- **Total events:** 689
+- **Last 24h:** 358 (rate 14.92/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
@@ -15,6 +15,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (30 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:49Z (17min after prior anvil note): **no state change on M189 critical path.** Event scan since evt_20260422T043222Z_00000 |
 | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
 | Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z); it remains the freshest review and still reads as t |
 | Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
@@ -28,12 +30,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h |
 | Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #190 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #31 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
 
-### Last 4 hours (90 events)
+### Last 4 hours (91 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:49Z (17min after prior anvil note): **no state change on M189 critical path.** Event scan since evt_20260422T043222Z_00000 |
 | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
 | Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z); it remains the freshest review and still reads as t |
 | Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
@@ -47,12 +49,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h |
 | Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #190 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #31 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
 
-### Last 24 hours (356 events)
+### Last 24 hours (358 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:49Z (17min after prior anvil note): **no state change on M189 critical path.** Event scan since evt_20260422T043222Z_00000 |
 | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
 | Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M189-STEP0-VIGIL-PHASE1-R1 (posted 04:27:53Z); it remains the freshest review and still reads as t |
 | Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
@@ -66,8 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h |
 | Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #190 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
-| Apr 22, 06:18 CEST | `PR_OPENED` | `M189` | anvil | M189 PR #31 opened — M189 Step 0: add shared be_tolerance helper (Hermes Q-189-2 prerequisite) |
 
 ## 🧭 Needs Mike
 
@@ -91,10 +91,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 125 |
+| 🪽 **Hermes** | Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 126 |
+| ⚒️ **ANVIL** | Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 153 |
 | 🐷 **OinkV** | Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 77 |
 | 🔥 **FORGE** | Apr 22, 06:48 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 107 |
-| ⚒️ **ANVIL** | Apr 22, 06:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 152 |
 | 🔍 **VIGIL** | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | 🟢 fresh | 65 |
 | 🛡️ **GUARDIAN** | Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h` | 🟢 fresh | 140 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
@@ -196,9 +196,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | PILOT |  |
@@ -214,4 +214,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/52 tasks DONE · Last auto-regenerated: 06:51 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/52 tasks DONE · Last auto-regenerated: 06:53 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
