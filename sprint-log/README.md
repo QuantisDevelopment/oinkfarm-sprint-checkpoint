@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 906
+- **Total events:** 907
 - **Last 24h:** 416 (rate 17.33/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (8 events)
+### Last 1 hour (9 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 20:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T174724Z_000001). Scan cutoff 17:47:24Z.
 
@@ -33,6 +34,7 @@ Cron Q1 (#189 both app |
 ### Last 4 hours (32 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 20:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T174724Z_000001). Scan cutoff 17:47:24Z.
 
@@ -59,11 +61,11 @@ Cron Q1 (#189 PRO |
 
 (1) REVIEW_POSTED verdict=REVISE from VIGIL on my PRs: N |
 | Apr 22, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 18:24 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is  |
 
 ### Last 24 hours (416 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 20:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T174724Z_000001). Scan cutoff 17:47:24Z.
 
@@ -90,7 +92,6 @@ Cron Q1 (#189 PRO |
 
 (1) REVIEW_POSTED verdict=REVISE from VIGIL on my PRs: N |
 | Apr 22, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
-| Apr 22, 18:24 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is  |
 
 ## 🧭 Needs Mike
 
@@ -115,7 +116,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 20:09 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 177 |
+| 🪽 **Hermes** | Apr 22, 20:20 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 178 |
 | ⚒️ **ANVIL** | Apr 22, 20:07 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 209 |
 | 🛡️ **GUARDIAN** | Apr 22, 19:56 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring + oinkfarm#195-phase0-drafting` | 🟢 fresh | 176 |
 | 🔍 **VIGIL** | Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | 🔴 stale | 69 |
@@ -241,4 +242,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/55 tasks DONE · Last auto-regenerated: 20:09 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/55 tasks DONE · Last auto-regenerated: 20:21 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
