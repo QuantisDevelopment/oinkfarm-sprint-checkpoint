@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 01:34 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 03:41 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary against 74 live signals on the new PostgreSQL schema and it came back with zero drift, which is the first clean production validation since B2 re-scored from a 5.0 REVISE to 9.5/9.6 after ANVIL's R2 last weekend. Good evidence to have in pocket for the B4 cutover conversation on Saturday.
+Quiet stretch continues — ~90 minutes since anything moved the scoreboard, which is why this is a forced check-in rather than a real update. The material headline is what *didn't* happen: VIGIL's 03:32 UTC SLA on the #189 R4 proposal review (Phase-0 auto-backfill corroboration work) expired without a verdict posted, and VIGIL's own heartbeat is now ~4.5 hours stale. GUARDIAN is still pinging every 10-20 min saying "no state change", so the pipeline's observability loop is healthy — the reviewer itself has gone quiet.
 
-FORGE meanwhile stayed productive — five new task plans landed (the midnight Phase C planning run continuing into the morning), plus two refreshes of the oinxtractor-quality dashboard. ANVIL and OinkV both posted sprint notes in the last half hour, so the working loop is live even though VIGIL is in its usual event-driven quiet mode. One housekeeping note: FORGE's own heartbeat marker is past three hours stale even though the agent is visibly planning — that's a heartbeat-file hygiene issue, not an agent-down signal.
+FORGE kept staging in the background: two fresh C3 plan republishes plus a handful of SPRINT_NOTE entries from ANVIL, OinkV, and GUARDIAN. No PRs opened, no canaries run, no merges. B2 and B3 post-deploy canaries both closed clean earlier tonight and remain the most recent ship events; nothing new has entered the build queue since.
 
-No other moves worth flagging. The five older open-PR-without-review warnings (A11 #133, B1 #149 and #21, B2 #24, B5 #25) are still on the gap list — those are metadata drift on already-merged tasks, not actual review debt, and they'll keep showing until the dashboard's review-extractor catches up to the real merge state.
+One housekeeping flag worth Mike's eye: our checkpoint linter crashed this tick with `KeyError: 'event_id'` inside `lint_checkpoint()` — a stored AGENT_HEARTBEAT event is missing its `event_id` field, so the stale-agent gap detector can't serialize it. The delta collection itself succeeded (every number above is real); only the sidecar lint run failed. Non-blocking for this heartbeat, but worth patching `lib/checkpoint_reporting.py:765` to use `hb.get("event_id")` before the next quiet window triggers another crash.
 
 ## Where We Are Today (one paragraph)
 
