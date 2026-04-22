@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 589
-- **Last 24h:** 267 (rate 11.12/h)
+- **Total events:** 592
+- **Last 24h:** 269 (rate 11.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
@@ -15,6 +15,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (21 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 02:14 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: SG28 and OF176 vigil spot-audits remain trustworthy. OinXtractor warning unchanged (instrumentation-definition drift, not colla |
+| Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete |
 | Apr 22, 02:07 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 02:04 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:03Z status. (1) #189 R4 review status unchanged from 23:43Z tick: GUARDIAN APPROVE 23:41:14Z, VIGIL R4 verdict still NOT i |
 | Apr 22, 02:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: SG28-VIGIL-PHASE1-R1-REVIEW.md (camofox-worker MemoryGuard pressure, signal-gateway#28). Finding: r |
@@ -27,13 +30,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 22, 01:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:32 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
-| Apr 22, 01:32 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:23Z status. (1) #189 R3 filed at 23:24:33Z; no VIGIL/GUARDIAN approvals on R3 yet. (2) During pre-poll review of sprint-ch |
-| Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | hermes | Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11- |
-| Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: TASK-189-VIGIL-PHASE0-R2. Finding: review quality is strong and in-family — it correctly rescinded  |
 
-### Last 4 hours (90 events)
+### Last 4 hours (93 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 02:14 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: SG28 and OF176 vigil spot-audits remain trustworthy. OinXtractor warning unchanged (instrumentation-definition drift, not colla |
+| Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete |
 | Apr 22, 02:07 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 02:04 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:03Z status. (1) #189 R4 review status unchanged from 23:43Z tick: GUARDIAN APPROVE 23:41:14Z, VIGIL R4 verdict still NOT i |
 | Apr 22, 02:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: SG28-VIGIL-PHASE1-R1-REVIEW.md (camofox-worker MemoryGuard pressure, signal-gateway#28). Finding: r |
@@ -46,13 +49,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 22, 01:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:32 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
-| Apr 22, 01:32 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:23Z status. (1) #189 R3 filed at 23:24:33Z; no VIGIL/GUARDIAN approvals on R3 yet. (2) During pre-poll review of sprint-ch |
-| Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | hermes | Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11- |
-| Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: TASK-189-VIGIL-PHASE0-R2. Finding: review quality is strong and in-family — it correctly rescinded  |
 
-### Last 24 hours (267 events)
+### Last 24 hours (269 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 02:14 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: SG28 and OF176 vigil spot-audits remain trustworthy. OinXtractor warning unchanged (instrumentation-definition drift, not colla |
+| Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete |
 | Apr 22, 02:07 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 02:04 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 00:03Z status. (1) #189 R4 review status unchanged from 23:43Z tick: GUARDIAN APPROVE 23:41:14Z, VIGIL R4 verdict still NOT i |
 | Apr 22, 02:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: SG28-VIGIL-PHASE1-R1-REVIEW.md (camofox-worker MemoryGuard pressure, signal-gateway#28). Finding: r |
@@ -65,9 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 22, 01:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 01:32 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
-| Apr 22, 01:32 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 23:23Z status. (1) #189 R3 filed at 23:24:33Z; no VIGIL/GUARDIAN approvals on R3 yet. (2) During pre-poll review of sprint-ch |
-| Apr 22, 01:29 CEST | `SPRINT_NOTE` | `—` | hermes | Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11- |
-| Apr 22, 01:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke complete. Spot-audit target: TASK-189-VIGIL-PHASE0-R2. Finding: review quality is strong and in-family — it correctly rescinded  |
 
 ## 🧭 Needs Mike
 
@@ -89,10 +89,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 02:07 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 104 |
+| 🪽 **Hermes** | Apr 22, 02:18 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 105 |
+| 🐷 **OinkV** | Apr 22, 02:14 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 57 |
+| 🛡️ **GUARDIAN** | Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `Sprint poke #3 response 00:11Z — triage complete` | 🟢 fresh | 130 |
 | ⚒️ **ANVIL** | Apr 22, 02:04 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 130 |
-| 🐷 **OinkV** | Apr 22, 02:00 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 56 |
-| 🛡️ **GUARDIAN** | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `Sprint poke #2 response — TASK-189 R4 review completed` | 🟢 fresh | 129 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟡 1–3h | 61 |
 | 🔥 **FORGE** | Apr 22, 01:03 CEST | `DECISION_NEEDED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟡 1–3h | 88 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
@@ -194,9 +194,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | PILOT |  |
@@ -212,4 +212,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*15/52 tasks DONE · Last auto-regenerated: 02:07 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*15/52 tasks DONE · Last auto-regenerated: 02:18 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

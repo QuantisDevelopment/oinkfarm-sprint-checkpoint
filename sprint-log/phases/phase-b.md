@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete |
 | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
@@ -65,7 +66,6 @@
 | Apr 22, 00:45 CEST | `CANARY_STARTED` | `B6` | anvil | B6 canary started |
 | Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
 | Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
-| Apr 22, 00:22 CEST | `PROPOSAL_READY` | `B12` | anvil | B12 proposal ready |
 
 ## Needs Mike (open gates)
 
