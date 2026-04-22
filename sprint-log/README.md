@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 868
-- **Last 24h:** 464 (rate 19.33/h)
+- **Total events:** 871
+- **Last 24h:** 461 (rate 19.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 15:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | vigil | M32 review by vigil — PASS (9.85) |
+| Apr 22, 15:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 13:26Z. Event scan 13:07-13:26Z window (4 events): (1) GUARDIAN 13:17:58Z heartbeat — M189 canary verdict='mo |
 | Apr 22, 15:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 15:17 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
@@ -25,15 +28,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 14:50 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 14:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:46Z. Event scan 12:27-12:46Z window (5 events, all OOS): 2x hermes ARTIFACT_PUBLISHED, 1x forge TASK_PLANN |
 | Apr 22, 14:44 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
-| Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
-| Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 14:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:26Z. Event scan 12:07-12:26Z window (6 events): (1) GUARDIAN 12:23:06Z heartbeat — M189 canary verdict='mo |
 
-### Last 4 hours (73 events)
+### Last 4 hours (66 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 15:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | vigil | M32 review by vigil — PASS (9.85) |
+| Apr 22, 15:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 13:26Z. Event scan 13:07-13:26Z window (4 events): (1) GUARDIAN 13:17:58Z heartbeat — M189 canary verdict='mo |
 | Apr 22, 15:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 15:17 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
@@ -46,13 +47,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 14:44 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
 | Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
-| Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 14:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:26Z. Event scan 12:07-12:26Z window (6 events): (1) GUARDIAN 12:23:06Z heartbeat — M189 canary verdict='mo |
 
-### Last 24 hours (464 events)
+### Last 24 hours (461 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 15:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | vigil | M32 review by vigil — PASS (9.85) |
+| Apr 22, 15:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 13:26Z. Event scan 13:07-13:26Z window (4 events): (1) GUARDIAN 13:17:58Z heartbeat — M189 canary verdict='mo |
 | Apr 22, 15:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 15:17 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — M189-canary-monitoring |
 | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
@@ -65,9 +66,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 14:44 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
 | Apr 22, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 22, 14:33 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | oinkv |  |
-| Apr 22, 14:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 14:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 12:26Z. Event scan 12:07-12:26Z window (6 events): (1) GUARDIAN 12:23:06Z heartbeat — M189 canary verdict='mo |
 
 ## 🧭 Needs Mike
 
@@ -92,12 +90,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 15:22 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 165 |
+| 🪽 **Hermes** | Apr 22, 15:43 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 166 |
+| 🔍 **VIGIL** | Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | 🟢 fresh | 69 |
+| ⚒️ **ANVIL** | Apr 22, 15:27 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 195 |
 | 🛡️ **GUARDIAN** | Apr 22, 15:17 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring` | 🟢 fresh | 166 |
 | 🐷 **OinkV** | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🟢 fresh | 113 |
-| ⚒️ **ANVIL** | Apr 22, 15:07 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 194 |
-| 🔥 **FORGE** | Apr 22, 14:35 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🟢 fresh | 134 |
-| 🔍 **VIGIL** | Apr 22, 10:29 CEST | `—` | `—` | 🔴 stale | 68 |
+| 🔥 **FORGE** | Apr 22, 14:35 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🟡 1–3h | 134 |
 | • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🔴 stale | 7 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -174,6 +172,7 @@ _No open DECISION_NEEDED events._
 | `M10` | M10 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M22` | M22 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M23` | M23 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M32` | M32 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M105` | M105 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
 | `M111` | M111 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M120` | M120 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
@@ -199,11 +198,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔍 | VIGIL | Code Review + Scoring |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
-| 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -217,4 +216,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/54 tasks DONE · Last auto-regenerated: 15:22 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/55 tasks DONE · Last auto-regenerated: 15:44 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

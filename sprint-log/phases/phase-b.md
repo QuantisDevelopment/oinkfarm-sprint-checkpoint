@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | vigil | M32 review by vigil — PASS (9.85) |
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `B9` | anvil | B9 v3 Phase 0 FULLY APPROVED by both reviewers. VIGIL PROPOSAL_APPROVED 07:51:00Z score 9.60; GUARDIAN abbreviated Dim-1-only re-review 06:3 |
 | Apr 22, 09:51 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
 | Apr 22, 09:49 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
@@ -65,7 +66,6 @@
 | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
 | Apr 22, 01:41 CEST | `PROPOSAL_APPROVED` | `—` | guardian | — proposal approved by guardian |
 | Apr 22, 01:10 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — Heavy Hybrid data purity watch |
-| Apr 22, 01:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 23:07Z — 3 material events processed (B9 v2 REQUEST_CHANGES, B12-SHADOW APPROVE, B6 canary baseline) |
 
 ## Needs Mike (open gates)
 
