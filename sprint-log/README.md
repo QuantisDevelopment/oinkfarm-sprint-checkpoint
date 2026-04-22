@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 779
-- **Last 24h:** 439 (rate 18.29/h)
+- **Total events:** 785
+- **Last 24h:** 443 (rate 18.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (32 events)
+### Last 1 hour (36 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 10:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 10:33 CEST | `SPRINT_NOTE` | `—` | oinkv | No new state since 08:24Z poke. Vigil: no new reviews; B9-VIGIL-v3-REVIEW (APPROVE 9.60) remains freshest trustworthy. OinXtractor: metrics  |
+| Apr 22, 10:29 CEST | `None` | `—` | vigil |  — |
+| Apr 22, 10:29 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary active — baseline captured, 1/3 signals observed |
+| Apr 22, 10:28 CEST | `CANARY_STARTED` | `M189` | guardian | M189 canary started |
+| Apr 22, 10:26 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 08:26Z. Event scan 08:06-08:26Z window: (1) M189 canary still in progress ~24min post-baseline; no GUARDIAN c |
 | Apr 22, 10:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 10:24 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited B9-VIGIL-v3-REVIEW (new, 09:50 CEST): trustworthy, APPROVE 9.60 at CRITICAL tier (meets 9.5 threshold). Dimension math verified |
 | Apr 22, 10:19 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
@@ -24,16 +30,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `B9` | anvil | B9 v3 Phase 0 FULLY APPROVED by both reviewers. VIGIL PROPOSAL_APPROVED 07:51:00Z score 9.60; GUARDIAN abbreviated Dim-1-only re-review 06:3 |
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 08:06Z. Event scan 08:05Z-back window: (1) M189 MERGE_TRAIN_COMPLETE 08:01Z, CANARY_STARTED 08:01:51Z, TASK 4 |
 | Apr 22, 10:05 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 PR_REVIEW → CANARY |
-| Apr 22, 10:05 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on None |
-| Apr 22, 10:05 CEST | `SPRINT_NOTE` | `M189` | anvil | M189 Step-0 Phase-1 merge train complete in 15 seconds (08:00:44Z to 08:00:59Z). All 3 PRs squash-merged with --delete-branch: oinkfarm#190  |
-| Apr 22, 10:01 CEST | `CANARY_STARTED` | `M189` | anvil | M189 canary started |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @83f198a |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @8787b94 |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @8311ea6 |
 
-### Last 4 hours (102 events)
+### Last 4 hours (101 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 10:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 10:33 CEST | `SPRINT_NOTE` | `—` | oinkv | No new state since 08:24Z poke. Vigil: no new reviews; B9-VIGIL-v3-REVIEW (APPROVE 9.60) remains freshest trustworthy. OinXtractor: metrics  |
+| Apr 22, 10:29 CEST | `None` | `—` | vigil |  — |
+| Apr 22, 10:29 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary active — baseline captured, 1/3 signals observed |
+| Apr 22, 10:28 CEST | `CANARY_STARTED` | `M189` | guardian | M189 canary started |
+| Apr 22, 10:26 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 08:26Z. Event scan 08:06-08:26Z window: (1) M189 canary still in progress ~24min post-baseline; no GUARDIAN c |
 | Apr 22, 10:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 10:24 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited B9-VIGIL-v3-REVIEW (new, 09:50 CEST): trustworthy, APPROVE 9.60 at CRITICAL tier (meets 9.5 threshold). Dimension math verified |
 | Apr 22, 10:19 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
@@ -43,16 +49,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `B9` | anvil | B9 v3 Phase 0 FULLY APPROVED by both reviewers. VIGIL PROPOSAL_APPROVED 07:51:00Z score 9.60; GUARDIAN abbreviated Dim-1-only re-review 06:3 |
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 08:06Z. Event scan 08:05Z-back window: (1) M189 MERGE_TRAIN_COMPLETE 08:01Z, CANARY_STARTED 08:01:51Z, TASK 4 |
 | Apr 22, 10:05 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 PR_REVIEW → CANARY |
-| Apr 22, 10:05 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on None |
-| Apr 22, 10:05 CEST | `SPRINT_NOTE` | `M189` | anvil | M189 Step-0 Phase-1 merge train complete in 15 seconds (08:00:44Z to 08:00:59Z). All 3 PRs squash-merged with --delete-branch: oinkfarm#190  |
-| Apr 22, 10:01 CEST | `CANARY_STARTED` | `M189` | anvil | M189 canary started |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @83f198a |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @8787b94 |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @8311ea6 |
 
-### Last 24 hours (439 events)
+### Last 24 hours (443 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 10:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 10:33 CEST | `SPRINT_NOTE` | `—` | oinkv | No new state since 08:24Z poke. Vigil: no new reviews; B9-VIGIL-v3-REVIEW (APPROVE 9.60) remains freshest trustworthy. OinXtractor: metrics  |
+| Apr 22, 10:29 CEST | `None` | `—` | vigil |  — |
+| Apr 22, 10:29 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — M189 canary active — baseline captured, 1/3 signals observed |
+| Apr 22, 10:28 CEST | `CANARY_STARTED` | `M189` | guardian | M189 canary started |
+| Apr 22, 10:26 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 08:26Z. Event scan 08:06-08:26Z window: (1) M189 canary still in progress ~24min post-baseline; no GUARDIAN c |
 | Apr 22, 10:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 10:24 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited B9-VIGIL-v3-REVIEW (new, 09:50 CEST): trustworthy, APPROVE 9.60 at CRITICAL tier (meets 9.5 threshold). Dimension math verified |
 | Apr 22, 10:19 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
@@ -62,12 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `B9` | anvil | B9 v3 Phase 0 FULLY APPROVED by both reviewers. VIGIL PROPOSAL_APPROVED 07:51:00Z score 9.60; GUARDIAN abbreviated Dim-1-only re-review 06:3 |
 | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel-sprint heartbeat tick 08:06Z. Event scan 08:05Z-back window: (1) M189 MERGE_TRAIN_COMPLETE 08:01Z, CANARY_STARTED 08:01:51Z, TASK 4 |
 | Apr 22, 10:05 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 PR_REVIEW → CANARY |
-| Apr 22, 10:05 CEST | `CODE_STARTED` | `M189` | anvil | M189 code started on None |
-| Apr 22, 10:05 CEST | `SPRINT_NOTE` | `M189` | anvil | M189 Step-0 Phase-1 merge train complete in 15 seconds (08:00:44Z to 08:00:59Z). All 3 PRs squash-merged with --delete-branch: oinkfarm#190  |
-| Apr 22, 10:01 CEST | `CANARY_STARTED` | `M189` | anvil | M189 canary started |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @83f198a |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @8787b94 |
-| Apr 22, 10:01 CEST | `MERGED` | `M189` | anvil | M189 merged via PR #None @8311ea6 |
 
 ## 🧭 Needs Mike
 
@@ -89,12 +89,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 10:26 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 140 |
-| 🐷 **OinkV** | Apr 22, 10:24 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 94 |
+| 🪽 **Hermes** | Apr 22, 10:37 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 141 |
+| 🐷 **OinkV** | Apr 22, 10:33 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 95 |
+| 🔍 **VIGIL** | Apr 22, 10:29 CEST | `—` | `—` | 🟢 fresh | 68 |
+| 🛡️ **GUARDIAN** | Apr 22, 10:29 CEST | `AGENT_HEARTBEAT` | `M189 canary active — baseline captured, 1/3 signals observed` | 🟢 fresh | 156 |
+| ⚒️ **ANVIL** | Apr 22, 10:26 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 180 |
 | 🔥 **FORGE** | Apr 22, 10:19 CEST | `TASK_PLANNED` | `standby — 2nd-opinion critic` | 🟢 fresh | 117 |
-| ⚒️ **ANVIL** | Apr 22, 10:07 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 179 |
-| 🛡️ **GUARDIAN** | Apr 22, 09:59 CEST | `AGENT_HEARTBEAT` | `Standing by for M189 merge-train (T-3m) → canary protocol` | 🟢 fresh | 154 |
-| 🔍 **VIGIL** | Apr 22, 09:51 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 67 |
 | • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🟢 fresh | 7 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -197,10 +197,10 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🐷 | OinkV | Plan Auditor |
-| 🔥 | FORGE | Technical Execution Planner |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | • | PILOT |  |
 | • | mike |  |
@@ -215,4 +215,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/53 tasks DONE · Last auto-regenerated: 10:26 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 10:37 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
