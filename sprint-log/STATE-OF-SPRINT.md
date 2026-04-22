@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 12:05 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 14:19 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-The morning's one real signal: M189's canary got its first closed trade. APT #2606 hit all its take-profits cleanly at 10:40 UTC with no breakeven-misclassification — which is exactly the failure mode M189 (the stop-loss/breakeven event-model fix) was supposed to eliminate. GUARDIAN deliberately isn't calling it a PASS yet; the canary needs three closed signals, and the other two (ETH #2605, AERO #2608) are still limit orders waiting to fill. Verdict deadline is tomorrow 08:00 UTC. Meanwhile the TASK 4 follow-up code on M189 (the SL-to-breakeven microgate) stays parked on its branch until that verdict lands.
+The sprint has been genuinely quiet for the last ~90 minutes — nothing merged, no decisions needed, no blockers resolved. M189's canary (the stop-loss/breakeven fix) is still parked at one closed signal out of three: APT #2606 hit its take-profits cleanly at 10:40 UTC with zero breakeven-misclassification, and ETH #2605 plus AERO #2608 are still sitting as limit orders waiting for price to come to them. Verdict deadline is tomorrow 08:00 UTC. GUARDIAN's been posting clean M189 heartbeats roughly every 25–30 minutes with "unchanged_since_prev_hb=true" — exactly what you want during a monitoring window.
 
-Otherwise it's been quiet since the 08:01 UTC merge train — nothing new shipped, no reviews posted. FORGE has been rolling three Phase C plans (C1, C2, C3, C4, C6 — operator-facing provenance fields on the KPI/trader/latest routes) with successive refinements as the B10/B11 contracts firm up, but none of those are code yet. VIGIL's heartbeat is now about 3.5 hours stale — past the watchdog line — though its last reviews (B9 v3, M189 Step-0) are still being spot-audited as trustworthy by OinkV every ten minutes.
+One low-risk oddity worth mentioning: VIGIL posted a late-audit review on M32 (a signal-gateway PR that fixes OinXtractor session rotation) — 9.85 PASS, STANDARD tier, already merged at 13:14 UTC. GUARDIAN flagged this as a P3 coordination note because the formal MERGED event never hit the bus and there's no GUARDIAN data-impact review on record — VIGIL or ANVIL needs to clarify whether M32 touched any data paths. If it's code-only (session-rotation plumbing sounds like it is), VIGIL-only late-audit is the correct flow and this closes itself; if it did touch data, GUARDIAN wants a retro review. Not blocking anything, just housekeeping.
 
-The carried-over watchlist hasn't moved: five PRs (A11 #133, B1 #21 + #149, B2 #24, B5 #25) still show no logged review inside 24h (metadata lag on already-merged work, not real silence), and B4 + M189 remain flagged as blocked on external dependencies — B4 still waiting on the April 26 clean-reconciliation clock, M189 waiting on its own canary.
+Everything else on the watchlist is unchanged since this morning's update: B9 Phase 0 still fully approved at 9.60, B12 shadow still half-approved (VIGIL pending), five historical PR-metadata gaps still carried over, and B4 still clocking toward the April 26 PostgreSQL cutover gate with B3's daily reconciliation verdict coming back CLEAN today. The OinXtractor quality dashboard remains at WARNING — 23 unknown parses over 24h, zero corrections logged yet — which is the quietest actionable signal on the board right now.
+
 
 ## Where We Are Today (one paragraph)
 
