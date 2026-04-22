@@ -4,70 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 715
-- **Last 24h:** 377 (rate 15.71/h)
+- **Total events:** 727
+- **Last 24h:** 389 (rate 16.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (19 events)
+### Last 1 hour (27 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 08:24 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 06:22Z. Scanned events since last SPRINT_NOTE evt_20260422T061802Z_000002: only 3 new events (2 self-emitted BLOCKED/STATUS_CHANGE |
+| Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
+| Apr 22, 08:18 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 CODE → PR_REVIEW |
+| Apr 22, 08:18 CEST | `BLOCKED` | `M189` | anvil | M189 BLOCKED — external_dependency |
+| Apr 22, 08:18 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 22, 08:18 CEST | `SPRINT_NOTE` | `M189` | anvil | SPRINT POKE ack 06:15Z. **M189 Step-0 Phase-1 APPROVED by BOTH reviewers.** VIGIL: 3x PASS 9.85 (oinkfarm 03:47Z, signal-gateway 04:15Z, oin |
+| Apr 22, 08:16 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil/OinXtractor/A171 delta since 06:03Z. Shipped fix for B3 reconciliation schema mismatch (events.schema.json missing 'oinkdb' agent e |
+| Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
+| Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
+| Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
 | Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily cron 06:00Z + M189 Step-0 Phase-1 review posted |
-| Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:53Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
-| Apr 22, 07:54 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M140-VIGIL-PHASE1-R1 (oink-sync#10, PASS 9.60), and it still reads as trustworthy/high-quality. Re |
-| Apr 22, 07:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #7 heavy-hybrid - flat state |
-| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Explicit GUARDIAN review request for M189 Step-0 Phase-1. VIGIL posted 3x PASS 9.85 for M189 Step-0 Phase-1 PRs: oinkfarm#190, signal-gatewa |
-| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 05:49Z. Event scan since evt_20260422T053117Z_000001 = 3 events, zero M189 verdicts: hermes ARTIFACT_PUBLISHED 05:41Z, oinkv  |
-| Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 05:22Z poke. Latest Vigil artifact remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy). |
-| Apr 22, 07:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:29Z (19min after prior note): **M189 critical path still held on GUARDIAN Step-0**, but a potential process gap surfaced.  |
 
-### Last 4 hours (89 events)
+### Last 4 hours (98 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 08:24 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 06:22Z. Scanned events since last SPRINT_NOTE evt_20260422T061802Z_000002: only 3 new events (2 self-emitted BLOCKED/STATUS_CHANGE |
+| Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
+| Apr 22, 08:18 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 CODE → PR_REVIEW |
+| Apr 22, 08:18 CEST | `BLOCKED` | `M189` | anvil | M189 BLOCKED — external_dependency |
+| Apr 22, 08:18 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 22, 08:18 CEST | `SPRINT_NOTE` | `M189` | anvil | SPRINT POKE ack 06:15Z. **M189 Step-0 Phase-1 APPROVED by BOTH reviewers.** VIGIL: 3x PASS 9.85 (oinkfarm 03:47Z, signal-gateway 04:15Z, oin |
+| Apr 22, 08:16 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil/OinXtractor/A171 delta since 06:03Z. Shipped fix for B3 reconciliation schema mismatch (events.schema.json missing 'oinkdb' agent e |
+| Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
+| Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
+| Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
 | Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily cron 06:00Z + M189 Step-0 Phase-1 review posted |
-| Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:53Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
-| Apr 22, 07:54 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M140-VIGIL-PHASE1-R1 (oink-sync#10, PASS 9.60), and it still reads as trustworthy/high-quality. Re |
-| Apr 22, 07:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #7 heavy-hybrid - flat state |
-| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Explicit GUARDIAN review request for M189 Step-0 Phase-1. VIGIL posted 3x PASS 9.85 for M189 Step-0 Phase-1 PRs: oinkfarm#190, signal-gatewa |
-| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 05:49Z. Event scan since evt_20260422T053117Z_000001 = 3 events, zero M189 verdicts: hermes ARTIFACT_PUBLISHED 05:41Z, oinkv  |
-| Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 05:22Z poke. Latest Vigil artifact remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy). |
-| Apr 22, 07:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:29Z (19min after prior note): **M189 critical path still held on GUARDIAN Step-0**, but a potential process gap surfaced.  |
 
-### Last 24 hours (377 events)
+### Last 24 hours (389 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 08:24 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 06:22Z. Scanned events since last SPRINT_NOTE evt_20260422T061802Z_000002: only 3 new events (2 self-emitted BLOCKED/STATUS_CHANGE |
+| Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
+| Apr 22, 08:18 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 CODE → PR_REVIEW |
+| Apr 22, 08:18 CEST | `BLOCKED` | `M189` | anvil | M189 BLOCKED — external_dependency |
+| Apr 22, 08:18 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 22, 08:18 CEST | `SPRINT_NOTE` | `M189` | anvil | SPRINT POKE ack 06:15Z. **M189 Step-0 Phase-1 APPROVED by BOTH reviewers.** VIGIL: 3x PASS 9.85 (oinkfarm 03:47Z, signal-gateway 04:15Z, oin |
+| Apr 22, 08:16 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil/OinXtractor/A171 delta since 06:03Z. Shipped fix for B3 reconciliation schema mismatch (events.schema.json missing 'oinkdb' agent e |
+| Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
+| Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
+| Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
 | Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.75) |
-| Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily cron 06:00Z + M189 Step-0 Phase-1 review posted |
-| Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 05:53Z poke. Latest Vigil review remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy).  |
-| Apr 22, 07:54 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: no newer Vigil artifact since M140-VIGIL-PHASE1-R1 (oink-sync#10, PASS 9.60), and it still reads as trustworthy/high-quality. Re |
-| Apr 22, 07:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #7 heavy-hybrid - flat state |
-| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Explicit GUARDIAN review request for M189 Step-0 Phase-1. VIGIL posted 3x PASS 9.85 for M189 Step-0 Phase-1 PRs: oinkfarm#190, signal-gatewa |
-| Apr 22, 07:52 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 05:49Z. Event scan since evt_20260422T053117Z_000001 = 3 events, zero M189 verdicts: hermes ARTIFACT_PUBLISHED 05:41Z, oinkv  |
-| Apr 22, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 07:42 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 05:22Z poke. Latest Vigil artifact remains M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10, already audited trustworthy). |
-| Apr 22, 07:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 07:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 05:29Z (19min after prior note): **M189 critical path still held on GUARDIAN Step-0**, but a potential process gap surfaced.  |
 
 ## 🧭 Needs Mike
 
@@ -77,20 +77,21 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 63.4h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (15.0h) |
-| ⚪ INFO | `—` | agent pilot heartbeat stale (9.8h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (7.1h) |
+| 🟠 WARN | `A11` | PR_OPENED 63.6h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (15.2h) |
+| ⚪ INFO | `—` | agent pilot heartbeat stale (10.0h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (7.3h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 08:13 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 131 |
+| 🪽 **Hermes** | Apr 22, 08:25 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 132 |
+| ⚒️ **ANVIL** | Apr 22, 08:24 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 162 |
+| 🔥 **FORGE** | Apr 22, 08:23 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 110 |
+| 🐷 **OinkV** | Apr 22, 08:16 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 84 |
+| • **OINKDB** | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | 🟢 fresh | 4 |
 | 🛡️ **GUARDIAN** | Apr 22, 08:09 CEST | `AGENT_HEARTBEAT` | `Daily cron 06:00Z + M189 Step-0 Phase-1 review posted` | 🟢 fresh | 148 |
-| 🐷 **OinkV** | Apr 22, 08:04 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 83 |
-| ⚒️ **ANVIL** | Apr 22, 07:52 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 157 |
-| 🔥 **FORGE** | Apr 22, 07:44 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 109 |
 | 🔍 **VIGIL** | Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | 🟡 1–3h | 66 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -145,7 +146,7 @@ _No open DECISION_NEEDED events._
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | ✅ DONE | PASS |
 | `B2` | B2 | 🔴 CRITICAL | — | ✅ DONE | PASS |
 | `B3` | B3 | 🟡 STANDARD | — | ✅ DONE | PASS |
-| `B4` | B4 | 🔴 CRITICAL | — | ⚙️ CODING | — |
+| `B4` | B4 | 🔴 CRITICAL | — | 🛑 BLOCKED | — |
 | `B5` | B5 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B6` | B6 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
 | `B7` | B7 | 🟡 STANDARD | — | ✅ DONE | PASS |
@@ -192,10 +193,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
+| 🐷 | OinkV | Plan Auditor |
+| • | OINKDB |  |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | PILOT |  |
 | • | mike |  |
@@ -210,4 +212,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/53 tasks DONE · Last auto-regenerated: 08:14 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 08:25 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
