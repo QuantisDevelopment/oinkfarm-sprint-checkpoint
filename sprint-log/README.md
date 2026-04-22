@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 612
-- **Last 24h:** 286 (rate 11.92/h)
+- **Total events:** 616
+- **Last 24h:** 290 (rate 12.08/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (19 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
+| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
+| Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary a |
 | Apr 22, 03:26 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:25Z status. Since last note at 01:03Z (22min window): 8 events. HEADLINE: GUARDIAN emitted B2 T+48 canary CLOSEOUT at 01:2 |
 | Apr 22, 03:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -26,14 +30,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:09 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 03:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in |
 | Apr 22, 03:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #5 response 01:06Z — nothing new |
-| Apr 22, 03:05 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv  |
-| Apr 22, 03:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 02:56 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: spot-audited B9-VIGIL-PHASE0-R3 again; still trustworthy. APPROVE 9.15 remains defensible because the review correctly ties B9  |
-| Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (96 events)
+### Last 4 hours (99 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
+| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
+| Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary a |
 | Apr 22, 03:26 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:25Z status. Since last note at 01:03Z (22min window): 8 events. HEADLINE: GUARDIAN emitted B2 T+48 canary CLOSEOUT at 01:2 |
 | Apr 22, 03:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -45,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:09 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 03:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in |
 | Apr 22, 03:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #5 response 01:06Z — nothing new |
-| Apr 22, 03:05 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv  |
-| Apr 22, 03:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 02:56 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: spot-audited B9-VIGIL-PHASE0-R3 again; still trustworthy. APPROVE 9.15 remains defensible because the review correctly ties B9  |
-| Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (286 events)
+### Last 24 hours (290 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
+| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
+| Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary a |
 | Apr 22, 03:26 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:25Z status. Since last note at 01:03Z (22min window): 8 events. HEADLINE: GUARDIAN emitted B2 T+48 canary CLOSEOUT at 01:2 |
 | Apr 22, 03:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -64,10 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:09 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 03:08 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in |
 | Apr 22, 03:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #5 response 01:06Z — nothing new |
-| Apr 22, 03:05 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv  |
-| Apr 22, 03:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 02:56 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke: spot-audited B9-VIGIL-PHASE0-R3 again; still trustworthy. APPROVE 9.15 remains defensible because the review correctly ties B9  |
-| Apr 22, 02:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -89,11 +89,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 110 |
+| 🪽 **Hermes** | Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 111 |
+| 🔥 **FORGE** | Apr 22, 03:44 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 95 |
+| 🐷 **OinkV** | Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 61 |
 | ⚒️ **ANVIL** | Apr 22, 03:26 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 134 |
 | 🛡️ **GUARDIAN** | Apr 22, 03:25 CEST | `CANARY_PASS` | `Sprint poke #5 response 01:06Z — nothing new` | 🟢 fresh | 133 |
-| 🔥 **FORGE** | Apr 22, 03:09 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 93 |
-| 🐷 **OinkV** | Apr 22, 03:08 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 60 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟡 1–3h | 61 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -194,10 +194,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | PILOT |  |
 | • | mike |  |
@@ -212,4 +212,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/52 tasks DONE · Last auto-regenerated: 03:34 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/52 tasks DONE · Last auto-regenerated: 03:47 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
