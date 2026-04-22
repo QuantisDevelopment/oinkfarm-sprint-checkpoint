@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-22T01:02:45+00:00">
+<body data-generated="2026-04-22T01:25:33+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-22T01:02:45+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-22T01:25:33+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-22T03:02:45+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-22T03:25:33+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 22, 03:02 CEST</span>
+        <span class="mono" id="last-regen">Apr 22, 03:25 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -57,9 +57,9 @@
 <!-- Events integrity ------------------------------------------------------- -->
 <section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
   <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
-    <div><span class="muted">📊 events:</span> <strong class="mono">600</strong></div>
-    <div><span class="muted">24h rate:</span> <strong class="mono">11.46/h</strong></div>
-    <div><span class="muted">last 24h:</span> <strong class="mono">275</strong></div>
+    <div><span class="muted">📊 events:</span> <strong class="mono">610</strong></div>
+    <div><span class="muted">24h rate:</span> <strong class="mono">11.88/h</strong></div>
+    <div><span class="muted">last 24h:</span> <strong class="mono">285</strong></div>
     <div><span class="muted">schema:</span> <strong class="mono">v1.0</strong></div>
     <div><span class="muted">source:</span> <strong class="mono">lib</strong></div>
     <div>
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="integrity-human" style="margin-top:6px;font-size:0.85rem;color:#c6d0e0;">
-    In plain English: 275 things happened today, ~11.46/h steady-state. Event stream has order gaps — review needed.
+    In plain English: 285 things happened today, ~11.88/h steady-state. Event stream has order gaps — review needed.
   </div>
 </section>
 
@@ -94,11 +94,11 @@
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📍 Today in one paragraph</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">Activity logged today, no headline moves yet.</p>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">Today: one canary PASS. B2 🔴 PostgreSQL schema migration cleared canary.</p>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📅 What happened this week</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">Over the last three days, the stream recorded 42 merges, 44 canary events, and 83 reviews posted across the board. Phase A work continued to settle with A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, A4 🟡 PARTIALLY_CLOSED lifecycle, and A5 🟡 parser confidence scoring reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🔴 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 61 decision events flowed through the Mike-gate process.</p>
+      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">Over the last three days, the stream recorded 42 merges, 45 canary events, and 83 reviews posted across the board. Phase A work continued to settle with A10 🔴 test→prod database merge, A11 🟢 leverage-source tracking, A4 🟡 PARTIALLY_CLOSED lifecycle, and A5 🟡 parser confidence scoring reaching prod. Phase B Wave 2 is in flight — B1 🔴 db abstraction layer, B2 🔴 PostgreSQL schema migration, B3 🟡 parallel-write verification, and B5 🟡 Redis co-host bring-up shipped in this window. 61 decision events flowed through the Mike-gate process.</p>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">🎯 What's next</h3>
@@ -116,9 +116,89 @@
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 1 hour</strong>
-        <span class="mono muted">13 events</span>
+        <span class="mono muted">16 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:25 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:25 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">CANARY_PASS</span>
+<span class="mono">B2</span>              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">B2 canary PASS</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C1</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C1 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C2</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C2 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C3</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C3 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C4</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C4 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C6</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C6 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:08 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:07 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — Sprint poke #5 response 01:06Z — nothing new</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:05 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv </div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 22, 03:02 CEST</span>
@@ -166,71 +246,95 @@
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:23 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 00:23Z status. (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC, </div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:23 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke: spot-audited B9-VIGIL-PHASE0-R3-REVIEW.md and it remains trustworthy. APPROVE 9.15 for B9 v2 is defensible: R1 blockers were cl</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:18 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:14 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke: SG28 and OF176 vigil spot-audits remain trustworthy. OinXtractor warning unchanged (instrumentation-definition drift, not colla</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:12 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:07 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 02:04 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 00:03Z status. (1) #189 R4 review status unchanged from 23:43Z tick: GUARDIAN APPROVE 23:41:14Z, VIGIL R4 verdict still NOT i</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 4 hours</strong>
-        <span class="mono muted">89 events</span>
+        <span class="mono muted">94 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:25 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:25 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">CANARY_PASS</span>
+<span class="mono">B2</span>              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">B2 canary PASS</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C1</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C1 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C2</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C2 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C3</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C3 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C4</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C4 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C6</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C6 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:08 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:07 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — Sprint poke #5 response 01:06Z — nothing new</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:05 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv </div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 22, 03:02 CEST</span>
@@ -350,95 +454,95 @@
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:50 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published plan: </div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:44 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:41 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:41 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">PROPOSAL_APPROVED</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— proposal approved by guardian</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:32 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">PROPOSAL_READY</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— proposal ready</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:32 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 23:23Z status. (1) #189 R3 filed at 23:24:33Z; no VIGIL/GUARDIAN approvals on R3 yet. (2) During pre-poll review of sprint-ch</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:29 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11-</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 24 hours</strong>
-        <span class="mono muted">275 events</span>
+        <span class="mono muted">285 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:25 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:25 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">CANARY_PASS</span>
+<span class="mono">B2</span>              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">B2 canary PASS</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C1</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C1 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C2</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C2 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C3</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C3 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C4</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C4 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:09 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">TASK_PLANNED</span>
+<span class="mono">C6</span>              <span class="muted mono">· forge</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C6 plan published</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:08 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:07 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — Sprint poke #5 response 01:06Z — nothing new</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 22, 03:05 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv </div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 22, 03:02 CEST</span>
@@ -558,86 +662,6 @@
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:50 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Sprint poke complete. Spot-audit target: B9-VIGIL-PHASE0-R3-REVIEW.md (B9 v2 W1 Immutable Signal Records). Finding: review is TRUSTWORTHY. A</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published plan: </div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 23:43Z status. (1) #189 R4 review status: GUARDIAN APPROVE received at 23:41:14Z (evt_20260421T234114Z_000001, verdict=APPROV</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:44 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:41 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:41 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">PROPOSAL_APPROVED</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— proposal approved by guardian</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:32 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">PROPOSAL_READY</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— proposal ready</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:32 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Cron heartbeat 23:23Z status. (1) #189 R3 filed at 23:24:33Z; no VIGIL/GUARDIAN approvals on R3 yet. (2) During pre-poll review of sprint-ch</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 22, 01:29 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Mike powered through a question queue while FORGE kept teeing up new ones. At 22:59Z Hermes logged answers to four gates you cleared (Q-B11-</div>
           </li>
         </ol>
     </div>
@@ -736,41 +760,13 @@
           <strong>Hermes</strong>
           <span class="muted mono" style="font-size:0.75rem;">Sprint Orchestrator</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 22, 03:02 CEST</td>
+        <td class="mono muted" style="padding:8px;">Apr 22, 03:25 CEST</td>
         <td class="mono" style="padding:8px;color:#8ab4ff;">ARTIFACT_PUBLISHED</td>
         <td class="mono" style="padding:8px;">—</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">108</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>🐷</span>
-          <strong>OinkV</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Plan Auditor</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 22, 02:56 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
-        <td class="mono" style="padding:8px;">—</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">59</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>⚒️</span>
-          <strong>ANVIL</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 22, 02:44 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
-        <td class="mono" style="padding:8px;">M189</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">132</td>
+        <td class="mono muted" style="padding:8px;">109</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -778,13 +774,55 @@
           <strong>GUARDIAN</strong>
           <span class="muted mono" style="font-size:0.75rem;">Data Integrity + Canary</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 22, 02:39 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">AGENT_HEARTBEAT</td>
-        <td class="mono" style="padding:8px;">Sprint poke #4 response 00:39Z — nothing new</td>
+        <td class="mono muted" style="padding:8px;">Apr 22, 03:25 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">CANARY_PASS</td>
+        <td class="mono" style="padding:8px;">Sprint poke #5 response 01:06Z — nothing new</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">131</td>
+        <td class="mono muted" style="padding:8px;">133</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>🔥</span>
+          <strong>FORGE</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Technical Execution Planner</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 22, 03:09 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">TASK_PLANNED</td>
+        <td class="mono" style="padding:8px;">Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">93</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>🐷</span>
+          <strong>OinkV</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Plan Auditor</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 22, 03:08 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
+        <td class="mono" style="padding:8px;">—</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">60</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>⚒️</span>
+          <strong>ANVIL</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 22, 03:05 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
+        <td class="mono" style="padding:8px;">M189</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">133</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -799,20 +837,6 @@
 <span style="background:#713f12;color:#fde68a;padding:2px 8px;border-radius:4px;">● 1–3h</span>
         </td>
         <td class="mono muted" style="padding:8px;">61</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>🔥</span>
-          <strong>FORGE</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Technical Execution Planner</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 22, 01:03 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">DECISION_NEEDED</td>
-        <td class="mono" style="padding:8px;">Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion</td>
-        <td style="padding:8px;">
-<span style="background:#713f12;color:#fde68a;padding:2px 8px;border-radius:4px;">● 1–3h</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">88</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -1068,6 +1092,915 @@ future      </span>
     <span class="muted mono">most recent first</span>
   </div>
   <div class="tasks-grid">
+    <article class="task task-done" id="task-B2">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="CRITICAL">🔴</span>
+          <span class="task-id mono">B2</span>
+          <span class="badge badge-done">Done</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 22, 03:25 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">9.60</span></div>
+            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">9.60</span></div>
+            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pass">PASS</span></div>
+        </div>
+
+          <div class="task-prs">
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkdb-api/pull/2" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oinkdb-api</span>
+                <span class="pr-num mono">#2</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkdb-api/commit/f1f5544fe1f2f935f66de745a7772c052183d5e4" target="_blank" rel="noopener" title="merge commit">
+                  f1f5544
+                </a>
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/153" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oinkfarm</span>
+                <span class="pr-num mono">#153</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13" target="_blank" rel="noopener" title="merge commit">
+                  14563d2
+                </a>
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/11" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oink-sync</span>
+                <span class="pr-num mono">#11</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5" target="_blank" rel="noopener" title="merge commit">
+                  80288bb
+                </a>
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/24" target="_blank" rel="noopener">
+                <span class="pr-repo mono">signal-gateway</span>
+                <span class="pr-num mono">#24</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6" target="_blank" rel="noopener" title="merge commit">
+                  df8112d
+                </a>
+          </div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(36 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B2 canary PASS</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 03:25 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:27 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 16:38 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B2 canary started</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 16:37 CEST
+                    · <span class="filepath">B2-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 canary started</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 16:35 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 16:29 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 14:11 CEST
+                    · <span class="filepath">SPRINT-2026-04-21-B2-CROSSCHECK.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 12:25 CEST
+                    · <span class="filepath">SPRINT-2026-04-21-B2-CROSSCHECK.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit </span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 12:25 CEST
+                    · <span class="filepath">SPRINT-2026-04-21-B2-CROSSCHECK.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">vigil</span>
+                  <span>B2 review by vigil — PASS (9.6)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 12:16 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses </span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 22:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 22:54 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 22:54 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:15 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 Mike gate: TimescaleDB now or later (B14)?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 Mike gate: PostgreSQL hosting: same server or separate?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B2 canary started</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 04:30 CEST
+                    · <span class="filepath">B2-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 merged via PR #24 @df8112d</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 merged via PR #11 @80288bb</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 merged via PR #153 @14563d2</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 PR #24 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 PR #11 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 PR #153 opened — feat(B2): PostgreSQL schema translation + one-time data migration</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B2 review by guardian — PASS (9.6)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:16 CEST
+                    · <span class="filepath">B2-GUARDIAN-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 merged via PR #None @92cdfef</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:07 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 merged via PR #None @9bf9c5f</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:07 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">system</span>
+                  <span>B2 proposal approved by vigil+guardian</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 02:54 CEST
+                    · <span class="filepath">B2-PHASE0-APPROVED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B2 review by guardian — PASS (9.5)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 02:45 CEST
+                    · <span class="filepath">B2-GUARDIAN-PHASE0-REVIEW-R2.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 proposal ready</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 02:41 CEST
+                    · <span class="filepath">B2-PHASE0-PROPOSAL.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">vigil</span>
+                  <span>B2 review by vigil — PASS (9.5)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 02:34 CEST
+                    · <span class="filepath">B2-VIGIL-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-revise"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B2 review by guardian — REVISE (5.0)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 02:32 CEST
+                    · <span class="filepath">B2-GUARDIAN-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 01:43 CEST
+                    · <span class="filepath">TASK-B2-plan.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B2 merged via PR #2 @f1f5544</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 18:56 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-C2">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">C2</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 22, 03:09 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(14 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 03:09 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 01:03 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>C2 decision: render_only_bands_change_routing_stays_0.75</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 00:59 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 00:18 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 00:18 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 19:17 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 decision: soft_flag_provisional</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 19:17 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:39 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 Mike gate: For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_fla</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:05 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:05 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 23:18 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 22:54 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:21 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C2 Mike gate: Confidence routing: hard reject or soft flag?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-C1">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">C1</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 22, 03:09 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(3 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C1 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 03:09 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C1 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 00:18 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C1 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:05 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-C3">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">C3</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 22, 03:09 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(3 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C3 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 03:09 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C3 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 00:18 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C3 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:05 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-C4">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">C4</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 22, 03:09 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(2 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C4 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 03:09 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C4 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:05 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-planned" id="task-C6">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">C6</span>
+          <span class="badge badge-planned">Planned</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 22, 03:09 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+        </div>
+
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(2 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C6 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 03:09 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>C6 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 17:05 CEST
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
     <article class="task task-code" id="task-B9">
       <header class="task-head">
         <div class="task-id-row">
@@ -1846,186 +2779,6 @@ COMPLETED THIS SESSION:
           </ol>
       </details>
     </article>
-    <article class="task task-planned" id="task-C2">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">C2</span>
-          <span class="badge badge-planned">Planned</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 22, 01:03 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-        </div>
-
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(13 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 01:03 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>C2 decision: render_only_bands_change_routing_stays_0.75</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 00:59 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 Mike gate: Mike 2026-04-22 00:12 threshold directive (<50/50-75/>=75) conflicts with Q-HH-5 ratified bootstrap (<0.75/0.75-0.89/>=0.90) a</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 00:18 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 00:18 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 19:17 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 decision: soft_flag_provisional</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 19:17 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:39 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 Mike gate: For signals below the configured confidence threshold, should the system hard_reject them from the live lifecycle, or soft_fla</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:05 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:05 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 23:18 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>C2 decision: Soft flag via PROVISIONAL lifecycle state. Zero data loss. Confidence threshold is a C2 tuning parameter, not hard-coded.</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 22:54 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 Mike gate: Route low-confidence signals to PROVISIONAL state or hard-reject?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C2 Mike gate: Confidence routing: hard reject or soft flag?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
     <article class="task task-canary" id="task-B6">
       <header class="task-head">
         <div class="task-id-row">
@@ -2245,102 +2998,6 @@ COMPLETED THIS SESSION:
                 <div class="timeline-meta mono muted">
                   Apr 20, 07:53 CEST
                     · <span class="filepath">TASK-B6-plan.md</span>
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-planned" id="task-C1">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">C1</span>
-          <span class="badge badge-planned">Planned</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 22, 00:18 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-        </div>
-
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(2 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C1 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 00:18 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C1 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:05 CEST
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-planned" id="task-C3">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">C3</span>
-          <span class="badge badge-planned">Planned</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 22, 00:18 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-        </div>
-
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(2 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C3 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 00:18 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C3 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:05 CEST
                 </div>
               </div>
             </li>
@@ -3108,567 +3765,6 @@ COMPLETED THIS SESSION:
                 </div>
                 <div class="timeline-meta mono muted">
                   Apr 21, 17:42 CEST
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-canary" id="task-B2">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="CRITICAL">🔴</span>
-          <span class="task-id mono">B2</span>
-          <span class="badge badge-canary">Canary</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 21, 17:27 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">9.60</span></div>
-            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">9.60</span></div>
-            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pending">PENDING</span></div>
-        </div>
-
-          <div class="task-prs">
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkdb-api/pull/2" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oinkdb-api</span>
-                <span class="pr-num mono">#2</span>
-              </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkdb-api/commit/f1f5544fe1f2f935f66de745a7772c052183d5e4" target="_blank" rel="noopener" title="merge commit">
-                  f1f5544
-                </a>
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/153" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oinkfarm</span>
-                <span class="pr-num mono">#153</span>
-              </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13" target="_blank" rel="noopener" title="merge commit">
-                  14563d2
-                </a>
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/11" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oink-sync</span>
-                <span class="pr-num mono">#11</span>
-              </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5" target="_blank" rel="noopener" title="merge commit">
-                  80288bb
-                </a>
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/24" target="_blank" rel="noopener">
-                <span class="pr-repo mono">signal-gateway</span>
-                <span class="pr-num mono">#24</span>
-              </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6" target="_blank" rel="noopener" title="merge commit">
-                  df8112d
-                </a>
-          </div>
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(35 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — Priority correction ack — Heavy Hybrid remains P0</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:27 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — B2 canary dispatch + B4/B6 reviews + A6/A9 canary close-outs</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 16:38 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B2 canary started</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 16:37 CEST
-                    · <span class="filepath">B2-CANARY.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 canary started</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 16:35 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B2 decision: NO DRIFT. Forge's fresh-eyes cross-check flagged apparent deltas between PR 17073d12 (B2) and live working tree at be2ff3b7, bu</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 16:29 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>SPRINT POKE check-in complete. Fresh-eyes cross-check already shipped and findings stand: agree with VIGIL on A11, B1, and B5; partial disag</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 14:11 CEST
-                    · <span class="filepath">SPRINT-2026-04-21-B2-CROSSCHECK.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 Mike gate: Does existing B2 review approval still cover production migration from the current modified local candidate, or must the post-</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 12:25 CEST
-                    · <span class="filepath">SPRINT-2026-04-21-B2-CROSSCHECK.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>FORGE fresh-eyes cross-check complete. Agree with VIGIL on A11, B1, and B5. For B2, I agree the reviewed PR artifact (oinkfarm#153 / commit </span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 12:25 CEST
-                    · <span class="filepath">SPRINT-2026-04-21-B2-CROSSCHECK.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">vigil</span>
-                  <span>B2 review by vigil — PASS (9.6)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 12:16 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B2 decision: Accept NULL filled_at on 84 historical closed signals as-is. No backfill. B2 PG migration preserves NULLs. No Phase A KPI uses </span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 22:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B2 decision: Defer TimescaleDB to B14 (dedicated task). PG first, Timescale bolts on non-destructively when workload justifies.</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 22:54 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B2 decision: CHECK-only constraint (entry_price > 0). No PL/pgSQL trigger — REJECTED_AUDIT code path is dead.</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 22:54 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 Mike gate: Defer TimescaleDB introduction from B2 to B14?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B2 decision: Same server (barn) initially, inside Docker Compose network. Matches Arbiter V3 PHASE-4 §2 topology exactly ('Container definit</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:15 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 Mike gate: trg_entry_price_update REJECTED_AUDIT exception handling</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 Mike gate: 84 closed signals with NULL filled_at — backfill/accept/block?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 Mike gate: TimescaleDB now or later (B14)?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 Mike gate: PostgreSQL hosting: same server or separate?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B2 canary started</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 04:30 CEST
-                    · <span class="filepath">B2-CANARY.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 merged via PR #24 @df8112d</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 merged via PR #11 @80288bb</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 merged via PR #153 @14563d2</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 PR #24 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 PR #11 opened — chore(B2): re-vendor oink_db.py with PostgreSQL backend support</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 PR #153 opened — feat(B2): PostgreSQL schema translation + one-time data migration</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:21 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B2 review by guardian — PASS (9.6)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:16 CEST
-                    · <span class="filepath">B2-GUARDIAN-PHASE1-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 merged via PR #None @92cdfef</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:07 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 merged via PR #None @9bf9c5f</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:07 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">system</span>
-                  <span>B2 proposal approved by vigil+guardian</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 02:54 CEST
-                    · <span class="filepath">B2-PHASE0-APPROVED.marker</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B2 review by guardian — PASS (9.5)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 02:45 CEST
-                    · <span class="filepath">B2-GUARDIAN-PHASE0-REVIEW-R2.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 proposal ready</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 02:41 CEST
-                    · <span class="filepath">B2-PHASE0-PROPOSAL.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">vigil</span>
-                  <span>B2 review by vigil — PASS (9.5)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 02:34 CEST
-                    · <span class="filepath">B2-VIGIL-PHASE0-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-revise"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B2 review by guardian — REVISE (5.0)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 02:32 CEST
-                    · <span class="filepath">B2-GUARDIAN-PHASE0-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B2 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 01:43 CEST
-                    · <span class="filepath">TASK-B2-plan.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B2 merged via PR #2 @f1f5544</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 18:56 CEST
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-planned" id="task-C4">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">C4</span>
-          <span class="badge badge-planned">Planned</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 21, 17:05 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-        </div>
-
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(1 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C4 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:05 CEST
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-planned" id="task-C6">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">C6</span>
-          <span class="badge badge-planned">Planned</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 21, 17:05 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-        </div>
-
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(1 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>C6 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 17:05 CEST
                 </div>
               </div>
             </li>
@@ -8090,6 +8186,30 @@ COMPLETED THIS SESSION:
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
+          <span class="agent-emoji">🛡️</span>
+          <span class="agent-name">GUARDIAN</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Data Integrity + Canary</div>
+        <div class="agent-meta mono">
+            task: Sprint poke #5 response 01:06Z — nothing new
+        </div>
+        <div class="agent-meta mono muted">33s ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">🔥</span>
+          <span class="agent-name">FORGE</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Technical Execution Planner</div>
+        <div class="agent-meta mono">
+            task: Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion
+        </div>
+        <div class="agent-meta mono muted">16m ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
           <span class="agent-emoji">🐷</span>
           <span class="agent-name">OinkV</span>
           <span class="agent-light light-green" title="green"></span>
@@ -8098,7 +8218,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">6m ago</div>
+        <div class="agent-meta mono muted">17m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -8110,19 +8230,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: M189
         </div>
-        <div class="agent-meta mono muted">18m ago</div>
-      </div>
-      <div class="agent agent-light-green">
-        <div class="agent-top">
-          <span class="agent-emoji">🛡️</span>
-          <span class="agent-name">GUARDIAN</span>
-          <span class="agent-light light-green" title="green"></span>
-        </div>
-        <div class="agent-meta muted">Data Integrity + Canary</div>
-        <div class="agent-meta mono">
-            task: Sprint poke #4 response 00:39Z — nothing new
-        </div>
-        <div class="agent-meta mono muted">23m ago</div>
+        <div class="agent-meta mono muted">20m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -8134,19 +8242,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1h 56m ago</div>
-      </div>
-      <div class="agent agent-light-yellow">
-        <div class="agent-top">
-          <span class="agent-emoji">🔥</span>
-          <span class="agent-name">FORGE</span>
-          <span class="agent-light light-yellow" title="yellow"></span>
-        </div>
-        <div class="agent-meta muted">Technical Execution Planner</div>
-        <div class="agent-meta mono">
-            task: Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion
-        </div>
-        <div class="agent-meta mono muted">1h 59m ago</div>
+        <div class="agent-meta mono muted">2h 19m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -8158,7 +8254,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">4h 39m ago</div>
+        <div class="agent-meta mono muted">5h 1m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -8199,6 +8295,16 @@ COMPLETED THIS SESSION:
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 22, 03:08 CEST</div>
+            <ul class="narrative-actions">
+<li>Sprint poke: re-audited B9-VIGIL-PHASE0-R3; still trustworthy. APPROVE 9.15 remains defensible because the review correctly grounds B9 v2 in the B11 v2 event-source substrate, documents the resolved R1 blockers, and keeps only Phase 1 SHOULD-FIX advisories. OinXtractor quality remains WARNING but stable/instrumentation-drift, not collapse (ts 2026-04-22T01:02:36Z; p50_24h=737.2s, p95_24h=22662.5s, n24=36, n7d=177, unknown_rate=100%/24h and 100%/7d). A171 remains MITIGATED_NOT_DONE. Live openclaw.json still confirms only global agents.defaults.contextPruning (cache-ttl ttl=5m keepLastAssistants=5 softTrim.maxChars=4000); no live losslessClaw, supermemory, or agents.definitions.OinXtractor subtrees are present, so prior mitigation claims beyond global contextPruning remain stale/unverified.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 22, 03:05 CEST</div>
+            <ul class="narrative-actions">
+<li>Cron heartbeat 01:03Z status. Since last note at 00:43Z (20min window): only 3 events — hermes oinxtractor artifact 00:51Z (routine), oinkv B9 spot-audit 00:56Z (trustworthy), hermes oinxtractor artifact 01:02Z (routine). (1) #189 R4: still only GUARDIAN APPROVE (23:41:14Z). VIGIL R4 verdict still NOT in event log. SLA 03:32 UTC, ~2.5h remaining. (2) No new REVIEW_POSTED for B9 v2 (GUARDIAN) or B12-SHADOW (VIGIL). (3) No new DECISION_NEEDED or BLOCKED events. (4) TASK 4 remains gated per AP-5. 3-PR split plan remains terminal prep artifact. Yielding.</li>            </ul>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 22, 02:56 CEST</div>
             <ul class="narrative-actions">
@@ -8407,16 +8513,6 @@ Housekeeping hasn't budged: the same five PRs (A11 #133, B1 #149 and #21, B2 #24
             <ul class="narrative-actions">
 <li>SPRINT_NOTE: All 5 Mike checklist items complete. No REVISE verdicts. B2 canary dispatched. B4 runbook done. B9 R2 submitted. B10+B11 Phase 0 proposals drafted. 5 proposals + 1 PR in review queue. Blocking on VIGIL reviews. B3 canary ~02:25 UTC tonight.</li>            </ul>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 21, 18:53 CEST</div>
-            <ul class="narrative-actions">
-<li>Sprint poke complete. Spot-audit used OF181-VIGIL-PHASE1-R1 against live PR #181 and it holds up: scope matches, 9.0 PASS is defensible, and the close-174/176 merge note is useful. OinXtractor remains WARNING but reads as instrumentation-definition drift, not extraction collapse. Latest metrics: p50_24h=397.0s, p95_24h=22132.5s, n24=42, n7d=182, unknown_rate 100% over both windows. A171 remains MITIGATED_NOT_DONE. Live mitigations still active: freshTailCount=8, supermemory autoRecall=true with containerTag=oinxtractor_patterns, and OinXtractor tool surface minimal plus memory_search/memory_get/image. Core blocker unchanged: no per-agent session-history cap and contextPruning is still global-only.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 21, 18:20 CEST</div>
-            <ul class="narrative-actions">
-<li>Sprint poke complete. Fresh spot-audit used OF181-VIGIL-PHASE1-R1 against the live PR and it is in-family and trustworthy: review scope matches PR #181 as a superset handoff package, score 9.0 is defensible, and the merge-strategy note is genuinely useful. OinXtractor quality remains WARNING but still reads as instrumentation-definition drift, not extraction collapse. Fresh metrics artifact timestamp is 2026-04-21T16:01:51Z with p50_24h=397.0s, p95_24h=22132.5s, n24=42, n7d=182, unknown_rate 100% over both 24h and 7d. A171 remains MITIGATED_NOT_DONE. Live mitigations are still active in config: lossless-claw freshTailCount=8, supermemory autoRecall=true with containerTag=oinxtractor_patterns, and OinXtractor tool surface kept to minimal plus memory_search/memory_get/image. Core blocker unchanged: runtime still has no agent-specific session-history cap and contextPruning is global-only, so the stateful-learning design gap is mitigated but not solved.</li>            </ul>
-        </li>
       </ol>
     </div>
 
@@ -8439,12 +8535,12 @@ Housekeeping hasn't budged: the same five PRs (A11 #133, B1 #149 and #21, B2 #24
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">d4b6cf4059e9</span>    </div>
+checkpoint@<span class="mono">e026b463892e</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 22, 02:56 CEST
+        Last orchestrator cycle: Apr 22, 03:08 CEST
     </div>
     <div>
-      generated Apr 22, 03:02 CEST
+      generated Apr 22, 03:25 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
