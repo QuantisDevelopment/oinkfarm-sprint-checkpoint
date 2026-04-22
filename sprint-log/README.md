@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 689
-- **Last 24h:** 358 (rate 14.92/h)
+- **Total events:** 693
+- **Last 24h:** 362 (rate 15.08/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (30 events)
+### Last 1 hour (28 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M140-VIGIL-PHASE1-R1 (oink-sync#10, posted ~04:58Z, PASS 9.60). Trustworthy: reviewer did independent merge simulati |
+| Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue |
+| Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | vigil | M140 review by vigil — PASS (9.6) |
 | Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:49Z (17min after prior anvil note): **no state change on M189 critical path.** Event scan since evt_20260422T043222Z_00000 |
 | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
@@ -26,14 +30,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
-| Apr 22, 06:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: TASK-189-VIGIL-PHASE0-R4 (APPROVE 9.60) remains the newest Vigil review — re-verified it is still trustworthy and still the fres |
-| Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h |
-| Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (91 events)
+### Last 4 hours (93 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M140-VIGIL-PHASE1-R1 (oink-sync#10, posted ~04:58Z, PASS 9.60). Trustworthy: reviewer did independent merge simulati |
+| Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue |
+| Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | vigil | M140 review by vigil — PASS (9.6) |
 | Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:49Z (17min after prior anvil note): **no state change on M189 critical path.** Event scan since evt_20260422T043222Z_00000 |
 | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
@@ -45,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
-| Apr 22, 06:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: TASK-189-VIGIL-PHASE0-R4 (APPROVE 9.60) remains the newest Vigil review — re-verified it is still trustworthy and still the fres |
-| Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h |
-| Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (358 events)
+### Last 24 hours (362 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited NEW review M140-VIGIL-PHASE1-R1 (oink-sync#10, posted ~04:58Z, PASS 9.60). Trustworthy: reviewer did independent merge simulati |
+| Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue |
+| Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | vigil | M140 review by vigil — PASS (9.6) |
 | Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat tick 04:49Z (17min after prior anvil note): **no state change on M189 critical path.** Event scan since evt_20260422T043222Z_00000 |
 | Apr 22, 06:49 CEST | `SPRINT_NOTE` | `—` | hermes | Step 0 on TASK-189 moved fast. ANVIL finished the shared be_tolerance helper (the gating piece that micro-gate, lifecycle, and the #189 back |
@@ -64,10 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
 | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.85) |
-| Apr 22, 06:26 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audit: TASK-189-VIGIL-PHASE0-R4 (APPROVE 9.60) remains the newest Vigil review — re-verified it is still trustworthy and still the fres |
-| Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h |
-| Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 06:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -91,12 +91,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 06:53 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 126 |
+| 🪽 **Hermes** | Apr 22, 07:04 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 127 |
+| 🐷 **OinkV** | Apr 22, 07:00 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 78 |
+| 🛡️ **GUARDIAN** | Apr 22, 06:55 CEST | `AGENT_HEARTBEAT` | `Heavy Hybrid poke #5 - new item: M140 CRITICAL review added to queue` | 🟢 fresh | 141 |
+| 🔍 **VIGIL** | Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | 🟢 fresh | 66 |
 | ⚒️ **ANVIL** | Apr 22, 06:51 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 153 |
-| 🐷 **OinkV** | Apr 22, 06:48 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 77 |
 | 🔥 **FORGE** | Apr 22, 06:48 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 107 |
-| 🔍 **VIGIL** | Apr 22, 06:27 CEST | `REVIEW_POSTED` | `M189` | 🟢 fresh | 65 |
-| 🛡️ **GUARDIAN** | Apr 22, 06:25 CEST | `AGENT_HEARTBEAT` | `Heavy Hybrid poke #4 response - 4th duplicate in ~1.5h` | 🟢 fresh | 140 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -177,6 +177,7 @@ _No open DECISION_NEEDED events._
 | `M111` | M111 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M120` | M120 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M121` | M121 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `M140` | M140 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M152` | M152 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M154` | M154 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M164` | M164 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
@@ -196,11 +197,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
-| 🔥 | FORGE | Technical Execution Planner |
-| 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔍 | VIGIL | Code Review + Scoring |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🔥 | FORGE | Technical Execution Planner |
 | • | PILOT |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -214,4 +215,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/52 tasks DONE · Last auto-regenerated: 06:53 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 07:05 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
