@@ -13,10 +13,10 @@
 
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
-| [C1](../tasks/C1-c1.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 10:19 CEST · `TASK_PLANNED` | forge |
+| [C1](../tasks/C1-c1.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 11:08 CEST · `TASK_PLANNED` | forge |
 | [C2](../tasks/C2-c2.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 04:13 CEST · `TASK_PLANNED` | forge · hermes |
 | [C3](../tasks/C3-c3.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 05:16 CEST · `TASK_PLANNED` | forge |
-| [C4](../tasks/C4-c4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 09:49 CEST · `TASK_PLANNED` | forge |
+| [C4](../tasks/C4-c4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 11:08 CEST · `TASK_PLANNED` | forge |
 | [C6](../tasks/C6-c6.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 10:19 CEST · `TASK_PLANNED` | forge |
 
 ## Waves
@@ -27,6 +27,8 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 11:08 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+| Apr 22, 11:08 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
 | Apr 22, 10:19 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 10:19 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 09:50 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — standby — 2nd-opinion critic |
@@ -55,8 +57,6 @@ _No waves yet for this phase._
 | Apr 21, 19:17 CEST | `DECISION_RESOLVED` | `C2` | forge | C2 decision: soft_flag_provisional |
 | Apr 21, 19:17 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
 | Apr 21, 17:39 CEST | `DECISION_RESOLVED` | `C2` | hermes | C2 decision: SOFT-FLAG. Below-threshold confidence signals pass through the pipeline with a visual marker ('low-confidence' label) on the da |
-| Apr 21, 17:27 CEST | `SPRINT_NOTE` | `—` | forge | Priority correction applied: Mike's 2026-04-21 18:00 UTC instruction supersedes the 17:05 background-mode pivot. Heavy Hybrid restored to fu |
-| Apr 21, 17:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion |
 
 ## Needs Mike (open gates)
 
