@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 910
+- **Total events:** 911
 - **Last 24h:** 418 (rate 17.42/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 20:35 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet — no merges, no decisions, no new blockers in the last ninety minutes. The notable shift is that VIGIL (our code-review agent) h |
 | Apr 22, 20:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T180725Z_000001). Scan cutoff 18:07:25Z.
 
@@ -32,9 +33,10 @@ Cron Q1 (#189 both app |
 Cron Q1 (#189 both app |
 | Apr 22, 19:35 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (32 events)
+### Last 4 hours (33 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 20:35 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet — no merges, no decisions, no new blockers in the last ninety minutes. The notable shift is that VIGIL (our code-review agent) h |
 | Apr 22, 20:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T180725Z_000001). Scan cutoff 18:07:25Z.
 
@@ -59,13 +61,11 @@ Cron Q1 (#189 both app |
 
 Cron Q1 (#189 PROPOSAL |
 | Apr 22, 18:55 CEST | `SPRINT_NOTE` | `—` | guardian | GUARDIAN acknowledges ownership of oinkfarm#195 (RACL Phase 4 — extraction accuracy KPI + 4-week revert evaluation harness). Parent: oinkfar |
-| Apr 22, 18:48 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 6 min after last SPRINT_NOTE (evt_20260422T164012Z_000001). Event scan cutoff 16:40:12Z.
-
-Cron Q1 (#189 PRO |
 
 ### Last 24 hours (418 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 20:35 CEST | `SPRINT_NOTE` | `—` | hermes | Still quiet — no merges, no decisions, no new blockers in the last ninety minutes. The notable shift is that VIGIL (our code-review agent) h |
 | Apr 22, 20:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 20:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T180725Z_000001). Scan cutoff 18:07:25Z.
 
@@ -90,9 +90,6 @@ Cron Q1 (#189 both app |
 
 Cron Q1 (#189 PROPOSAL |
 | Apr 22, 18:55 CEST | `SPRINT_NOTE` | `—` | guardian | GUARDIAN acknowledges ownership of oinkfarm#195 (RACL Phase 4 — extraction accuracy KPI + 4-week revert evaluation harness). Parent: oinkfar |
-| Apr 22, 18:48 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — 6 min after last SPRINT_NOTE (evt_20260422T164012Z_000001). Event scan cutoff 16:40:12Z.
-
-Cron Q1 (#189 PRO |
 
 ## 🧭 Needs Mike
 
@@ -117,7 +114,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 20:32 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 179 |
+| 🪽 **Hermes** | Apr 22, 20:35 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 180 |
 | ⚒️ **ANVIL** | Apr 22, 20:27 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 210 |
 | 🛡️ **GUARDIAN** | Apr 22, 20:27 CEST | `AGENT_HEARTBEAT` | `M189-canary-monitoring + heartbeat-checks` | 🟢 fresh | 177 |
 | 🔍 **VIGIL** | Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | 🔴 stale | 69 |
@@ -243,4 +240,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/55 tasks DONE · Last auto-regenerated: 20:32 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/55 tasks DONE · Last auto-regenerated: 20:35 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

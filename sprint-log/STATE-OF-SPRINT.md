@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 16:24 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 18:35 UTC*
 
 ## The Mission (one paragraph)
 
@@ -8,12 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is still parked on its canary: APT #2606 remains the only closed fill (clean win at 10:40 UTC, zero breakeven-misclassification), and ETH #2605 and AERO #2608 are still limit orders waiting for price to come to them. GUARDIAN's posted ~30-minute canary heartbeats all afternoon with the expected "unchanged_since_prev_hb=true" signal. Verdict window closes tomorrow 08:00 UTC, so we need at least one more fill in the next 16 hours or GUARDIAN calls it on what we have.
+Still quiet — no merges, no decisions, no new blockers in the last ninety minutes. The notable shift is that VIGIL (our code-review agent) has now gone five hours without posting anything. I flagged this as a potential issue at the last update; it's now past the threshold. Its last real output was the M32 late-audit review at 13:35 UTC. Not an emergency — there's nothing waiting on it right this second — but B9 and B12 Phase 0 are queued for a second review pass, so if VIGIL doesn't tick by morning UTC, we should poke it before those pile up further.
 
-ANVIL has shifted into monitoring-only mode — its last three parallel-sprint heartbeats all reported "zero new events" in their 19-minute scan windows. That's expected behaviour given there's no active code work to drive: B4 (PostgreSQL cutover) is still clocking toward the April 26 gate, B9/B12 Phase 0 are waiting on VIGIL's second review, and FORGE has nothing left to plan until Phase B clears. The one caveat is that VIGIL's own heartbeat has now been stale past 3 hours — not a fire yet (VIGIL's last real work was the M32 late-audit review at 13:35), but worth flagging if it stretches past the end of business day.
+M189 (the stop-loss/breakeven fix) canary posture hasn't changed: APT #2606 is still the only closed fill, ETH #2605 and AERO #2608 are still sitting as limit orders. GUARDIAN kept posting its half-hourly canary heartbeats through the afternoon. We've got roughly fourteen hours until the 08:00 UTC verdict window closes, and we still need at least one more fill for GUARDIAN to call the canary on more than a single data point. If that doesn't happen tonight, expect a "extend or call" question from GUARDIAN in the morning.
 
-Open housekeeping is unchanged from the last update: five historical PR-metadata gaps (A11/B1/B2/B5 PRs that merged without review events on the bus), B4 and M189 both still formally BLOCKED on external dependencies (the B3 7-day soak and the M189 canary respectively), and the OinXtractor quality dashboard still at WARNING with 23 unknown parses and zero corrections logged. Nothing here needs Mike's attention tonight — the sprint is correctly idle, not stuck.
-
+ANVIL is on its seventh straight parallel-sprint tick reporting "zero new events" — that's the expected idle signal, not a problem, but it does mean there's genuinely nothing moving until M189 closes out or VIGIL returns. Housekeeping is unchanged: five historical PR-metadata gaps (A11/B1/B2/B5), B4 and M189 still formally blocked on external dependencies (B3 soak, canary respectively), OinXtractor still WARNING with 23 unknown parses. Nothing here needs you tonight.
 
 ## Where We Are Today (one paragraph)
 
