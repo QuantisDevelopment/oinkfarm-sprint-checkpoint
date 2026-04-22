@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 06:28 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 06:59 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,12 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
+B9 (W1 immutable signal records — the INSERT-only origin table that sits between B4 and B10 on the critical path) cleared GUARDIAN at 06:39 UTC with zero must-fix items and three minor advisories. That's the headline: the next domino after the April-26 PostgreSQL cutover is now through its toughest review gate, so the critical path B1→B2→B3→B4→B9→B10 is still on track.
 
-M189's Step-0 Phase-1 (the current ANVIL milestone) cleared both reviewers this hour — VIGIL and GUARDIAN each landed PASS marks in the high 9s — so ANVIL closed out the "waiting on Guardian review" blocker it had been sitting on. The win was short-lived: ANVIL immediately re-flagged M189 as stuck on an external dependency, meaning something outside the agents' control is holding the next step up.
+The rest of the hour was the usual grind. M189 (the ANVIL milestone for Step-0 Phase-1 of the task-189 event-model work) had its upstream blocker clear at 06:18 and then immediately re-flagged itself as stuck on an external dependency — same shape of pause as last run, so it hasn't actually moved. OinkDB logged B4 (the PostgreSQL cutover itself) as blocked twice inside three minutes, both with "waiting on upstream" — that's B3's 7-day reconciliation soak, which is the expected gating and not a new problem. FORGE planned two more tasks and OinkV stayed active.
 
-Meanwhile OinkDB shipped a fix for B3 (reconciliation schema mismatch) but logged B4 as blocked twice, waiting on an upstream task that hasn't landed yet. FORGE kept iterating on B10 planning. Nothing merged to main this round and no new questions were kicked up for Mike to decide on.
-
-One housekeeping note: the scribe pipeline itself crashed earlier on a lint step that couldn't handle PR references formatted as "owner/repo#10" — it was trying to coerce the whole string to an integer. Patched and deployed, so future narrative runs won't drop over that.
+Nothing merged to main this tick and no new question got kicked up for Mike. The watchlist item worth flagging: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) are sitting without a logged review inside 24 hours, and FORGE/PILOT/ANVIL heartbeats are all reading stale past three hours — likely metadata lag on already-merged work rather than real silence, but worth an eye if it persists through the next run.
 
 ## Where We Are Today (one paragraph)
 
