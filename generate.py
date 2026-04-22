@@ -32,12 +32,18 @@ try:
     from checkpoint_reporting import (  # type: ignore
         read_events as _lib_read_events,
         lint_checkpoint as _lib_lint_checkpoint,
+        AGENTS as _LIB_REGISTERED_AGENTS,
     )
     _HAS_LIB = True
+    REGISTERED_AGENTS = set(_LIB_REGISTERED_AGENTS)
 except Exception:
     _HAS_LIB = False
     _lib_read_events = None  # type: ignore
     _lib_lint_checkpoint = None  # type: ignore
+    REGISTERED_AGENTS = {
+        "anvil", "vigil", "guardian", "forge", "hermes",
+        "oinkv", "oinkdb", "mike", "system",
+    }
 
 # --------------------------------------------------------------------------- #
 # Configuration
@@ -809,7 +815,11 @@ def _inline_lint(events: list[dict[str, Any]], now: datetime) -> list[dict[str, 
         if e.get("event_type") == "AGENT_HEARTBEAT":
             ag = e.get("agent")
             ts = _parse_event_ts(e.get("ts", ""))
-            if ag and ts and (ag not in by_agent_heartbeat or ts > by_agent_heartbeat[ag]):
+            if (
+                ag in REGISTERED_AGENTS
+                and ts
+                and (ag not in by_agent_heartbeat or ts > by_agent_heartbeat[ag])
+            ):
                 by_agent_heartbeat[ag] = ts
         if e.get("event_type") == "BLOCKED":
             open_blockers[tid or "_meta"].append(e)
@@ -1054,6 +1064,8 @@ def reduce_agents(events: list[dict[str, Any]], now: datetime) -> list[dict[str,
             by_agent[ag].append(e)
     out: list[dict[str, Any]] = []
     for ag, evs in by_agent.items():
+        if ag not in REGISTERED_AGENTS:
+            continue
         evs_sorted = sorted(evs, key=lambda x: x.get("ts", ""))
         last = evs_sorted[-1]
         last_dt = _parse_event_ts(last.get("ts", ""))

@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 08:11 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 10:02 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-The merge train finally left the station. ANVIL shipped M189 Step-0 at 08:01 UTC as a coordinated three-PR landing across the three repos that matter — oinkfarm#190, signal-gateway#31, and oink-sync#12 — all going in on the same commit wave (83f198a, 8787b94, 8311ea6). That's the event-model Phase-1 work that's been sitting in merge-train prep since last night, and it cleared cleanly with all three PRs shipping together rather than drifting apart. Canary from GUARDIAN is the next thing to watch.
+Quiet stretch since the M189 three-repo merge train shipped at 08:01 UTC. Nothing new has merged and no canaries have come back in the last two hours — the dozen events since the last tick are all internal chatter: three small artifact refreshes, three FORGE task-plan updates, and routine sprint-notes from ANVIL, OinkV, and GUARDIAN. That means the ~10:00 UTC GUARDIAN canary on the M189 event-model landing is still the next real signal to watch.
 
-B9 (W1 immutable signal records, the INSERT-only origin table on the critical path) picked up a fresh VIGIL approval at 07:51, stacking on top of this morning's GUARDIAN clearance — so B9 is now through both review gates and lined up for merge. On the frustrating side, B4 (the PostgreSQL cutover itself) did the same blocker-resolved-then-re-blocked dance as last tick, twice within a minute at 07:47 and 07:48: a phantom external-dependency flag that's really just the B3 seven-day reconciliation soak gating things as expected. Not a new problem, but it's noisy on the dashboard.
+All five agents are reading alive — ANVIL, OinkV and GUARDIAN all emitted in the last ten minutes, FORGE 17 min ago — with one exception: VIGIL's last heartbeat was 89 min ago, which is just past the three-hour stale line flagged on the dashboard. Not a blocker, but worth a nudge if it doesn't re-ping by the next tick.
 
-No new question kicked up for Mike this tick. The watchlist hasn't changed: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) still sit without a logged review inside 24 hours, and PILOT plus VIGIL heartbeats are reading stale past three hours. Most of that is metadata lag on already-merged work rather than real silence, but if it persists through another run it's worth a nudge.
+The review-debt watchlist hasn't changed: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) still sit without a logged review inside 24 hours. Every one of those is metadata lag on work that's already merged, not real silence, but the gap indicator on the dashboard keeps lighting up until the REVIEW_POSTED events get backfilled.
 
 ## Where We Are Today (one paragraph)
 
