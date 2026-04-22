@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 628
-- **Last 24h:** 301 (rate 12.54/h)
+- **Total events:** 632
+- **Last 24h:** 305 (rate 12.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (20 events)
+### Last 1 hour (21 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:29 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
+| Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:14Z note. No file changes, no metric changes, no config changes. B9-R3 TRUSTWORTHY, OinXtractor WARNING (100% unknown_ |
+| Apr 22, 04:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING_CRON |
 | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
 | Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
@@ -26,14 +30,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:54 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 03:54 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke ack 01:47Z. (1) No REVISE verdicts on open PRs. (2) B2 canary handoff already CLOSEOUT PASS at 01:25Z (evt_20260422T012500Z_0000 |
 | Apr 22, 03:53 CEST | `SPRINT_NOTE` | `—` | oinkv | State stable since 01:42Z note. Vigil reviews dir unchanged (latest still TASK-189-R2 + B9-R3 @ 01:05:43 CEST). OinXtractor metrics regenera |
-| Apr 22, 03:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:46Z status. Since last note at 01:26Z (20min window): only 5 events — hermes scribe 01:34Z (recap of B2 canary PASS, no ne |
-| Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
-### Last 4 hours (102 events)
+### Last 4 hours (97 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:29 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
+| Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:14Z note. No file changes, no metric changes, no config changes. B9-R3 TRUSTWORTHY, OinXtractor WARNING (100% unknown_ |
+| Apr 22, 04:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING_CRON |
 | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
 | Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
@@ -45,14 +49,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:54 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 03:54 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke ack 01:47Z. (1) No REVISE verdicts on open PRs. (2) B2 canary handoff already CLOSEOUT PASS at 01:25Z (evt_20260422T012500Z_0000 |
 | Apr 22, 03:53 CEST | `SPRINT_NOTE` | `—` | oinkv | State stable since 01:42Z note. Vigil reviews dir unchanged (latest still TASK-189-R2 + B9-R3 @ 01:05:43 CEST). OinXtractor metrics regenera |
-| Apr 22, 03:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:46Z status. Since last note at 01:26Z (20min window): only 5 events — hermes scribe 01:34Z (recap of B2 canary PASS, no ne |
-| Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
-### Last 24 hours (301 events)
+### Last 24 hours (305 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:29 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
+| Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:14Z note. No file changes, no metric changes, no config changes. B9-R3 TRUSTWORTHY, OinXtractor WARNING (100% unknown_ |
+| Apr 22, 04:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING_CRON |
 | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
 | Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
@@ -64,10 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:54 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
 | Apr 22, 03:54 CEST | `SPRINT_NOTE` | `—` | anvil | Sprint poke ack 01:47Z. (1) No REVISE verdicts on open PRs. (2) B2 canary handoff already CLOSEOUT PASS at 01:25Z (evt_20260422T012500Z_0000 |
 | Apr 22, 03:53 CEST | `SPRINT_NOTE` | `—` | oinkv | State stable since 01:42Z note. Vigil reviews dir unchanged (latest still TASK-189-R2 + B9-R3 @ 01:05:43 CEST). OinXtractor metrics regenera |
-| Apr 22, 03:47 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:46Z status. Since last note at 01:26Z (20min window): only 5 events — hermes scribe 01:34Z (recap of B2 canary PASS, no ne |
-| Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
 ## 🧭 Needs Mike
 
@@ -77,20 +77,20 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED 59.5h ago with no REVIEW_POSTED |
-| ⚪ INFO | `—` | agent forge heartbeat stale (11.1h) |
-| ⚪ INFO | `—` | agent pilot heartbeat stale (5.9h) |
-| ⚪ INFO | `—` | agent anvil heartbeat stale (3.2h) |
+| 🟠 WARN | `A11` | PR_OPENED 59.7h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (11.3h) |
+| ⚪ INFO | `—` | agent pilot heartbeat stale (6.1h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (3.4h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 113 |
-| 🐷 **OinkV** | Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 64 |
+| 🪽 **Hermes** | Apr 22, 04:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 114 |
+| 🛡️ **GUARDIAN** | Apr 22, 04:29 CEST | `CANARY_PASS` | `B3_T48_AWAITING_CRON` | 🟢 fresh | 136 |
+| 🐷 **OinkV** | Apr 22, 04:27 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 65 |
 | 🔥 **FORGE** | Apr 22, 04:13 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 97 |
 | ⚒️ **ANVIL** | Apr 22, 04:10 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 138 |
-| 🛡️ **GUARDIAN** | Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `B3_T48_AWAITING` | 🟢 fresh | 134 |
 | 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🔴 stale | 61 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -144,7 +144,7 @@ _No open DECISION_NEEDED events._
 | `A171` | A171 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | [B1](tasks/B1-db-abstraction-layer.md) | Database Abstraction Layer (sqlite3 → oink_db.py) | 🔴 CRITICAL | B1 | ✅ DONE | PASS |
 | `B2` | B2 | 🔴 CRITICAL | — | ✅ DONE | PASS |
-| `B3` | B3 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
+| `B3` | B3 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B4` | B4 | 🔴 CRITICAL | — | ⚙️ CODING | — |
 | `B5` | B5 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `B6` | B6 | 🟡 STANDARD | — | 🧪 CANARY | PASS |
@@ -191,10 +191,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | PILOT |  |
 | • | mike |  |
@@ -209,4 +209,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/52 tasks DONE · Last auto-regenerated: 04:20 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/52 tasks DONE · Last auto-regenerated: 04:31 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
