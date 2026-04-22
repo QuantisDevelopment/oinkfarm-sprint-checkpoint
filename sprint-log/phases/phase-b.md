@@ -14,7 +14,7 @@
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
-| [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 22, 03:25 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
+| [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 22, 04:13 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
 | [B3](../tasks/B3-b3.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 21, 21:16 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 21, 16:35 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
 | Apr 22, 03:25 CEST | `CANARY_PASS` | `B2` | guardian | B2 canary PASS |
 | Apr 22, 02:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #3 response 00:11Z — triage complete |
 | Apr 22, 01:41 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke #2 response — TASK-189 R4 review completed |
@@ -65,7 +66,6 @@
 | Apr 22, 00:45 CEST | `MERGED` | `B6` | anvil | B6 merged via PR #None @ace226e |
 | Apr 22, 00:45 CEST | `STATUS_CHANGED` | `B6` | anvil | B6 NOT_STARTED → CANARY |
 | Apr 22, 00:45 CEST | `CANARY_STARTED` | `B6` | anvil | B6 canary started |
-| Apr 22, 00:23 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Heartbeat 22:20Z — All 4 tasks dispatched |
 
 ## Needs Mike (open gates)
 

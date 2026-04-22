@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 622
-- **Last 24h:** 296 (rate 12.33/h)
+- **Total events:** 628
+- **Last 24h:** 301 (rate 12.54/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (23 events)
+### Last 1 hour (20 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
+| Apr 22, 04:10 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:07Z. Event scan since 01:54:17Z: 5 events — 2 anvil (B9 v3 filing), 1 guardian AGENT_HEARTBEAT (B2 T+48 PASS confirmed, b3 |
+| Apr 22, 04:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 02:04Z. Vigil spot-audit re-confirmed B9-VIGIL-PHASE0-R3 as TRUSTWORTHY (APPROVE 9.15; B9/B11 coupling still sound). OinXtractor |
 | Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING |
 | Apr 22, 03:54 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
@@ -24,16 +30,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary a |
-| Apr 22, 03:26 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:25Z status. Since last note at 01:03Z (22min window): 8 events. HEADLINE: GUARDIAN emitted B2 T+48 canary CLOSEOUT at 01:2 |
-| Apr 22, 03:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:25 CEST | `CANARY_PASS` | `B2` | guardian | B2 canary PASS |
-| Apr 22, 03:09 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 
-### Last 4 hours (105 events)
+### Last 4 hours (102 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
+| Apr 22, 04:10 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:07Z. Event scan since 01:54:17Z: 5 events — 2 anvil (B9 v3 filing), 1 guardian AGENT_HEARTBEAT (B2 T+48 PASS confirmed, b3 |
+| Apr 22, 04:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 02:04Z. Vigil spot-audit re-confirmed B9-VIGIL-PHASE0-R3 as TRUSTWORTHY (APPROVE 9.15; B9/B11 coupling still sound). OinXtractor |
 | Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING |
 | Apr 22, 03:54 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
@@ -43,16 +49,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary a |
-| Apr 22, 03:26 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:25Z status. Since last note at 01:03Z (22min window): 8 events. HEADLINE: GUARDIAN emitted B2 T+48 canary CLOSEOUT at 01:2 |
-| Apr 22, 03:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:25 CEST | `CANARY_PASS` | `B2` | guardian | B2 canary PASS |
-| Apr 22, 03:09 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 
-### Last 24 hours (296 events)
+### Last 24 hours (301 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | oinkv | State identical to 02:04Z note. Vigil reviews unchanged (B9-R3 mtime 01:05:43 CEST). OinXtractor metrics ts=01:57:49Z, values flat (p50_24h= |
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `C2` | forge | C2 plan published |
+| Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
+| Apr 22, 04:10 CEST | `SPRINT_NOTE` | `—` | anvil | Heartbeat tick 02:07Z. Event scan since 01:54:17Z: 5 events — 2 anvil (B9 v3 filing), 1 guardian AGENT_HEARTBEAT (B2 T+48 PASS confirmed, b3 |
+| Apr 22, 04:04 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 02:04Z. Vigil spot-audit re-confirmed B9-VIGIL-PHASE0-R3 as TRUSTWORTHY (APPROVE 9.15; B9/B11 coupling still sound). OinXtractor |
 | Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3_T48_AWAITING |
 | Apr 22, 03:54 CEST | `PROPOSAL_READY` | `—` | anvil | — proposal ready |
@@ -62,12 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 22, 03:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 03:44 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 03:42 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 22, 03:34 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet stretch on the sprint — the marquee delta since last check is B2's post-deploy monitoring coming back clean. GUARDIAN ran the canary a |
-| Apr 22, 03:26 CEST | `SPRINT_NOTE` | `—` | anvil | Cron heartbeat 01:25Z status. Since last note at 01:03Z (22min window): 8 events. HEADLINE: GUARDIAN emitted B2 T+48 canary CLOSEOUT at 01:2 |
-| Apr 22, 03:25 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 03:25 CEST | `CANARY_PASS` | `B2` | guardian | B2 canary PASS |
-| Apr 22, 03:09 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 
 ## 🧭 Needs Mike
 
@@ -77,24 +77,21 @@ _No open DECISION_NEEDED events._
 
 | Severity | Task | Issue |
 |---|---|---|
-| 🟠 WARN | `A11` | PR_OPENED (pr=133) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B1` | PR_OPENED (pr=149) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
-| 🟠 WARN | `DASH-003` | AGENT_HEARTBEAT stale > 3h for pilot |
+| 🟠 WARN | `A11` | PR_OPENED 59.5h ago with no REVIEW_POSTED |
+| ⚪ INFO | `—` | agent forge heartbeat stale (11.1h) |
+| ⚪ INFO | `—` | agent pilot heartbeat stale (5.9h) |
+| ⚪ INFO | `—` | agent anvil heartbeat stale (3.2h) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 03:57 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 112 |
+| 🪽 **Hermes** | Apr 22, 04:19 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 113 |
+| 🐷 **OinkV** | Apr 22, 04:15 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 64 |
+| 🔥 **FORGE** | Apr 22, 04:13 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 97 |
+| ⚒️ **ANVIL** | Apr 22, 04:10 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 138 |
 | 🛡️ **GUARDIAN** | Apr 22, 03:54 CEST | `AGENT_HEARTBEAT` | `B3_T48_AWAITING` | 🟢 fresh | 134 |
-| ⚒️ **ANVIL** | Apr 22, 03:54 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 137 |
-| 🐷 **OinkV** | Apr 22, 03:53 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 62 |
-| 🔥 **FORGE** | Apr 22, 03:44 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 95 |
-| 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🟡 1–3h | 61 |
+| 🔍 **VIGIL** | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | 🔴 stale | 61 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -194,10 +191,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | PILOT |  |
 | • | mike |  |
@@ -212,4 +209,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*16/52 tasks DONE · Last auto-regenerated: 03:58 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*16/52 tasks DONE · Last auto-regenerated: 04:20 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
