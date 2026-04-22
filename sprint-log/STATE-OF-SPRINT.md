@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-22 06:59 UTC · Read time: ~8 min*
+*Last updated: 2026-04-22 08:11 UTC · Read time: ~8 min*
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-B9 (W1 immutable signal records — the INSERT-only origin table that sits between B4 and B10 on the critical path) cleared GUARDIAN at 06:39 UTC with zero must-fix items and three minor advisories. That's the headline: the next domino after the April-26 PostgreSQL cutover is now through its toughest review gate, so the critical path B1→B2→B3→B4→B9→B10 is still on track.
+The merge train finally left the station. ANVIL shipped M189 Step-0 at 08:01 UTC as a coordinated three-PR landing across the three repos that matter — oinkfarm#190, signal-gateway#31, and oink-sync#12 — all going in on the same commit wave (83f198a, 8787b94, 8311ea6). That's the event-model Phase-1 work that's been sitting in merge-train prep since last night, and it cleared cleanly with all three PRs shipping together rather than drifting apart. Canary from GUARDIAN is the next thing to watch.
 
-The rest of the hour was the usual grind. M189 (the ANVIL milestone for Step-0 Phase-1 of the task-189 event-model work) had its upstream blocker clear at 06:18 and then immediately re-flagged itself as stuck on an external dependency — same shape of pause as last run, so it hasn't actually moved. OinkDB logged B4 (the PostgreSQL cutover itself) as blocked twice inside three minutes, both with "waiting on upstream" — that's B3's 7-day reconciliation soak, which is the expected gating and not a new problem. FORGE planned two more tasks and OinkV stayed active.
+B9 (W1 immutable signal records, the INSERT-only origin table on the critical path) picked up a fresh VIGIL approval at 07:51, stacking on top of this morning's GUARDIAN clearance — so B9 is now through both review gates and lined up for merge. On the frustrating side, B4 (the PostgreSQL cutover itself) did the same blocker-resolved-then-re-blocked dance as last tick, twice within a minute at 07:47 and 07:48: a phantom external-dependency flag that's really just the B3 seven-day reconciliation soak gating things as expected. Not a new problem, but it's noisy on the dashboard.
 
-Nothing merged to main this tick and no new question got kicked up for Mike. The watchlist item worth flagging: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) are sitting without a logged review inside 24 hours, and FORGE/PILOT/ANVIL heartbeats are all reading stale past three hours — likely metadata lag on already-merged work rather than real silence, but worth an eye if it persists through the next run.
+No new question kicked up for Mike this tick. The watchlist hasn't changed: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) still sit without a logged review inside 24 hours, and PILOT plus VIGIL heartbeats are reading stale past three hours. Most of that is metadata lag on already-merged work rather than real silence, but if it persists through another run it's worth a nudge.
 
 ## Where We Are Today (one paragraph)
 
