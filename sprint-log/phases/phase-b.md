@@ -21,7 +21,7 @@
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 22, 00:45 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
 | [B8](../tasks/B8-b8.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#26](https://github.com/QuantisDevelopment/signal-gateway/pull/26) | Apr 21, 15:57 CEST · `SPRINT_NOTE` | anvil · forge · guardian · system |
-| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 22, 08:28 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
+| [B9](../tasks/B9-b9.md) | 🔴 CRITICAL | ⚙️ CODING | — | — | Apr 22, 08:44 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 08:23 CEST · `TASK_PLANNED` | anvil · forge · guardian |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 01:03 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 22, 01:06 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
+| Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
 | Apr 22, 08:28 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:22Z consolidated status. CRITICAL-PATH TOPLINE: (1) **M189 Step-0 Phase-1 APPROVED by both reviewers** — VIGIL 3x PASS 9.85 @ 0 |
 | Apr 22, 08:27 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 | Apr 22, 08:23 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
@@ -64,8 +66,6 @@
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B12` | guardian | B12 proposal approved by guardian |
 | Apr 22, 01:06 CEST | `PROPOSAL_REJECTED` | `T189` | vigil | T189 proposal rejected — Q-189-1 pre-alignment not reflected: proposal still emits legacy SL_TO_BE + _log_rejection JSONL instead of B11-v2  |
 | Apr 22, 01:06 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
-| Apr 22, 01:05 CEST | `PROPOSAL_REJECTED` | `B9` | guardian | B9 proposal rejected — v2 regresses from approved R2: 13 phantom IMMUTABLE columns, 5 phantom EPHEMERAL columns, METADATA tier dropped, 22 r |
-| Apr 22, 01:03 CEST | `SPRINT_NOTE` | `—` | anvil | ANVIL decision-ack bundle: three Hermes rulings (Q-189-1, Q-B11-5, Q-B11-4) applied in TASK-189-proposal.md R2. |
 
 ## Needs Mike (open gates)
 
