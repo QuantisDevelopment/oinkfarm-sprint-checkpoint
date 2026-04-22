@@ -4,70 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 745
-- **Last 24h:** 406 (rate 16.92/h)
+- **Total events:** 761
+- **Last 24h:** 421 (rate 17.54/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (21 events)
+### Last 1 hour (23 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 22, 09:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 09:15 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 09:11 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 06:58Z poke. M140-VIGIL-PHASE1-R1 PASS 9.60 still trustworthy. OinXtractor WARNING: unknown_rate=100%, p95_24h~39k. A1 |
-| Apr 22, 09:03 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 07:02Z. Event scan since 06:44:57Z: 6 events, zero ANVIL-actionable. (1) VIGIL B9 v3 verdict STILL PENDING — confirmed by guardian |
-| Apr 22, 09:01 CEST | `SPRINT_NOTE` | `—` | hermes | B9 (W1 immutable signal records — the INSERT-only origin table that sits between B4 and B10 on the critical path) cleared GUARDIAN at 06:39  |
-| Apr 22, 08:58 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1: still trustworthy; PASS 9.60 remains defensible with clean merge validation, strong spec alignment, and o |
-| Apr 22, 08:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — idle — B9 v3 approved 06:40Z, queue caught up |
-| Apr 22, 08:48 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 08:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1 again: still trustworthy; PASS 9.60 remains defensible, with clear scope control, clean merge simulation,  |
-| Apr 22, 08:48 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
-| Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
-| Apr 22, 08:39 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #8 heavy-hybrid - B9 v3 PROPOSAL_APPROVED |
-| Apr 22, 08:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:35 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 06:16Z. M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10) still freshest review, audited trustworthy. OinXtractor metrics  |
+| Apr 22, 09:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 09:51 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 09:50 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — standby — 2nd-opinion critic |
+| Apr 22, 09:49 CEST | `SPRINT_NOTE` | `M189` | anvil | Mike poke received 07:47Z. AGENT_HEARTBEAT emitted (evt_20260422T074858Z_000001) to clear >8h stale flag on dashboard lint. M189 merge-train |
+| Apr 22, 09:49 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
+| Apr 22, 09:49 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 09:48 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 merge-train prep + awaiting deploy window 08:00Z |
+| Apr 22, 09:48 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — external_dependency |
+| Apr 22, 09:48 CEST | `BLOCKER_RESOLVED` | `B4` | oinkdb | B4 blocker cleared |
+| Apr 22, 09:47 CEST | `BLOCKER_RESOLVED` | `B4` | oinkdb | B4 blocker cleared |
+| Apr 22, 09:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1: still trustworthy, 9.60 PASS. Clean non-destructive merge proof, precise issue-140 spec alignment, strong |
+| Apr 22, 09:45 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 07:44Z. Event scan since 07:25:49Z: 2 events, zero actionable (guardian Poke #9 HEARTBEAT_OK, oinkv audit-reaffirm). VIGIL B9 v3 v |
+| Apr 22, 09:32 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 07:22Z poke. Freshest trustworthy reviews: M189-STEP0-VIGIL-PHASE1-R1 (9.85 PASS, be_tolerance 3-repo vendor) and M140 |
+| Apr 22, 09:27 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #9 idle — quiet tick, M189 merge window T-36m |
+| Apr 22, 09:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Cron tick 07:24Z. Event scan since 07:03:47Z: 4 events, zero actionable (oinkv x2 audit-reaffirm notes, forge TASK_PLANNED B10 re-plan, herm |
 
-### Last 4 hours (96 events)
+### Last 4 hours (102 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 22, 09:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 09:15 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 09:11 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 06:58Z poke. M140-VIGIL-PHASE1-R1 PASS 9.60 still trustworthy. OinXtractor WARNING: unknown_rate=100%, p95_24h~39k. A1 |
-| Apr 22, 09:03 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 07:02Z. Event scan since 06:44:57Z: 6 events, zero ANVIL-actionable. (1) VIGIL B9 v3 verdict STILL PENDING — confirmed by guardian |
-| Apr 22, 09:01 CEST | `SPRINT_NOTE` | `—` | hermes | B9 (W1 immutable signal records — the INSERT-only origin table that sits between B4 and B10 on the critical path) cleared GUARDIAN at 06:39  |
-| Apr 22, 08:58 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1: still trustworthy; PASS 9.60 remains defensible with clean merge validation, strong spec alignment, and o |
-| Apr 22, 08:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — idle — B9 v3 approved 06:40Z, queue caught up |
-| Apr 22, 08:48 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 08:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1 again: still trustworthy; PASS 9.60 remains defensible, with clear scope control, clean merge simulation,  |
-| Apr 22, 08:48 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
-| Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
-| Apr 22, 08:39 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #8 heavy-hybrid - B9 v3 PROPOSAL_APPROVED |
-| Apr 22, 08:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:35 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 06:16Z. M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10) still freshest review, audited trustworthy. OinXtractor metrics  |
+| Apr 22, 09:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 09:51 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 09:50 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — standby — 2nd-opinion critic |
+| Apr 22, 09:49 CEST | `SPRINT_NOTE` | `M189` | anvil | Mike poke received 07:47Z. AGENT_HEARTBEAT emitted (evt_20260422T074858Z_000001) to clear >8h stale flag on dashboard lint. M189 merge-train |
+| Apr 22, 09:49 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
+| Apr 22, 09:49 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 09:48 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 merge-train prep + awaiting deploy window 08:00Z |
+| Apr 22, 09:48 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — external_dependency |
+| Apr 22, 09:48 CEST | `BLOCKER_RESOLVED` | `B4` | oinkdb | B4 blocker cleared |
+| Apr 22, 09:47 CEST | `BLOCKER_RESOLVED` | `B4` | oinkdb | B4 blocker cleared |
+| Apr 22, 09:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1: still trustworthy, 9.60 PASS. Clean non-destructive merge proof, precise issue-140 spec alignment, strong |
+| Apr 22, 09:45 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 07:44Z. Event scan since 07:25:49Z: 2 events, zero actionable (guardian Poke #9 HEARTBEAT_OK, oinkv audit-reaffirm). VIGIL B9 v3 v |
+| Apr 22, 09:32 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 07:22Z poke. Freshest trustworthy reviews: M189-STEP0-VIGIL-PHASE1-R1 (9.85 PASS, be_tolerance 3-repo vendor) and M140 |
+| Apr 22, 09:27 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #9 idle — quiet tick, M189 merge window T-36m |
+| Apr 22, 09:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Cron tick 07:24Z. Event scan since 07:03:47Z: 4 events, zero actionable (oinkv x2 audit-reaffirm notes, forge TASK_PLANNED B10 re-plan, herm |
 
-### Last 24 hours (406 events)
+### Last 24 hours (421 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 22, 09:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 09:15 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 09:11 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 06:58Z poke. M140-VIGIL-PHASE1-R1 PASS 9.60 still trustworthy. OinXtractor WARNING: unknown_rate=100%, p95_24h~39k. A1 |
-| Apr 22, 09:03 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 07:02Z. Event scan since 06:44:57Z: 6 events, zero ANVIL-actionable. (1) VIGIL B9 v3 verdict STILL PENDING — confirmed by guardian |
-| Apr 22, 09:01 CEST | `SPRINT_NOTE` | `—` | hermes | B9 (W1 immutable signal records — the INSERT-only origin table that sits between B4 and B10 on the critical path) cleared GUARDIAN at 06:39  |
-| Apr 22, 08:58 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1: still trustworthy; PASS 9.60 remains defensible with clean merge validation, strong spec alignment, and o |
-| Apr 22, 08:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — idle — B9 v3 approved 06:40Z, queue caught up |
-| Apr 22, 08:48 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 08:48 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1 again: still trustworthy; PASS 9.60 remains defensible, with clear scope control, clean merge simulation,  |
-| Apr 22, 08:48 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
-| Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
-| Apr 22, 08:39 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #8 heavy-hybrid - B9 v3 PROPOSAL_APPROVED |
-| Apr 22, 08:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 22, 08:35 CEST | `SPRINT_NOTE` | `—` | oinkv | No Vigil delta since 06:16Z. M140-VIGIL-PHASE1-R1 (PASS 9.60, oink-sync#10) still freshest review, audited trustworthy. OinXtractor metrics  |
+| Apr 22, 09:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 22, 09:51 CEST | `PROPOSAL_APPROVED` | `B9` | vigil | B9 proposal approved by vigil |
+| Apr 22, 09:50 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — standby — 2nd-opinion critic |
+| Apr 22, 09:49 CEST | `SPRINT_NOTE` | `M189` | anvil | Mike poke received 07:47Z. AGENT_HEARTBEAT emitted (evt_20260422T074858Z_000001) to clear >8h stale flag on dashboard lint. M189 merge-train |
+| Apr 22, 09:49 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
+| Apr 22, 09:49 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
+| Apr 22, 09:48 CEST | `AGENT_HEARTBEAT` | `—` | anvil | anvil heartbeat — M189 merge-train prep + awaiting deploy window 08:00Z |
+| Apr 22, 09:48 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — external_dependency |
+| Apr 22, 09:48 CEST | `BLOCKER_RESOLVED` | `B4` | oinkdb | B4 blocker cleared |
+| Apr 22, 09:47 CEST | `BLOCKER_RESOLVED` | `B4` | oinkdb | B4 blocker cleared |
+| Apr 22, 09:47 CEST | `SPRINT_NOTE` | `—` | oinkv | Spot-audited M140-VIGIL-PHASE1-R1: still trustworthy, 9.60 PASS. Clean non-destructive merge proof, precise issue-140 spec alignment, strong |
+| Apr 22, 09:45 CEST | `SPRINT_NOTE` | `—` | anvil | Cron tick 07:44Z. Event scan since 07:25:49Z: 2 events, zero actionable (guardian Poke #9 HEARTBEAT_OK, oinkv audit-reaffirm). VIGIL B9 v3 v |
+| Apr 22, 09:32 CEST | `SPRINT_NOTE` | `—` | oinkv | No state change since 07:22Z poke. Freshest trustworthy reviews: M189-STEP0-VIGIL-PHASE1-R1 (9.85 PASS, be_tolerance 3-repo vendor) and M140 |
+| Apr 22, 09:27 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Poke #9 idle — quiet tick, M189 merge window T-36m |
+| Apr 22, 09:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Cron tick 07:24Z. Event scan since 07:03:47Z: 4 events, zero actionable (oinkv x2 audit-reaffirm notes, forge TASK_PLANNED B10 re-plan, herm |
 
 ## 🧭 Needs Mike
 
@@ -82,22 +82,20 @@ _No open DECISION_NEEDED events._
 | 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
-| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
 | 🟠 WARN | `DASH-003` | AGENT_HEARTBEAT stale > 3h for pilot |
-| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for anvil |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 22, 09:20 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 137 |
-| 🔥 **FORGE** | Apr 22, 09:15 CEST | `TASK_PLANNED` | `Heavy Hybrid background mode after C1/C2/C3/C4/C6 plan completion` | 🟢 fresh | 112 |
-| 🐷 **OinkV** | Apr 22, 09:11 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 88 |
-| ⚒️ **ANVIL** | Apr 22, 09:03 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 166 |
-| 🛡️ **GUARDIAN** | Apr 22, 08:58 CEST | `AGENT_HEARTBEAT` | `idle — B9 v3 approved 06:40Z, queue caught up` | 🟢 fresh | 151 |
-| • **OINKDB** | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | 🟡 1–3h | 4 |
-| 🔍 **VIGIL** | Apr 22, 06:53 CEST | `REVIEW_POSTED` | `M140` | 🟡 1–3h | 66 |
+| 🪽 **Hermes** | Apr 22, 09:52 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 138 |
+| 🔍 **VIGIL** | Apr 22, 09:51 CEST | `PROPOSAL_APPROVED` | `B9` | 🟢 fresh | 67 |
+| 🔥 **FORGE** | Apr 22, 09:50 CEST | `AGENT_HEARTBEAT` | `standby — 2nd-opinion critic` | 🟢 fresh | 115 |
+| ⚒️ **ANVIL** | Apr 22, 09:49 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 170 |
+| • **OINKDB** | Apr 22, 09:48 CEST | `BLOCKED` | `B4` | 🟢 fresh | 7 |
+| 🐷 **OinkV** | Apr 22, 09:47 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 91 |
+| 🛡️ **GUARDIAN** | Apr 22, 09:27 CEST | `AGENT_HEARTBEAT` | `Poke #9 idle — quiet tick, M189 merge window T-36m` | 🟢 fresh | 152 |
 | • **PILOT** | Apr 21, 22:23 CEST | `AGENT_HEARTBEAT` | `DASH-003` | 🔴 stale | 3 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -198,12 +196,12 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔥 | FORGE | Technical Execution Planner |
-| 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
+| 🔥 | FORGE | Technical Execution Planner |
+| ⚒️ | ANVIL | Implementation Lead |
+| • | OINKDB |  |
+| 🐷 | OinkV | Plan Auditor |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | PILOT |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -217,4 +215,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/53 tasks DONE · Last auto-regenerated: 09:20 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/53 tasks DONE · Last auto-regenerated: 09:53 CEST on 22 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
