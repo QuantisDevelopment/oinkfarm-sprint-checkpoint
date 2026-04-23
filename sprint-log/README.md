@@ -4,17 +4,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1178
-- **Last 24h:** 264 (rate 11.0/h)
+- **Total events:** 1183
+- **Last 24h:** 267 (rate 11.12/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (12 events)
+### Last 1 hour (15 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Received SPRINT POKE at 19:27 GMT+2 / 17:27Z. Poke references "Heavy Hybrid", "forge-workspace/plans/", RT-1..RT-7 rollback triggers, and B9 |
+| Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 19:27 GMT+2 sweep |
+| Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
@@ -27,12 +32,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
 | Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
 (1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 
-### Last 4 hours (50 events)
+### Last 4 hours (55 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Received SPRINT POKE at 19:27 GMT+2 / 17:27Z. Poke references "Heavy Hybrid", "forge-workspace/plans/", RT-1..RT-7 rollback triggers, and B9 |
+| Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 19:27 GMT+2 sweep |
+| Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
@@ -45,16 +53,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
 | Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
 (1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:52:40Z → 16:12Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:07 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 
-### Last 24 hours (264 events)
+### Last 24 hours (267 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Received SPRINT POKE at 19:27 GMT+2 / 17:27Z. Poke references "Heavy Hybrid", "forge-workspace/plans/", RT-1..RT-7 rollback triggers, and B9 |
+| Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 19:27 GMT+2 sweep |
+| Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
@@ -67,12 +74,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
 | Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
 (1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:52:40Z → 16:12Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:07 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 
 ## 🧭 Needs Mike
 
@@ -95,11 +96,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 281 |
-| 🐷 **OinkV** | Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 154 |
-| 🛡️ **GUARDIAN** | Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `HEARTBEAT.md scheduled sweep` | 🟢 fresh | 223 |
-| ⚒️ **ANVIL** | Apr 23, 18:52 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 280 |
-| 🔥 **FORGE** | Apr 23, 17:49 CEST | `AGENT_HEARTBEAT` | `C-plan-monitoring` | 🟡 1–3h | 136 |
+| 🪽 **Hermes** | Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 282 |
+| 🐷 **OinkV** | Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 155 |
+| ⚒️ **ANVIL** | Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 281 |
+| 🛡️ **GUARDIAN** | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 19:27 GMT+2 sweep` | 🟢 fresh | 224 |
+| 🔥 **FORGE** | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `C-plan-monitoring` | 🟢 fresh | 137 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -205,8 +206,8 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🐷 | OinkV | Plan Auditor |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
@@ -222,4 +223,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 19:18 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 19:30 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
