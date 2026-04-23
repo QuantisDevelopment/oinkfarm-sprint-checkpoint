@@ -65,7 +65,6 @@
 | Apr 22, 05:53 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 04:29 CEST | `CANARY_PASS` | `B3` | guardian | B3 canary PASS |
 | Apr 22, 04:13 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
-| Apr 22, 03:25 CEST | `CANARY_PASS` | `B2` | guardian | B2 canary PASS |
 
 ## Needs Mike (open gates)
 
