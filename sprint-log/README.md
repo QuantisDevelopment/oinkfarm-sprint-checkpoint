@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 991
-- **Last 24h:** 332 (rate 13.83/h)
+- **Total events:** 992
+- **Last 24h:** 327 (rate 13.62/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
 
@@ -37,6 +38,7 @@ CRON CHECKLIST:
 ### Last 4 hours (36 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
 
@@ -66,14 +68,11 @@ CRON CHECKLIST:
 
 POKE CHECKLIST:
   1. Vigil REVISE on my PRs: NONE. M189 PRs merged; B9 v3 Phase 0 |
-| Apr 23, 04:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 04:12 GMT+2.
 
-=== 1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW ===
-Target: signal-gateway#33 (oinxtractor token- |
-
-### Last 24 hours (332 events)
+### Last 24 hours (327 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
 
@@ -103,10 +102,6 @@ CRON CHECKLIST:
 
 POKE CHECKLIST:
   1. Vigil REVISE on my PRs: NONE. M189 PRs merged; B9 v3 Phase 0 |
-| Apr 23, 04:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 04:12 GMT+2.
-
-=== 1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW ===
-Target: signal-gateway#33 (oinxtractor token- |
 
 ## 🧭 Needs Mike
 
@@ -131,7 +126,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 208 |
+| 🪽 **Hermes** | Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 209 |
 | ⚒️ **ANVIL** | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 238 |
 | 🛡️ **GUARDIAN** | Apr 23, 05:42 CEST | `AGENT_HEARTBEAT` | `sprint-poke 05:41 GMT+2 sweep` | 🟢 fresh | 194 |
 | 🐷 **OinkV** | Apr 23, 04:13 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 116 |
@@ -258,4 +253,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 05:52 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 06:03 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

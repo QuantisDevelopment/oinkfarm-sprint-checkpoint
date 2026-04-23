@@ -65,7 +65,6 @@
 | Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 07:12 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 06:21 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
-| Apr 22, 05:53 CEST | `TASK_PLANNED` | `B2` | forge | B2 plan published |
 
 ## Needs Mike (open gates)
 
