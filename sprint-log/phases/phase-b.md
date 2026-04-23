@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | vigil | M202 review by vigil — PASS (9.7) |
+| Apr 23, 23:26 CEST | `REVIEW_POSTED` | `M154` | guardian | M154 review by guardian — PASS (9.65) |
 | Apr 23, 23:08 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — PASS (9.55) |
 | Apr 23, 21:15 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.0) |
 | Apr 23, 20:23 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (10.0) |
