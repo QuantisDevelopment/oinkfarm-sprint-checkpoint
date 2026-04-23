@@ -4,17 +4,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1168
-- **Last 24h:** 262 (rate 10.92/h)
+- **Total events:** 1172
+- **Last 24h:** 261 (rate 10.88/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (15 events)
+### Last 1 hour (14 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
+| Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 18:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:52:40Z → 16:12Z.
@@ -29,20 +34,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I re-checked the review against the live bran |
 | Apr 23, 17:49 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
-| Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 15:41 UTC
-
-The sprint has been quiet for over 90 minutes — no merges, canary runs, or decisions have been logged since the last r |
-| Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
-(1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
-| Apr 23, 17:29 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:28 GMT+2.
-
-1. VIGIL SPOT-AUDIT — B9-VIGIL-v3-REVIEW: TRUSTWORTHY. I verified the core structural claims directly a |
-| Apr 23, 17:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 17:28 GMT+2 heartbeat sweep |
 
 ### Last 4 hours (51 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
+| Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 18:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:52:40Z → 16:12Z.
@@ -60,17 +60,15 @@ The sprint has been quiet for over 90 minutes — no merges, canary runs, or dec
 | Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 15:41 UTC
 
 The sprint has been quiet for over 90 minutes — no merges, canary runs, or decisions have been logged since the last r |
-| Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
-(1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
-| Apr 23, 17:29 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:28 GMT+2.
 
-1. VIGIL SPOT-AUDIT — B9-VIGIL-v3-REVIEW: TRUSTWORTHY. I verified the core structural claims directly a |
-| Apr 23, 17:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 17:28 GMT+2 heartbeat sweep |
-
-### Last 24 hours (262 events)
+### Last 24 hours (261 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
+| Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 18:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:52:40Z → 16:12Z.
@@ -88,13 +86,6 @@ The sprint has been quiet for over 90 minutes — no merges, canary runs, or dec
 | Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 15:41 UTC
 
 The sprint has been quiet for over 90 minutes — no merges, canary runs, or decisions have been logged since the last r |
-| Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
-(1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
-| Apr 23, 17:29 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:28 GMT+2.
-
-1. VIGIL SPOT-AUDIT — B9-VIGIL-v3-REVIEW: TRUSTWORTHY. I verified the core structural claims directly a |
-| Apr 23, 17:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 17:28 GMT+2 heartbeat sweep |
 
 ## 🧭 Needs Mike
 
@@ -117,10 +108,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 18:24 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 278 |
-| 🐷 **OinkV** | Apr 23, 18:23 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 151 |
-| ⚒️ **ANVIL** | Apr 23, 18:12 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 278 |
-| 🛡️ **GUARDIAN** | Apr 23, 17:58 CEST | `AGENT_HEARTBEAT` | `HEARTBEAT.md scheduled sweep` | 🟢 fresh | 221 |
+| 🪽 **Hermes** | Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 279 |
+| 🐷 **OinkV** | Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 152 |
+| 🛡️ **GUARDIAN** | Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 18:39 GMT+2 sweep` | 🟢 fresh | 222 |
+| ⚒️ **ANVIL** | Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 279 |
 | 🔥 **FORGE** | Apr 23, 17:49 CEST | `AGENT_HEARTBEAT` | `C-plan-monitoring` | 🟢 fresh | 136 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
@@ -227,8 +218,8 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
@@ -244,4 +235,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 18:24 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 18:45 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
