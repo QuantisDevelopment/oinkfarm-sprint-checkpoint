@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-23T03:40:08Z
+*Last updated: 2026-04-23T05:44:20Z
 
 ## The Mission (one paragraph)
 
@@ -9,11 +9,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 ## Today in one paragraph
 
 
-Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule, but nothing material moved. The more concerning signal is what isn't happening: vigil (our reviewer agent) hasn't posted a review in over five hours, and five PRs are now sitting open without sign-off — A11 (pr #133), both B1 branches (#149 and #21), B2 (#24), and B5 (#25). If vigil is genuinely stuck rather than just idle between passes, that's a throughput bottleneck worth poking at on the next active window.
+Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, one ANVIL cron heartbeat, and one GUARDIAN sprint-poke sweep. No merges, no reviews, no canary verdicts. The only real clock that's moving is M189's canary window, which closes at 08:00Z (≈10:00 CEST, roughly 2h 20m from now) and is still sitting at two of three organic closes — APT #2606 a win, ETH #2605 a loss — with AERO #2608 never having filled. GUARDIAN's note is that two-of-three is enough for PASS as long as the zero break-even misclassification count holds, which it currently does.
 
-Two workstreams remain wedged on external dependencies past the four-hour mark: M189 and B4 are both blocked waiting on something outside the agent swarm's control. Worth a quick check from Mike on whether either needs a human nudge to unstick. forge has also been silent for about seven hours, though that's less unusual for the planning-side role than it would be for the review side.
+One correction to last cycle's narrative worth surfacing: ANVIL's heartbeat pointed out that the five "open PRs awaiting VIGIL sign-off" flagged by the gap-linter (A11/#133, B1/#149+#21, B2/#24, B5/#25) are cross-repo PR IDs — the corresponding A11/B1/B2/B5 tasks in the main repo are already DONE and deployed. So that "review backlog" is a dashboard artifact from PR-number collisions across repos, not an actual throughput stall. VIGIL's 7-hour silence is still notable but probably just reflects no new work to score since its last M154 self-correction around 00:36 CEST.
 
-Net read: the sprint isn't broken, it's just quiet in a way that's masking a review backlog. Flagging for awareness rather than alarm.
+Net: nothing to act on. The two remaining external-dependency blockers (M189 on its own canary clock, B4 on the April 26 cutover gate) are both "waiting by design." Next meaningful beat is the 08:00Z M189 verdict — either AERO fills late and we get a 3/3 PASS, or the window closes at 2/3 and GUARDIAN decides on the be-misclass rule. Mike's morning window (≈08:30–10:00 CEST) lines up almost exactly with that decision point.
 
 
 ## Where We Are Today (one paragraph)
