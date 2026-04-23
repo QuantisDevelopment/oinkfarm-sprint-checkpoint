@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-23T06:32:18+00:00">
+<body data-generated="2026-04-23T06:43:36+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-23T06:32:18+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-23T06:43:36+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-23T08:32:18+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-23T08:43:36+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 23, 08:32 CEST</span>
+        <span class="mono" id="last-regen">Apr 23, 08:43 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -57,9 +57,9 @@
 <!-- Events integrity ------------------------------------------------------- -->
 <section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
   <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
-    <div><span class="muted">📊 events:</span> <strong class="mono">1021</strong></div>
-    <div><span class="muted">24h rate:</span> <strong class="mono">12.12/h</strong></div>
-    <div><span class="muted">last 24h:</span> <strong class="mono">291</strong></div>
+    <div><span class="muted">📊 events:</span> <strong class="mono">1024</strong></div>
+    <div><span class="muted">24h rate:</span> <strong class="mono">12.08/h</strong></div>
+    <div><span class="muted">last 24h:</span> <strong class="mono">290</strong></div>
     <div><span class="muted">schema:</span> <strong class="mono">v1.0</strong></div>
     <div><span class="muted">source:</span> <strong class="mono">lib</strong></div>
     <div>
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="integrity-human" style="margin-top:6px;font-size:0.85rem;color:#c6d0e0;">
-    In plain English: 291 things happened today, ~12.12/h steady-state. Event stream has order gaps — review needed.
+    In plain English: 290 things happened today, ~12.08/h steady-state. Event stream has order gaps — review needed.
   </div>
 </section>
 
@@ -116,9 +116,39 @@
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 1 hour</strong>
-        <span class="mono muted">16 events</span>
+        <span class="mono muted">17 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:43 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:34 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 propo</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 23, 08:32 CEST</span>
@@ -239,22 +269,6 @@ CRON CHECKLIST:
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, o</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 07:42 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 07:37 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">B3</span>              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke 07:37 GMT+2 sweep</div>
           </li>
         </ol>
     </div>
@@ -266,6 +280,36 @@ CRON CHECKLIST:
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
+              <span class="mono muted">Apr 23, 08:43 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:34 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 propo</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
               <span class="mono muted">Apr 23, 08:32 CEST</span>
               <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
               <span class="muted mono">· hermes</span>
@@ -454,42 +498,45 @@ CRON CHECKLIST:
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 06:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 04:28:04Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS (</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 06:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 06:39 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">B3</span>              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke 06:38 GMT+2 sweep</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 24 hours</strong>
-        <span class="mono muted">291 events</span>
+        <span class="mono muted">290 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:43 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:34 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 propo</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 08:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 23, 08:32 CEST</span>
@@ -680,33 +727,6 @@ CRON CHECKLIST:
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 06:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 04:28:04Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS (</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 06:47 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 06:39 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">B3</span>              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke 06:38 GMT+2 sweep</div>
           </li>
         </ol>
     </div>
@@ -819,13 +839,27 @@ CRON CHECKLIST:
           <strong>Hermes</strong>
           <span class="muted mono" style="font-size:0.75rem;">Sprint Orchestrator</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 23, 08:32 CEST</td>
+        <td class="mono muted" style="padding:8px;">Apr 23, 08:43 CEST</td>
         <td class="mono" style="padding:8px;color:#8ab4ff;">ARTIFACT_PUBLISHED</td>
         <td class="mono" style="padding:8px;">—</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">219</td>
+        <td class="mono muted" style="padding:8px;">220</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>🐷</span>
+          <strong>OinkV</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Plan Auditor</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 23, 08:34 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
+        <td class="mono" style="padding:8px;">—</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">117</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -833,13 +867,13 @@ CRON CHECKLIST:
           <strong>ANVIL</strong>
           <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 23, 08:13 CEST</td>
+        <td class="mono muted" style="padding:8px;">Apr 23, 08:32 CEST</td>
         <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
         <td class="mono" style="padding:8px;">M189 merge-train prep + awaiting deploy window 08:00Z</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">246</td>
+        <td class="mono muted" style="padding:8px;">247</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -868,19 +902,6 @@ CRON CHECKLIST:
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
         <td class="mono muted" style="padding:8px;">11</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>🐷</span>
-          <strong>OinkV</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Plan Auditor</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 23, 04:13 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
-        <td class="mono" style="padding:8px;">—</td>
-        <td style="padding:8px;">
-<span style="background:#7f1d1d;color:#fecaca;padding:2px 8px;border-radius:4px;">● stale</span>        </td>
-        <td class="mono muted" style="padding:8px;">116</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -1164,7 +1185,7 @@ future      </span>
           <span class="badge badge-canary">Canary</span>
         </div>
         <div class="task-meta mono muted">
-            Apr 23, 08:13 CEST
+            Apr 23, 08:32 CEST
         </div>
       </header>
 
@@ -1205,8 +1226,23 @@ future      </span>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(90 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(91 events)</span></summary>
           <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 08:32 CEST
+                </div>
+              </div>
+            </li>
             <li class="timeline-event">
               <span class="dot dot-info"></span>
               <div class="timeline-body">
@@ -10461,6 +10497,18 @@ COMPLETED THIS SESSION:
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
+          <span class="agent-emoji">🐷</span>
+          <span class="agent-name">OinkV</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Plan Auditor</div>
+        <div class="agent-meta mono">
+            last audit
+        </div>
+        <div class="agent-meta mono muted">8m ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
           <span class="agent-emoji">⚒️</span>
           <span class="agent-name">ANVIL</span>
           <span class="agent-light light-green" title="green"></span>
@@ -10469,7 +10517,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: M189 merge-train prep + awaiting deploy window 08:00Z
         </div>
-        <div class="agent-meta mono muted">18m ago</div>
+        <div class="agent-meta mono muted">10m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -10481,7 +10529,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: B3-daily-sqlite-integrity-proxy
         </div>
-        <div class="agent-meta mono muted">20m ago</div>
+        <div class="agent-meta mono muted">31m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -10493,19 +10541,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: B4
         </div>
-        <div class="agent-meta mono muted">21m ago</div>
-      </div>
-      <div class="agent agent-light-red">
-        <div class="agent-top">
-          <span class="agent-emoji">🐷</span>
-          <span class="agent-name">OinkV</span>
-          <span class="agent-light light-red" title="red"></span>
-        </div>
-        <div class="agent-meta muted">Plan Auditor</div>
-        <div class="agent-meta mono">
-            last audit
-        </div>
-        <div class="agent-meta mono muted">4h 18m ago</div>
+        <div class="agent-meta mono muted">32m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -10517,7 +10553,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">7h 56m ago</div>
+        <div class="agent-meta mono muted">8h 7m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -10529,7 +10565,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: standby — 2nd-opinion critic
         </div>
-        <div class="agent-meta mono muted">9h 51m ago</div>
+        <div class="agent-meta mono muted">10h 3m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -10570,6 +10606,72 @@ COMPLETED THIS SESSION:
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 23, 08:34 CEST</div>
+            <ul class="narrative-actions">
+<li>SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 proposal (method-only) approval.
+Verdict posted: APPROVE (no numeric score — Phase 0 uses APPROVE/REVISE/REJECT).
+
+VERDICT: TRUSTWORTHY — review is accurate, correctly scoped, and appropriately cautious.
+
+Checks performed:
+  • Review correctly separates method approval from execution authorization ✓
+  • B1→B2→B3→B4 prerequisite chain preserved, not collapsed ✓
+  • Q-B2-6 (post-review drift beyond PR #153) correctly flagged as a REAL BLOCKER before S1 ✓
+  • S1→S2→S3→S4 staged structure with concrete evidence gates at each stage ✓
+  • Rollback data-loss concern correctly raised as advisory (not method-blocking) ✓
+  • B3→B4 strict sequencing explicitly maintained ✓
+  • Cross-check: B3 verification clock at day_number=0 with 5 resets (3 FALSE infra + 2 exit=1/discreps=0). Clock CANNOT START until PG replica provisioned with correct schema+creds. Review's insistence on B3 completion before B4 execution is operationally validated ✓
+
+Bias check: no premature approval. The method/execution firewall is unambiguous. Three concerns are all legitimate and actionable. No score inflation possible (Phase 0 = categorical verdict).
+
+=== 2. OINXTRACTOR QUALITY STATE ===
+Status: 🟢 GREEN
+
+  • Hermes latest artifact: 2026-04-23T06:32:18Z — latency=ok, unknown_rate=ok, accuracy=proxy_only
+  • DB last 6h: 3 signals ingested, 0 unknowns (market quiet hours)
+  • Total signals: 1510, max_id=2627
+  • llama-server (Gemma 4 26B-A4B-it): healthy, both slots idle
+  • signal-gateway: uptime ~9.4h, telegram connected, rest_poller 0 errors, replay_consumer running
+
+No extraction degradation. Pipeline healthy.
+
+=== 3. A171 DESIGN BLOCKER STATUS ===
+Issue: oinkfarm#171 — [Proposal] OinXtractor as Stateful Retrieval-Learning Agent.
+
+Status: UNBLOCKED.
+sg#34 worktree: clean, HEAD cc4a2c4, branch feat/34-oinxtractor-metadata-typing. No code written yet.
+Sequential gating unchanged: sg#34 → sg#35 → A171 rollout decision.
+No new design blockers.
+
+=== YIELDING ===</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 23, 08:32 CEST</div>
+            <ul class="narrative-actions">
+<li>Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-04-23T08:00:00Z (~1h28m from this emission). Projected verdict PASS per GUARDIAN 06:10Z daily cycle.
+  2. B9 v2 / B12-SHADOW new REVIEW_POSTED: NONE.
+  3. DECISION_NEEDED / BLOCKED: NONE for anvil.
+
+EVENTS SINCE CUTOFF: 3. Critical-path hits: 0.
+  - anvil SPRINT_NOTE 06:13:24Z (prior tick, landed).
+  - hermes ARTIFACT_PUBLISHED 06:21:09Z — non-critical.
+  - hermes ARTIFACT_PUBLISHED 06:32:18Z — non-critical.
+
+M189 canary state unchanged. AERO #2608 still unfilled. be_misclass=0 holds. No new organic closes since GUARDIAN 06:10Z cycle.
+
+Deferred work tracker:
+  - CHIP #2620 CLOSED_BE typo (P2, post-closeout)
+  - TASK 4 Artifact A code (post-canary-PASS)
+
+Yielding.</li>            </ul>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 23, 08:13 CEST</div>
             <ul class="narrative-actions">
@@ -11337,28 +11439,6 @@ M189 (the stop-loss / breakeven-misclassification canary) is still where it was 
 
 ANVIL is now on its eighth consecutive "zero new events" parallel-sprint tick, which is the expected idle signal rather than a problem — there's genuinely nothing moving until M189 closes out or more reviews land. The one open decision parked on Mike is unchanged: serialize vs run AP-11 in parallel with B9 Phase 1; we're defaulting to serialize unless you say otherwise. Housekeeping stays the same — a handful of historical PR-metadata gaps (A11/B1/B2/B5) and B4 + M189 formally blocked on external dependencies (the B3 soak and the canary, respectively). Nothing needs you tonight.</li>            </ul>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 22, 22:40 CEST</div>
-            <ul class="narrative-actions">
-<li>FORGE agrees with VIGIL REVISE 4.9 on M197 — no disagreement, no DECISION_NEEDED. Adding Phase C purity implication VIGIL did not escalate: close_source upgrades without signal_events emission silently diverge the B11 event-walk from the legacy column, which is exactly what the C4 divergence feed (TASK-C4 §5.3) and PHASE-C-DATA-PURITY-INVARIANTS.md event-walk invariant consume. Upgrade-without-event = invisible drift. R2 must (a) emit CLOSE_SOURCE_UPGRADED signal_event {old_source,new_source,old_tier,new_tier,reason,raw_text_snippet} in the SAME transaction as the UPDATE (drop the independent conn.commit()); (b) ensure B11 v2 event-walk consumes this event so post-B11 close_source derivation stays consistent with the legacy column; (c) add tests: event emission assertion, single-transaction atomicity, C4 divergence probe returns zero mismatch after upgrade.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 22, 22:27 CEST</div>
-            <ul class="narrative-actions">
-<li>Parallel sprint heartbeat tick — 19 min after last SPRINT_NOTE (evt_20260422T200721Z_000001). Scan cutoff 20:07:21Z.
-
-Q1 (#189 both approvals?): N/A — merged 08:00:59Z, CANARY phase.
-Q2 (B9 v2 / B12-SHADOW review): NO. B9 v3 approvals hold.
-Q3 (DECISION_NEEDED / BLOCKED): NONE.
-
-Events since cutoff: 0. Cleanest tick of the evening.
-
-M189 canary status last confirmed at GUARDIAN heartbeat 19:53Z: 1/3 closed, 0 BE-misclass, 0 P0/P1 alerts. Window closes 2026-04-23T08:00Z (~11.6h remaining).
-
-Open Mike decision (unchanged): serialize vs AP-11 parallel B9 Phase 1. Defaulting to serialize.
-
-YIELDING.</li>            </ul>
-        </li>
       </ol>
     </div>
 
@@ -11381,12 +11461,12 @@ YIELDING.</li>            </ul>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">7f33fcfac6dd</span>    </div>
+checkpoint@<span class="mono">cc5dd0f43e9c</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 23, 08:13 CEST
+        Last orchestrator cycle: Apr 23, 08:34 CEST
     </div>
     <div>
-      generated Apr 23, 08:32 CEST
+      generated Apr 23, 08:43 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>

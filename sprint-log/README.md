@@ -4,17 +4,26 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1021
-- **Last 24h:** 291 (rate 12.12/h)
+- **Total events:** 1024
+- **Last 24h:** 290 (rate 12.08/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (16 events)
+### Last 1 hour (17 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 08:34 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 propo |
+| Apr 23, 08:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026- |
 | Apr 23, 08:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 08:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 08:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Cron heartbeat. Scan cutoff 06:08:00Z. MATERIAL UPDATE from GUARDIAN 06:10:21Z daily cycle.
@@ -33,16 +42,19 @@ CRON CHECKLIST:
 | Apr 23, 08:10 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — Daily cron 06:00Z (Thursday 2026-04-23) — lifecycle spot check + M189 canary monitoring |
 | Apr 23, 07:58 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat 07:57 GMT+2 sweep |
 | Apr 23, 07:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 07:48 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 05:27:59Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
-| Apr 23, 07:44 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, o |
-| Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 08:34 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 propo |
+| Apr 23, 08:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026- |
 | Apr 23, 08:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 08:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 08:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Cron heartbeat. Scan cutoff 06:08:00Z. MATERIAL UPDATE from GUARDIAN 06:10:21Z daily cycle.
@@ -61,16 +73,19 @@ CRON CHECKLIST:
 | Apr 23, 08:10 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — Daily cron 06:00Z (Thursday 2026-04-23) — lifecycle spot check + M189 canary monitoring |
 | Apr 23, 07:58 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat 07:57 GMT+2 sweep |
 | Apr 23, 07:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 07:48 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 05:27:59Z.
 
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
-| Apr 23, 07:44 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, o |
-| Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-
-### Last 24 hours (291 events)
+### Last 24 hours (290 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 08:34 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:31 GMT+2.
+
+=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
+Target: B4 PG migration cutover — Phase 0 propo |
+| Apr 23, 08:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 06:13:00Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026- |
 | Apr 23, 08:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 08:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 08:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Cron heartbeat. Scan cutoff 06:08:00Z. MATERIAL UPDATE from GUARDIAN 06:10:21Z daily cycle.
@@ -89,12 +104,6 @@ CRON CHECKLIST:
 | Apr 23, 08:10 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — Daily cron 06:00Z (Thursday 2026-04-23) — lifecycle spot check + M189 canary monitoring |
 | Apr 23, 07:58 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat 07:57 GMT+2 sweep |
 | Apr 23, 07:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 07:48 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 05:27:59Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
-| Apr 23, 07:44 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, o |
-| Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -118,11 +127,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 08:32 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 219 |
-| ⚒️ **ANVIL** | Apr 23, 08:13 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 246 |
+| 🪽 **Hermes** | Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 220 |
+| 🐷 **OinkV** | Apr 23, 08:34 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 117 |
+| ⚒️ **ANVIL** | Apr 23, 08:32 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 247 |
 | 🛡️ **GUARDIAN** | Apr 23, 08:12 CEST | `AGENT_HEARTBEAT` | `B3-daily-sqlite-integrity-proxy` | 🟢 fresh | 201 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🟢 fresh | 11 |
-| 🐷 **OinkV** | Apr 23, 04:13 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 116 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -227,10 +236,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | OINKDB |  |
-| 🐷 | OinkV | Plan Auditor |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | mike |  |
@@ -245,4 +254,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 08:32 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 08:43 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

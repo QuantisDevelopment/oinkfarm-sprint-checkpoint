@@ -63,7 +63,6 @@
 | Apr 22, 09:15 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 08:48 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
-| Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
 
 ## Needs Mike (open gates)
 
