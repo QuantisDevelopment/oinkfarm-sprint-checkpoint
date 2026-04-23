@@ -61,7 +61,6 @@
 | Apr 23, 05:14 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:13 GMT+2 sweep |
 | Apr 23, 04:38 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat sweep 2026-04-23T02:35Z |
 | Apr 23, 03:53 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke sweep 2026-04-23T01:52Z |
-| Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
 
 ## Needs Mike (open gates)
 

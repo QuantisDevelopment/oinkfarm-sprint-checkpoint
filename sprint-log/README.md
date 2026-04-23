@@ -4,70 +4,67 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1241
-- **Last 24h:** 282 (rate 11.75/h)
+- **Total events:** 1253
+- **Last 24h:** 285 (rate 11.88/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (15 events)
+### Last 1 hour (12 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 24, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 00:14 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
-| Apr 24, 00:13 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T215240Z_000001 confirmed emitted. Since 21:52:40Z: 1 guardian AGENT_HEARTBEAT + 2 oinkv routine event |
-| Apr 24, 00:08 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:59 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
-| Apr 23, 23:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Last anvil note evt_20260423T214555Z_000001 emitted 7m ago. Zero new events since 21:45:55Z. #189 merged+canary PASSED 08:29: |
-| Apr 23, 23:45 CEST | `SPRINT_NOTE` | `M189` | anvil | Post-canary tick. Scan window 21:12:13Z to 21:40Z. (1) #189 merged+canary PASSED 08:29:46Z, T+48h recon due 2026-04-24T08:00Z (~10h20m). (2) |
-| Apr 23, 23:45 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 23:30 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | vigil | M202 review by vigil — PASS (9.7) |
-| Apr 23, 23:28 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:26 CEST | `REVIEW_POSTED` | `M154` | guardian | M154 review by guardian — PASS (9.65) |
-| Apr 23, 23:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T225235Z_000001: 1 oinkv routine event only. Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers |
+| Apr 24, 00:55 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 00:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T223237Z_000001: only routine heartbeats (guardian, forge) and 1 oinkv event. Zero reviews on B9v3/B12-SHAD |
+| Apr 24, 00:41 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 00:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 00:39 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 00:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since last anvil note 22:13:04Z: forge TASK_PLANNED oinkfarm#214 (unrelated), hermes ARTIFACT_PUBLISHED (unrelated), 1 oinkv  |
+| Apr 24, 00:22 CEST | `None` | `—` | oinkv |  — |
 
-### Last 4 hours (50 events)
+### Last 4 hours (51 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T225235Z_000001: 1 oinkv routine event only. Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers |
+| Apr 24, 00:55 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 00:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T223237Z_000001: only routine heartbeats (guardian, forge) and 1 oinkv event. Zero reviews on B9v3/B12-SHAD |
+| Apr 24, 00:41 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 00:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 00:39 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 00:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since last anvil note 22:13:04Z: forge TASK_PLANNED oinkfarm#214 (unrelated), hermes ARTIFACT_PUBLISHED (unrelated), 1 oinkv  |
+| Apr 24, 00:22 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 00:14 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 24, 00:13 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T215240Z_000001 confirmed emitted. Since 21:52:40Z: 1 guardian AGENT_HEARTBEAT + 2 oinkv routine event |
-| Apr 24, 00:08 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:59 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
-| Apr 23, 23:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Last anvil note evt_20260423T214555Z_000001 emitted 7m ago. Zero new events since 21:45:55Z. #189 merged+canary PASSED 08:29: |
-| Apr 23, 23:45 CEST | `SPRINT_NOTE` | `M189` | anvil | Post-canary tick. Scan window 21:12:13Z to 21:40Z. (1) #189 merged+canary PASSED 08:29:46Z, T+48h recon due 2026-04-24T08:00Z (~10h20m). (2) |
-| Apr 23, 23:45 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 23:30 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | vigil | M202 review by vigil — PASS (9.7) |
-| Apr 23, 23:28 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:26 CEST | `REVIEW_POSTED` | `M154` | guardian | M154 review by guardian — PASS (9.65) |
-| Apr 23, 23:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (282 events)
+### Last 24 hours (285 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T225235Z_000001: 1 oinkv routine event only. Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers |
+| Apr 24, 00:55 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 00:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T223237Z_000001: only routine heartbeats (guardian, forge) and 1 oinkv event. Zero reviews on B9v3/B12-SHAD |
+| Apr 24, 00:41 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 00:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 00:39 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 00:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since last anvil note 22:13:04Z: forge TASK_PLANNED oinkfarm#214 (unrelated), hermes ARTIFACT_PUBLISHED (unrelated), 1 oinkv  |
+| Apr 24, 00:22 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 00:14 CEST | `TASK_PLANNED` | `—` | forge | — plan published |
 | Apr 24, 00:13 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T215240Z_000001 confirmed emitted. Since 21:52:40Z: 1 guardian AGENT_HEARTBEAT + 2 oinkv routine event |
-| Apr 24, 00:08 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:59 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
-| Apr 23, 23:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Last anvil note evt_20260423T214555Z_000001 emitted 7m ago. Zero new events since 21:45:55Z. #189 merged+canary PASSED 08:29: |
-| Apr 23, 23:45 CEST | `SPRINT_NOTE` | `M189` | anvil | Post-canary tick. Scan window 21:12:13Z to 21:40Z. (1) #189 merged+canary PASSED 08:29:46Z, T+48h recon due 2026-04-24T08:00Z (~10h20m). (2) |
-| Apr 23, 23:45 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 23:30 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | vigil | M202 review by vigil — PASS (9.7) |
-| Apr 23, 23:28 CEST | `None` | `—` | oinkv |  — |
-| Apr 23, 23:26 CEST | `REVIEW_POSTED` | `M154` | guardian | M154 review by guardian — PASS (9.65) |
-| Apr 23, 23:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -82,6 +79,7 @@ _No open DECISION_NEEDED events._
 | 🟠 WARN | `B1` | PR_OPENED (pr=21) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
+| 🟠 WARN | `B6` | CANARY_STARTED with no verdict within 48h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for anvil |
 | 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
@@ -90,12 +88,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 00:17 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 292 |
-| 🔥 **FORGE** | Apr 24, 00:14 CEST | `TASK_PLANNED` | `vigil-cross-check` | 🟢 fresh | 144 |
-| ⚒️ **ANVIL** | Apr 24, 00:13 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 296 |
-| 🐷 **OinkV** | Apr 24, 00:08 CEST | `—` | `—` | 🟢 fresh | 164 |
-| 🛡️ **GUARDIAN** | Apr 23, 23:58 CEST | `AGENT_HEARTBEAT` | `daily_monitoring` | 🟢 fresh | 233 |
-| 🔍 **VIGIL** | Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | 🟢 fresh | 79 |
+| 🪽 **Hermes** | Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 293 |
+| 🐷 **OinkV** | Apr 24, 01:14 CEST | `—` | `—` | 🟢 fresh | 168 |
+| 🛡️ **GUARDIAN** | Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟢 fresh | 235 |
+| 🔥 **FORGE** | Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `vigil-cross-check` | 🟢 fresh | 146 |
+| ⚒️ **ANVIL** | Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 299 |
+| 🔍 **VIGIL** | Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | 🟡 1–3h | 79 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -200,10 +198,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔥 | FORGE | Technical Execution Planner |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔥 | FORGE | Technical Execution Planner |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | • | mike |  |
@@ -218,4 +216,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/57 tasks DONE · Last auto-regenerated: 00:17 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/57 tasks DONE · Last auto-regenerated: 01:21 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
