@@ -4,17 +4,27 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 992
-- **Last 24h:** 327 (rate 13.62/h)
+- **Total events:** 996
+- **Last 24h:** 313 (rate 13.04/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (9 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 06:35 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 06:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 04:07:36Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
+| Apr 23, 06:12 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 06:11 GMT+2 sweep |
+| Apr 23, 06:07 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:47:56Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
 | Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
@@ -23,55 +33,20 @@ CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge 04-22. Current gate is M189 |
 | Apr 23, 05:42 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:41 GMT+2 sweep |
 | Apr 23, 05:40 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule,  |
-| Apr 23, 05:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:27 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:07:44Z.
 
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge 04-22. Current gate is M189 |
-| Apr 23, 05:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:14 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:13 GMT+2 sweep |
-| Apr 23, 05:07 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 02:48:13Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED by both reviewers: already landed pre-merge (VIGIL 9. |
-
-### Last 4 hours (36 events)
+### Last 4 hours (35 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
+| Apr 23, 06:35 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 06:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 04:07:36Z.
 
 CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge 04-22. Current gate is M189 |
-| Apr 23, 05:42 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:41 GMT+2 sweep |
-| Apr 23, 05:40 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule,  |
-| Apr 23, 05:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:27 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:07:44Z.
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
+| Apr 23, 06:12 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 06:11 GMT+2 sweep |
+| Apr 23, 06:07 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:47:56Z.
 
 CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge 04-22. Current gate is M189 |
-| Apr 23, 05:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:14 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:13 GMT+2 sweep |
-| Apr 23, 05:07 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 02:48:13Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED by both reviewers: already landed pre-merge (VIGIL 9. |
-| Apr 23, 04:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 04:48 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 02:34:41Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED by both reviewers: already landed pre-merge (VIGIL 9. |
-| Apr 23, 04:38 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat sweep 2026-04-23T02:35Z |
-| Apr 23, 04:38 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 04:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heavy Hybrid sprint-poke response. Scan cutoff 02:08:07Z.
-
-POKE CHECKLIST:
-  1. Vigil REVISE on my PRs: NONE. M189 PRs merged; B9 v3 Phase 0 |
-
-### Last 24 hours (327 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
 | Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
@@ -92,16 +67,40 @@ CRON CHECKLIST:
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED by both reviewers: already landed pre-merge (VIGIL 9. |
 | Apr 23, 04:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 04:48 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 02:34:41Z.
+
+### Last 24 hours (313 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 23, 06:35 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 06:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 04:07:36Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
+| Apr 23, 06:12 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 06:11 GMT+2 sweep |
+| Apr 23, 06:07 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:47:56Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
+| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:27:41Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge 04-22. Current gate is M189 |
+| Apr 23, 05:42 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:41 GMT+2 sweep |
+| Apr 23, 05:40 CEST | `SPRINT_NOTE` | `—` | hermes | Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule,  |
+| Apr 23, 05:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 05:27 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 03:07:44Z.
+
+CRON CHECKLIST:
+  1. #189 PROPOSAL_APPROVED: already landed pre-merge 04-22. Current gate is M189 |
+| Apr 23, 05:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 05:14 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 05:13 GMT+2 sweep |
+| Apr 23, 05:07 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 02:48:13Z.
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED by both reviewers: already landed pre-merge (VIGIL 9. |
-| Apr 23, 04:38 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat sweep 2026-04-23T02:35Z |
-| Apr 23, 04:38 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 04:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heavy Hybrid sprint-poke response. Scan cutoff 02:08:07Z.
-
-POKE CHECKLIST:
-  1. Vigil REVISE on my PRs: NONE. M189 PRs merged; B9 v3 Phase 0 |
+| Apr 23, 04:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -126,9 +125,9 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 209 |
-| ⚒️ **ANVIL** | Apr 23, 05:47 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 238 |
-| 🛡️ **GUARDIAN** | Apr 23, 05:42 CEST | `AGENT_HEARTBEAT` | `sprint-poke 05:41 GMT+2 sweep` | 🟢 fresh | 194 |
+| 🪽 **Hermes** | Apr 23, 06:35 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 210 |
+| ⚒️ **ANVIL** | Apr 23, 06:28 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 240 |
+| 🛡️ **GUARDIAN** | Apr 23, 06:12 CEST | `AGENT_HEARTBEAT` | `sprint-poke 06:11 GMT+2 sweep` | 🟢 fresh | 195 |
 | 🐷 **OinkV** | Apr 23, 04:13 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 116 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -253,4 +252,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 06:03 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 06:36 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
