@@ -4,38 +4,49 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1183
-- **Last 24h:** 267 (rate 11.12/h)
+- **Total events:** 1191
+- **Last 24h:** 269 (rate 11.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (15 events)
+### Last 1 hour (14 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 20:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:53:15Z → 18:12Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
+| Apr 23, 20:02 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
+| Apr 23, 19:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:32:44Z → 17:52Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
+| Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (10.0) |
+| Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (6.8) |
+| Apr 23, 19:46 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 19:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:28:40Z → 17:32Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Received SPRINT POKE at 19:27 GMT+2 / 17:27Z. Poke references "Heavy Hybrid", "forge-workspace/plans/", RT-1..RT-7 rollback triggers, and B9 |
 | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 19:27 GMT+2 sweep |
 | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
-| Apr 23, 18:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:56 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:32:37Z → 16:52Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
-| Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 
-### Last 4 hours (55 events)
+### Last 4 hours (52 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 20:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:53:15Z → 18:12Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
+| Apr 23, 20:02 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
+| Apr 23, 19:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:32:44Z → 17:52Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
+| Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (10.0) |
+| Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (6.8) |
+| Apr 23, 19:46 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 19:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:28:40Z → 17:32Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Received SPRINT POKE at 19:27 GMT+2 / 17:27Z. Poke references "Heavy Hybrid", "forge-workspace/plans/", RT-1..RT-7 rollback triggers, and B9 |
@@ -43,20 +54,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
-| Apr 23, 18:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:56 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:32:37Z → 16:52Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
-| Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 
-### Last 24 hours (267 events)
+### Last 24 hours (269 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 20:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:53:15Z → 18:12Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
+| Apr 23, 20:02 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
+| Apr 23, 19:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:32:44Z → 17:52Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
+| Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (10.0) |
+| Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (6.8) |
+| Apr 23, 19:46 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 23, 19:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 17:28:40Z → 17:32Z.
+(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189` | anvil | Received SPRINT POKE at 19:27 GMT+2 / 17:27Z. Poke references "Heavy Hybrid", "forge-workspace/plans/", RT-1..RT-7 rollback triggers, and B9 |
@@ -64,16 +76,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 | Apr 23, 19:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 19:12 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
-| Apr 23, 18:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:56 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:32:37Z → 16:52Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 18:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 18:41 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 23, 18:39 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 18:39 GMT+2 sweep |
-| Apr 23, 18:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 16:12:42Z → 16:32Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 
 ## 🧭 Needs Mike
 
@@ -96,13 +98,13 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 19:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 282 |
-| 🐷 **OinkV** | Apr 23, 19:29 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 155 |
-| ⚒️ **ANVIL** | Apr 23, 19:28 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 281 |
-| 🛡️ **GUARDIAN** | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 19:27 GMT+2 sweep` | 🟢 fresh | 224 |
+| 🪽 **Hermes** | Apr 23, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 283 |
+| ⚒️ **ANVIL** | Apr 23, 20:12 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 284 |
+| 🛡️ **GUARDIAN** | Apr 23, 20:02 CEST | `AGENT_HEARTBEAT` | `HEARTBEAT.md scheduled sweep` | 🟢 fresh | 225 |
+| 🔍 **VIGIL** | Apr 23, 19:49 CEST | `REVIEW_POSTED` | `—` | 🟢 fresh | 74 |
+| 🐷 **OinkV** | Apr 23, 19:46 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 156 |
 | 🔥 **FORGE** | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `C-plan-monitoring` | 🟢 fresh | 137 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
-| 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
 
@@ -205,12 +207,12 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🐷 | OinkV | Plan Auditor |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔍 | VIGIL | Code Review + Scoring |
+| 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
-| 🔍 | VIGIL | Code Review + Scoring |
 | • | mike |  |
 | • | SYSTEM |  |
 
@@ -223,4 +225,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 19:30 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 20:14 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
