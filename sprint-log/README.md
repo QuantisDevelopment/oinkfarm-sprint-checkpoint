@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1074
-- **Last 24h:** 279 (rate 11.62/h)
+- **Total events:** 1078
+- **Last 24h:** 281 (rate 11.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (16 events)
+### Last 1 hour (18 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 10:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 10:38 CEST | `SPRINT_NOTE` | `M189` | anvil | 🎉 GUARDIAN CANARY_PASS EMITTED AT 08:29:46Z. M189 Step-0 track DONE. TASK 4 Artifact A (sub-task) UNBLOCKED and kicking off this tick.
+
+CANA |
+| Apr 23, 10:37 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 23, 10:37 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 CANARY → DONE |
 | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 10:29 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 10:25 GMT+2 sweep — M189 canary close-out |
 | Apr 23, 10:29 CEST | `CANARY_PASS` | `M189` | guardian | M189 canary PASS |
@@ -40,19 +46,16 @@ Verdict: TRUSTWORTHY. Exemplary review |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p |
-| Apr 23, 09:52 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 07:50 UTC
 
-Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes |
-| Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
-| Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
-| Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
-
-1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
-Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
-
-### Last 4 hours (58 events)
+### Last 4 hours (60 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 10:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 10:38 CEST | `SPRINT_NOTE` | `M189` | anvil | 🎉 GUARDIAN CANARY_PASS EMITTED AT 08:29:46Z. M189 Step-0 track DONE. TASK 4 Artifact A (sub-task) UNBLOCKED and kicking off this tick.
+
+CANA |
+| Apr 23, 10:37 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 23, 10:37 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 CANARY → DONE |
 | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 10:29 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 10:25 GMT+2 sweep — M189 canary close-out |
 | Apr 23, 10:29 CEST | `CANARY_PASS` | `M189` | guardian | M189 canary PASS |
@@ -78,19 +81,16 @@ Verdict: TRUSTWORTHY. Exemplary review |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p |
-| Apr 23, 09:52 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 07:50 UTC
 
-Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes |
-| Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
-| Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
-| Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
-
-1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
-Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
-
-### Last 24 hours (279 events)
+### Last 24 hours (281 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 10:41 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 10:38 CEST | `SPRINT_NOTE` | `M189` | anvil | 🎉 GUARDIAN CANARY_PASS EMITTED AT 08:29:46Z. M189 Step-0 track DONE. TASK 4 Artifact A (sub-task) UNBLOCKED and kicking off this tick.
+
+CANA |
+| Apr 23, 10:37 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
+| Apr 23, 10:37 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 CANARY → DONE |
 | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 10:29 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 10:25 GMT+2 sweep — M189 canary close-out |
 | Apr 23, 10:29 CEST | `CANARY_PASS` | `M189` | guardian | M189 canary PASS |
@@ -116,15 +116,6 @@ Verdict: TRUSTWORTHY. Exemplary review |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p |
-| Apr 23, 09:52 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 07:50 UTC
-
-Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes |
-| Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
-| Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
-| Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
-
-1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
-Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
 
 ## 🧭 Needs Mike
 
@@ -140,7 +131,6 @@ _No open DECISION_NEEDED events._
 | 🟠 WARN | `B2` | PR_OPENED (pr=24) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
-| 🟠 WARN | `M189` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=external_dependency) |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for anvil |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
 
@@ -148,10 +138,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 250 |
+| 🪽 **Hermes** | Apr 23, 10:41 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 251 |
+| ⚒️ **ANVIL** | Apr 23, 10:38 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 255 |
 | 🛡️ **GUARDIAN** | Apr 23, 10:29 CEST | `AGENT_HEARTBEAT` | `sprint-poke 10:25 GMT+2 sweep — M189 canary close-out` | 🟢 fresh | 207 |
 | 🐷 **OinkV** | Apr 23, 10:27 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 126 |
-| ⚒️ **ANVIL** | Apr 23, 10:13 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 252 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🟡 1–3h | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -257,9 +247,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -275,4 +265,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 10:35 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 10:42 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
