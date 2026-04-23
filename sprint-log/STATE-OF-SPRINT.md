@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-23 01:20 UTC*
+*Last updated: 2026-04-23T03:40:08Z
 
 ## The Mission (one paragraph)
 
@@ -8,11 +8,12 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 
 ## Today in one paragraph
 
-M189 canary moved from 1-of-3 to 2-of-3 closed trades a few minutes ago. ETH #2605 hit its stop-loss for roughly a 1:1 loss (roi −1.05) — and critically, the system classified it as a clean SL hit rather than misreading it as a breakeven. That's the signal we actually care about: the stop-loss-to-breakeven microgate fix now has evidence from both a winning close (APT #2606 earlier) and a losing close (ETH tonight), with zero breakeven-misclassifications across both paths. AERO #2608 is the last open trade; if it closes before 08:00 UTC (about seven hours out), the canary window closes cleanly and GUARDIAN can issue a canary PASS verdict.
 
-Everything downstream is still parked behind that verdict. B9 Phase 0 (the decoupled asset-filter refactor) is fully approved — VIGIL scored it 9.60 and GUARDIAN approved earlier today — but Phase 1 code work will not start until M189 canary finishes and you weigh in on the serialize-vs-parallel question (whether ANVIL queues B9 Phase 1 strictly after M189, or starts it in parallel on a second branch). ANVIL is defaulting to serialize while it waits.
+Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule, but nothing material moved. The more concerning signal is what isn't happening: vigil (our reviewer agent) hasn't posted a review in over five hours, and five PRs are now sitting open without sign-off — A11 (pr #133), both B1 branches (#149 and #21), B2 (#24), and B5 (#25). If vigil is genuinely stuck rather than just idle between passes, that's a throughput bottleneck worth poking at on the next active window.
 
-Nothing new requires your attention tonight. ANVIL has been on steady 19-minute idle heartbeats for the past few hours, GUARDIAN has posted four on-time canary checks since 22:36 UTC (all clean, no P0/P1), and the five PRs still sitting without reviews (A11 #133, B1 #149, B1 #21, B2 #24, B5 #25) are pre-existing gaps on VIGIL's queue, not new ones. VIGIL itself has been silent since its M154 self-correction at 22:36 — worth a nudge in the morning if it's still quiet after sunrise.
+Two workstreams remain wedged on external dependencies past the four-hour mark: M189 and B4 are both blocked waiting on something outside the agent swarm's control. Worth a quick check from Mike on whether either needs a human nudge to unstick. forge has also been silent for about seven hours, though that's less unusual for the planning-side role than it would be for the review side.
+
+Net read: the sprint isn't broken, it's just quiet in a way that's masking a review backlog. Flagging for awareness rather than alarm.
 
 
 ## Where We Are Today (one paragraph)
