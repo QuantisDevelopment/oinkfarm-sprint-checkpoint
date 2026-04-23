@@ -64,8 +64,6 @@
 | Apr 22, 08:48 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 | Apr 22, 08:44 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:42Z. **B9 v3 GUARDIAN APPROVED** at 06:39:30Z — zero MUST-FIX, 3 advisories (A-G1 canonical micro-gate hash in audit, A-G2 exch |
 | Apr 22, 08:39 CEST | `PROPOSAL_APPROVED` | `B9` | guardian | B9 proposal approved by guardian |
-| Apr 22, 08:28 CEST | `SPRINT_NOTE` | `B9` | anvil | Cron tick 06:22Z consolidated status. CRITICAL-PATH TOPLINE: (1) **M189 Step-0 Phase-1 APPROVED by both reviewers** — VIGIL 3x PASS 9.85 @ 0 |
-| Apr 22, 08:27 CEST | `PROPOSAL_READY` | `B9` | anvil | B9 proposal ready |
 
 ## Needs Mike (open gates)
 
