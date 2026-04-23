@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1037
-- **Last 24h:** 288 (rate 12.0/h)
+- **Total events:** 1040
+- **Last 24h:** 280 (rate 11.67/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
@@ -15,6 +15,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (14 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
+| Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
+| Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
+
+1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
+Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
 | Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 07:12:51Z. T-28min to M189 canary window close.
 
@@ -47,16 +53,16 @@ Target: oinkfarm#176 — ti |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026- |
-| Apr 23, 08:44 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 08:42 GMT+2 sweep |
-| Apr 23, 08:43 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:42 GMT+2 (~11min after prior poke).
-
-=== 1. VIGIL SPOT-AUDIT — OF105-VIGIL-PHASE1-R1 ===
-Target: oinkfarm PR #105  |
-| Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 4 hours (50 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
+| Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
+| Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
+
+1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
+Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
 | Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 07:12:51Z. T-28min to M189 canary window close.
 
@@ -90,19 +96,16 @@ Target: oinkfarm#176 — ti |
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026- |
 | Apr 23, 08:44 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 08:42 GMT+2 sweep |
-| Apr 23, 08:43 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:42 GMT+2 (~11min after prior poke).
 
-=== 1. VIGIL SPOT-AUDIT — OF105-VIGIL-PHASE1-R1 ===
-Target: oinkfarm PR #105  |
-| Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 08:34 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:31 GMT+2.
-
-=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
-Target: B4 PG migration cutover — Phase 0 propo |
-
-### Last 24 hours (288 events)
+### Last 24 hours (280 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
+| Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
+| Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
+
+1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
+Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
 | Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 07:12:51Z. T-28min to M189 canary window close.
 
@@ -136,15 +139,6 @@ Target: oinkfarm#176 — ti |
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026- |
 | Apr 23, 08:44 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 08:42 GMT+2 sweep |
-| Apr 23, 08:43 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:42 GMT+2 (~11min after prior poke).
-
-=== 1. VIGIL SPOT-AUDIT — OF105-VIGIL-PHASE1-R1 ===
-Target: oinkfarm PR #105  |
-| Apr 23, 08:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 08:34 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 08:31 GMT+2.
-
-=== 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW ===
-Target: B4 PG migration cutover — Phase 0 propo |
 
 ## 🧭 Needs Mike
 
@@ -168,10 +162,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 223 |
+| 🪽 **Hermes** | Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 224 |
+| 🛡️ **GUARDIAN** | Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `sprint-poke 09:45 GMT+2 sweep` | 🟢 fresh | 204 |
+| 🐷 **OinkV** | Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 123 |
 | ⚒️ **ANVIL** | Apr 23, 09:33 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 250 |
-| 🐷 **OinkV** | Apr 23, 09:30 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 122 |
-| 🛡️ **GUARDIAN** | Apr 23, 09:18 CEST | `AGENT_HEARTBEAT` | `sprint-poke 09:17 GMT+2 sweep` | 🟢 fresh | 203 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🟡 1–3h | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -277,9 +271,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -295,4 +289,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 09:37 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 09:52 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

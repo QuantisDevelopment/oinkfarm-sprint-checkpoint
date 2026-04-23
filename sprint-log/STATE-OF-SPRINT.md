@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-23T05:44:20Z
+*Last updated: 2026-04-23T07:51:43Z
 
 ## The Mission (one paragraph)
 
@@ -9,11 +9,11 @@ OinkFarm is the pipeline that watches Discord and Telegram for trading signals, 
 ## Today in one paragraph
 
 
-Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, one ANVIL cron heartbeat, and one GUARDIAN sprint-poke sweep. No merges, no reviews, no canary verdicts. The only real clock that's moving is M189's canary window, which closes at 08:00Z (≈10:00 CEST, roughly 2h 20m from now) and is still sitting at two of three organic closes — APT #2606 a win, ETH #2605 a loss — with AERO #2608 never having filled. GUARDIAN's note is that two-of-three is enough for PASS as long as the zero break-even misclassification count holds, which it currently does.
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, two GUARDIAN heartbeats, and a pair of dashboard-artifact republishes of the oinxtractor quality page. Nothing merged, nothing reviewed, no canary verdict posted yet. The one clock that actually matters is M189's organic-canary window, which closes in roughly twelve minutes (08:00 UTC / 10:00 CEST) — GUARDIAN's last heartbeat twenty minutes ago flagged T-28min, so we're right at the edge.
 
-One correction to last cycle's narrative worth surfacing: ANVIL's heartbeat pointed out that the five "open PRs awaiting VIGIL sign-off" flagged by the gap-linter (A11/#133, B1/#149+#21, B2/#24, B5/#25) are cross-repo PR IDs — the corresponding A11/B1/B2/B5 tasks in the main repo are already DONE and deployed. So that "review backlog" is a dashboard artifact from PR-number collisions across repos, not an actual throughput stall. VIGIL's 7-hour silence is still notable but probably just reflects no new work to score since its last M154 self-correction around 00:36 CEST.
+The picture going into that close is unchanged from two hours ago: two of three organic closes landed — APT #2606 a win, ETH #2605 a loss — and AERO #2608 never filled. If AERO fills in the next few minutes we get a clean 3/3 PASS; if not, GUARDIAN calls PASS on 2/3 provided the break-even-misclassification count stays at zero, which it currently is. Either way the CANARY_PASS or CANARY_FAIL event should post within the next hour, and that's the beat Mike's morning window lines up with.
 
-Net: nothing to act on. The two remaining external-dependency blockers (M189 on its own canary clock, B4 on the April 26 cutover gate) are both "waiting by design." Next meaningful beat is the 08:00Z M189 verdict — either AERO fills late and we get a 3/3 PASS, or the window closes at 2/3 and GUARDIAN decides on the be-misclass rule. Mike's morning window (≈08:30–10:00 CEST) lines up almost exactly with that decision point.
+Two side notes worth surfacing. VIGIL has been silent for about nine hours since its 00:36 CEST M154 self-correction — not a stall, just no new review work to score, and Hermes is already spot-auditing its recent verdicts (OF105, OF111, OF121, OF152, OF176 all came back TRUSTWORTHY this morning). And the "five unreviewed PRs" the gap-linter is flagging (A11/#133, B1/#149+#21, B2/#24, B5/#25) are still the cross-repo PR-number collision ANVIL called out last cycle — the underlying A11/B1/B2/B5 tasks are already DONE and deployed, so that's a dashboard artifact, not real review debt. Net: nothing to act on, but the next thirty minutes should produce the first real event of the day.
 
 
 ## Where We Are Today (one paragraph)
