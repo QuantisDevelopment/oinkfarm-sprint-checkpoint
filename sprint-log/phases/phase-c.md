@@ -48,7 +48,6 @@ _No waves yet for this phase._
 | Apr 22, 10:19 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 09:50 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — standby — 2nd-opinion critic |
 | Apr 22, 09:49 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 22, 06:48 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
 
 ## Needs Mike (open gates)
 
