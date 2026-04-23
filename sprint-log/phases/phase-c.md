@@ -36,12 +36,6 @@ _No waves yet for this phase._
 | Apr 22, 12:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 12:35 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 | Apr 22, 12:35 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 22, 12:06 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 22, 12:06 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 12:06 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 22, 11:42 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 22, 11:42 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
-| Apr 22, 11:42 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
 
 ## Needs Mike (open gates)
 
