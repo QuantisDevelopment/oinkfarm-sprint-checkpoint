@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1096
-- **Last 24h:** 265 (rate 11.04/h)
+- **Total events:** 1098
+- **Last 24h:** 263 (rate 10.96/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
@@ -15,6 +15,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 12:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 12:32 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 12:26 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF152-VIGIL-PHASE1-R2: TRUSTWORTHY. CRITICAL tier correctly applied to micro-gate |
 | Apr 23, 12:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 12:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 12:11 GMT+2.
 
@@ -40,15 +44,14 @@ Verdict: TRUSTWORTHY. LIGHTWEIGHT-tier bybit-suite overlay  |
 
 CRON PROMPT CHECKLIST:
   (1) #189 PROPOSAL_APPROVED both reviewers: landed 04-22. M |
-| Apr 23, 11:26 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 11:23 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 11:22 GMT+2.
 
-1) VIGIL SPOT-AUDIT — OF152-VIGIL-PHASE1-R2
-Verdict: TRUSTWORTHY. Re-review triggered by head SHA chang |
-
-### Last 4 hours (54 events)
+### Last 4 hours (55 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 12:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 12:32 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 12:26 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF152-VIGIL-PHASE1-R2: TRUSTWORTHY. CRITICAL tier correctly applied to micro-gate |
 | Apr 23, 12:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 12:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 12:11 GMT+2.
 
@@ -81,15 +84,14 @@ CRON PROMPT CHECKLIST:
 Verdict: TRUSTWORTHY. Re-review triggered by head SHA chang |
 | Apr 23, 11:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 11:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick (34 min after Artifact A kickoff at 08:38:30Z; 20 min after previous quiet note at 08:53:50Z). Scan window 08:53:50Z  |
-| Apr 23, 11:08 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 11:06 GMT+2.
 
-1) VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1
-Verdict: TRUSTWORTHY (corrected form). Original review scor |
-| Apr 23, 11:07 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 11:06 GMT+2 sweep |
-
-### Last 24 hours (265 events)
+### Last 24 hours (263 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 12:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 12:32 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 12:26 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF152-VIGIL-PHASE1-R2: TRUSTWORTHY. CRITICAL tier correctly applied to micro-gate |
 | Apr 23, 12:21 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 12:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 12:11 GMT+2.
 
@@ -122,11 +124,6 @@ CRON PROMPT CHECKLIST:
 Verdict: TRUSTWORTHY. Re-review triggered by head SHA chang |
 | Apr 23, 11:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 11:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick (34 min after Artifact A kickoff at 08:38:30Z; 20 min after previous quiet note at 08:53:50Z). Scan window 08:53:50Z  |
-| Apr 23, 11:08 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 11:06 GMT+2.
-
-1) VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1
-Verdict: TRUSTWORTHY (corrected form). Original review scor |
-| Apr 23, 11:07 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 11:06 GMT+2 sweep |
 
 ## 🧭 Needs Mike
 
@@ -150,8 +147,8 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 12:21 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 255 |
-| 🐷 **OinkV** | Apr 23, 12:13 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 132 |
+| 🪽 **Hermes** | Apr 23, 12:32 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 256 |
+| 🐷 **OinkV** | Apr 23, 12:32 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 133 |
 | ⚒️ **ANVIL** | Apr 23, 12:12 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 260 |
 | 🛡️ **GUARDIAN** | Apr 23, 12:11 CEST | `AGENT_HEARTBEAT` | `sprint-poke 12:10 GMT+2 sweep` | 🟢 fresh | 210 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
@@ -277,4 +274,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 12:21 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 12:32 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
