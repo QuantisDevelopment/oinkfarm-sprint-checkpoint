@@ -4,17 +4,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 955
-- **Last 24h:** 370 (rate 15.42/h)
+- **Total events:** 957
+- **Last 24h:** 367 (rate 15.29/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ⚠ gaps
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 02:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:52 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
 | Apr 23, 01:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T232718Z_000001). Scan cutoff 23:27:18Z.
 
@@ -25,44 +27,12 @@ Q1 (#189 both approvals?): N/ |
 
 Q1 (#189 both approvals?): N/ |
 | Apr 23, 01:24 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
-| Apr 23, 01:11 CEST | `SPRINT_NOTE` | `—` | hermes | The one real event in the last two hours: VIGIL self-corrected an M154 review it posted yesterday afternoon. M154 is the delayed-passthrough |
-| Apr 23, 01:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T224724Z_000001). Scan cutoff 22:47:24Z.
 
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-
-### Last 4 hours (34 events)
+### Last 4 hours (33 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 23, 01:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T232718Z_000001). Scan cutoff 23:27:18Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 01:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 01:28 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 01:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T230733Z_000001). Scan cutoff 23:07:33Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 01:24 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
-| Apr 23, 01:11 CEST | `SPRINT_NOTE` | `—` | hermes | The one real event in the last two hours: VIGIL self-corrected an M154 review it posted yesterday afternoon. M154 is the delayed-passthrough |
-| Apr 23, 01:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T224724Z_000001). Scan cutoff 22:47:24Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 00:49 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
-| Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 00:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T222715Z_000001). Scan cutoff 22:27:15Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
-| Apr 23, 00:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T220719Z_000001). Scan cutoff 22:07:19Z.
-
-Q1 (#189 both approvals?): N/ |
-| Apr 23, 00:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-
-### Last 24 hours (370 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
+| Apr 23, 02:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:52 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
 | Apr 23, 01:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T232718Z_000001). Scan cutoff 23:27:18Z.
 
@@ -84,10 +54,33 @@ Q1 (#189 both approvals?): N/ |
 
 Q1 (#189 both approvals?): N/ |
 | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
-| Apr 23, 00:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T220719Z_000001). Scan cutoff 22:07:19Z.
+
+### Last 24 hours (367 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 23, 02:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:52 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
+| Apr 23, 01:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T232718Z_000001). Scan cutoff 23:27:18Z.
 
 Q1 (#189 both approvals?): N/ |
-| Apr 23, 00:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:28 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 01:27 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T230733Z_000001). Scan cutoff 23:07:33Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 23, 01:24 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
+| Apr 23, 01:11 CEST | `SPRINT_NOTE` | `—` | hermes | The one real event in the last two hours: VIGIL self-corrected an M154 review it posted yesterday afternoon. M154 is the delayed-passthrough |
+| Apr 23, 01:07 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T224724Z_000001). Scan cutoff 22:47:24Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 23, 01:00 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:49 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — nightly-heartbeat-checks + M189-canary-monitoring |
+| Apr 23, 00:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 00:47 CEST | `SPRINT_NOTE` | `—` | anvil | Parallel sprint heartbeat tick — ~19min since last note (evt_20260422T222715Z_000001). Scan cutoff 22:27:15Z.
+
+Q1 (#189 both approvals?): N/ |
+| Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
 
 ## 🧭 Needs Mike
 
@@ -112,9 +105,9 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 01:51 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 195 |
+| 🪽 **Hermes** | Apr 23, 02:13 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 196 |
+| 🛡️ **GUARDIAN** | Apr 23, 01:52 CEST | `AGENT_HEARTBEAT` | `nightly-heartbeat-checks + M189-canary-monitoring` | 🟢 fresh | 187 |
 | ⚒️ **ANVIL** | Apr 23, 01:47 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 226 |
-| 🛡️ **GUARDIAN** | Apr 23, 01:24 CEST | `AGENT_HEARTBEAT` | `nightly-heartbeat-checks + M189-canary-monitoring` | 🟢 fresh | 186 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🟡 1–3h | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
 | 🐷 **OinkV** | Apr 22, 15:12 CEST | `SPRINT_NOTE` | `SPRINT-POKE` | 🔴 stale | 113 |
@@ -221,8 +214,8 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
@@ -239,4 +232,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 01:52 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 02:14 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
