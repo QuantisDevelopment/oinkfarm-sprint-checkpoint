@@ -15,7 +15,7 @@
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 22, 05:53 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
-| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | ✅ DONE | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 23, 07:10 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
+| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | ✅ DONE | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 23, 07:37 CEST · `AGENT_HEARTBEAT` | anvil · forge · guardian · hermes |
 | [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 🛑 BLOCKED | — | — | Apr 22, 09:48 CEST · `BLOCKED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 22, 00:45 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 07:37 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 07:37 GMT+2 sweep |
 | Apr 23, 07:10 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 07:09 GMT+2 sweep |
 | Apr 23, 06:39 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 06:38 GMT+2 sweep |
 | Apr 23, 06:12 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 06:11 GMT+2 sweep |
@@ -65,7 +66,6 @@
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 22, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-22.md |
 | Apr 22, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 22, 07:44 CEST | `TASK_PLANNED` | `B10` | forge | B10 plan published |
 
 ## Needs Mike (open gates)
 

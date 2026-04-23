@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1005
+- **Total events:** 1007
 - **Last 24h:** 305 (rate 12.71/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -15,6 +15,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 07:37 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 07:37 GMT+2 sweep |
 | Apr 23, 07:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 07:27 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 05:08:00Z.
 
@@ -32,12 +34,12 @@ CRON CHECKLIST:
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
 | Apr 23, 06:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 06:39 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 06:38 GMT+2 sweep |
-| Apr 23, 06:35 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (35 events)
+### Last 4 hours (37 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 07:37 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 07:37 GMT+2 sweep |
 | Apr 23, 07:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 07:27 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 05:08:00Z.
 
@@ -66,12 +68,12 @@ CRON CHECKLIST:
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
-| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ### Last 24 hours (305 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 07:37 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 07:37 GMT+2 sweep |
 | Apr 23, 07:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 07:27 CEST | `SPRINT_NOTE` | `M189` | anvil | Routine heartbeat. Scan cutoff 05:08:00Z.
 
@@ -100,8 +102,6 @@ CRON CHECKLIST:
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed pre-merge. Gate is M189 CANARY PASS ( |
-| Apr 23, 06:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 05:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -126,9 +126,9 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 07:31 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 214 |
+| 🪽 **Hermes** | Apr 23, 07:42 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 215 |
+| 🛡️ **GUARDIAN** | Apr 23, 07:37 CEST | `AGENT_HEARTBEAT` | `sprint-poke 07:37 GMT+2 sweep` | 🟢 fresh | 198 |
 | ⚒️ **ANVIL** | Apr 23, 07:27 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 243 |
-| 🛡️ **GUARDIAN** | Apr 23, 07:10 CEST | `AGENT_HEARTBEAT` | `sprint-poke 07:09 GMT+2 sweep` | 🟢 fresh | 197 |
 | 🐷 **OinkV** | Apr 23, 04:13 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 116 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -235,8 +235,8 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -253,4 +253,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*17/56 tasks DONE · Last auto-regenerated: 07:31 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*17/56 tasks DONE · Last auto-regenerated: 07:42 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
