@@ -4,17 +4,24 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1117
-- **Last 24h:** 252 (rate 10.5/h)
+- **Total events:** 1121
+- **Last 24h:** 249 (rate 10.38/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 14:38 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 14:36 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I verified the cited hotpath defect directly  |
+| Apr 23, 14:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:12:54Z → 12:32Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+| Apr 23, 14:31 CEST | `SPRINT_NOTE` | `—` | oinkv | Investigated oinkfarm#204 (Woods BTC #1598 ghost close). Verdict: legitimate ghost close, no dropped close message. is_win already self-heal |
 | Apr 23, 14:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 14:20 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 14:20 GMT+2 sweep |
 | Apr 23, 14:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 11:52:55Z → 12:12Z.
@@ -25,14 +32,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 (2) B9 v3 / B12-S |
 | Apr 23, 13:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 13:48 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 13:47 GMT+2 sweep |
-| Apr 23, 13:36 CEST | `SPRINT_NOTE` | `—` | hermes | Things have been quiet for the last two hours — no merges, canary runs, or decisions flagged since the previous report. Anvil, Guardian, and |
-| Apr 23, 13:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 11:13:00Z → 11:32Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z.
-(2) B9 v3 / B12-S |
 
-### Last 4 hours (47 events)
+### Last 4 hours (43 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 14:38 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 14:36 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I verified the cited hotpath defect directly  |
+| Apr 23, 14:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:12:54Z → 12:32Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+| Apr 23, 14:31 CEST | `SPRINT_NOTE` | `—` | oinkv | Investigated oinkfarm#204 (Woods BTC #1598 ghost close). Verdict: legitimate ghost close, no dropped close message. is_win already self-heal |
 | Apr 23, 14:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 14:20 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 14:20 GMT+2 sweep |
 | Apr 23, 14:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 11:52:55Z → 12:12Z.
@@ -49,18 +59,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 (2) B9 v3 / B12-S |
 | Apr 23, 13:18 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — Heavy Hybrid monitoring sweep |
 | Apr 23, 13:16 CEST | `SPRINT_NOTE` | `—` | oinkv | Dedup poke — 3rd in 32min. No new Vigil reviews since OF176 (last modified 00:35 Apr 23). signal-gateway: 14h uptime, 0 crashes, all 6 super |
-| Apr 23, 13:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 13:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 10:52:37Z → 11:12Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z.
-(2) B9 v3 / B12-S |
-| Apr 23, 13:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 12:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 10:32:40Z → 10:52Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z.
-(2) B9 v3 / B12-S |
 
-### Last 24 hours (252 events)
+### Last 24 hours (249 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 14:38 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 14:36 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I verified the cited hotpath defect directly  |
+| Apr 23, 14:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:12:54Z → 12:32Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+| Apr 23, 14:31 CEST | `SPRINT_NOTE` | `—` | oinkv | Investigated oinkfarm#204 (Woods BTC #1598 ghost close). Verdict: legitimate ghost close, no dropped close message. is_win already self-heal |
 | Apr 23, 14:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 14:20 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 14:20 GMT+2 sweep |
 | Apr 23, 14:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 11:52:55Z → 12:12Z.
@@ -77,14 +86,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 (2) B9 v3 / B12-S |
 | Apr 23, 13:18 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — Heavy Hybrid monitoring sweep |
 | Apr 23, 13:16 CEST | `SPRINT_NOTE` | `—` | oinkv | Dedup poke — 3rd in 32min. No new Vigil reviews since OF176 (last modified 00:35 Apr 23). signal-gateway: 14h uptime, 0 crashes, all 6 super |
-| Apr 23, 13:16 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 13:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 10:52:37Z → 11:12Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z.
-(2) B9 v3 / B12-S |
-| Apr 23, 13:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 12:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 10:32:40Z → 10:52Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z.
-(2) B9 v3 / B12-S |
 
 ## 🧭 Needs Mike
 
@@ -108,10 +109,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 14:22 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 263 |
+| 🪽 **Hermes** | Apr 23, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 264 |
+| 🐷 **OinkV** | Apr 23, 14:38 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 137 |
+| ⚒️ **ANVIL** | Apr 23, 14:32 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 267 |
 | 🛡️ **GUARDIAN** | Apr 23, 14:20 CEST | `AGENT_HEARTBEAT` | `sprint-poke 14:20 GMT+2 sweep` | 🟢 fresh | 214 |
-| ⚒️ **ANVIL** | Apr 23, 14:12 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 266 |
-| 🐷 **OinkV** | Apr 23, 13:16 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 135 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -217,9 +218,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -235,4 +236,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 14:22 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 14:44 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

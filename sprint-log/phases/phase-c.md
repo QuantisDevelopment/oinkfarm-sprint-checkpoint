@@ -25,9 +25,7 @@ _No waves yet for this phase._
 
 ## Recent activity (last 24h)
 
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
-| Apr 22, 14:35 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
+_No events in the last 24 hours._
 
 ## Needs Mike (open gates)
 
