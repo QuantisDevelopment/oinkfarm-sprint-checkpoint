@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1157
+- **Total events:** 1158
 - **Last 24h:** 256 (rate 10.67/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,39 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (15 events)
+### Last 1 hour (12 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 15:41 UTC
+
+The sprint has been quiet for over 90 minutes — no merges, canary runs, or decisions have been logged since the last r |
+| Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
+(1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
+| Apr 23, 17:29 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:28 GMT+2.
+
+1. VIGIL SPOT-AUDIT — B9-VIGIL-v3-REVIEW: TRUSTWORTHY. I verified the core structural claims directly a |
+| Apr 23, 17:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 17:28 GMT+2 heartbeat sweep |
+| Apr 23, 17:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:11 GMT+2.
+
+1. VIGIL SPOT-AUDIT — M189-STEP0-VIGIL-PHASE1-R1: TRUSTWORTHY. Material claims verified directly: `be_t |
+| Apr 23, 17:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 14:52:49Z → 15:12Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+| Apr 23, 17:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 17:01 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
+| Apr 23, 16:55 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:54 GMT+2.
+
+1. VIGIL SPOT-AUDIT — M140-VIGIL-PHASE1-R1-REVIEW (oink-sync#10): TRUSTWORTHY. Verified on branch head  |
+| Apr 23, 16:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 14:38:46Z → 14:52Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+
+### Last 4 hours (48 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 15:41 UTC
+
+The sprint has been quiet for over 90 minutes — no merges, canary runs, or decisions have been logged since the last r |
 | Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
 (1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
@@ -40,41 +70,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW: PARTIALLY_TRUSTWORTHY. Verified on merged commit cc4 |
 | Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:38 GMT+2 heartbeat sweep |
-| Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189` | anvil | Responding to 16:37 GMT+2 poke ("Heavy Hybrid is top priority"). This poke template references B-phase / forge-workspace/plans/ work tracks  |
-
-### Last 4 hours (47 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
-| Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
-(1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
-| Apr 23, 17:29 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:28 GMT+2.
-
-1. VIGIL SPOT-AUDIT — B9-VIGIL-v3-REVIEW: TRUSTWORTHY. I verified the core structural claims directly a |
-| Apr 23, 17:28 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 17:28 GMT+2 heartbeat sweep |
-| Apr 23, 17:13 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 17:11 GMT+2.
-
-1. VIGIL SPOT-AUDIT — M189-STEP0-VIGIL-PHASE1-R1: TRUSTWORTHY. Material claims verified directly: `be_t |
-| Apr 23, 17:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 14:52:49Z → 15:12Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 17:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 17:01 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 16:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
-| Apr 23, 16:55 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:54 GMT+2.
-
-1. VIGIL SPOT-AUDIT — M140-VIGIL-PHASE1-R1-REVIEW (oink-sync#10): TRUSTWORTHY. Verified on branch head  |
-| Apr 23, 16:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 14:38:46Z → 14:52Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 16:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 16:39 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:38 GMT+2.
-
-1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW: PARTIALLY_TRUSTWORTHY. Verified on merged commit cc4 |
-| Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:38 GMT+2 heartbeat sweep |
-| Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189` | anvil | Responding to 16:37 GMT+2 poke ("Heavy Hybrid is top priority"). This poke template references B-phase / forge-workspace/plans/ work tracks  |
 
 ### Last 24 hours (256 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 15:41 UTC
+
+The sprint has been quiet for over 90 minutes — no merges, canary runs, or decisions have been logged since the last r |
 | Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 15:12:46Z → 15:32Z.
 (1) #189: merged+canary PASSED long ago (08:29:46Z). Cron prompt is stale — still as |
@@ -100,7 +102,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW: PARTIALLY_TRUSTWORTHY. Verified on merged commit cc4 |
 | Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:38 GMT+2 heartbeat sweep |
-| Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189` | anvil | Responding to 16:37 GMT+2 poke ("Heavy Hybrid is top priority"). This poke template references B-phase / forge-workspace/plans/ work tracks  |
 
 ## 🧭 Needs Mike
 
@@ -124,7 +125,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 17:36 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 274 |
+| 🪽 **Hermes** | Apr 23, 17:43 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 275 |
 | ⚒️ **ANVIL** | Apr 23, 17:33 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 276 |
 | 🐷 **OinkV** | Apr 23, 17:29 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 148 |
 | 🛡️ **GUARDIAN** | Apr 23, 17:28 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 17:28 GMT+2 heartbeat sweep` | 🟢 fresh | 220 |
@@ -251,4 +252,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 17:36 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 17:43 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
