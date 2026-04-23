@@ -25,7 +25,9 @@ _No waves yet for this phase._
 
 ## Recent activity (last 24h)
 
-_No events in the last 24 hours._
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 23, 17:49 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 
 ## Needs Mike (open gates)
 
