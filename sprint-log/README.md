@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1142
-- **Last 24h:** 251 (rate 10.46/h)
+- **Total events:** 1146
+- **Last 24h:** 253 (rate 10.54/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (14 events)
+### Last 1 hour (15 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 16:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:39 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:38 GMT+2.
+
+1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW: PARTIALLY_TRUSTWORTHY. Verified on merged commit cc4 |
+| Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:38 GMT+2 heartbeat sweep |
+| Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189` | anvil | Responding to 16:37 GMT+2 poke ("Heavy Hybrid is top priority"). This poke template references B-phase / forge-workspace/plans/ work tracks  |
 | Apr 23, 16:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 16:23 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:21 GMT+2.
 
@@ -36,14 +42,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified MUST-FIX (import-time int() parsi |
 | Apr 23, 15:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 15:36 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 15:31 GMT+2 heartbeat sweep |
-| Apr 23, 15:34 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 15:31 GMT+2 — (1) Vigil audit: OF152-VIGIL-PHASE1-R2 TRUSTWORTHY (PASS 9.70, fill_price on MARKET INSERT, clean dimensions, corr |
-| Apr 23, 15:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:12:47Z → 13:32Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
 
-### Last 4 hours (46 events)
+### Last 4 hours (47 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 16:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:39 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:38 GMT+2.
+
+1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW: PARTIALLY_TRUSTWORTHY. Verified on merged commit cc4 |
+| Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:38 GMT+2 heartbeat sweep |
+| Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189` | anvil | Responding to 16:37 GMT+2 poke ("Heavy Hybrid is top priority"). This poke template references B-phase / forge-workspace/plans/ work tracks  |
 | Apr 23, 16:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 16:23 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:21 GMT+2.
 
@@ -65,15 +73,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified MUST-FIX (import-time int() parsi |
 | Apr 23, 15:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 15:36 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 15:31 GMT+2 heartbeat sweep |
-| Apr 23, 15:34 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 15:31 GMT+2 — (1) Vigil audit: OF152-VIGIL-PHASE1-R2 TRUSTWORTHY (PASS 9.70, fill_price on MARKET INSERT, clean dimensions, corr |
-| Apr 23, 15:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:12:47Z → 13:32Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 15:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (251 events)
+### Last 24 hours (253 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 16:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:39 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:38 GMT+2.
+
+1. VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW: PARTIALLY_TRUSTWORTHY. Verified on merged commit cc4 |
+| Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:38 GMT+2 heartbeat sweep |
+| Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189` | anvil | Responding to 16:37 GMT+2 poke ("Heavy Hybrid is top priority"). This poke template references B-phase / forge-workspace/plans/ work tracks  |
 | Apr 23, 16:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 16:23 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:21 GMT+2.
 
@@ -95,11 +104,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified MUST-FIX (import-time int() parsi |
 | Apr 23, 15:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 15:36 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 15:31 GMT+2 heartbeat sweep |
-| Apr 23, 15:34 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 15:31 GMT+2 — (1) Vigil audit: OF152-VIGIL-PHASE1-R2 TRUSTWORTHY (PASS 9.70, fill_price on MARKET INSERT, clean dimensions, corr |
-| Apr 23, 15:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:12:47Z → 13:32Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 15:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -123,10 +127,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 16:27 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 270 |
-| 🐷 **OinkV** | Apr 23, 16:23 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 144 |
-| ⚒️ **ANVIL** | Apr 23, 16:12 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 272 |
-| 🛡️ **GUARDIAN** | Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 16:04 GMT+2 heartbeat sweep` | 🟢 fresh | 217 |
+| 🪽 **Hermes** | Apr 23, 16:39 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 271 |
+| 🐷 **OinkV** | Apr 23, 16:39 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 145 |
+| 🛡️ **GUARDIAN** | Apr 23, 16:38 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 16:38 GMT+2 heartbeat sweep` | 🟢 fresh | 218 |
+| ⚒️ **ANVIL** | Apr 23, 16:38 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 273 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -233,8 +237,8 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -250,4 +254,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 16:28 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 16:40 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
