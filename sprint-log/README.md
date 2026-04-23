@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1217
-- **Last 24h:** 268 (rate 11.17/h)
+- **Total events:** 1220
+- **Last 24h:** 269 (rate 11.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 23:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 23:04 CEST | `None` | `—` | oinkv |  — |
+| Apr 23, 22:56 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 | Apr 23, 22:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 22:39 CEST | `None` | `—` | oinkv |  — |
 | Apr 23, 22:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 22:37 GMT+2 sweep |
@@ -25,11 +28,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 22:15 CEST | `None` | `—` | oinkv |  — |
 | Apr 23, 22:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 19:52:45Z → 20:12Z.
 (1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 21:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
 
 ### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 23:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 23:04 CEST | `None` | `—` | oinkv |  — |
+| Apr 23, 22:56 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 | Apr 23, 22:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 22:39 CEST | `None` | `—` | oinkv |  — |
 | Apr 23, 22:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 22:37 GMT+2 sweep |
@@ -45,14 +50,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 (1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 21:51 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, canary completions, or decision gates have fired since the last report. Agent |
 | Apr 23, 21:48 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 23, 21:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 19:12:38Z → 19:32Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 21:31 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 21:30 GMT+2 sweep |
-| Apr 23, 21:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (268 events)
+### Last 24 hours (269 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 23:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 23:04 CEST | `None` | `—` | oinkv |  — |
+| Apr 23, 22:56 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 | Apr 23, 22:53 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 22:39 CEST | `None` | `—` | oinkv |  — |
 | Apr 23, 22:38 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 22:37 GMT+2 sweep |
@@ -68,10 +72,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 (1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
 | Apr 23, 21:51 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, canary completions, or decision gates have fired since the last report. Agent |
 | Apr 23, 21:48 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 23, 21:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 19:12:38Z → 19:32Z.
-(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS |
-| Apr 23, 21:31 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 21:30 GMT+2 sweep |
-| Apr 23, 21:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -94,11 +94,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 22:53 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 287 |
-| 🐷 **OinkV** | Apr 23, 22:39 CEST | `—` | `—` | 🟢 fresh | 159 |
+| 🪽 **Hermes** | Apr 23, 23:04 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 288 |
+| 🐷 **OinkV** | Apr 23, 23:04 CEST | `—` | `—` | 🟢 fresh | 160 |
+| 🔥 **FORGE** | Apr 23, 22:56 CEST | `AGENT_HEARTBEAT` | `vigil-cross-check` | 🟢 fresh | 142 |
 | 🛡️ **GUARDIAN** | Apr 23, 22:38 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 22:37 GMT+2 sweep` | 🟢 fresh | 230 |
 | ⚒️ **ANVIL** | Apr 23, 22:37 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 291 |
-| 🔥 **FORGE** | Apr 23, 22:22 CEST | `AGENT_HEARTBEAT` | `vigil-cross-check` | 🟢 fresh | 141 |
 | 🔍 **VIGIL** | Apr 23, 21:15 CEST | `REVIEW_POSTED` | `—` | 🟡 1–3h | 77 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -204,9 +204,9 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | 🐷 | OinkV | Plan Auditor |
+| 🔥 | FORGE | Technical Execution Planner |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | • | mike |  |
@@ -221,4 +221,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 22:54 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 23:05 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
