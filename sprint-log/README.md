@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1150
-- **Last 24h:** 254 (rate 10.58/h)
+- **Total events:** 1151
+- **Last 24h:** 253 (rate 10.54/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (15 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 17:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 17:01 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 16:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
 | Apr 23, 16:55 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:54 GMT+2.
@@ -37,15 +38,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 1. VIGIL SPOT-AUDIT — OF152-VIGIL-PHASE1-R2: TRUSTWORTHY. Re-verified the fill_price logic directly on  |
 | Apr 23, 16:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:52:46Z → 14:12Z.
 (1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 16:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:04 GMT+2.
-
-1. VIGIL SPOT-AUDIT — OF198-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified the primary defect: git diff show |
-| Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:04 GMT+2 heartbeat sweep |
 
 ### Last 4 hours (47 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 17:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 17:01 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 16:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
 | Apr 23, 16:55 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:54 GMT+2.
@@ -72,11 +69,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:04 GMT+2.
 
 1. VIGIL SPOT-AUDIT — OF198-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified the primary defect: git diff show |
-| Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:04 GMT+2 heartbeat sweep |
 
-### Last 24 hours (254 events)
+### Last 24 hours (253 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 17:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 17:01 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 16:58 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — HEARTBEAT.md scheduled sweep |
 | Apr 23, 16:55 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:54 GMT+2.
@@ -103,7 +100,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:04 GMT+2.
 
 1. VIGIL SPOT-AUDIT — OF198-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified the primary defect: git diff show |
-| Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:04 GMT+2 heartbeat sweep |
 
 ## 🧭 Needs Mike
 
@@ -127,7 +123,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 17:01 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 272 |
+| 🪽 **Hermes** | Apr 23, 17:12 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 273 |
 | 🛡️ **GUARDIAN** | Apr 23, 16:58 CEST | `AGENT_HEARTBEAT` | `HEARTBEAT.md scheduled sweep` | 🟢 fresh | 219 |
 | 🐷 **OinkV** | Apr 23, 16:55 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 146 |
 | ⚒️ **ANVIL** | Apr 23, 16:52 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 274 |
@@ -254,4 +250,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 17:01 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 17:13 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
