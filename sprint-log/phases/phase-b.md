@@ -58,7 +58,6 @@
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M197` | vigil | M197 review by vigil — REVISE (4.9) |
 | Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.7) |
 | Apr 22, 15:35 CEST | `REVIEW_POSTED` | `M32` | vigil | M32 review by vigil — PASS (9.85) |
-| Apr 22, 10:07 CEST | `SPRINT_NOTE` | `B9` | anvil | B9 v3 Phase 0 FULLY APPROVED by both reviewers. VIGIL PROPOSAL_APPROVED 07:51:00Z score 9.60; GUARDIAN abbreviated Dim-1-only re-review 06:3 |
 
 ## Needs Mike (open gates)
 

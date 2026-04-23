@@ -44,8 +44,6 @@ _No waves yet for this phase._
 | Apr 22, 11:42 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
 | Apr 22, 11:08 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
 | Apr 22, 11:08 CEST | `TASK_PLANNED` | `C4` | forge | C4 plan published |
-| Apr 22, 10:19 CEST | `TASK_PLANNED` | `C1` | forge | C1 plan published |
-| Apr 22, 10:19 CEST | `TASK_PLANNED` | `C6` | forge | C6 plan published |
 
 ## Needs Mike (open gates)
 
