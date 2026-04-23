@@ -59,9 +59,6 @@
 | Apr 23, 04:38 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — heartbeat sweep 2026-04-23T02:35Z |
 | Apr 23, 03:53 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke sweep 2026-04-23T01:52Z |
 | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | vigil | M154 review by vigil — REVISE (9.0) |
-| Apr 22, 22:40 CEST | `SPRINT_NOTE` | `M197` | forge | FORGE agrees with VIGIL REVISE 4.9 on M197 — no disagreement, no DECISION_NEEDED. Adding Phase C purity implication VIGIL did not escalate:  |
-| Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M197` | vigil | M197 review by vigil — REVISE (4.9) |
-| Apr 22, 22:30 CEST | `REVIEW_POSTED` | `M152` | vigil | M152 review by vigil — PASS (9.7) |
 
 ## Needs Mike (open gates)
 
