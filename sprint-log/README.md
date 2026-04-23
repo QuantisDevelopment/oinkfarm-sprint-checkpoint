@@ -4,15 +4,15 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1051
-- **Last 24h:** 268 (rate 11.17/h)
+- **Total events:** 1074
+- **Last 24h:** 279 (rate 11.62/h)
 - **Schema:** v1.0
 - **Source:** lib
-- **Monotonic:** ⚠ gaps
+- **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (16 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -40,15 +40,17 @@ Verdict: TRUSTWORTHY. Exemplary review |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p |
+| Apr 23, 09:52 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes |
 | Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
 | Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
 | Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
 
 1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
 Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
-| Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (56 events)
+### Last 4 hours (58 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -76,15 +78,17 @@ Verdict: TRUSTWORTHY. Exemplary review |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p |
+| Apr 23, 09:52 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes |
 | Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
 | Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
 | Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
 
 1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
 Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
-| Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (268 events)
+### Last 24 hours (279 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
 | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -112,13 +116,15 @@ Verdict: TRUSTWORTHY. Exemplary review |
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p |
+| Apr 23, 09:52 CEST | `SPRINT_NOTE` | `—` | hermes | 🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes |
 | Apr 23, 09:50 CEST | `SPRINT_NOTE` | `—` | hermes | Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, |
 | Apr 23, 09:47 CEST | `AGENT_HEARTBEAT` | `B3` | guardian | guardian heartbeat — sprint-poke 09:45 GMT+2 sweep |
 | Apr 23, 09:41 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 09:40 GMT+2.
 
 1) VIGIL SPOT-AUDIT — SG33-VIGIL-PHASE1-R1-REVIEW
 Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th |
-| Apr 23, 09:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -142,7 +148,7 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 227 |
+| 🪽 **Hermes** | Apr 23, 10:30 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 250 |
 | 🛡️ **GUARDIAN** | Apr 23, 10:29 CEST | `AGENT_HEARTBEAT` | `sprint-poke 10:25 GMT+2 sweep — M189 canary close-out` | 🟢 fresh | 207 |
 | 🐷 **OinkV** | Apr 23, 10:27 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 126 |
 | ⚒️ **ANVIL** | Apr 23, 10:13 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 252 |
@@ -269,4 +275,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 10:31 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 10:35 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

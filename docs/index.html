@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-23T08:30:44+00:00">
+<body data-generated="2026-04-23T08:35:36+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-23T08:30:44+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-23T08:35:36+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-23T10:30:44+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-23T10:35:36+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 23, 10:30 CEST</span>
+        <span class="mono" id="last-regen">Apr 23, 10:35 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -57,18 +57,18 @@
 <!-- Events integrity ------------------------------------------------------- -->
 <section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
   <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
-    <div><span class="muted">📊 events:</span> <strong class="mono">1051</strong></div>
-    <div><span class="muted">24h rate:</span> <strong class="mono">11.17/h</strong></div>
-    <div><span class="muted">last 24h:</span> <strong class="mono">268</strong></div>
+    <div><span class="muted">📊 events:</span> <strong class="mono">1074</strong></div>
+    <div><span class="muted">24h rate:</span> <strong class="mono">11.62/h</strong></div>
+    <div><span class="muted">last 24h:</span> <strong class="mono">279</strong></div>
     <div><span class="muted">schema:</span> <strong class="mono">v1.0</strong></div>
     <div><span class="muted">source:</span> <strong class="mono">lib</strong></div>
     <div>
       <span class="muted">monotonic:</span>
-        <strong style="color:#f87171;">⚠ 3 gap(s)</strong>
+        <strong style="color:#4ade80;">✓ ok</strong>
     </div>
   </div>
   <div class="integrity-human" style="margin-top:6px;font-size:0.85rem;color:#c6d0e0;">
-    In plain English: 268 things happened today, ~11.17/h steady-state. Event stream has order gaps — review needed.
+    In plain English: 279 things happened today, ~11.62/h steady-state. System is healthy.
   </div>
 </section>
 
@@ -107,6 +107,111 @@
   </div>
 </section>
 
+<section class="scribe-log" id="scribe-log" style="margin-bottom:28px;padding:18px 18px;background:linear-gradient(135deg,rgba(138,180,255,0.06),rgba(138,180,255,0.02));border-radius:10px;border:1px solid rgba(138,180,255,0.12);">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+    <h2 style="margin:0;font-size:1.1rem;">🪽 Scribe log — last 24 hours</h2>
+    <span class="muted mono" style="font-size:0.8rem;">12 narrative entries · newest first</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px;max-height:720px;overflow-y:auto;padding-right:6px;">
+    <details open style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Thu 23 Apr · 09:52 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">07:52 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 07:50 UTC</p><p style="margin:0 0 10px 0;">Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, two GUARDIAN heartbeats, and a pair of dashboard-artifact republishes of the oinxtractor quality page. Nothing merged, nothing reviewed, no canary verdict posted yet. The one clock that actually matters is M189's organic-canary window, which closes in roughly twelve minutes (08:00 UTC / 10:00 CEST) — GUARDIAN's last heartbeat twenty minutes ago flagged T-28min, so we're right at the edge.</p><p style="margin:0 0 10px 0;">The picture going into that close is unchanged from two hours ago: two of three organic closes landed — APT #2606 a win, ETH #2605 a loss — and AERO #2608 never filled. If AERO fills in the next few minutes we get a clean 3/3 PASS; if not, GUARDIAN calls PASS on 2/3 provided the break-even-misclassification count stays at zero, which it currently is. Either way the CANARY_PASS or CANARY_FAIL event should post within the next hour, and that's the beat Mike's morning window lines up with.</p><p style="margin:0 0 10px 0;">Two side notes worth surfacing. VIGIL has been silent for about nine hours since its 00:36 CEST M154 self-correction — not a stall, just no new review work to score, and Hermes is already spot-auditing its recent verdicts (OF105, OF111, OF121, OF152, OF176 all came back TRUSTWORTHY this morning). And the "five unreviewed PRs" the gap-linter is flagging (A11/#133, B1/#149+#21, B2/#24, B5/#25) are still the cross-repo PR-number collision ANVIL called out last cycle — the underlying A11/B1/B2/B5 tasks are already DONE and deployed, so that's a dashboard artifact, not real review debt. Net: nothing to act on, but the next thirty minutes should produce the first real event of the day.</p>      </div>
+    </details>
+    <details open style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Thu 23 Apr · 07:46 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">05:46 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 05:44 UTC</p><p style="margin:0 0 10px 0;">Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, one ANVIL cron heartbeat, and one GUARDIAN sprint-poke sweep. No merges, no reviews, no canary verdicts. The only real clock that's moving is M189's canary window, which closes at 08:00Z (≈10:00 CEST, roughly 2h 20m from now) and is still sitting at two of three organic closes — APT #2606 a win, ETH #2605 a loss — with AERO #2608 never having filled. GUARDIAN's note is that two-of-three is enough for PASS as long as the zero break-even misclassification count holds, which it currently does.</p><p style="margin:0 0 10px 0;">One correction to last cycle's narrative worth surfacing: ANVIL's heartbeat pointed out that the five "open PRs awaiting VIGIL sign-off" flagged by the gap-linter (A11/#133, B1/#149+#21, B2/#24, B5/#25) are cross-repo PR IDs — the corresponding A11/B1/B2/B5 tasks in the main repo are already DONE and deployed. So that "review backlog" is a dashboard artifact from PR-number collisions across repos, not an actual throughput stall. VIGIL's 7-hour silence is still notable but probably just reflects no new work to score since its last M154 self-correction around 00:36 CEST.</p><p style="margin:0 0 10px 0;">Net: nothing to act on. The two remaining external-dependency blockers (M189 on its own canary clock, B4 on the April 26 cutover gate) are both "waiting by design." Next meaningful beat is the 08:00Z M189 verdict — either AERO fills late and we get a 3/3 PASS, or the window closes at 2/3 and GUARDIAN decides on the be-misclass rule. Mike's morning window (≈08:30–10:00 CEST) lines up almost exactly with that decision point.</p>      </div>
+    </details>
+    <details open style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Thu 23 Apr · 05:40 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">03:40 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 03:40 UTC</p><p style="margin:0 0 10px 0;">Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule, but nothing material moved. The more concerning signal is what isn't happening: vigil (our reviewer agent) hasn't posted a review in over five hours, and five PRs are now sitting open without sign-off — A11 (pr #133), both B1 branches (#149 and #21), B2 (#24), and B5 (#25). If vigil is genuinely stuck rather than just idle between passes, that's a throughput bottleneck worth poking at on the next active window.</p><p style="margin:0 0 10px 0;">Two workstreams remain wedged on external dependencies past the four-hour mark: M189 and B4 are both blocked waiting on something outside the agent swarm's control. Worth a quick check from Mike on whether either needs a human nudge to unstick. forge has also been silent for about seven hours, though that's less unusual for the planning-side role than it would be for the review side.</p><p style="margin:0 0 10px 0;">Net read: the sprint isn't broken, it's just quiet in a way that's masking a review backlog. Flagging for awareness rather than alarm.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Thu 23 Apr · 03:22 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">01:22 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 01:21 UTC</p><p style="margin:0 0 10px 0;">M189 canary moved from 1-of-3 to 2-of-3 closed trades a few minutes ago. ETH #2605 hit its stop-loss for roughly a 1:1 loss (roi −1.05) — and critically, the system classified it as a clean SL hit rather than misreading it as a breakeven. That's the signal we actually care about: the stop-loss-to-breakeven microgate fix now has evidence from both a winning close (APT #2606 earlier) and a losing close (ETH tonight), with zero breakeven-misclassifications across both paths. AERO #2608 is the last open trade; if it closes before 08:00 UTC (about seven hours out), the canary window closes cleanly and GUARDIAN can issue a canary PASS verdict.</p><p style="margin:0 0 10px 0;">Everything downstream is still parked behind that verdict. B9 Phase 0 (the decoupled asset-filter refactor) is fully approved — VIGIL scored it 9.60 and GUARDIAN approved earlier today — but Phase 1 code work will not start until M189 canary finishes and you weigh in on the serialize-vs-parallel question (whether ANVIL queues B9 Phase 1 strictly after M189, or starts it in parallel on a second branch). ANVIL is defaulting to serialize while it waits.</p><p style="margin:0 0 10px 0;">Nothing new requires your attention tonight. ANVIL has been on steady 19-minute idle heartbeats for the past few hours, GUARDIAN has posted four on-time canary checks since 22:36 UTC (all clean, no P0/P1), and the five PRs still sitting without reviews (A11 #133, B1 #149, B1 #21, B2 #24, B5 #25) are pre-existing gaps on VIGIL's queue, not new ones. VIGIL itself has been silent since its M154 self-correction at 22:36 — worth a nudge in the morning if it's still quiet after sunrise.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Thu 23 Apr · 01:17 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">23:17 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 23:11 UTC</p><p style="margin:0 0 10px 0;">The one real event in the last two hours: VIGIL self-corrected an M154 review it posted yesterday afternoon. M154 is the delayed-passthrough replay fix (PR #176). VIGIL's original Round-1 review on April 21 scored it 9.0 and labeled it PASS — but M154 is CRITICAL-tier, and under our own review rules that requires a 9.5-or-higher for a PASS. Tonight at 22:36 UTC VIGIL re-emitted the same review as REVISE with the same 9.0 score, citing the mislabel. Two concrete items came out of it: a must-fix on a module-import crash risk if the MICRO_GATE_STALE_INGEST_SECONDS env var is set to something non-integer, and a should-fix noting the replay false-positive policy needs your sign-off before M154 merges. So M154 is now correctly parked in REVISE rather than incorrectly sitting as PASS-ready.</p><p style="margin:0 0 10px 0;">Everything else is quiet. M189 (the stop-loss / breakeven-misclassification canary) is still at 1-of-3 fills — APT #2606 remains the only closed trade, ETH #2605 and AERO #2608 are still unfilled limits. GUARDIAN posted two more on-time canary heartbeats at 20:58Z and 22:49Z, both confirming zero merges-without-canary and no P0/P1 alerts. Verdict window closes in about nine hours (08:00 UTC). If ETH and AERO stay unfilled overnight, expect a GUARDIAN ask in the morning about whether to extend the window or call on thin evidence.</p><p style="margin:0 0 10px 0;">ANVIL is on its tenth-ish consecutive "no-change" idle tick — that's the expected idle pattern, not a problem. Nothing waiting on you tonight. The one open process flag is that VIGIL's self-correction on M154 is a good sign for review discipline but raises the question of whether other recent high-9s on CRITICAL-tier PRs should be re-audited against the 9.5 bar; I'll flag that for a morning check rather than chase it now.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 22:50 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">20:50 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 20:47 UTC</p><p style="margin:0 0 10px 0;">VIGIL came back. After roughly five hours of silence that I flagged in the last two updates, the code-review agent posted two reviews at 20:30 UTC: an M197 REVISE at 4.9 (the close-source upgrade fix for the OinXtractor — it needs to emit a signal_event when it upgrades a signal's source tier, otherwise B11's event-walk silently diverges from the legacy column) and an M152 PASS at 9.7 on round two, which means that OinXtractor-quality fix is cleared to merge. FORGE chimed in right after and backed VIGIL's M197 REVISE rather than escalating it as a disagreement — same call, with an added Phase C purity note. Net effect: no VIGIL outage to worry about anymore, one small OinXtractor fix ready to ship, and one queued for a second draft from ANVIL.</p><p style="margin:0 0 10px 0;">M189 (the stop-loss / breakeven-misclassification canary) is still where it was at the last update — APT #2606 hit its TP, ETH #2605 and AERO #2608 are still sitting as unfilled limits, so we're at 1 of 3 fills with zero false-breakeven misclassifications and zero P0/P1 alerts. GUARDIAN posted its on-time heartbeat at 20:27 UTC confirming that. The verdict window closes at 08:00 UTC tomorrow — roughly eleven and a half hours from now — and we still want at least one more fill before GUARDIAN has to rule. If ETH and AERO stay unfilled overnight, expect a "extend or call on thin evidence" question from GUARDIAN in the morning.</p><p style="margin:0 0 10px 0;">ANVIL is now on its eighth consecutive "zero new events" parallel-sprint tick, which is the expected idle signal rather than a problem — there's genuinely nothing moving until M189 closes out or more reviews land. The one open decision parked on Mike is unchanged: serialize vs run AP-11 in parallel with B9 Phase 1; we're defaulting to serialize unless you say otherwise. Housekeeping stays the same — a handful of historical PR-metadata gaps (A11/B1/B2/B5) and B4 + M189 formally blocked on external dependencies (the B3 soak and the canary, respectively). Nothing needs you tonight.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 20:36 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">18:36 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 18:35 UTC</p><p style="margin:0 0 10px 0;">Still quiet — no merges, no decisions, no new blockers in the last ninety minutes. The notable shift is that VIGIL (our code-review agent) has now gone five hours without posting anything. I flagged this as a potential issue at the last update; it's now past the threshold. Its last real output was the M32 late-audit review at 13:35 UTC. Not an emergency — there's nothing waiting on it right this second — but B9 and B12 Phase 0 are queued for a second review pass, so if VIGIL doesn't tick by morning UTC, we should poke it before those pile up further.</p><p style="margin:0 0 10px 0;">M189 (the stop-loss/breakeven fix) canary posture hasn't changed: APT #2606 is still the only closed fill, ETH #2605 and AERO #2608 are still sitting as limit orders. GUARDIAN kept posting its half-hourly canary heartbeats through the afternoon. We've got roughly fourteen hours until the 08:00 UTC verdict window closes, and we still need at least one more fill for GUARDIAN to call the canary on more than a single data point. If that doesn't happen tonight, expect a "extend or call" question from GUARDIAN in the morning.</p><p style="margin:0 0 10px 0;">ANVIL is on its seventh straight parallel-sprint tick reporting "zero new events" — that's the expected idle signal, not a problem, but it does mean there's genuinely nothing moving until M189 closes out or VIGIL returns. Housekeeping is unchanged: five historical PR-metadata gaps (A11/B1/B2/B5), B4 and M189 still formally blocked on external dependencies (B3 soak, canary respectively), OinXtractor still WARNING with 23 unknown parses. Nothing here needs you tonight.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 18:27 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">16:27 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 16:24 UTC</p><p style="margin:0 0 10px 0;">The sprint's been quiet for a little over three hours now — no merges, no decisions, no new blockers. M189 (the stop-loss/breakeven fix) is still parked on its canary: APT #2606 remains the only closed fill (clean win at 10:40 UTC, zero breakeven-misclassification), and ETH #2605 and AERO #2608 are still limit orders waiting for price to come to them. GUARDIAN's posted ~30-minute canary heartbeats all afternoon with the expected "unchanged_since_prev_hb=true" signal. Verdict window closes tomorrow 08:00 UTC, so we need at least one more fill in the next 16 hours or GUARDIAN calls it on what we have.</p><p style="margin:0 0 10px 0;">ANVIL has shifted into monitoring-only mode — its last three parallel-sprint heartbeats all reported "zero new events" in their 19-minute scan windows. That's expected behaviour given there's no active code work to drive: B4 (PostgreSQL cutover) is still clocking toward the April 26 gate, B9/B12 Phase 0 are waiting on VIGIL's second review, and FORGE has nothing left to plan until Phase B clears. The one caveat is that VIGIL's own heartbeat has now been stale past 3 hours — not a fire yet (VIGIL's last real work was the M32 late-audit review at 13:35), but worth flagging if it stretches past the end of business day.</p><p style="margin:0 0 10px 0;">Open housekeeping is unchanged from the last update: five historical PR-metadata gaps (A11/B1/B2/B5 PRs that merged without review events on the bus), B4 and M189 both still formally BLOCKED on external dependencies (the B3 7-day soak and the M189 canary respectively), and the OinXtractor quality dashboard still at WARNING with 23 unknown parses and zero corrections logged. Nothing here needs Mike's attention tonight — the sprint is correctly idle, not stuck.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 16:20 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">14:20 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 14:19 UTC</p><p style="margin:0 0 10px 0;">The sprint has been genuinely quiet for the last ~90 minutes — nothing merged, no decisions needed, no blockers resolved. M189's canary (the stop-loss/breakeven fix) is still parked at one closed signal out of three: APT #2606 hit its take-profits cleanly at 10:40 UTC with zero breakeven-misclassification, and ETH #2605 plus AERO #2608 are still sitting as limit orders waiting for price to come to them. Verdict deadline is tomorrow 08:00 UTC. GUARDIAN's been posting clean M189 heartbeats roughly every 25–30 minutes with "unchanged_since_prev_hb=true" — exactly what you want during a monitoring window.</p><p style="margin:0 0 10px 0;">One low-risk oddity worth mentioning: VIGIL posted a late-audit review on M32 (a signal-gateway PR that fixes OinXtractor session rotation) — 9.85 PASS, STANDARD tier, already merged at 13:14 UTC. GUARDIAN flagged this as a P3 coordination note because the formal MERGED event never hit the bus and there's no GUARDIAN data-impact review on record — VIGIL or ANVIL needs to clarify whether M32 touched any data paths. If it's code-only (session-rotation plumbing sounds like it is), VIGIL-only late-audit is the correct flow and this closes itself; if it did touch data, GUARDIAN wants a retro review. Not blocking anything, just housekeeping.</p><p style="margin:0 0 10px 0;">Everything else on the watchlist is unchanged since this morning's update: B9 Phase 0 still fully approved at 9.60, B12 shadow still half-approved (VIGIL pending), five historical PR-metadata gaps still carried over, and B4 still clocking toward the April 26 PostgreSQL cutover gate with B3's daily reconciliation verdict coming back CLEAN today. The OinXtractor quality dashboard remains at WARNING — 23 unknown parses over 24h, zero corrections logged yet — which is the quietest actionable signal on the board right now.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 14:08 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">12:08 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 12:05 UTC</p><p style="margin:0 0 10px 0;">The morning's one real signal: M189's canary got its first closed trade. APT #2606 hit all its take-profits cleanly at 10:40 UTC with no breakeven-misclassification — which is exactly the failure mode M189 (the stop-loss/breakeven event-model fix) was supposed to eliminate. GUARDIAN deliberately isn't calling it a PASS yet; the canary needs three closed signals, and the other two (ETH #2605, AERO #2608) are still limit orders waiting to fill. Verdict deadline is tomorrow 08:00 UTC. Meanwhile the TASK 4 follow-up code on M189 (the SL-to-breakeven microgate) stays parked on its branch until that verdict lands.</p><p style="margin:0 0 10px 0;">Otherwise it's been quiet since the 08:01 UTC merge train — nothing new shipped, no reviews posted. FORGE has been rolling three Phase C plans (C1, C2, C3, C4, C6 — operator-facing provenance fields on the KPI/trader/latest routes) with successive refinements as the B10/B11 contracts firm up, but none of those are code yet. VIGIL's heartbeat is now about 3.5 hours stale — past the watchdog line — though its last reviews (B9 v3, M189 Step-0) are still being spot-audited as trustworthy by OinkV every ten minutes.</p><p style="margin:0 0 10px 0;">The carried-over watchlist hasn't moved: five PRs (A11 #133, B1 #21 + #149, B2 #24, B5 #25) still show no logged review inside 24h (metadata lag on already-merged work, not real silence), and B4 + M189 remain flagged as blocked on external dependencies — B4 still waiting on the April 26 clean-reconciliation clock, M189 waiting on its own canary.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 12:02 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">10:02 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 10:02 UTC</p><p style="margin:0 0 10px 0;">Quiet stretch since the M189 three-repo merge train shipped at 08:01 UTC. Nothing new has merged and no canaries have come back in the last two hours — the dozen events since the last tick are all internal chatter: three small artifact refreshes, three FORGE task-plan updates, and routine sprint-notes from ANVIL, OinkV, and GUARDIAN. That means the ~10:00 UTC GUARDIAN canary on the M189 event-model landing is still the next real signal to watch.</p><p style="margin:0 0 10px 0;">All five agents are reading alive — ANVIL, OinkV and GUARDIAN all emitted in the last ten minutes, FORGE 17 min ago — with one exception: VIGIL's last heartbeat was 89 min ago, which is just past the three-hour stale line flagged on the dashboard. Not a blocker, but worth a nudge if it doesn't re-ping by the next tick.</p><p style="margin:0 0 10px 0;">The review-debt watchlist hasn't changed: five PRs (A11 #133, B1 #21 and #149, B2 #24, B5 #25) still sit without a logged review inside 24 hours. Every one of those is metadata lag on work that's already merged, not real silence, but the gap indicator on the dashboard keeps lighting up until the REVIEW_POSTED events get backfilled.</p>      </div>
+    </details>
+    <details  style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">Wed 22 Apr · 10:55 CEST</span>
+        <span class="muted mono" style="font-size:0.78rem;">08:55 UTC</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+<p style="margin:0 0 10px 0;">🪽 Scribe · 08:55 UTC</p><p style="margin:0 0 10px 0;">The 08:30 scribe run crashed on a `KeyError: 'event_type'` — VIGIL emitted a heartbeat using the legacy key name `"type"` instead of `"event_type"`, and the normalization block at the top of `sprint-scribe.py` defended against missing `ts`, `event_id`, `agent`, etc. but not the event_type field itself. One offending event out of 787 was enough to take the whole run down.</p><p style="margin:0 0 10px 0;">I patched the normalizer to alias `type` → `event_type` and default to `"UNKNOWN"` if neither is present, then re-ran. It came back clean and its own verdict was `[SILENT]` — fewer than three notable events (MERGED, CANARY_*, DECISION_*, BLOCKED, PROPOSAL_*, PR_OPENED) in the window, so there's no actual sprint news to report this tick. In other words, the scribe wasn't hiding activity behind the crash; the sprint really is quiet right now.</p><p style="margin:0 0 10px 0;">No action needed from you. Next cron tick (09:00 UTC) will run against the fixed script. If VIGIL keeps emitting `"type"` instead of `"event_type"` we should chase that upstream in VIGIL's emitter so we're not relying on the scribe's normalizer forever — flagging for later, not urgent.</p>      </div>
+    </details>
+  </div>
+</section>
+
 <!-- ★ MIKE SPEC — 4 top-level sections ★ ----------------------------------- -->
 
 <!-- 1. LIVE NOW ............................................................ -->
@@ -116,7 +221,7 @@
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 1 hour</strong>
-        <span class="mono muted">17 events</span>
+        <span class="mono muted">16 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
@@ -223,6 +328,16 @@ CRON CHECKLIST:
           </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
+              <span class="mono muted">Apr 23, 09:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
               <span class="mono muted">Apr 23, 09:50 CEST</span>
               <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
               <span class="muted mono">· hermes</span>
@@ -255,35 +370,13 @@ Verdict: TRUSTWORTHY. PASS 9.85 above STANDARD 9.0 th</div>
               <span class="muted mono">· hermes</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 09:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 07:12:51Z. T-28min to M189 canary window close.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed </div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 09:30 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">SPRINT_POKE response @ 09:29 GMT+2.
-
-1) VIGIL SPOT-AUDIT — OF152-VIGIL-PHASE1-R2
-Verdict: TRUSTWORTHY. PASS 9.70 CRITICAL is correct — score</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 4 hours</strong>
-        <span class="mono muted">56 events</span>
+        <span class="mono muted">58 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
@@ -387,6 +480,16 @@ Verdict: TRUSTWORTHY. Exemplary review</div>
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 09:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes</div>
           </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
@@ -512,24 +615,13 @@ Verdict: TRUSTWORTHY. REVISE 4.90 is proportionate for a CR</div>
 
 === 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1 ===
 Target: oinkfarm#176 — ti</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 08:53 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 06:32:45Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 24 hours</strong>
-        <span class="mono muted">268 events</span>
+        <span class="mono muted">279 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
@@ -633,6 +725,16 @@ Verdict: TRUSTWORTHY. Exemplary review</div>
 
 CRON CHECKLIST:
   1. #189 PROPOSAL_APPROVED: already landed p</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 23, 09:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes</div>
           </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
@@ -758,17 +860,6 @@ Verdict: TRUSTWORTHY. REVISE 4.90 is proportionate for a CR</div>
 
 === 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1 ===
 Target: oinkfarm#176 — ti</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 23, 08:53 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Routine heartbeat. Scan cutoff 06:32:45Z.
-
-CRON CHECKLIST:
-  1. #189 PROPOSAL_APPROVED: already landed pre-merge. Canary window closes 2026-</div>
           </li>
         </ol>
     </div>
@@ -887,7 +978,7 @@ CRON CHECKLIST:
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">227</td>
+        <td class="mono muted" style="padding:8px;">250</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -1135,61 +1226,61 @@ future      </span>
     <a class="mono muted section-more" href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log/events" target="_blank" rel="noopener">full log ↗</a>
   </div>
   <ol class="events-feed">
-    <li class="event-row event-merged">
-      <span class="event-emoji" title="MERGED">🚀</span>
-      <span class="event-time mono muted">Apr 18, 18:23 CEST</span>
-      <span class="event-task mono">A1</span>
-      <span class="event-type mono">MERGED</span>
-      <span class="event-desc">A1 merged via PR #18 @9fa2d19</span>
-    </li>
-    <li class="event-row event-merged">
-      <span class="event-emoji" title="MERGED">🚀</span>
-      <span class="event-time mono muted">Apr 18, 18:56 CEST</span>
-      <span class="event-task mono">A2</span>
-      <span class="event-type mono">MERGED</span>
-      <span class="event-desc">A2 merged via PR #19 @38eb8e8</span>
-    </li>
-    <li class="event-row event-merged">
-      <span class="event-emoji" title="MERGED">🚀</span>
-      <span class="event-time mono muted">Apr 18, 18:56 CEST</span>
-      <span class="event-task mono">B2</span>
-      <span class="event-type mono">MERGED</span>
-      <span class="event-desc">B2 merged via PR #2 @f1f5544</span>
-    </li>
-    <li class="event-row event-merged">
-      <span class="event-emoji" title="MERGED">🚀</span>
-      <span class="event-time mono muted">Apr 18, 19:31 CEST</span>
-      <span class="event-task mono">B3</span>
-      <span class="event-type mono">MERGED</span>
-      <span class="event-desc">B3 merged via PR #3 @401b770</span>
-    </li>
-    <li class="event-row event-plan_published">
-      <span class="event-emoji" title="PLAN_PUBLISHED">🔥</span>
-      <span class="event-time mono muted">Apr 18, 23:27 CEST</span>
-      <span class="event-task mono">A1</span>
-      <span class="event-type mono">PLAN_PUBLISHED</span>
-      <span class="event-desc">A1 plan published</span>
-    </li>
-    <li class="event-row event-plan_published">
-      <span class="event-emoji" title="PLAN_PUBLISHED">🔥</span>
-      <span class="event-time mono muted">Apr 18, 23:28 CEST</span>
-      <span class="event-task mono">A2</span>
-      <span class="event-type mono">PLAN_PUBLISHED</span>
-      <span class="event-desc">A2 plan published</span>
-    </li>
-    <li class="event-row event-plan_published">
-      <span class="event-emoji" title="PLAN_PUBLISHED">🔥</span>
-      <span class="event-time mono muted">Apr 18, 23:28 CEST</span>
-      <span class="event-task mono">A3</span>
-      <span class="event-type mono">PLAN_PUBLISHED</span>
-      <span class="event-desc">A3 plan published</span>
+    <li class="event-row event-proposal_drafted">
+      <span class="event-emoji" title="PROPOSAL_DRAFTED">⚒️</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">189</span>
+      <span class="event-type mono">PROPOSAL_DRAFTED</span>
+      <span class="event-desc">189 proposal approved by ?</span>
     </li>
     <li class="event-row event-proposal_drafted">
       <span class="event-emoji" title="PROPOSAL_DRAFTED">⚒️</span>
-      <span class="event-time mono muted">Apr 18, 23:32 CEST</span>
-      <span class="event-task mono">A3</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">B4</span>
       <span class="event-type mono">PROPOSAL_DRAFTED</span>
-      <span class="event-desc">A3 proposal ready</span>
+      <span class="event-desc">B4 proposal approved by ?</span>
+    </li>
+    <li class="event-row event-agent_heartbeat">
+      <span class="event-emoji" title="AGENT_HEARTBEAT">•</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">—</span>
+      <span class="event-type mono">AGENT_HEARTBEAT</span>
+      <span class="event-desc">vigil heartbeat — ?</span>
+    </li>
+    <li class="event-row event-agent_heartbeat">
+      <span class="event-emoji" title="AGENT_HEARTBEAT">•</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">—</span>
+      <span class="event-type mono">AGENT_HEARTBEAT</span>
+      <span class="event-desc">vigil heartbeat — ?</span>
+    </li>
+    <li class="event-row event-agent_heartbeat">
+      <span class="event-emoji" title="AGENT_HEARTBEAT">•</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">—</span>
+      <span class="event-type mono">AGENT_HEARTBEAT</span>
+      <span class="event-desc">vigil heartbeat — ?</span>
+    </li>
+    <li class="event-row event-agent_heartbeat">
+      <span class="event-emoji" title="AGENT_HEARTBEAT">•</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">—</span>
+      <span class="event-type mono">AGENT_HEARTBEAT</span>
+      <span class="event-desc">vigil heartbeat — ?</span>
+    </li>
+    <li class="event-row event-agent_heartbeat">
+      <span class="event-emoji" title="AGENT_HEARTBEAT">•</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">—</span>
+      <span class="event-type mono">AGENT_HEARTBEAT</span>
+      <span class="event-desc">vigil heartbeat — ?</span>
+    </li>
+    <li class="event-row event-agent_heartbeat">
+      <span class="event-emoji" title="AGENT_HEARTBEAT">•</span>
+      <span class="event-time mono muted">—</span>
+      <span class="event-task mono">—</span>
+      <span class="event-type mono">AGENT_HEARTBEAT</span>
+      <span class="event-desc">vigil heartbeat — ?</span>
     </li>
   </ol>
 </section>
@@ -3673,9 +3764,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#33</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/cc4a2c4bcf3fba36260675ffe75f62babf3744c0" target="_blank" rel="noopener" title="merge commit">
-                  cc4a2c4
-                </a>
           </div>
       </div>
 
@@ -5185,23 +5273,14 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#153</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13" target="_blank" rel="noopener" title="merge commit">
-                  14563d2
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/11" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#11</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5" target="_blank" rel="noopener" title="merge commit">
-                  80288bb
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/24" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#24</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6" target="_blank" rel="noopener" title="merge commit">
-                  df8112d
-                </a>
           </div>
       </div>
 
@@ -6139,9 +6218,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#29</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/ace226ed590a6418474984bf9af1c74790455038" target="_blank" rel="noopener" title="merge commit">
-                  ace226e
-                </a>
           </div>
       </div>
 
@@ -6361,9 +6437,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#22</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/ff23510a25c4718c60915640cca3606375efd082" target="_blank" rel="noopener" title="merge commit">
-                  ff23510
-                </a>
           </div>
       </div>
 
@@ -6406,9 +6479,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#21</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/ed1670530647092cd329797bae85edb36e4966ed" target="_blank" rel="noopener" title="merge commit">
-                  ed16705
-                </a>
           </div>
       </div>
 
@@ -6583,9 +6653,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#20</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/1ef1a1f17d8f05f90e733cb10a150ff52bab8b16" target="_blank" rel="noopener" title="merge commit">
-                  1ef1a1f
-                </a>
           </div>
       </div>
 
@@ -6828,16 +6895,10 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#8</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/27196487f966fc6e24d2a412b7245ac8c9883c50" target="_blank" rel="noopener" title="merge commit">
-                  2719648
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/132" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#132</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/e7cfdb8e22aed4a3c41b33a126f9c58012f0bcf5" target="_blank" rel="noopener" title="merge commit">
-                  e7cfdb8
-                </a>
           </div>
       </div>
 
@@ -7048,9 +7109,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#26</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/6879e257702b3cf3fb9cf7477c40c56814e014a3" target="_blank" rel="noopener" title="merge commit">
-                  6879e25
-                </a>
           </div>
       </div>
 
@@ -7261,9 +7319,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#20</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef" target="_blank" rel="noopener" title="merge commit">
-                  1adeaa1
-                </a>
           </div>
       </div>
 
@@ -7811,9 +7866,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#27</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/3f85c12e05ca6e588e082c0a0ca8438b89e3cb32" target="_blank" rel="noopener" title="merge commit">
-                  3f85c12
-                </a>
           </div>
       </div>
 
@@ -8103,9 +8155,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#130</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/615731582e75b7a451dc84a12915839ada6503a8" target="_blank" rel="noopener" title="merge commit">
-                  6157315
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/130" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#130</span>
@@ -8309,9 +8358,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#134</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/461545434c32beac11aa451792dc1479ab770b31" target="_blank" rel="noopener" title="merge commit">
-                  4615454
-                </a>
           </div>
       </div>
 
@@ -8511,23 +8557,14 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#149</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186" target="_blank" rel="noopener" title="merge commit">
-                  75a32f7
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/9" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#9</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/ecd2622a2aa357a6e1efa925bc15af8bfbdc4eb0" target="_blank" rel="noopener" title="merge commit">
-                  ecd2622
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/21" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#21</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/b0f02548415de4598f807912f1fefca4472620ee" target="_blank" rel="noopener" title="merge commit">
-                  b0f0254
-                </a>
           </div>
       </div>
 
@@ -8858,9 +8895,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#25</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/2e345bb6c14b4a02057e56218b038cb0da0cb2e5" target="_blank" rel="noopener" title="merge commit">
-                  2e345bb
-                </a>
           </div>
       </div>
 
@@ -9066,9 +9100,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#5</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59" target="_blank" rel="noopener" title="merge commit">
-                  6b21a20
-                </a>
           </div>
       </div>
 
@@ -9456,9 +9487,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#133</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae" target="_blank" rel="noopener" title="merge commit">
-                  45a6931
-                </a>
           </div>
       </div>
 
@@ -9643,9 +9671,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#7</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a" target="_blank" rel="noopener" title="merge commit">
-                  e9be741
-                </a>
           </div>
       </div>
 
@@ -9859,9 +9884,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#131</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a792ad685ad606c74d098180b8ccd5b71" target="_blank" rel="noopener" title="merge commit">
-                  69d6840
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/131" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#131</span>
@@ -10078,9 +10100,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#135</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13" target="_blank" rel="noopener" title="merge commit">
-                  80f4fe0
-                </a>
           </div>
       </div>
 
@@ -10681,7 +10700,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">1s ago</div>
+        <div class="agent-meta mono muted">4m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -10693,7 +10712,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: sprint-poke 10:25 GMT+2 sweep — M189 canary close-out
         </div>
-        <div class="agent-meta mono muted">51s ago</div>
+        <div class="agent-meta mono muted">5m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -10705,7 +10724,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             last audit
         </div>
-        <div class="agent-meta mono muted">2m ago</div>
+        <div class="agent-meta mono muted">7m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -10717,7 +10736,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: M189 merge-train prep + awaiting deploy window 08:00Z
         </div>
-        <div class="agent-meta mono muted">17m ago</div>
+        <div class="agent-meta mono muted">22m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -10729,7 +10748,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: B4
         </div>
-        <div class="agent-meta mono muted">2h 19m ago</div>
+        <div class="agent-meta mono muted">2h 24m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -10741,7 +10760,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">9h 54m ago</div>
+        <div class="agent-meta mono muted">9h 59m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -10753,7 +10772,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: standby — 2nd-opinion critic
         </div>
-        <div class="agent-meta mono muted">11h 50m ago</div>
+        <div class="agent-meta mono muted">11h 55m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -10890,6 +10909,17 @@ Deferred work tracker:
   - TASK 4 Artifact A code (post-canary-PASS)
 
 Next scheduled tick 10:12 GMT+2 / 08:12Z — should capture the canary closeout verdict. If PASS: immediate TASK 4 Artifact A branch/proposal kickoff. If FAIL: investigate and consider rollback. Yielding.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 23, 09:52 CEST</div>
+            <ul class="narrative-actions">
+<li>🪽 Scribe · 07:50 UTC
+
+Another quiet ninety minutes on the wire — eight events, and all of them routine plumbing: four sprint-heartbeat notes from ANVIL and OINKV, two GUARDIAN heartbeats, and a pair of dashboard-artifact republishes of the oinxtractor quality page. Nothing merged, nothing reviewed, no canary verdict posted yet. The one clock that actually matters is M189's organic-canary window, which closes in roughly twelve minutes (08:00 UTC / 10:00 CEST) — GUARDIAN's last heartbeat twenty minutes ago flagged T-28min, so we're right at the edge.
+
+The picture going into that close is unchanged from two hours ago: two of three organic closes landed — APT #2606 a win, ETH #2605 a loss — and AERO #2608 never filled. If AERO fills in the next few minutes we get a clean 3/3 PASS; if not, GUARDIAN calls PASS on 2/3 provided the break-even-misclassification count stays at zero, which it currently is. Either way the CANARY_PASS or CANARY_FAIL event should post within the next hour, and that's the beat Mike's morning window lines up with.
+
+Two side notes worth surfacing. VIGIL has been silent for about nine hours since its 00:36 CEST M154 self-correction — not a stall, just no new review work to score, and Hermes is already spot-auditing its recent verdicts (OF105, OF111, OF121, OF152, OF176 all came back TRUSTWORTHY this morning). And the "five unreviewed PRs" the gap-linter is flagging (A11/#133, B1/#149+#21, B2/#24, B5/#25) are still the cross-repo PR-number collision ANVIL called out last cycle — the underlying A11/B1/B2/B5 tasks are already DONE and deployed, so that's a dashboard artifact, not real review debt. Net: nothing to act on, but the next thirty minutes should produce the first real event of the day.</li>            </ul>
         </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 23, 09:50 CEST</div>
@@ -11281,6 +11311,17 @@ Meta note: prior 07:27 SPRINT_NOTE emit also hit a lossless-claw synthetic resul
 Yielding.</li>            </ul>
         </li>
         <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 23, 07:46 CEST</div>
+            <ul class="narrative-actions">
+<li>🪽 Scribe · 05:44 UTC
+
+Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, one ANVIL cron heartbeat, and one GUARDIAN sprint-poke sweep. No merges, no reviews, no canary verdicts. The only real clock that's moving is M189's canary window, which closes at 08:00Z (≈10:00 CEST, roughly 2h 20m from now) and is still sitting at two of three organic closes — APT #2606 a win, ETH #2605 a loss — with AERO #2608 never having filled. GUARDIAN's note is that two-of-three is enough for PASS as long as the zero break-even misclassification count holds, which it currently does.
+
+One correction to last cycle's narrative worth surfacing: ANVIL's heartbeat pointed out that the five "open PRs awaiting VIGIL sign-off" flagged by the gap-linter (A11/#133, B1/#149+#21, B2/#24, B5/#25) are cross-repo PR IDs — the corresponding A11/B1/B2/B5 tasks in the main repo are already DONE and deployed. So that "review backlog" is a dashboard artifact from PR-number collisions across repos, not an actual throughput stall. VIGIL's 7-hour silence is still notable but probably just reflects no new work to score since its last M154 self-correction around 00:36 CEST.
+
+Net: nothing to act on. The two remaining external-dependency blockers (M189 on its own canary clock, B4 on the April 26 cutover gate) are both "waiting by design." Next meaningful beat is the 08:00Z M189 verdict — either AERO fills late and we get a 3/3 PASS, or the window closes at 2/3 and GUARDIAN decides on the be-misclass rule. Mike's morning window (≈08:30–10:00 CEST) lines up almost exactly with that decision point.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 23, 07:44 CEST</div>
             <ul class="narrative-actions">
 <li>Another quiet ninety minutes — five events on the wire, and every one of them was routine: three of my own dashboard-artifact republishes, one ANVIL cron heartbeat, and one GUARDIAN sprint-poke sweep. No merges, no reviews, no canary verdicts. The only real clock that's moving is M189's canary window, which closes at 08:00Z (≈10:00 CEST, roughly 2h 20m from now) and is still sitting at two of three organic closes — APT #2606 a win, ETH #2605 a loss — with AERO #2608 never having filled. GUARDIAN's note is that two-of-three is enough for PASS as long as the zero break-even misclassification count holds, which it currently does.
@@ -11386,6 +11427,17 @@ EVENTS SINCE CUTOFF: 3. Critical-path hits: 0.
   - guardian AGENT_HEARTBEAT task=B3 @ 03:42:33Z — daily proxy watch, B3 PASS-finalized.
 
 Yielding.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 23, 05:40 CEST</div>
+            <ul class="narrative-actions">
+<li>🪽 Scribe · 03:40 UTC
+
+Quiet ninety minutes across the sprint — anvil posted a note and published a couple of artifacts, guardian's heartbeat came in on schedule, but nothing material moved. The more concerning signal is what isn't happening: vigil (our reviewer agent) hasn't posted a review in over five hours, and five PRs are now sitting open without sign-off — A11 (pr #133), both B1 branches (#149 and #21), B2 (#24), and B5 (#25). If vigil is genuinely stuck rather than just idle between passes, that's a throughput bottleneck worth poking at on the next active window.
+
+Two workstreams remain wedged on external dependencies past the four-hour mark: M189 and B4 are both blocked waiting on something outside the agent swarm's control. Worth a quick check from Mike on whether either needs a human nudge to unstick. forge has also been silent for about seven hours, though that's less unusual for the planning-side role than it would be for the review side.
+
+Net read: the sprint isn't broken, it's just quiet in a way that's masking a review backlog. Flagging for awareness rather than alarm.</li>            </ul>
         </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 23, 05:40 CEST</div>
@@ -11643,52 +11695,6 @@ M189 canary window closes 2026-04-23T08:00Z (~6.2h remaining). State unchanged: 
 
 Yielding.</li>            </ul>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 23, 03:27 CEST</div>
-            <ul class="narrative-actions">
-<li>Parallel heartbeat ~19min since prior note (evt_20260423T010721Z_000001). Scan cutoff 01:07:21Z.
-
-Q1 (#189 both PROPOSAL_APPROVED?): N/A — merged+CANARY.
-Q2 (REVIEW_POSTED B9 v2 / B12-SHADOW): NO.
-Q3 (DECISION_NEEDED / BLOCKED): NONE.
-
-Events since cutoff: 3. Critical-path hits: 0 (all confirmatory).
-  - hermes ARTIFACT_PUBLISHED @ 01:19:14Z — non-critical.
-  - hermes SPRINT_NOTE @ 01:20:37Z — narrative summary for Mike restating our 01:06Z canary-advance note; no new signal.
-  - guardian AGENT_HEARTBEAT @ 01:23:48Z — M189 canary UNCHANGED at 2/3 (APT #2606 CLOSED_WIN + ETH #2605 CLOSED_LOSS). AERO #2608 still PENDING. status_detail: "need 1 more organic close for minimum-3 PASS". BE-misclass=0. P0=0 P1=0.
-
-M189 canary window closes 2026-04-23T08:00Z (~6.6h remaining). Artifact A code work still gated on GUARDIAN canary PASS verdict per AP-12.
-
-No change. Yielding.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 23, 03:20 CEST</div>
-            <ul class="narrative-actions">
-<li>M189 canary moved from 1-of-3 to 2-of-3 closed trades a few minutes ago. ETH #2605 hit its stop-loss for roughly a 1:1 loss (roi −1.05) — and critically, the system classified it as a clean SL hit rather than misreading it as a breakeven. That's the signal we actually care about: the stop-loss-to-breakeven microgate fix now has evidence from both a winning close (APT #2606 earlier) and a losing close (ETH tonight), with zero breakeven-misclassifications across both paths. AERO #2608 is the last open trade; if it closes before 08:00 UTC (about seven hours out), the canary window closes cleanly and GUARDIAN can issue a canary PASS verdict.
-
-Everything downstream is still parked behind that verdict. B9 Phase 0 (the decoupled asset-filter refactor) is fully approved — VIGIL scored it 9.60 and GUARDIAN approved earlier today — but Phase 1 code work will not start until M189 canary finishes and you weigh in on the serialize-vs-parallel question (whether ANVIL queues B9 Phase 1 strictly after M189, or starts it in parallel on a second branch). ANVIL is defaulting to serialize while it waits.
-
-Nothing new requires your attention tonight. ANVIL has been on steady 19-minute idle heartbeats for the past few hours, GUARDIAN has posted four on-time canary checks since 22:36 UTC (all clean, no P0/P1), and the five PRs still sitting without reviews (A11 #133, B1 #149, B1 #21, B2 #24, B5 #25) are pre-existing gaps on VIGIL's queue, not new ones. VIGIL itself has been silent since its M154 self-correction at 22:36 — worth a nudge in the morning if it's still quiet after sunrise.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 23, 03:07 CEST</div>
-            <ul class="narrative-actions">
-<li>Parallel heartbeat ~19min since prior note (evt_20260423T004710Z_000001). Scan cutoff 00:47:10Z.
-
-Q1 (#189 both PROPOSAL_APPROVED?): N/A — merged+CANARY.
-Q2 (REVIEW_POSTED B9 v2 / B12-SHADOW): NO.
-Q3 (DECISION_NEEDED / BLOCKED): NONE.
-
-Events since cutoff: 2. Critical-path hits: 1 (guardian M189 canary heartbeat).
-  - hermes ARTIFACT_PUBLISHED @ 00:51:57Z — non-critical.
-  - guardian AGENT_HEARTBEAT @ 00:54:16Z — **M189 canary advanced to 2/3 closed**. ETH #2605 CLOSED_LOSS sl_hit roi=-1.05 added alongside APT #2606 CLOSED_WIN. AERO #2608 PENDING. AVNT #2607 excluded (WG_RECONCILER_INSERT backfill). BE-misclass=0. P0=0 P1=0. action_required=false.
-
-Interpretation: Step-0 fleet stable through a LOSS path — SL hit cleanly, no spurious BE reclassification. Remaining gate is AERO #2608 closure before window expiry 08:00Z.
-
-M189 canary window closes 2026-04-23T08:00Z (~6.9h remaining). Artifact A code work still gated on GUARDIAN canary PASS verdict per AP-12.
-
-Yielding.</li>            </ul>
-        </li>
       </ol>
     </div>
 
@@ -11711,12 +11717,12 @@ Yielding.</li>            </ul>
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">3658059cf202</span>    </div>
+checkpoint@<span class="mono">7e4c5dc26631</span>    </div>
     <div>
         Last orchestrator cycle: Apr 23, 10:27 CEST
     </div>
     <div>
-      generated Apr 23, 10:30 CEST
+      generated Apr 23, 10:35 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>

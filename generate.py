@@ -1510,6 +1510,8 @@ def build(now: datetime | None = None) -> dict[str, Any]:
             "glossary_link":  "sprint-log/STATE-OF-SPRINT.md#glossary",
         }
         data["events_integrity"]["human_line"] = _integrity_human_line(integrity)
+        # Scribe log — last 24h of full prose narratives from hermes SPRINT_NOTE
+        data["scribe_log"] = _collect_scribe_log(events, now, hours=24)
         return data
 
     # ----- FALLBACK: crawler (bootstrap mode) -----
@@ -1575,7 +1577,46 @@ def build(now: datetime | None = None) -> dict[str, Any]:
             }
             for a in agents
         ],
+        "scribe_log": _collect_scribe_log(events, now, hours=24),
     }
+
+
+def _collect_scribe_log(events: list[dict[str, Any]],
+                        now: datetime,
+                        hours: int = 24) -> list[dict[str, Any]]:
+    """Return the last N hours of full-prose scribe narratives.
+
+    Scribe narratives are SPRINT_NOTE events with agent=hermes and a "🪽 Scribe"
+    header. Keep the full text, paragraph structure intact — the homepage
+    dashboard and standalone scribe page both render from this list.
+    """
+    cutoff = now - timedelta(hours=hours)
+    out: list[dict[str, Any]] = []
+    for e in events:
+        if e.get("event_type") != "SPRINT_NOTE":
+            continue
+        if (e.get("agent") or "").lower() != "hermes":
+            continue
+        ex = e.get("extra") or {}
+        text = (ex.get("text") or "").strip()
+        if not text or "🪽 Scribe" not in text:
+            continue
+        if len(text) < 200:
+            continue
+        ts = _parse_event_ts(e.get("ts", ""))
+        if not ts or ts < cutoff:
+            continue
+        out.append({
+            "ts_iso": e.get("ts"),
+            "ts_utc_hm": ts.astimezone(timezone.utc).strftime("%H:%M UTC"),
+            "ts_local_hm": ts.astimezone(CEST).strftime("%H:%M CEST"),
+            "ts_date_local": ts.astimezone(CEST).strftime("%a %d %b"),
+            "text": text,
+            "paragraphs": [p.strip() for p in text.split("\n\n") if p.strip()],
+        })
+    # Newest first
+    out.sort(key=lambda r: r["ts_iso"], reverse=True)
+    return out
 
 
 def _cron_from_events(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -1747,6 +1788,17 @@ def _render_today_paragraph(events: list[dict[str, Any]],
     """
     now = now or datetime.now(timezone.utc)
     tasks_by_id = tasks_by_id or {}
+    # PREFERRED SOURCE: fresh scribe narrative in STATE-OF-SPRINT.md. The
+    # scribe cron (sprint-scribe, every 30–60m) writes a 2–4 paragraph prose
+    # update into the "## Today in one paragraph" section of the SoS doc.
+    # If present and non-trivial, surface that verbatim instead of auto-
+    # synthesising from raw event counts — the synth is a fallback, not the
+    # primary voice. (Bug fix 2026-04-23: previously the synth always ran
+    # and ignored the scribe's output; Mike saw "Activity logged today, no
+    # headline moves yet." while the SoS held three fresh paragraphs.)
+    sos_today = _read_sos_section("Today in one paragraph") or _read_sos_section("Today")
+    if sos_today and len(sos_today.strip()) >= 60:
+        return sos_today.strip()
     day_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     today = _events_between(events, day_start, now)
     if not today:
@@ -3839,12 +3891,29 @@ def emit_sprint_log(data: dict[str, Any]) -> dict[str, int]:
                 "DECISION_NEEDED": "DECISION",
                 "DECISION_RESOLVED": "DECISION",
             }.get(et, et)
+            # Scribe-authored SPRINT_NOTEs carry full prose narratives. Render
+            # them in full on the daily event pages (the 140-char one-line
+            # summary drops everything past the first sentence, which
+            # defeats the purpose of having a narrative in the first place).
+            desc = _one_line_summary(e)
+            ex = e.get("extra") or {}
+            text = (ex.get("text") or "").strip()
+            is_scribe = (
+                et == "SPRINT_NOTE"
+                and (e.get("agent") or "").lower() == "hermes"
+                and ("🪽 Scribe" in text or text.lower().startswith("scribe ·"))
+                and len(text) > 200
+            )
+            if is_scribe:
+                # Preserve paragraph structure with double-newline → blank line in md
+                desc = text
             events.append({
                 "ts": e.get("ts"),
                 "type": legacy_type,
                 "task": e.get("task_id") or "—",
-                "desc": _one_line_summary(e),
+                "desc": desc,
                 "link": e.get("artifact_path"),
+                "_is_scribe": is_scribe,
             })
     else:
         events = _collect_events(data)

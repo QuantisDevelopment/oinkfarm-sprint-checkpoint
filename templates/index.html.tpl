@@ -110,20 +110,42 @@
   <div class="narrative-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;">
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📖 The Mission</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.mission }}</p>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{% for para in narrative.mission.split('\n\n') if para.strip() %}<p style="margin:0 0 10px 0;">{{ para.strip() }}</p>{% endfor %}</div>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📍 Today in one paragraph</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.today }}</p>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{% for para in narrative.today.split('\n\n') if para.strip() %}<p style="margin:0 0 10px 0;">{{ para.strip() }}</p>{% endfor %}</div>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📅 What happened this week</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.week }}</p>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{% for para in narrative.week.split('\n\n') if para.strip() %}<p style="margin:0 0 10px 0;">{{ para.strip() }}</p>{% endfor %}</div>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">🎯 What's next</h3>
-      <p style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{{ narrative.whats_next }}</p>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;">{% for para in narrative.whats_next.split('\n\n') if para.strip() %}<p style="margin:0 0 10px 0;">{{ para.strip() }}</p>{% endfor %}</div>
     </div>
+  </div>
+</section>
+{% endif %}
+
+{% if scribe_log %}
+<section class="scribe-log" id="scribe-log" style="margin-bottom:28px;padding:18px 18px;background:linear-gradient(135deg,rgba(138,180,255,0.06),rgba(138,180,255,0.02));border-radius:10px;border:1px solid rgba(138,180,255,0.12);">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
+    <h2 style="margin:0;font-size:1.1rem;">🪽 Scribe log — last 24 hours</h2>
+    <span class="muted mono" style="font-size:0.8rem;">{{ scribe_log|length }} narrative entries · newest first</span>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px;max-height:720px;overflow-y:auto;padding-right:6px;">
+  {% for entry in scribe_log %}
+    <details {% if loop.index <= 3 %}open{% endif %} style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 14px;">
+      <summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span style="font-weight:600;color:#e0e8f5;">{{ entry.ts_date_local }} · {{ entry.ts_local_hm }}</span>
+        <span class="muted mono" style="font-size:0.78rem;">{{ entry.ts_utc_hm }}</span>
+      </summary>
+      <div style="margin-top:10px;font-size:0.9rem;line-height:1.55;color:#dce5f2;">
+      {% for para in entry.paragraphs %}<p style="margin:0 0 10px 0;">{{ para }}</p>{% endfor %}
+      </div>
+    </details>
+  {% endfor %}
   </div>
 </section>
 {% endif %}
