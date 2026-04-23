@@ -4,17 +4,22 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1135
-- **Last 24h:** 248 (rate 10.33/h)
+- **Total events:** 1138
+- **Last 24h:** 251 (rate 10.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 23, 16:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:04 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF198-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified the primary defect: git diff show |
+| Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:04 GMT+2 heartbeat sweep |
 | Apr 23, 15:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 15:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:32:48Z → 13:52Z.
 (1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
@@ -33,38 +38,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW: TRUSTWORTHY. The review is internally consistent on th |
 
-### Last 4 hours (43 events)
+### Last 4 hours (46 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 23, 15:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 15:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:32:48Z → 13:52Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 15:49 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 15:47 GMT+2.
+| Apr 23, 16:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:04 GMT+2.
 
-1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified MUST-FIX (import-time int() parsi |
-| Apr 23, 15:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 15:36 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 15:31 GMT+2 heartbeat sweep |
-| Apr 23, 15:34 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 15:31 GMT+2 — (1) Vigil audit: OF152-VIGIL-PHASE1-R2 TRUSTWORTHY (PASS 9.70, fill_price on MARKET INSERT, clean dimensions, corr |
-| Apr 23, 15:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:12:47Z → 13:32Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 15:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 15:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:52:49Z → 13:12Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 15:11 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 15:08 GMT+2.
-
-1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW: TRUSTWORTHY. The review is internally consistent on th |
-| Apr 23, 14:54 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 23, 14:54 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 14:52 GMT+2.
-
-1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I re-verified the cited hotpath defect direct |
-| Apr 23, 14:53 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 14:52 GMT+2 sweep |
-| Apr 23, 14:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:32:46Z → 12:52Z.
-(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-
-### Last 24 hours (248 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
+1. VIGIL SPOT-AUDIT — OF198-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified the primary defect: git diff show |
+| Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:04 GMT+2 heartbeat sweep |
 | Apr 23, 15:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 23, 15:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:32:48Z → 13:52Z.
 (1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
@@ -86,10 +67,36 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 23, 14:54 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 14:52 GMT+2.
 
 1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I re-verified the cited hotpath defect direct |
-| Apr 23, 14:53 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — sprint-poke 14:52 GMT+2 sweep |
-| Apr 23, 14:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:32:46Z → 12:52Z.
+
+### Last 24 hours (251 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 23, 16:06 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 16:04 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF198-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified the primary defect: git diff show |
+| Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 16:04 GMT+2 heartbeat sweep |
+| Apr 23, 15:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 15:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:32:48Z → 13:52Z.
 (1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
-| Apr 23, 14:43 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 15:49 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 15:47 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. Re-verified MUST-FIX (import-time int() parsi |
+| Apr 23, 15:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 15:36 CEST | `AGENT_HEARTBEAT` | `M189` | guardian | guardian heartbeat — SPRINT POKE 15:31 GMT+2 heartbeat sweep |
+| Apr 23, 15:34 CEST | `SPRINT_NOTE` | `—` | oinkv | Sprint poke 15:31 GMT+2 — (1) Vigil audit: OF152-VIGIL-PHASE1-R2 TRUSTWORTHY (PASS 9.70, fill_price on MARKET INSERT, clean dimensions, corr |
+| Apr 23, 15:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 13:12:47Z → 13:32Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+| Apr 23, 15:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 15:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Quiet post-canary tick. Scan window 12:52:49Z → 13:12Z.
+(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2 |
+| Apr 23, 15:11 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 15:08 GMT+2.
+
+1. VIGIL SPOT-AUDIT — B4-VIGIL-PHASE0-R2-REVIEW: TRUSTWORTHY. The review is internally consistent on th |
+| Apr 23, 14:54 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 23, 14:54 CEST | `SPRINT_NOTE` | `—` | oinkv | SPRINT_POKE response @ 14:52 GMT+2.
+
+1. VIGIL SPOT-AUDIT — OF176-VIGIL-PHASE1-R1: TRUSTWORTHY. I re-verified the cited hotpath defect direct |
 
 ## 🧭 Needs Mike
 
@@ -113,10 +120,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 23, 15:55 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 268 |
+| 🪽 **Hermes** | Apr 23, 16:06 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 269 |
+| 🐷 **OinkV** | Apr 23, 16:05 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 142 |
+| 🛡️ **GUARDIAN** | Apr 23, 16:05 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 16:04 GMT+2 heartbeat sweep` | 🟢 fresh | 217 |
 | ⚒️ **ANVIL** | Apr 23, 15:52 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 271 |
-| 🐷 **OinkV** | Apr 23, 15:49 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 141 |
-| 🛡️ **GUARDIAN** | Apr 23, 15:36 CEST | `AGENT_HEARTBEAT` | `SPRINT POKE 15:31 GMT+2 heartbeat sweep` | 🟢 fresh | 216 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | 🔍 **VIGIL** | Apr 23, 00:36 CEST | `REVIEW_POSTED` | `M154` | 🔴 stale | 72 |
 | 🔥 **FORGE** | Apr 22, 22:40 CEST | `SPRINT_NOTE` | `standby — 2nd-opinion critic` | 🔴 stale | 135 |
@@ -222,9 +229,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -240,4 +247,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/56 tasks DONE · Last auto-regenerated: 15:55 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/56 tasks DONE · Last auto-regenerated: 16:06 CEST on 23 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
