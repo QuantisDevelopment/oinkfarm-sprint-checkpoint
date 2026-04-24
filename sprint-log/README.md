@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1260
-- **Last 24h:** 285 (rate 11.88/h)
+- **Total events:** 1266
+- **Last 24h:** 288 (rate 12.0/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (12 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
+| Apr 24, 02:18 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:18 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 02:12 CEST | `AGENT_HEARTBEAT` | `M189` | anvil | anvil heartbeat — M189 |
+| Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior  |
 | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checkin |
 | Apr 24, 02:01 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — routine_heartbeat |
@@ -22,15 +28,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 01:45 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 | Apr 24, 01:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T231238Z_000001 confirmed emitted despite transcript repair noise. Since then: routine heartbeats (for |
 | Apr 24, 01:28 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T225235Z_000001: 1 oinkv routine event only. Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers |
 
-### Last 4 hours (51 events)
+### Last 4 hours (53 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
+| Apr 24, 02:18 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:18 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 02:12 CEST | `AGENT_HEARTBEAT` | `M189` | anvil | anvil heartbeat — M189 |
+| Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior  |
 | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checkin |
 | Apr 24, 02:01 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — routine_heartbeat |
@@ -40,16 +47,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 01:28 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T225235Z_000001: 1 oinkv routine event only. Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers |
-| Apr 24, 00:55 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 00:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T223237Z_000001: only routine heartbeats (guardian, forge) and 1 oinkv event. Zero reviews on B9v3/B12-SHAD |
-| Apr 24, 00:41 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 
-### Last 24 hours (285 events)
+### Last 24 hours (288 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
+| Apr 24, 02:18 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:18 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 02:12 CEST | `AGENT_HEARTBEAT` | `M189` | anvil | anvil heartbeat — M189 |
+| Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior  |
 | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checkin |
 | Apr 24, 02:01 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — routine_heartbeat |
@@ -59,12 +66,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 01:28 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 24, 01:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T225235Z_000001: 1 oinkv routine event only. Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers |
-| Apr 24, 00:55 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 00:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Since evt_20260423T223237Z_000001: only routine heartbeats (guardian, forge) and 1 oinkv event. Zero reviews on B9v3/B12-SHAD |
-| Apr 24, 00:41 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 
 ## 🧭 Needs Mike
 
@@ -81,19 +82,18 @@ _No open DECISION_NEEDED events._
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B6` | CANARY_STARTED with no verdict within 48h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
-| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for anvil |
 | 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 294 |
-| 🐷 **OinkV** | Apr 24, 02:01 CEST | `—` | `—` | 🟢 fresh | 171 |
+| 🪽 **Hermes** | Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 295 |
+| 🔍 **VIGIL** | Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | 🟢 fresh | 80 |
+| 🐷 **OinkV** | Apr 24, 02:18 CEST | `—` | `—` | 🟢 fresh | 172 |
+| 🔥 **FORGE** | Apr 24, 02:18 CEST | `AGENT_HEARTBEAT` | `vigil-cross-check` | 🟢 fresh | 148 |
+| ⚒️ **ANVIL** | Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 302 |
 | 🛡️ **GUARDIAN** | Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `routine_heartbeat` | 🟢 fresh | 236 |
-| 🔥 **FORGE** | Apr 24, 01:45 CEST | `AGENT_HEARTBEAT` | `vigil-cross-check` | 🟢 fresh | 147 |
-| ⚒️ **ANVIL** | Apr 24, 01:32 CEST | `SPRINT_NOTE` | `M189 merge-train prep + awaiting deploy window 08:00Z` | 🟢 fresh | 300 |
-| 🔍 **VIGIL** | Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | 🟡 1–3h | 79 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -185,6 +185,7 @@ _No open DECISION_NEEDED events._
 | `M189` | M189 | 🔴 CRITICAL | — | ✅ DONE | PASS |
 | `M197` | M197 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M202` | M202 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M214` | M214 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `SPRINT-POKE` | SPRINT-POKE | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `T189` | T189 | 🔴 CRITICAL | — | 📝 PROPOSAL | — |
 | `TASK-189` | TASK-189 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -198,11 +199,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🔍 | VIGIL | Code Review + Scoring |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | OINKDB |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -216,4 +217,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/57 tasks DONE · Last auto-regenerated: 02:08 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/58 tasks DONE · Last auto-regenerated: 02:24 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
