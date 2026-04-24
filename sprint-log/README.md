@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1429
-- **Last 24h:** 268 (rate 11.17/h)
+- **Total events:** 1433
+- **Last 24h:** 269 (rate 11.21/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (12 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 18:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 17:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
+| Apr 24, 17:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 17:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:52Z cron tick. Scan window 15:33Z→15:52Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
 | Apr 24, 17:50 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has gone quiet for the last 90 minutes — no merges, no canary verdicts, no new decisions flagged for Mike. The one concrete movem |
 | Apr 24, 17:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 17:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -22,15 +26,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 17:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 17:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 17:13 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:12Z cron tick. Scan window 14:53Z→15:12Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 still awaitin |
-| Apr 24, 17:05 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 17:01 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 16:54 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 16:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 16:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 14:52Z cron tick. Event scan 13:30Z→14:52Z clean: no new REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events (only Hermes ARTIFACT_PUBLISHED + |
 
-### Last 4 hours (36 events)
+### Last 4 hours (38 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 18:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 17:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
+| Apr 24, 17:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 17:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:52Z cron tick. Scan window 15:33Z→15:52Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
 | Apr 24, 17:50 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has gone quiet for the last 90 minutes — no merges, no canary verdicts, no new decisions flagged for Mike. The one concrete movem |
 | Apr 24, 17:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 17:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -42,14 +45,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 17:01 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 16:54 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 16:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 16:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 14:52Z cron tick. Event scan 13:30Z→14:52Z clean: no new REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events (only Hermes ARTIFACT_PUBLISHED + |
-| Apr 24, 16:45 CEST | `STATUS_CHANGED` | `M201` | anvil | M201 PR_REVIEW → PR_REVIEW |
-| Apr 24, 16:45 CEST | `SPRINT_NOTE` | `M201` | anvil | M201 R3 FIX PUSHED. Branch feat/201-racl-phase4-instrumentation 932029ec → f89b2ecc. Closes GUARDIAN Phase 2 R1 REVISE (8.55/9.5). MUST-FIX: |
-| Apr 24, 16:44 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
 
-### Last 24 hours (268 events)
+### Last 24 hours (269 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 18:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 17:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
+| Apr 24, 17:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 17:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:52Z cron tick. Scan window 15:33Z→15:52Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
 | Apr 24, 17:50 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has gone quiet for the last 90 minutes — no merges, no canary verdicts, no new decisions flagged for Mike. The one concrete movem |
 | Apr 24, 17:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 17:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -61,16 +64,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 17:01 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 16:54 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 16:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 16:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 14:52Z cron tick. Event scan 13:30Z→14:52Z clean: no new REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events (only Hermes ARTIFACT_PUBLISHED + |
-| Apr 24, 16:45 CEST | `STATUS_CHANGED` | `M201` | anvil | M201 PR_REVIEW → PR_REVIEW |
-| Apr 24, 16:45 CEST | `SPRINT_NOTE` | `M201` | anvil | M201 R3 FIX PUSHED. Branch feat/201-racl-phase4-instrumentation 932029ec → f89b2ecc. Closes GUARDIAN Phase 2 R1 REVISE (8.55/9.5). MUST-FIX: |
-| Apr 24, 16:44 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 15.0h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 15.3h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -90,9 +89,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 17:50 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 331 |
-| ⚒️ **ANVIL** | Apr 24, 17:33 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 360 |
-| 🛡️ **GUARDIAN** | Apr 24, 17:01 CEST | `AGENT_HEARTBEAT` | `monitoring` | 🟢 fresh | 266 |
+| 🪽 **Hermes** | Apr 24, 18:08 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 332 |
+| 🛡️ **GUARDIAN** | Apr 24, 17:58 CEST | `AGENT_HEARTBEAT` | `monitoring` | 🟢 fresh | 267 |
+| ⚒️ **ANVIL** | Apr 24, 17:52 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 362 |
 | 🔥 **FORGE** | Apr 24, 09:22 CEST | `AGENT_HEARTBEAT` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🔴 stale | 157 |
 | 🔍 **VIGIL** | Apr 24, 08:58 CEST | `REVIEW_POSTED` | `M34` | 🔴 stale | 87 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
@@ -205,8 +204,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
@@ -223,4 +222,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/62 tasks DONE · Last auto-regenerated: 17:52 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/62 tasks DONE · Last auto-regenerated: 18:08 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
