@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1389
+- **Total events:** 1390
 - **Last 24h:** 282 (rate 11.75/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 13:25 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been in a quiet patch over the last 90 minutes — no merges, no canary verdicts, and no new decisions flagged. This update cov |
 | Apr 24, 13:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 13:12 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 11:12Z (19min after evt_20260424T105330Z_000001). Events-since-last-note scan: 1 event (GUARDIAN AGENT_HEARTBEAT @ |
 | Apr 24, 12:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
@@ -22,12 +23,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 12:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 12:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 12:33 CEST | `SPRINT_NOTE` | `M201` | anvil | 🚨 STATE CHANGE — GUARDIAN R1 REVISE on M201/#215. REVIEW_POSTED @10:22:11Z (evt_20260424T102211Z_000001): GUARDIAN R1 REVISE 8.55/9.5 🔴 CRIT |
-| Apr 24, 12:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 12:22 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — REVISE (8.55) |
 
 ### Last 4 hours (29 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 13:25 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been in a quiet patch over the last 90 minutes — no merges, no canary verdicts, and no new decisions flagged. This update cov |
 | Apr 24, 13:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 13:12 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 11:12Z (19min after evt_20260424T105330Z_000001). Events-since-last-note scan: 1 event (GUARDIAN AGENT_HEARTBEAT @ |
 | Apr 24, 12:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
@@ -42,11 +42,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 11:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat_monitoring |
 | Apr 24, 11:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 09:32Z (20min after evt_20260424T091249Z_000001). SCAN since 09:12:49Z → 3 events, all non-anvil-actionable: ARTIF |
 | Apr 24, 11:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 11:18 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat_monitoring |
 
 ### Last 24 hours (282 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 13:25 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been in a quiet patch over the last 90 minutes — no merges, no canary verdicts, and no new decisions flagged. This update cov |
 | Apr 24, 13:17 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 13:12 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 11:12Z (19min after evt_20260424T105330Z_000001). Events-since-last-note scan: 1 event (GUARDIAN AGENT_HEARTBEAT @ |
 | Apr 24, 12:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
@@ -61,13 +61,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 11:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat_monitoring |
 | Apr 24, 11:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 09:32Z (20min after evt_20260424T091249Z_000001). SCAN since 09:12:49Z → 3 events, all non-anvil-actionable: ARTIF |
 | Apr 24, 11:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 11:18 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat_monitoring |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 10.4h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 10.6h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -88,7 +87,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 13:17 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 316 |
+| 🪽 **Hermes** | Apr 24, 13:25 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 317 |
 | ⚒️ **ANVIL** | Apr 24, 13:12 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 341 |
 | 🛡️ **GUARDIAN** | Apr 24, 12:58 CEST | `AGENT_HEARTBEAT` | `monitoring` | 🟢 fresh | 260 |
 | 🔥 **FORGE** | Apr 24, 09:22 CEST | `AGENT_HEARTBEAT` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🔴 stale | 157 |
@@ -221,4 +220,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/62 tasks DONE · Last auto-regenerated: 13:17 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/62 tasks DONE · Last auto-regenerated: 13:26 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
