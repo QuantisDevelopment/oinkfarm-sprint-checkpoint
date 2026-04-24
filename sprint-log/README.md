@@ -4,17 +4,21 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1317
-- **Last 24h:** 287 (rate 11.96/h)
+- **Total events:** 1321
+- **Last 24h:** 288 (rate 12.0/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 07:55 CEST | `STATUS_CHANGED` | `M201` | anvil | M201 NOT_STARTED → PR_REVIEW |
+| Apr 24, 07:54 CEST | `SPRINT_NOTE` | `M201` | anvil | M201/PR#215 R2 ready. VIGIL R1 REVISE 6.20 → MUST-FIX A (EXTRACTION_CORRECTION emit, §3d) + MUST-FIX B (FALSE_REJECTION_OVERRIDE emit, §3c + |
+| Apr 24, 07:54 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
 | Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 07:39 CEST | `TASK_PLANNED` | `M214` | forge | M214 plan published |
 | Apr 24, 07:38 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — design_clarification_needed |
@@ -24,11 +28,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 07:14 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
 | Apr 24, 07:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 07:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 04:52:51Z. Confirmed prior 04:52 SN evt_20260424T045251Z_000001 landed (transcript repair error was cosmeti |
-| Apr 24, 06:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 04:32:33Z. 3 events: hermes SPRINT_NOTE 04:34:07Z (referenced stale PRs A11/B1/B2/B5/B6/B4 — all already mer |
 
-### Last 4 hours (36 events)
+### Last 4 hours (39 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 07:55 CEST | `STATUS_CHANGED` | `M201` | anvil | M201 NOT_STARTED → PR_REVIEW |
+| Apr 24, 07:54 CEST | `SPRINT_NOTE` | `M201` | anvil | M201/PR#215 R2 ready. VIGIL R1 REVISE 6.20 → MUST-FIX A (EXTRACTION_CORRECTION emit, §3d) + MUST-FIX B (FALSE_REJECTION_OVERRIDE emit, §3c + |
+| Apr 24, 07:54 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
 | Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 07:39 CEST | `TASK_PLANNED` | `M214` | forge | M214 plan published |
 | Apr 24, 07:38 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — design_clarification_needed |
@@ -40,14 +47,14 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 07:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 04:52:51Z. Confirmed prior 04:52 SN evt_20260424T045251Z_000001 landed (transcript repair error was cosmeti |
 | Apr 24, 06:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 04:32:33Z. 3 events: hermes SPRINT_NOTE 04:34:07Z (referenced stale PRs A11/B1/B2/B5/B6/B4 — all already mer |
 | Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
-| Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 06:34 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint is in a quiet stretch right now — the last 90 minutes produced only housekeeping activity (internal notes, two published artifact |
-| Apr 24, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:52:50Z. Only 1 unrelated event: hermes ARTIFACT_PUBLISHED 03:56:08Z (oinxtractor dashboard). Zero B9v3/B12- |
-| Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (287 events)
+### Last 24 hours (288 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 07:55 CEST | `STATUS_CHANGED` | `M201` | anvil | M201 NOT_STARTED → PR_REVIEW |
+| Apr 24, 07:54 CEST | `SPRINT_NOTE` | `M201` | anvil | M201/PR#215 R2 ready. VIGIL R1 REVISE 6.20 → MUST-FIX A (EXTRACTION_CORRECTION emit, §3d) + MUST-FIX B (FALSE_REJECTION_OVERRIDE emit, §3c + |
+| Apr 24, 07:54 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
 | Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 07:39 CEST | `TASK_PLANNED` | `M214` | forge | M214 plan published |
 | Apr 24, 07:38 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — design_clarification_needed |
@@ -59,16 +66,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 07:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 04:52:51Z. Confirmed prior 04:52 SN evt_20260424T045251Z_000001 landed (transcript repair error was cosmeti |
 | Apr 24, 06:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 04:32:33Z. 3 events: hermes SPRINT_NOTE 04:34:07Z (referenced stale PRs A11/B1/B2/B5/B6/B4 — all already mer |
 | Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
-| Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 06:34 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint is in a quiet stretch right now — the last 90 minutes produced only housekeeping activity (internal notes, two published artifact |
-| Apr 24, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:52:50Z. Only 1 unrelated event: hermes ARTIFACT_PUBLISHED 03:56:08Z (oinxtractor dashboard). Zero B9v3/B12- |
-| Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 4.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 5.1h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -88,9 +91,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 302 |
+| 🪽 **Hermes** | Apr 24, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 303 |
+| ⚒️ **ANVIL** | Apr 24, 07:55 CEST | `STATUS_CHANGED` | `M189` | 🟢 fresh | 322 |
 | 🔥 **FORGE** | Apr 24, 07:39 CEST | `TASK_PLANNED` | `sprint_poke_response` | 🟢 fresh | 154 |
-| ⚒️ **ANVIL** | Apr 24, 07:38 CEST | `BLOCKED` | `M189` | 🟢 fresh | 319 |
 | 🔍 **VIGIL** | Apr 24, 07:19 CEST | `REVIEW_POSTED` | `M37` | 🟢 fresh | 82 |
 | 🛡️ **GUARDIAN** | Apr 24, 07:13 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟢 fresh | 246 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🟡 1–3h | 181 |
@@ -185,7 +188,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M181` | M181 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M189` | M189 | 🔴 CRITICAL | — | ✅ DONE | PASS |
 | `M197` | M197 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
-| `M201` | M201 | 🔴 CRITICAL | — | 🛑 BLOCKED | — |
+| `M201` | M201 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M202` | M202 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M214` | M214 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `SPRINT-POKE` | SPRINT-POKE | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -201,8 +204,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔥 | FORGE | Technical Execution Planner |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
@@ -219,4 +222,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/60 tasks DONE · Last auto-regenerated: 07:47 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/60 tasks DONE · Last auto-regenerated: 07:59 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
