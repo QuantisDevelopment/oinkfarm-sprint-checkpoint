@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-04-24T00:24:29+00:00",
-  "generated_at_cest": "2026-04-24T02:24:29+02:00",
+  "generated_at_utc": "2026-04-24T00:57:15+00:00",
+  "generated_at_cest": "2026-04-24T02:57:15+02:00",
   "sprint_title": "OinkFarm Implementation Foresight Sprint",
   "sprint_subtitle": "Event-stream dashboard · Wave 1 shipped · Wave 2 in-flight",
   "waves": [
@@ -2436,7 +2436,7 @@
         "mtime": null
       },
       "merged_at": null,
-      "last_activity": "2026-04-24T00:23:33Z",
+      "last_activity": "2026-04-24T00:52:46Z",
       "timeline": [
         {
           "label": "M214 review by vigil — REVISE (5.9)",
@@ -2446,19 +2446,29 @@
           "verdict": "REVISE",
           "score": 5.9,
           "event_type": "REVIEW_POSTED"
+        },
+        {
+          "label": "M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu",
+          "actor": "forge",
+          "path": null,
+          "mtime": "2026-04-24T00:52:46Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "DECISION_NEEDED"
         }
       ],
       "artifacts": {
         "review_posted": "/home/oinkv/vigil-workspace/reviews/OF214-VIGIL-PHASE1-R1.md"
       },
       "_from_stream": true,
-      "event_count": 1,
+      "event_count": 2,
       "blocker": null,
       "phase": "M",
       "agents_touched": [
+        "forge",
         "vigil"
       ],
-      "last_event_type": "REVIEW_POSTED"
+      "last_event_type": "DECISION_NEEDED"
     },
     {
       "id": "M189",
@@ -2519,7 +2529,7 @@
         "mtime": "2026-04-23T08:29:46Z"
       },
       "merged_at": "2026-04-22T08:01:42Z",
-      "last_activity": "2026-04-24T00:12:52Z",
+      "last_activity": "2026-04-24T00:32:45Z",
       "timeline": [
         {
           "label": "M189 Mike gate: Should oinkfarm#189 Phase 1 Artifact A pre-align MICRO_GATE_DECISION / SL_UPDATE event payloads with B11 v2 schema (rule_id,",
@@ -4068,6 +4078,15 @@
           "verdict": null,
           "score": null,
           "event_type": "SPRINT_NOTE"
+        },
+        {
+          "label": "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2",
+          "actor": "anvil",
+          "path": null,
+          "mtime": "2026-04-24T00:32:45Z",
+          "verdict": null,
+          "score": null,
+          "event_type": "SPRINT_NOTE"
         }
       ],
       "artifacts": {
@@ -4075,7 +4094,7 @@
         "review_posted": "/home/oinkv/guardian-workspace/reviews/M189-STEP0-GUARDIAN-PHASE1-R1-REVIEW.md"
       },
       "_from_stream": true,
-      "event_count": 172,
+      "event_count": 173,
       "blocker": null,
       "phase": "M",
       "agents_touched": [
@@ -11544,20 +11563,108 @@
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-24T00:24:29Z",
+      "last_event_ts": "2026-04-24T00:57:14Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 0.0001762225,
+      "age_hours": 0.00030678416666666663,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 295,
+      "event_count": 296,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-24T00:24:29Z",
-      "last_active_human": "0s ago",
+      "last_active": "2026-04-24T00:57:14Z",
+      "last_active_human": "1s ago",
       "heartbeat": {
         "current_task": null,
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "forge",
+      "name": "FORGE",
+      "last_event_ts": "2026-04-24T00:52:46Z",
+      "last_event_type": "DECISION_NEEDED",
+      "last_task_id": "M214",
+      "current_task": "vigil-cross-check",
+      "age_hours": 0.07475122861111111,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 150,
+      "emoji": "🔥",
+      "role": "Technical Execution Planner",
+      "last_active": "2026-04-24T00:52:46Z",
+      "last_active_human": "4m ago",
+      "heartbeat": {
+        "current_task": "vigil-cross-check",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "oinkv",
+      "name": "OinkV",
+      "last_event_ts": "2026-04-24T00:51:40Z",
+      "last_event_type": null,
+      "last_task_id": null,
+      "current_task": null,
+      "age_hours": 0.09308456194444445,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 174,
+      "emoji": "🐷",
+      "role": "Plan Auditor",
+      "last_active": "2026-04-24T00:51:40Z",
+      "last_active_human": "5m ago",
+      "heartbeat": {
+        "current_task": null,
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "guardian",
+      "name": "GUARDIAN",
+      "last_event_ts": "2026-04-24T00:35:50Z",
+      "last_event_type": "AGENT_HEARTBEAT",
+      "last_task_id": null,
+      "current_task": "sprint_poke_response",
+      "age_hours": 0.3569734508333333,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 237,
+      "emoji": "🛡️",
+      "role": "Data Integrity + Canary",
+      "last_active": "2026-04-24T00:35:50Z",
+      "last_active_human": "21m ago",
+      "heartbeat": {
+        "current_task": "sprint_poke_response",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "anvil",
+      "name": "ANVIL",
+      "last_event_ts": "2026-04-24T00:32:45Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "M189",
+      "current_task": "M189",
+      "age_hours": 0.40836233972222225,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 303,
+      "emoji": "⚒️",
+      "role": "Implementation Lead",
+      "last_active": "2026-04-24T00:32:45Z",
+      "last_active_human": "24m ago",
+      "heartbeat": {
+        "current_task": "M189",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -11570,104 +11677,16 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "M214",
       "current_task": null,
-      "age_hours": 0.015731778055555555,
+      "age_hours": 0.5616956730555556,
       "staleness_label": "green",
       "light": "green",
       "event_count": 80,
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "last_active": "2026-04-24T00:23:33Z",
-      "last_active_human": "56s ago",
+      "last_active_human": "33m ago",
       "heartbeat": {
         "current_task": null,
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "oinkv",
-      "name": "OinkV",
-      "last_event_ts": "2026-04-24T00:18:44Z",
-      "last_event_type": null,
-      "last_task_id": null,
-      "current_task": null,
-      "age_hours": 0.09600955583333334,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 172,
-      "emoji": "🐷",
-      "role": "Plan Auditor",
-      "last_active": "2026-04-24T00:18:44Z",
-      "last_active_human": "5m ago",
-      "heartbeat": {
-        "current_task": null,
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "forge",
-      "name": "FORGE",
-      "last_event_ts": "2026-04-24T00:18:00Z",
-      "last_event_type": "AGENT_HEARTBEAT",
-      "last_task_id": null,
-      "current_task": "vigil-cross-check",
-      "age_hours": 0.10823177805555556,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 148,
-      "emoji": "🔥",
-      "role": "Technical Execution Planner",
-      "last_active": "2026-04-24T00:18:00Z",
-      "last_active_human": "6m ago",
-      "heartbeat": {
-        "current_task": "vigil-cross-check",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "anvil",
-      "name": "ANVIL",
-      "last_event_ts": "2026-04-24T00:12:52Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": "M189",
-      "current_task": "M189",
-      "age_hours": 0.1937873336111111,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 302,
-      "emoji": "⚒️",
-      "role": "Implementation Lead",
-      "last_active": "2026-04-24T00:12:52Z",
-      "last_active_human": "11m ago",
-      "heartbeat": {
-        "current_task": "M189",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "guardian",
-      "name": "GUARDIAN",
-      "last_event_ts": "2026-04-23T23:58:07Z",
-      "last_event_type": "AGENT_HEARTBEAT",
-      "last_task_id": null,
-      "current_task": "routine_heartbeat",
-      "age_hours": 0.43962066694444446,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 236,
-      "emoji": "🛡️",
-      "role": "Data Integrity + Canary",
-      "last_active": "2026-04-23T23:58:07Z",
-      "last_active_human": "26m ago",
-      "heartbeat": {
-        "current_task": "routine_heartbeat",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -11680,14 +11699,14 @@
       "last_event_type": "BLOCKED",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 18.220731778055555,
+      "age_hours": 18.766695673055555,
       "staleness_label": "red",
       "light": "red",
       "event_count": 11,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-23T06:11:15Z",
-      "last_active_human": "18h 13m ago",
+      "last_active_human": "18h 46m ago",
       "heartbeat": {
         "current_task": "B4",
         "current_phase": null,
@@ -11702,7 +11721,7 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 84.87073177805556,
+      "age_hours": 85.41669567305556,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
@@ -11724,7 +11743,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 88.72600955583333,
+      "age_hours": 89.27197345083334,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -11741,6 +11760,17 @@
     }
   ],
   "cron": [
+    {
+      "time_utc": "2026-04-24T00:32:45Z",
+      "time_local": "2026-04-24T02:32+02:00",
+      "header": null,
+      "actions": [
+        "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M214 REVISE (forge task, not anvil), hermes ARTIFACT_PUBLISHED. Zero reviews on anvil branches (B9v3/B12-SHADOW), zero decisions, zero blockers. #189 merged+canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~7h28m). Phase TASK4_ArtifactA_implementation_kickoff unchanged; branch fix/189-sl-to-be-microgate local-only @ 83f198a9. Next AGENT_HEARTBEAT pulse due ~01:12Z (60-min cadence). Yielding."
+      ],
+      "next": null,
+      "blocker": null,
+      "path": "evt_20260424T003245Z_000001"
+    },
     {
       "time_utc": "2026-04-24T00:12:52Z",
       "time_local": "2026-04-24T02:12+02:00",
@@ -12155,22 +12185,20 @@
       "next": null,
       "blocker": null,
       "path": "evt_20260423T151324Z_000001"
-    },
-    {
-      "time_utc": "2026-04-23T15:12:46Z",
-      "time_local": "2026-04-23T17:12+02:00",
-      "header": null,
-      "actions": [
-        "Quiet post-canary tick. Scan window 14:52:49Z → 15:12Z.\n(1) #189 approvals: landed 04-22, merged, canary PASSED 08:29:46Z; T+48h recon due 2026-04-24T08:00Z.\n(2) B9 v3 / B12-SHADOW REVIEW_POSTED: NONE new.\n(3) DECISION_NEEDED / BLOCKED: NONE.\nEvents in window:\n  - 14:55:12Z oinkv SPRINT_NOTE POKE_RESPONSE_16_54 (unrelated to M189)\n  - 14:58:22Z guardian AGENT_HEARTBEAT M189 (routine)\n  - 15:01:12Z hermes ARTIFACT_PUBLISHED oinxtractor_quality\n\nState unchanged: phase TASK4_ArtifactA_implementation_kickoff, branch fix/189-sl-to-be-microgate @ 83f198a9 (local only), blockers []. Artifact A code awaits a dedicated focused turn, not a heartbeat — cron prompt is stale. Yielding."
-      ],
-      "next": null,
-      "blocker": null,
-      "path": "evt_20260423T151246Z_000001"
     }
   ],
   "plans": [],
   "audits": [],
   "blockers": [
+    {
+      "agent": "Mike",
+      "agent_emoji": "🧭",
+      "raw": "VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which.",
+      "label": "Q-OF214-REGISTRY-1: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where c",
+      "severity": "mike",
+      "current_task": "M214",
+      "current_phase": "B"
+    },
     {
       "agent": "—",
       "agent_emoji": "🛑",
@@ -12182,17 +12210,17 @@
     }
   ],
   "last_cron": {
-    "time_utc": "2026-04-24T00:12:52Z",
-    "time_local": "2026-04-24T02:12+02:00",
+    "time_utc": "2026-04-24T00:32:45Z",
+    "time_local": "2026-04-24T02:32+02:00",
     "header": null,
     "actions": [
-      "No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior ticks used SPRINT_NOTE only, not the dedicated AGENT_HEARTBEAT pulse — will emit both going forward per checkpoint-reporting spec. Since evt_20260423T233237Z_000001: routine heartbeats (forge, guardian), 2 oinkv events, 1 hermes SPRINT_NOTE (status summary). Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers. #189 merged+canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~7h48m). Phase TASK4_ArtifactA_implementation_kickoff unchanged; branch fix/189-sl-to-be-microgate local-only @ 83f198a9. Hermes-flagged items (A11/B1/B2/B5 PR review queue, B6 canary) are outside anvil scope. Yielding."
+      "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M214 REVISE (forge task, not anvil), hermes ARTIFACT_PUBLISHED. Zero reviews on anvil branches (B9v3/B12-SHADOW), zero decisions, zero blockers. #189 merged+canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~7h28m). Phase TASK4_ArtifactA_implementation_kickoff unchanged; branch fix/189-sl-to-be-microgate local-only @ 83f198a9. Next AGENT_HEARTBEAT pulse due ~01:12Z (60-min cadence). Yielding."
     ],
     "next": null,
     "blocker": null,
-    "path": "evt_20260424T001252Z_000002"
+    "path": "evt_20260424T003245Z_000001"
   },
-  "commit": "b25f59b1b88d",
+  "commit": "19209ff159a1",
   "_from_stream": true,
   "_tasks_map": {
     "189": {
@@ -25547,10 +25575,10 @@
       "tier": "CRITICAL",
       "tier_emoji": "🔴",
       "phase": "M",
-      "last_event_ts": "2026-04-24T00:12:52Z",
+      "last_event_ts": "2026-04-24T00:32:45Z",
       "last_event_type": "SPRINT_NOTE",
       "last_agent": "anvil",
-      "event_count": 172,
+      "event_count": 173,
       "prs": [
         {
           "repo": "oinkfarm",
@@ -32382,6 +32410,27 @@
             "text": "No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior ticks used SPRINT_NOTE only, not the dedicated AGENT_HEARTBEAT pulse — will emit both going forward per checkpoint-reporting spec. Since evt_20260423T233237Z_000001: routine heartbeats (forge, guardian), 2 oinkv events, 1 hermes SPRINT_NOTE (status summary). Zero reviews on B9v3/B12-SHADOW, zero decisions, zero blockers. #189 merged+canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~7h48m). Phase TASK4_ArtifactA_implementation_kickoff unchanged; branch fix/189-sl-to-be-microgate local-only @ 83f198a9. Hermes-flagged items (A11/B1/B2/B5 PR review queue, B6 canary) are outside anvil scope. Yielding.",
             "yielding": true
           }
+        },
+        {
+          "event_id": "evt_20260424T003245Z_000001",
+          "ts": "2026-04-24T00:32:45Z",
+          "event_type": "SPRINT_NOTE",
+          "task_id": "M189",
+          "phase": null,
+          "wave": null,
+          "agent": "anvil",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "level": "HEARTBEAT_02_32_GMT2_NO_DELTA",
+            "sub_task": "artifact_A",
+            "text": "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M214 REVISE (forge task, not anvil), hermes ARTIFACT_PUBLISHED. Zero reviews on anvil branches (B9v3/B12-SHADOW), zero decisions, zero blockers. #189 merged+canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~7h28m). Phase TASK4_ArtifactA_implementation_kickoff unchanged; branch fix/189-sl-to-be-microgate local-only @ 83f198a9. Next AGENT_HEARTBEAT pulse due ~01:12Z (60-min cadence). Yielding.",
+            "yielding": true
+          }
         }
       ]
     },
@@ -32922,10 +32971,10 @@
       "tier": "STANDARD",
       "tier_emoji": "🟡",
       "phase": "M",
-      "last_event_ts": "2026-04-24T00:23:33Z",
-      "last_event_type": "REVIEW_POSTED",
-      "last_agent": "vigil",
-      "event_count": 1,
+      "last_event_ts": "2026-04-24T00:52:46Z",
+      "last_event_type": "DECISION_NEEDED",
+      "last_agent": "forge",
+      "event_count": 2,
       "prs": [
         {
           "repo": "oinkfarm",
@@ -32940,6 +32989,7 @@
       "canary_verdict": null,
       "blocker": null,
       "agents_touched": [
+        "forge",
         "vigil"
       ],
       "events": [
@@ -32977,6 +33027,34 @@
               "Schema comment on registry_id semantics (SOUL §1 pointer, not unique key)."
             ],
             "note": "Detector code is clean and 20/20 tests pass. Registry underspecified vs SOUL.md §1 — false-negative risk on calculate_blended_pnl commits."
+          }
+        },
+        {
+          "event_id": "evt_20260424T005246Z_000002",
+          "ts": "2026-04-24T00:52:46Z",
+          "event_type": "DECISION_NEEDED",
+          "task_id": "M214",
+          "phase": "B",
+          "wave": null,
+          "agent": "forge",
+          "repo": null,
+          "branch": null,
+          "pr": null,
+          "artifact_path": null,
+          "status": null,
+          "blocker": null,
+          "extra": {
+            "question_id": "Q-OF214-REGISTRY-1",
+            "question": "VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which.",
+            "options": [
+              "add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class)",
+              "narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open)"
+            ],
+            "forge_recommendation": "add_kraken_sync_path — SOUL.md §1 ordering marks calculate_blended_pnl as row 1 (highest-value PnL function); leaving it uncovered contradicts the primitive's stated purpose (catch the PR #202-class bypass). Mechanically small: one JSON entry + one parity test. Also tighten 'oink-sync/lifecycle.py' path (should be oink_sync/lifecycle.py or dropped since cross-repo diffs don't arise in practice).",
+            "vigil_review_file": "vigil-workspace/reviews/OF214-VIGIL-PHASE1-R1.md",
+            "pr": 214,
+            "branch": "fix/213-forge-vigil-detection-hook",
+            "head_sha": "67aec06f"
           }
         }
       ]
@@ -66591,11 +66669,283 @@
         "accuracy_status": "proxy_only",
         "corrections_status": "pending"
       }
+    },
+    {
+      "event_id": "evt_20260424T003245Z_000001",
+      "ts": "2026-04-24T00:32:45Z",
+      "event_type": "SPRINT_NOTE",
+      "task_id": "M189",
+      "phase": null,
+      "wave": null,
+      "agent": "anvil",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "level": "HEARTBEAT_02_32_GMT2_NO_DELTA",
+        "sub_task": "artifact_A",
+        "text": "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M214 REVISE (forge task, not anvil), hermes ARTIFACT_PUBLISHED. Zero reviews on anvil branches (B9v3/B12-SHADOW), zero decisions, zero blockers. #189 merged+canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~7h28m). Phase TASK4_ArtifactA_implementation_kickoff unchanged; branch fix/189-sl-to-be-microgate local-only @ 83f198a9. Next AGENT_HEARTBEAT pulse due ~01:12Z (60-min cadence). Yielding.",
+        "yielding": true
+      }
+    },
+    {
+      "ts": "2026-04-24T00:35:17Z",
+      "type": "SPRINT_NOTE",
+      "agent": "oinkv",
+      "payload": {
+        "oinxtractor_quality": "GREEN — extractor_ok=37, err=0. oinxtractor 9/1(non-sticky), fallback=1, circuit closed. gen=8, age=1438s. webhook_ok=107, err=0. 7/7 supervisors, 0 crashes. uptime=17639s, hb_age=4s. Steady state since last poke.",
+        "a171_status": "UNBLOCKED_SEQUENTIALLY_GATED. sg#35 NOT_STARTED, worktree still MISSING. No design blocker. Unchanged 4 pokes running.",
+        "vigil_audit": "OF210-VIGIL-PHASE1-R1: TRUSTWORTHY. Score PASS (LIGHTWEIGHT — documentation-only). Verified: (1) Commit 22c85c50 exists on fix/208-eric-kat-trader-behavior branch (not yet merged to main). (2) docs/incidents/208-eric-kat-partial-close-lifecycle-gap.md is exactly 157 lines as claimed. (3) Root-cause themes (reconciler, passthrough, tp*_hit_at, remaining_pct) appear 29 times in the doc — substantiates 4-layer root-cause claim. (4) 1 file changed, +157/-0. No fabrication."
+      }
+    },
+    {
+      "event_id": "evt_20260424T003550Z_000001",
+      "ts": "2026-04-24T00:35:50Z",
+      "event_type": "AGENT_HEARTBEAT",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "guardian",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "current_task": "sprint_poke_response",
+        "phase": "continuous",
+        "status": "HEARTBEAT_OK",
+        "poke_items_evaluated": {
+          "1_merged_without_canary_2h": "0 merged, 0 canary_started — nothing to trigger",
+          "2_b3_t48h_closeout": "already finalized 2026-04-22T02:25Z — PASS verdict, 74 signals / 1111 events / 3 GHOST_CLOSURE clean / FET #1159 parity verified at T+0/+1h/+24h/+48h. No re-run needed.",
+          "3_b3_daily_recon_window": "Apr 20 deploy + 7d → through Apr 27 (not Apr 26). Latest file: reconcile-2026-04-23-0153.json. Next due ~2026-04-24T01:53Z.",
+          "4_kpi_dashboards": "kpi-dashboard.json / accuracy-audit.json absent (standing P3, host/ANVIL-generated, outside GUARDIAN scope). channel-watchdog.json fresh (mtime 00:34Z). signal-gateway-health.json fresh (00:35Z)."
+        },
+        "sc4_total_signals": 1534,
+        "sc2_false_closure_pct": 6.3001,
+        "kpi_r1_pct": 9.9379,
+        "kpi_r2": 0,
+        "kpi_r3": 14,
+        "kpi_r4_pct": 69.1004,
+        "kpi_r5": 0,
+        "kpi_r6_24h": 26,
+        "kpi_r6_avg7d": 27.0,
+        "delta_since_last_tick": "+1 signal (1533→1534); sc2/r1/r4 drift <0.3pp — within tolerance",
+        "note": "No P0/P1. No canary action required. B3 close-out long-since finalized; poke item 2 is redundant request."
+      }
+    },
+    {
+      "ts": "2026-04-24T00:51:40Z",
+      "type": "SPRINT_NOTE",
+      "agent": "oinkv",
+      "payload": {
+        "oinxtractor_quality": "GREEN — extractor_ok=40, err=0. oinxtractor 9/1(non-sticky), fallback=1, circuit closed. gen=8, age=2414s. webhook_ok=113, err=0. 7/7 supervisors, 0 crashes. uptime=18615s, hb_age=4s. +3 signals since last poke.",
+        "a171_status": "UNBLOCKED_SEQUENTIALLY_GATED. sg#35 NOT_STARTED, worktree MISSING. No design blocker. Unchanged 5 pokes.",
+        "vigil_audit": "OF209-VIGIL-PHASE1-R1: TRUSTWORTHY. Score PASS (LIGHTWEIGHT — doc-only). Verified: (1) Commit 53cc9c75 on branch fix/207-deen-wif-sl-substitution adds exactly 50 lines to docs/incidents/207-deen-wif-sl-substitution.md. (2) 16 references to key themes (#185 pattern, #147 distinction, #110 co-morbid, entry/SL prices 0.17957/0.18436, 10th case) substantiate the review claims. (3) Commit message \"fix(db)\" refers to DB mutation via OinkDB (not in this diff) — review correctly scoped to doc-only content. No fabrication."
+      }
+    },
+    {
+      "event_id": "evt_20260424T005246Z_000001",
+      "ts": "2026-04-24T00:52:46Z",
+      "event_type": "AGENT_HEARTBEAT",
+      "task_id": null,
+      "phase": "C",
+      "wave": null,
+      "agent": "forge",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "current_task": "vigil-cross-check",
+        "phase": "C",
+        "note": "02:50 GMT+2 poke: VIGIL broke quiet window at 00:23:33Z with OF214-VIGIL-PHASE1-R1 REVISE 5.9. Cross-checked on gpt-5.4: AGREE. VIGIL finding independently confirmed — calculate_blended_pnl lives at scripts/kraken-sync.py:316 (oinkfarm) per grep, SOUL.md §1 row 1 marks it CRITICAL, registry files[] omits it. Detector silently clean on PnL-calc commits = false-negative in safety net. Additional finding beyond VIGIL MUST-FIX: registry path 'oink-sync/lifecycle.py' does not exist on disk (actual: oink-sync/oink_sync/lifecycle.py) — cosmetic in practice since cross-repo paths never appear in oinkfarm git diffs, but 'defensive monitor both' comment is misleading. Emitting DECISION_NEEDED for Mike on registry coverage policy (MUST-FIX-1 has two valid paths: add kraken-sync.py OR narrow contract wording).",
+        "reviews_checked_delta": [
+          {
+            "pr": 214,
+            "task_id": "M214",
+            "vigil_verdict": "REVISE",
+            "vigil_score": 5.9,
+            "forge_crosscheck": "AGREE",
+            "finding": "calculate_blended_pnl coverage gap (SOUL.md §1 row 1 absent from registry files[])",
+            "additional_gap_found": "oink-sync/lifecycle.py path does not exist — actual is oink_sync/lifecycle.py (cosmetic)"
+          }
+        ],
+        "standing_decisions_open": [
+          "Q-B9-guard-1",
+          "Q-B12-shadow-1",
+          "Q-B12-shadow-2",
+          "Q-189-2",
+          "Q-189-3",
+          "OF214-REGISTRY-COVERAGE (new, see DECISION_NEEDED)",
+          "OF176-SHOULD-FIX-1",
+          "OF168-detection-hit"
+        ],
+        "phase_c_plans": "locked clean (C1 v2 / C2 v3 / C3 v1.2 / C4 v1 / C6 v1); 15/15 invariants",
+        "b2_rollback_audit": "complete (3 polish gaps B4-relevant only)",
+        "m189_t_plus_48h_recon": "due 2026-04-24T08:00Z (~5h10m)",
+        "repo_heads": {
+          "oinkfarm": "09fcab18 (stable; fix/213 @ 67aec06f awaiting R2)",
+          "signal-gateway": "9c608d4",
+          "oink-sync": "90a3e5e"
+        },
+        "data_purity_status": "INV-13/14/15 intact; but OF214 registry gap = false-confidence risk on calculate_blended_pnl edits until Round 2 lands"
+      }
+    },
+    {
+      "event_id": "evt_20260424T005246Z_000002",
+      "ts": "2026-04-24T00:52:46Z",
+      "event_type": "DECISION_NEEDED",
+      "task_id": "M214",
+      "phase": "B",
+      "wave": null,
+      "agent": "forge",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": null,
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "question_id": "Q-OF214-REGISTRY-1",
+        "question": "VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which.",
+        "options": [
+          "add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class)",
+          "narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open)"
+        ],
+        "forge_recommendation": "add_kraken_sync_path — SOUL.md §1 ordering marks calculate_blended_pnl as row 1 (highest-value PnL function); leaving it uncovered contradicts the primitive's stated purpose (catch the PR #202-class bypass). Mechanically small: one JSON entry + one parity test. Also tighten 'oink-sync/lifecycle.py' path (should be oink_sync/lifecycle.py or dropped since cross-repo diffs don't arise in practice).",
+        "vigil_review_file": "vigil-workspace/reviews/OF214-VIGIL-PHASE1-R1.md",
+        "pr": 214,
+        "branch": "fix/213-forge-vigil-detection-hook",
+        "head_sha": "67aec06f"
+      }
+    },
+    {
+      "event_id": "evt_20260424T005714Z_000001",
+      "ts": "2026-04-24T00:57:14Z",
+      "event_type": "ARTIFACT_PUBLISHED",
+      "task_id": null,
+      "phase": null,
+      "wave": null,
+      "agent": "hermes",
+      "repo": null,
+      "branch": null,
+      "pr": null,
+      "artifact_path": "docs/oinxtractor-quality.html",
+      "status": null,
+      "blocker": null,
+      "extra": {
+        "category": "oinxtractor_quality",
+        "src_path": "docs/oinxtractor-metrics.json",
+        "latency_status": "ok",
+        "unknown_rate_status": "ok",
+        "accuracy_status": "proxy_only",
+        "corrections_status": "pending"
+      }
     }
   ],
-  "open_decisions": [],
+  "open_decisions": [
+    {
+      "question_id": "Q-OF214-REGISTRY-1",
+      "question": "VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which.",
+      "options": [
+        "add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class)",
+        "narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open)"
+      ],
+      "task_id": "M214",
+      "phase": "B",
+      "ts": "2026-04-24T00:52:46Z",
+      "age_hours": 0.07475122861111111,
+      "age_human": "4m",
+      "agent": "forge",
+      "gate_type": "generic"
+    }
+  ],
   "live_buckets": {
     "1h": [
+      {
+        "ts": "2026-04-24T00:57:14Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00030678416666666663
+      },
+      {
+        "ts": "2026-04-24T00:52:46Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": null,
+        "agent": "forge",
+        "summary": "forge heartbeat — vigil-cross-check",
+        "phase": "C",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.07475122861111111
+      },
+      {
+        "ts": "2026-04-24T00:52:46Z",
+        "event_type": "DECISION_NEEDED",
+        "task_id": "M214",
+        "agent": "forge",
+        "summary": "M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.07475122861111111
+      },
+      {
+        "ts": "2026-04-24T00:51:40Z",
+        "event_type": null,
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": " —",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.09308456194444445
+      },
+      {
+        "ts": "2026-04-24T00:35:50Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": null,
+        "agent": "guardian",
+        "summary": "guardian heartbeat — sprint_poke_response",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.3569734508333333
+      },
+      {
+        "ts": "2026-04-24T00:35:17Z",
+        "event_type": null,
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": " —",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.3661401175
+      },
+      {
+        "ts": "2026-04-24T00:32:45Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "M189",
+        "agent": "anvil",
+        "summary": "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2",
+        "phase": "M",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.40836233972222225
+      },
       {
         "ts": "2026-04-24T00:24:29Z",
         "event_type": "ARTIFACT_PUBLISHED",
@@ -66605,7 +66955,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.0001762225
+        "age_hours": 0.5461401175
       },
       {
         "ts": "2026-04-24T00:23:33Z",
@@ -66616,7 +66966,7 @@
         "phase": "B",
         "pr": 214,
         "repo": "oinkfarm",
-        "age_hours": 0.015731778055555555
+        "age_hours": 0.5616956730555556
       },
       {
         "ts": "2026-04-24T00:18:44Z",
@@ -66627,7 +66977,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.09600955583333334
+        "age_hours": 0.6419734508333333
       },
       {
         "ts": "2026-04-24T00:18:00Z",
@@ -66638,7 +66988,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.10823177805555556
+        "age_hours": 0.6541956730555556
       },
       {
         "ts": "2026-04-24T00:12:52Z",
@@ -66649,7 +66999,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1937873336111111
+        "age_hours": 0.7397512286111112
       },
       {
         "ts": "2026-04-24T00:12:52Z",
@@ -66660,7 +67010,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1937873336111111
+        "age_hours": 0.7397512286111112
       },
       {
         "ts": "2026-04-24T00:08:19Z",
@@ -66671,7 +67021,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.2696206669444445
+        "age_hours": 0.8155845619444445
       },
       {
         "ts": "2026-04-24T00:01:18Z",
@@ -66682,7 +67032,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.3865651113888889
+        "age_hours": 0.9325290063888889
       },
       {
         "ts": "2026-04-23T23:58:07Z",
@@ -66693,55 +67043,88 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.43962066694444446
-      },
-      {
-        "ts": "2026-04-23T23:47:29Z",
-        "event_type": null,
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": " —",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.6168428891666666
-      },
-      {
-        "ts": "2026-04-23T23:45:48Z",
-        "event_type": "AGENT_HEARTBEAT",
-        "task_id": null,
-        "agent": "forge",
-        "summary": "forge heartbeat — vigil-cross-check",
-        "phase": "C",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.6448984447222221
-      },
-      {
-        "ts": "2026-04-23T23:32:37Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "M189",
-        "agent": "anvil",
-        "summary": "No-delta tick. Prior note evt_20260423T231238Z_000001 confirmed emitted despite transcript repair noise. Since then: routine heartbeats (for",
-        "phase": "M",
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.8646206669444444
-      },
-      {
-        "ts": "2026-04-23T23:28:55Z",
-        "event_type": null,
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": " —",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 0.926287333611111
+        "age_hours": 0.9855845619444445
       }
     ],
     "4h": [
       {
+        "ts": "2026-04-24T00:57:14Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00030678416666666663
+      },
+      {
+        "ts": "2026-04-24T00:52:46Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": null,
+        "agent": "forge",
+        "summary": "forge heartbeat — vigil-cross-check",
+        "phase": "C",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.07475122861111111
+      },
+      {
+        "ts": "2026-04-24T00:52:46Z",
+        "event_type": "DECISION_NEEDED",
+        "task_id": "M214",
+        "agent": "forge",
+        "summary": "M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.07475122861111111
+      },
+      {
+        "ts": "2026-04-24T00:51:40Z",
+        "event_type": null,
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": " —",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.09308456194444445
+      },
+      {
+        "ts": "2026-04-24T00:35:50Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": null,
+        "agent": "guardian",
+        "summary": "guardian heartbeat — sprint_poke_response",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.3569734508333333
+      },
+      {
+        "ts": "2026-04-24T00:35:17Z",
+        "event_type": null,
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": " —",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.3661401175
+      },
+      {
+        "ts": "2026-04-24T00:32:45Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "M189",
+        "agent": "anvil",
+        "summary": "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2",
+        "phase": "M",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.40836233972222225
+      },
+      {
         "ts": "2026-04-24T00:24:29Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -66750,7 +67133,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.0001762225
+        "age_hours": 0.5461401175
       },
       {
         "ts": "2026-04-24T00:23:33Z",
@@ -66761,7 +67144,7 @@
         "phase": "B",
         "pr": 214,
         "repo": "oinkfarm",
-        "age_hours": 0.015731778055555555
+        "age_hours": 0.5616956730555556
       },
       {
         "ts": "2026-04-24T00:18:44Z",
@@ -66772,7 +67155,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.09600955583333334
+        "age_hours": 0.6419734508333333
       },
       {
         "ts": "2026-04-24T00:18:00Z",
@@ -66783,7 +67166,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.10823177805555556
+        "age_hours": 0.6541956730555556
       },
       {
         "ts": "2026-04-24T00:12:52Z",
@@ -66794,7 +67177,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1937873336111111
+        "age_hours": 0.7397512286111112
       },
       {
         "ts": "2026-04-24T00:12:52Z",
@@ -66805,7 +67188,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1937873336111111
+        "age_hours": 0.7397512286111112
       },
       {
         "ts": "2026-04-24T00:08:19Z",
@@ -66816,7 +67199,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.2696206669444445
+        "age_hours": 0.8155845619444445
       },
       {
         "ts": "2026-04-24T00:01:18Z",
@@ -66827,7 +67210,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.3865651113888889
+        "age_hours": 0.9325290063888889
       },
       {
         "ts": "2026-04-23T23:58:07Z",
@@ -66838,7 +67221,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.43962066694444446
+        "age_hours": 0.9855845619444445
       },
       {
         "ts": "2026-04-23T23:47:29Z",
@@ -66849,7 +67232,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6168428891666666
+        "age_hours": 1.1628067841666665
       },
       {
         "ts": "2026-04-23T23:45:48Z",
@@ -66860,7 +67243,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.6448984447222221
+        "age_hours": 1.1908623397222222
       },
       {
         "ts": "2026-04-23T23:32:37Z",
@@ -66871,7 +67254,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8646206669444444
+        "age_hours": 1.4105845619444444
       },
       {
         "ts": "2026-04-23T23:28:55Z",
@@ -66882,7 +67265,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.926287333611111
+        "age_hours": 1.4722512286111111
       },
       {
         "ts": "2026-04-23T23:20:56Z",
@@ -66893,7 +67276,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0593428891666665
+        "age_hours": 1.6053067841666666
       },
       {
         "ts": "2026-04-23T23:14:19Z",
@@ -66904,7 +67287,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.1696206669444444
+        "age_hours": 1.7155845619444443
       },
       {
         "ts": "2026-04-23T23:13:43Z",
@@ -66915,7 +67298,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.1796206669444445
+        "age_hours": 1.7255845619444443
       },
       {
         "ts": "2026-04-23T23:13:27Z",
@@ -66926,7 +67309,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 1.184065111388889
+        "age_hours": 1.7300290063888888
       },
       {
         "ts": "2026-04-23T23:12:38Z",
@@ -66937,7 +67320,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 1.1976762225000002
+        "age_hours": 1.7436401175
       },
       {
         "ts": "2026-04-23T22:55:00Z",
@@ -66948,7 +67331,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.491565111388889
+        "age_hours": 2.0375290063888887
       },
       {
         "ts": "2026-04-23T22:52:35Z",
@@ -66959,7 +67342,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 1.5318428891666667
+        "age_hours": 2.0778067841666665
       },
       {
         "ts": "2026-04-23T22:41:13Z",
@@ -66970,7 +67353,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 1.7212873336111112
+        "age_hours": 2.267251228611111
       },
       {
         "ts": "2026-04-23T22:40:02Z",
@@ -66981,7 +67364,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.7410095558333334
+        "age_hours": 2.2869734508333335
       },
       {
         "ts": "2026-04-23T22:39:00Z",
@@ -66992,7 +67375,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.7582317780555556
+        "age_hours": 2.3041956730555557
       },
       {
         "ts": "2026-04-23T22:32:37Z",
@@ -67003,7 +67386,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 1.8646206669444445
+        "age_hours": 2.410584561944445
       },
       {
         "ts": "2026-04-23T22:22:00Z",
@@ -67014,7 +67397,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.041565111388889
+        "age_hours": 2.587529006388889
       },
       {
         "ts": "2026-04-23T22:17:07Z",
@@ -67025,7 +67408,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.122954000277778
+        "age_hours": 2.668917895277778
       },
       {
         "ts": "2026-04-23T22:14:34Z",
@@ -67036,7 +67419,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 2.165454000277778
+        "age_hours": 2.711417895277778
       },
       {
         "ts": "2026-04-23T22:13:04Z",
@@ -67047,7 +67430,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 2.1904540002777777
+        "age_hours": 2.736417895277778
       },
       {
         "ts": "2026-04-23T22:08:00Z",
@@ -67058,7 +67441,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.2748984447222225
+        "age_hours": 2.8208623397222223
       },
       {
         "ts": "2026-04-23T21:59:00Z",
@@ -67069,7 +67452,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.424898444722222
+        "age_hours": 2.9708623397222222
       },
       {
         "ts": "2026-04-23T21:58:46Z",
@@ -67080,7 +67463,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.428787333611111
+        "age_hours": 2.9747512286111113
       },
       {
         "ts": "2026-04-23T21:52:40Z",
@@ -67091,7 +67474,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 2.5304540002777776
+        "age_hours": 3.076417895277778
       },
       {
         "ts": "2026-04-23T21:45:55Z",
@@ -67102,7 +67485,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 2.6429540002777774
+        "age_hours": 3.188917895277778
       },
       {
         "ts": "2026-04-23T21:45:00Z",
@@ -67113,7 +67496,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.6582317780555553
+        "age_hours": 3.2041956730555556
       },
       {
         "ts": "2026-04-23T21:37:21Z",
@@ -67124,7 +67507,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.7857317780555553
+        "age_hours": 3.3316956730555556
       },
       {
         "ts": "2026-04-23T21:30:12Z",
@@ -67135,7 +67518,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.904898444722222
+        "age_hours": 3.4508623397222222
       },
       {
         "ts": "2026-04-23T21:30:00Z",
@@ -67146,7 +67529,7 @@
         "phase": "B",
         "pr": 202,
         "repo": "oinkfarm",
-        "age_hours": 2.9082317780555553
+        "age_hours": 3.4541956730555556
       },
       {
         "ts": "2026-04-23T21:28:00Z",
@@ -67157,7 +67540,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.9415651113888885
+        "age_hours": 3.4875290063888893
       },
       {
         "ts": "2026-04-23T21:26:59Z",
@@ -67168,7 +67551,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 2.958509555833333
+        "age_hours": 3.5044734508333337
       },
       {
         "ts": "2026-04-23T21:26:44Z",
@@ -67179,7 +67562,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.9626762225
+        "age_hours": 3.5086401175
       },
       {
         "ts": "2026-04-23T21:15:54Z",
@@ -67190,7 +67573,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.143231778055555
+        "age_hours": 3.689195673055556
       },
       {
         "ts": "2026-04-23T21:12:46Z",
@@ -67201,7 +67584,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 3.1954540002777776
+        "age_hours": 3.741417895277778
       },
       {
         "ts": "2026-04-23T21:12:40Z",
@@ -67212,7 +67595,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 3.197120666944444
+        "age_hours": 3.743084561944445
       },
       {
         "ts": "2026-04-23T21:12:13Z",
@@ -67223,7 +67606,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 3.2046206669444444
+        "age_hours": 3.7505845619444447
       },
       {
         "ts": "2026-04-23T21:11:30Z",
@@ -67234,7 +67617,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.216565111388889
+        "age_hours": 3.762529006388889
       },
       {
         "ts": "2026-04-23T21:08:30Z",
@@ -67245,7 +67628,7 @@
         "phase": "B",
         "pr": 176,
         "repo": "oinkfarm",
-        "age_hours": 3.2665651113888887
+        "age_hours": 3.812529006388889
       },
       {
         "ts": "2026-04-23T21:04:53Z",
@@ -67256,7 +67639,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.3268428891666666
+        "age_hours": 3.872806784166667
       },
       {
         "ts": "2026-04-23T21:04:23Z",
@@ -67267,66 +67650,88 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.3351762225
-      },
-      {
-        "ts": "2026-04-23T20:56:21Z",
-        "event_type": "AGENT_HEARTBEAT",
-        "task_id": null,
-        "agent": "forge",
-        "summary": "forge heartbeat — vigil-cross-check",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.469065111388889
-      },
-      {
-        "ts": "2026-04-23T20:53:43Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.5129540002777775
-      },
-      {
-        "ts": "2026-04-23T20:39:15Z",
-        "event_type": null,
-        "task_id": null,
-        "agent": "oinkv",
-        "summary": " —",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.7540651113888885
-      },
-      {
-        "ts": "2026-04-23T20:38:08Z",
-        "event_type": "AGENT_HEARTBEAT",
-        "task_id": "M189",
-        "agent": "guardian",
-        "summary": "guardian heartbeat — SPRINT POKE 22:37 GMT+2 sweep",
-        "phase": "meta",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.7726762225
-      },
-      {
-        "ts": "2026-04-23T20:37:53Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "M189",
-        "agent": "anvil",
-        "summary": "Quiet post-canary tick. Scan window 19:52:45Z → 20:24Z.\n(1) #189: merged + canary PASSED at 08:29:46Z. Cron prompt still asking about PROPOS",
-        "phase": "M",
-        "pr": null,
-        "repo": null,
-        "age_hours": 3.7768428891666663
+        "age_hours": 3.8811401175
       }
     ],
     "24h": [
       {
+        "ts": "2026-04-24T00:57:14Z",
+        "event_type": "ARTIFACT_PUBLISHED",
+        "task_id": null,
+        "agent": "hermes",
+        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.00030678416666666663
+      },
+      {
+        "ts": "2026-04-24T00:52:46Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": null,
+        "agent": "forge",
+        "summary": "forge heartbeat — vigil-cross-check",
+        "phase": "C",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.07475122861111111
+      },
+      {
+        "ts": "2026-04-24T00:52:46Z",
+        "event_type": "DECISION_NEEDED",
+        "task_id": "M214",
+        "agent": "forge",
+        "summary": "M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu",
+        "phase": "B",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.07475122861111111
+      },
+      {
+        "ts": "2026-04-24T00:51:40Z",
+        "event_type": null,
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": " —",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.09308456194444445
+      },
+      {
+        "ts": "2026-04-24T00:35:50Z",
+        "event_type": "AGENT_HEARTBEAT",
+        "task_id": null,
+        "agent": "guardian",
+        "summary": "guardian heartbeat — sprint_poke_response",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.3569734508333333
+      },
+      {
+        "ts": "2026-04-24T00:35:17Z",
+        "event_type": null,
+        "task_id": null,
+        "agent": "oinkv",
+        "summary": " —",
+        "phase": null,
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.3661401175
+      },
+      {
+        "ts": "2026-04-24T00:32:45Z",
+        "event_type": "SPRINT_NOTE",
+        "task_id": "M189",
+        "agent": "anvil",
+        "summary": "No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2",
+        "phase": "M",
+        "pr": null,
+        "repo": null,
+        "age_hours": 0.40836233972222225
+      },
+      {
         "ts": "2026-04-24T00:24:29Z",
         "event_type": "ARTIFACT_PUBLISHED",
         "task_id": null,
@@ -67335,7 +67740,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.0001762225
+        "age_hours": 0.5461401175
       },
       {
         "ts": "2026-04-24T00:23:33Z",
@@ -67346,7 +67751,7 @@
         "phase": "B",
         "pr": 214,
         "repo": "oinkfarm",
-        "age_hours": 0.015731778055555555
+        "age_hours": 0.5616956730555556
       },
       {
         "ts": "2026-04-24T00:18:44Z",
@@ -67357,7 +67762,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.09600955583333334
+        "age_hours": 0.6419734508333333
       },
       {
         "ts": "2026-04-24T00:18:00Z",
@@ -67368,7 +67773,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.10823177805555556
+        "age_hours": 0.6541956730555556
       },
       {
         "ts": "2026-04-24T00:12:52Z",
@@ -67379,7 +67784,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1937873336111111
+        "age_hours": 0.7397512286111112
       },
       {
         "ts": "2026-04-24T00:12:52Z",
@@ -67390,7 +67795,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.1937873336111111
+        "age_hours": 0.7397512286111112
       },
       {
         "ts": "2026-04-24T00:08:19Z",
@@ -67401,7 +67806,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.2696206669444445
+        "age_hours": 0.8155845619444445
       },
       {
         "ts": "2026-04-24T00:01:18Z",
@@ -67412,7 +67817,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.3865651113888889
+        "age_hours": 0.9325290063888889
       },
       {
         "ts": "2026-04-23T23:58:07Z",
@@ -67423,7 +67828,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.43962066694444446
+        "age_hours": 0.9855845619444445
       },
       {
         "ts": "2026-04-23T23:47:29Z",
@@ -67434,7 +67839,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.6168428891666666
+        "age_hours": 1.1628067841666665
       },
       {
         "ts": "2026-04-23T23:45:48Z",
@@ -67445,7 +67850,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 0.6448984447222221
+        "age_hours": 1.1908623397222222
       },
       {
         "ts": "2026-04-23T23:32:37Z",
@@ -67456,7 +67861,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 0.8646206669444444
+        "age_hours": 1.4105845619444444
       },
       {
         "ts": "2026-04-23T23:28:55Z",
@@ -67467,7 +67872,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 0.926287333611111
+        "age_hours": 1.4722512286111111
       },
       {
         "ts": "2026-04-23T23:20:56Z",
@@ -67478,7 +67883,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.0593428891666665
+        "age_hours": 1.6053067841666666
       },
       {
         "ts": "2026-04-23T23:14:19Z",
@@ -67489,7 +67894,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.1696206669444444
+        "age_hours": 1.7155845619444443
       },
       {
         "ts": "2026-04-23T23:13:43Z",
@@ -67500,7 +67905,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.1796206669444445
+        "age_hours": 1.7255845619444443
       },
       {
         "ts": "2026-04-23T23:13:27Z",
@@ -67511,7 +67916,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 1.184065111388889
+        "age_hours": 1.7300290063888888
       },
       {
         "ts": "2026-04-23T23:12:38Z",
@@ -67522,7 +67927,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 1.1976762225000002
+        "age_hours": 1.7436401175
       },
       {
         "ts": "2026-04-23T22:55:00Z",
@@ -67533,7 +67938,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.491565111388889
+        "age_hours": 2.0375290063888887
       },
       {
         "ts": "2026-04-23T22:52:35Z",
@@ -67544,7 +67949,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 1.5318428891666667
+        "age_hours": 2.0778067841666665
       },
       {
         "ts": "2026-04-23T22:41:13Z",
@@ -67555,7 +67960,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 1.7212873336111112
+        "age_hours": 2.267251228611111
       },
       {
         "ts": "2026-04-23T22:40:02Z",
@@ -67566,7 +67971,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.7410095558333334
+        "age_hours": 2.2869734508333335
       },
       {
         "ts": "2026-04-23T22:39:00Z",
@@ -67577,7 +67982,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 1.7582317780555556
+        "age_hours": 2.3041956730555557
       },
       {
         "ts": "2026-04-23T22:32:37Z",
@@ -67588,7 +67993,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 1.8646206669444445
+        "age_hours": 2.410584561944445
       },
       {
         "ts": "2026-04-23T22:22:00Z",
@@ -67599,7 +68004,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.041565111388889
+        "age_hours": 2.587529006388889
       },
       {
         "ts": "2026-04-23T22:17:07Z",
@@ -67610,7 +68015,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.122954000277778
+        "age_hours": 2.668917895277778
       },
       {
         "ts": "2026-04-23T22:14:34Z",
@@ -67621,7 +68026,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 2.165454000277778
+        "age_hours": 2.711417895277778
       },
       {
         "ts": "2026-04-23T22:13:04Z",
@@ -67632,7 +68037,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 2.1904540002777777
+        "age_hours": 2.736417895277778
       },
       {
         "ts": "2026-04-23T22:08:00Z",
@@ -67643,7 +68048,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.2748984447222225
+        "age_hours": 2.8208623397222223
       },
       {
         "ts": "2026-04-23T21:59:00Z",
@@ -67654,7 +68059,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.424898444722222
+        "age_hours": 2.9708623397222222
       },
       {
         "ts": "2026-04-23T21:58:46Z",
@@ -67665,7 +68070,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.428787333611111
+        "age_hours": 2.9747512286111113
       },
       {
         "ts": "2026-04-23T21:52:40Z",
@@ -67676,7 +68081,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 2.5304540002777776
+        "age_hours": 3.076417895277778
       },
       {
         "ts": "2026-04-23T21:45:55Z",
@@ -67687,7 +68092,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 2.6429540002777774
+        "age_hours": 3.188917895277778
       },
       {
         "ts": "2026-04-23T21:45:00Z",
@@ -67698,7 +68103,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.6582317780555553
+        "age_hours": 3.2041956730555556
       },
       {
         "ts": "2026-04-23T21:37:21Z",
@@ -67709,7 +68114,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.7857317780555553
+        "age_hours": 3.3316956730555556
       },
       {
         "ts": "2026-04-23T21:30:12Z",
@@ -67720,7 +68125,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.904898444722222
+        "age_hours": 3.4508623397222222
       },
       {
         "ts": "2026-04-23T21:30:00Z",
@@ -67731,7 +68136,7 @@
         "phase": "B",
         "pr": 202,
         "repo": "oinkfarm",
-        "age_hours": 2.9082317780555553
+        "age_hours": 3.4541956730555556
       },
       {
         "ts": "2026-04-23T21:28:00Z",
@@ -67742,7 +68147,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.9415651113888885
+        "age_hours": 3.4875290063888893
       },
       {
         "ts": "2026-04-23T21:26:59Z",
@@ -67753,7 +68158,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 2.958509555833333
+        "age_hours": 3.5044734508333337
       },
       {
         "ts": "2026-04-23T21:26:44Z",
@@ -67764,7 +68169,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 2.9626762225
+        "age_hours": 3.5086401175
       },
       {
         "ts": "2026-04-23T21:15:54Z",
@@ -67775,7 +68180,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.143231778055555
+        "age_hours": 3.689195673055556
       },
       {
         "ts": "2026-04-23T21:12:46Z",
@@ -67786,7 +68191,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 3.1954540002777776
+        "age_hours": 3.741417895277778
       },
       {
         "ts": "2026-04-23T21:12:40Z",
@@ -67797,7 +68202,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 3.197120666944444
+        "age_hours": 3.743084561944445
       },
       {
         "ts": "2026-04-23T21:12:13Z",
@@ -67808,7 +68213,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 3.2046206669444444
+        "age_hours": 3.7505845619444447
       },
       {
         "ts": "2026-04-23T21:11:30Z",
@@ -67819,7 +68224,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.216565111388889
+        "age_hours": 3.762529006388889
       },
       {
         "ts": "2026-04-23T21:08:30Z",
@@ -67830,7 +68235,7 @@
         "phase": "B",
         "pr": 176,
         "repo": "oinkfarm",
-        "age_hours": 3.2665651113888887
+        "age_hours": 3.812529006388889
       },
       {
         "ts": "2026-04-23T21:04:53Z",
@@ -67841,7 +68246,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.3268428891666666
+        "age_hours": 3.872806784166667
       },
       {
         "ts": "2026-04-23T21:04:23Z",
@@ -67852,7 +68257,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.3351762225
+        "age_hours": 3.8811401175
       },
       {
         "ts": "2026-04-23T20:56:21Z",
@@ -67863,7 +68268,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.469065111388889
+        "age_hours": 4.015029006388889
       },
       {
         "ts": "2026-04-23T20:53:43Z",
@@ -67874,7 +68279,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.5129540002777775
+        "age_hours": 4.058917895277778
       },
       {
         "ts": "2026-04-23T20:39:15Z",
@@ -67885,7 +68290,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 3.7540651113888885
+        "age_hours": 4.300029006388889
       },
       {
         "ts": "2026-04-23T20:38:08Z",
@@ -67896,7 +68301,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 3.7726762225
+        "age_hours": 4.3186401175
       },
       {
         "ts": "2026-04-23T20:37:53Z",
@@ -67907,7 +68312,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 3.7768428891666663
+        "age_hours": 4.322806784166667
       },
       {
         "ts": "2026-04-23T20:23:36Z",
@@ -67918,7 +68323,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.014898444722222
+        "age_hours": 4.560862339722222
       },
       {
         "ts": "2026-04-23T20:22:14Z",
@@ -67929,7 +68334,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.0376762225
+        "age_hours": 4.5836401175
       },
       {
         "ts": "2026-04-23T20:15:00Z",
@@ -67940,7 +68345,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.158231778055556
+        "age_hours": 4.704195673055556
       },
       {
         "ts": "2026-04-23T20:12:42Z",
@@ -67951,7 +68356,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 4.196565111388889
+        "age_hours": 4.742529006388889
       },
       {
         "ts": "2026-04-23T19:58:57Z",
@@ -67962,7 +68367,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 4.425731778055555
+        "age_hours": 4.971695673055556
       },
       {
         "ts": "2026-04-23T19:52:45Z",
@@ -67973,7 +68378,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 4.5290651113888885
+        "age_hours": 5.075029006388889
       },
       {
         "ts": "2026-04-23T19:51:09Z",
@@ -67984,7 +68389,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.555731778055556
+        "age_hours": 5.101695673055556
       },
       {
         "ts": "2026-04-23T19:48:49Z",
@@ -67995,7 +68400,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.5946206669444445
+        "age_hours": 5.140584561944444
       },
       {
         "ts": "2026-04-23T19:32:52Z",
@@ -68006,7 +68411,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 4.860454000277778
+        "age_hours": 5.406417895277778
       },
       {
         "ts": "2026-04-23T19:31:12Z",
@@ -68017,7 +68422,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 4.888231778055555
+        "age_hours": 5.434195673055556
       },
       {
         "ts": "2026-04-23T19:24:33Z",
@@ -68028,7 +68433,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 4.999065111388889
+        "age_hours": 5.545029006388889
       },
       {
         "ts": "2026-04-23T19:16:43Z",
@@ -68039,7 +68444,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.129620666944445
+        "age_hours": 5.6755845619444445
       },
       {
         "ts": "2026-04-23T19:15:31Z",
@@ -68050,7 +68455,7 @@
         "phase": "B",
         "pr": null,
         "repo": "signal-gateway",
-        "age_hours": 5.149620666944444
+        "age_hours": 5.695584561944445
       },
       {
         "ts": "2026-04-23T19:12:38Z",
@@ -68061,7 +68466,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 5.1976762225
+        "age_hours": 5.7436401175
       },
       {
         "ts": "2026-04-23T18:58:05Z",
@@ -68072,7 +68477,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 5.4401762225
+        "age_hours": 5.9861401175
       },
       {
         "ts": "2026-04-23T18:53:40Z",
@@ -68083,7 +68488,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 5.513787333611111
+        "age_hours": 6.059751228611112
       },
       {
         "ts": "2026-04-23T18:45:37Z",
@@ -68094,7 +68499,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.647954000277777
+        "age_hours": 6.193917895277778
       },
       {
         "ts": "2026-04-23T18:43:39Z",
@@ -68105,7 +68510,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 5.680731778055556
+        "age_hours": 6.226695673055556
       },
       {
         "ts": "2026-04-23T18:32:52Z",
@@ -68116,7 +68521,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 5.860454000277778
+        "age_hours": 6.406417895277778
       },
       {
         "ts": "2026-04-23T18:24:47Z",
@@ -68127,7 +68532,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 5.9951762225
+        "age_hours": 6.5411401175
       },
       {
         "ts": "2026-04-23T18:23:16Z",
@@ -68138,7 +68543,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 6.020454000277778
+        "age_hours": 6.566417895277778
       },
       {
         "ts": "2026-04-23T18:23:16Z",
@@ -68149,7 +68554,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 6.020454000277778
+        "age_hours": 6.566417895277778
       },
       {
         "ts": "2026-04-23T18:14:04Z",
@@ -68160,7 +68565,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.173787333611111
+        "age_hours": 6.719751228611111
       },
       {
         "ts": "2026-04-23T18:12:43Z",
@@ -68171,7 +68576,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 6.196287333611111
+        "age_hours": 6.742251228611111
       },
       {
         "ts": "2026-04-23T18:02:34Z",
@@ -68182,7 +68587,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 6.3654540002777775
+        "age_hours": 6.911417895277778
       },
       {
         "ts": "2026-04-23T17:53:15Z",
@@ -68193,7 +68598,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 6.520731778055556
+        "age_hours": 7.0666956730555555
       },
       {
         "ts": "2026-04-23T17:49:49Z",
@@ -68204,7 +68609,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 6.577954000277778
+        "age_hours": 7.123917895277778
       },
       {
         "ts": "2026-04-23T17:49:49Z",
@@ -68215,7 +68620,7 @@
         "phase": "B",
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 6.577954000277778
+        "age_hours": 7.123917895277778
       },
       {
         "ts": "2026-04-23T17:46:01Z",
@@ -68226,7 +68631,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.641287333611111
+        "age_hours": 7.187251228611111
       },
       {
         "ts": "2026-04-23T17:32:44Z",
@@ -68237,7 +68642,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 6.8626762225
+        "age_hours": 7.4086401175
       },
       {
         "ts": "2026-04-23T17:30:31Z",
@@ -68248,7 +68653,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.899620666944444
+        "age_hours": 7.445584561944445
       },
       {
         "ts": "2026-04-23T17:29:36Z",
@@ -68259,7 +68664,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 6.914898444722222
+        "age_hours": 7.4608623397222225
       },
       {
         "ts": "2026-04-23T17:28:40Z",
@@ -68270,7 +68675,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 6.930454000277778
+        "age_hours": 7.476417895277778
       },
       {
         "ts": "2026-04-23T17:28:25Z",
@@ -68281,7 +68686,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 6.934620666944444
+        "age_hours": 7.480584561944444
       },
       {
         "ts": "2026-04-23T17:28:12Z",
@@ -68292,7 +68697,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 6.938231778055555
+        "age_hours": 7.484195673055556
       },
       {
         "ts": "2026-04-23T17:17:48Z",
@@ -68303,7 +68708,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.111565111388889
+        "age_hours": 7.657529006388889
       },
       {
         "ts": "2026-04-23T17:12:57Z",
@@ -68314,7 +68719,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.1923984447222225
+        "age_hours": 7.738362339722222
       },
       {
         "ts": "2026-04-23T16:58:04Z",
@@ -68325,7 +68730,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 7.440454000277778
+        "age_hours": 7.986417895277778
       },
       {
         "ts": "2026-04-23T16:56:47Z",
@@ -68336,7 +68741,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.461842889166666
+        "age_hours": 8.007806784166666
       },
       {
         "ts": "2026-04-23T16:56:40Z",
@@ -68347,7 +68752,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.463787333611111
+        "age_hours": 8.009751228611112
       },
       {
         "ts": "2026-04-23T16:52:40Z",
@@ -68358,7 +68763,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 7.530454000277778
+        "age_hours": 8.076417895277778
       },
       {
         "ts": "2026-04-23T16:45:22Z",
@@ -68369,7 +68774,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.652120666944445
+        "age_hours": 8.198084561944444
       },
       {
         "ts": "2026-04-23T16:41:35Z",
@@ -68380,7 +68785,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 7.7151762225
+        "age_hours": 8.2611401175
       },
       {
         "ts": "2026-04-23T16:39:46Z",
@@ -68391,7 +68796,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 7.745454000277777
+        "age_hours": 8.291417895277778
       },
       {
         "ts": "2026-04-23T16:32:37Z",
@@ -68402,7 +68807,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 7.864620666944444
+        "age_hours": 8.410584561944445
       },
       {
         "ts": "2026-04-23T16:24:03Z",
@@ -68413,7 +68818,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.007398444722222
+        "age_hours": 8.553362339722222
       },
       {
         "ts": "2026-04-23T16:23:24Z",
@@ -68424,7 +68829,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.018231778055556
+        "age_hours": 8.564195673055556
       },
       {
         "ts": "2026-04-23T16:12:42Z",
@@ -68435,7 +68840,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 8.196565111388889
+        "age_hours": 8.742529006388889
       },
       {
         "ts": "2026-04-23T16:12:26Z",
@@ -68446,7 +68851,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.201009555833334
+        "age_hours": 8.746973450833334
       },
       {
         "ts": "2026-04-23T16:07:16Z",
@@ -68457,7 +68862,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.287120666944444
+        "age_hours": 8.833084561944444
       },
       {
         "ts": "2026-04-23T15:58:16Z",
@@ -68468,7 +68873,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 8.437120666944445
+        "age_hours": 8.983084561944445
       },
       {
         "ts": "2026-04-23T15:52:40Z",
@@ -68479,7 +68884,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 8.530454000277778
+        "age_hours": 9.076417895277778
       },
       {
         "ts": "2026-04-23T15:51:18Z",
@@ -68490,7 +68895,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.553231778055556
+        "age_hours": 9.099195673055556
       },
       {
         "ts": "2026-04-23T15:50:31Z",
@@ -68501,7 +68906,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.566287333611111
+        "age_hours": 9.112251228611111
       },
       {
         "ts": "2026-04-23T15:49:30Z",
@@ -68512,7 +68917,7 @@
         "phase": "C",
         "pr": null,
         "repo": null,
-        "age_hours": 8.583231778055556
+        "age_hours": 9.129195673055555
       },
       {
         "ts": "2026-04-23T15:43:20Z",
@@ -68523,7 +68928,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.686009555833333
+        "age_hours": 9.231973450833333
       },
       {
         "ts": "2026-04-23T15:36:23Z",
@@ -68534,7 +68939,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.801842889166666
+        "age_hours": 9.347806784166666
       },
       {
         "ts": "2026-04-23T15:33:49Z",
@@ -68545,7 +68950,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 8.844620666944444
+        "age_hours": 9.390584561944443
       },
       {
         "ts": "2026-04-23T15:29:07Z",
@@ -68556,7 +68961,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 8.922954000277777
+        "age_hours": 9.468917895277777
       },
       {
         "ts": "2026-04-23T15:28:55Z",
@@ -68567,7 +68972,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 8.92628733361111
+        "age_hours": 9.47225122861111
       },
       {
         "ts": "2026-04-23T15:13:24Z",
@@ -68578,7 +68983,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.184898444722222
+        "age_hours": 9.730862339722222
       },
       {
         "ts": "2026-04-23T15:12:46Z",
@@ -68589,7 +68994,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 9.19545400027778
+        "age_hours": 9.741417895277777
       },
       {
         "ts": "2026-04-23T15:12:33Z",
@@ -68600,7 +69005,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.19906511138889
+        "age_hours": 9.745029006388888
       },
       {
         "ts": "2026-04-23T15:01:12Z",
@@ -68611,7 +69016,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.388231778055557
+        "age_hours": 9.934195673055555
       },
       {
         "ts": "2026-04-23T14:58:22Z",
@@ -68622,7 +69027,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 9.435454000277778
+        "age_hours": 9.981417895277778
       },
       {
         "ts": "2026-04-23T14:55:12Z",
@@ -68633,7 +69038,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.488231778055557
+        "age_hours": 10.034195673055555
       },
       {
         "ts": "2026-04-23T14:52:49Z",
@@ -68644,7 +69049,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 9.527954000277779
+        "age_hours": 10.073917895277777
       },
       {
         "ts": "2026-04-23T14:39:53Z",
@@ -68655,7 +69060,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.743509555833334
+        "age_hours": 10.289473450833333
       },
       {
         "ts": "2026-04-23T14:39:25Z",
@@ -68666,7 +69071,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.751287333611112
+        "age_hours": 10.29725122861111
       },
       {
         "ts": "2026-04-23T14:38:51Z",
@@ -68677,7 +69082,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 9.760731778055556
+        "age_hours": 10.306695673055554
       },
       {
         "ts": "2026-04-23T14:38:46Z",
@@ -68688,7 +69093,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 9.762120666944446
+        "age_hours": 10.308084561944444
       },
       {
         "ts": "2026-04-23T14:27:46Z",
@@ -68699,7 +69104,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 9.94545400027778
+        "age_hours": 10.491417895277777
       },
       {
         "ts": "2026-04-23T14:23:17Z",
@@ -68710,7 +69115,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.0201762225
+        "age_hours": 10.5661401175
       },
       {
         "ts": "2026-04-23T14:22:58Z",
@@ -68721,7 +69126,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.02545400027778
+        "age_hours": 10.571417895277778
       },
       {
         "ts": "2026-04-23T14:12:40Z",
@@ -68732,7 +69137,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 10.197120666944445
+        "age_hours": 10.743084561944444
       },
       {
         "ts": "2026-04-23T14:06:22Z",
@@ -68743,7 +69148,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.302120666944445
+        "age_hours": 10.848084561944443
       },
       {
         "ts": "2026-04-23T14:05:19Z",
@@ -68754,7 +69159,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.319620666944445
+        "age_hours": 10.865584561944443
       },
       {
         "ts": "2026-04-23T14:05:03Z",
@@ -68765,7 +69170,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 10.32406511138889
+        "age_hours": 10.870029006388888
       },
       {
         "ts": "2026-04-23T13:55:24Z",
@@ -68776,7 +69181,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.484898444722223
+        "age_hours": 11.030862339722221
       },
       {
         "ts": "2026-04-23T13:52:46Z",
@@ -68787,7 +69192,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 10.528787333611112
+        "age_hours": 11.07475122861111
       },
       {
         "ts": "2026-04-23T13:49:28Z",
@@ -68798,7 +69203,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.583787333611111
+        "age_hours": 11.129751228611111
       },
       {
         "ts": "2026-04-23T13:44:04Z",
@@ -68809,7 +69214,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.673787333611111
+        "age_hours": 11.219751228611111
       },
       {
         "ts": "2026-04-23T13:36:12Z",
@@ -68820,7 +69225,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 10.804898444722223
+        "age_hours": 11.350862339722221
       },
       {
         "ts": "2026-04-23T13:34:14Z",
@@ -68831,7 +69236,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 10.8376762225
+        "age_hours": 11.383640117499999
       },
       {
         "ts": "2026-04-23T13:32:48Z",
@@ -68842,7 +69247,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 10.86156511138889
+        "age_hours": 11.407529006388888
       },
       {
         "ts": "2026-04-23T13:17:17Z",
@@ -68853,7 +69258,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.120176222500001
+        "age_hours": 11.6661401175
       },
       {
         "ts": "2026-04-23T13:12:47Z",
@@ -68864,7 +69269,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 11.1951762225
+        "age_hours": 11.741140117499999
       },
       {
         "ts": "2026-04-23T13:11:00Z",
@@ -68875,7 +69280,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.224898444722223
+        "age_hours": 11.770862339722221
       },
       {
         "ts": "2026-04-23T12:54:45Z",
@@ -68886,7 +69291,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.495731778055557
+        "age_hours": 12.041695673055555
       },
       {
         "ts": "2026-04-23T12:54:12Z",
@@ -68897,7 +69302,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.504898444722222
+        "age_hours": 12.05086233972222
       },
       {
         "ts": "2026-04-23T12:53:52Z",
@@ -68908,7 +69313,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 11.510454000277779
+        "age_hours": 12.056417895277777
       },
       {
         "ts": "2026-04-23T12:52:49Z",
@@ -68919,7 +69324,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 11.527954000277779
+        "age_hours": 12.073917895277777
       },
       {
         "ts": "2026-04-23T12:43:43Z",
@@ -68930,7 +69335,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.679620666944444
+        "age_hours": 12.225584561944444
       },
       {
         "ts": "2026-04-23T12:38:11Z",
@@ -68941,7 +69346,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 11.771842889166667
+        "age_hours": 12.317806784166665
       },
       {
         "ts": "2026-04-23T12:32:46Z",
@@ -68952,7 +69357,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 11.862120666944445
+        "age_hours": 12.408084561944444
       },
       {
         "ts": "2026-04-23T12:31:20Z",
@@ -68963,7 +69368,7 @@
         "phase": null,
         "pr": null,
         "repo": "oinkfarm",
-        "age_hours": 11.886009555833335
+        "age_hours": 12.431973450833333
       },
       {
         "ts": "2026-04-23T12:22:24Z",
@@ -68974,7 +69379,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.034898444722224
+        "age_hours": 12.580862339722222
       },
       {
         "ts": "2026-04-23T12:20:42Z",
@@ -68985,7 +69390,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 12.063231778055556
+        "age_hours": 12.609195673055554
       },
       {
         "ts": "2026-04-23T12:12:54Z",
@@ -68996,7 +69401,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 12.193231778055557
+        "age_hours": 12.739195673055555
       },
       {
         "ts": "2026-04-23T12:10:22Z",
@@ -69007,7 +69412,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.235454000277779
+        "age_hours": 12.781417895277777
       },
       {
         "ts": "2026-04-23T11:52:55Z",
@@ -69018,7 +69423,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 12.526287333611112
+        "age_hours": 13.07225122861111
       },
       {
         "ts": "2026-04-23T11:49:11Z",
@@ -69029,7 +69434,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.588509555833333
+        "age_hours": 13.134473450833333
       },
       {
         "ts": "2026-04-23T11:48:38Z",
@@ -69040,7 +69445,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 12.5976762225
+        "age_hours": 13.143640117499999
       },
       {
         "ts": "2026-04-23T11:36:19Z",
@@ -69051,7 +69456,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 12.80295400027778
+        "age_hours": 13.348917895277777
       },
       {
         "ts": "2026-04-23T11:32:47Z",
@@ -69062,7 +69467,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 12.861842889166667
+        "age_hours": 13.407806784166667
       },
       {
         "ts": "2026-04-23T11:18:38Z",
@@ -69073,7 +69478,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 13.0976762225
+        "age_hours": 13.643640117499999
       },
       {
         "ts": "2026-04-23T11:16:31Z",
@@ -69084,7 +69489,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.13295400027778
+        "age_hours": 13.678917895277777
       },
       {
         "ts": "2026-04-23T11:16:14Z",
@@ -69095,7 +69500,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.137676222500001
+        "age_hours": 13.6836401175
       },
       {
         "ts": "2026-04-23T11:13:00Z",
@@ -69106,7 +69511,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 13.19156511138889
+        "age_hours": 13.737529006388888
       },
       {
         "ts": "2026-04-23T11:04:54Z",
@@ -69117,7 +69522,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.32656511138889
+        "age_hours": 13.872529006388888
       },
       {
         "ts": "2026-04-23T10:52:37Z",
@@ -69128,7 +69533,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 13.531287333611113
+        "age_hours": 14.077251228611111
       },
       {
         "ts": "2026-04-23T10:44:45Z",
@@ -69139,7 +69544,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.662398444722223
+        "age_hours": 14.208362339722221
       },
       {
         "ts": "2026-04-23T10:43:36Z",
@@ -69150,7 +69555,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 13.68156511138889
+        "age_hours": 14.227529006388888
       },
       {
         "ts": "2026-04-23T10:43:33Z",
@@ -69161,7 +69566,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.682398444722223
+        "age_hours": 14.22836233972222
       },
       {
         "ts": "2026-04-23T10:32:40Z",
@@ -69172,7 +69577,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 13.863787333611112
+        "age_hours": 14.40975122861111
       },
       {
         "ts": "2026-04-23T10:32:25Z",
@@ -69183,7 +69588,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.867954000277779
+        "age_hours": 14.413917895277777
       },
       {
         "ts": "2026-04-23T10:32:12Z",
@@ -69194,7 +69599,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 13.87156511138889
+        "age_hours": 14.417529006388888
       },
       {
         "ts": "2026-04-23T10:21:18Z",
@@ -69205,7 +69610,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.053231778055556
+        "age_hours": 14.599195673055554
       },
       {
         "ts": "2026-04-23T10:13:12.874845Z",
@@ -69216,7 +69621,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.187988765555556
+        "age_hours": 14.733952660555556
       },
       {
         "ts": "2026-04-23T10:12:47Z",
@@ -69227,7 +69632,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 14.1951762225
+        "age_hours": 14.741140117499999
       },
       {
         "ts": "2026-04-23T10:11:39Z",
@@ -69238,7 +69643,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 14.214065111388889
+        "age_hours": 14.760029006388889
       },
       {
         "ts": "2026-04-23T09:55:19Z",
@@ -69249,7 +69654,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.486287333611111
+        "age_hours": 15.032251228611111
       },
       {
         "ts": "2026-04-23T09:52:38Z",
@@ -69260,7 +69665,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 14.531009555833334
+        "age_hours": 15.076973450833332
       },
       {
         "ts": "2026-04-23T09:40:05Z",
@@ -69271,7 +69676,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.7401762225
+        "age_hours": 15.286140117499999
       },
       {
         "ts": "2026-04-23T09:39:34Z",
@@ -69282,7 +69687,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 14.748787333611112
+        "age_hours": 15.29475122861111
       },
       {
         "ts": "2026-04-23T09:32:45Z",
@@ -69293,7 +69698,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 14.862398444722222
+        "age_hours": 15.408362339722222
       },
       {
         "ts": "2026-04-23T09:26:59Z",
@@ -69304,7 +69709,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 14.958509555833334
+        "age_hours": 15.504473450833332
       },
       {
         "ts": "2026-04-23T09:23:49Z",
@@ -69315,7 +69720,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.011287333611111
+        "age_hours": 15.55725122861111
       },
       {
         "ts": "2026-04-23T09:16:11Z",
@@ -69326,7 +69731,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.138509555833334
+        "age_hours": 15.684473450833332
       },
       {
         "ts": "2026-04-23T09:12:52Z",
@@ -69337,7 +69742,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 15.193787333611112
+        "age_hours": 15.73975122861111
       },
       {
         "ts": "2026-04-23T09:08:46Z",
@@ -69348,7 +69753,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.262120666944446
+        "age_hours": 15.808084561944444
       },
       {
         "ts": "2026-04-23T09:07:25Z",
@@ -69359,7 +69764,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 15.284620666944445
+        "age_hours": 15.830584561944443
       },
       {
         "ts": "2026-04-23T08:53:50Z",
@@ -69370,7 +69775,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 15.511009555833335
+        "age_hours": 16.056973450833333
       },
       {
         "ts": "2026-04-23T08:52:58Z",
@@ -69381,7 +69786,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.52545400027778
+        "age_hours": 16.071417895277776
       },
       {
         "ts": "2026-04-23T08:51:31Z",
@@ -69392,7 +69797,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.549620666944445
+        "age_hours": 16.095584561944445
       },
       {
         "ts": "2026-04-23T08:41:38Z",
@@ -69403,7 +69808,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.714342889166668
+        "age_hours": 16.260306784166666
       },
       {
         "ts": "2026-04-23T08:38:30Z",
@@ -69414,7 +69819,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 15.76656511138889
+        "age_hours": 16.31252900638889
       },
       {
         "ts": "2026-04-23T08:37:39Z",
@@ -69425,7 +69830,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 15.780731778055557
+        "age_hours": 16.326695673055553
       },
       {
         "ts": "2026-04-23T08:37:39Z",
@@ -69436,7 +69841,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 15.780731778055557
+        "age_hours": 16.326695673055553
       },
       {
         "ts": "2026-04-23T08:30:43Z",
@@ -69447,7 +69852,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.896287333611111
+        "age_hours": 16.44225122861111
       },
       {
         "ts": "2026-04-23T08:29:53Z",
@@ -69458,7 +69863,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 15.9101762225
+        "age_hours": 16.4561401175
       },
       {
         "ts": "2026-04-23T08:29:46Z",
@@ -69469,7 +69874,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 15.912120666944446
+        "age_hours": 16.458084561944442
       },
       {
         "ts": "2026-04-23T08:27:52Z",
@@ -69480,7 +69885,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 15.943787333611112
+        "age_hours": 16.48975122861111
       },
       {
         "ts": "2026-04-23T08:19:30Z",
@@ -69491,7 +69896,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.083231778055556
+        "age_hours": 16.629195673055555
       },
       {
         "ts": "2026-04-23T08:13:11Z",
@@ -69502,7 +69907,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 16.188509555833335
+        "age_hours": 16.73447345083333
       },
       {
         "ts": "2026-04-23T08:11:33Z",
@@ -69513,7 +69918,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.215731778055556
+        "age_hours": 16.761695673055556
       },
       {
         "ts": "2026-04-23T08:04:17Z",
@@ -69524,7 +69929,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.336842889166668
+        "age_hours": 16.882806784166664
       },
       {
         "ts": "2026-04-23T08:00:03Z",
@@ -69535,7 +69940,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.407398444722222
+        "age_hours": 16.953362339722222
       },
       {
         "ts": "2026-04-23T07:58:31Z",
@@ -69546,7 +69951,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 16.43295400027778
+        "age_hours": 16.978917895277778
       },
       {
         "ts": "2026-04-23T07:53:28Z",
@@ -69557,7 +69962,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 16.517120666944447
+        "age_hours": 17.063084561944443
       },
       {
         "ts": "2026-04-23T07:52:42Z",
@@ -69568,7 +69973,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.529898444722225
+        "age_hours": 17.07586233972222
       },
       {
         "ts": "2026-04-23T07:50:00Z",
@@ -69579,7 +69984,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.574898444722223
+        "age_hours": 17.120862339722223
       },
       {
         "ts": "2026-04-23T07:47:22Z",
@@ -69590,7 +69995,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 16.618787333611113
+        "age_hours": 17.16475122861111
       },
       {
         "ts": "2026-04-23T07:41:27Z",
@@ -69601,7 +70006,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.717398444722225
+        "age_hours": 17.26336233972222
       },
       {
         "ts": "2026-04-23T07:37:26Z",
@@ -69612,7 +70017,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.784342889166666
+        "age_hours": 17.330306784166666
       },
       {
         "ts": "2026-04-23T07:33:06Z",
@@ -69623,7 +70028,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 16.85656511138889
+        "age_hours": 17.40252900638889
       },
       {
         "ts": "2026-04-23T07:30:46Z",
@@ -69634,7 +70039,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.895454000277777
+        "age_hours": 17.441417895277777
       },
       {
         "ts": "2026-04-23T07:26:28Z",
@@ -69645,7 +70050,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 16.967120666944446
+        "age_hours": 17.513084561944442
       },
       {
         "ts": "2026-04-23T07:18:47Z",
@@ -69656,7 +70061,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.0951762225
+        "age_hours": 17.6411401175
       },
       {
         "ts": "2026-04-23T07:18:41Z",
@@ -69667,7 +70072,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 17.096842889166666
+        "age_hours": 17.642806784166666
       },
       {
         "ts": "2026-04-23T07:12:51Z",
@@ -69678,7 +70083,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 17.19406511138889
+        "age_hours": 17.740029006388887
       },
       {
         "ts": "2026-04-23T07:05:16Z",
@@ -69689,7 +70094,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.320454000277778
+        "age_hours": 17.866417895277777
       },
       {
         "ts": "2026-04-23T07:05:13Z",
@@ -69700,7 +70105,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.32128733361111
+        "age_hours": 17.86725122861111
       },
       {
         "ts": "2026-04-23T06:55:27Z",
@@ -69711,7 +70116,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.48406511138889
+        "age_hours": 18.030029006388887
       },
       {
         "ts": "2026-04-23T06:53:02Z",
@@ -69722,7 +70127,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 17.524342889166668
+        "age_hours": 18.070306784166664
       },
       {
         "ts": "2026-04-23T06:44:15Z",
@@ -69733,7 +70138,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 17.670731778055558
+        "age_hours": 18.216695673055554
       },
       {
         "ts": "2026-04-23T06:43:45Z",
@@ -69744,7 +70149,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.67906511138889
+        "age_hours": 18.225029006388887
       },
       {
         "ts": "2026-04-23T06:43:36Z",
@@ -69755,7 +70160,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.68156511138889
+        "age_hours": 18.227529006388888
       },
       {
         "ts": "2026-04-23T06:34:58Z",
@@ -69766,7 +70171,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.82545400027778
+        "age_hours": 18.371417895277776
       },
       {
         "ts": "2026-04-23T06:32:45Z",
@@ -69777,7 +70182,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 17.862398444722224
+        "age_hours": 18.40836233972222
       },
       {
         "ts": "2026-04-23T06:32:18Z",
@@ -69788,7 +70193,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 17.869898444722224
+        "age_hours": 18.41586233972222
       },
       {
         "ts": "2026-04-23T06:21:09Z",
@@ -69799,7 +70204,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.055731778055556
+        "age_hours": 18.601695673055556
       },
       {
         "ts": "2026-04-23T06:13:24Z",
@@ -69810,7 +70215,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 18.184898444722222
+        "age_hours": 18.730862339722222
       },
       {
         "ts": "2026-04-23T06:12:04Z",
@@ -69821,7 +70226,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.207120666944444
+        "age_hours": 18.753084561944444
       },
       {
         "ts": "2026-04-23T06:11:15Z",
@@ -69832,7 +70237,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.220731778055555
+        "age_hours": 18.766695673055555
       },
       {
         "ts": "2026-04-23T06:11:15Z",
@@ -69843,7 +70248,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.220731778055555
+        "age_hours": 18.766695673055555
       },
       {
         "ts": "2026-04-23T06:11:07Z",
@@ -69854,7 +70259,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.222954000277777
+        "age_hours": 18.768917895277777
       },
       {
         "ts": "2026-04-23T06:11:07Z",
@@ -69865,7 +70270,7 @@
         "phase": "B",
         "pr": null,
         "repo": null,
-        "age_hours": 18.222954000277777
+        "age_hours": 18.768917895277777
       },
       {
         "ts": "2026-04-23T06:10:22Z",
@@ -69876,7 +70281,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 18.23545400027778
+        "age_hours": 18.781417895277777
       },
       {
         "ts": "2026-04-23T06:10:21Z",
@@ -69887,7 +70292,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 18.235731778055555
+        "age_hours": 18.781695673055555
       },
       {
         "ts": "2026-04-23T05:58:13Z",
@@ -69898,7 +70303,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 18.437954000277777
+        "age_hours": 18.983917895277777
       },
       {
         "ts": "2026-04-23T05:53:54Z",
@@ -69909,7 +70314,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.50989844472222
+        "age_hours": 19.05586233972222
       },
       {
         "ts": "2026-04-23T05:48:09Z",
@@ -69920,7 +70325,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 18.605731778055556
+        "age_hours": 19.151695673055556
       },
       {
         "ts": "2026-04-23T05:46:15Z",
@@ -69931,7 +70336,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.637398444722223
+        "age_hours": 19.183362339722223
       },
       {
         "ts": "2026-04-23T05:44:20Z",
@@ -69942,7 +70347,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.669342889166668
+        "age_hours": 19.215306784166668
       },
       {
         "ts": "2026-04-23T05:42:31Z",
@@ -69953,7 +70358,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.699620666944444
+        "age_hours": 19.245584561944444
       },
       {
         "ts": "2026-04-23T05:37:51Z",
@@ -69964,7 +70369,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 18.777398444722223
+        "age_hours": 19.323362339722223
       },
       {
         "ts": "2026-04-23T05:31:11Z",
@@ -69975,7 +70380,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 18.888509555833334
+        "age_hours": 19.434473450833334
       },
       {
         "ts": "2026-04-23T05:27:59Z",
@@ -69986,7 +70391,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 18.94184288916667
+        "age_hours": 19.487806784166665
       },
       {
         "ts": "2026-04-23T05:20:00Z",
@@ -69997,7 +70402,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 19.074898444722223
+        "age_hours": 19.620862339722223
       },
       {
         "ts": "2026-04-23T05:10:19Z",
@@ -70008,7 +70413,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 19.236287333611113
+        "age_hours": 19.78225122861111
       },
       {
         "ts": "2026-04-23T05:08:00Z",
@@ -70019,7 +70424,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 19.274898444722222
+        "age_hours": 19.820862339722222
       },
       {
         "ts": "2026-04-23T04:58:29Z",
@@ -70030,7 +70435,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 19.433509555833336
+        "age_hours": 19.979473450833332
       },
       {
         "ts": "2026-04-23T04:47:53Z",
@@ -70041,7 +70446,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 19.6101762225
+        "age_hours": 20.156140117499998
       },
       {
         "ts": "2026-04-23T04:47:17Z",
@@ -70052,7 +70457,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 19.6201762225
+        "age_hours": 20.1661401175
       },
       {
         "ts": "2026-04-23T04:39:21Z",
@@ -70063,7 +70468,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 19.752398444722225
+        "age_hours": 20.29836233972222
       },
       {
         "ts": "2026-04-23T04:35:47Z",
@@ -70074,7 +70479,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 19.811842889166666
+        "age_hours": 20.357806784166666
       },
       {
         "ts": "2026-04-23T04:28:04Z",
@@ -70085,7 +70490,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 19.94045400027778
+        "age_hours": 20.48641789527778
       },
       {
         "ts": "2026-04-23T04:12:27Z",
@@ -70096,7 +70501,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 20.200731778055555
+        "age_hours": 20.746695673055555
       },
       {
         "ts": "2026-04-23T04:07:36Z",
@@ -70107,7 +70512,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 20.28156511138889
+        "age_hours": 20.82752900638889
       },
       {
         "ts": "2026-04-23T04:03:17Z",
@@ -70118,7 +70523,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.353509555833334
+        "age_hours": 20.899473450833334
       },
       {
         "ts": "2026-04-23T03:52:13Z",
@@ -70129,7 +70534,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.53795400027778
+        "age_hours": 21.08391789527778
       },
       {
         "ts": "2026-04-23T03:47:56Z",
@@ -70140,7 +70545,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 20.60934288916667
+        "age_hours": 21.155306784166665
       },
       {
         "ts": "2026-04-23T03:42:33Z",
@@ -70151,7 +70556,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 20.69906511138889
+        "age_hours": 21.245029006388886
       },
       {
         "ts": "2026-04-23T03:40:23Z",
@@ -70162,7 +70567,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.7351762225
+        "age_hours": 21.281140117499998
       },
       {
         "ts": "2026-04-23T03:40:08Z",
@@ -70173,7 +70578,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.739342889166668
+        "age_hours": 21.285306784166664
       },
       {
         "ts": "2026-04-23T03:30:06Z",
@@ -70184,7 +70589,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 20.90656511138889
+        "age_hours": 21.45252900638889
       },
       {
         "ts": "2026-04-23T03:27:41Z",
@@ -70195,7 +70600,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 20.946842889166668
+        "age_hours": 21.492806784166667
       },
       {
         "ts": "2026-04-23T03:18:55Z",
@@ -70206,7 +70611,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 21.09295400027778
+        "age_hours": 21.63891789527778
       },
       {
         "ts": "2026-04-23T03:14:37Z",
@@ -70217,7 +70622,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 21.164620666944444
+        "age_hours": 21.710584561944444
       },
       {
         "ts": "2026-04-23T03:07:44Z",
@@ -70228,7 +70633,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 21.279342889166667
+        "age_hours": 21.825306784166667
       },
       {
         "ts": "2026-04-23T02:49:14Z",
@@ -70239,7 +70644,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 21.5876762225
+        "age_hours": 22.1336401175
       },
       {
         "ts": "2026-04-23T02:48:13Z",
@@ -70250,7 +70655,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 21.604620666944445
+        "age_hours": 22.150584561944445
       },
       {
         "ts": "2026-04-23T02:38:38Z",
@@ -70261,7 +70666,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 21.764342889166667
+        "age_hours": 22.310306784166666
       },
       {
         "ts": "2026-04-23T02:38:21Z",
@@ -70272,7 +70677,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 21.76906511138889
+        "age_hours": 22.315029006388887
       },
       {
         "ts": "2026-04-23T02:34:41Z",
@@ -70283,7 +70688,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 21.8301762225
+        "age_hours": 22.3761401175
       },
       {
         "ts": "2026-04-23T02:13:38Z",
@@ -70294,7 +70699,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.181009555833334
+        "age_hours": 22.72697345083333
       },
       {
         "ts": "2026-04-23T02:13:30Z",
@@ -70305,7 +70710,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.183231778055557
+        "age_hours": 22.729195673055553
       },
       {
         "ts": "2026-04-23T02:08:07Z",
@@ -70316,7 +70721,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 22.272954000277778
+        "age_hours": 22.818917895277778
       },
       {
         "ts": "2026-04-23T02:04:37Z",
@@ -70327,7 +70732,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.33128733361111
+        "age_hours": 22.87725122861111
       },
       {
         "ts": "2026-04-23T01:56:08Z",
@@ -70338,7 +70743,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.472676222500002
+        "age_hours": 23.0186401175
       },
       {
         "ts": "2026-04-23T01:53:58Z",
@@ -70349,7 +70754,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 22.50878733361111
+        "age_hours": 23.05475122861111
       },
       {
         "ts": "2026-04-23T01:47:17Z",
@@ -70360,7 +70765,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 22.6201762225
+        "age_hours": 23.1661401175
       },
       {
         "ts": "2026-04-23T01:29:49Z",
@@ -70371,7 +70776,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 22.911287333611114
+        "age_hours": 23.45725122861111
       },
       {
         "ts": "2026-04-23T01:27:21Z",
@@ -70382,7 +70787,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 22.952398444722224
+        "age_hours": 23.49836233972222
       },
       {
         "ts": "2026-04-23T01:23:48Z",
@@ -70393,7 +70798,7 @@
         "phase": "meta",
         "pr": null,
         "repo": null,
-        "age_hours": 23.01156511138889
+        "age_hours": 23.557529006388886
       },
       {
         "ts": "2026-04-23T01:22:07Z",
@@ -70404,7 +70809,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 23.039620666944444
+        "age_hours": 23.585584561944444
       },
       {
         "ts": "2026-04-23T01:20:37Z",
@@ -70415,7 +70820,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 23.064620666944446
+        "age_hours": 23.610584561944442
       },
       {
         "ts": "2026-04-23T01:19:14Z",
@@ -70426,7 +70831,7 @@
         "phase": null,
         "pr": null,
         "repo": null,
-        "age_hours": 23.0876762225
+        "age_hours": 23.6336401175
       },
       {
         "ts": "2026-04-23T01:07:21Z",
@@ -70437,62 +70842,7 @@
         "phase": "M",
         "pr": null,
         "repo": null,
-        "age_hours": 23.285731778055556
-      },
-      {
-        "ts": "2026-04-23T00:54:16Z",
-        "event_type": "AGENT_HEARTBEAT",
-        "task_id": "M189",
-        "agent": "guardian",
-        "summary": "guardian heartbeat — heartbeat-checks + M189-canary-monitoring",
-        "phase": "meta",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.50378733361111
-      },
-      {
-        "ts": "2026-04-23T00:51:57Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.542398444722224
-      },
-      {
-        "ts": "2026-04-23T00:47:10Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "M189",
-        "agent": "anvil",
-        "summary": "Parallel heartbeat ~19min since prior note (evt_20260423T002710Z_000001). Scan cutoff 00:27:10Z.\n\nQ1 (#189 both PROPOSAL_APPROVED?): N/A — M",
-        "phase": "M",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.622120666944447
-      },
-      {
-        "ts": "2026-04-23T00:27:10Z",
-        "event_type": "SPRINT_NOTE",
-        "task_id": "M189",
-        "agent": "anvil",
-        "summary": "Parallel heartbeat ~3min after prior poke-response. Scan cutoff 00:23:11Z.\n\nQ1 (#189 both PROPOSAL_APPROVED?): N/A — M189 is merged + in CAN",
-        "phase": "M",
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.95545400027778
-      },
-      {
-        "ts": "2026-04-23T00:25:03Z",
-        "event_type": "ARTIFACT_PUBLISHED",
-        "task_id": null,
-        "agent": "hermes",
-        "summary": "— published oinxtractor_quality: oinxtractor-quality.html",
-        "phase": null,
-        "pr": null,
-        "repo": null,
-        "age_hours": 23.990731778055558
+        "age_hours": 23.831695673055556
       }
     ]
   },
@@ -70503,7 +70853,7 @@
       "issue": "PR_OPENED (pr=133) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T145137Z_000001",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": "B1",
@@ -70511,7 +70861,7 @@
       "issue": "PR_OPENED (pr=149) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T222920Z_000001",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": "B1",
@@ -70519,7 +70869,7 @@
       "issue": "PR_OPENED (pr=21) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260419T223519Z_000001",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": "B2",
@@ -70527,7 +70877,7 @@
       "issue": "PR_OPENED (pr=24) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T012125Z_000001",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": "B5",
@@ -70535,7 +70885,7 @@
       "issue": "PR_OPENED (pr=25) with no REVIEW_POSTED within 24h",
       "severity": "warn",
       "event_id": "evt_20260420T044257Z_000001",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": "B6",
@@ -70543,7 +70893,7 @@
       "issue": "CANARY_STARTED with no verdict within 48h",
       "severity": "warn",
       "event_id": "evt_20260421T224559Z_000003",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": null,
@@ -70551,7 +70901,7 @@
       "issue": "AGENT_HEARTBEAT stale > 3h for vigil",
       "severity": "warn",
       "event_id": "evt_20260421T230920_synthetic",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     },
     {
       "task_id": "B4",
@@ -70559,39 +70909,127 @@
       "issue": "BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task)",
       "severity": "warn",
       "event_id": "evt_20260423T061115Z_000002",
-      "detected_at": "2026-04-24T00:24:53Z"
+      "detected_at": "2026-04-24T00:57:38Z"
     }
   ],
   "events_integrity": {
-    "total": 1266,
-    "last_24h": 288,
-    "rate_per_hour": 12.0,
+    "total": 1273,
+    "last_24h": 290,
+    "rate_per_hour": 12.08,
     "schema_version": "1.0",
     "monotonic_gaps": [],
     "monotonic_ok": true,
     "source": "lib",
     "events_file": "/home/oinkv/sprint-checkpoint/events.jsonl",
-    "human_line": "In plain English: 288 things happened today, ~12.0/h steady-state. System is healthy."
+    "human_line": "In plain English: 290 things happened today, ~12.08/h steady-state. System is healthy."
   },
   "bootstrap": false,
   "freshness_by_agent": [
     {
       "id": "hermes",
       "name": "Hermes",
-      "last_event_ts": "2026-04-24T00:24:29Z",
+      "last_event_ts": "2026-04-24T00:57:14Z",
       "last_event_type": "ARTIFACT_PUBLISHED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 0.0001762225,
+      "age_hours": 0.00030678416666666663,
       "staleness_label": "green",
       "light": "green",
-      "event_count": 295,
+      "event_count": 296,
       "emoji": "🪽",
       "role": "Sprint Orchestrator",
-      "last_active": "2026-04-24T00:24:29Z",
-      "last_active_human": "0s ago",
+      "last_active": "2026-04-24T00:57:14Z",
+      "last_active_human": "1s ago",
       "heartbeat": {
         "current_task": null,
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "forge",
+      "name": "FORGE",
+      "last_event_ts": "2026-04-24T00:52:46Z",
+      "last_event_type": "DECISION_NEEDED",
+      "last_task_id": "M214",
+      "current_task": "vigil-cross-check",
+      "age_hours": 0.07475122861111111,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 150,
+      "emoji": "🔥",
+      "role": "Technical Execution Planner",
+      "last_active": "2026-04-24T00:52:46Z",
+      "last_active_human": "4m ago",
+      "heartbeat": {
+        "current_task": "vigil-cross-check",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "oinkv",
+      "name": "OinkV",
+      "last_event_ts": "2026-04-24T00:51:40Z",
+      "last_event_type": null,
+      "last_task_id": null,
+      "current_task": null,
+      "age_hours": 0.09308456194444445,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 174,
+      "emoji": "🐷",
+      "role": "Plan Auditor",
+      "last_active": "2026-04-24T00:51:40Z",
+      "last_active_human": "5m ago",
+      "heartbeat": {
+        "current_task": null,
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "guardian",
+      "name": "GUARDIAN",
+      "last_event_ts": "2026-04-24T00:35:50Z",
+      "last_event_type": "AGENT_HEARTBEAT",
+      "last_task_id": null,
+      "current_task": "sprint_poke_response",
+      "age_hours": 0.3569734508333333,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 237,
+      "emoji": "🛡️",
+      "role": "Data Integrity + Canary",
+      "last_active": "2026-04-24T00:35:50Z",
+      "last_active_human": "21m ago",
+      "heartbeat": {
+        "current_task": "sprint_poke_response",
+        "current_phase": null,
+        "blockers": [],
+        "branch": null
+      }
+    },
+    {
+      "id": "anvil",
+      "name": "ANVIL",
+      "last_event_ts": "2026-04-24T00:32:45Z",
+      "last_event_type": "SPRINT_NOTE",
+      "last_task_id": "M189",
+      "current_task": "M189",
+      "age_hours": 0.40836233972222225,
+      "staleness_label": "green",
+      "light": "green",
+      "event_count": 303,
+      "emoji": "⚒️",
+      "role": "Implementation Lead",
+      "last_active": "2026-04-24T00:32:45Z",
+      "last_active_human": "24m ago",
+      "heartbeat": {
+        "current_task": "M189",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -70604,104 +71042,16 @@
       "last_event_type": "REVIEW_POSTED",
       "last_task_id": "M214",
       "current_task": null,
-      "age_hours": 0.015731778055555555,
+      "age_hours": 0.5616956730555556,
       "staleness_label": "green",
       "light": "green",
       "event_count": 80,
       "emoji": "🔍",
       "role": "Code Review + Scoring",
       "last_active": "2026-04-24T00:23:33Z",
-      "last_active_human": "56s ago",
+      "last_active_human": "33m ago",
       "heartbeat": {
         "current_task": null,
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "oinkv",
-      "name": "OinkV",
-      "last_event_ts": "2026-04-24T00:18:44Z",
-      "last_event_type": null,
-      "last_task_id": null,
-      "current_task": null,
-      "age_hours": 0.09600955583333334,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 172,
-      "emoji": "🐷",
-      "role": "Plan Auditor",
-      "last_active": "2026-04-24T00:18:44Z",
-      "last_active_human": "5m ago",
-      "heartbeat": {
-        "current_task": null,
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "forge",
-      "name": "FORGE",
-      "last_event_ts": "2026-04-24T00:18:00Z",
-      "last_event_type": "AGENT_HEARTBEAT",
-      "last_task_id": null,
-      "current_task": "vigil-cross-check",
-      "age_hours": 0.10823177805555556,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 148,
-      "emoji": "🔥",
-      "role": "Technical Execution Planner",
-      "last_active": "2026-04-24T00:18:00Z",
-      "last_active_human": "6m ago",
-      "heartbeat": {
-        "current_task": "vigil-cross-check",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "anvil",
-      "name": "ANVIL",
-      "last_event_ts": "2026-04-24T00:12:52Z",
-      "last_event_type": "SPRINT_NOTE",
-      "last_task_id": "M189",
-      "current_task": "M189",
-      "age_hours": 0.1937873336111111,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 302,
-      "emoji": "⚒️",
-      "role": "Implementation Lead",
-      "last_active": "2026-04-24T00:12:52Z",
-      "last_active_human": "11m ago",
-      "heartbeat": {
-        "current_task": "M189",
-        "current_phase": null,
-        "blockers": [],
-        "branch": null
-      }
-    },
-    {
-      "id": "guardian",
-      "name": "GUARDIAN",
-      "last_event_ts": "2026-04-23T23:58:07Z",
-      "last_event_type": "AGENT_HEARTBEAT",
-      "last_task_id": null,
-      "current_task": "routine_heartbeat",
-      "age_hours": 0.43962066694444446,
-      "staleness_label": "green",
-      "light": "green",
-      "event_count": 236,
-      "emoji": "🛡️",
-      "role": "Data Integrity + Canary",
-      "last_active": "2026-04-23T23:58:07Z",
-      "last_active_human": "26m ago",
-      "heartbeat": {
-        "current_task": "routine_heartbeat",
         "current_phase": null,
         "blockers": [],
         "branch": null
@@ -70714,14 +71064,14 @@
       "last_event_type": "BLOCKED",
       "last_task_id": "B4",
       "current_task": "B4",
-      "age_hours": 18.220731778055555,
+      "age_hours": 18.766695673055555,
       "staleness_label": "red",
       "light": "red",
       "event_count": 11,
       "emoji": "•",
       "role": "",
       "last_active": "2026-04-23T06:11:15Z",
-      "last_active_human": "18h 13m ago",
+      "last_active_human": "18h 46m ago",
       "heartbeat": {
         "current_task": "B4",
         "current_phase": null,
@@ -70736,7 +71086,7 @@
       "last_event_type": "DECISION_RESOLVED",
       "last_task_id": null,
       "current_task": null,
-      "age_hours": 84.87073177805556,
+      "age_hours": 85.41669567305556,
       "staleness_label": "red",
       "light": "red",
       "event_count": 2,
@@ -70758,7 +71108,7 @@
       "last_event_type": "PROPOSAL_APPROVED",
       "last_task_id": "B8",
       "current_task": "B8",
-      "age_hours": 88.72600955583333,
+      "age_hours": 89.27197345083334,
       "staleness_label": "red",
       "light": "red",
       "event_count": 16,
@@ -70777,7 +71127,7 @@
   "narrative": {
     "mission": "Mission statement pending — first Scribe run populates this. State of Sprint doc being built by Scribe.",
     "today": "The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checking in normally (last pulses 9 and 22 minutes ago), and OinkV posted a note 6 minutes ago, so the core pipeline is alive and running.\n\nThe two agents overdue on their regular heartbeat are Anvil and Vigil, both stale past the 3-hour mark. Anvil at least posted a sprint note 35 minutes ago so it's not completely dark, but Vigil's last recorded activity was a review posted nearly 3 hours back. Neither is confirmed stuck, but both are late for a check-in pulse.\n\nThe review queue is building up. Five PRs are open without a review posted — covering tasks A11, B1 (two separate PRs), B2, and B5 — several sitting for more than 24 hours. B6's canary deployment has also been running for over 48 hours with no pass or fail verdict registered, which is outside the expected monitoring window.\n\nNothing here needs immediate intervention, but if Anvil and Vigil don't show a clean heartbeat in the next cycle, and B6 doesn't close out its canary verdict soon, those will need a closer look.",
-    "week": "Over the last three days, the stream recorded four merges, 19 canary events, and 40 reviews posted across the board. Phase B Wave 2 is in flight — B6 🟡 Cornix/Chroma parser extraction shipped in this window. 23 decision events flowed through the Mike-gate process.",
+    "week": "Over the last three days, the stream recorded four merges, 18 canary events, and 40 reviews posted across the board. Phase B Wave 2 is in flight — B6 🟡 Cornix/Chroma parser extraction shipped in this window. 24 decision events flowed through the Mike-gate process.",
     "whats_next": "**Next merges expected (this week):** B2 canary result (currently CANARY_PENDING), B3 verification window opens, B6/B7/B8 canary results land. Phase B Wave 2 decomposition is essentially done — next real code merge is B4 (cutover) itself, which is a one-day task gated on B3's 7-clean-day soak. **The April 26 cutover gate (B4):** B3 merged 2026-04-19. Under the **7-day + reset rule**, earliest B4 cutover is **2026-04-26** if every daily reconciliation report shows zero row-count and zero event-count discrepancies. Any single discrepancy resets the clock. Mike's explicit go-ahead is still required on the day. **Phase C start (late May 2026):** Begins after Phase B quality gate (all Wave 3 + Wave 4 tasks green, W1 immutable records live on PostgreSQL, W4 trace…",
     "sos_exists": true,
     "sos_link": "sprint-log/STATE-OF-SPRINT.md",

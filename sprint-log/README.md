@@ -4,17 +4,24 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1266
-- **Last 24h:** 288 (rate 12.0/h)
+- **Total events:** 1273
+- **Last 24h:** 290 (rate 12.08/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (13 events)
+### Last 1 hour (16 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 02:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 02:52 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 02:52 CEST | `DECISION_NEEDED` | `M214` | forge | M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu |
+| Apr 24, 02:51 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:35 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 02:35 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2 |
 | Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
 | Apr 24, 02:18 CEST | `None` | `—` | oinkv |  — |
@@ -23,15 +30,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior  |
 | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checkin |
 | Apr 24, 02:01 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — routine_heartbeat |
-| Apr 24, 01:47 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:45 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 24, 01:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T231238Z_000001 confirmed emitted despite transcript repair noise. Since then: routine heartbeats (for |
-| Apr 24, 01:28 CEST | `None` | `—` | oinkv |  — |
 
-### Last 4 hours (53 events)
+### Last 4 hours (55 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 02:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 02:52 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 02:52 CEST | `DECISION_NEEDED` | `M214` | forge | M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu |
+| Apr 24, 02:51 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:35 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 02:35 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2 |
 | Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
 | Apr 24, 02:18 CEST | `None` | `—` | oinkv |  — |
@@ -40,17 +49,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior  |
 | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checkin |
 | Apr 24, 02:01 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — routine_heartbeat |
-| Apr 24, 01:47 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:45 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 24, 01:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T231238Z_000001 confirmed emitted despite transcript repair noise. Since then: routine heartbeats (for |
-| Apr 24, 01:28 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
 
-### Last 24 hours (288 events)
+### Last 24 hours (290 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 02:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 02:52 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
+| Apr 24, 02:52 CEST | `DECISION_NEEDED` | `M214` | forge | M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu |
+| Apr 24, 02:51 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:35 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 02:35 CEST | `None` | `—` | oinkv |  — |
+| Apr 24, 02:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior HB evt_20260424T001252Z_000001 + SN _000002 both landed. Since 00:12:52Z: forge HB, oinkv event, vigil REVIEW_POSTED M2 |
 | Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
 | Apr 24, 02:18 CEST | `None` | `—` | oinkv |  — |
@@ -59,17 +68,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick + AGENT_HEARTBEAT emitted to clear hermes 00:08Z stale-pulse observation (evt_20260424T000819Z_000001). Gap root cause: prior  |
 | Apr 24, 02:08 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checkin |
 | Apr 24, 02:01 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — routine_heartbeat |
-| Apr 24, 01:47 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:45 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
-| Apr 24, 01:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior note evt_20260423T231238Z_000001 confirmed emitted despite transcript repair noise. Since then: routine heartbeats (for |
-| Apr 24, 01:28 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 01:20 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 01:14 CEST | `None` | `—` | oinkv |  — |
 
 ## 🧭 Needs Mike
 
-_No open DECISION_NEEDED events._
+| Question ID | Question | Task | Age | Options | Gate |
+|---|---|---|---|---|---|
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 4m | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -88,12 +92,12 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 02:24 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 295 |
+| 🪽 **Hermes** | Apr 24, 02:57 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 296 |
+| 🔥 **FORGE** | Apr 24, 02:52 CEST | `DECISION_NEEDED` | `vigil-cross-check` | 🟢 fresh | 150 |
+| 🐷 **OinkV** | Apr 24, 02:51 CEST | `—` | `—` | 🟢 fresh | 174 |
+| 🛡️ **GUARDIAN** | Apr 24, 02:35 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟢 fresh | 237 |
+| ⚒️ **ANVIL** | Apr 24, 02:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 303 |
 | 🔍 **VIGIL** | Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | 🟢 fresh | 80 |
-| 🐷 **OinkV** | Apr 24, 02:18 CEST | `—` | `—` | 🟢 fresh | 172 |
-| 🔥 **FORGE** | Apr 24, 02:18 CEST | `AGENT_HEARTBEAT` | `vigil-cross-check` | 🟢 fresh | 148 |
-| ⚒️ **ANVIL** | Apr 24, 02:12 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 302 |
-| 🛡️ **GUARDIAN** | Apr 24, 01:58 CEST | `AGENT_HEARTBEAT` | `routine_heartbeat` | 🟢 fresh | 236 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -199,11 +203,11 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🔍 | VIGIL | Code Review + Scoring |
-| 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
-| ⚒️ | ANVIL | Implementation Lead |
+| 🐷 | OinkV | Plan Auditor |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -217,4 +221,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*18/58 tasks DONE · Last auto-regenerated: 02:24 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/58 tasks DONE · Last auto-regenerated: 02:57 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
