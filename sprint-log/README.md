@@ -4,8 +4,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1382
-- **Last 24h:** 286 (rate 11.92/h)
+- **Total events:** 1384
+- **Last 24h:** 285 (rate 11.88/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
@@ -15,17 +15,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (7 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 12:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 12:33 CEST | `SPRINT_NOTE` | `M201` | anvil | 🚨 STATE CHANGE — GUARDIAN R1 REVISE on M201/#215. REVIEW_POSTED @10:22:11Z (evt_20260424T102211Z_000001): GUARDIAN R1 REVISE 8.55/9.5 🔴 CRIT |
 | Apr 24, 12:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 12:22 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — REVISE (8.55) |
 | Apr 24, 12:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 10:12Z (7min after evt_20260424T100510Z_000001 which was a SPRINT POKE response). SCAN since 10:05:10Z → ZERO even |
 | Apr 24, 12:05 CEST | `SPRINT_NOTE` | `M189` | anvil | SPRINT POKE response Fri 10:04Z (Heavy Hybrid priorities). POKE items addressed inline — all 5 bullets are stale for the anvil lane: (1) VIG |
 | Apr 24, 11:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat_monitoring |
-| Apr 24, 11:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 09:32Z (20min after evt_20260424T091249Z_000001). SCAN since 09:12:49Z → 3 events, all non-anvil-actionable: ARTIF |
-| Apr 24, 11:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (39 events)
+### Last 4 hours (34 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 12:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 12:33 CEST | `SPRINT_NOTE` | `M201` | anvil | 🚨 STATE CHANGE — GUARDIAN R1 REVISE on M201/#215. REVIEW_POSTED @10:22:11Z (evt_20260424T102211Z_000001): GUARDIAN R1 REVISE 8.55/9.5 🔴 CRIT |
 | Apr 24, 12:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 12:22 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — REVISE (8.55) |
 | Apr 24, 12:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 10:12Z (7min after evt_20260424T100510Z_000001 which was a SPRINT POKE response). SCAN since 10:05:10Z → ZERO even |
@@ -39,12 +41,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 10:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 08:52Z (20min after evt_20260424T083247Z_000001). SCAN since 08:32:47Z → 1 event: AGENT_HEARTBEAT guardian @08:44: |
 | Apr 24, 10:44 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 10:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 08:32Z (20min after evt_20260424T081249Z_000001). SCAN since 08:12:49Z → ZERO events on the stream. NO new REVIEW_ |
-| Apr 24, 10:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 08:12Z (20min after evt_20260424T075248Z_000001). SCAN since 07:52Z → 2 events, both non-anvil-actionable: ARTIFAC |
-| Apr 24, 10:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 
-### Last 24 hours (286 events)
+### Last 24 hours (285 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 12:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 12:33 CEST | `SPRINT_NOTE` | `M201` | anvil | 🚨 STATE CHANGE — GUARDIAN R1 REVISE on M201/#215. REVIEW_POSTED @10:22:11Z (evt_20260424T102211Z_000001): GUARDIAN R1 REVISE 8.55/9.5 🔴 CRIT |
 | Apr 24, 12:22 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 12:22 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — REVISE (8.55) |
 | Apr 24, 12:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 10:12Z (7min after evt_20260424T100510Z_000001 which was a SPRINT POKE response). SCAN since 10:05:10Z → ZERO even |
@@ -58,14 +60,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 10:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 08:52Z (20min after evt_20260424T083247Z_000001). SCAN since 08:32:47Z → 1 event: AGENT_HEARTBEAT guardian @08:44: |
 | Apr 24, 10:44 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 10:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 08:32Z (20min after evt_20260424T081249Z_000001). SCAN since 08:12:49Z → ZERO events on the stream. NO new REVIEW_ |
-| Apr 24, 10:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 08:12Z (20min after evt_20260424T075248Z_000001). SCAN since 07:52Z → 2 events, both non-anvil-actionable: ARTIFAC |
-| Apr 24, 10:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 9.5h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 9.7h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -79,16 +79,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🟠 WARN | `B6` | CANARY_STARTED with no verdict within 48h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 | 🟠 WARN | `M189` | AGENT_HEARTBEAT stale > 3h for anvil |
+| 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 12:22 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 313 |
+| 🪽 **Hermes** | Apr 24, 12:33 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 314 |
+| ⚒️ **ANVIL** | Apr 24, 12:33 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 339 |
 | 🛡️ **GUARDIAN** | Apr 24, 12:22 CEST | `REVIEW_POSTED` | `heartbeat_monitoring` | 🟢 fresh | 259 |
-| ⚒️ **ANVIL** | Apr 24, 12:12 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 338 |
-| 🔥 **FORGE** | Apr 24, 09:22 CEST | `AGENT_HEARTBEAT` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🟡 1–3h | 157 |
+| 🔥 **FORGE** | Apr 24, 09:22 CEST | `AGENT_HEARTBEAT` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🔴 stale | 157 |
 | 🔍 **VIGIL** | Apr 24, 08:58 CEST | `REVIEW_POSTED` | `M34` | 🔴 stale | 87 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🔴 stale | 181 |
@@ -200,8 +201,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
@@ -218,4 +219,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/62 tasks DONE · Last auto-regenerated: 12:22 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/62 tasks DONE · Last auto-regenerated: 12:33 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
