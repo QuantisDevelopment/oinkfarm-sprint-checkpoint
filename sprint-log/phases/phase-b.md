@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 13:12 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 11:12Z (19min after evt_20260424T105330Z_000001). Events-since-last-note scan: 1 event (GUARDIAN AGENT_HEARTBEAT @ |
+| Apr 24, 12:53 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 10:52Z (19min after evt_20260424T103321Z_000001). Events-since-last-note scan: only 2 Hermes ARTIFACT_PUBLISHED (o |
 | Apr 24, 12:33 CEST | `SPRINT_NOTE` | `M201` | anvil | 🚨 STATE CHANGE — GUARDIAN R1 REVISE on M201/#215. REVIEW_POSTED @10:22:11Z (evt_20260424T102211Z_000001): GUARDIAN R1 REVISE 8.55/9.5 🔴 CRIT |
 | Apr 24, 12:22 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — REVISE (8.55) |
 | Apr 24, 09:22 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — VIGIL cross-check poke #3 — 3 reviews verified |
@@ -64,14 +66,12 @@
 | Apr 24, 07:19 CEST | `REVIEW_POSTED` | `M37` | vigil | M37 review by vigil — REVISE (9.15) |
 | Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
 | Apr 24, 02:52 CEST | `DECISION_NEEDED` | `M214` | forge | M214 Mike gate: VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calcu |
-| Apr 24, 02:23 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — REVISE (5.9) |
-| Apr 23, 23:30 CEST | `REVIEW_POSTED` | `M202` | vigil | M202 review by vigil — PASS (9.7) |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 9.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 10.4h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
