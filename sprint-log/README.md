@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1501
+- **Total events:** 1504
 - **Last 24h:** 263 (rate 10.96/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 00:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 00:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 00:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 22:12Z cron tick. Window 21:53Z→22:12Z: hermes 90-min summary + guardian heartbeat + hermes ARTIFACT_PUBLISHED (oinxtractor_quality, unrelat |
 | Apr 25, 00:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 00:00 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-response |
 | Apr 24, 23:55 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes, which triggers this automatic check-in. The two concrete moves since the last report were |
@@ -23,12 +26,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 23:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 23:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:32Z cron tick. Window 21:13Z→21:32Z: guardian heartbeat only, zero events on ANVIL track. M201 both-reviewer PASS holds. Friday freeze ga |
 | Apr 24, 23:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-sweep |
-| Apr 24, 23:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 23:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:12Z cron tick. Window 20:53Z→21:12Z: guardian heartbeat + sprint note + hermes artifact, zero events on ANVIL track. M201 both-reviewer P |
 
-### Last 4 hours (47 events)
+### Last 4 hours (48 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 00:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 00:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 00:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 22:12Z cron tick. Window 21:53Z→22:12Z: hermes 90-min summary + guardian heartbeat + hermes ARTIFACT_PUBLISHED (oinxtractor_quality, unrelat |
 | Apr 25, 00:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 00:00 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-response |
 | Apr 24, 23:55 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes, which triggers this automatic check-in. The two concrete moves since the last report were |
@@ -41,13 +45,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 23:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:12Z cron tick. Window 20:53Z→21:12Z: guardian heartbeat + sprint note + hermes artifact, zero events on ANVIL track. M201 both-reviewer P |
 | Apr 24, 22:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 22:53 CEST | `SPRINT_NOTE` | `—` | guardian | P1: AVNT #2656 status=WIN (non-canonical) — 3rd enum-drift instance. WG Reconciler INSERT wrote raw board status without normalization. Patt |
-| Apr 24, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-sweep |
-| Apr 24, 22:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 22:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 20:52Z cron tick. Window 20:33Z→20:52Z: 2 hermes artifacts + 2 VIGIL reviews on M42/M43 (not ANVIL's track). M201 both-reviewer PASS holds ( |
 
 ### Last 24 hours (263 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 00:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 00:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 00:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 22:12Z cron tick. Window 21:53Z→22:12Z: hermes 90-min summary + guardian heartbeat + hermes ARTIFACT_PUBLISHED (oinxtractor_quality, unrelat |
 | Apr 25, 00:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 00:00 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-response |
 | Apr 24, 23:55 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for the past 90 minutes, which triggers this automatic check-in. The two concrete moves since the last report were |
@@ -60,16 +64,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 23:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:12Z cron tick. Window 20:53Z→21:12Z: guardian heartbeat + sprint note + hermes artifact, zero events on ANVIL track. M201 both-reviewer P |
 | Apr 24, 22:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 22:53 CEST | `SPRINT_NOTE` | `—` | guardian | P1: AVNT #2656 status=WIN (non-canonical) — 3rd enum-drift instance. WG Reconciler INSERT wrote raw board status without normalization. Patt |
-| Apr 24, 22:53 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-sweep |
-| Apr 24, 22:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 22:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 20:52Z cron tick. Window 20:33Z→20:52Z: 2 hermes artifacts + 2 VIGIL reviews on M42/M43 (not ANVIL's track). M201 both-reviewer PASS holds ( |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 21.3h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 5.9h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 21.5h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 6.1h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -89,9 +90,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 25, 00:08 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 345 |
+| 🪽 **Hermes** | Apr 25, 00:19 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 346 |
+| ⚒️ **ANVIL** | Apr 25, 00:12 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 400 |
 | 🛡️ **GUARDIAN** | Apr 25, 00:00 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 280 |
-| ⚒️ **ANVIL** | Apr 24, 23:52 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 398 |
 | 🔍 **VIGIL** | Apr 24, 22:47 CEST | `REVIEW_POSTED` | `M42` | 🟡 1–3h | 92 |
 | 🔥 **FORGE** | Apr 24, 18:15 CEST | `DECISION_NEEDED` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🔴 stale | 158 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
@@ -208,8 +209,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
@@ -226,4 +227,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/66 tasks DONE · Last auto-regenerated: 00:08 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/66 tasks DONE · Last auto-regenerated: 00:20 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
