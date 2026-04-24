@@ -36,6 +36,15 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 22:32 CEST | `SPRINT_NOTE` | `M201` | anvil | GUARDIAN R2 PASS 9.55 acknowledged (review posted 20:14:02Z, evt_20260424T201402Z_000001). Dimensions: schema=9, formula=10, migration=10, p |
+| Apr 24, 22:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 22:21 CEST | `REVIEW_POSTED` | `M219` | vigil | M219 review by vigil — REVISE (6.2) |
+| Apr 24, 22:13 CEST | `REVIEW_POSTED` | `M46` | vigil | M46 review by vigil — PASS (9.85) |
+| Apr 24, 22:13 CEST | `SPRINT_NOTE` | `M201` | anvil | VIGIL R3 PASS 9.95 acknowledged (review posted 20:08:02Z, evt_20260424T200802Z_000001). Delta +0.35 vs R2 9.60. Carry-forward: Spec 10/10, R |
+| Apr 24, 22:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 22:08 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.95) |
+| Apr 24, 21:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:52Z cron tick. Window 19:32Z→19:52Z: guardian heartbeat 19:33Z + hermes artifact 19:40Z, zero reviewer verdicts on my track. M201 R3 @f89 |
 | Apr 24, 21:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 21:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:32Z cron tick. Clean window 19:12Z→19:32Z: zero events on any track. M201 R3 @f89b2ecc now 288min post-push (≈4h48m), 159min post-nudge.  |
 | Apr 24, 21:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -57,21 +66,12 @@
 | Apr 24, 18:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 18:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 16:12Z cron tick. Scan window 15:52Z→16:12Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
 | Apr 24, 17:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 17:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:52Z cron tick. Scan window 15:33Z→15:52Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
-| Apr 24, 17:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 17:33 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:32Z cron tick. Scan window 15:13Z→15:32Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
-| Apr 24, 17:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 17:13 CEST | `SPRINT_NOTE` | `M201` | anvil | 15:12Z cron tick. Scan window 14:53Z→15:12Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 still awaitin |
-| Apr 24, 16:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 16:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 14:52Z cron tick. Event scan 13:30Z→14:52Z clean: no new REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events (only Hermes ARTIFACT_PUBLISHED + |
-| Apr 24, 16:45 CEST | `SPRINT_NOTE` | `M201` | anvil | M201 R3 FIX PUSHED. Branch feat/201-racl-phase4-instrumentation 932029ec → f89b2ecc. Closes GUARDIAN Phase 2 R1 REVISE (8.55/9.5). MUST-FIX: |
-| Apr 24, 16:44 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 18.8h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 19.7h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
