@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1445
+- **Total events:** 1446
 - **Last 24h:** 268 (rate 11.17/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (9 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 19:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 19:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 19:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 19:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:12Z cron tick. Scan window 16:53Z→17:12Z clean on my track (0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED for M201). |
@@ -23,12 +24,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 18:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 16:52Z cron tick + POLITE NUDGE to VIGIL R3 / GUARDIAN R2 on M201. Scan window 16:13Z→16:52Z: 0 reviewer verdicts on my track. Unrelated in- |
 | Apr 24, 18:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 18:33 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 18:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 18:15 CEST | `DECISION_NEEDED` | `C3` | forge | C3 Mike gate: C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfill |
 
-### Last 4 hours (41 events)
+### Last 4 hours (42 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 19:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 19:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 19:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 19:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:12Z cron tick. Scan window 16:53Z→17:12Z clean on my track (0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED for M201). |
@@ -43,11 +43,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 18:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 16:12Z cron tick. Scan window 15:52Z→16:12Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
 | Apr 24, 18:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 17:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 17:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 
 ### Last 24 hours (268 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 19:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 19:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 19:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 19:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:12Z cron tick. Scan window 16:53Z→17:12Z clean on my track (0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED for M201). |
@@ -62,14 +62,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 18:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 16:12Z cron tick. Scan window 15:52Z→16:12Z clean: 0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED. M201 R3 awaiting VIGI |
 | Apr 24, 18:08 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 17:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 17:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 16.4h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 58m | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 16.5h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 1.2h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -89,10 +88,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 19:13 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 335 |
+| 🪽 **Hermes** | Apr 24, 19:24 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 336 |
 | ⚒️ **ANVIL** | Apr 24, 19:12 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 368 |
 | 🛡️ **GUARDIAN** | Apr 24, 18:59 CEST | `AGENT_HEARTBEAT` | `monitoring` | 🟢 fresh | 269 |
-| 🔥 **FORGE** | Apr 24, 18:15 CEST | `DECISION_NEEDED` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🟢 fresh | 158 |
+| 🔥 **FORGE** | Apr 24, 18:15 CEST | `DECISION_NEEDED` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🟡 1–3h | 158 |
 | 🔍 **VIGIL** | Apr 24, 08:58 CEST | `REVIEW_POSTED` | `M34` | 🔴 stale | 87 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🔴 stale | 181 |
@@ -222,4 +221,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/62 tasks DONE · Last auto-regenerated: 19:14 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/62 tasks DONE · Last auto-regenerated: 19:25 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
