@@ -4,68 +4,71 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1305
-- **Last 24h:** 289 (rate 12.04/h)
+- **Total events:** 1317
+- **Last 24h:** 287 (rate 11.96/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (7 events)
+### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 24, 06:34 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint is in a quiet stretch right now — the last 90 minutes produced only housekeeping activity (internal notes, two published artifact |
-| Apr 24, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:52:50Z. Only 1 unrelated event: hermes ARTIFACT_PUBLISHED 03:56:08Z (oinxtractor dashboard). Zero B9v3/B12- |
-| Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:32:33Z. 3 events, none affecting anvil work: (1) vigil REVIEW_POSTED M201 PR#215 REVISE 6.2 at 03:39:15Z —  |
-| Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
+| Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 07:39 CEST | `TASK_PLANNED` | `M214` | forge | M214 plan published |
+| Apr 24, 07:38 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — design_clarification_needed |
+| Apr 24, 07:38 CEST | `SPRINT_NOTE` | `M201` | anvil | Mike directive at 07:35 CEST transfers M201/PR#215 rework to anvil. OinkV shipped registration-only for EXTRACTION_CORRECTION + FALSE_REJECT |
+| Apr 24, 07:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 05:12:38Z. 3 events, none anvil: guardian HB 05:13:37Z, forge HB 05:14:04Z, vigil REVIEW_POSTED M37/SG#40 RE |
+| Apr 24, 07:19 CEST | `REVIEW_POSTED` | `M37` | vigil | M37 review by vigil — REVISE (9.15) |
+| Apr 24, 07:14 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
+| Apr 24, 07:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 07:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 04:52:51Z. Confirmed prior 04:52 SN evt_20260424T045251Z_000001 landed (transcript repair error was cosmeti |
+| Apr 24, 06:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 04:32:33Z. 3 events: hermes SPRINT_NOTE 04:34:07Z (referenced stale PRs A11/B1/B2/B5/B6/B4 — all already mer |
 
-### Last 4 hours (38 events)
+### Last 4 hours (36 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 07:39 CEST | `TASK_PLANNED` | `M214` | forge | M214 plan published |
+| Apr 24, 07:38 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — design_clarification_needed |
+| Apr 24, 07:38 CEST | `SPRINT_NOTE` | `M201` | anvil | Mike directive at 07:35 CEST transfers M201/PR#215 rework to anvil. OinkV shipped registration-only for EXTRACTION_CORRECTION + FALSE_REJECT |
+| Apr 24, 07:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 05:12:38Z. 3 events, none anvil: guardian HB 05:13:37Z, forge HB 05:14:04Z, vigil REVIEW_POSTED M37/SG#40 RE |
+| Apr 24, 07:19 CEST | `REVIEW_POSTED` | `M37` | vigil | M37 review by vigil — REVISE (9.15) |
+| Apr 24, 07:14 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
+| Apr 24, 07:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 07:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 04:52:51Z. Confirmed prior 04:52 SN evt_20260424T045251Z_000001 landed (transcript repair error was cosmeti |
+| Apr 24, 06:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 04:32:33Z. 3 events: hermes SPRINT_NOTE 04:34:07Z (referenced stale PRs A11/B1/B2/B5/B6/B4 — all already mer |
+| Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
+| Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 06:34 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint is in a quiet stretch right now — the last 90 minutes produced only housekeeping activity (internal notes, two published artifact |
 | Apr 24, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:52:50Z. Only 1 unrelated event: hermes ARTIFACT_PUBLISHED 03:56:08Z (oinxtractor dashboard). Zero B9v3/B12- |
 | Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:32:33Z. 3 events, none affecting anvil work: (1) vigil REVIEW_POSTED M201 PR#215 REVISE 6.2 at 03:39:15Z —  |
-| Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
-| Apr 24, 05:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 03:12:50Z. #189 canary PASS 08:29:46Z holding; T+48h recon 2026-04-24T08:00Z (~4h28m). B9 v3 VIGIL still pe |
-| Apr 24, 05:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 02:52:58Z. 3 unrelated events: guardian HB 03:07:20Z, oinkv 03:08:54Z, hermes ARTIFACT_PUBLISHED docs/oinxtrac |
-| Apr 24, 05:10 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:08 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 05:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 04:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 02:32:50Z. #189 merged + canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~5h08m). B9 v3 VIGIL pendi |
-| Apr 24, 04:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior HB evt_20260424T021241Z_000001 + SN _000002 confirmed landed. Since 02:12:41Z: 2 oinkv events, 1 guardian HB. Zero revi |
-| Apr 24, 04:32 CEST | `None` | `—` | oinkv |  — |
 
-### Last 24 hours (289 events)
+### Last 24 hours (287 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 07:39 CEST | `TASK_PLANNED` | `M214` | forge | M214 plan published |
+| Apr 24, 07:38 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — design_clarification_needed |
+| Apr 24, 07:38 CEST | `SPRINT_NOTE` | `M201` | anvil | Mike directive at 07:35 CEST transfers M201/PR#215 rework to anvil. OinkV shipped registration-only for EXTRACTION_CORRECTION + FALSE_REJECT |
+| Apr 24, 07:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 05:12:38Z. 3 events, none anvil: guardian HB 05:13:37Z, forge HB 05:14:04Z, vigil REVIEW_POSTED M37/SG#40 RE |
+| Apr 24, 07:19 CEST | `REVIEW_POSTED` | `M37` | vigil | M37 review by vigil — REVISE (9.15) |
+| Apr 24, 07:14 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
+| Apr 24, 07:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
+| Apr 24, 07:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 04:52:51Z. Confirmed prior 04:52 SN evt_20260424T045251Z_000001 landed (transcript repair error was cosmeti |
+| Apr 24, 06:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-actionable delta since 04:32:33Z. 3 events: hermes SPRINT_NOTE 04:34:07Z (referenced stale PRs A11/B1/B2/B5/B6/B4 — all already mer |
+| Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint_poke_response |
+| Apr 24, 06:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 06:34 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint is in a quiet stretch right now — the last 90 minutes produced only housekeeping activity (internal notes, two published artifact |
 | Apr 24, 06:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:52:50Z. Only 1 unrelated event: hermes ARTIFACT_PUBLISHED 03:56:08Z (oinxtractor dashboard). Zero B9v3/B12- |
 | Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:32:33Z. 3 events, none affecting anvil work: (1) vigil REVIEW_POSTED M201 PR#215 REVISE 6.2 at 03:39:15Z —  |
-| Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
-| Apr 24, 05:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 03:12:50Z. #189 canary PASS 08:29:46Z holding; T+48h recon 2026-04-24T08:00Z (~4h28m). B9 v3 VIGIL still pe |
-| Apr 24, 05:12 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 02:52:58Z. 3 unrelated events: guardian HB 03:07:20Z, oinkv 03:08:54Z, hermes ARTIFACT_PUBLISHED docs/oinxtrac |
-| Apr 24, 05:10 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 05:08 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 05:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 04:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 02:32:50Z. #189 merged + canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~5h08m). B9 v3 VIGIL pendi |
-| Apr 24, 04:32 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Prior HB evt_20260424T021241Z_000001 + SN _000002 confirmed landed. Since 02:12:41Z: 2 oinkv events, 1 guardian HB. Zero revi |
-| Apr 24, 04:32 CEST | `None` | `—` | oinkv |  — |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 3.7h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 4.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -79,18 +82,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🟠 WARN | `B6` | CANARY_STARTED with no verdict within 48h |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 | 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
-| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
+| 🟠 WARN | `M189` | AGENT_HEARTBEAT stale > 3h for anvil |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 06:34 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 301 |
-| ⚒️ **ANVIL** | Apr 24, 06:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 314 |
-| 🛡️ **GUARDIAN** | Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟢 fresh | 244 |
-| 🔍 **VIGIL** | Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | 🟢 fresh | 81 |
+| 🪽 **Hermes** | Apr 24, 07:47 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 302 |
+| 🔥 **FORGE** | Apr 24, 07:39 CEST | `TASK_PLANNED` | `sprint_poke_response` | 🟢 fresh | 154 |
+| ⚒️ **ANVIL** | Apr 24, 07:38 CEST | `BLOCKED` | `M189` | 🟢 fresh | 319 |
+| 🔍 **VIGIL** | Apr 24, 07:19 CEST | `REVIEW_POSTED` | `M37` | 🟢 fresh | 82 |
+| 🛡️ **GUARDIAN** | Apr 24, 07:13 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟢 fresh | 246 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🟡 1–3h | 181 |
-| 🔥 **FORGE** | Apr 24, 03:27 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🔴 stale | 151 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -168,6 +171,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M22` | M22 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M23` | M23 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M32` | M32 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `M37` | M37 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M105` | M105 | 🟢 LIGHTWEIGHT | — | 👀 PR REVIEW | — |
 | `M111` | M111 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M120` | M120 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
@@ -181,7 +185,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M181` | M181 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M189` | M189 | 🔴 CRITICAL | — | ✅ DONE | PASS |
 | `M197` | M197 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
-| `M201` | M201 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M201` | M201 | 🔴 CRITICAL | — | 🛑 BLOCKED | — |
 | `M202` | M202 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M214` | M214 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `SPRINT-POKE` | SPRINT-POKE | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -197,11 +201,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| 🔍 | VIGIL | Code Review + Scoring |
-| 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🔍 | VIGIL | Code Review + Scoring |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🐷 | OinkV | Plan Auditor |
 | • | OINKDB |  |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -215,4 +219,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/59 tasks DONE · Last auto-regenerated: 06:34 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/60 tasks DONE · Last auto-regenerated: 07:47 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
