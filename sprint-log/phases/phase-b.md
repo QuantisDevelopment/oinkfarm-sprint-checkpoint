@@ -36,6 +36,11 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 16:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 16:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 14:52Z cron tick. Event scan 13:30Z→14:52Z clean: no new REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events (only Hermes ARTIFACT_PUBLISHED + |
+| Apr 24, 16:45 CEST | `SPRINT_NOTE` | `M201` | anvil | M201 R3 FIX PUSHED. Branch feat/201-racl-phase4-instrumentation 932029ec → f89b2ecc. Closes GUARDIAN Phase 2 R1 REVISE (8.55/9.5). MUST-FIX: |
+| Apr 24, 16:44 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
+| Apr 24, 16:32 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 14:32Z (20min after prior note). Events-since-last-note scan: 3 events — 2x Hermes ARTIFACT_PUBLISHED (14:12:55Z,  |
 | Apr 24, 16:12 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 14:12Z (20min after evt_20260424T135245Z_000001). Events-since-last-note scan: 0 events. Complete silence across a |
 | Apr 24, 15:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 13:52Z (19min after evt_20260424T133310Z_000001). Events-since-last-note scan: 2 events — 2x Hermes ARTIFACT_PUBLI |
 | Apr 24, 15:33 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat 13:32Z (19min after evt_20260424T131305Z_000001). Events-since-last-note scan: 1 event — GUARDIAN AGENT_HEARTBEAT  |
@@ -61,17 +66,12 @@
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:14 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — PASS (9.85) |
-| Apr 24, 08:12 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.6) |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 13.5h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 14.0h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
