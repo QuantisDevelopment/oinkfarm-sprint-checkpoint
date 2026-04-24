@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1463
+- **Total events:** 1469
 - **Last 24h:** 264 (rate 11.0/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,22 +12,29 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 21:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 21:33 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
+| Apr 24, 21:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:32Z cron tick. Clean window 19:12Z→19:32Z: zero events on any track. M201 R3 @f89b2ecc now 288min post-push (≈4h48m), 159min post-nudge.  |
+| Apr 24, 21:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:12Z cron tick. Clean window 18:53Z→19:12Z: guardian heartbeat 18:58Z + hermes artifact 19:03Z, zero reviewer verdicts on my track. M201 R |
 | Apr 24, 21:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 20:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 20:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 20:53 CEST | `SPRINT_NOTE` | `M201` | anvil | 18:52Z cron tick. Clean window 18:32Z→18:52Z: zero new events on any track. M201 R3 @f89b2ecc now 248min post-push, 119min (≈2h) post-nudge. |
-| Apr 24, 20:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 20:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 18:32Z cron tick. Clean window — guardian heartbeat 18:28Z but no verdict. M201 R3 228min post-push, 99min post-nudge. Friday freeze gates M |
-| Apr 24, 20:28 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 20:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 20:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 18:12Z cron tick. Scan window 17:53Z→18:12Z clean: 0 reviewer verdicts on my track. M201 R3 at f89b2ecc 208min post-push, 79min post-nudge.  |
 
-### Last 4 hours (42 events)
+### Last 4 hours (41 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 21:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 21:33 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
+| Apr 24, 21:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:32Z cron tick. Clean window 19:12Z→19:32Z: zero events on any track. M201 R3 @f89b2ecc now 288min post-push (≈4h48m), 159min post-nudge.  |
+| Apr 24, 21:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:12Z cron tick. Clean window 18:53Z→19:12Z: guardian heartbeat 18:58Z + hermes artifact 19:03Z, zero reviewer verdicts on my track. M201 R |
 | Apr 24, 21:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 20:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 20:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -37,16 +44,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 20:28 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 20:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 20:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 18:12Z cron tick. Scan window 17:53Z→18:12Z clean: 0 reviewer verdicts on my track. M201 R3 at f89b2ecc 208min post-push, 79min post-nudge.  |
-| Apr 24, 19:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 19:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 19:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 19:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:52Z cron tick. Scan window 17:33Z→17:52Z clean: 0 reviewer verdicts. M201 R3 at f89b2ecc now 188min post-push, 59min post-nudge. No re-nu |
-| Apr 24, 19:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 19:38 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 
 ### Last 24 hours (264 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 21:40 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 21:33 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
+| Apr 24, 21:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:32Z cron tick. Clean window 19:12Z→19:32Z: zero events on any track. M201 R3 @f89b2ecc now 288min post-push (≈4h48m), 159min post-nudge.  |
+| Apr 24, 21:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 21:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 19:12Z cron tick. Clean window 18:53Z→19:12Z: guardian heartbeat 18:58Z + hermes artifact 19:03Z, zero reviewer verdicts on my track. M201 R |
 | Apr 24, 21:03 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 20:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 20:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -56,19 +63,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 20:28 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 | Apr 24, 20:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 20:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 18:12Z cron tick. Scan window 17:53Z→18:12Z clean: 0 reviewer verdicts on my track. M201 R3 at f89b2ecc 208min post-push, 79min post-nudge.  |
-| Apr 24, 19:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
-| Apr 24, 19:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 19:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 19:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:52Z cron tick. Scan window 17:33Z→17:52Z clean: 0 reviewer verdicts. M201 R3 at f89b2ecc now 188min post-push, 59min post-nudge. No re-nu |
-| Apr 24, 19:46 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 24, 19:38 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — monitoring |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 18.2h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 2.8h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 18.8h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 3.4h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -88,10 +89,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 21:03 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 339 |
-| 🛡️ **GUARDIAN** | Apr 24, 20:58 CEST | `AGENT_HEARTBEAT` | `monitoring` | 🟢 fresh | 273 |
-| ⚒️ **ANVIL** | Apr 24, 20:53 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 378 |
-| 🔥 **FORGE** | Apr 24, 18:15 CEST | `DECISION_NEEDED` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🟡 1–3h | 158 |
+| 🪽 **Hermes** | Apr 24, 21:40 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 340 |
+| 🛡️ **GUARDIAN** | Apr 24, 21:33 CEST | `AGENT_HEARTBEAT` | `monitoring` | 🟢 fresh | 274 |
+| ⚒️ **ANVIL** | Apr 24, 21:32 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 382 |
+| 🔥 **FORGE** | Apr 24, 18:15 CEST | `DECISION_NEEDED` | `VIGIL cross-check poke #3 — 3 reviews verified` | 🔴 stale | 158 |
 | 🔍 **VIGIL** | Apr 24, 08:58 CEST | `REVIEW_POSTED` | `M34` | 🔴 stale | 87 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🔴 stale | 181 |
@@ -221,4 +222,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/62 tasks DONE · Last auto-regenerated: 21:03 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/62 tasks DONE · Last auto-regenerated: 21:40 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
