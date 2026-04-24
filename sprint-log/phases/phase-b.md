@@ -36,6 +36,12 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 23:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 23:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:52Z cron tick. Window 21:33Z→21:52Z: zero events on any track. M201 both-reviewer PASS holds (VIGIL R3 9.95 @20:08Z, GUARDIAN R2 9.55 @20 |
+| Apr 24, 23:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 23:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:32Z cron tick. Window 21:13Z→21:32Z: guardian heartbeat only, zero events on ANVIL track. M201 both-reviewer PASS holds. Friday freeze ga |
+| Apr 24, 23:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 24, 23:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:12Z cron tick. Window 20:53Z→21:12Z: guardian heartbeat + sprint note + hermes artifact, zero events on ANVIL track. M201 both-reviewer P |
 | Apr 24, 22:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 22:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 20:52Z cron tick. Window 20:33Z→20:52Z: 2 hermes artifacts + 2 VIGIL reviews on M42/M43 (not ANVIL's track). M201 both-reviewer PASS holds ( |
 | Apr 24, 22:47 CEST | `REVIEW_POSTED` | `M42` | vigil | M42 review by vigil — PASS (9.15) |
@@ -60,18 +66,12 @@
 | Apr 24, 20:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 24, 20:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 18:12Z cron tick. Scan window 17:53Z→18:12Z clean: 0 reviewer verdicts on my track. M201 R3 at f89b2ecc 208min post-push, 79min post-nudge.  |
 | Apr 24, 19:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 19:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:52Z cron tick. Scan window 17:33Z→17:52Z clean: 0 reviewer verdicts. M201 R3 at f89b2ecc now 188min post-push, 59min post-nudge. No re-nu |
-| Apr 24, 19:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 19:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:32Z cron tick. Scan window 17:12Z→17:32Z clean on my track. M201 R3 at f89b2ecc now 168min post-push, 39min post-nudge (SPRINT_NOTE evt_2 |
-| Apr 24, 19:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 19:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 17:12Z cron tick. Scan window 16:53Z→17:12Z clean on my track (0 REVIEW_POSTED, 0 PROPOSAL_APPROVED, 0 DECISION_NEEDED, 0 BLOCKED for M201). |
-| Apr 24, 18:53 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 20.0h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 21.1h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
