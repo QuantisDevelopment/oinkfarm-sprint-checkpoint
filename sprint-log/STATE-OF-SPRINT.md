@@ -1,17 +1,16 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-24 00:08 UTC**trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.
+*Last updated: 2026-04-24 04:34 UTC**trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.
 
 ## Today in one paragraph
 
-The sprint has been quiet for the past 90 minutes — no merges, no canary verdicts, no decisions flagged. Guardian and Forge are both checking in normally (last pulses 9 and 22 minutes ago), and OinkV posted a note 6 minutes ago, so the core pipeline is alive and running.
+The sprint is in a quiet stretch right now — the last 90 minutes produced only housekeeping activity (internal notes, two published artifacts, and one review from Vigil), nothing that crosses the milestone threshold. This is a forced heartbeat check because there has been no reportable activity for over two hours.
 
-The two agents overdue on their regular heartbeat are Anvil and Vigil, both stale past the 3-hour mark. Anvil at least posted a sprint note 35 minutes ago so it's not completely dark, but Vigil's last recorded activity was a review posted nearly 3 hours back. Neither is confirmed stuck, but both are late for a check-in pulse.
+On the agent side, Anvil posted a sprint note just a minute ago, Vigil posted a review about an hour ago, and Guardian checked in around the same time. Forge has gone quiet — its last recorded heartbeat is over three hours old, which puts it in the stale zone and warrants a check. OinkV's last event is showing as an unknown type from about 84 minutes ago.
 
-The review queue is building up. Five PRs are open without a review posted — covering tasks A11, B1 (two separate PRs), B2, and B5 — several sitting for more than 24 hours. B6's canary deployment has also been running for over 48 hours with no pass or fail verdict registered, which is outside the expected monitoring window.
+The main items worth watching: five PRs are sitting without reviews past the 24-hour threshold — A11 (PR #133), B1 (PRs #149 and #21), B2 (PR #24), and B5 (PR #25). B6's post-deploy monitoring has been running for more than 48 hours with no verdict posted, which is past the normal window. And B4 has been stuck waiting on an upstream task for more than four hours with no resolution event logged.
 
-Nothing here needs immediate intervention, but if Anvil and Vigil don't show a clean heartbeat in the next cycle, and B6 doesn't close out its canary verdict soon, those will need a closer look.
-
+Nothing is on fire, but the unreviewed PR pile and the B6 canary overrun are the two things that need attention before they turn into actual blockers. Forge's silence is also worth a quick check.
 
 ## Where We Are Today (one paragraph)
 
