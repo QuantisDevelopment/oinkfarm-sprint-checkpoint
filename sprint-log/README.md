@@ -4,76 +4,76 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1344
-- **Last 24h:** 302 (rate 12.58/h)
+- **Total events:** 1353
+- **Last 24h:** 305 (rate 12.71/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (32 events)
+### Last 1 hour (37 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 08:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 08:43 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — VIGIL cross-check (3 PASSes) + INV-#201-emission substrate unblock |
+| Apr 24, 08:42 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_2026-04-24_0841_cest |
+| Apr 24, 08:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 06:32Z. NEW since last tick: VIGIL PASS on M213 at 06:14:57Z (PR #214 R2 head=88acbd2a — FORGE VIGIL-detection hoo |
+| Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:26 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:26 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 24, 08:24 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:24 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:14 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — PASS (9.85) |
-| Apr 24, 08:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 06:12Z. NEW since last tick: VIGIL PASS on M201 at 06:12:27Z (PR #215 R2 head=932029ec — EXTRACTION_CORRECTION + F |
-| Apr 24, 08:12 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.6) |
-| Apr 24, 08:11 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3-daily-sqlite-integrity-proxy |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:10 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:10 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:09 CEST | `SPRINT_NOTE` | `M189` | guardian | Supplemental to daily evt_20260424T060758Z_000001. On deeper inspection of new event types, SL_TO_BE (BTC #2647, 2026-04-23T21:31:55Z) + TRA |
 
-### Last 4 hours (55 events)
+### Last 4 hours (61 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 08:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 08:43 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — VIGIL cross-check (3 PASSes) + INV-#201-emission substrate unblock |
+| Apr 24, 08:42 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_2026-04-24_0841_cest |
+| Apr 24, 08:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 06:32Z. NEW since last tick: VIGIL PASS on M213 at 06:14:57Z (PR #214 R2 head=88acbd2a — FORGE VIGIL-detection hoo |
+| Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:26 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:26 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 24, 08:24 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:24 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:14 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — PASS (9.85) |
-| Apr 24, 08:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 06:12Z. NEW since last tick: VIGIL PASS on M201 at 06:12:27Z (PR #215 R2 head=932029ec — EXTRACTION_CORRECTION + F |
-| Apr 24, 08:12 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.6) |
-| Apr 24, 08:11 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3-daily-sqlite-integrity-proxy |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:10 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:10 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:09 CEST | `SPRINT_NOTE` | `M189` | guardian | Supplemental to daily evt_20260424T060758Z_000001. On deeper inspection of new event types, SL_TO_BE (BTC #2647, 2026-04-23T21:31:55Z) + TRA |
 
-### Last 24 hours (302 events)
+### Last 24 hours (305 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 08:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 08:43 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — VIGIL cross-check (3 PASSes) + INV-#201-emission substrate unblock |
+| Apr 24, 08:42 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_2026-04-24_0841_cest |
+| Apr 24, 08:32 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 06:32Z. NEW since last tick: VIGIL PASS on M213 at 06:14:57Z (PR #214 R2 head=88acbd2a — FORGE VIGIL-detection hoo |
+| Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:26 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:26 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 24, 08:24 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
+| Apr 24, 08:24 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
 | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:14 CEST | `REVIEW_POSTED` | `M214` | vigil | M214 review by vigil — PASS (9.85) |
-| Apr 24, 08:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat 06:12Z. NEW since last tick: VIGIL PASS on M201 at 06:12:27Z (PR #215 R2 head=932029ec — EXTRACTION_CORRECTION + F |
-| Apr 24, 08:12 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.6) |
-| Apr 24, 08:11 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3-daily-sqlite-integrity-proxy |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:10 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:10 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-24.md |
-| Apr 24, 08:10 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 24, 08:09 CEST | `SPRINT_NOTE` | `M189` | guardian | Supplemental to daily evt_20260424T060758Z_000001. On deeper inspection of new event types, SL_TO_BE (BTC #2647, 2026-04-23T21:31:55Z) + TRA |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 5.5h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 5.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -92,12 +92,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 08:23 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 305 |
-| • **OINKDB** | Apr 24, 08:15 CEST | `BLOCKED` | `B4` | 🟢 fresh | 20 |
+| 🪽 **Hermes** | Apr 24, 08:45 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 306 |
+| 🔥 **FORGE** | Apr 24, 08:43 CEST | `AGENT_HEARTBEAT` | `VIGIL cross-check (3 PASSes) + INV-#201-emission substrate unblock` | 🟢 fresh | 156 |
+| 🛡️ **GUARDIAN** | Apr 24, 08:42 CEST | `AGENT_HEARTBEAT` | `sprint_poke_2026-04-24_0841_cest` | 🟢 fresh | 251 |
+| ⚒️ **ANVIL** | Apr 24, 08:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 327 |
+| • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🟢 fresh | 25 |
 | 🔍 **VIGIL** | Apr 24, 08:14 CEST | `REVIEW_POSTED` | `M214` | 🟢 fresh | 85 |
-| ⚒️ **ANVIL** | Apr 24, 08:12 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 326 |
-| 🛡️ **GUARDIAN** | Apr 24, 08:11 CEST | `AGENT_HEARTBEAT` | `B3-daily-sqlite-integrity-proxy` | 🟢 fresh | 250 |
-| 🔥 **FORGE** | Apr 24, 08:06 CEST | `AGENT_HEARTBEAT` | `cross-check + HH audit` | 🟢 fresh | 155 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🔴 stale | 181 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -206,11 +206,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🔥 | FORGE | Technical Execution Planner |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -224,4 +224,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/61 tasks DONE · Last auto-regenerated: 08:24 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/61 tasks DONE · Last auto-regenerated: 08:45 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
