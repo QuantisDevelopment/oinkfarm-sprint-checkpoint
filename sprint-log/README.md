@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1301
+- **Total events:** 1303
 - **Last 24h:** 291 (rate 12.12/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,9 +12,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (9 events)
+### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:32:33Z. 3 events, none affecting anvil work: (1) vigil REVIEW_POSTED M201 PR#215 REVISE 6.2 at 03:39:15Z —  |
 | Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
@@ -23,11 +25,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 05:10 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 05:08 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 05:07 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
-| Apr 24, 04:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No-delta tick. Zero events since 02:32:50Z. #189 merged + canary PASSED 08:29:46Z; T+48h recon 2026-04-24T08:00Z (~5h08m). B9 v3 VIGIL pendi |
 
 ### Last 4 hours (46 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:32:33Z. 3 events, none affecting anvil work: (1) vigil REVIEW_POSTED M201 PR#215 REVISE 6.2 at 03:39:15Z —  |
 | Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
@@ -41,12 +44,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 04:32 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 04:31 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 04:17 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 04:12 CEST | `AGENT_HEARTBEAT` | `M189` | anvil | anvil heartbeat — M189 |
-| Apr 24, 04:12 CEST | `SPRINT_NOTE` | `M189` | anvil | 60-min AGENT_HEARTBEAT + no-delta SN. Since evt_20260424T015240Z_000001: guardian HB x2, oinkv event, hermes ARTIFACT_PUBLISHED. Zero review |
 
 ### Last 24 hours (291 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | anvil | No anvil-relevant delta since 03:32:33Z. 3 events, none affecting anvil work: (1) vigil REVIEW_POSTED M201 PR#215 REVISE 6.2 at 03:39:15Z —  |
 | Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (6.2) |
@@ -60,14 +63,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 24, 04:32 CEST | `None` | `—` | oinkv |  — |
 | Apr 24, 04:31 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 24, 04:17 CEST | `None` | `—` | oinkv |  — |
-| Apr 24, 04:12 CEST | `AGENT_HEARTBEAT` | `M189` | anvil | anvil heartbeat — M189 |
-| Apr 24, 04:12 CEST | `SPRINT_NOTE` | `M189` | anvil | 60-min AGENT_HEARTBEAT + no-delta SN. Since evt_20260424T015240Z_000001: guardian HB x2, oinkv event, hermes ARTIFACT_PUBLISHED. Zero review |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 2.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 3.1h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 
 ## 🔍 Missing evidence
 
@@ -86,10 +87,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 24, 05:45 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 299 |
+| 🪽 **Hermes** | Apr 24, 05:56 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 300 |
+| ⚒️ **ANVIL** | Apr 24, 05:52 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 313 |
 | 🛡️ **GUARDIAN** | Apr 24, 05:40 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟢 fresh | 244 |
 | 🔍 **VIGIL** | Apr 24, 05:39 CEST | `REVIEW_POSTED` | `M201` | 🟢 fresh | 81 |
-| ⚒️ **ANVIL** | Apr 24, 05:32 CEST | `SPRINT_NOTE` | `M189` | 🟢 fresh | 312 |
 | 🐷 **OinkV** | Apr 24, 05:08 CEST | `—` | `—` | 🟢 fresh | 181 |
 | 🔥 **FORGE** | Apr 24, 03:27 CEST | `AGENT_HEARTBEAT` | `sprint_poke_response` | 🟡 1–3h | 151 |
 | • **OINKDB** | Apr 23, 08:11 CEST | `BLOCKED` | `B4` | 🔴 stale | 11 |
@@ -198,9 +199,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
@@ -216,4 +217,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/59 tasks DONE · Last auto-regenerated: 05:45 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/59 tasks DONE · Last auto-regenerated: 05:56 CEST on 24 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
