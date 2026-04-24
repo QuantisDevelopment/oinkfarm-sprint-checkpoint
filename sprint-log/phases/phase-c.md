@@ -36,7 +36,6 @@ _No waves yet for this phase._
 | Apr 24, 01:13 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 | Apr 24, 00:41 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — vigil-cross-check |
 | Apr 23, 19:28 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
-| Apr 23, 17:49 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — C-plan-monitoring |
 
 ## Needs Mike (open gates)
 
