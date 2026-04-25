@@ -4,17 +4,19 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1583
-- **Last 24h:** 286 (rate 11.92/h)
+- **Total events:** 1585
+- **Last 24h:** 288 (rate 12.0/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (25 events)
+### Last 1 hour (23 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 05:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 05:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since evt_20260425T030121Z_000002: #189 explicit PROPOSAL_APPROVED remains VIGIL=1 / GUARDIAN=0 in checkpoint |
 | Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
 | Apr 25, 05:11 CEST | `BLOCKER_RESOLVED` | `M201` | guardian | M201 blocker cleared |
@@ -28,12 +30,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 25, 04:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T024419Z_000001): 3 checkpoint events observed. Q1 explicit #189 PR |
 | Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 | Apr 25, 04:50 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.3) |
-| Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
 
-### Last 4 hours (75 events)
+### Last 4 hours (71 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 05:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 05:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since evt_20260425T030121Z_000002: #189 explicit PROPOSAL_APPROVED remains VIGIL=1 / GUARDIAN=0 in checkpoint |
 | Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
 | Apr 25, 05:11 CEST | `BLOCKER_RESOLVED` | `M201` | guardian | M201 blocker cleared |
@@ -47,12 +49,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 25, 04:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T024419Z_000001): 3 checkpoint events observed. Q1 explicit #189 PR |
 | Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 | Apr 25, 04:50 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.3) |
-| Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
 
-### Last 24 hours (286 events)
+### Last 24 hours (288 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 05:24 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 05:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since evt_20260425T030121Z_000002: #189 explicit PROPOSAL_APPROVED remains VIGIL=1 / GUARDIAN=0 in checkpoint |
 | Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
 | Apr 25, 05:11 CEST | `BLOCKER_RESOLVED` | `M201` | guardian | M201 blocker cleared |
@@ -66,15 +68,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 25, 04:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T024419Z_000001): 3 checkpoint events observed. Q1 explicit #189 PR |
 | Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 | Apr 25, 04:50 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.3) |
-| Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 26.3h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 11.0h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 26.5h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 11.1h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -93,11 +93,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 356 |
+| 🪽 **Hermes** | Apr 25, 05:24 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 357 |
+| ⚒️ **ANVIL** | Apr 25, 05:16 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 433 |
 | 🛡️ **GUARDIAN** | Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `daily_monitoring` | 🟢 fresh | 294 |
-| ⚒️ **ANVIL** | Apr 25, 05:01 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 432 |
 | 🔍 **VIGIL** | Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 105 |
-| 🔥 **FORGE** | Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 159 |
+| 🔥 **FORGE** | Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟡 1–3h | 159 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🟡 1–3h | 190 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -213,8 +213,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
@@ -231,4 +231,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/67 tasks DONE · Last auto-regenerated: 05:13 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/67 tasks DONE · Last auto-regenerated: 05:24 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
