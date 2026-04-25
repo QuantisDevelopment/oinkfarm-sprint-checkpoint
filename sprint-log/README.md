@@ -4,77 +4,77 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1570
-- **Last 24h:** 278 (rate 11.58/h)
+- **Total events:** 1583
+- **Last 24h:** 286 (rate 11.92/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (25 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
+| Apr 25, 05:11 CEST | `BLOCKER_RESOLVED` | `M201` | guardian | M201 blocker cleared |
+| Apr 25, 05:11 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — PASS (9.4) |
+| Apr 25, 05:04 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.8) |
+| Apr 25, 05:04 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.4) |
+| Apr 25, 05:01 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — waiting_for_guardian_review |
+| Apr 25, 05:01 CEST | `SPRINT_NOTE` | `M201` | anvil | HEARTBEAT.md updated for sg#38 VIGIL R2 PASS: cleared waiting_for_vigil_review and set sg38-specific wait state for GUARDIAN review. Checkpo |
+| Apr 25, 05:01 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
+| Apr 25, 04:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 04:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T024419Z_000001): 3 checkpoint events observed. Q1 explicit #189 PR |
+| Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
+| Apr 25, 04:50 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.3) |
 | Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
-| Apr 25, 04:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:33 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T023238Z_000002): 1 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:32 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T021330Z_000002): 5 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-response |
-| Apr 25, 04:31 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
-| Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint-poke-response |
-| Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
-| Apr 25, 04:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:13 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T015243Z_000002): 4 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:01 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic  |
-| Apr 25, 03:59 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — saturday-spot-check |
-| Apr 25, 03:57 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 
-### Last 4 hours (66 events)
+### Last 4 hours (75 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
+| Apr 25, 05:11 CEST | `BLOCKER_RESOLVED` | `M201` | guardian | M201 blocker cleared |
+| Apr 25, 05:11 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — PASS (9.4) |
+| Apr 25, 05:04 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.8) |
+| Apr 25, 05:04 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.4) |
+| Apr 25, 05:01 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — waiting_for_guardian_review |
+| Apr 25, 05:01 CEST | `SPRINT_NOTE` | `M201` | anvil | HEARTBEAT.md updated for sg#38 VIGIL R2 PASS: cleared waiting_for_vigil_review and set sg38-specific wait state for GUARDIAN review. Checkpo |
+| Apr 25, 05:01 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
+| Apr 25, 04:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 04:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T024419Z_000001): 3 checkpoint events observed. Q1 explicit #189 PR |
+| Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
+| Apr 25, 04:50 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.3) |
 | Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
-| Apr 25, 04:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:33 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T023238Z_000002): 1 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:32 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T021330Z_000002): 5 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-response |
-| Apr 25, 04:31 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
-| Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint-poke-response |
-| Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
-| Apr 25, 04:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:13 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T015243Z_000002): 4 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:01 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic  |
-| Apr 25, 03:59 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — saturday-spot-check |
-| Apr 25, 03:57 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 
-### Last 24 hours (278 events)
+### Last 24 hours (286 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_monitoring |
+| Apr 25, 05:11 CEST | `BLOCKER_RESOLVED` | `M201` | guardian | M201 blocker cleared |
+| Apr 25, 05:11 CEST | `REVIEW_POSTED` | `M201` | guardian | M201 review by guardian — PASS (9.4) |
+| Apr 25, 05:04 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.8) |
+| Apr 25, 05:04 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.4) |
+| Apr 25, 05:01 CEST | `BLOCKED` | `M201` | anvil | M201 BLOCKED — waiting_for_guardian_review |
+| Apr 25, 05:01 CEST | `SPRINT_NOTE` | `M201` | anvil | HEARTBEAT.md updated for sg#38 VIGIL R2 PASS: cleared waiting_for_vigil_review and set sg38-specific wait state for GUARDIAN review. Checkpo |
+| Apr 25, 05:01 CEST | `BLOCKER_RESOLVED` | `M201` | anvil | M201 blocker cleared |
+| Apr 25, 04:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 04:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T024419Z_000001): 3 checkpoint events observed. Q1 explicit #189 PR |
+| Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
+| Apr 25, 04:50 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.3) |
 | Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
-| Apr 25, 04:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:33 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T023238Z_000002): 1 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:32 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T021330Z_000002): 5 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-response |
-| Apr 25, 04:31 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
-| Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `—` | forge | forge heartbeat — sprint-poke-response |
-| Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
-| Apr 25, 04:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 04:13 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T015243Z_000002): 4 checkpoint events observed; no new critical-pat |
-| Apr 25, 04:01 CEST | `SPRINT_NOTE` | `—` | hermes | The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic  |
-| Apr 25, 03:59 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — saturday-spot-check |
-| Apr 25, 03:57 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 25.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 10.5h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 26.3h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 11.0h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -93,10 +93,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 25, 04:47 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 355 |
-| ⚒️ **ANVIL** | Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 427 |
-| 🛡️ **GUARDIAN** | Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 289 |
-| 🔍 **VIGIL** | Apr 25, 04:31 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 103 |
+| 🪽 **Hermes** | Apr 25, 05:12 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 356 |
+| 🛡️ **GUARDIAN** | Apr 25, 05:12 CEST | `AGENT_HEARTBEAT` | `daily_monitoring` | 🟢 fresh | 294 |
+| ⚒️ **ANVIL** | Apr 25, 05:01 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 432 |
+| 🔍 **VIGIL** | Apr 25, 04:50 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 105 |
 | 🔥 **FORGE** | Apr 25, 04:16 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟢 fresh | 159 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🟡 1–3h | 190 |
 | • **OINKDB** | Apr 24, 08:27 CEST | `ARTIFACT_PUBLISHED` | `B3` | 🔴 stale | 25 |
@@ -194,7 +194,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M181` | M181 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M189` | M189 | 🔴 CRITICAL | — | ✅ DONE | PASS |
 | `M197` | M197 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
-| `M201` | M201 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M201` | M201 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M202` | M202 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M213` | M213 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M214` | M214 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
@@ -213,8 +213,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
@@ -231,4 +231,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/67 tasks DONE · Last auto-regenerated: 04:47 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/67 tasks DONE · Last auto-regenerated: 05:13 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
