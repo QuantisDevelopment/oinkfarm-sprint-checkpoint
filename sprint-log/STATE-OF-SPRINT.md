@@ -1,11 +1,12 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-25T15:51:51Z 2026-04-25 13:30 UTC**trust in the data**: ~5 historical signals were closed by mistake, about 84% of FILLED signals are missing the exact fill timestamp, the profit/loss on partially-closed trades is off by up to 2x, and there's no end-to-end accuracy measurement. An outside reviewer — **Arbiter V3** — spent seven phases analysing this and returned a verdict called **HEAVY HYBRID**: keep what already works (ingestion, parsers, multi-exchange pricing, supervisor, 92.5% lifecycle automation), adopt a stronger data substrate from the architecture documents (event log, trace layer, PostgreSQL, Redis Streams), decompose the 4,366-line `signal_router` God Object into real services, and **defer** the algorithmic/execution layer until the data underneath is provably correct. Heavy Hybrid is not a rewrite — it's a four-phase upgrade (A Data Truth → B Infrastructure → C Observability → D Algo, deferred) that refuses to throw away working code.
+*Last updated: 2026-04-25T20:13:03+00:00 UTC*
 
 ## Today in one paragraph
-Anvil and Vigil are moving — got fresh sprint notes from Anvil 15 minutes ago and code review from Vigil just landed. But we have a real backlog of PRs waiting for eyes: B1, B2, B5, and A11 all opened to the main line with no review posted yet. Guardian pinged in about 36 minutes ago, so that's solid, but Forge has gone quiet (last heartbeat 4+ hours ago). Oinkv's been silent for a full day, which is worth a ping.
 
-The bigger blocker: we're still sitting on Q-OF214-REGISTRY-1 (the registry question) with no decision after a full day. That's been flagged for Mike and needs a call. The canary test B6 started but we don't have a verdict yet — need to see if that clears in the next 12 hours or escalate.
+Anvil and Vigil are moving again after some quiet — Anvil posted fresh sprint notes 17 minutes ago and Vigil's code review landed about an hour back. But there's a real queue of PRs sitting open: B1, B2, B5, and A11 are all on the main branch waiting for review eyes. That's not blocking anything yet, but those should get reviewed in the next few hours to keep the rhythm. Guardian checked in 34 minutes ago, which is good, but Forge has gone quiet on us (last signal was over 8 hours ago) and Oinkv hasn't pinged since yesterday — worth a nudge to make sure those agents are healthy.
+
+The bigger concern is two architectural decisions that have been flagged for two days with no answer: Q-OF214 (the registry question) and Q-C3, both sitting in Mike's queue and past the 24-hour mark. Those need a call to unstick them. We also have B6's canary test running, but we don't have a verdict yet — that needs to land or escalate by tomorrow if it's still hanging.
 
 ## Where We Are Today (one paragraph)
 
