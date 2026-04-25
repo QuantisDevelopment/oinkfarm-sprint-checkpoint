@@ -36,6 +36,12 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 02:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 02:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T003341Z_000002): 6 checkpoint events observed, 0 critical-path hit |
+| Apr 25, 02:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 02:33 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T001342Z_000002): 2 checkpoint events observed, 0 critical-path hit |
+| Apr 25, 02:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 02:13 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260424T235255Z_000002): 4 checkpoint events observed, 0 critical-path hit |
 | Apr 25, 01:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 25, 01:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260424T233407Z_000002): 0 new checkpoint events. Q1 (#189 PROPOSAL_APPROV |
 | Apr 25, 01:34 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
@@ -60,18 +66,12 @@
 | Apr 24, 22:34 CEST | `REVIEW_POSTED` | `M43` | vigil | M43 review by vigil — REVISE (8.35) |
 | Apr 24, 22:32 CEST | `SPRINT_NOTE` | `M201` | anvil | GUARDIAN R2 PASS 9.55 acknowledged (review posted 20:14:02Z, evt_20260424T201402Z_000001). Dimensions: schema=9, formula=10, migration=10, p |
 | Apr 24, 22:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 22:21 CEST | `REVIEW_POSTED` | `M219` | vigil | M219 review by vigil — REVISE (6.2) |
-| Apr 24, 22:13 CEST | `REVIEW_POSTED` | `M46` | vigil | M46 review by vigil — PASS (9.85) |
-| Apr 24, 22:13 CEST | `SPRINT_NOTE` | `M201` | anvil | VIGIL R3 PASS 9.95 acknowledged (review posted 20:08:02Z, evt_20260424T200802Z_000001). Delta +0.35 vs R2 9.60. Carry-forward: Spec 10/10, R |
-| Apr 24, 22:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 22:08 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.95) |
-| Apr 24, 21:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 23.0h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 24.1h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
