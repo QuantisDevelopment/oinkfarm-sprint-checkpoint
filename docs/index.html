@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-25T01:31:00+00:00">
+<body data-generated="2026-04-25T02:01:18+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-25T01:31:00+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-25T02:01:18+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-25T03:31:00+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-25T04:01:18+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 25, 03:31 CEST</span>
+        <span class="mono" id="last-regen">Apr 25, 04:01 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -57,9 +57,9 @@
 <!-- Events integrity ------------------------------------------------------- -->
 <section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
   <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
-    <div><span class="muted">📊 events:</span> <strong class="mono">1547</strong></div>
-    <div><span class="muted">24h rate:</span> <strong class="mono">11.12/h</strong></div>
-    <div><span class="muted">last 24h:</span> <strong class="mono">267</strong></div>
+    <div><span class="muted">📊 events:</span> <strong class="mono">1558</strong></div>
+    <div><span class="muted">24h rate:</span> <strong class="mono">11.33/h</strong></div>
+    <div><span class="muted">last 24h:</span> <strong class="mono">272</strong></div>
     <div><span class="muted">schema:</span> <strong class="mono">v1.0</strong></div>
     <div><span class="muted">source:</span> <strong class="mono">lib</strong></div>
     <div>
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="integrity-human" style="margin-top:6px;font-size:0.85rem;color:#c6d0e0;">
-    In plain English: 267 things happened today, ~11.12/h steady-state. System is healthy.
+    In plain English: 272 things happened today, ~11.33/h steady-state. System is healthy.
   </div>
 </section>
 
@@ -94,7 +94,7 @@
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📍 Today in one paragraph</h3>
-      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;"><p style="margin:0 0 10px 0;">The sprint has been quiet for the past 90 minutes, which triggers this automatic check-in. The two concrete moves since the last report were both from anvil: it resolved a pair of blockers on M201 — one at 20:13 UTC and another at 20:32 UTC. M201's blocker is now clear. Anvil checked in a minute ago, so it's active and running.</p><p style="margin:0 0 10px 0;">Vigil posted a handful of code reviews in the last couple of hours and was last heard from about an hour ago, though its heartbeat signal has been silent for over three hours. That's mildly concerning but not critical — the reviews landed, which is what matters most. Guardian checked in 30 minutes ago and is running normally. Forge's last signal was about 5.5 hours ago with an open question flagged for the team, and oinkv has been completely silent for nearly 19 hours — both worth watching.</p><p style="margin:0 0 10px 0;">The review backlog is the biggest outstanding item: five pull requests have been waiting more than 24 hours without a reviewer — A11 (pr #133), B1 (prs #149 and #21), B2 (pr #24), and B5 (pr #25). Separately, B4 is stuck waiting on an upstream task before it can move forward. And B6's post-deploy canary has now been running for over 48 hours without closing on a pass or a fail — that's the longest-standing unresolved item on the board right now.</p><p style="margin:0 0 10px 0;">Nothing here requires a decision from Mike. The review backlog needs vigil to resume its queue, B4 is waiting on an external dependency, and the B6 canary verdict is overdue but hasn't been flagged as a failure yet.</p></div>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;"><p style="margin:0 0 10px 0;">The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic check-in. The active agents are alive: vigil checked in two minutes ago, guardian published an artifact roughly 18 minutes back, oinkv posted a note around the same time, and anvil is running normally. The one outlier is forge, which has had no activity for close to ten hours. Its last signal was a DECISION_NEEDED flag and it hasn't moved since — that stall is worth watching.</p><p style="margin:0 0 10px 0;">The item that needs attention is Q-OF214-REGISTRY-1, a decision question that has been sitting open for more than 24 hours without resolution. Beyond that, five pull requests are past the 24-hour review window with no feedback posted: A11 (pr #133), B1 (prs #149 and #21), B2 (pr #24), and B5 (pr #25). Vigil is active and its review queue should be picking these up — if they're being skipped intentionally that's worth noting, but if not, the backlog is growing.</p><p style="margin:0 0 10px 0;">The two longer-standing items are B6 and B4. B6's post-deploy canary monitoring has now been running for close to 48 hours with no verdict closed — it needs either a pass or an explicit fail. B4 has been blocked for more than four hours waiting on an upstream task to finish before it can proceed. Neither situation is sprint-critical right now, but both have been open longer than expected and deserve a nudge.</p></div>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📅 What happened this week</h3>
@@ -122,6 +122,94 @@
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
+              <span class="mono muted">Apr 25, 04:01 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic </div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:59 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — saturday-spot-check</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:57 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T013256Z_000002): 5 checkpoint events observed, no critical-path de</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:41 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+<span class="mono">B3</span>              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">B3 published B3-daily-reconciliation: </div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:41 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — B3-day5-reconciliation</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:40 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">None</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:38 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T011335Z_000002): 4 checkpoint events observed, 0 critical-path hit</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
               <span class="mono muted">Apr 25, 03:31 CEST</span>
               <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
               <span class="muted mono">· hermes</span>
@@ -175,103 +263,103 @@
               <span class="muted mono">· oinkv</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:59 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:57 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — heartbeat-check</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:52 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:52 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T003341Z_000002): 6 checkpoint events observed, 0 critical-path hit</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:50 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">None</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:49 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:34 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">None</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:34 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T001342Z_000002): 2 checkpoint events observed, 0 critical-path hit</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 4 hours</strong>
-        <span class="mono muted">53 events</span>
+        <span class="mono muted">58 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 04:01 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic </div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:59 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — saturday-spot-check</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:57 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T013256Z_000002): 5 checkpoint events observed, no critical-path de</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:41 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+<span class="mono">B3</span>              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">B3 published B3-daily-reconciliation: </div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:41 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — B3-day5-reconciliation</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:40 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">None</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:38 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T011335Z_000002): 4 checkpoint events observed, 0 critical-path hit</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 25, 03:31 CEST</span>
@@ -383,103 +471,103 @@
               <span class="muted mono">· oinkv</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:34 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T001342Z_000002): 2 checkpoint events observed, 0 critical-path hit</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:18 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">None</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:13 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:13 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260424T235255Z_000002): 4 checkpoint events observed, 0 critical-path hit</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:03 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:02 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">None</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:01 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 01:55 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 24 hours</strong>
-        <span class="mono muted">267 events</span>
+        <span class="mono muted">272 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 04:01 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic </div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:59 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — saturday-spot-check</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:57 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:52 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T013256Z_000002): 5 checkpoint events observed, no critical-path de</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:41 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
+<span class="mono">B3</span>              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">B3 published B3-daily-reconciliation: </div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:41 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· guardian</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — B3-day5-reconciliation</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:40 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">None</span>
+              <span class="muted mono">· oinkv</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:38 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 25, 03:32 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T011335Z_000002): 4 checkpoint events observed, 0 critical-path hit</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 25, 03:31 CEST</span>
@@ -591,94 +679,6 @@
               <span class="muted mono">· oinkv</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:34 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T001342Z_000002): 2 checkpoint events observed, 0 critical-path hit</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:18 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">None</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:13 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">anvil heartbeat — M201</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:13 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M201</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260424T235255Z_000002): 4 checkpoint events observed, 0 critical-path hit</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:03 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">vigil heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:02 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">None</span>
-              <span class="muted mono">· oinkv</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;"> —</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 02:01 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-response</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 25, 01:55 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
           </li>
         </ol>
     </div>
@@ -704,7 +704,7 @@
           <td class="mono" style="padding:8px;font-weight:600;color:#f0a868;">Q-OF214-REGISTRY-1</td>
           <td style="padding:8px;">VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which.</td>
           <td class="mono" style="padding:8px;">M214</td>
-          <td class="mono" style="padding:8px;">24.6h</td>
+          <td class="mono" style="padding:8px;">25.1h</td>
           <td class="muted mono" style="padding:8px;font-size:0.8rem;">
 add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open)          </td>
           <td class="mono" style="padding:8px;font-size:0.75rem;">generic</td>
@@ -713,7 +713,7 @@ add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with reg
           <td class="mono" style="padding:8px;font-weight:600;color:#f0a868;">Q-C3-2</td>
           <td style="padding:8px;">C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation).</td>
           <td class="mono" style="padding:8px;">C3</td>
-          <td class="mono" style="padding:8px;">9.3h</td>
+          <td class="mono" style="padding:8px;">9.8h</td>
           <td class="muted mono" style="padding:8px;font-size:0.8rem;">
 A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level          </td>
           <td class="mono" style="padding:8px;font-size:0.75rem;">generic</td>
@@ -821,55 +821,13 @@ A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled ro
           <strong>Hermes</strong>
           <span class="muted mono" style="font-size:0.75rem;">Sprint Orchestrator</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 25, 03:31 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">ARTIFACT_PUBLISHED</td>
-        <td class="mono" style="padding:8px;">—</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">353</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>🐷</span>
-          <strong>OinkV</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Plan Auditor</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 25, 03:23 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">—</td>
-        <td class="mono" style="padding:8px;">—</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">189</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>🔍</span>
-          <strong>VIGIL</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Code Review + Scoring</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 25, 03:21 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">AGENT_HEARTBEAT</td>
-        <td class="mono" style="padding:8px;">sprint-poke-response</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">99</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>⚒️</span>
-          <strong>ANVIL</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 25, 03:13 CEST</td>
+        <td class="mono muted" style="padding:8px;">Apr 25, 04:01 CEST</td>
         <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
-        <td class="mono" style="padding:8px;">M201</td>
+        <td class="mono" style="padding:8px;">—</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">416</td>
+        <td class="mono muted" style="padding:8px;">354</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -877,13 +835,55 @@ A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled ro
           <strong>GUARDIAN</strong>
           <span class="muted mono" style="font-size:0.75rem;">Data Integrity + Canary</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 25, 02:57 CEST</td>
+        <td class="mono muted" style="padding:8px;">Apr 25, 03:59 CEST</td>
         <td class="mono" style="padding:8px;color:#8ab4ff;">AGENT_HEARTBEAT</td>
-        <td class="mono" style="padding:8px;">heartbeat-check</td>
+        <td class="mono" style="padding:8px;">saturday-spot-check</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">285</td>
+        <td class="mono muted" style="padding:8px;">288</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>🔍</span>
+          <strong>VIGIL</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Code Review + Scoring</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 25, 03:57 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">AGENT_HEARTBEAT</td>
+        <td class="mono" style="padding:8px;">sprint-poke-response</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">101</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>⚒️</span>
+          <strong>ANVIL</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 25, 03:52 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
+        <td class="mono" style="padding:8px;">M201</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">420</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>🐷</span>
+          <strong>OinkV</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Plan Auditor</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 25, 03:40 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">—</td>
+        <td class="mono" style="padding:8px;">—</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">190</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -1177,7 +1177,7 @@ future      </span>
           <span class="badge badge-pr_review">PR Review</span>
         </div>
         <div class="task-meta mono muted">
-            Apr 25, 03:13 CEST
+            Apr 25, 03:52 CEST
         </div>
       </header>
 
@@ -1200,8 +1200,56 @@ future      </span>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(89 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(93 events)</span></summary>
           <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T013256Z_000002): 5 checkpoint events observed, no critical-path de</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 25, 03:52 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>anvil heartbeat — M201</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 25, 03:52 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T011335Z_000002): 4 checkpoint events observed, 0 critical-path hit</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 25, 03:32 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>anvil heartbeat — M201</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 25, 03:32 CEST
+                </div>
+              </div>
+            </li>
             <li class="timeline-event">
               <span class="dot dot-info"></span>
               <div class="timeline-body">
@@ -2272,6 +2320,701 @@ future      </span>
                 <div class="timeline-meta mono muted">
                   Apr 24, 05:39 CEST
                     · <span class="filepath">OF215-VIGIL-PHASE1-R1.md</span>
+                </div>
+              </div>
+            </li>
+          </ol>
+      </details>
+    </article>
+    <article class="task task-done" id="task-B3">
+      <header class="task-head">
+        <div class="task-id-row">
+          <span class="tier-emoji" title="STANDARD">🟡</span>
+          <span class="task-id mono">B3</span>
+          <span class="badge badge-done">Done</span>
+        </div>
+        <div class="task-meta mono muted">
+            Apr 25, 03:41 CEST
+        </div>
+      </header>
+
+      <div class="task-body">
+        <div class="task-stats">
+            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">7.55</span></div>
+            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">9.60</span></div>
+            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pass">PASS</span></div>
+        </div>
+
+          <div class="task-prs">
+              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkdb-api/pull/3" target="_blank" rel="noopener">
+                <span class="pr-repo mono">oinkdb-api</span>
+                <span class="pr-num mono">#3</span>
+              </a>
+                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkdb-api/commit/401b770bc4f39494888a70b890b81e0d000ee2c2" target="_blank" rel="noopener" title="merge commit">
+                  401b770
+                </a>
+          </div>
+      </div>
+
+      <details class="task-timeline">
+        <summary>Timeline <span class="muted mono">(53 events)</span></summary>
+          <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-clean"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 published B3-daily-reconciliation: </span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 25, 03:41 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:27 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:26 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:24 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:15 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:15 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:15 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:10 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 24, 08:10 CEST
+                    · <span class="filepath">2026-04-24.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — cron heartbeat 09:57 GMT+2</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 09:58 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 09:45 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 09:47 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 09:17 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 09:18 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 08:42 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 08:44 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-23.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 08:11 CEST
+                    · <span class="filepath">2026-04-23.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-23.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 08:11 CEST
+                    · <span class="filepath">2026-04-23.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — heartbeat 07:57 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 07:58 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 07:37 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 07:37 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 07:09 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 07:10 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 06:38 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 06:39 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 06:11 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 06:12 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 05:41 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 05:42 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke 05:13 GMT+2 sweep</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 05:14 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — heartbeat sweep 2026-04-23T02:35Z</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 04:38 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — sprint-poke sweep 2026-04-23T01:52Z</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 23, 03:53 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-22.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 08:15 CEST
+                    · <span class="filepath">2026-04-22.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">oinkdb</span>
+                  <span>B3 published reconciliation-daily: 2026-04-22.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 08:15 CEST
+                    · <span class="filepath">2026-04-22.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 canary PASS</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 22, 04:29 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 21:16 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 19:41 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 14:40 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 12:09 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pending_clean_t24"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 canary PASS</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 21, 05:04 CEST
+                    · <span class="filepath">B3-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 published kpi: b3-reconciliation-template.md</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 23:31 CEST
+                    · <span class="filepath">b3-reconciliation-template.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">hermes</span>
+                  <span>B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until </span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 15:15 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B3 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:35 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">mike</span>
+                  <span>B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 13:32 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B3 Mike gate: Minimum verification period: 7 or 14 days?</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 11:55 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 canary started</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 05:32 CEST
+                    · <span class="filepath">B3-CANARY.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #None @cc70e5b</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 04:24 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #None @73d074f</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 04:24 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #None @6af042f</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 04:24 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 review by guardian — PASS (9.6)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 04:21 CEST
+                    · <span class="filepath">B3-GUARDIAN-PHASE1-REVIEW-R2.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 review by guardian — PASS (9.6)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 04:19 CEST
+                    · <span class="filepath">B3-GUARDIAN-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-revise"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">vigil</span>
+                  <span>B3 review by vigil — REVISE (7.55)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:57 CEST
+                    · <span class="filepath">B3-VIGIL-PHASE1-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #None @07940ce</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:47 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #None @92f7ada</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:47 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #None @a91278a</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:47 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">system</span>
+                  <span>B3 proposal approved by vigil+guardian</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:37 CEST
+                    · <span class="filepath">B3-PHASE0-APPROVED.marker</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">guardian</span>
+                  <span>B3 review by guardian — PASS (9.5)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:34 CEST
+                    · <span class="filepath">B3-GUARDIAN-PHASE0-REVIEW-R1.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-pass"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">vigil</span>
+                  <span>B3 review by vigil — PASS (9.5)</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:32 CEST
+                    · <span class="filepath">B3-VIGIL-PHASE0-REVIEW.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 proposal ready</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 03:28 CEST
+                    · <span class="filepath">B3-PHASE0-PROPOSAL.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">forge</span>
+                  <span>B3 plan published</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 20, 01:42 CEST
+                    · <span class="filepath">TASK-B3-plan.md</span>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>B3 merged via PR #3 @401b770</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 18, 19:31 CEST
                 </div>
               </div>
             </li>
@@ -5242,9 +5985,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#39</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/81345a28986ff219348f943051790cd40feeb6ac" target="_blank" rel="noopener" title="merge commit">
-                  81345a2
-                </a>
           </div>
       </div>
 
@@ -5289,9 +6029,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#40</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/3cf32befd0d866c638242c6bbcb61f33cf0eecec" target="_blank" rel="noopener" title="merge commit">
-                  3cf32be
-                </a>
           </div>
       </div>
 
@@ -5334,689 +6071,6 @@ POKE CHECKLIST:
                 <div class="timeline-meta mono muted">
                   Apr 24, 07:19 CEST
                     · <span class="filepath">SG40-VIGIL-PHASE1-R1.md</span>
-                </div>
-              </div>
-            </li>
-          </ol>
-      </details>
-    </article>
-    <article class="task task-done" id="task-B3">
-      <header class="task-head">
-        <div class="task-id-row">
-          <span class="tier-emoji" title="STANDARD">🟡</span>
-          <span class="task-id mono">B3</span>
-          <span class="badge badge-done">Done</span>
-        </div>
-        <div class="task-meta mono muted">
-            Apr 24, 08:27 CEST
-        </div>
-      </header>
-
-      <div class="task-body">
-        <div class="task-stats">
-            <div class="stat"><span class="stat-label">VIGIL</span><span class="stat-value mono">7.55</span></div>
-            <div class="stat"><span class="stat-label">GUARDIAN</span><span class="stat-value mono">9.60</span></div>
-            <div class="stat"><span class="stat-label">Canary</span><span class="stat-value verdict-pass">PASS</span></div>
-        </div>
-
-          <div class="task-prs">
-              <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkdb-api/pull/3" target="_blank" rel="noopener">
-                <span class="pr-repo mono">oinkdb-api</span>
-                <span class="pr-num mono">#3</span>
-              </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkdb-api/commit/401b770bc4f39494888a70b890b81e0d000ee2c2" target="_blank" rel="noopener" title="merge commit">
-                  401b770
-                </a>
-          </div>
-      </div>
-
-      <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(52 events)</span></summary>
-          <ol class="timeline">
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:27 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:26 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:24 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:15 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:15 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:15 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:10 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-24.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 24, 08:10 CEST
-                    · <span class="filepath">2026-04-24.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — cron heartbeat 09:57 GMT+2</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 09:58 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 09:45 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 09:47 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 09:17 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 09:18 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 08:42 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 08:44 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-23.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 08:11 CEST
-                    · <span class="filepath">2026-04-23.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-23.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 08:11 CEST
-                    · <span class="filepath">2026-04-23.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — heartbeat 07:57 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 07:58 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 07:37 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 07:37 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 07:09 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 07:10 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 06:38 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 06:39 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 06:11 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 06:12 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 05:41 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 05:42 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke 05:13 GMT+2 sweep</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 05:14 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — heartbeat sweep 2026-04-23T02:35Z</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 04:38 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — sprint-poke sweep 2026-04-23T01:52Z</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 23, 03:53 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-22.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 08:15 CEST
-                    · <span class="filepath">2026-04-22.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">oinkdb</span>
-                  <span>B3 published reconciliation-daily: 2026-04-22.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 08:15 CEST
-                    · <span class="filepath">2026-04-22.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 canary PASS</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 22, 04:29 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — Sprint poke 19:15Z — delta check, no new activity</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 21:16 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — Sprint poke — B3 daily reconciliation + B2/B3 canary tracking</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 19:41 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — Sprint canary sweep: no MERGED tasks missing CANARY_STARTED in last 2h; B3 T+48 close-out not yet due; dashboard artifacts fresh, no republish needed</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 14:40 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>guardian heartbeat — Sprint canary sweep: verified no MERGED→missing CANARY_STARTED gap in last 2h; B3 T+48 final close-out not yet due; KPI/dashboard artifacts fresh</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 12:09 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pending_clean_t24"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 canary PASS</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 21, 05:04 CEST
-                    · <span class="filepath">B3-CANARY.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 published kpi: b3-reconciliation-template.md</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 23:31 CEST
-                    · <span class="filepath">b3-reconciliation-template.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">hermes</span>
-                  <span>B3 dual-write activation gap investigated. VERDICT: intentional gate, NOT an oversight. OINK_DB_DUAL_WRITE=false is the CORRECT state until </span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 15:15 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B3 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:35 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">mike</span>
-                  <span>B3 decision: 7 days minimum with reset rule: any reconciliation report showing >0 row-count or >0 event-count discrepancy resets the clock t</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 13:32 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B3 Mike gate: Minimum verification period: 7 or 14 days?</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 11:55 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 canary started</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 05:32 CEST
-                    · <span class="filepath">B3-CANARY.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #None @cc70e5b</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 04:24 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #None @73d074f</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 04:24 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #None @6af042f</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 04:24 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 review by guardian — PASS (9.6)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 04:21 CEST
-                    · <span class="filepath">B3-GUARDIAN-PHASE1-REVIEW-R2.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 review by guardian — PASS (9.6)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 04:19 CEST
-                    · <span class="filepath">B3-GUARDIAN-PHASE1-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-revise"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">vigil</span>
-                  <span>B3 review by vigil — REVISE (7.55)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:57 CEST
-                    · <span class="filepath">B3-VIGIL-PHASE1-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #None @07940ce</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:47 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #None @92f7ada</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:47 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #None @a91278a</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:47 CEST
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">system</span>
-                  <span>B3 proposal approved by vigil+guardian</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:37 CEST
-                    · <span class="filepath">B3-PHASE0-APPROVED.marker</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">guardian</span>
-                  <span>B3 review by guardian — PASS (9.5)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:34 CEST
-                    · <span class="filepath">B3-GUARDIAN-PHASE0-REVIEW-R1.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-pass"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">vigil</span>
-                  <span>B3 review by vigil — PASS (9.5)</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:32 CEST
-                    · <span class="filepath">B3-VIGIL-PHASE0-REVIEW.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 proposal ready</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 03:28 CEST
-                    · <span class="filepath">B3-PHASE0-PROPOSAL.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">forge</span>
-                  <span>B3 plan published</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 20, 01:42 CEST
-                    · <span class="filepath">TASK-B3-plan.md</span>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-event">
-              <span class="dot dot-info"></span>
-              <div class="timeline-body">
-                <div class="timeline-label">
-                  <span class="timeline-actor mono">anvil</span>
-                  <span>B3 merged via PR #3 @401b770</span>
-                </div>
-                <div class="timeline-meta mono muted">
-                  Apr 18, 19:31 CEST
                 </div>
               </div>
             </li>
@@ -6492,9 +6546,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#214</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/6edd312cc32f3f695f91cb4a8fb9e52b02c197fd" target="_blank" rel="noopener" title="merge commit">
-                  6edd312
-                </a>
           </div>
       </div>
 
@@ -6624,9 +6675,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#202</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/caf5e0deeed042d06a217feb21b75231269340bc" target="_blank" rel="noopener" title="merge commit">
-                  caf5e0d
-                </a>
           </div>
       </div>
 
@@ -6672,9 +6720,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#176</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/09fcab18024677cb1a454eb598057590e76eec2b" target="_blank" rel="noopener" title="merge commit">
-                  09fcab1
-                </a>
           </div>
       </div>
 
@@ -6870,9 +6915,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#33</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/cc4a2c4bcf3fba36260675ffe75f62babf3744c0" target="_blank" rel="noopener" title="merge commit">
-                  cc4a2c4
-                </a>
           </div>
       </div>
 
@@ -8274,23 +8316,14 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#153</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13" target="_blank" rel="noopener" title="merge commit">
-                  14563d2
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/11" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#11</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5" target="_blank" rel="noopener" title="merge commit">
-                  80288bb
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/24" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#24</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6" target="_blank" rel="noopener" title="merge commit">
-                  df8112d
-                </a>
           </div>
       </div>
 
@@ -9228,9 +9261,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#29</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/ace226ed590a6418474984bf9af1c74790455038" target="_blank" rel="noopener" title="merge commit">
-                  ace226e
-                </a>
           </div>
       </div>
 
@@ -9450,9 +9480,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#22</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/ff23510a25c4718c60915640cca3606375efd082" target="_blank" rel="noopener" title="merge commit">
-                  ff23510
-                </a>
           </div>
       </div>
 
@@ -9495,9 +9522,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#21</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/ed1670530647092cd329797bae85edb36e4966ed" target="_blank" rel="noopener" title="merge commit">
-                  ed16705
-                </a>
           </div>
       </div>
 
@@ -9672,9 +9696,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#20</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/1ef1a1f17d8f05f90e733cb10a150ff52bab8b16" target="_blank" rel="noopener" title="merge commit">
-                  1ef1a1f
-                </a>
           </div>
       </div>
 
@@ -9917,16 +9938,10 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#8</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/27196487f966fc6e24d2a412b7245ac8c9883c50" target="_blank" rel="noopener" title="merge commit">
-                  2719648
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/132" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#132</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/e7cfdb8e22aed4a3c41b33a126f9c58012f0bcf5" target="_blank" rel="noopener" title="merge commit">
-                  e7cfdb8
-                </a>
           </div>
       </div>
 
@@ -10137,9 +10152,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#26</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/6879e257702b3cf3fb9cf7477c40c56814e014a3" target="_blank" rel="noopener" title="merge commit">
-                  6879e25
-                </a>
           </div>
       </div>
 
@@ -10350,9 +10362,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#20</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef" target="_blank" rel="noopener" title="merge commit">
-                  1adeaa1
-                </a>
           </div>
       </div>
 
@@ -10900,9 +10909,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#27</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/3f85c12e05ca6e588e082c0a0ca8438b89e3cb32" target="_blank" rel="noopener" title="merge commit">
-                  3f85c12
-                </a>
           </div>
       </div>
 
@@ -11192,9 +11198,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#130</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/615731582e75b7a451dc84a12915839ada6503a8" target="_blank" rel="noopener" title="merge commit">
-                  6157315
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/130" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#130</span>
@@ -11398,9 +11401,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#134</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/461545434c32beac11aa451792dc1479ab770b31" target="_blank" rel="noopener" title="merge commit">
-                  4615454
-                </a>
           </div>
       </div>
 
@@ -11600,23 +11600,14 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#149</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186" target="_blank" rel="noopener" title="merge commit">
-                  75a32f7
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/9" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#9</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/ecd2622a2aa357a6e1efa925bc15af8bfbdc4eb0" target="_blank" rel="noopener" title="merge commit">
-                  ecd2622
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/21" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#21</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/b0f02548415de4598f807912f1fefca4472620ee" target="_blank" rel="noopener" title="merge commit">
-                  b0f0254
-                </a>
           </div>
       </div>
 
@@ -11947,9 +11938,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#25</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/2e345bb6c14b4a02057e56218b038cb0da0cb2e5" target="_blank" rel="noopener" title="merge commit">
-                  2e345bb
-                </a>
           </div>
       </div>
 
@@ -12155,9 +12143,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#5</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59" target="_blank" rel="noopener" title="merge commit">
-                  6b21a20
-                </a>
           </div>
       </div>
 
@@ -12545,9 +12530,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#133</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae" target="_blank" rel="noopener" title="merge commit">
-                  45a6931
-                </a>
           </div>
       </div>
 
@@ -12732,9 +12714,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#7</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a" target="_blank" rel="noopener" title="merge commit">
-                  e9be741
-                </a>
           </div>
       </div>
 
@@ -12948,9 +12927,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#131</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a792ad685ad606c74d098180b8ccd5b71" target="_blank" rel="noopener" title="merge commit">
-                  69d6840
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/131" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#131</span>
@@ -13167,9 +13143,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#135</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13" target="_blank" rel="noopener" title="merge commit">
-                  80f4fe0
-                </a>
           </div>
       </div>
 
@@ -13770,19 +13743,19 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">0s ago</div>
+        <div class="agent-meta mono muted">12s ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
-          <span class="agent-emoji">🐷</span>
-          <span class="agent-name">OinkV</span>
+          <span class="agent-emoji">🛡️</span>
+          <span class="agent-name">GUARDIAN</span>
           <span class="agent-light light-green" title="green"></span>
         </div>
-        <div class="agent-meta muted">Plan Auditor</div>
+        <div class="agent-meta muted">Data Integrity + Canary</div>
         <div class="agent-meta mono">
-            last audit
+            task: saturday-spot-check
         </div>
-        <div class="agent-meta mono muted">7m ago</div>
+        <div class="agent-meta mono muted">1m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -13794,7 +13767,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: sprint-poke-response
         </div>
-        <div class="agent-meta mono muted">9m ago</div>
+        <div class="agent-meta mono muted">3m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -13806,19 +13779,19 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: M201
         </div>
-        <div class="agent-meta mono muted">17m ago</div>
+        <div class="agent-meta mono muted">8m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
-          <span class="agent-emoji">🛡️</span>
-          <span class="agent-name">GUARDIAN</span>
+          <span class="agent-emoji">🐷</span>
+          <span class="agent-name">OinkV</span>
           <span class="agent-light light-green" title="green"></span>
         </div>
-        <div class="agent-meta muted">Data Integrity + Canary</div>
+        <div class="agent-meta muted">Plan Auditor</div>
         <div class="agent-meta mono">
-            task: heartbeat-check
+            last audit
         </div>
-        <div class="agent-meta mono muted">33m ago</div>
+        <div class="agent-meta mono muted">20m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -13830,7 +13803,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: VIGIL cross-check poke #3 — 3 reviews verified
         </div>
-        <div class="agent-meta mono muted">9h 15m ago</div>
+        <div class="agent-meta mono muted">9h 45m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -13842,7 +13815,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: B3
         </div>
-        <div class="agent-meta mono muted">19h 3m ago</div>
+        <div class="agent-meta mono muted">19h 34m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -13883,6 +13856,25 @@ COMPLETED THIS SESSION:
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 25, 04:01 CEST</div>
+            <ul class="narrative-actions">
+<li>The sprint has been quiet for about 90 minutes — no merges, no canary verdicts, nothing with weight — which is what triggers this automatic check-in. The active agents are alive: vigil checked in two minutes ago, guardian published an artifact roughly 18 minutes back, oinkv posted a note around the same time, and anvil is running normally. The one outlier is forge, which has had no activity for close to ten hours. Its last signal was a DECISION_NEEDED flag and it hasn't moved since — that stall is worth watching.
+
+The item that needs attention is Q-OF214-REGISTRY-1, a decision question that has been sitting open for more than 24 hours without resolution. Beyond that, five pull requests are past the 24-hour review window with no feedback posted: A11 (pr #133), B1 (prs #149 and #21), B2 (pr #24), and B5 (pr #25). Vigil is active and its review queue should be picking these up — if they're being skipped intentionally that's worth noting, but if not, the backlog is growing.
+
+The two longer-standing items are B6 and B4. B6's post-deploy canary monitoring has now been running for close to 48 hours with no verdict closed — it needs either a pass or an explicit fail. B4 has been blocked for more than four hours waiting on an upstream task to finish before it can proceed. Neither situation is sprint-critical right now, but both have been open longer than expected and deserve a nudge.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 25, 03:52 CEST</div>
+            <ul class="narrative-actions">
+<li>Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T013256Z_000002): 5 checkpoint events observed, no critical-path deltas. Q1 (#189 approvals from both reviewers): YES, already satisfied earlier. TASK 4 branch already exists locally, so no duplicate branch/PR creation on this tick. Q2 (new REVIEW_POSTED for B9 v2 or B12-SHADOW): NONE. Q3 (DECISION_NEEDED or BLOCKED): NONE. Artifact A stays deferred while sg#38 VIGIL R1 REVISE is active; continuing MF-1/MF-2 prep in feat/201-extraction-id and yielding.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 25, 03:32 CEST</div>
+            <ul class="narrative-actions">
+<li>Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T011335Z_000002): 4 checkpoint events observed, 0 critical-path hits. Q1 (#189 PROPOSAL_APPROVED by BOTH VIGIL and GUARDIAN): YES — already satisfied earlier. TASK 4 was already kicked off previously; fix/189-sl-to-be-microgate already exists locally, so no duplicate branch/PR creation on this tick. Q2 (REVIEW_POSTED for B9 v2 or B12-SHADOW): NO new review events. Q3 (DECISION_NEEDED or BLOCKED): NONE. Artifact A remains intentionally deferred behind active signal-gateway sg#38 VIGIL R1 REVISE work. Current focus stays on MF-1/MF-2 for feat/201-extraction-id (rebase onto main + add producer-side extraction_id propagation tests). Yielding without repeat polling.</li>            </ul>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 25, 03:13 CEST</div>
             <ul class="narrative-actions">
@@ -14084,21 +14076,6 @@ The one long-running uncertainty is B6: post-deploy canary monitoring kicked off
             <ul class="narrative-actions">
 <li>Parallel sprint heartbeat 13:52Z (19min after evt_20260424T133310Z_000001). Events-since-last-note scan: 2 events — 2x Hermes ARTIFACT_PUBLISHED (13:40:20Z, 13:51:32Z). Zero ANVIL-actionable. (1) #189 both approvals FINALIZED historically. TASK 4 Artifact A branch fix/189-sl-to-be-microgate @83f198a9 unchanged, deferred per AP-11 until M201 R3 under review. (2) B9 v2: no new REVIEW_POSTED. B12-SHADOW: no new REVIEW_POSTED. (3) No DECISION_NEEDED, no BLOCKED, no new PROPOSAL_APPROVED. M201 R3 fix still queued for next focused non-cron turn. R2 head 932029ec unchanged. M213 PR#214 both-reviewer PASS holding for Mon 2026-04-27 08:00Z merge window (SOUL Rule 5 Friday freeze). Steady-state hold; emit + yield per cron contract.</li>            </ul>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 24, 15:33 CEST</div>
-            <ul class="narrative-actions">
-<li>Parallel sprint heartbeat 13:32Z (19min after evt_20260424T131305Z_000001). Events-since-last-note scan: 1 event — GUARDIAN AGENT_HEARTBEAT @13:27:44Z. Zero ANVIL-actionable. (1) #189 both approvals FINALIZED historically. TASK 4 Artifact A branch fix/189-sl-to-be-microgate @83f198a9 unchanged, deferred per AP-11 until M201 R3 under review. (2) B9 v2: no new REVIEW_POSTED. B12-SHADOW: no new REVIEW_POSTED. (3) No DECISION_NEEDED, no BLOCKED, no new PROPOSAL_APPROVED. M201 R3 fix (index migration + ORDER BY + EXPLAIN-QUERY-PLAN regression test) still queued for next focused non-cron turn. R2 head 932029ec, GUARDIAN R1 REVISE MUST-FIX/SHOULD-FIX from 10:22:11Z unchanged. M213 PR#214 both-reviewer PASS holding for Mon 2026-04-27 08:00Z merge window (SOUL Rule 5 Friday freeze). Steady-state hold; emit + yield per cron contract.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 24, 15:13 CEST</div>
-            <ul class="narrative-actions">
-<li>Parallel sprint heartbeat 13:12Z (19min after evt_20260424T125247Z_000001). Events-since-last-note scan: 3 events — GUARDIAN AGENT_HEARTBEAT @12:54:19Z + 2x Hermes ARTIFACT_PUBLISHED (oinxtractor_quality doc refreshes @12:59:47Z, 13:10:39Z). Zero ANVIL-actionable. (1) #189 both approvals FINALIZED historically. TASK 4 Artifact A branch fix/189-sl-to-be-microgate @83f198a9 unchanged, deferred per AP-11 until M201 R3 under review. (2) B9 v2: no new REVIEW_POSTED. B12-SHADOW: no new REVIEW_POSTED. (3) No DECISION_NEEDED, no BLOCKED, no new PROPOSAL_APPROVED. M201 R3 fix (index migration + ORDER BY + EXPLAIN-QUERY-PLAN regression test) still queued for next focused non-cron turn. R2 head 932029ec, GUARDIAN R1 REVISE MUST-FIX/SHOULD-FIX from 10:22:11Z unchanged. M213 PR#214 both-reviewer PASS holding for Mon 2026-04-27 08:00Z merge window (SOUL Rule 5 Friday freeze). Steady-state hold; emit + yield per cron contract.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 24, 14:52 CEST</div>
-            <ul class="narrative-actions">
-<li>Parallel sprint heartbeat 12:52Z (19min after evt_20260424T123258Z_000001). Events-since-last-note scan: 1 event — Hermes ARTIFACT_PUBLISHED @12:38:33Z. Zero ANVIL-actionable. (1) #189 both approvals FINALIZED historically. TASK 4 Artifact A branch fix/189-sl-to-be-microgate @83f198a9 unchanged, deferred per AP-11 until M201 R3 under review. (2) B9 v2: no new REVIEW_POSTED. B12-SHADOW: no new REVIEW_POSTED. (3) No DECISION_NEEDED, no BLOCKED, no new PROPOSAL_APPROVED. M201 R3 fix (index migration + ORDER BY + EXPLAIN-QUERY-PLAN regression test) still queued for next focused non-cron turn. R2 head 932029ec, GUARDIAN R1 REVISE MUST-FIX/SHOULD-FIX from 10:22:11Z unchanged. M213 PR#214 both-reviewer PASS holding for Mon 2026-04-27 08:00Z merge window (SOUL Rule 5 Friday freeze). Steady-state hold; emit + yield per cron contract.</li>            </ul>
-        </li>
       </ol>
     </div>
 
@@ -14121,12 +14098,12 @@ The one long-running uncertainty is B6: post-deploy canary monitoring kicked off
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">8a2c9ddc8eef</span>    </div>
+checkpoint@<span class="mono">26b68eca6915</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 25, 03:13 CEST
+        Last orchestrator cycle: Apr 25, 04:01 CEST
     </div>
     <div>
-      generated Apr 25, 03:31 CEST
+      generated Apr 25, 04:01 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
