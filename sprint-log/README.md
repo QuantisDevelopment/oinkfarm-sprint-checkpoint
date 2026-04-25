@@ -4,73 +4,70 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1702
-- **Last 24h:** 297 (rate 12.38/h)
+- **Total events:** 1712
+- **Last 24h:** 292 (rate 12.17/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (11 events)
+### Last 1 hour (8 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 25, 15:30 CEST | `SPRINT_NOTE` | `—` | hermes | Phase B infrastructure continues to advance on Saturday despite the weekend. Two merges shipped this morning — M43 (STANDARD tier signal sou |
-| Apr 25, 15:27 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — scheduled_heartbeat |
-| Apr 25, 15:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_sprint_poke |
-| Apr 25, 15:19 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — FAIL (5.55) |
-| Apr 25, 15:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:57:38Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:57 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:57:09Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:57 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:56:32Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:36:17Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 25, 14:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_sprint_poke |
-| Apr 25, 14:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:16:54Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 16:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:36:19Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:38 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — PASS (9.6) |
+| Apr 25, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:17:09Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:31 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — REVISE (8.65) |
+| Apr 25, 16:17 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:16:29Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:56:20Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:00 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — scheduled_heartbeat |
 
-### Last 4 hours (32 events)
+### Last 4 hours (30 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 16:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 16:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:36:19Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:38 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — PASS (9.6) |
+| Apr 25, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:17:09Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:31 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — REVISE (8.65) |
+| Apr 25, 16:17 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:16:29Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:56:20Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:00 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — scheduled_heartbeat |
+| Apr 25, 15:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:36:22Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 15:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:16:26Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
 | Apr 25, 15:30 CEST | `SPRINT_NOTE` | `—` | hermes | Phase B infrastructure continues to advance on Saturday despite the weekend. Two merges shipped this morning — M43 (STANDARD tier signal sou |
 | Apr 25, 15:27 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — scheduled_heartbeat |
 | Apr 25, 15:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_sprint_poke |
 | Apr 25, 15:19 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — FAIL (5.55) |
 | Apr 25, 15:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:57:38Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:57 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:57:09Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:57 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:56:32Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:36:17Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 25, 14:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_sprint_poke |
-| Apr 25, 14:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:16:54Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:16:17Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T11:56:26Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — saturday_heartbeat_checks |
-| Apr 25, 13:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T11:36:19Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
 
-### Last 24 hours (297 events)
+### Last 24 hours (292 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 16:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 25, 16:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:36:19Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:38 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — PASS (9.6) |
+| Apr 25, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:17:09Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:31 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — REVISE (8.65) |
+| Apr 25, 16:17 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T14:16:29Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:56:20Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 16:00 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — scheduled_heartbeat |
+| Apr 25, 15:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:36:22Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
+| Apr 25, 15:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T13:16:26Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
 | Apr 25, 15:30 CEST | `SPRINT_NOTE` | `—` | hermes | Phase B infrastructure continues to advance on Saturday despite the weekend. Two merges shipped this morning — M43 (STANDARD tier signal sou |
 | Apr 25, 15:27 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — scheduled_heartbeat |
 | Apr 25, 15:24 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_sprint_poke |
 | Apr 25, 15:19 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — FAIL (5.55) |
 | Apr 25, 15:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:57:38Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:57 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:57:09Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:57 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:56:32Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:36:17Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:44 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 25, 14:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_sprint_poke |
-| Apr 25, 14:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:16:54Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T12:16:17Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T11:56:26Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
-| Apr 25, 14:02 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — saturday_heartbeat_checks |
-| Apr 25, 13:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T11:36:19Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 36.6h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 21.2h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 38.1h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 22.7h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -86,16 +83,17 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🟠 WARN | `M201` | AGENT_HEARTBEAT stale > 3h for anvil |
 | 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
+| 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 25, 15:30 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 377 |
-| 🛡️ **GUARDIAN** | Apr 25, 15:27 CEST | `AGENT_HEARTBEAT` | `scheduled_heartbeat` | 🟢 fresh | 320 |
-| ⚒️ **ANVIL** | Apr 25, 15:16 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 468 |
-| 🔥 **FORGE** | Apr 25, 13:30 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🟡 1–3h | 168 |
-| 🔍 **VIGIL** | Apr 25, 11:02 CEST | `AGENT_HEARTBEAT` | `queue_sweep` | 🔴 stale | 126 |
+| 🪽 **Hermes** | Apr 25, 16:58 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 378 |
+| ⚒️ **ANVIL** | Apr 25, 16:56 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 474 |
+| 🔍 **VIGIL** | Apr 25, 16:38 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 128 |
+| 🛡️ **GUARDIAN** | Apr 25, 16:00 CEST | `AGENT_HEARTBEAT` | `scheduled_heartbeat` | 🟢 fresh | 321 |
+| 🔥 **FORGE** | Apr 25, 13:30 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🔴 stale | 168 |
 | • **OINKDB** | Apr 25, 08:10 CEST | `BLOCKED` | `B4` | 🔴 stale | 31 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🔴 stale | 190 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -203,6 +201,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M219` | M219 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M228` | M228 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M239` | M239 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
+| `M242` | M242 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `SPRINT-POKE` | SPRINT-POKE | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
 | `T189` | T189 | 🔴 CRITICAL | — | 📝 PROPOSAL | — |
 | `TASK-189` | TASK-189 | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -216,10 +215,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | 🐷 | OinkV | Plan Auditor |
 | • | mike |  |
@@ -234,4 +233,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/72 tasks DONE · Last auto-regenerated: 15:30 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/73 tasks DONE · Last auto-regenerated: 16:59 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
