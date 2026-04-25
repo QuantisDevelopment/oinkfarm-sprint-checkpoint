@@ -6,7 +6,7 @@
 **Repo target:** signal-gateway  
 **Branch:** —  
 **PR:** [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131) + [signal-gateway#131](https://github.com/QuantisDevelopment/signal-gateway/pull/131)  
-**Merge commit:** [69d6840a792a](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a792ad685ad606c74d098180b8ccd5b71)
+**Merge commit:** —
 
 ## In plain English
 
@@ -39,7 +39,6 @@ _None._
 - **OinkV audit:** [OINKV-AUDIT-WAVE2-A5.md](../../raw-artifacts/forge/plans/OINKV-AUDIT-WAVE2-A5.md) — 18.9 KB
 - **VIGIL reviews:** [Phase 1](../../raw-artifacts/vigil/reviews/A5-VIGIL-PHASE1-REVIEW-R2.md)
 - **GUARDIAN reviews:** [Phase 0](../../raw-artifacts/guardian/reviews/A5-GUARDIAN-PHASE0-REVIEW.md)
-- **Merge commit:** [`69d6840a792a`](https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a792ad685ad606c74d098180b8ccd5b71) (oinkfarm PR #131)
 - **PR(s):** [oinkfarm#131](https://github.com/QuantisDevelopment/oinkfarm/pull/131) · [signal-gateway#131](https://github.com/QuantisDevelopment/signal-gateway/pull/131)
 
 ## Lessons Learned

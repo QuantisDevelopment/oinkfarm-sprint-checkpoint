@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1627
-- **Last 24h:** 290 (rate 12.08/h)
+- **Total events:** 1628
+- **Last 24h:** 285 (rate 11.88/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (20 events)
+### Last 1 hour (21 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 08:16 CEST | `SPRINT_NOTE` | `—` | hermes | The main development in the last 90 minutes is B4 — the OinkDB integration task — firing three rapid-fire blocked signals at 06:10 UTC, all  |
 | Apr 25, 08:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 08:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Correction to prior heartbeat note: the scan window did include BLOCKED events (count=3), but they were unrelated to M189/B9 v2/B12-SHADOW.  |
 | Apr 25, 08:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T05:52:40Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
@@ -29,11 +30,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 25, 08:01 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 | Apr 25, 07:57 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 25, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T05:33:17Z: #189 explicit PROPOSAL_APPROVED remains VIGIL=0 / GUARDIAN=0 in the checkpoint st |
-| Apr 25, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 4 hours (67 events)
+### Last 4 hours (66 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 08:16 CEST | `SPRINT_NOTE` | `—` | hermes | The main development in the last 90 minutes is B4 — the OinkDB integration task — firing three rapid-fire blocked signals at 06:10 UTC, all  |
 | Apr 25, 08:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 08:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Correction to prior heartbeat note: the scan window did include BLOCKED events (count=3), but they were unrelated to M189/B9 v2/B12-SHADOW.  |
 | Apr 25, 08:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T05:52:40Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
@@ -48,11 +49,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 25, 08:01 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 | Apr 25, 07:57 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 25, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T05:33:17Z: #189 explicit PROPOSAL_APPROVED remains VIGIL=0 / GUARDIAN=0 in the checkpoint st |
-| Apr 25, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
-### Last 24 hours (290 events)
+### Last 24 hours (285 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 08:16 CEST | `SPRINT_NOTE` | `—` | hermes | The main development in the last 90 minutes is B4 — the OinkDB integration task — firing three rapid-fire blocked signals at 06:10 UTC, all  |
 | Apr 25, 08:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 25, 08:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Correction to prior heartbeat note: the scan window did include BLOCKED events (count=3), but they were unrelated to M189/B9 v2/B12-SHADOW.  |
 | Apr 25, 08:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T05:52:40Z: explicit M189 PROPOSAL_APPROVED markers remain absent in-stream (VIGIL=0, GUARDIA |
@@ -67,7 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 25, 08:01 CEST | `AGENT_HEARTBEAT` | `—` | vigil | vigil heartbeat — sprint-poke-response |
 | Apr 25, 07:57 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint_poke_response |
 | Apr 25, 07:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-25T05:33:17Z: #189 explicit PROPOSAL_APPROVED remains VIGIL=0 / GUARDIAN=0 in the checkpoint st |
-| Apr 25, 07:52 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 
 ## 🧭 Needs Mike
 
@@ -93,7 +93,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 25, 08:14 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 363 |
+| 🪽 **Hermes** | Apr 25, 08:16 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 364 |
 | ⚒️ **ANVIL** | Apr 25, 08:13 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 443 |
 | 🛡️ **GUARDIAN** | Apr 25, 08:11 CEST | `AGENT_HEARTBEAT` | `B3-daily-sqlite-integrity-proxy` | 🟢 fresh | 301 |
 | • **OINKDB** | Apr 25, 08:10 CEST | `BLOCKED` | `B4` | 🟢 fresh | 31 |
@@ -231,4 +231,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/67 tasks DONE · Last auto-regenerated: 08:14 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*18/67 tasks DONE · Last auto-regenerated: 08:16 CEST on 25 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
