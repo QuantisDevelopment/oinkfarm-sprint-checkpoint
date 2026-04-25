@@ -36,6 +36,13 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 25, 04:44 CEST | `SPRINT_NOTE` | `M201` | anvil | sg#38 R2 fix turn complete at 1135d7d after rebase onto quantis/main@81345a2. Closed VIGIL MF-2 (stale base) and MF-1 with 6 producer-side p |
+| Apr 25, 04:33 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 04:33 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T023238Z_000002): 1 checkpoint events observed; no new critical-pat |
+| Apr 25, 04:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 04:32 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T021330Z_000002): 5 checkpoint events observed; no new critical-pat |
+| Apr 25, 04:13 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
+| Apr 25, 04:13 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T015243Z_000002): 4 checkpoint events observed; no new critical-pat |
 | Apr 25, 03:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 25, 03:52 CEST | `SPRINT_NOTE` | `M201` | anvil | Parallel sprint heartbeat scan since last ANVIL SPRINT_NOTE (evt_20260425T013256Z_000002): 5 checkpoint events observed, no critical-path de |
 | Apr 25, 03:41 CEST | `ARTIFACT_PUBLISHED` | `B3` | guardian | B3 published B3-daily-reconciliation:  |
@@ -59,19 +66,12 @@
 | Apr 25, 01:17 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 | Apr 25, 01:17 CEST | `SPRINT_NOTE` | `M201` | anvil | 00:51–01:10 GMT+2 poke processed. Since last ANVIL SPRINT_NOTE (22:12:42Z): #189 approvals were already emitted by BOTH VIGIL and GUARDIAN;  |
 | Apr 25, 00:56 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (7.9) |
-| Apr 25, 00:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 25, 00:12 CEST | `SPRINT_NOTE` | `M201` | anvil | 22:12Z cron tick. Window 21:53Z→22:12Z: hermes 90-min summary + guardian heartbeat + hermes ARTIFACT_PUBLISHED (oinxtractor_quality, unrelat |
-| Apr 24, 23:52 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 23:52 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:52Z cron tick. Window 21:33Z→21:52Z: zero events on any track. M201 both-reviewer PASS holds (VIGIL R3 9.95 @20:08Z, GUARDIAN R2 9.55 @20 |
-| Apr 24, 23:32 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
-| Apr 24, 23:32 CEST | `SPRINT_NOTE` | `M201` | anvil | 21:32Z cron tick. Window 21:13Z→21:32Z: guardian heartbeat only, zero events on ANVIL track. M201 both-reviewer PASS holds. Friday freeze ga |
-| Apr 24, 23:12 CEST | `AGENT_HEARTBEAT` | `M201` | anvil | anvil heartbeat — M201 |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 25.1h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 25.9h | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
