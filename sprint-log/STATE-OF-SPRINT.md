@@ -1,10 +1,10 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-25T20:13:03+00:00 UTC*
+*Last updated: 2026-04-26T05:04:58+00:00
 
 ## Today in one paragraph
 
-Two decisions remain unresolved past the 24-hour mark: M214 (REGISTRY-1) and C3-2 both need Mike's input to unblock downstream work. In parallel, five pull requests are pending review—A11 (PR#133), B1 (PRs #149 and #21), B2 (PR#24), and B5 (PR#25)—with no VIGIL review posted in the last five-plus hours. B6 started a canary deployment but hasn't posted a verdict in the 48-hour window, and FORGE's heartbeat signal went silent around thirteen hours ago. The sprint is waiting on decisions and reviews to move forward.
+Anvil, Vigil, and Guardian posted reviews over the last hour, addressing feedback on recent PRs. However, the sprint has hit a quiet stretch in the last 90 minutes—this is the third run with minimal activity. More urgently, we're sitting on two unresolved questions: M214 (DECISION_NEEDED on registry validation) and C3 (another question) have both been flagged for >24h with no resolution. These blockers are likely causing downstream delays. Additionally, five PRs (A11, B1 on two separate tasks, B2, B5) have been opened but haven't received review flagging yet—B6's canary is also pending its verdict after 48h. Forge hasn't checked in for over 18 hours, and OinkV has gone quiet entirely (no events in 24h). We need Mike's input on those two decisions to unblock the pipeline.
 
 ## Where We Are Today (one paragraph)
 
