@@ -58,8 +58,6 @@
 | Apr 25, 18:01 CEST | `REVIEW_POSTED` | `M242` | guardian | M242 review by guardian — PASS (9.8) |
 | Apr 25, 17:38 CEST | `REVIEW_POSTED` | `M239` | vigil | M239 review by vigil — REVISE (4.9) |
 | Apr 25, 17:36 CEST | `REVIEW_POSTED` | `M237` | vigil | M237 review by vigil — REVISE (4.9) |
-| Apr 25, 16:38 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — PASS (9.6) |
-| Apr 25, 16:31 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — REVISE (8.65) |
 
 ## Needs Mike (open gates)
 
