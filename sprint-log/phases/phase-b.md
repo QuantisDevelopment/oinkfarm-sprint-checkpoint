@@ -15,8 +15,8 @@
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 22, 05:53 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
-| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | ✅ DONE | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 25, 08:52 CEST · `SPRINT_NOTE` | anvil · forge · guardian · hermes |
-| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 🛑 BLOCKED | — | — | Apr 25, 08:10 CEST · `BLOCKED` | anvil · forge · guardian · hermes |
+| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | ✅ DONE | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 26, 08:20 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
+| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 🛑 BLOCKED | — | — | Apr 26, 08:20 CEST · `BLOCKED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | 🧪 CANARY | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 22, 00:45 CEST · `CANARY_STARTED` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 26, 08:20 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-26.md |
+| Apr 26, 08:20 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 26, 07:22 CEST | `REVIEW_POSTED` | `M239` | vigil | M239 review by vigil — PASS (9.6) |
 | Apr 26, 07:20 CEST | `REVIEW_POSTED` | `M237` | vigil | M237 review by vigil — PASS (9.6) |
 | Apr 26, 06:45 CEST | `REVIEW_POSTED` | `M228` | guardian | M228 review by guardian — PASS (9.8) |
@@ -64,8 +66,6 @@
 | Apr 25, 10:55 CEST | `REVIEW_POSTED` | `M46` | guardian | M46 review by guardian — PASS (9.8) |
 | Apr 25, 10:55 CEST | `REVIEW_POSTED` | `M42` | guardian | M42 review by guardian — PASS (9.4) |
 | Apr 25, 10:52 CEST | `REVIEW_POSTED` | `M49` | guardian | M49 review by guardian — PASS (9.8) |
-| Apr 25, 10:19 CEST | `REVIEW_POSTED` | `M50` | vigil | M50 review by vigil — PASS (9.6) |
-| Apr 25, 09:39 CEST | `REVIEW_POSTED` | `M48` | vigil | M48 review by vigil — PASS (9.85) |
 
 ## Needs Mike (open gates)
 

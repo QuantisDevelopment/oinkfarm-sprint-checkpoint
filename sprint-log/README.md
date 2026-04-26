@@ -4,72 +4,76 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 1833
-- **Last 24h:** 206 (rate 8.58/h)
+- **Total events:** 1842
+- **Last 24h:** 211 (rate 8.79/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (10 events)
+### Last 1 hour (14 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 26, 08:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 26, 08:27 CEST | `SPRINT_NOTE` | `—` | guardian | P1 B3 SQLite proxy DIRTY on 2026-04-26: closed_missing_exit=17 (legacy=5), active_has_exit=0, remaining_pct_bad=0, orphans=0/0/0, FET#1159=3 |
+| Apr 26, 08:27 CEST | `CANARY_PASS` | `M43` | guardian | M43 canary PASS |
+| Apr 26, 08:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3-daily-sqlite-integrity-proxy |
+| Apr 26, 08:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan since evt_20260426T062318Z_000001 found no new REVIEW_POSTED events for B9 v2 or B12-SHADOW and no DECISION_NEEDED o |
+| Apr 26, 08:23 CEST | `SPRINT_NOTE` | `M189` | anvil | Heavy Hybrid poke cross-check complete. No active VIGIL REVIEW_POSTED verdict=REVISE is visible on the current ANVIL queue; recent visible r |
+| Apr 26, 08:20 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-26.md |
+| Apr 26, 08:20 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 26, 08:18 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_2026-04-26 |
 | Apr 26, 08:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 26, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 26, 07:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T05:36:16Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
 | Apr 26, 07:48 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_data_purity_monitoring |
 | Apr 26, 07:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T05:16:13Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
-| Apr 26, 07:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 26, 07:22 CEST | `REVIEW_POSTED` | `M239` | vigil | M239 review by vigil — PASS (9.6) |
-| Apr 26, 07:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_data_purity_monitoring |
-| Apr 26, 07:20 CEST | `REVIEW_POSTED` | `M237` | vigil | M237 review by vigil — PASS (9.6) |
-| Apr 26, 07:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T04:56:08Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
 
-### Last 4 hours (30 events)
+### Last 4 hours (38 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 26, 08:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 26, 08:27 CEST | `SPRINT_NOTE` | `—` | guardian | P1 B3 SQLite proxy DIRTY on 2026-04-26: closed_missing_exit=17 (legacy=5), active_has_exit=0, remaining_pct_bad=0, orphans=0/0/0, FET#1159=3 |
+| Apr 26, 08:27 CEST | `CANARY_PASS` | `M43` | guardian | M43 canary PASS |
+| Apr 26, 08:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3-daily-sqlite-integrity-proxy |
+| Apr 26, 08:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan since evt_20260426T062318Z_000001 found no new REVIEW_POSTED events for B9 v2 or B12-SHADOW and no DECISION_NEEDED o |
+| Apr 26, 08:23 CEST | `SPRINT_NOTE` | `M189` | anvil | Heavy Hybrid poke cross-check complete. No active VIGIL REVIEW_POSTED verdict=REVISE is visible on the current ANVIL queue; recent visible r |
+| Apr 26, 08:20 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-26.md |
+| Apr 26, 08:20 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 26, 08:18 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_2026-04-26 |
 | Apr 26, 08:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 26, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 26, 07:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T05:36:16Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
 | Apr 26, 07:48 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_data_purity_monitoring |
 | Apr 26, 07:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T05:16:13Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
 | Apr 26, 07:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 26, 07:22 CEST | `REVIEW_POSTED` | `M239` | vigil | M239 review by vigil — PASS (9.6) |
-| Apr 26, 07:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_data_purity_monitoring |
-| Apr 26, 07:20 CEST | `REVIEW_POSTED` | `M237` | vigil | M237 review by vigil — PASS (9.6) |
-| Apr 26, 07:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T04:56:08Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
-| Apr 26, 07:05 CEST | `SPRINT_NOTE` | `—` | hermes | Anvil, Vigil, and Guardian posted reviews over the last hour, addressing feedback on recent PRs. However, the sprint has hit a quiet stretch |
-| Apr 26, 06:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 26, 06:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T04:36:38Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
-| Apr 26, 06:45 CEST | `REVIEW_POSTED` | `M228` | guardian | M228 review by guardian — PASS (9.8) |
-| Apr 26, 06:40 CEST | `REVIEW_POSTED` | `M228` | vigil | M228 review by vigil — PASS (9.6) |
 
-### Last 24 hours (206 events)
+### Last 24 hours (211 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 26, 08:31 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 26, 08:27 CEST | `SPRINT_NOTE` | `—` | guardian | P1 B3 SQLite proxy DIRTY on 2026-04-26: closed_missing_exit=17 (legacy=5), active_has_exit=0, remaining_pct_bad=0, orphans=0/0/0, FET#1159=3 |
+| Apr 26, 08:27 CEST | `CANARY_PASS` | `M43` | guardian | M43 canary PASS |
+| Apr 26, 08:25 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — B3-daily-sqlite-integrity-proxy |
+| Apr 26, 08:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan since evt_20260426T062318Z_000001 found no new REVIEW_POSTED events for B9 v2 or B12-SHADOW and no DECISION_NEEDED o |
+| Apr 26, 08:23 CEST | `SPRINT_NOTE` | `M189` | anvil | Heavy Hybrid poke cross-check complete. No active VIGIL REVIEW_POSTED verdict=REVISE is visible on the current ANVIL queue; recent visible r |
+| Apr 26, 08:20 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-26.md |
+| Apr 26, 08:20 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 26, 08:18 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — daily_2026-04-26 |
 | Apr 26, 08:15 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 26, 07:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 26, 07:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T05:36:16Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
 | Apr 26, 07:48 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_data_purity_monitoring |
 | Apr 26, 07:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T05:16:13Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
 | Apr 26, 07:27 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 26, 07:22 CEST | `REVIEW_POSTED` | `M239` | vigil | M239 review by vigil — PASS (9.6) |
-| Apr 26, 07:21 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heavy_hybrid_data_purity_monitoring |
-| Apr 26, 07:20 CEST | `REVIEW_POSTED` | `M237` | vigil | M237 review by vigil — PASS (9.6) |
-| Apr 26, 07:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T04:56:08Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
-| Apr 26, 07:05 CEST | `SPRINT_NOTE` | `—` | hermes | Anvil, Vigil, and Guardian posted reviews over the last hour, addressing feedback on recent PRs. However, the sprint has hit a quiet stretch |
-| Apr 26, 06:56 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 26, 06:56 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel sprint heartbeat scan since 2026-04-26T04:36:38Z: both explicit M189 PROPOSAL_APPROVED events remain present (VIGIL + GUARDIAN), no |
-| Apr 26, 06:45 CEST | `REVIEW_POSTED` | `M228` | guardian | M228 review by guardian — PASS (9.8) |
-| Apr 26, 06:40 CEST | `REVIEW_POSTED` | `M228` | vigil | M228 review by vigil — PASS (9.6) |
 
 ## 🧭 Needs Mike
 
 | Question ID | Question | Task | Age | Options | Gate |
 |---|---|---|---|---|---|
 | `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 2.2d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
-| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 38.0h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
+| `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 38.3h | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
 
 ## 🔍 Missing evidence
 
@@ -84,7 +88,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | 🟠 WARN | `B5` | PR_OPENED (pr=25) with no REVIEW_POSTED within 24h |
 | 🟠 WARN | `B6` | CANARY_STARTED with no verdict within 48h |
 | 🟠 WARN | `M201` | AGENT_HEARTBEAT stale > 3h for anvil |
-| 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
 
@@ -92,12 +95,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 26, 08:15 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 408 |
-| ⚒️ **ANVIL** | Apr 26, 07:56 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 521 |
-| 🛡️ **GUARDIAN** | Apr 26, 07:48 CEST | `AGENT_HEARTBEAT` | `heavy_hybrid_data_purity_monitoring` | 🟢 fresh | 352 |
-| 🔍 **VIGIL** | Apr 26, 07:22 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 141 |
+| 🪽 **Hermes** | Apr 26, 08:31 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 409 |
+| 🛡️ **GUARDIAN** | Apr 26, 08:27 CEST | `SPRINT_NOTE` | `B3-daily-sqlite-integrity-proxy` | 🟢 fresh | 356 |
+| ⚒️ **ANVIL** | Apr 26, 08:25 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 523 |
+| • **OINKDB** | Apr 26, 08:20 CEST | `BLOCKED` | `B4` | 🟢 fresh | 33 |
+| 🔍 **VIGIL** | Apr 26, 07:22 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟡 1–3h | 141 |
 | 🔥 **FORGE** | Apr 25, 13:30 CEST | `AGENT_HEARTBEAT` | `sprint-poke-response` | 🔴 stale | 168 |
-| • **OINKDB** | Apr 25, 08:10 CEST | `BLOCKED` | `B4` | 🔴 stale | 31 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🔴 stale | 190 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
 | • **SYSTEM** | Apr 20, 09:40 CEST | `PROPOSAL_APPROVED` | `B8` | 🔴 stale | 16 |
@@ -179,7 +182,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | `M35` | M35 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M37` | M37 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M42` | M42 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
-| `M43` | M43 | 🟡 STANDARD | — | 🧪 CANARY | PENDING |
+| `M43` | M43 | 🟡 STANDARD | — | ✅ DONE | PASS |
 | `M46` | M46 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M48` | M48 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M49` | M49 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
@@ -224,11 +227,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
+| • | OINKDB |  |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
-| • | OINKDB |  |
 | 🐷 | OinkV | Plan Auditor |
 | • | mike |  |
 | • | SYSTEM |  |
@@ -242,4 +245,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*18/79 tasks DONE · Last auto-regenerated: 08:15 CEST on 26 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*19/79 tasks DONE · Last auto-regenerated: 08:31 CEST on 26 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
