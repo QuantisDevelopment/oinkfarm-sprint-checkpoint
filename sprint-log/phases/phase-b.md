@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 26, 06:45 CEST | `REVIEW_POSTED` | `M228` | guardian | M228 review by guardian — PASS (9.8) |
+| Apr 26, 06:40 CEST | `REVIEW_POSTED` | `M228` | vigil | M228 review by vigil — PASS (9.6) |
 | Apr 26, 06:19 CEST | `REVIEW_POSTED` | `M237` | guardian | M237 review by guardian — REVISE (9.25) |
 | Apr 26, 00:16 CEST | `PROPOSAL_APPROVED` | `M189` | guardian | M189 proposal approved by guardian |
 | Apr 25, 21:05 CEST | `REVIEW_POSTED` | `M62` | vigil | M62 review by vigil — PASS (9.45) |
@@ -64,8 +66,6 @@
 | Apr 25, 09:39 CEST | `REVIEW_POSTED` | `M48` | vigil | M48 review by vigil — PASS (9.85) |
 | Apr 25, 09:39 CEST | `REVIEW_POSTED` | `M49` | vigil | M49 review by vigil — PASS (9.3) |
 | Apr 25, 08:52 CEST | `CANARY_STARTED` | `M43` | guardian | M43 canary started |
-| Apr 25, 08:52 CEST | `SPRINT_NOTE` | `M43` | guardian | P2: M43 (STANDARD tier, close_source_url backfill) merged with VIGIL-only approval at 06:19Z. GUARDIAN review was required per AGENTS.md dua |
-| Apr 25, 08:52 CEST | `SPRINT_NOTE` | `B3` | guardian | B3 reconciliation reset from day-5 CLEAN to day-0 with 866 discrepancies. state.json: 'PG provisioned + migrated 2026-04-24. Clock starts fr |
 
 ## Needs Mike (open gates)
 
