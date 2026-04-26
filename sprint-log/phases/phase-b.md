@@ -52,16 +52,12 @@
 | Apr 25, 18:51 CEST | `CANARY_STARTED` | `M242` | guardian | M242 canary started |
 | Apr 25, 18:48 CEST | `SPRINT_NOTE` | `M242` | vigil | MERGED b8f32e47 at 2026-04-25T16:32:05Z. VIGIL PASS 9.60 CRITICAL R2. WG audit Batch 2 unblocked. |
 | Apr 25, 18:48 CEST | `SPRINT_NOTE` | `M244` | vigil | MERGED 4c9ad211 at 2026-04-25T16:44:10Z. VIGIL PASS LIGHTWEIGHT. Test-only. |
-| Apr 25, 18:05 CEST | `REVIEW_POSTED` | `M244` | vigil | M244 review by vigil — PASS (0.0) |
-| Apr 25, 18:05 CEST | `REVIEW_POSTED` | `M245` | vigil | M245 review by vigil — PASS (0.0) |
-| Apr 25, 18:05 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — PASS (9.15) |
-| Apr 25, 18:01 CEST | `REVIEW_POSTED` | `M242` | guardian | M242 review by guardian — PASS (9.8) |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
-| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 2.6d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 2.7d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
 
 ---
 
