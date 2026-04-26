@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 26, 07:22 CEST | `REVIEW_POSTED` | `M239` | vigil | M239 review by vigil — PASS (9.6) |
+| Apr 26, 07:20 CEST | `REVIEW_POSTED` | `M237` | vigil | M237 review by vigil — PASS (9.6) |
 | Apr 26, 06:45 CEST | `REVIEW_POSTED` | `M228` | guardian | M228 review by guardian — PASS (9.8) |
 | Apr 26, 06:40 CEST | `REVIEW_POSTED` | `M228` | vigil | M228 review by vigil — PASS (9.6) |
 | Apr 26, 06:19 CEST | `REVIEW_POSTED` | `M237` | guardian | M237 review by guardian — REVISE (9.25) |
@@ -64,8 +66,6 @@
 | Apr 25, 10:52 CEST | `REVIEW_POSTED` | `M49` | guardian | M49 review by guardian — PASS (9.8) |
 | Apr 25, 10:19 CEST | `REVIEW_POSTED` | `M50` | vigil | M50 review by vigil — PASS (9.6) |
 | Apr 25, 09:39 CEST | `REVIEW_POSTED` | `M48` | vigil | M48 review by vigil — PASS (9.85) |
-| Apr 25, 09:39 CEST | `REVIEW_POSTED` | `M49` | vigil | M49 review by vigil — PASS (9.3) |
-| Apr 25, 08:52 CEST | `CANARY_STARTED` | `M43` | guardian | M43 canary started |
 
 ## Needs Mike (open gates)
 
