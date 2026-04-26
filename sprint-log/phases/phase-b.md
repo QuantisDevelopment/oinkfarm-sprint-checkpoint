@@ -49,9 +49,6 @@
 | Apr 25, 19:47 CEST | `REVIEW_POSTED` | `M242` | guardian | M242 review by guardian — PASS (9.3) |
 | Apr 25, 19:43 CEST | `REVIEW_POSTED` | `M251` | vigil | M251 review by vigil — PASS (9.85) |
 | Apr 25, 19:20 CEST | `REVIEW_POSTED` | `M35` | vigil | M35 review by vigil — PASS (9.15) |
-| Apr 25, 18:51 CEST | `CANARY_STARTED` | `M242` | guardian | M242 canary started |
-| Apr 25, 18:48 CEST | `SPRINT_NOTE` | `M242` | vigil | MERGED b8f32e47 at 2026-04-25T16:32:05Z. VIGIL PASS 9.60 CRITICAL R2. WG audit Batch 2 unblocked. |
-| Apr 25, 18:48 CEST | `SPRINT_NOTE` | `M244` | vigil | MERGED 4c9ad211 at 2026-04-25T16:44:10Z. VIGIL PASS LIGHTWEIGHT. Test-only. |
 
 ## Needs Mike (open gates)
 
