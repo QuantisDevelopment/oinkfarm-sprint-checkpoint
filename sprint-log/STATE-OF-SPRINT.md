@@ -4,9 +4,7 @@
 
 ## Today in one paragraph
 
-Anvil and Vigil are moving again after some quiet — Anvil posted fresh sprint notes 17 minutes ago and Vigil's code review landed about an hour back. But there's a real queue of PRs sitting open: B1, B2, B5, and A11 are all on the main branch waiting for review eyes. That's not blocking anything yet, but those should get reviewed in the next few hours to keep the rhythm. Guardian checked in 34 minutes ago, which is good, but Forge has gone quiet on us (last signal was over 8 hours ago) and Oinkv hasn't pinged since yesterday — worth a nudge to make sure those agents are healthy.
-
-The bigger concern is two architectural decisions that have been flagged for two days with no answer: Q-OF214 (the registry question) and Q-C3, both sitting in Mike's queue and past the 24-hour mark. Those need a call to unstick them. We also have B6's canary test running, but we don't have a verdict yet — that needs to land or escalate by tomorrow if it's still hanging.
+Two decisions remain unresolved past the 24-hour mark: M214 (REGISTRY-1) and C3-2 both need Mike's input to unblock downstream work. In parallel, five pull requests are pending review—A11 (PR#133), B1 (PRs #149 and #21), B2 (PR#24), and B5 (PR#25)—with no VIGIL review posted in the last five-plus hours. B6 started a canary deployment but hasn't posted a verdict in the 48-hour window, and FORGE's heartbeat signal went silent around thirteen hours ago. The sprint is waiting on decisions and reviews to move forward.
 
 ## Where We Are Today (one paragraph)
 
