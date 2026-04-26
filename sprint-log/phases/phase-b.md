@@ -61,7 +61,6 @@
 | Apr 25, 16:38 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — PASS (9.6) |
 | Apr 25, 16:31 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — REVISE (8.65) |
 | Apr 25, 15:19 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — FAIL (5.55) |
-| Apr 25, 12:18 CEST | `CANARY_STARTED` | `M51` | guardian | M51 canary started |
 
 ## Needs Mike (open gates)
 
