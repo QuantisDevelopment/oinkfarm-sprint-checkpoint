@@ -62,10 +62,6 @@
 | Apr 25, 16:31 CEST | `REVIEW_POSTED` | `M242` | vigil | M242 review by vigil — REVISE (8.65) |
 | Apr 25, 15:19 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — FAIL (5.55) |
 | Apr 25, 12:18 CEST | `CANARY_STARTED` | `M51` | guardian | M51 canary started |
-| Apr 25, 11:01 CEST | `MERGED` | `M51` | vigil | M51 merged via PR #52 @1d22920 |
-| Apr 25, 10:55 CEST | `REVIEW_POSTED` | `M46` | guardian | M46 review by guardian — PASS (9.8) |
-| Apr 25, 10:55 CEST | `REVIEW_POSTED` | `M42` | guardian | M42 review by guardian — PASS (9.4) |
-| Apr 25, 10:52 CEST | `REVIEW_POSTED` | `M49` | guardian | M49 review by guardian — PASS (9.8) |
 
 ## Needs Mike (open gates)
 
