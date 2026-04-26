@@ -4,6 +4,11 @@
 
 ## Today in one paragraph
 
+Guardian's post-merge canary monitoring came back clean at the 24-hour checkpoint (M43) with all 10 signals passing and 62 rows validated, so the recent Phase B merge is stable. Meanwhile, Forge has flagged a new decision for Mike (Q-C1-INC-1) on Phase C: how to handle 21 rows that are already marked terminal-incoherent before the new consolidation logic ships. OinkDB is currently blocked waiting for an upstream task to complete (B4), so it's on hold but not on fire.
+
+The concerning part is that two older decisions haven't been resolved yet: M214 and C3 have both been waiting on Mike's input for over 24 hours. On the PR side, five pull requests are sitting without review coverage (A11, B1 on two PRs, B2, B5), and one canary test for B6 has been running for more than 48 hours without a verdict. These aren't blockers yet, but they're starting to pile up—worth checking on reviews and that canary status.
+
+
 Anvil, Vigil, and Guardian posted reviews over the last hour, addressing feedback on recent PRs. However, the sprint has hit a quiet stretch in the last 90 minutes—this is the third run with minimal activity. More urgently, we're sitting on two unresolved questions: M214 (DECISION_NEEDED on registry validation) and C3 (another question) have both been flagged for >24h with no resolution. These blockers are likely causing downstream delays. Additionally, five PRs (A11, B1 on two separate tasks, B2, B5) have been opened but haven't received review flagging yet—B6's canary is also pending its verdict after 48h. Forge hasn't checked in for over 18 hours, and OinkV has gone quiet entirely (no events in 24h). We need Mike's input on those two decisions to unblock the pipeline.
 
 ## Where We Are Today (one paragraph)
