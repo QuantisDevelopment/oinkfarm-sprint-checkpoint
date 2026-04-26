@@ -25,7 +25,7 @@
 | [B10](../tasks/B10-b10.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 09:49 CEST · `TASK_PLANNED` | anvil · forge · guardian |
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 01:03 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 22, 01:06 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
-| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 27, 00:33 CEST · `PROPOSAL_READY` | anvil · forge · hermes |
+| [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 27, 00:57 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian · hermes |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | ⏳ NOT STARTED | — | — | Apr 20, 11:55 CEST · `TASK_PLANNED` | forge |
 
 ## Waves
@@ -36,6 +36,7 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 00:57 CEST | `PROPOSAL_APPROVED` | `B13` | guardian | B13 proposal approved by guardian |
 | Apr 27, 00:33 CEST | `PROPOSAL_READY` | `B13` | anvil | B13 proposal ready |
 | Apr 27, 00:30 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.6) |
 | Apr 26, 23:51 CEST | `REVIEW_POSTED` | `M70` | vigil | M70 review by vigil — PASS (9.45) |
