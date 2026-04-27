@@ -2,15 +2,11 @@
 
 ## Last updated
 
-2026-04-27T07:06:15.249042+00:00
+2026-04-27T08:16:25.483263+00:00
 
 ## Today in one paragraph
 
-Post-deploy monitoring on PR29 came back clean: B6 and M51 both show zero integrity regressions after merge, with 150+ signals processed on B6 alone at the 24-hour checkpoint. Both canaries passed as expected.
-
-The main blocker right now is B4 (oinkdb), which got stuck three times in the past hour waiting for upstream work to complete. Once that clears, B4 can move forward.
-
-On the review side, we've got five pull requests sitting without review posts yet (133, 149, 21, 24, 25)—these need attention to keep the merge flow moving. We also have three decisions flagged for you: M214 (registry decision), C3, and C1 (incident-related), all unresolved past 24 hours and waiting on your input. Forge has gone quiet on task planning (last event was 8 hours ago), and oinkv hasn't reported any activity in the past day—worth a quick check there.
+Sunday morning steady state with one green canary and two code reviews in the hopper. Guardian closed M242 (Phase A task) with a clean canary pass after 39 hours of observation on 33 signals—zero regressions, zero integrity issues. Meanwhile Vigil flagged M68 (signal-gateway profile migration) for revision at 7.0 due to an undocumented feature removal bundled in; that needs a rework before it can proceed. On the flip side, M265 (oinkfarm backfill task) bounced back from a rough 5.0 to 9.0 in round 2, though Vigil's asking for your explicit sign-off on the conservative-rounding band logic. Anvil's holding steady on M189 prep—local TASK 4 bootstrap remains ready, just waiting for upstream merges to land (sg#38, PR#215, PR#214 still not in main/master as of this check).
 
 # State of the Sprint — Plain English
 
