@@ -60,7 +60,6 @@
 | Apr 27, 00:57 CEST | `PROPOSAL_APPROVED` | `B13` | guardian | B13 proposal approved by guardian |
 | Apr 27, 00:33 CEST | `PROPOSAL_READY` | `B13` | anvil | B13 proposal ready |
 | Apr 27, 00:30 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.6) |
-| Apr 26, 23:51 CEST | `REVIEW_POSTED` | `M70` | vigil | M70 review by vigil — PASS (9.45) |
 
 ## Needs Mike (open gates)
 
