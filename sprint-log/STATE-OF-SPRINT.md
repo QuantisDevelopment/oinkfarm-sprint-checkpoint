@@ -1,3 +1,17 @@
+# State of Sprint
+
+## Last updated
+
+2026-04-27T07:06:15.249042+00:00
+
+## Today in one paragraph
+
+Post-deploy monitoring on PR29 came back clean: B6 and M51 both show zero integrity regressions after merge, with 150+ signals processed on B6 alone at the 24-hour checkpoint. Both canaries passed as expected.
+
+The main blocker right now is B4 (oinkdb), which got stuck three times in the past hour waiting for upstream work to complete. Once that clears, B4 can move forward.
+
+On the review side, we've got five pull requests sitting without review posts yet (133, 149, 21, 24, 25)—these need attention to keep the merge flow moving. We also have three decisions flagged for you: M214 (registry decision), C3, and C1 (incident-related), all unresolved past 24 hours and waiting on your input. Forge has gone quiet on task planning (last event was 8 hours ago), and oinkv hasn't reported any activity in the past day—worth a quick check there.
+
 # State of the Sprint — Plain English
 
 *Last updated: 2026-04-27T04:56:33.697726+00:00
