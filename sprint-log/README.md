@@ -4,17 +4,33 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2097
-- **Last 24h:** 236 (rate 9.83/h)
+- **Total events:** 2100
+- **Last 24h:** 235 (rate 9.79/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (12 events)
+### Last 1 hour (9 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 11:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 10:56 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke (duplicate) — 2026-04-27 08:56Z |
+| Apr 27, 10:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T083124Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
+| Apr 27, 10:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 10:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T081129Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
+| Apr 27, 10:26 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — 2026-04-27 08:25Z |
+| Apr 27, 10:16 CEST | `SPRINT_NOTE` | `—` | hermes | Sunday morning steady state with one green canary and two code reviews in the hopper. Guardian closed M242 (Phase A task) with a clean canar |
+| Apr 27, 10:11 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T081040Z_000001 found zero new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 d |
+| Apr 27, 10:10 CEST | `SPRINT_NOTE` | `M189` | anvil | Scheduled post-merge wake executed at 08:10Z. Required upstream merges for M189 Artifact A did not land in the expected 08:00Z window, so im |
+
+### Last 4 hours (46 events)
+| Time | Type | Task | Agent | Summary |
+|---|---|---|---|---|
+| Apr 27, 11:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 10:56 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke (duplicate) — 2026-04-27 08:56Z |
+| Apr 27, 10:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T083124Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
 | Apr 27, 10:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 10:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T081129Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
 | Apr 27, 10:26 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — 2026-04-27 08:25Z |
@@ -28,9 +44,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 09:34 CEST | `CANARY_PASS` | `M242` | guardian | M242 canary PASS |
 | Apr 27, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan complete. M189 now has explicit dual in-stream PROPOSAL_APPROVED events (VIGIL evt_20260422T035650Z_000001; GUARDIAN evt_2026 |
 
-### Last 4 hours (53 events)
+### Last 24 hours (235 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 11:04 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 10:56 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke (duplicate) — 2026-04-27 08:56Z |
+| Apr 27, 10:52 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T083124Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
 | Apr 27, 10:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 10:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T081129Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
 | Apr 27, 10:26 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — 2026-04-27 08:25Z |
@@ -43,28 +62,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 09:36 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily monitoring cycle — 2026-04-27 |
 | Apr 27, 09:34 CEST | `CANARY_PASS` | `M242` | guardian | M242 canary PASS |
 | Apr 27, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan complete. M189 now has explicit dual in-stream PROPOSAL_APPROVED events (VIGIL evt_20260422T035650Z_000001; GUARDIAN evt_2026 |
-| Apr 27, 09:24 CEST | `REVIEW_POSTED` | `M68` | vigil | M68 review by vigil — REVISE (7.0) |
-| Apr 27, 09:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 27, 09:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke follow-up — post-daily steady state |
-
-### Last 24 hours (236 events)
-| Time | Type | Task | Agent | Summary |
-|---|---|---|---|---|
-| Apr 27, 10:33 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 27, 10:31 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T081129Z_000001 found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 rem |
-| Apr 27, 10:26 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke response — 2026-04-27 08:25Z |
-| Apr 27, 10:16 CEST | `SPRINT_NOTE` | `—` | hermes | Sunday morning steady state with one green canary and two code reviews in the hopper. Guardian closed M242 (Phase A task) with a clean canar |
-| Apr 27, 10:11 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since evt_20260427T081040Z_000001 found zero new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events. M189 d |
-| Apr 27, 10:10 CEST | `SPRINT_NOTE` | `M189` | anvil | Scheduled post-merge wake executed at 08:10Z. Required upstream merges for M189 Artifact A did not land in the expected 08:00Z window, so im |
-| Apr 27, 09:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 27, 09:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last anvil SPRINT_NOTE found no new PROPOSAL_APPROVED, REVIEW_POSTED, DECISION_NEEDED, or BLOCKED events relevant to M1 |
-| Apr 27, 09:39 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 27, 09:36 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Daily monitoring cycle — 2026-04-27 |
-| Apr 27, 09:34 CEST | `CANARY_PASS` | `M242` | guardian | M242 canary PASS |
-| Apr 27, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan complete. M189 now has explicit dual in-stream PROPOSAL_APPROVED events (VIGIL evt_20260422T035650Z_000001; GUARDIAN evt_2026 |
-| Apr 27, 09:24 CEST | `REVIEW_POSTED` | `M68` | vigil | M68 review by vigil — REVISE (7.0) |
-| Apr 27, 09:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 27, 09:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke follow-up — post-daily steady state |
 
 ## 🧭 Needs Mike
 
@@ -72,8 +69,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 |---|---|---|---|---|---|
 | `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 3.3d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 | `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 2.7d | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
-| `Q-C1-INC-1` | How should Phase C dispose of the 21 already-existing terminal-incoherent rows on the live substrate (resolved status with NULL exit_price/final_roi)? Live count: 17 wg_march_audit, 3 legacy_backfill, 1 trader_close. INV-18 read-side rule (do not silently include in resolved cohorts) holds regardless; this gate is purely about upstream disposition of the existing 21. | `C1` | 25.7h | A: repair upstream before C1/C4/C6 ship · B: ship Phase C with INV-18 fail-closed warning, dashboards visibly carry terminal_incoherent_total>0 until separate repair lands (FORGE recommends) · C: quarantine the 21 rows permanently into unresolved_due_to_missing_terminal_fields analytical bucket as legacy debt | generic |
-| `Q-C4-MD-1` | How should C4 / Phase C audit-trail KPIs treat metadata-only backfill writes that advance updated_at without paired structured signal_events (notes append, source_url/close_source_url backfill)? Live: 318 rows in last 24h, dominated by two batches at 2026-04-25T12:04:09Z + 12:04:39Z. INV-11 covers hotpath-field corruption; this gate is purely about the metadata-only audit-trail denominator policy. | `C4` | 24.6h | A: count metadata-only no-event rows in audit-trail denominator as integrity debt (SC-1 stays at 43%, drives remediation backlog) · B: require all metadata-only backfill paths to emit a METADATA_BACKFILL structured event going forward (clean but needs upstream code; does not retroactively heal 318 rows) · C: exclude metadata-only updated_at advances from the audit-trail denominator (Guardian recommendation #3; restores SC-1 to ~100% but normalizes notes-only audit) | generic |
+| `Q-C1-INC-1` | How should Phase C dispose of the 21 already-existing terminal-incoherent rows on the live substrate (resolved status with NULL exit_price/final_roi)? Live count: 17 wg_march_audit, 3 legacy_backfill, 1 trader_close. INV-18 read-side rule (do not silently include in resolved cohorts) holds regardless; this gate is purely about upstream disposition of the existing 21. | `C1` | 26.2h | A: repair upstream before C1/C4/C6 ship · B: ship Phase C with INV-18 fail-closed warning, dashboards visibly carry terminal_incoherent_total>0 until separate repair lands (FORGE recommends) · C: quarantine the 21 rows permanently into unresolved_due_to_missing_terminal_fields analytical bucket as legacy debt | generic |
+| `Q-C4-MD-1` | How should C4 / Phase C audit-trail KPIs treat metadata-only backfill writes that advance updated_at without paired structured signal_events (notes append, source_url/close_source_url backfill)? Live: 318 rows in last 24h, dominated by two batches at 2026-04-25T12:04:09Z + 12:04:39Z. INV-11 covers hotpath-field corruption; this gate is purely about the metadata-only audit-trail denominator policy. | `C4` | 25.2h | A: count metadata-only no-event rows in audit-trail denominator as integrity debt (SC-1 stays at 43%, drives remediation backlog) · B: require all metadata-only backfill paths to emit a METADATA_BACKFILL structured event going forward (clean but needs upstream code; does not retroactively heal 318 rows) · C: exclude metadata-only updated_at advances from the audit-trail denominator (Guardian recommendation #3; restores SC-1 to ~100% but normalizes notes-only audit) | generic |
 
 ## 🔍 Missing evidence
 
@@ -96,9 +93,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 27, 10:33 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 467 |
-| ⚒️ **ANVIL** | Apr 27, 10:31 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 613 |
-| 🛡️ **GUARDIAN** | Apr 27, 10:26 CEST | `AGENT_HEARTBEAT` | `Sprint poke response — 2026-04-27 08:25Z` | 🟢 fresh | 415 |
+| 🪽 **Hermes** | Apr 27, 11:04 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 468 |
+| 🛡️ **GUARDIAN** | Apr 27, 10:56 CEST | `AGENT_HEARTBEAT` | `Sprint poke (duplicate) — 2026-04-27 08:56Z` | 🟢 fresh | 416 |
+| ⚒️ **ANVIL** | Apr 27, 10:52 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 614 |
 | 🔍 **VIGIL** | Apr 27, 09:24 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟡 1–3h | 156 |
 | • **OINKDB** | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | 🟡 1–3h | 39 |
 | 🔥 **FORGE** | Apr 27, 01:02 CEST | `TASK_PLANNED` | `sprint-poke-response` | 🔴 stale | 195 |
@@ -234,8 +231,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -252,4 +249,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*22/85 tasks DONE · Last auto-regenerated: 10:33 CEST on 27 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*22/85 tasks DONE · Last auto-regenerated: 11:05 CEST on 27 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
