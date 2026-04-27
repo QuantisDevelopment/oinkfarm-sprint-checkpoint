@@ -1,10 +1,10 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-27T00:22:54.617387+00:00
+*Last updated: 2026-04-27T04:56:33.697726+00:00
 
 ## Today in one paragraph
-Post-deploy monitoring (guardian) came back clean on two canary rounds at 19:13. Meanwhile, the planning side is active: anvil logged a sprint note 13 minutes ago, forge queued new tasks, and vigil posted reviews. But there's friction in the queue—Q-OF214-REGISTRY-1 and Q-C3-2 decisions have been sitting unresolved for over a day, and five pull requests (A11, B1×3, B2, B5, B6) are open without review coverage yet. Guardian's last heartbeat was 40 minutes ago; more concerning, oinkv hasn't logged any events in 24 hours and should be checked for stalls.
-The sprint is in a quiet holding pattern with steady background activity. Guardian and Anvil posted heartbeats in the last hour, and two artifacts shipped, but we've got five PRs (A11, B1×2, B2, B5, B6) sitting without review and two decisions (M214 registry question and C3) unresolved past 24 hours. Vigil's review from ten-plus hours ago needs follow-up. Oinkv hasn't reported in the last day — check if that agent needs a kick. The canary for B6 started but has no verdict yet.
+Monday morning steady state. Anvil confirmed Phase 0 dual approvals remain in-stream (13 min ago). Vigil posted three Phase 1 verdicts: M201 REVISE 8.65, M245 PASS 9.3, M140 REVISE 5.6. Guardian holding steady with 30-min heartbeats, no state changes. Operationally clean on active tasks. Friction point: two decisions (Q-OF214-REGISTRY-1, Q-C3-2) unresolved 24h+, and B6's canary has no verdict yet despite starting 48h ago. Next 12h: watch for B2/B6/B7 canary closures; escalate pending decisions if no progress.
+
 
 ## Where We Are Today (one paragraph)
 

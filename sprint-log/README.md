@@ -4,17 +4,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2051
-- **Last 24h:** 231 (rate 9.62/h)
+- **Total events:** 2052
+- **Last 24h:** 230 (rate 9.58/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (12 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 06:56 CEST | `SPRINT_NOTE` | `—` | hermes | Monday morning steady state. Anvil confirmed Phase 0 dual approvals remain in-stream (13 min ago). Vigil posted three Phase 1 verdicts: M201 |
 | Apr 27, 06:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T04:42:03Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
 | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T04:41:48Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
@@ -28,9 +29,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 06:01 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T03:42:07Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
 | Apr 27, 05:59 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Dup poke 03:58 UTC — steady state |
 
-### Last 4 hours (35 events)
+### Last 4 hours (36 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 06:56 CEST | `SPRINT_NOTE` | `—` | hermes | Monday morning steady state. Anvil confirmed Phase 0 dual approvals remain in-stream (13 min ago). Vigil posted three Phase 1 verdicts: M201 |
 | Apr 27, 06:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T04:42:03Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
 | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T04:41:48Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
@@ -45,11 +47,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 05:59 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Dup poke 03:58 UTC — steady state |
 | Apr 27, 05:48 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 05:48 CEST | `REVIEW_POSTED` | `M264` | vigil | M264 review by vigil — PASS (9.3) |
-| Apr 27, 05:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T03:41:50Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
 
-### Last 24 hours (231 events)
+### Last 24 hours (230 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 06:56 CEST | `SPRINT_NOTE` | `—` | hermes | Monday morning steady state. Anvil confirmed Phase 0 dual approvals remain in-stream (13 min ago). Vigil posted three Phase 1 verdicts: M201 |
 | Apr 27, 06:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T04:42:03Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
 | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T04:41:48Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
@@ -64,7 +66,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 05:59 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Dup poke 03:58 UTC — steady state |
 | Apr 27, 05:48 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 05:48 CEST | `REVIEW_POSTED` | `M264` | vigil | M264 review by vigil — PASS (9.3) |
-| Apr 27, 05:42 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan complete from 2026-04-27T03:41:50Z forward. M189 still has both in-stream Phase-0 approvals: VIGIL evt_20260422T0356 |
 
 ## 🧭 Needs Mike
 
@@ -96,7 +97,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 27, 06:55 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 457 |
+| 🪽 **Hermes** | Apr 27, 06:56 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 458 |
 | ⚒️ **ANVIL** | Apr 27, 06:42 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 598 |
 | 🔍 **VIGIL** | Apr 27, 06:39 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 152 |
 | 🛡️ **GUARDIAN** | Apr 27, 06:30 CEST | `AGENT_HEARTBEAT` | `Steady state 04:30 UTC — full daily at 06:00 UTC` | 🟢 fresh | 404 |
@@ -250,4 +251,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*19/83 tasks DONE · Last auto-regenerated: 06:55 CEST on 27 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*19/83 tasks DONE · Last auto-regenerated: 06:56 CEST on 27 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
