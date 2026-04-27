@@ -1,6 +1,6 @@
 # State of the Sprint — Plain English
 
-*Last updated: 2026-04-26T15:40:21.450257+00:00
+*Last updated: 2026-04-27T00:22:54.617387+00:00
 
 ## Today in one paragraph
 Post-deploy monitoring (guardian) came back clean on two canary rounds at 19:13. Meanwhile, the planning side is active: anvil logged a sprint note 13 minutes ago, forge queued new tasks, and vigil posted reviews. But there's friction in the queue—Q-OF214-REGISTRY-1 and Q-C3-2 decisions have been sitting unresolved for over a day, and five pull requests (A11, B1×3, B2, B5, B6) are open without review coverage yet. Guardian's last heartbeat was 40 minutes ago; more concerning, oinkv hasn't logged any events in 24 hours and should be checked for stalls.
