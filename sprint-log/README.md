@@ -4,17 +4,23 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2078
-- **Last 24h:** 229 (rate 9.54/h)
+- **Total events:** 2084
+- **Last 24h:** 232 (rate 9.67/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 09:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 09:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke follow-up — post-daily steady state |
+| Apr 27, 09:21 CEST | `SPRINT_NOTE` | `M265` | anvil | Follow-up verification for PR#274 complete. GitHub canonical PR head is 211ad1c9 on base master 0fe2ae94; PR remains mergeable. Verified dir |
+| Apr 27, 09:19 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — PASS (9.0) |
+| Apr 27, 09:19 CEST | `SPRINT_NOTE` | `M265` | anvil | PR#274 rebase completed in clean worktree /home/oinkv/worktrees/of-pr274. Branch fix/265-backfill-signal-events-insert rebased onto origin/m |
+| Apr 27, 09:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat check complete since ANVIL SPRINT_NOTE evt_20260427T065156Z_000001. M189 still has both required in-stream approvals and  |
 | Apr 27, 09:06 CEST | `SPRINT_NOTE` | `—` | hermes | Post-deploy monitoring on PR29 came back clean: B6 and M51 both show zero integrity regressions after merge, with 150+ signals processed on  |
 | Apr 27, 08:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan since ANVIL SPRINT_NOTE evt_20260427T063448Z_000001. M189 still has BOTH in-stream Phase-0 approvals (VIGIL evt_2026 |
 | Apr 27, 08:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -22,18 +28,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 08:40 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — REVISE (5.0) |
 | Apr 27, 08:40 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Post-daily steady state 06:40 UTC |
 | Apr 27, 08:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat advanced M189 TASK 4 from passive wait into concrete startup prep on existing branch fix/189-sl-to-be-microgate. Confirme |
-| Apr 27, 08:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 27, 08:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat check complete since last ANVIL SPRINT_NOTE (2026-04-27T06:12:41Z). M189 Phase-0 gate remains satisfied by BOTH in-stream |
-| Apr 27, 08:12 CEST | `SPRINT_NOTE` | `M201` | anvil | SPRINT POKE processed. A new VIGIL REVIEW_POSTED REVISE did arrive on my lane after the earlier queue checks: oink-sync PR#13 / M201 Phase B |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
 
-### Last 4 hours (46 events)
+### Last 4 hours (50 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 09:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 09:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke follow-up — post-daily steady state |
+| Apr 27, 09:21 CEST | `SPRINT_NOTE` | `M265` | anvil | Follow-up verification for PR#274 complete. GitHub canonical PR head is 211ad1c9 on base master 0fe2ae94; PR remains mergeable. Verified dir |
+| Apr 27, 09:19 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — PASS (9.0) |
+| Apr 27, 09:19 CEST | `SPRINT_NOTE` | `M265` | anvil | PR#274 rebase completed in clean worktree /home/oinkv/worktrees/of-pr274. Branch fix/265-backfill-signal-events-insert rebased onto origin/m |
+| Apr 27, 09:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat check complete since ANVIL SPRINT_NOTE evt_20260427T065156Z_000001. M189 still has both required in-stream approvals and  |
 | Apr 27, 09:06 CEST | `SPRINT_NOTE` | `—` | hermes | Post-deploy monitoring on PR29 came back clean: B6 and M51 both show zero integrity regressions after merge, with 150+ signals processed on  |
 | Apr 27, 08:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan since ANVIL SPRINT_NOTE evt_20260427T063448Z_000001. M189 still has BOTH in-stream Phase-0 approvals (VIGIL evt_2026 |
 | Apr 27, 08:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -43,16 +47,16 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 08:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat advanced M189 TASK 4 from passive wait into concrete startup prep on existing branch fix/189-sl-to-be-microgate. Confirme |
 | Apr 27, 08:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 08:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat check complete since last ANVIL SPRINT_NOTE (2026-04-27T06:12:41Z). M189 Phase-0 gate remains satisfied by BOTH in-stream |
-| Apr 27, 08:12 CEST | `SPRINT_NOTE` | `M201` | anvil | SPRINT POKE processed. A new VIGIL REVIEW_POSTED REVISE did arrive on my lane after the earlier queue checks: oink-sync PR#13 / M201 Phase B |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
 
-### Last 24 hours (229 events)
+### Last 24 hours (232 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 09:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 27, 09:22 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — Sprint poke follow-up — post-daily steady state |
+| Apr 27, 09:21 CEST | `SPRINT_NOTE` | `M265` | anvil | Follow-up verification for PR#274 complete. GitHub canonical PR head is 211ad1c9 on base master 0fe2ae94; PR remains mergeable. Verified dir |
+| Apr 27, 09:19 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — PASS (9.0) |
+| Apr 27, 09:19 CEST | `SPRINT_NOTE` | `M265` | anvil | PR#274 rebase completed in clean worktree /home/oinkv/worktrees/of-pr274. Branch fix/265-backfill-signal-events-insert rebased onto origin/m |
+| Apr 27, 09:12 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat check complete since ANVIL SPRINT_NOTE evt_20260427T065156Z_000001. M189 still has both required in-stream approvals and  |
 | Apr 27, 09:06 CEST | `SPRINT_NOTE` | `—` | hermes | Post-deploy monitoring on PR29 came back clean: B6 and M51 both show zero integrity regressions after merge, with 150+ signals processed on  |
 | Apr 27, 08:51 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat scan since ANVIL SPRINT_NOTE evt_20260427T063448Z_000001. M189 still has BOTH in-stream Phase-0 approvals (VIGIL evt_2026 |
 | Apr 27, 08:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
@@ -62,12 +66,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 27, 08:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat advanced M189 TASK 4 from passive wait into concrete startup prep on existing branch fix/189-sl-to-be-microgate. Confirme |
 | Apr 27, 08:18 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 27, 08:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Parallel heartbeat check complete since last ANVIL SPRINT_NOTE (2026-04-27T06:12:41Z). M189 Phase-0 gate remains satisfied by BOTH in-stream |
-| Apr 27, 08:12 CEST | `SPRINT_NOTE` | `M201` | anvil | SPRINT POKE processed. A new VIGIL REVIEW_POSTED REVISE did arrive on my lane after the earlier queue checks: oink-sync PR#13 / M201 Phase B |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
 
 ## 🧭 Needs Mike
 
@@ -75,8 +73,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 |---|---|---|---|---|---|
 | `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 3.3d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) | generic |
 | `Q-C3-2` | C3 backfill urgency_source semantics: when backfill uses the identical deterministic classifier as write-time, should backfilled rows stamp the natural evidence source (e.g. 'text_keyword' or 'tp_distance') with a separate backfill flag, or stamp a blanket 'backfill_heuristic' to distinguish post-hoc classification from write-time? Currently C3 §3 lists 'backfill_heuristic' as an allowed enum value, but §5.5.3 mandates the identical classifier is used for both paths. These two statements are in tension for audit/drift semantics downstream (C4/C6 breach history, KPI segmentation). | `C3` | 2.6d | A: keep 'backfill_heuristic' as the stamped urgency_source for all backfilled rows, dropping natural-source fidelity for those rows (simple audit flag, but loses evidence chain) · B: backfilled rows stamp the natural evidence source (e.g. 'text_keyword'), and 'backfill_heuristic' is removed from the enum; a separate immutable 'classified_at_backfill' boolean column distinguishes post-hoc rows (preserves evidence chain, adds one column) · C: backfilled rows stamp the natural evidence source AND backfill adds a second companion column 'urgency_classified_phase' ∈ {ingest, backfill} — keeps enum pure, makes provenance explicit at the row level | generic |
-| `Q-C1-INC-1` | How should Phase C dispose of the 21 already-existing terminal-incoherent rows on the live substrate (resolved status with NULL exit_price/final_roi)? Live count: 17 wg_march_audit, 3 legacy_backfill, 1 trader_close. INV-18 read-side rule (do not silently include in resolved cohorts) holds regardless; this gate is purely about upstream disposition of the existing 21. | `C1` | 24.2h | A: repair upstream before C1/C4/C6 ship · B: ship Phase C with INV-18 fail-closed warning, dashboards visibly carry terminal_incoherent_total>0 until separate repair lands (FORGE recommends) · C: quarantine the 21 rows permanently into unresolved_due_to_missing_terminal_fields analytical bucket as legacy debt | generic |
-| `Q-C4-MD-1` | How should C4 / Phase C audit-trail KPIs treat metadata-only backfill writes that advance updated_at without paired structured signal_events (notes append, source_url/close_source_url backfill)? Live: 318 rows in last 24h, dominated by two batches at 2026-04-25T12:04:09Z + 12:04:39Z. INV-11 covers hotpath-field corruption; this gate is purely about the metadata-only audit-trail denominator policy. | `C4` | 23.2h | A: count metadata-only no-event rows in audit-trail denominator as integrity debt (SC-1 stays at 43%, drives remediation backlog) · B: require all metadata-only backfill paths to emit a METADATA_BACKFILL structured event going forward (clean but needs upstream code; does not retroactively heal 318 rows) · C: exclude metadata-only updated_at advances from the audit-trail denominator (Guardian recommendation #3; restores SC-1 to ~100% but normalizes notes-only audit) | generic |
+| `Q-C1-INC-1` | How should Phase C dispose of the 21 already-existing terminal-incoherent rows on the live substrate (resolved status with NULL exit_price/final_roi)? Live count: 17 wg_march_audit, 3 legacy_backfill, 1 trader_close. INV-18 read-side rule (do not silently include in resolved cohorts) holds regardless; this gate is purely about upstream disposition of the existing 21. | `C1` | 24.5h | A: repair upstream before C1/C4/C6 ship · B: ship Phase C with INV-18 fail-closed warning, dashboards visibly carry terminal_incoherent_total>0 until separate repair lands (FORGE recommends) · C: quarantine the 21 rows permanently into unresolved_due_to_missing_terminal_fields analytical bucket as legacy debt | generic |
+| `Q-C4-MD-1` | How should C4 / Phase C audit-trail KPIs treat metadata-only backfill writes that advance updated_at without paired structured signal_events (notes append, source_url/close_source_url backfill)? Live: 318 rows in last 24h, dominated by two batches at 2026-04-25T12:04:09Z + 12:04:39Z. INV-11 covers hotpath-field corruption; this gate is purely about the metadata-only audit-trail denominator policy. | `C4` | 23.5h | A: count metadata-only no-event rows in audit-trail denominator as integrity debt (SC-1 stays at 43%, drives remediation backlog) · B: require all metadata-only backfill paths to emit a METADATA_BACKFILL structured event going forward (clean but needs upstream code; does not retroactively heal 318 rows) · C: exclude metadata-only updated_at advances from the audit-trail denominator (Guardian recommendation #3; restores SC-1 to ~100% but normalizes notes-only audit) | generic |
 
 ## 🔍 Missing evidence
 
@@ -98,11 +96,11 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 27, 09:06 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 462 |
-| ⚒️ **ANVIL** | Apr 27, 08:51 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 605 |
-| 🔍 **VIGIL** | Apr 27, 08:42 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 154 |
-| 🛡️ **GUARDIAN** | Apr 27, 08:40 CEST | `AGENT_HEARTBEAT` | `Post-daily steady state 06:40 UTC` | 🟢 fresh | 411 |
-| • **OINKDB** | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | 🟢 fresh | 39 |
+| 🪽 **Hermes** | Apr 27, 09:23 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 463 |
+| 🛡️ **GUARDIAN** | Apr 27, 09:22 CEST | `AGENT_HEARTBEAT` | `Sprint poke follow-up — post-daily steady state` | 🟢 fresh | 412 |
+| ⚒️ **ANVIL** | Apr 27, 09:21 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 608 |
+| 🔍 **VIGIL** | Apr 27, 09:19 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 155 |
+| • **OINKDB** | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | 🟡 1–3h | 39 |
 | 🔥 **FORGE** | Apr 27, 01:02 CEST | `TASK_PLANNED` | `sprint-poke-response` | 🔴 stale | 195 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🔴 stale | 190 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -235,9 +233,9 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | OINKDB |  |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🐷 | OinkV | Plan Auditor |
@@ -253,4 +251,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*21/84 tasks DONE · Last auto-regenerated: 09:06 CEST on 27 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/84 tasks DONE · Last auto-regenerated: 09:24 CEST on 27 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
