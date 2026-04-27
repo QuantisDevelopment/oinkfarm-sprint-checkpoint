@@ -57,7 +57,6 @@
 | Apr 27, 02:41 CEST | `REVIEW_POSTED` | `M262` | vigil | M262 review by vigil — PASS (9.15) |
 | Apr 27, 02:06 CEST | `PROPOSAL_APPROVED` | `B15` | guardian | B15 proposal approved by guardian |
 | Apr 27, 02:04 CEST | `PROPOSAL_READY` | `B15` | anvil | B15 proposal ready |
-| Apr 27, 00:57 CEST | `PROPOSAL_APPROVED` | `B13` | guardian | B13 proposal approved by guardian |
 
 ## Needs Mike (open gates)
 
