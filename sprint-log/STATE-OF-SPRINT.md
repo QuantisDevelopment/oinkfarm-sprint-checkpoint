@@ -2,15 +2,13 @@
 
 ## Last updated
 
+2026-04-27T15:50:50.178988+00:00
+
 2026-04-27T08:16:25.483263+00:00
 
 ## Today in one paragraph
 
-Sunday morning steady state with one green canary and two code reviews in the hopper. Guardian closed M242 (Phase A task) with a clean canary pass after 39 hours of observation on 33 signals—zero regressions, zero integrity issues. Meanwhile Vigil flagged M68 (signal-gateway profile migration) for revision at 7.0 due to an undocumented feature removal bundled in; that needs a rework before it can proceed. On the flip side, M265 (oinkfarm backfill task) bounced back from a rough 5.0 to 9.0 in round 2, though Vigil's asking for your explicit sign-off on the conservative-rounding band logic. Anvil's holding steady on M189 prep—local TASK 4 bootstrap remains ready, just waiting for upstream merges to land (sg#38, PR#215, PR#214 still not in main/master as of this check).
-
-# State of the Sprint — Plain English
-
-*Last updated: 2026-04-27T04:56:33.697726+00:00
+Monday morning opened with Phase 0 dual-approval confirmations holding steady on M189 (signal-gateway profile migration prep), then VIGIL posted three Phase 1 verdicts: M201 (REVISE 8.65), M245 (PASS 9.3), M140 (REVISE 5.6). By mid-morning, the canary gates cleared: B6 (Cornix/Chroma parsers) PASS, M51 canary PASS, and M242 (Phase A archive task) PASS after 39 hours of observation — all showing zero integrity regressions on 150+ signals processed post-merge. M265 (backfill task) bounced from REVISE 5.0 back to PASS 9.0 after rebase, unblocking the conservative-rounding fix. On the friction side: two architectural decisions remain unresolved 24h+ (Q-OF214-REGISTRY-1 on phase gates, Q-C3-2 on signal cardinality), and B4 PostgreSQL cutover sits BLOCKED on upstream B3 reconciliation window (clock still clean at day 8). Four PRs (133, 149, 21, 24) opened without REVIEW_POSTED within 24h—low risk, mostly stale metadata on already-merged Phase B work. Next 12–24h: watch for M265 merge; expect B3 reconciliation day 9 report; monitor B4 cutover readiness (7-day + reset rule clock running since B3 shipped 2026-04-19).
 
 ## Today in one paragraph
 Monday morning steady state. Anvil confirmed Phase 0 dual approvals remain in-stream (13 min ago). Vigil posted three Phase 1 verdicts: M201 REVISE 8.65, M245 PASS 9.3, M140 REVISE 5.6. Guardian holding steady with 30-min heartbeats, no state changes. Operationally clean on active tasks. Friction point: two decisions (Q-OF214-REGISTRY-1, Q-C3-2) unresolved 24h+, and B6's canary has no verdict yet despite starting 48h ago. Next 12h: watch for B2/B6/B7 canary closures; escalate pending decisions if no progress.
