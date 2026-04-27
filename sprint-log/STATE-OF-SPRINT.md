@@ -8,11 +8,16 @@
 
 ## Today in one paragraph
 
-Monday morning opened with Phase 0 dual-approval confirmations holding steady on M189 (signal-gateway profile migration prep), then VIGIL posted three Phase 1 verdicts: M201 (REVISE 8.65), M245 (PASS 9.3), M140 (REVISE 5.6). By mid-morning, the canary gates cleared: B6 (Cornix/Chroma parsers) PASS, M51 canary PASS, and M242 (Phase A archive task) PASS after 39 hours of observation — all showing zero integrity regressions on 150+ signals processed post-merge. M265 (backfill task) bounced from REVISE 5.0 back to PASS 9.0 after rebase, unblocking the conservative-rounding fix. On the friction side: two architectural decisions remain unresolved 24h+ (Q-OF214-REGISTRY-1 on phase gates, Q-C3-2 on signal cardinality), and B4 PostgreSQL cutover sits BLOCKED on upstream B3 reconciliation window (clock still clean at day 8). Four PRs (133, 149, 21, 24) opened without REVIEW_POSTED within 24h—low risk, mostly stale metadata on already-merged Phase B work. Next 12–24h: watch for M265 merge; expect B3 reconciliation day 9 report; monitor B4 cutover readiness (7-day + reset rule clock running since B3 shipped 2026-04-19).
 
 ## Today in one paragraph
-Monday morning steady state. Anvil confirmed Phase 0 dual approvals remain in-stream (13 min ago). Vigil posted three Phase 1 verdicts: M201 REVISE 8.65, M245 PASS 9.3, M140 REVISE 5.6. Guardian holding steady with 30-min heartbeats, no state changes. Operationally clean on active tasks. Friction point: two decisions (Q-OF214-REGISTRY-1, Q-C3-2) unresolved 24h+, and B6's canary has no verdict yet despite starting 48h ago. Next 12h: watch for B2/B6/B7 canary closures; escalate pending decisions if no progress.
 
+
+
+Sprint holding steady with steady incremental progress, but we have four open questions waiting for decisions and a backlog of PRs that need review attention.
+
+On the active side: ANVIL just posted a note five minutes ago, GUARDIAN sent a heartbeat 23 minutes back, and we've shipped two new artifacts to the pipeline. The team is moving, but the decision log is starting to back up—we're sitting on four unresolved questions (Q-OF214-REGISTRY-1, Q-C3-2, Q-C1-INC-1, Q-C4-MD-1) that have been flagged for more than a day. Meanwhile, four pull requests are open without formal reviews posted yet (PRs 133, 149, 21, 24)—VIGIL posted a review 174 minutes ago but these newer ones are waiting on attention.
+
+One small note on the calendar: FORGE's last logged task is stale (21 hours old), so that one's worth a quick check-in when you get a moment. Overall, the sprint isn't stuck, but we're accumulating small friction points that'll benefit from Mike's routing on the decision queue.
 
 ## Where We Are Today (one paragraph)
 
