@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 27, 08:42 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.15) |
+| Apr 27, 08:40 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — REVISE (5.0) |
 | Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
 | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
@@ -56,8 +58,6 @@
 | Apr 26, 23:51 CEST | `REVIEW_POSTED` | `M70` | vigil | M70 review by vigil — PASS (9.45) |
 | Apr 26, 20:58 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — PASS (9.45) |
 | Apr 26, 20:53 CEST | `REVIEW_POSTED` | `—` | guardian | — review by guardian — FAIL (0) |
-| Apr 26, 08:20 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-26.md |
-| Apr 26, 08:20 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 
 ## Needs Mike (open gates)
 
