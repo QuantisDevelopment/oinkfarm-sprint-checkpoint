@@ -4,7 +4,7 @@
 
 > Phase B migrates OinkFarm from SQLite + monolith to PostgreSQL + decomposed services — the infrastructure layer that unlocks Redis, W1 governance, and multi-writer safety. Wave 1 (db abstraction) shipped; Wave 2 (parser extraction, Cornix/Chroma, dedup consolidation) is in flight.
 
-**Status:** 7/15 tasks shipped  
+**Status:** 7/17 tasks shipped  
 **Goal:** Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.  
 **Data source:** event-stream reducer (`events.jsonl`)  
 **Live:** [dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)
@@ -28,6 +28,8 @@
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 27, 00:57 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian · hermes |
 | [B14](../tasks/B14-b14.md) | 🟡 STANDARD | 👀 PR REVIEW | — | [signal-gateway#76](https://github.com/QuantisDevelopment/signal-gateway/pull/76) | Apr 28, 07:59 CEST · `REVIEW_POSTED` | vigil |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 27, 02:06 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian |
+| [B277](../tasks/B277-b277.md) | 🟡 STANDARD | 👀 PR REVIEW | — | [oinkfarm#281](https://github.com/QuantisDevelopment/oinkfarm/pull/281) | Apr 28, 11:34 CEST · `REVIEW_POSTED` | vigil |
+| [B280](../tasks/B280-b280.md) | 🟡 STANDARD | 👀 PR REVIEW | — | [oinkfarm#282](https://github.com/QuantisDevelopment/oinkfarm/pull/282) | Apr 28, 11:34 CEST · `REVIEW_POSTED` | vigil |
 
 ## Waves
 
@@ -37,6 +39,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 11:34 CEST | `REVIEW_POSTED` | `B280` | vigil | B280 review by vigil — PASS (0.0) |
+| Apr 28, 11:34 CEST | `REVIEW_POSTED` | `B277` | vigil | B277 review by vigil — PASS (0.0) |
 | Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
 | Apr 28, 09:13 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.7) |
 | Apr 28, 08:08 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-28.md |
@@ -65,8 +69,6 @@
 | Apr 28, 02:41 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — FAIL (7.8) |
 | Apr 28, 02:27 CEST | `REVIEW_POSTED` | `M70` | vigil | M70 review by vigil — PASS (9.45) |
 | Apr 28, 02:27 CEST | `REVIEW_POSTED` | `M73` | vigil | M73 review by vigil — PASS (9.15) |
-| Apr 28, 02:27 CEST | `REVIEW_POSTED` | `M179` | vigil | M179 review by vigil — PASS (0.0) |
-| Apr 28, 02:19 CEST | `REVIEW_POSTED` | `M195` | vigil | M195 review by vigil — PASS (9.05) |
 
 ## Needs Mike (open gates)
 

@@ -13,10 +13,10 @@
 
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
-| [C1](../tasks/C1-c1.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 10:58 CEST · `DECISION_RESOLVED` | forge · hermes · vigil |
+| [C1](../tasks/C1-c1.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 11:34 CEST · `SPRINT_NOTE` | forge · hermes · vigil |
 | [C2](../tasks/C2-c2.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 13:34 CEST · `TASK_PLANNED` | forge · hermes |
-| [C3](../tasks/C3-c3.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 10:58 CEST · `DECISION_RESOLVED` | forge · hermes · vigil |
-| [C4](../tasks/C4-c4.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 10:58 CEST · `DECISION_RESOLVED` | forge · hermes · vigil |
+| [C3](../tasks/C3-c3.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 11:34 CEST · `SPRINT_NOTE` | forge · hermes · vigil |
+| [C4](../tasks/C4-c4.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 11:34 CEST · `SPRINT_NOTE` | forge · hermes · vigil |
 | [C6](../tasks/C6-c6.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 26, 22:44 CEST · `TASK_PLANNED` | forge |
 
 ## Waves
@@ -27,6 +27,9 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 11:34 CEST | `SPRINT_NOTE` | `C1` | forge | Q-C1-INC-1 council resolution option_B matches FORGE recommendation; INV-18 read-side rule ratified; 22 terminal-incoherent rows surfaced vi |
+| Apr 28, 11:34 CEST | `SPRINT_NOTE` | `C3` | forge | Q-C3-2 council resolution option_C matches FORGE recommendation; urgency_classified_phase added as separate column; TASK-C3-plan.md §5/§12 a |
+| Apr 28, 11:34 CEST | `SPRINT_NOTE` | `C4` | forge | Q-C4-MD-1 council resolution option_A+B matches FORGE recommendation; metadata-only audit denominator stays as integrity debt; future METADA |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C3` | hermes | C3 decision: option_C |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C1` | hermes | C1 decision: option_B |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C4` | hermes | C4 decision: option_A+B |
