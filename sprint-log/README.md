@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2386
-- **Last 24h:** 246 (rate 10.25/h)
+- **Total events:** 2389
+- **Last 24h:** 248 (rate 10.33/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (17 events)
+### Last 1 hour (18 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T141614Z_000001). M189 still has both requi |
 | Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1429Z |
 | Apr 28, 16:27 CEST | `SPRINT_NOTE` | `—` | hermes | Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer  |
@@ -27,13 +30,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 15:59 CEST | `CODE_STARTED` | `M313` | oinkv | M313 code started on fix/313-extraction-correction-shared-dmid |
 | Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
 | Apr 28, 15:55 CEST | `PR_OPENED` | `M311` | anvil | M311 PR #80 opened — GH311: restore reconciler state on cold start |
-| Apr 28, 15:55 CEST | `STATUS_CHANGED` | `M311` | anvil | M311 NOT_STARTED → PR_REVIEW |
-| Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
-| Apr 28, 15:55 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.3) |
 
-### Last 4 hours (45 events)
+### Last 4 hours (44 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T141614Z_000001). M189 still has both requi |
 | Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1429Z |
 | Apr 28, 16:27 CEST | `SPRINT_NOTE` | `—` | hermes | Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer  |
@@ -46,13 +49,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 15:59 CEST | `CODE_STARTED` | `M313` | oinkv | M313 code started on fix/313-extraction-correction-shared-dmid |
 | Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
 | Apr 28, 15:55 CEST | `PR_OPENED` | `M311` | anvil | M311 PR #80 opened — GH311: restore reconciler state on cold start |
-| Apr 28, 15:55 CEST | `STATUS_CHANGED` | `M311` | anvil | M311 NOT_STARTED → PR_REVIEW |
-| Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
-| Apr 28, 15:55 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.3) |
 
-### Last 24 hours (246 events)
+### Last 24 hours (248 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T141614Z_000001). M189 still has both requi |
 | Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1429Z |
 | Apr 28, 16:27 CEST | `SPRINT_NOTE` | `—` | hermes | Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer  |
@@ -65,9 +68,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 15:59 CEST | `CODE_STARTED` | `M313` | oinkv | M313 code started on fix/313-extraction-correction-shared-dmid |
 | Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
 | Apr 28, 15:55 CEST | `PR_OPENED` | `M311` | anvil | M311 PR #80 opened — GH311: restore reconciler state on cold start |
-| Apr 28, 15:55 CEST | `STATUS_CHANGED` | `M311` | anvil | M311 NOT_STARTED → PR_REVIEW |
-| Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
-| Apr 28, 15:55 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.3) |
 
 ## 🧭 Needs Mike
 
@@ -91,11 +91,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 541 |
+| 🪽 **Hermes** | Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 542 |
+| 🐷 **OinkV** | Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 196 |
+| ⚒️ **ANVIL** | Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 725 |
 | 🛡️ **GUARDIAN** | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `sprint-poke-ack-2026-04-28T1429Z` | 🟢 fresh | 470 |
-| ⚒️ **ANVIL** | Apr 28, 16:16 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 724 |
 | 🔍 **VIGIL** | Apr 28, 16:12 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 194 |
-| 🐷 **OinkV** | Apr 28, 16:07 CEST | `SPRINT_NOTE` | `M312` | 🟢 fresh | 195 |
 | 🔥 **FORGE** | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `sprint-poke-response` | 🔴 stale | 199 |
 | • **OINKDB** | Apr 28, 08:08 CEST | `BLOCKED` | `B4` | 🔴 stale | 41 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -245,10 +245,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
-| ⚒️ | ANVIL | Implementation Lead |
-| 🔍 | VIGIL | Code Review + Scoring |
 | 🐷 | OinkV | Plan Auditor |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
+| 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | • | mike |  |
@@ -263,4 +263,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*21/101 tasks DONE · Last auto-regenerated: 16:34 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/101 tasks DONE · Last auto-regenerated: 16:50 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
