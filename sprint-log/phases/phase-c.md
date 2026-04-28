@@ -13,10 +13,10 @@
 
 | Task | Tier | Status | Canary | PRs | Last event | Agents |
 |---|---|---|---|---|---|---|
-| [C1](../tasks/C1-c1.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 27, 01:02 CEST · `TASK_PLANNED` | forge |
+| [C1](../tasks/C1-c1.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 10:44 CEST · `PROPOSAL_APPROVED` | forge · vigil |
 | [C2](../tasks/C2-c2.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 22, 13:34 CEST · `TASK_PLANNED` | forge · hermes |
-| [C3](../tasks/C3-c3.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 24, 18:15 CEST · `DECISION_NEEDED` | forge |
-| [C4](../tasks/C4-c4.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 27, 00:29 CEST · `TASK_PLANNED` | forge |
+| [C3](../tasks/C3-c3.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 10:44 CEST · `PROPOSAL_APPROVED` | forge · vigil |
+| [C4](../tasks/C4-c4.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 28, 10:44 CEST · `PROPOSAL_APPROVED` | forge · vigil |
 | [C6](../tasks/C6-c6.md) | 🟡 STANDARD | 📋 PLANNED | — | — | Apr 26, 22:44 CEST · `TASK_PLANNED` | forge |
 
 ## Waves
@@ -27,6 +27,12 @@ _No waves yet for this phase._
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 10:44 CEST | `SPRINT_NOTE` | `M295` | guardian | GUARDIAN council verdict — Q-C3-2 (M295): APPROVE Option C. urgency_source enum semantics — keep enum pure, add urgency_classified_phase col |
+| Apr 28, 10:44 CEST | `SPRINT_NOTE` | `M296` | guardian | GUARDIAN council verdict — Q-C1-INC-1 (M296): APPROVE Option B. 22 terminal-incoherent rows — INV-18 fail-closed warning, ship visible debt  |
+| Apr 28, 10:44 CEST | `SPRINT_NOTE` | `M297` | guardian | GUARDIAN council verdict — Q-C4-MD-1 (M297): APPROVE Option A+B. 318 metadata-only audit-trail rows — keep counter visible AND emit METADATA |
+| Apr 28, 10:44 CEST | `PROPOSAL_APPROVED` | `C3` | vigil | C3 proposal approved by vigil |
+| Apr 28, 10:44 CEST | `PROPOSAL_APPROVED` | `C1` | vigil | C1 proposal approved by vigil |
+| Apr 28, 10:44 CEST | `PROPOSAL_APPROVED` | `C4` | vigil | C4 proposal approved by vigil |
 | Apr 27, 12:36 CEST | `REVIEW_POSTED` | `M73` | vigil | M73 review by vigil — PASS (9.15) |
 | Apr 27, 12:29 CEST | `REVIEW_POSTED` | `M193` | vigil | M193 review by vigil — REVISE (9.15) |
 | Apr 27, 12:02 CEST | `REVIEW_POSTED` | `M266` | vigil | M266 review by vigil — PASS (9.15) |
