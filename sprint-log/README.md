@@ -4,34 +4,40 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2417
-- **Last 24h:** 248 (rate 10.33/h)
+- **Total events:** 2425
+- **Last 24h:** 251 (rate 10.46/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (13 events)
+### Last 1 hour (11 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 21:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 20:54 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T183348Z_000001). M189 still has both requi |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M319` | vigil | M319 review by vigil — REVISE (9.6) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (10.0) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — REVISE (8.65) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M311` | vigil | M311 review by vigil — PASS (9.0) |
+| Apr 28, 20:43 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-delta |
+| Apr 28, 20:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T181408Z_000001). M189 still has both requi |
 | Apr 28, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 20:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T175348Z_000001). M189 still has both requi |
 | Apr 28, 20:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-evening |
-| Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M320` | vigil | M320 review by vigil — PASS (9.85) |
-| Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M325` | vigil | M325 review by vigil — PASS (9.3) |
-| Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M305` | vigil | M305 review by vigil — PASS (9.85) |
-| Apr 28, 19:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 19:56 CEST | `REVIEW_POSTED` | `M292` | vigil | M292 review by vigil — PASS (9.7) |
-| Apr 28, 19:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T173402Z_000001). M189 still has both requi |
-| Apr 28, 19:36 CEST | `REVIEW_POSTED` | `M312` | guardian | M312 review by guardian — REVISE (9.2) |
-| Apr 28, 19:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T171358Z_000001). M189 still has both requi |
-| Apr 28, 19:33 CEST | `REVIEW_POSTED` | `M313` | guardian | M313 review by guardian — PASS (9.7) |
-| Apr 28, 19:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — starting-PR315-review |
 
 ### Last 4 hours (35 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 21:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 20:54 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T183348Z_000001). M189 still has both requi |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M319` | vigil | M319 review by vigil — REVISE (9.6) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (10.0) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — REVISE (8.65) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M311` | vigil | M311 review by vigil — PASS (9.0) |
+| Apr 28, 20:43 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-delta |
+| Apr 28, 20:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T181408Z_000001). M189 still has both requi |
 | Apr 28, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 20:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T175348Z_000001). M189 still has both requi |
 | Apr 28, 20:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-evening |
@@ -39,18 +45,18 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M325` | vigil | M325 review by vigil — PASS (9.3) |
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M305` | vigil | M305 review by vigil — PASS (9.85) |
 | Apr 28, 19:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 19:56 CEST | `REVIEW_POSTED` | `M292` | vigil | M292 review by vigil — PASS (9.7) |
-| Apr 28, 19:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T173402Z_000001). M189 still has both requi |
-| Apr 28, 19:36 CEST | `REVIEW_POSTED` | `M312` | guardian | M312 review by guardian — REVISE (9.2) |
-| Apr 28, 19:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T171358Z_000001). M189 still has both requi |
-| Apr 28, 19:33 CEST | `REVIEW_POSTED` | `M313` | guardian | M313 review by guardian — PASS (9.7) |
-| Apr 28, 19:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — starting-PR315-review |
-| Apr 28, 19:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T165347Z_000001). M189 still has both requi |
-| Apr 28, 18:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T16:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T163345Z_000001). M189 still has both requi |
 
-### Last 24 hours (248 events)
+### Last 24 hours (251 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 21:02 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 20:54 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T183348Z_000001). M189 still has both requi |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M319` | vigil | M319 review by vigil — REVISE (9.6) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (10.0) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — REVISE (8.65) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M311` | vigil | M311 review by vigil — PASS (9.0) |
+| Apr 28, 20:43 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-delta |
+| Apr 28, 20:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T181408Z_000001). M189 still has both requi |
 | Apr 28, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 20:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T18:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T175348Z_000001). M189 still has both requi |
 | Apr 28, 20:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-evening |
@@ -58,14 +64,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M325` | vigil | M325 review by vigil — PASS (9.3) |
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M305` | vigil | M305 review by vigil — PASS (9.85) |
 | Apr 28, 19:58 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 19:56 CEST | `REVIEW_POSTED` | `M292` | vigil | M292 review by vigil — PASS (9.7) |
-| Apr 28, 19:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T173402Z_000001). M189 still has both requi |
-| Apr 28, 19:36 CEST | `REVIEW_POSTED` | `M312` | guardian | M312 review by guardian — REVISE (9.2) |
-| Apr 28, 19:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T171358Z_000001). M189 still has both requi |
-| Apr 28, 19:33 CEST | `REVIEW_POSTED` | `M313` | guardian | M313 review by guardian — PASS (9.7) |
-| Apr 28, 19:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — starting-PR315-review |
-| Apr 28, 19:13 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T17:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T165347Z_000001). M189 still has both requi |
-| Apr 28, 18:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T16:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T163345Z_000001). M189 still has both requi |
 
 ## 🧭 Needs Mike
 
@@ -89,11 +87,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 28, 20:14 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 546 |
-| ⚒️ **ANVIL** | Apr 28, 20:14 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 736 |
-| 🛡️ **GUARDIAN** | Apr 28, 20:13 CEST | `AGENT_HEARTBEAT` | `sprint-poke-evening` | 🟢 fresh | 477 |
-| 🔍 **VIGIL** | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 198 |
-| 🐷 **OinkV** | Apr 28, 17:32 CEST | `SPRINT_NOTE` | `—` | 🟡 1–3h | 198 |
+| 🪽 **Hermes** | Apr 28, 21:02 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 547 |
+| ⚒️ **ANVIL** | Apr 28, 20:54 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 738 |
+| 🔍 **VIGIL** | Apr 28, 20:52 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 202 |
+| 🛡️ **GUARDIAN** | Apr 28, 20:43 CEST | `AGENT_HEARTBEAT` | `sprint-poke-delta` | 🟢 fresh | 478 |
+| 🐷 **OinkV** | Apr 28, 17:32 CEST | `SPRINT_NOTE` | `—` | 🔴 stale | 198 |
 | 🔥 **FORGE** | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `sprint-poke-response` | 🔴 stale | 199 |
 | • **OINKDB** | Apr 28, 08:08 CEST | `BLOCKED` | `B4` | 🔴 stale | 41 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -232,6 +230,7 @@ _No open DECISION_NEEDED events._
 | `M311` | M311 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M312` | M312 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
 | `M313` | M313 | 🔴 CRITICAL | — | 👀 PR REVIEW | — |
+| `M319` | M319 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M320` | M320 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `M325` | M325 | 🟡 STANDARD | — | 👀 PR REVIEW | — |
 | `SPRINT-POKE` | SPRINT-POKE | 🟡 STANDARD | — | ⏳ NOT STARTED | — |
@@ -248,8 +247,8 @@ _No open DECISION_NEEDED events._
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
 | ⚒️ | ANVIL | Implementation Lead |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🐷 | OinkV | Plan Auditor |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
@@ -265,4 +264,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*21/105 tasks DONE · Last auto-regenerated: 20:15 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/106 tasks DONE · Last auto-regenerated: 21:03 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

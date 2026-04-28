@@ -39,6 +39,10 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M319` | vigil | M319 review by vigil — REVISE (9.6) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (10.0) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — REVISE (8.65) |
+| Apr 28, 20:52 CEST | `REVIEW_POSTED` | `M311` | vigil | M311 review by vigil — PASS (9.0) |
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M320` | vigil | M320 review by vigil — PASS (9.85) |
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M325` | vigil | M325 review by vigil — PASS (9.3) |
 | Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M305` | vigil | M305 review by vigil — PASS (9.85) |
@@ -65,10 +69,6 @@
 | Apr 28, 05:40 CEST | `REVIEW_POSTED` | `M291` | vigil | M291 review by vigil — PASS (9.6) |
 | Apr 28, 05:38 CEST | `REVIEW_POSTED` | `M187` | guardian | M187 review by guardian — REVISE (9.45) |
 | Apr 28, 05:15 CEST | `DECISION_NEEDED` | `M189` | forge | M189 Mike gate: Q-189-2 was formally resolved on 2026-04-22 with binding text: BE_TOLERANCE_FRAC=0.0001 shared constant across Artifacts A/B |
-| Apr 28, 05:13 CEST | `REVIEW_POSTED` | `M187` | guardian | M187 review by guardian — REVISE (9.45) |
-| Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — REVISE (9.45) |
-| Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
-| Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
 
 ## Needs Mike (open gates)
 
