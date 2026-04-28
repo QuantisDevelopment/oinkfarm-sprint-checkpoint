@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2364
+- **Total events:** 2366
 - **Last 24h:** 234 (rate 9.75/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -15,6 +15,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 ### Last 1 hour (10 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 15:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 15:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — PR298-review-round1 |
 | Apr 28, 14:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 14:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T123418Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
 | Apr 28, 14:42 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (0.0) |
@@ -23,12 +25,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 14:36 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1236Z |
 | Apr 28, 14:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T121525Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
 | Apr 28, 14:15 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T115349Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
-| Apr 28, 14:01 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1201Z |
-| Apr 28, 13:59 CEST | `SPRINT_NOTE` | `—` | hermes | Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4) |
 
-### Last 4 hours (40 events)
+### Last 4 hours (39 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 15:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 15:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — PR298-review-round1 |
 | Apr 28, 14:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 14:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T123418Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
 | Apr 28, 14:42 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (0.0) |
@@ -42,12 +44,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 13:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
 | Apr 28, 13:44 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.55) |
 | Apr 28, 13:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
-| Apr 28, 13:13 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (0) |
-| Apr 28, 13:13 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (9.0) |
 
 ### Last 24 hours (234 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 15:14 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 15:13 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — PR298-review-round1 |
 | Apr 28, 14:57 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 14:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T123418Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
 | Apr 28, 14:42 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (0.0) |
@@ -61,8 +63,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 13:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
 | Apr 28, 13:44 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.55) |
 | Apr 28, 13:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt |
-| Apr 28, 13:13 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (0) |
-| Apr 28, 13:13 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (9.0) |
 
 ## 🧭 Needs Mike
 
@@ -86,10 +86,10 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 28, 14:57 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 538 |
+| 🪽 **Hermes** | Apr 28, 15:14 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 539 |
+| 🛡️ **GUARDIAN** | Apr 28, 15:13 CEST | `AGENT_HEARTBEAT` | `PR298-review-round1` | 🟢 fresh | 467 |
 | ⚒️ **ANVIL** | Apr 28, 14:53 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 717 |
 | 🔍 **VIGIL** | Apr 28, 14:42 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 191 |
-| 🛡️ **GUARDIAN** | Apr 28, 14:36 CEST | `AGENT_HEARTBEAT` | `sprint-poke-ack-2026-04-28T1236Z` | 🟢 fresh | 466 |
 | 🔥 **FORGE** | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `sprint-poke-response` | 🔴 stale | 199 |
 | • **OINKDB** | Apr 28, 08:08 CEST | `BLOCKED` | `B4` | 🔴 stale | 41 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🔴 stale | 190 |
@@ -237,9 +237,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔍 | VIGIL | Code Review + Scoring |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
 | 🐷 | OinkV | Plan Auditor |
@@ -255,4 +255,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*21/98 tasks DONE · Last auto-regenerated: 14:58 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/98 tasks DONE · Last auto-regenerated: 15:15 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
