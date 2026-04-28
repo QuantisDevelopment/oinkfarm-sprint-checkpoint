@@ -39,6 +39,9 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 14:42 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (0.0) |
+| Apr 28, 14:42 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (0.0) |
+| Apr 28, 14:39 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (7.95) |
 | Apr 28, 13:44 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (9.55) |
 | Apr 28, 13:13 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — PASS (0) |
 | Apr 28, 13:13 CEST | `REVIEW_POSTED` | `—` | vigil | — review by vigil — REVISE (9.0) |
@@ -66,9 +69,6 @@
 | Apr 28, 04:31 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.5) |
 | Apr 28, 04:31 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.5) |
 | Apr 28, 04:25 CEST | `REVIEW_POSTED` | `M187` | guardian | M187 review by guardian — REVISE (9.3) |
-| Apr 28, 04:25 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — REVISE (8.5) |
-| Apr 28, 03:16 CEST | `REVIEW_POSTED` | `M187` | vigil | M187 review by vigil — PASS (9.6) |
-| Apr 28, 03:14 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — FAIL (7.3) |
 
 ## Needs Mike (open gates)
 
