@@ -4,36 +4,30 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2311
-- **Last 24h:** 220 (rate 9.17/h)
+- **Total events:** 2313
+- **Last 24h:** 219 (rate 9.12/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (18 events)
+### Last 1 hour (7 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 10:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 10:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T075336Z_000001): #189 still has PROPOSAL_APPROVED on-stream from both reviewers (GUARDIA |
 | Apr 28, 10:07 CEST | `SPRINT_NOTE` | `—` | hermes | M189 has cleared multiple decision blockers this morning. The REVISION question (Q-189-2-REVISION) was resolved, which freed up Guardian and |
 | Apr 28, 09:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-2026-04-28T0758Z |
 | Apr 28, 09:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T073341Z_000001): M189 still has both PROPOSAL_APPROVED events on-stream (GUARDIAN evt_20 |
 | Apr 28, 09:51 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 09:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T071755Z_000001): M189 still has both PROPOSAL_APPROVED events on-stream (GUARDIAN evt_20 |
-| Apr 28, 09:19 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 09:17 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T071528Z_000003): M189 still has both proposal approvals on-stream (GUARDIAN evt_20260428 |
-| Apr 28, 09:16 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-2026-04-28T0715Z |
-| Apr 28, 09:15 CEST | `BLOCKER_RESOLVED` | `M189` | anvil | M189 blocker cleared |
-| Apr 28, 09:15 CEST | `STATUS_CHANGED` | `M189` | anvil | M189 PROPOSAL_REVIEW → PR_REVIEW |
-| Apr 28, 09:15 CEST | `SPRINT_NOTE` | `M189` | anvil | M189 R5 proposal re-stamp complete. VIGIL PASS 9.70 (R5, evt_20260428T071327Z_000002, head f3787502). GUARDIAN APPROVE (R5, evt_20260428T071 |
-| Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
-| Apr 28, 09:13 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.7) |
-| Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | guardian | M189 proposal approved by guardian |
-| Apr 28, 09:09 CEST | `DECISION_RESOLVED` | `M189` | anvil | M189 decision: ratify_0.005_as_supersede_q189_2 |
 
-### Last 4 hours (45 events)
+### Last 4 hours (46 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 10:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 10:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T075336Z_000001): #189 still has PROPOSAL_APPROVED on-stream from both reviewers (GUARDIA |
 | Apr 28, 10:07 CEST | `SPRINT_NOTE` | `—` | hermes | M189 has cleared multiple decision blockers this morning. The REVISION question (Q-189-2-REVISION) was resolved, which freed up Guardian and |
 | Apr 28, 09:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-2026-04-28T0758Z |
 | Apr 28, 09:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T073341Z_000001): M189 still has both PROPOSAL_APPROVED events on-stream (GUARDIAN evt_20 |
@@ -47,12 +41,12 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 09:15 CEST | `SPRINT_NOTE` | `M189` | anvil | M189 R5 proposal re-stamp complete. VIGIL PASS 9.70 (R5, evt_20260428T071327Z_000002, head f3787502). GUARDIAN APPROVE (R5, evt_20260428T071 |
 | Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
 | Apr 28, 09:13 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.7) |
-| Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | guardian | M189 proposal approved by guardian |
-| Apr 28, 09:09 CEST | `DECISION_RESOLVED` | `M189` | anvil | M189 decision: ratify_0.005_as_supersede_q189_2 |
 
-### Last 24 hours (220 events)
+### Last 24 hours (219 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 10:23 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 10:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T075336Z_000001): #189 still has PROPOSAL_APPROVED on-stream from both reviewers (GUARDIA |
 | Apr 28, 10:07 CEST | `SPRINT_NOTE` | `—` | hermes | M189 has cleared multiple decision blockers this morning. The REVISION question (Q-189-2-REVISION) was resolved, which freed up Guardian and |
 | Apr 28, 09:58 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — heartbeat-2026-04-28T0758Z |
 | Apr 28, 09:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T073341Z_000001): M189 still has both PROPOSAL_APPROVED events on-stream (GUARDIAN evt_20 |
@@ -66,8 +60,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 09:15 CEST | `SPRINT_NOTE` | `M189` | anvil | M189 R5 proposal re-stamp complete. VIGIL PASS 9.70 (R5, evt_20260428T071327Z_000002, head f3787502). GUARDIAN APPROVE (R5, evt_20260428T071 |
 | Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | vigil | M189 proposal approved by vigil |
 | Apr 28, 09:13 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.7) |
-| Apr 28, 09:13 CEST | `PROPOSAL_APPROVED` | `M189` | guardian | M189 proposal approved by guardian |
-| Apr 28, 09:09 CEST | `DECISION_RESOLVED` | `M189` | anvil | M189 decision: ratify_0.005_as_supersede_q189_2 |
 
 ## 🧭 Needs Mike
 
@@ -99,10 +91,10 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 28, 10:07 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 525 |
+| 🪽 **Hermes** | Apr 28, 10:23 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 526 |
+| ⚒️ **ANVIL** | Apr 28, 10:14 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 703 |
 | 🛡️ **GUARDIAN** | Apr 28, 09:58 CEST | `AGENT_HEARTBEAT` | `heartbeat-2026-04-28T0758Z` | 🟢 fresh | 456 |
-| ⚒️ **ANVIL** | Apr 28, 09:53 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 702 |
-| 🔍 **VIGIL** | Apr 28, 09:13 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 179 |
+| 🔍 **VIGIL** | Apr 28, 09:13 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟡 1–3h | 179 |
 | • **OINKDB** | Apr 28, 08:08 CEST | `BLOCKED` | `B4` | 🟡 1–3h | 41 |
 | 🔥 **FORGE** | Apr 28, 05:15 CEST | `DECISION_NEEDED` | `sprint-poke-response` | 🔴 stale | 196 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🔴 stale | 190 |
@@ -245,8 +237,8 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | 🔍 | VIGIL | Code Review + Scoring |
 | • | OINKDB |  |
 | 🔥 | FORGE | Technical Execution Planner |
@@ -263,4 +255,4 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ---
 
-*21/93 tasks DONE · Last auto-regenerated: 10:07 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/93 tasks DONE · Last auto-regenerated: 10:24 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
