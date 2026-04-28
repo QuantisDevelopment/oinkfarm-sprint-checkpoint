@@ -36,6 +36,8 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 02:12 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — PASS (9.45) |
+| Apr 28, 02:07 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — FAIL (5.95) |
 | Apr 27, 19:04 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.7) |
 | Apr 27, 18:20 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — REVISE (8.85) |
 | Apr 27, 13:44 CEST | `REVIEW_POSTED` | `M193` | vigil | M193 review by vigil — PASS (9.7) |
@@ -55,7 +57,6 @@
 | Apr 27, 06:39 CEST | `REVIEW_POSTED` | `M140` | vigil | M140 review by vigil — REVISE (5.6) |
 | Apr 27, 05:48 CEST | `REVIEW_POSTED` | `M264` | vigil | M264 review by vigil — PASS (9.3) |
 | Apr 27, 02:41 CEST | `REVIEW_POSTED` | `M262` | vigil | M262 review by vigil — PASS (9.15) |
-| Apr 27, 02:06 CEST | `PROPOSAL_APPROVED` | `B15` | guardian | B15 proposal approved by guardian |
 
 ## Needs Mike (open gates)
 
