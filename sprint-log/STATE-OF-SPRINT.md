@@ -8,12 +8,8 @@
 
 ## Today in one paragraph
 
-M189 has cleared multiple decision blockers this morning. The REVISION question (Q-189-2-REVISION) was resolved, which freed up Guardian and Vigil to both approve their respective proposals. The underlying blocker was then cleared, though Anvil picked up another wait condition immediately after—it's now stuck pending some proposal approval upstream.
+Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4) with vigil approval in-stream. All three resolved by 10:58: C1 chose option_B for the incohherence rule, C3 added urgency classification as a separate column, and C4 kept metadata audits as future work. FORGE validation came back positive on all three, so the forward path is clear on those decision gates.
 
-More concerning: we have four unresolved DECISION_NEEDED flags that have sat for over 24 hours now. M214 (REGISTRY-1), C3, C1 (INC-1), and C4 (MD-1) are all flagged for Mike but haven't been answered. We also have four PRs opened with no review posted: A11 (pr=133), B1 (prs=149, 21), and B2 (pr=24). Forge hasn't reported in 291 minutes and Oinkv has gone silent for the full 24-hour window—worth a check.
+M189 is still stuck. Both reviewers approved the proposal, but it isn't moving to the next gate. Worth a check on why it's hung despite dual approval. Two spot-check verdicts on B280 and B277 came back clean from vigil, so at least the smaller pieces are moving.
 
-Four decision questions from the past 24 hours are flagged and waiting for Mike: Q-OF214-REGISTRY-1 (Forge), Q-C3-2, Q-C1-INC-1, and Q-C4-MD-1. These span registry setup, configuration, and incident handling. Meanwhile, four pull requests have been opened but haven't received reviews yet: A11 (pr=133), B1 (pr=149 and pr=21), and B2 (pr=24). VIGIL's last activity was over 7 hours ago, and both Forge and OinkV haven't reported anything in the past 24 hours—likely idle on dependencies or waiting for direction. ANVIL posted a note 12 minutes ago and Guardian checked in 17 minutes ago, suggesting some forward momentum on their tasks.
-
-
-
-
+Decision churn yesterday feels good—went from four unresolved gates to three resolved in under an hour. The council confirmations mean ANVIL can start the implementation phase on C-track tasks without waiting for more review cycles.

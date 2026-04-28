@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body data-generated="2026-04-28T11:13:19+00:00">
+<body data-generated="2026-04-28T11:59:01+00:00">
 
 <header class="topbar">
   <div class="topbar-inner">
@@ -24,15 +24,15 @@
     <div class="clock">
       <div class="clock-row">
         <span class="clock-label">UTC</span>
-        <span class="mono" id="clock-utc">2026-04-28T11:13:19+00:00</span>
+        <span class="mono" id="clock-utc">2026-04-28T11:59:01+00:00</span>
       </div>
       <div class="clock-row">
         <span class="clock-label">CEST</span>
-        <span class="mono" id="clock-cest">2026-04-28T13:13:19+02:00</span>
+        <span class="mono" id="clock-cest">2026-04-28T13:59:01+02:00</span>
       </div>
       <div class="clock-row muted">
         <span class="clock-label">last regen</span>
-        <span class="mono" id="last-regen">Apr 28, 13:13 CEST</span>
+        <span class="mono" id="last-regen">Apr 28, 13:59 CEST</span>
         <span class="refresh-pill" id="refresh-pill" title="auto-refreshes every 60s">
           <span class="dot dot-green"></span> auto
         </span>
@@ -57,9 +57,9 @@
 <!-- Events integrity ------------------------------------------------------- -->
 <section class="events-integrity" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px 16px;margin-bottom:16px;">
   <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:0.9rem;">
-    <div><span class="muted">📊 events:</span> <strong class="mono">2348</strong></div>
-    <div><span class="muted">24h rate:</span> <strong class="mono">9.58/h</strong></div>
-    <div><span class="muted">last 24h:</span> <strong class="mono">230</strong></div>
+    <div><span class="muted">📊 events:</span> <strong class="mono">2355</strong></div>
+    <div><span class="muted">24h rate:</span> <strong class="mono">9.71/h</strong></div>
+    <div><span class="muted">last 24h:</span> <strong class="mono">233</strong></div>
     <div><span class="muted">schema:</span> <strong class="mono">v1.0</strong></div>
     <div><span class="muted">source:</span> <strong class="mono">lib</strong></div>
     <div>
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="integrity-human" style="margin-top:6px;font-size:0.85rem;color:#c6d0e0;">
-    In plain English: 230 things happened today, ~9.58/h steady-state. System is healthy.
+    In plain English: 233 things happened today, ~9.71/h steady-state. System is healthy.
   </div>
 </section>
 
@@ -94,11 +94,11 @@
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📍 Today in one paragraph</h3>
-      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;"><p style="margin:0 0 10px 0;">M189 has cleared multiple decision blockers this morning. The REVISION question (Q-189-2-REVISION) was resolved, which freed up Guardian and Vigil to both approve their respective proposals. The underlying blocker was then cleared, though Anvil picked up another wait condition immediately after—it's now stuck pending some proposal approval upstream.</p><p style="margin:0 0 10px 0;">More concerning: we have four unresolved DECISION_NEEDED flags that have sat for over 24 hours now. M214 (REGISTRY-1), C3, C1 (INC-1), and C4 (MD-1) are all flagged for Mike but haven't been answered. We also have four PRs opened with no review posted: A11 (pr=133), B1 (prs=149, 21), and B2 (pr=24). Forge hasn't reported in 291 minutes and Oinkv has gone silent for the full 24-hour window—worth a check.</p><p style="margin:0 0 10px 0;">Four decision questions from the past 24 hours are flagged and waiting for Mike: Q-OF214-REGISTRY-1 (Forge), Q-C3-2, Q-C1-INC-1, and Q-C4-MD-1. These span registry setup, configuration, and incident handling. Meanwhile, four pull requests have been opened but haven't received reviews yet: A11 (pr=133), B1 (pr=149 and pr=21), and B2 (pr=24). VIGIL's last activity was over 7 hours ago, and both Forge and OinkV haven't reported anything in the past 24 hours—likely idle on dependencies or waiting for direction. ANVIL posted a note 12 minutes ago and Guardian checked in 17 minutes ago, suggesting some forward momentum on their tasks.</p></div>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;"><p style="margin:0 0 10px 0;">Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4) with vigil approval in-stream. All three resolved by 10:58: C1 chose option_B for the incohherence rule, C3 added urgency classification as a separate column, and C4 kept metadata audits as future work. FORGE validation came back positive on all three, so the forward path is clear on those decision gates.</p><p style="margin:0 0 10px 0;">M189 is still stuck. Both reviewers approved the proposal, but it isn't moving to the next gate. Worth a check on why it's hung despite dual approval. Two spot-check verdicts on B280 and B277 came back clean from vigil, so at least the smaller pieces are moving.</p><p style="margin:0 0 10px 0;">Decision churn yesterday feels good—went from four unresolved gates to three resolved in under an hour. The council confirmations mean ANVIL can start the implementation phase on C-track tasks without waiting for more review cycles.</p></div>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">📅 What happened this week</h3>
-      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;"><p style="margin:0 0 10px 0;">Over the last three days, the stream recorded zero merges, five canary events, and 74 reviews posted across the board. Eight decision events flowed through the Mike-gate process.</p></div>
+      <div style="margin:0;font-size:0.92rem;line-height:1.55;color:#dce5f2;"><p style="margin:0 0 10px 0;">Over the last three days, the stream recorded zero merges, five canary events, and 77 reviews posted across the board. Eight decision events flowed through the Mike-gate process.</p></div>
     </div>
     <div class="narrative-cell">
       <h3 style="margin:0 0 8px 0;font-size:1.0rem;">🎯 What's next</h3>
@@ -117,9 +117,65 @@
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 1 hour</strong>
-        <span class="mono muted">8 events</span>
+        <span class="mono muted">9 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:59 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:53 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:44 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (9.55)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:33 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (0)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — REVISE (9.0)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T105357Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 28, 13:13 CEST</span>
@@ -135,63 +191,71 @@
               <span class="muted mono">· guardian</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-ack-2026-04-28T1106Z</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 12:53 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T103356Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 12:41 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 12:35 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
-              <span class="muted mono">· vigil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (0)</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 12:34 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-ack-2026-04-28T1034Z</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 12:33 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T101422Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 12:14 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T095350Z_000001): #189 still has BOTH required proposal approvals on record (GUARDIAN evt</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 4 hours</strong>
-        <span class="mono muted">50 events</span>
+        <span class="mono muted">45 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:59 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:53 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:44 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (9.55)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:33 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (0)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — REVISE (9.0)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T105357Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 28, 13:13 CEST</span>
@@ -335,71 +399,71 @@
 <span class="mono">B277</span>              <span class="muted mono">· vigil</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">B277 review by vigil — PASS (0.0)</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 11:32 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-ack-2026-04-28T0930Z</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 11:29 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Tuesday, 28 Apr brought a resolution push on decision gates. Four Mike-decisions landed this morning: M214 (registry sync path at 10:39 UTC)</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 11:25 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T085343Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:58 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">DECISION_RESOLVED</span>
-<span class="mono">C3</span>              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C3 decision: option_C</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:58 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">DECISION_RESOLVED</span>
-<span class="mono">C1</span>              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C1 decision: option_B</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:58 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">DECISION_RESOLVED</span>
-<span class="mono">C4</span>              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C4 decision: option_A+B</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:55 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
           </li>
         </ol>
     </div>
     <div class="live-bucket" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
         <strong>Last 24 hours</strong>
-        <span class="mono muted">230 events</span>
+        <span class="mono muted">233 events</span>
       </div>
         <ol style="list-style:none;padding:0;margin:0;max-height:260px;overflow-y:auto;">
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:59 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+              <span class="muted mono">· hermes</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:53 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:44 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (9.55)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:33 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — PASS (0)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">REVIEW_POSTED</span>
+              <span class="muted mono">· vigil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— review by vigil — REVISE (9.0)</div>
+          </li>
+          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
+            <div>
+              <span class="mono muted">Apr 28, 13:13 CEST</span>
+              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
+<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
+            </div>
+            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T105357Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</div>
+          </li>
           <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
             <div>
               <span class="mono muted">Apr 28, 13:13 CEST</span>
@@ -543,62 +607,6 @@
 <span class="mono">B277</span>              <span class="muted mono">· vigil</span>
             </div>
             <div class="muted" style="font-size:0.8rem;margin-top:2px;">B277 review by vigil — PASS (0.0)</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 11:32 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">AGENT_HEARTBEAT</span>
-              <span class="muted mono">· guardian</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">guardian heartbeat — sprint-poke-ack-2026-04-28T0930Z</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 11:29 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Tuesday, 28 Apr brought a resolution push on decision gates. Four Mike-decisions landed this morning: M214 (registry sync path at 10:39 UTC)</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 11:25 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">SPRINT_NOTE</span>
-<span class="mono">M189</span>              <span class="muted mono">· anvil</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">Heartbeat scan since last SPRINT_NOTE (evt_20260428T085343Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:58 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">DECISION_RESOLVED</span>
-<span class="mono">C3</span>              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C3 decision: option_C</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:58 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">DECISION_RESOLVED</span>
-<span class="mono">C1</span>              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C1 decision: option_B</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:58 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">DECISION_RESOLVED</span>
-<span class="mono">C4</span>              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">C4 decision: option_A+B</div>
-          </li>
-          <li style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.85rem;line-height:1.4;">
-            <div>
-              <span class="mono muted">Apr 28, 10:55 CEST</span>
-              <span class="mono" style="color:#8ab4ff;">ARTIFACT_PUBLISHED</span>
-              <span class="muted mono">· hermes</span>
-            </div>
-            <div class="muted" style="font-size:0.8rem;margin-top:2px;">— published oinxtractor_quality: oinxtractor-quality.html</div>
           </li>
         </ol>
     </div>
@@ -711,13 +719,41 @@
           <strong>Hermes</strong>
           <span class="muted mono" style="font-size:0.75rem;">Sprint Orchestrator</span>
         </td>
-        <td class="mono muted" style="padding:8px;">Apr 28, 13:13 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">ARTIFACT_PUBLISHED</td>
+        <td class="mono muted" style="padding:8px;">Apr 28, 13:59 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
         <td class="mono" style="padding:8px;">—</td>
         <td style="padding:8px;">
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
-        <td class="mono muted" style="padding:8px;">536</td>
+        <td class="mono muted" style="padding:8px;">537</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>⚒️</span>
+          <strong>ANVIL</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 28, 13:53 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
+        <td class="mono" style="padding:8px;">M201</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">714</td>
+      </tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+        <td style="padding:8px;">
+          <span>🔍</span>
+          <strong>VIGIL</strong>
+          <span class="muted mono" style="font-size:0.75rem;">Code Review + Scoring</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">Apr 28, 13:44 CEST</td>
+        <td class="mono" style="padding:8px;color:#8ab4ff;">REVIEW_POSTED</td>
+        <td class="mono" style="padding:8px;">queue_sweep</td>
+        <td style="padding:8px;">
+<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
+        </td>
+        <td class="mono muted" style="padding:8px;">188</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -732,34 +768,6 @@
 <span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
         </td>
         <td class="mono muted" style="padding:8px;">464</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>⚒️</span>
-          <strong>ANVIL</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Implementation Lead</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 28, 12:53 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">SPRINT_NOTE</td>
-        <td class="mono" style="padding:8px;">M201</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">711</td>
-      </tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
-        <td style="padding:8px;">
-          <span>🔍</span>
-          <strong>VIGIL</strong>
-          <span class="muted mono" style="font-size:0.75rem;">Code Review + Scoring</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">Apr 28, 12:35 CEST</td>
-        <td class="mono" style="padding:8px;color:#8ab4ff;">REVIEW_POSTED</td>
-        <td class="mono" style="padding:8px;">queue_sweep</td>
-        <td style="padding:8px;">
-<span style="background:#14532d;color:#bbf7d0;padding:2px 8px;border-radius:4px;">● fresh</span>
-        </td>
-        <td class="mono muted" style="padding:8px;">185</td>
       </tr>
       <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
         <td style="padding:8px;">
@@ -1057,7 +1065,7 @@ future      </span>
           <span class="badge badge-pr_review">PR Review</span>
         </div>
         <div class="task-meta mono muted">
-            Apr 28, 12:53 CEST
+            Apr 28, 13:53 CEST
         </div>
       </header>
 
@@ -1110,8 +1118,44 @@ future      </span>
       </div>
 
       <details class="task-timeline">
-        <summary>Timeline <span class="muted mono">(497 events)</span></summary>
+        <summary>Timeline <span class="muted mono">(500 events)</span></summary>
           <ol class="timeline">
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 28, 13:53 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 28, 13:33 CEST
+                </div>
+              </div>
+            </li>
+            <li class="timeline-event">
+              <span class="dot dot-info"></span>
+              <div class="timeline-body">
+                <div class="timeline-label">
+                  <span class="timeline-actor mono">anvil</span>
+                  <span>Heartbeat scan since last SPRINT_NOTE (evt_20260428T105357Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt</span>
+                </div>
+                <div class="timeline-meta mono muted">
+                  Apr 28, 13:13 CEST
+                </div>
+              </div>
+            </li>
             <li class="timeline-event">
               <span class="dot dot-info"></span>
               <div class="timeline-body">
@@ -8227,9 +8271,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#214</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/6edd312cc32f3f695f91cb4a8fb9e52b02c197fd" target="_blank" rel="noopener" title="merge commit">
-                  6edd312
-                </a>
           </div>
       </div>
 
@@ -9678,9 +9719,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#289</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/6d3559aad60f227b76b6b0d5bcdbead10f5ec0c6" target="_blank" rel="noopener" title="merge commit">
-                  6d3559a
-                </a>
           </div>
       </div>
 
@@ -9737,9 +9775,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#76</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/d9f738d402ba93282da65670bba6053eb2a68bce" target="_blank" rel="noopener" title="merge commit">
-                  d9f738d
-                </a>
           </div>
       </div>
 
@@ -9784,9 +9819,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#293</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/37ea7ec88afb933937050b4364156903772460b6" target="_blank" rel="noopener" title="merge commit">
-                  37ea7ec
-                </a>
           </div>
       </div>
 
@@ -9914,9 +9946,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#16</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/1914619c4153727c10e2a9b174dee55ca4c17d66" target="_blank" rel="noopener" title="merge commit">
-                  1914619
-                </a>
           </div>
       </div>
 
@@ -10220,9 +10249,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#269</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/5a86fb63c9ea7f90afb6f6fdb1840623d8f065db" target="_blank" rel="noopener" title="merge commit">
-                  5a86fb6
-                </a>
           </div>
       </div>
 
@@ -10278,9 +10304,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#272</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/6d74b5d27f60cebaae9040f2fc7431c53eb7cd26" target="_blank" rel="noopener" title="merge commit">
-                  6d74b5d
-                </a>
           </div>
       </div>
 
@@ -10330,9 +10353,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#246</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/b8f32e47c935fd326666c88adf82ec0b33731060" target="_blank" rel="noopener" title="merge commit">
-                  b8f32e4
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/57" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#57</span>
@@ -10512,9 +10532,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#274</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/4a07e50aeafab61538548220680da8ecb8870f14" target="_blank" rel="noopener" title="merge commit">
-                  4a07e50
-                </a>
           </div>
       </div>
 
@@ -10595,16 +10612,10 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#215</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/9e772ac4e25d3ffd0a7def585a7c3ee9bef472d5" target="_blank" rel="noopener" title="merge commit">
-                  9e772ac
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/38" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#38</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/a0894e25d9c32bffb3202a3af0ff9620bb2d5b20" target="_blank" rel="noopener" title="merge commit">
-                  a0894e2
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/13" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#13</span>
@@ -12006,9 +12017,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#29</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/ace226ed590a6418474984bf9af1c74790455038" target="_blank" rel="noopener" title="merge commit">
-                  ace226e
-                </a>
           </div>
       </div>
 
@@ -12442,9 +12450,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#268</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/4611360cd37eb272d024d32135b2537701d15abe" target="_blank" rel="noopener" title="merge commit">
-                  4611360
-                </a>
           </div>
       </div>
 
@@ -12490,9 +12495,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#263</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/b736ad188b695c47b2d8eea5794169967056fb6c" target="_blank" rel="noopener" title="merge commit">
-                  b736ad1
-                </a>
           </div>
       </div>
 
@@ -13024,9 +13026,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#44</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/2793eec0d3d22590ab0f4b2f15d723f3a8dd8e1f" target="_blank" rel="noopener" title="merge commit">
-                  2793eec
-                </a>
           </div>
       </div>
 
@@ -13202,9 +13201,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#62</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/ad0c5eaa8230d459e53d693aacadf5354fe702d4" target="_blank" rel="noopener" title="merge commit">
-                  ad0c5ea
-                </a>
           </div>
       </div>
 
@@ -13305,9 +13301,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#59</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/736bd7fbfe4de17726acd0662fb30b24dfae1c62" target="_blank" rel="noopener" title="merge commit">
-                  736bd7f
-                </a>
           </div>
       </div>
 
@@ -13351,9 +13344,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#55</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/4c9ad211200e708bd4053e7d504457d78cc6a74e" target="_blank" rel="noopener" title="merge commit">
-                  4c9ad21
-                </a>
           </div>
       </div>
 
@@ -13580,9 +13570,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#54</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/49aa1bab87937628271f3ee1fb325e1ccac127f7" target="_blank" rel="noopener" title="merge commit">
-                  49aa1ba
-                </a>
           </div>
       </div>
 
@@ -13627,9 +13614,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#52</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/1d22920234ffc0a5fc35ea12e111747ac1a2a67c" target="_blank" rel="noopener" title="merge commit">
-                  1d22920
-                </a>
           </div>
       </div>
 
@@ -13731,9 +13715,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#39</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/81345a28986ff219348f943051790cd40feeb6ac" target="_blank" rel="noopener" title="merge commit">
-                  81345a2
-                </a>
           </div>
       </div>
 
@@ -13778,9 +13759,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#40</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/3cf32befd0d866c638242c6bbcb61f33cf0eecec" target="_blank" rel="noopener" title="merge commit">
-                  3cf32be
-                </a>
           </div>
       </div>
 
@@ -13899,9 +13877,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#202</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/caf5e0deeed042d06a217feb21b75231269340bc" target="_blank" rel="noopener" title="merge commit">
-                  caf5e0d
-                </a>
           </div>
       </div>
 
@@ -13947,9 +13922,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#176</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/09fcab18024677cb1a454eb598057590e76eec2b" target="_blank" rel="noopener" title="merge commit">
-                  09fcab1
-                </a>
           </div>
       </div>
 
@@ -14145,9 +14117,6 @@ POKE CHECKLIST:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#33</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/cc4a2c4bcf3fba36260675ffe75f62babf3744c0" target="_blank" rel="noopener" title="merge commit">
-                  cc4a2c4
-                </a>
           </div>
       </div>
 
@@ -15048,23 +15017,14 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#153</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/14563d2900bbace4f22c530cfc81709505fadb13" target="_blank" rel="noopener" title="merge commit">
-                  14563d2
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/11" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#11</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/80288bb78d5d625fe2c2dd840d53fc52a91075f5" target="_blank" rel="noopener" title="merge commit">
-                  80288bb
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/24" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#24</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/df8112dd7d02945aa82b70b8296647a648b076e6" target="_blank" rel="noopener" title="merge commit">
-                  df8112d
-                </a>
           </div>
       </div>
 
@@ -15999,9 +15959,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#22</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/ff23510a25c4718c60915640cca3606375efd082" target="_blank" rel="noopener" title="merge commit">
-                  ff23510
-                </a>
           </div>
       </div>
 
@@ -16044,9 +16001,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#21</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/ed1670530647092cd329797bae85edb36e4966ed" target="_blank" rel="noopener" title="merge commit">
-                  ed16705
-                </a>
           </div>
       </div>
 
@@ -16177,9 +16131,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-social-listener</span>
                 <span class="pr-num mono">#20</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-social-listener/commit/1ef1a1f17d8f05f90e733cb10a150ff52bab8b16" target="_blank" rel="noopener" title="merge commit">
-                  1ef1a1f
-                </a>
           </div>
       </div>
 
@@ -16422,16 +16373,10 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#8</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/27196487f966fc6e24d2a412b7245ac8c9883c50" target="_blank" rel="noopener" title="merge commit">
-                  2719648
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oinkfarm/pull/132" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#132</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/e7cfdb8e22aed4a3c41b33a126f9c58012f0bcf5" target="_blank" rel="noopener" title="merge commit">
-                  e7cfdb8
-                </a>
           </div>
       </div>
 
@@ -16642,9 +16587,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#26</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/6879e257702b3cf3fb9cf7477c40c56814e014a3" target="_blank" rel="noopener" title="merge commit">
-                  6879e25
-                </a>
           </div>
       </div>
 
@@ -16855,9 +16797,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#20</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/1adeaa1fd2bbde936869a5b72465a3f2c6c3ffef" target="_blank" rel="noopener" title="merge commit">
-                  1adeaa1
-                </a>
           </div>
       </div>
 
@@ -17405,9 +17344,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#27</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/3f85c12e05ca6e588e082c0a0ca8438b89e3cb32" target="_blank" rel="noopener" title="merge commit">
-                  3f85c12
-                </a>
           </div>
       </div>
 
@@ -17697,9 +17633,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#130</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/615731582e75b7a451dc84a12915839ada6503a8" target="_blank" rel="noopener" title="merge commit">
-                  6157315
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/130" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#130</span>
@@ -17903,9 +17836,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#134</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/461545434c32beac11aa451792dc1479ab770b31" target="_blank" rel="noopener" title="merge commit">
-                  4615454
-                </a>
           </div>
       </div>
 
@@ -18105,23 +18035,14 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#149</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/75a32f7f80e609c978dcb0af1bab8b46ed68c186" target="_blank" rel="noopener" title="merge commit">
-                  75a32f7
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/oink-sync/pull/9" target="_blank" rel="noopener">
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#9</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/ecd2622a2aa357a6e1efa925bc15af8bfbdc4eb0" target="_blank" rel="noopener" title="merge commit">
-                  ecd2622
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/21" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#21</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/b0f02548415de4598f807912f1fefca4472620ee" target="_blank" rel="noopener" title="merge commit">
-                  b0f0254
-                </a>
           </div>
       </div>
 
@@ -18452,9 +18373,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#25</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/signal-gateway/commit/2e345bb6c14b4a02057e56218b038cb0da0cb2e5" target="_blank" rel="noopener" title="merge commit">
-                  2e345bb
-                </a>
           </div>
       </div>
 
@@ -18660,9 +18578,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#5</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/6b21a2074413395b400b6f95494ae80d77ecef59" target="_blank" rel="noopener" title="merge commit">
-                  6b21a20
-                </a>
           </div>
       </div>
 
@@ -19050,9 +18965,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#133</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/45a6931d44364fa68c9fd96779c58b20d69e01ae" target="_blank" rel="noopener" title="merge commit">
-                  45a6931
-                </a>
           </div>
       </div>
 
@@ -19237,9 +19149,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oink-sync</span>
                 <span class="pr-num mono">#7</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oink-sync/commit/e9be741a7a0c0d779b259c9e1813e3aeac59ca0a" target="_blank" rel="noopener" title="merge commit">
-                  e9be741
-                </a>
           </div>
       </div>
 
@@ -19453,9 +19362,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#131</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/69d6840a792ad685ad606c74d098180b8ccd5b71" target="_blank" rel="noopener" title="merge commit">
-                  69d6840
-                </a>
               <a class="pr-link" href="https://github.com/QuantisDevelopment/signal-gateway/pull/131" target="_blank" rel="noopener">
                 <span class="pr-repo mono">signal-gateway</span>
                 <span class="pr-num mono">#131</span>
@@ -19672,9 +19578,6 @@ COMPLETED THIS SESSION:
                 <span class="pr-repo mono">oinkfarm</span>
                 <span class="pr-num mono">#135</span>
               </a>
-                <a class="commit-link mono" href="https://github.com/QuantisDevelopment/oinkfarm/commit/80f4fe0aabd4f8d1a4b704cef50b6e41787fec13" target="_blank" rel="noopener" title="merge commit">
-                  80f4fe0
-                </a>
           </div>
       </div>
 
@@ -20157,18 +20060,6 @@ COMPLETED THIS SESSION:
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
-          <span class="agent-emoji">🛡️</span>
-          <span class="agent-name">GUARDIAN</span>
-          <span class="agent-light light-green" title="green"></span>
-        </div>
-        <div class="agent-meta muted">Data Integrity + Canary</div>
-        <div class="agent-meta mono">
-            task: sprint-poke-ack-2026-04-28T1106Z
-        </div>
-        <div class="agent-meta mono muted">6m ago</div>
-      </div>
-      <div class="agent agent-light-green">
-        <div class="agent-top">
           <span class="agent-emoji">⚒️</span>
           <span class="agent-name">ANVIL</span>
           <span class="agent-light light-green" title="green"></span>
@@ -20177,7 +20068,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: M201
         </div>
-        <div class="agent-meta mono muted">19m ago</div>
+        <div class="agent-meta mono muted">5m ago</div>
       </div>
       <div class="agent agent-light-green">
         <div class="agent-top">
@@ -20189,7 +20080,19 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: queue_sweep
         </div>
-        <div class="agent-meta mono muted">37m ago</div>
+        <div class="agent-meta mono muted">14m ago</div>
+      </div>
+      <div class="agent agent-light-green">
+        <div class="agent-top">
+          <span class="agent-emoji">🛡️</span>
+          <span class="agent-name">GUARDIAN</span>
+          <span class="agent-light light-green" title="green"></span>
+        </div>
+        <div class="agent-meta muted">Data Integrity + Canary</div>
+        <div class="agent-meta mono">
+            task: sprint-poke-ack-2026-04-28T1106Z
+        </div>
+        <div class="agent-meta mono muted">51m ago</div>
       </div>
       <div class="agent agent-light-yellow">
         <div class="agent-top">
@@ -20201,7 +20104,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: sprint-poke-response
         </div>
-        <div class="agent-meta mono muted">1h 38m ago</div>
+        <div class="agent-meta mono muted">2h 24m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -20213,7 +20116,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             task: B4
         </div>
-        <div class="agent-meta mono muted">5h 4m ago</div>
+        <div class="agent-meta mono muted">5h 50m ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -20237,7 +20140,7 @@ COMPLETED THIS SESSION:
         <div class="agent-meta mono">
             idle
         </div>
-        <div class="agent-meta mono muted">7d ago</div>
+        <div class="agent-meta mono muted">8d ago</div>
       </div>
       <div class="agent agent-light-red">
         <div class="agent-top">
@@ -20266,6 +20169,30 @@ COMPLETED THIS SESSION:
 
     <div class="tab-panel tab-panel-active" id="tab-narrative">
       <ol class="narrative">
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 28, 13:59 CEST</div>
+            <ul class="narrative-actions">
+<li>Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4) with vigil approval in-stream. All three resolved by 10:58: C1 chose option_B for the incohherence rule, C3 added urgency classification as a separate column, and C4 kept metadata audits as future work. FORGE validation came back positive on all three, so the forward path is clear on those decision gates.
+
+M189 is still stuck. Both reviewers approved the proposal, but it isn't moving to the next gate. Worth a check on why it's hung despite dual approval. Two spot-check verdicts on B280 and B277 came back clean from vigil, so at least the smaller pieces are moving.
+
+Decision churn yesterday feels good—went from four unresolved gates to three resolved in under an hour. The council confirmations mean ANVIL can start the implementation phase on C-track tasks without waiting for more review cycles.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 28, 13:53 CEST</div>
+            <ul class="narrative-actions">
+<li>Heartbeat scan since last SPRINT_NOTE (evt_20260428T113348Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt_20260428T071306Z_000001, VIGIL evt_20260428T071327Z_000001). No REVIEW_POSTED arrived for B9 v2 or B12-SHADOW, and no DECISION_NEEDED or BLOCKED events landed since then. One unrelated review did post: VIGIL PASS 9.55 R2 on oinkfarm PR#298 / fix/a7-cross-trader-dedup (evt_20260428T114430Z_000001, CRITICAL, delta +0.55). HEARTBEAT.md still shows M189 current_phase=approved with blockers=[]. TASK 4 startup via the legacy split path remains superseded by the already-active coordinated merge-ready path (oinkfarm PR287 @ f3787502 + SG75 @ ee6314f9 + OS18 @ 820c3e55); the legacy fix/189-sl-to-be-microgate branch still does not exist locally, and no duplicate split PRs were created this tick.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 28, 13:33 CEST</div>
+            <ul class="narrative-actions">
+<li>Heartbeat scan since last SPRINT_NOTE (evt_20260428T111343Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt_20260428T071306Z_000001, VIGIL evt_20260428T071327Z_000001). No REVIEW_POSTED arrived for B9 v2 or B12-SHADOW, and no DECISION_NEEDED or BLOCKED events landed since then. Two unrelated VIGIL reviews did post: signal-gateway PR#79 PASS LIGHTWEIGHT (evt_20260428T111349Z_000001) and oinkfarm PR#298 REVISE 9.0 CRITICAL (evt_20260428T111349Z_000002). HEARTBEAT.md still shows M189 current_phase=approved with blockers=[]. TASK 4 startup via the legacy split path remains superseded by the already-active coordinated merge-ready path (oinkfarm PR287 @ f3787502 + SG75 @ ee6314f9 + OS18 @ 820c3e55); the legacy fix/189-sl-to-be-microgate branch still does not exist locally, and no duplicate split PRs were created this tick.</li>            </ul>
+        </li>
+        <li class="narrative-entry">
+          <div class="narrative-time mono muted">Apr 28, 13:13 CEST</div>
+            <ul class="narrative-actions">
+<li>Heartbeat scan since last SPRINT_NOTE (evt_20260428T105357Z_000001): #189 still has both required proposal approvals on record (GUARDIAN evt_20260428T071306Z_000001, VIGIL evt_20260428T071327Z_000001). No REVIEW_POSTED arrived for B9 v2 or B12-SHADOW, and no DECISION_NEEDED or BLOCKED events landed since then; only unrelated GUARDIAN AGENT_HEARTBEAT evt_20260428T110707Z_000001 and HERMES ARTIFACT_PUBLISHED evt_20260428T111319Z_000001 appeared. HEARTBEAT.md still shows M189 current_phase=approved with blockers=[]. TASK 4 startup via legacy split path remains superseded by the already-active coordinated merge-ready path (oinkfarm PR287 @ f3787502 + SG75 @ ee6314f9 + OS18 @ 820c3e55); the legacy fix/189-sl-to-be-microgate branch still does not exist locally, and no duplicate split PRs were created this tick.</li>            </ul>
+        </li>
         <li class="narrative-entry">
           <div class="narrative-time mono muted">Apr 28, 12:53 CEST</div>
             <ul class="narrative-actions">
@@ -20456,26 +20383,6 @@ All review artifacts are being published continuously, so signal generation and 
             <ul class="narrative-actions">
 <li>Heartbeat scan since evt_20260428T023508Z_000001: #189 proposal approvals still exist from both reviewers (vigil=True, guardian=True). New REVIEW_POSTED for B9/B12-SHADOW: 0. New DECISION_NEEDED: 0. New BLOCKED: 0. No duplicate TASK-4 bootstrap performed because the legacy split-PR branch plan is already superseded by active PR287 on fix/189-b14-sl-be-admit; authoritative next step remains fresh rereview on current PR287 head rather than creating a second fix/189-sl-to-be-microgate branch stack.</li>            </ul>
         </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 28, 04:35 CEST</div>
-            <ul class="narrative-actions">
-<li>Heartbeat scan since evt_20260428T021440Z_000001: #189 proposal approvals still exist from both reviewers (vigil=True, guardian=True). New REVIEW_POSTED for B9/B12-SHADOW: 0. New DECISION_NEEDED: 0. New BLOCKED: 0. No duplicate TASK-4 bootstrap performed because the legacy split-PR branch plan is already superseded by active PR287 on fix/189-b14-sl-be-admit; authoritative next step remains fresh rereview on current PR287 head rather than creating a second fix/189-sl-to-be-microgate branch stack.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 28, 04:14 CEST</div>
-            <ul class="narrative-actions">
-<li>Heartbeat scan since evt_20260428T015524Z_000001: #189 proposal approvals remain explicit in-stream (vigil=True, guardian=True). New B9/B12 review_posted=0; decision_needed=0; blocked_events_in_window=0. No new REVIEW_POSTED arrived for B9 v2 or B12-SHADOW, and no DECISION_NEEDED or new BLOCKED events landed in this scan window. No duplicate TASK-4 bootstrap performed because the legacy split-PR path is superseded by PR287. Current PR287 worktree remains detached-clean at head=f3787502 with ahead_behind=0	0; ref summary: f378750207ef46abdbb19fcee876a173a45eb29c HEAD, origin/fix/189-b14-sl-be-admit fix(#189): R4 — resolve GUARDIAN R3 blockers (no #187 contamination). Authoritative state remains: approvals are present, but M189 is waiting on fresh rereview of the newer PR287 head rather than starting a new fix/189-sl-to-be-microgate branch set. Yielding after single scan.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 28, 03:55 CEST</div>
-            <ul class="narrative-actions">
-<li>Heartbeat found a material branch-state correction after the prior note. `origin/fix/189-b14-sl-be-admit` had advanced from old reviewed head `67a58dbc` to new head `f3787502` (`fix(#189): R4 — resolve GUARDIAN R3 blockers (no #187 contamination)`), while the local worktree was still detached on the superseded head. The worktree `/home/oinkv/worktrees/of-pr287` has now been resynced to detached head `f3787502`. #189 proposal approvals still remain explicit from both VIGIL and GUARDIAN; no new REVIEW_POSTED for B9 v2 or B12-SHADOW; no DECISION_NEEDED events in this scan window. Important nuance: the existing VIGIL R3 / GUARDIAN R3 blocker verdicts apply to old head `67a58dbc`, not to `f3787502`. The new remote commit appears to strip GH#187 alias-match contamination into PR290, likely narrowing one blocker class, but no fresh review event exists yet for the new head. Therefore M189 should now be treated as waiting on rereview of `f3787502`, not as actively implementing the legacy 3-split Artifact-A path and not as conclusively blocked on the superseded contaminated head. HEARTBEAT.md refreshed accordingly. Yielding after single corrective scan + resync.</li>            </ul>
-        </li>
-        <li class="narrative-entry">
-          <div class="narrative-time mono muted">Apr 28, 03:53 CEST</div>
-            <ul class="narrative-actions">
-<li>Heartbeat scan since evt_20260428T013409Z_000001: #189 proposal approvals remain explicit in-stream (vigil=True, guardian=True). New B9/B12 review_posted=0; decision_needed=0; blocked_events_in_window=0. No new B9 v2 / B12-SHADOW review arrivals and no DECISION_NEEDED events appeared in this scan window. No duplicate TASK-4 bootstrap performed because the legacy split-PR path is superseded by PR287 and M189 remains in FIX/BLOCKED state from the already-recorded PR287 review failures. Current PR287 worktree state: head=67a58dbc, branch=DETACHED, ahead_behind=6	5, clean=True. Yielding after single scan.</li>            </ul>
-        </li>
       </ol>
     </div>
 
@@ -20498,12 +20405,12 @@ All review artifacts are being published continuously, so signal generation and 
 <footer class="footer">
   <div class="footer-inner mono muted">
     <div>
-checkpoint@<span class="mono">999b7bbc829c</span>    </div>
+checkpoint@<span class="mono">800e39458008</span>    </div>
     <div>
-        Last orchestrator cycle: Apr 28, 12:53 CEST
+        Last orchestrator cycle: Apr 28, 13:59 CEST
     </div>
     <div>
-      generated Apr 28, 13:13 CEST
+      generated Apr 28, 13:59 CEST
     </div>
     <div id="sprint-archive-link">
       📂 <a href="https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint/tree/main/sprint-log" target="_blank" rel="noopener">Full sprint archive →</a>
