@@ -4,17 +4,20 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2337
-- **Last 24h:** 233 (rate 9.71/h)
+- **Total events:** 2340
+- **Last 24h:** 232 (rate 9.67/h)
 - **Schema:** v1.0
 - **Source:** lib
 - **Monotonic:** ✓ ok
 
 ## 🔴 Live now
 
-### Last 1 hour (23 events)
+### Last 1 hour (13 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 12:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 12:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1005Z |
+| Apr 28, 11:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T093434Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 11:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T092556Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `C1` | forge | Q-C1-INC-1 council resolution option_B matches FORGE recommendation; INV-18 read-side rule ratified; 22 terminal-incoherent rows surfaced vi |
@@ -25,15 +28,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 11:32 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T0930Z |
 | Apr 28, 11:29 CEST | `SPRINT_NOTE` | `—` | hermes | Tuesday, 28 Apr brought a resolution push on decision gates. Four Mike-decisions landed this morning: M214 (registry sync path at 10:39 UTC) |
 | Apr 28, 11:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T085343Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
-| Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C3` | hermes | C3 decision: option_C |
-| Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C1` | hermes | C1 decision: option_B |
-| Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C4` | hermes | C4 decision: option_A+B |
-| Apr 28, 10:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 10:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T083352Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 
-### Last 4 hours (59 events)
+### Last 4 hours (54 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 12:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 12:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1005Z |
+| Apr 28, 11:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T093434Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 11:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T092556Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `C1` | forge | Q-C1-INC-1 council resolution option_B matches FORGE recommendation; INV-18 read-side rule ratified; 22 terminal-incoherent rows surfaced vi |
@@ -46,13 +47,13 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 11:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T085343Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C3` | hermes | C3 decision: option_C |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C1` | hermes | C1 decision: option_B |
-| Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C4` | hermes | C4 decision: option_A+B |
-| Apr 28, 10:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 10:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T083352Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 
-### Last 24 hours (233 events)
+### Last 24 hours (232 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 12:09 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 12:05 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1005Z |
+| Apr 28, 11:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T093434Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 11:37 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T092556Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `C1` | forge | Q-C1-INC-1 council resolution option_B matches FORGE recommendation; INV-18 read-side rule ratified; 22 terminal-incoherent rows surfaced vi |
@@ -65,9 +66,6 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 | Apr 28, 11:25 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T085343Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C3` | hermes | C3 decision: option_C |
 | Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C1` | hermes | C1 decision: option_B |
-| Apr 28, 10:58 CEST | `DECISION_RESOLVED` | `C4` | hermes | C4 decision: option_A+B |
-| Apr 28, 10:55 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 10:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat scan since last SPRINT_NOTE (evt_20260428T083352Z_000001): #189 still has PROPOSAL_APPROVED from both reviewers (GUARDIAN evt_2026 |
 
 ## 🧭 Needs Mike
 
@@ -85,16 +83,17 @@ _No open DECISION_NEEDED events._
 | 🟠 WARN | `M201` | AGENT_HEARTBEAT stale > 3h for anvil |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for vigil |
 | 🟠 WARN | `—` | AGENT_HEARTBEAT stale > 3h for forge |
+| 🟠 WARN | `B4` | BLOCKED > 4h with no BLOCKER_RESOLVED (reason=waiting_for_upstream_task) |
 
 ## 🫀 Freshness by agent
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 28, 11:37 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 533 |
-| ⚒️ **ANVIL** | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 707 |
+| 🪽 **Hermes** | Apr 28, 12:09 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 534 |
+| 🛡️ **GUARDIAN** | Apr 28, 12:05 CEST | `AGENT_HEARTBEAT` | `sprint-poke-ack-2026-04-28T1005Z` | 🟢 fresh | 462 |
+| ⚒️ **ANVIL** | Apr 28, 11:53 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 708 |
 | 🔥 **FORGE** | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `sprint-poke-response` | 🟢 fresh | 199 |
 | 🔍 **VIGIL** | Apr 28, 11:34 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 184 |
-| 🛡️ **GUARDIAN** | Apr 28, 11:32 CEST | `AGENT_HEARTBEAT` | `sprint-poke-ack-2026-04-28T0930Z` | 🟢 fresh | 461 |
 | • **OINKDB** | Apr 28, 08:08 CEST | `BLOCKED` | `B4` | 🔴 stale | 41 |
 | 🐷 **OinkV** | Apr 25, 03:40 CEST | `—` | `—` | 🔴 stale | 190 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -241,10 +240,10 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
+| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | ⚒️ | ANVIL | Implementation Lead |
 | 🔥 | FORGE | Technical Execution Planner |
 | 🔍 | VIGIL | Code Review + Scoring |
-| 🛡️ | GUARDIAN | Data Integrity + Canary |
 | • | OINKDB |  |
 | 🐷 | OinkV | Plan Auditor |
 | • | mike |  |
@@ -259,4 +258,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*21/98 tasks DONE · Last auto-regenerated: 11:38 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/98 tasks DONE · Last auto-regenerated: 12:10 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
