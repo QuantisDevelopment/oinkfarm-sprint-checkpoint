@@ -39,6 +39,9 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M320` | vigil | M320 review by vigil — PASS (9.85) |
+| Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M325` | vigil | M325 review by vigil — PASS (9.3) |
+| Apr 28, 20:01 CEST | `REVIEW_POSTED` | `M305` | vigil | M305 review by vigil — PASS (9.85) |
 | Apr 28, 19:56 CEST | `REVIEW_POSTED` | `M292` | vigil | M292 review by vigil — PASS (9.7) |
 | Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M313` | vigil | M313 review by vigil — PASS (9.85) |
 | Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (9.7) |
@@ -66,9 +69,6 @@
 | Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — REVISE (9.45) |
 | Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
 | Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
-| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
-| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.45) |
-| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M173` | vigil | M173 review by vigil — PASS (9.3) |
 
 ## Needs Mike (open gates)
 
