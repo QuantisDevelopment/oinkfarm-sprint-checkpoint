@@ -4,7 +4,7 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## Event stream integrity
 
-- **Total events:** 2389
+- **Total events:** 2398
 - **Last 24h:** 248 (rate 10.33/h)
 - **Schema:** v1.0
 - **Source:** lib
@@ -12,62 +12,53 @@ Human-readable per-task, per-wave, per-phase, and per-event archive. For verbati
 
 ## 🔴 Live now
 
-### Last 1 hour (18 events)
+### Last 1 hour (6 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
-| Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
-| Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T141614Z_000001). M189 still has both requi |
-| Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
-| Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1429Z |
-| Apr 28, 16:27 CEST | `SPRINT_NOTE` | `—` | hermes | Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer  |
-| Apr 28, 16:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:13Z: scanned checkpoint events since last SPRINT_NOTE (evt_20260428T140705Z_oinkv_m312_01). M189 dual proposal appro |
-| Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M313` | vigil | M313 review by vigil — PASS (9.85) |
-| Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (9.7) |
-| Apr 28, 16:07 CEST | `SPRINT_NOTE` | `M312` | oinkv | GH#312 urgent regression already fixed and opened this cycle as PR#314 (fix/312-signal-created-extraction-method). One-line hotpath fix adds |
-| Apr 28, 16:05 CEST | `PR_OPENED` | `M313` | oinkv | M313 PR #315 opened — fix(#313): scope EXTRACTION_CORRECTION to open same-signal rows |
-| Apr 28, 16:05 CEST | `STATUS_CHANGED` | `M313` | oinkv | M313 CODE_STARTED → PR_REVIEW |
-| Apr 28, 15:59 CEST | `CODE_STARTED` | `M313` | oinkv | M313 code started on fix/313-extraction-correction-shared-dmid |
-| Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
-| Apr 28, 15:55 CEST | `PR_OPENED` | `M311` | anvil | M311 PR #80 opened — GH311: restore reconciler state on cold start |
+| Apr 28, 18:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 17:57 CEST | `SPRINT_NOTE` | `M195` | guardian | P2 escalation response: posted GUARDIAN status report to GH#195. PR#289 merged 2026-04-28T09:17:31Z. KPI harness live, eval window 25d remai |
+| Apr 28, 17:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T153343Z_000001). M189 still has both requi |
+| Apr 28, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T151434Z_000001). M189 still has both requi |
+| Apr 28, 17:32 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 17:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T145347Z_000001). M189 still has both requi |
 
-### Last 4 hours (44 events)
+### Last 4 hours (42 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 18:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 17:57 CEST | `SPRINT_NOTE` | `M195` | guardian | P2 escalation response: posted GUARDIAN status report to GH#195. PR#289 merged 2026-04-28T09:17:31Z. KPI harness live, eval window 25d remai |
+| Apr 28, 17:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T153343Z_000001). M189 still has both requi |
+| Apr 28, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T151434Z_000001). M189 still has both requi |
+| Apr 28, 17:32 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 17:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T145347Z_000001). M189 still has both requi |
+| Apr 28, 17:06 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 17:04 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1504Z |
+| Apr 28, 16:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T143626Z_000001). M189 still has both requi |
 | Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T141614Z_000001). M189 still has both requi |
 | Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1429Z |
 | Apr 28, 16:27 CEST | `SPRINT_NOTE` | `—` | hermes | Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer  |
-| Apr 28, 16:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:13Z: scanned checkpoint events since last SPRINT_NOTE (evt_20260428T140705Z_oinkv_m312_01). M189 dual proposal appro |
-| Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M313` | vigil | M313 review by vigil — PASS (9.85) |
-| Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (9.7) |
-| Apr 28, 16:07 CEST | `SPRINT_NOTE` | `M312` | oinkv | GH#312 urgent regression already fixed and opened this cycle as PR#314 (fix/312-signal-created-extraction-method). One-line hotpath fix adds |
-| Apr 28, 16:05 CEST | `PR_OPENED` | `M313` | oinkv | M313 PR #315 opened — fix(#313): scope EXTRACTION_CORRECTION to open same-signal rows |
-| Apr 28, 16:05 CEST | `STATUS_CHANGED` | `M313` | oinkv | M313 CODE_STARTED → PR_REVIEW |
-| Apr 28, 15:59 CEST | `CODE_STARTED` | `M313` | oinkv | M313 code started on fix/313-extraction-correction-shared-dmid |
-| Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
-| Apr 28, 15:55 CEST | `PR_OPENED` | `M311` | anvil | M311 PR #80 opened — GH311: restore reconciler state on cold start |
 
 ### Last 24 hours (248 events)
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 18:13 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
+| Apr 28, 17:57 CEST | `SPRINT_NOTE` | `M195` | guardian | P2 escalation response: posted GUARDIAN status report to GH#195. PR#289 merged 2026-04-28T09:17:31Z. KPI harness live, eval window 25d remai |
+| Apr 28, 17:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T153343Z_000001). M189 still has both requi |
+| Apr 28, 17:33 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T151434Z_000001). M189 still has both requi |
+| Apr 28, 17:32 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 17:14 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T15:13Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T145347Z_000001). M189 still has both requi |
+| Apr 28, 17:06 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
+| Apr 28, 17:04 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1504Z |
+| Apr 28, 16:53 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:53Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T143626Z_000001). M189 still has both requi |
 | Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | oinkv |  |
 | Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:33Z: scanned checkpoint events since last ANVIL SPRINT_NOTE (evt_20260428T141614Z_000001). M189 still has both requi |
 | Apr 28, 16:32 CEST | `ARTIFACT_PUBLISHED` | `—` | hermes | — published oinxtractor_quality: oinxtractor-quality.html |
 | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `—` | guardian | guardian heartbeat — sprint-poke-ack-2026-04-28T1429Z |
 | Apr 28, 16:27 CEST | `SPRINT_NOTE` | `—` | hermes | Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer  |
-| Apr 28, 16:16 CEST | `SPRINT_NOTE` | `M189` | anvil | Heartbeat 2026-04-28T14:13Z: scanned checkpoint events since last SPRINT_NOTE (evt_20260428T140705Z_oinkv_m312_01). M189 dual proposal appro |
-| Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M313` | vigil | M313 review by vigil — PASS (9.85) |
-| Apr 28, 16:12 CEST | `REVIEW_POSTED` | `M312` | vigil | M312 review by vigil — PASS (9.7) |
-| Apr 28, 16:07 CEST | `SPRINT_NOTE` | `M312` | oinkv | GH#312 urgent regression already fixed and opened this cycle as PR#314 (fix/312-signal-created-extraction-method). One-line hotpath fix adds |
-| Apr 28, 16:05 CEST | `PR_OPENED` | `M313` | oinkv | M313 PR #315 opened — fix(#313): scope EXTRACTION_CORRECTION to open same-signal rows |
-| Apr 28, 16:05 CEST | `STATUS_CHANGED` | `M313` | oinkv | M313 CODE_STARTED → PR_REVIEW |
-| Apr 28, 15:59 CEST | `CODE_STARTED` | `M313` | oinkv | M313 code started on fix/313-extraction-correction-shared-dmid |
-| Apr 28, 15:55 CEST | `CODE_STARTED` | `M311` | anvil | M311 code started on fix/311-reconciler-cold-start-state |
-| Apr 28, 15:55 CEST | `PR_OPENED` | `M311` | anvil | M311 PR #80 opened — GH311: restore reconciler state on cold start |
 
 ## 🧭 Needs Mike
 
@@ -91,11 +82,11 @@ _No open DECISION_NEEDED events._
 
 | Agent | Last event | Type | Task | Staleness | Events |
 |---|---|---|---|---|---|
-| 🪽 **Hermes** | Apr 28, 16:49 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 542 |
-| 🐷 **OinkV** | Apr 28, 16:40 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 196 |
-| ⚒️ **ANVIL** | Apr 28, 16:36 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 725 |
-| 🛡️ **GUARDIAN** | Apr 28, 16:30 CEST | `AGENT_HEARTBEAT` | `sprint-poke-ack-2026-04-28T1429Z` | 🟢 fresh | 470 |
-| 🔍 **VIGIL** | Apr 28, 16:12 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟢 fresh | 194 |
+| 🪽 **Hermes** | Apr 28, 18:13 CEST | `ARTIFACT_PUBLISHED` | `—` | 🟢 fresh | 543 |
+| 🛡️ **GUARDIAN** | Apr 28, 17:57 CEST | `SPRINT_NOTE` | `sprint-poke-ack-2026-04-28T1504Z` | 🟢 fresh | 472 |
+| ⚒️ **ANVIL** | Apr 28, 17:53 CEST | `SPRINT_NOTE` | `M201` | 🟢 fresh | 729 |
+| 🐷 **OinkV** | Apr 28, 17:32 CEST | `SPRINT_NOTE` | `—` | 🟢 fresh | 198 |
+| 🔍 **VIGIL** | Apr 28, 16:12 CEST | `REVIEW_POSTED` | `queue_sweep` | 🟡 1–3h | 194 |
 | 🔥 **FORGE** | Apr 28, 11:34 CEST | `SPRINT_NOTE` | `sprint-poke-response` | 🔴 stale | 199 |
 | • **OINKDB** | Apr 28, 08:08 CEST | `BLOCKED` | `B4` | 🔴 stale | 41 |
 | • **mike** | Apr 20, 13:32 CEST | `DECISION_RESOLVED` | `—` | 🔴 stale | 2 |
@@ -245,9 +236,9 @@ _No open DECISION_NEEDED events._
 | Emoji | Name | Role |
 |---|---|---|
 | 🪽 | Hermes | Sprint Orchestrator |
-| 🐷 | OinkV | Plan Auditor |
-| ⚒️ | ANVIL | Implementation Lead |
 | 🛡️ | GUARDIAN | Data Integrity + Canary |
+| ⚒️ | ANVIL | Implementation Lead |
+| 🐷 | OinkV | Plan Auditor |
 | 🔍 | VIGIL | Code Review + Scoring |
 | 🔥 | FORGE | Technical Execution Planner |
 | • | OINKDB |  |
@@ -263,4 +254,4 @@ _No open DECISION_NEEDED events._
 
 ---
 
-*21/101 tasks DONE · Last auto-regenerated: 16:50 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*
+*21/101 tasks DONE · Last auto-regenerated: 18:13 CEST on 28 Apr 2026 · [Live dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/) · [GitHub repo](https://github.com/QuantisDevelopment/oinkfarm-sprint-checkpoint)*

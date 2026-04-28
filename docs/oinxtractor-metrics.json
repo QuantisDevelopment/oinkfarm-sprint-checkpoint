@@ -1,26 +1,14 @@
 {
-  "ts": "2026-04-28T14:49:06Z",
+  "ts": "2026-04-28T16:12:47Z",
   "generator": "sprint-checkpoint/scripts/collect_oinxtractor_metrics.py",
   "latency": {
     "status": "ok",
     "message": "Proxy: (updated_at - posted_at) delta per signal \u2014 best-available pre-#171 landing-latency estimator.",
-    "p50_24h_sec": 254.1,
-    "p95_24h_sec": 71820.9,
-    "p50_7d_sec": 166.7,
-    "p95_7d_sec": 71853.6,
+    "p50_24h_sec": 110.7,
+    "p95_24h_sec": 57584.3,
+    "p50_7d_sec": 110.7,
+    "p95_7d_sec": 71820.9,
     "series_24h": [
-      {
-        "t": "2026-04-27T14:00Z",
-        "p50": 71820.862208,
-        "p95": 71820.862208,
-        "n": 1
-      },
-      {
-        "t": "2026-04-27T15:00Z",
-        "p50": 69776.887444,
-        "p95": 71853.594562,
-        "n": 2
-      },
       {
         "t": "2026-04-27T18:00Z",
         "p50": 57584.302775,
@@ -71,9 +59,21 @@
       },
       {
         "t": "2026-04-28T14:00Z",
-        "p50": 350.267448,
-        "p95": 769.963292,
-        "n": 4
+        "p50": 110.73626,
+        "p95": 4061.102,
+        "n": 5
+      },
+      {
+        "t": "2026-04-28T15:00Z",
+        "p50": 0.000311,
+        "p95": 31.081443,
+        "n": 2
+      },
+      {
+        "t": "2026-04-28T16:00Z",
+        "p50": 140.110318,
+        "p95": 140.110318,
+        "n": 1
       }
     ],
     "series_7d": [
@@ -115,26 +115,26 @@
       },
       {
         "t": "2026-04-28",
-        "p50": 209.009683,
+        "p50": 110.73626,
         "p95": 13076.702552,
-        "n": 24
+        "n": 28
       }
     ],
     "source": "estimated",
-    "sample_size_24h": 29,
-    "sample_size_7d": 130
+    "sample_size_24h": 30,
+    "sample_size_7d": 134
   },
   "unknown_rate": {
     "status": "ok",
     "message": "Live from OinkDB /signals/recent notes field sentinel.",
     "rate_24h_pct": 0.0,
-    "rate_7d_pct": 83.9,
+    "rate_7d_pct": 82.2,
     "series_7d": [
       {
         "t": "2026-04-21",
         "pct": 100.0,
-        "count": 10,
-        "total": 10
+        "count": 9,
+        "total": 9
       },
       {
         "t": "2026-04-22",
@@ -176,18 +176,18 @@
         "t": "2026-04-28",
         "pct": 0.0,
         "count": 0,
-        "total": 24
+        "total": 28
       }
     ],
-    "total_extractions_24h": 29,
+    "total_extractions_24h": 30,
     "unknown_count_24h": 0,
-    "total_extractions_7d": 199,
-    "unknown_count_7d": 167,
+    "total_extractions_7d": 202,
+    "unknown_count_7d": 166,
     "method_breakdown_24h": {
-      "missing_provenance": 23,
-      "reconciler": 3,
+      "missing_provenance": 22,
+      "reconciler": 4,
+      "passthrough": 2,
       "llm_nl": 1,
-      "passthrough": 1,
       "telegram_direct": 1
     },
     "note": "Target: <5% per Issue #116 acceptance"
