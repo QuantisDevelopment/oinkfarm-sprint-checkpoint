@@ -36,6 +36,10 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
+| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.45) |
+| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M173` | vigil | M173 review by vigil — PASS (9.3) |
+| Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
 | Apr 28, 04:31 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — REVISE (9.3) |
 | Apr 28, 04:31 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.5) |
 | Apr 28, 04:31 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — PASS (9.5) |
@@ -62,10 +66,6 @@
 | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
 | Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:06 CEST | `CANARY_PASS` | `B6` | guardian | B6 canary PASS |
-| Apr 27, 06:39 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — REVISE (8.65) |
 
 ## Needs Mike (open gates)
 
