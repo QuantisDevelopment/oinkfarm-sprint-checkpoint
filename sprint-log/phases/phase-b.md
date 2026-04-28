@@ -36,6 +36,13 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 05:40 CEST | `REVIEW_POSTED` | `M291` | vigil | M291 review by vigil — PASS (9.6) |
+| Apr 28, 05:38 CEST | `REVIEW_POSTED` | `M187` | guardian | M187 review by guardian — REVISE (9.45) |
+| Apr 28, 05:15 CEST | `DECISION_NEEDED` | `M189` | forge | M189 Mike gate: Q-189-2 was formally resolved on 2026-04-22 with binding text: BE_TOLERANCE_FRAC=0.0001 shared constant across Artifacts A/B |
+| Apr 28, 05:13 CEST | `REVIEW_POSTED` | `M187` | guardian | M187 review by guardian — REVISE (9.45) |
+| Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — REVISE (9.45) |
+| Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
+| Apr 28, 04:59 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
 | Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.3) |
 | Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.45) |
 | Apr 28, 04:48 CEST | `REVIEW_POSTED` | `M173` | vigil | M173 review by vigil — PASS (9.3) |
@@ -59,19 +66,13 @@
 | Apr 27, 18:20 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — REVISE (8.85) |
 | Apr 27, 13:44 CEST | `REVIEW_POSTED` | `M193` | vigil | M193 review by vigil — PASS (9.7) |
 | Apr 27, 09:24 CEST | `REVIEW_POSTED` | `M68` | vigil | M68 review by vigil — REVISE (7.0) |
-| Apr 27, 09:19 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — PASS (9.0) |
-| Apr 27, 08:42 CEST | `REVIEW_POSTED` | `M201` | vigil | M201 review by vigil — PASS (9.15) |
-| Apr 27, 08:40 CEST | `REVIEW_POSTED` | `M265` | vigil | M265 review by vigil — REVISE (5.0) |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
-| Apr 27, 08:09 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-27.md |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
 | `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 4.1d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
+| `Q-189-2-REVISION` | Q-189-2 was formally resolved on 2026-04-22 with binding text: BE_TOLERANCE_FRAC=0.0001 shared constant across Artifacts A/B/C. Live implementation on PR287@f3787502 + companion PRs (signal-gateway#75@ee6314f9, oink-sync#18@820c3e55) has all three repos byte-identical at BE_TOLERANCE_FRAC=0.005 (50x widening). GUARDIAN R4_FINAL implicitly accepts 0.005 via CONDITIONAL_PASS 9.30; VIGIL R4 self-corrected to REVISE 9.45 (sub-CRITICAL-9.50) explicitly citing 'formal TASK-189 §6.0.5 proposal revision from 0.0001 to 0.005 with VIGIL/GUARDIAN re-stamp' as the remaining blocker. Live classification impact confirmed: signal 2616 BNB SHORT at 0.0723% deviation falls inside the widened 0.01%-0.5% band. This is a substantive change to a previously-Mike-resolved decision and needs Mike re-resolution before three-way coordinated merge can proceed. | `M189` | 37m | ratify_0.005_as_supersede_q189_2 — Mike formally re-resolves Q-189-2 at BE_TOLERANCE_FRAC=0.005 across A/B/C, FORGE updates TASK-189 §6.0.5 to record the supersede with empirical justification (FET cohort, BNB-SHORT-2616-class admit-through-BE coverage), VIGIL/GUARDIAN re-stamp on revised proposal, three-way merge proceeds · revert_to_0.0001 — ANVIL reverts BE_TOLERANCE_FRAC across all three repos to 0.0001 (Q-189-2 original binding), accepts that admit-through-BE coverage will be narrower, fresh dual-pass review cycle on the reverted heads · split_tolerance_per_use — keep canonical BE_TOLERANCE_FRAC=0.0001 for is_sl_at_be (B14 admit gate) and add a separate, distinctly named ADMIT_THROUGH_BE_BAND_FRAC=0.005 only for the admit-through path; preserves Q-189-2 verbatim and forces explicit naming for the wider band; requires fresh cross-repo vendor-sync + dual-pass review |
 
 ---
 
