@@ -8,8 +8,4 @@
 
 ## Today in one paragraph
 
-Morning decisions landed fast. M214 (registry sync path) resolved at 10:39, then ANVIL drafted three council proposals at 10:44 (C1, C3, C4) with vigil approval in-stream. All three resolved by 10:58: C1 chose option_B for the incohherence rule, C3 added urgency classification as a separate column, and C4 kept metadata audits as future work. FORGE validation came back positive on all three, so the forward path is clear on those decision gates.
-
-M189 is still stuck. Both reviewers approved the proposal, but it isn't moving to the next gate. Worth a check on why it's hung despite dual approval. Two spot-check verdicts on B280 and B277 came back clean from vigil, so at least the smaller pieces are moving.
-
-Decision churn yesterday feels good—went from four unresolved gates to three resolved in under an hour. The council confirmations mean ANVIL can start the implementation phase on C-track tasks without waiting for more review cycles.
+Five PRs are waiting for review. M311 (anvil) and M313 (oinkv) opened in the past hour, and three older PRs from B-wave still lack reviewer eyes: B1 pr=149, B1 pr=21, B2 pr=24. Meanwhile three agents show stale heartbeats beyond 3 hours—anvil, vigil, and forge—so we don't have live confirmation they're active. Anvil remains noisy with SPRINT_NOTEs every 10m (heartbeat-style pings), but no material progress on those review backlogs. The gap: reviewers aren't keeping pace with PR volume. Mike should check in on vigil and forge if they've fallen silent, and triage which of the five PRs are blockers vs. waiting for author revisions.
