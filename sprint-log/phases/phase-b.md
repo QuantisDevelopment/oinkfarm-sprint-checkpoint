@@ -4,7 +4,7 @@
 
 > Phase B migrates OinkFarm from SQLite + monolith to PostgreSQL + decomposed services — the infrastructure layer that unlocks Redis, W1 governance, and multi-writer safety. Wave 1 (db abstraction) shipped; Wave 2 (parser extraction, Cornix/Chroma, dedup consolidation) is in flight.
 
-**Status:** 7/14 tasks shipped  
+**Status:** 7/15 tasks shipped  
 **Goal:** Migrate OinkFarm from SQLite + monolithic architecture to PostgreSQL + decomposed services.  
 **Data source:** event-stream reducer (`events.jsonl`)  
 **Live:** [dashboard](https://quantisdevelopment.github.io/oinkfarm-sprint-checkpoint/)
@@ -15,8 +15,8 @@
 |---|---|---|---|---|---|---|
 | [B1](../tasks/B1-db-abstraction-layer.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkfarm#149](https://github.com/QuantisDevelopment/oinkfarm/pull/149) + [oink-sync#9](https://github.com/QuantisDevelopment/oink-sync/pull/9) + [signal-gateway#21](https://github.com/QuantisDevelopment/signal-gateway/pull/21) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · hermes |
 | [B2](../tasks/B2-b2.md) | 🔴 CRITICAL | ✅ DONE | PASS | [oinkdb-api#2](https://github.com/QuantisDevelopment/oinkdb-api/pull/2) + [oinkfarm#153](https://github.com/QuantisDevelopment/oinkfarm/pull/153) + [oink-sync#11](https://github.com/QuantisDevelopment/oink-sync/pull/11) + [signal-gateway#24](https://github.com/QuantisDevelopment/signal-gateway/pull/24) | Apr 22, 05:53 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
-| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | ✅ DONE | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 27, 08:09 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
-| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 🛑 BLOCKED | — | — | Apr 27, 08:09 CEST · `BLOCKED` | anvil · forge · guardian · hermes |
+| [B3](../tasks/B3-b3.md) | 🟡 STANDARD | ✅ DONE | PASS | [oinkdb-api#3](https://github.com/QuantisDevelopment/oinkdb-api/pull/3) | Apr 28, 08:08 CEST · `ARTIFACT_PUBLISHED` | anvil · forge · guardian · hermes |
+| [B4](../tasks/B4-b4.md) | 🔴 CRITICAL | 🛑 BLOCKED | — | — | Apr 28, 08:08 CEST · `BLOCKED` | anvil · forge · guardian · hermes |
 | [B5](../tasks/B5-b5.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#25](https://github.com/QuantisDevelopment/signal-gateway/pull/25) | Apr 21, 08:09 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
 | [B6](../tasks/B6-b6.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#29](https://github.com/QuantisDevelopment/signal-gateway/pull/29) | Apr 27, 08:06 CEST · `CANARY_PASS` | anvil · forge · guardian · system |
 | [B7](../tasks/B7-b7.md) | 🟡 STANDARD | ✅ DONE | PASS | [signal-gateway#27](https://github.com/QuantisDevelopment/signal-gateway/pull/27) | Apr 21, 12:16 CEST · `REVIEW_POSTED` | anvil · forge · guardian · system |
@@ -26,6 +26,7 @@
 | [B11](../tasks/B11-b11.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 22, 01:03 CEST · `TASK_PLANNED` | anvil · forge · guardian · hermes |
 | [B12](../tasks/B12-b12.md) | 🟡 STANDARD | ⚙️ CODING | — | — | Apr 22, 01:06 CEST · `DECISION_RESOLVED` | anvil · forge · guardian · hermes |
 | [B13](../tasks/B13-b13.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 27, 00:57 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian · hermes |
+| [B14](../tasks/B14-b14.md) | 🟡 STANDARD | 👀 PR REVIEW | — | [signal-gateway#76](https://github.com/QuantisDevelopment/signal-gateway/pull/76) | Apr 28, 07:59 CEST · `REVIEW_POSTED` | vigil |
 | [B15](../tasks/B15-b15.md) | 🟡 STANDARD | 📝 PROPOSAL REVIEW | — | — | Apr 27, 02:06 CEST · `PROPOSAL_APPROVED` | anvil · forge · guardian |
 
 ## Waves
@@ -36,6 +37,10 @@
 
 | Time | Type | Task | Agent | Summary |
 |---|---|---|---|---|
+| Apr 28, 08:08 CEST | `ARTIFACT_PUBLISHED` | `B3` | oinkdb | B3 published reconciliation-daily: 2026-04-28.md |
+| Apr 28, 08:08 CEST | `BLOCKED` | `B4` | oinkdb | B4 BLOCKED — waiting_for_upstream_task |
+| Apr 28, 07:59 CEST | `REVIEW_POSTED` | `M195` | guardian | M195 review by guardian — PASS (9.4) |
+| Apr 28, 07:59 CEST | `REVIEW_POSTED` | `B14` | vigil | B14 review by vigil — PASS (9.0) |
 | Apr 28, 05:40 CEST | `REVIEW_POSTED` | `M291` | vigil | M291 review by vigil — PASS (9.6) |
 | Apr 28, 05:38 CEST | `REVIEW_POSTED` | `M187` | guardian | M187 review by guardian — REVISE (9.45) |
 | Apr 28, 05:15 CEST | `DECISION_NEEDED` | `M189` | forge | M189 Mike gate: Q-189-2 was formally resolved on 2026-04-22 with binding text: BE_TOLERANCE_FRAC=0.0001 shared constant across Artifacts A/B |
@@ -62,17 +67,13 @@
 | Apr 28, 02:19 CEST | `REVIEW_POSTED` | `M195` | vigil | M195 review by vigil — PASS (9.05) |
 | Apr 28, 02:12 CEST | `REVIEW_POSTED` | `M239` | guardian | M239 review by guardian — PASS (9.45) |
 | Apr 28, 02:07 CEST | `REVIEW_POSTED` | `M189` | guardian | M189 review by guardian — FAIL (5.95) |
-| Apr 27, 19:04 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — PASS (9.7) |
-| Apr 27, 18:20 CEST | `REVIEW_POSTED` | `M189` | vigil | M189 review by vigil — REVISE (8.85) |
-| Apr 27, 13:44 CEST | `REVIEW_POSTED` | `M193` | vigil | M193 review by vigil — PASS (9.7) |
-| Apr 27, 09:24 CEST | `REVIEW_POSTED` | `M68` | vigil | M68 review by vigil — REVISE (7.0) |
 
 ## Needs Mike (open gates)
 
 | Question ID | Question | Task | Age | Options |
 |---|---|---|---|---|
 | `Q-OF214-REGISTRY-1` | VIGIL REVISE 5.9 on PR #214 (FORGE detection hook). Core finding: registry files[] omits scripts/kraken-sync.py, where calculate_blended_pnl (SOUL.md §1 row 1, CRITICAL) actually lives. Detector reports clean on PnL-calc commits = false-negative in safety net. FORGE cross-check AGREES with VIGIL verdict. Two valid fix paths; Mike decides which. | `M214` | 4.2d | add_kraken_sync_path — add scripts/kraken-sync.py to registry files[] with registry_id:1, keep 'canonical SOUL.md §1 mirror' wording, full coverage (recommended; mechanically small; closes false-negative class) · narrow_contract_wording — leave registry as-is but rewrite PR body + docs to explicitly scope detector to {micro-gate-v3.py, lifecycle.py} only, open tracking issue for full SOUL.md §1 parity (smaller Round 2 diff but leaves known gap open) |
-| `Q-189-2-REVISION` | Q-189-2 was formally resolved on 2026-04-22 with binding text: BE_TOLERANCE_FRAC=0.0001 shared constant across Artifacts A/B/C. Live implementation on PR287@f3787502 + companion PRs (signal-gateway#75@ee6314f9, oink-sync#18@820c3e55) has all three repos byte-identical at BE_TOLERANCE_FRAC=0.005 (50x widening). GUARDIAN R4_FINAL implicitly accepts 0.005 via CONDITIONAL_PASS 9.30; VIGIL R4 self-corrected to REVISE 9.45 (sub-CRITICAL-9.50) explicitly citing 'formal TASK-189 §6.0.5 proposal revision from 0.0001 to 0.005 with VIGIL/GUARDIAN re-stamp' as the remaining blocker. Live classification impact confirmed: signal 2616 BNB SHORT at 0.0723% deviation falls inside the widened 0.01%-0.5% band. This is a substantive change to a previously-Mike-resolved decision and needs Mike re-resolution before three-way coordinated merge can proceed. | `M189` | 2.7h | ratify_0.005_as_supersede_q189_2 — Mike formally re-resolves Q-189-2 at BE_TOLERANCE_FRAC=0.005 across A/B/C, FORGE updates TASK-189 §6.0.5 to record the supersede with empirical justification (FET cohort, BNB-SHORT-2616-class admit-through-BE coverage), VIGIL/GUARDIAN re-stamp on revised proposal, three-way merge proceeds · revert_to_0.0001 — ANVIL reverts BE_TOLERANCE_FRAC across all three repos to 0.0001 (Q-189-2 original binding), accepts that admit-through-BE coverage will be narrower, fresh dual-pass review cycle on the reverted heads · split_tolerance_per_use — keep canonical BE_TOLERANCE_FRAC=0.0001 for is_sl_at_be (B14 admit gate) and add a separate, distinctly named ADMIT_THROUGH_BE_BAND_FRAC=0.005 only for the admit-through path; preserves Q-189-2 verbatim and forces explicit naming for the wider band; requires fresh cross-repo vendor-sync + dual-pass review |
+| `Q-189-2-REVISION` | Q-189-2 was formally resolved on 2026-04-22 with binding text: BE_TOLERANCE_FRAC=0.0001 shared constant across Artifacts A/B/C. Live implementation on PR287@f3787502 + companion PRs (signal-gateway#75@ee6314f9, oink-sync#18@820c3e55) has all three repos byte-identical at BE_TOLERANCE_FRAC=0.005 (50x widening). GUARDIAN R4_FINAL implicitly accepts 0.005 via CONDITIONAL_PASS 9.30; VIGIL R4 self-corrected to REVISE 9.45 (sub-CRITICAL-9.50) explicitly citing 'formal TASK-189 §6.0.5 proposal revision from 0.0001 to 0.005 with VIGIL/GUARDIAN re-stamp' as the remaining blocker. Live classification impact confirmed: signal 2616 BNB SHORT at 0.0723% deviation falls inside the widened 0.01%-0.5% band. This is a substantive change to a previously-Mike-resolved decision and needs Mike re-resolution before three-way coordinated merge can proceed. | `M189` | 3.0h | ratify_0.005_as_supersede_q189_2 — Mike formally re-resolves Q-189-2 at BE_TOLERANCE_FRAC=0.005 across A/B/C, FORGE updates TASK-189 §6.0.5 to record the supersede with empirical justification (FET cohort, BNB-SHORT-2616-class admit-through-BE coverage), VIGIL/GUARDIAN re-stamp on revised proposal, three-way merge proceeds · revert_to_0.0001 — ANVIL reverts BE_TOLERANCE_FRAC across all three repos to 0.0001 (Q-189-2 original binding), accepts that admit-through-BE coverage will be narrower, fresh dual-pass review cycle on the reverted heads · split_tolerance_per_use — keep canonical BE_TOLERANCE_FRAC=0.0001 for is_sl_at_be (B14 admit gate) and add a separate, distinctly named ADMIT_THROUGH_BE_BAND_FRAC=0.005 only for the admit-through path; preserves Q-189-2 verbatim and forces explicit naming for the wider band; requires fresh cross-repo vendor-sync + dual-pass review |
 
 ---
 
