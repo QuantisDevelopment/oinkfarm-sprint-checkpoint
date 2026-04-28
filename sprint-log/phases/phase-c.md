@@ -39,8 +39,6 @@ _No waves yet for this phase._
 | Apr 28, 10:44 CEST | `PROPOSAL_APPROVED` | `C3` | vigil | C3 proposal approved by vigil |
 | Apr 28, 10:44 CEST | `PROPOSAL_APPROVED` | `C1` | vigil | C1 proposal approved by vigil |
 | Apr 28, 10:44 CEST | `PROPOSAL_APPROVED` | `C4` | vigil | C4 proposal approved by vigil |
-| Apr 27, 12:36 CEST | `REVIEW_POSTED` | `M73` | vigil | M73 review by vigil — PASS (9.15) |
-| Apr 27, 12:29 CEST | `REVIEW_POSTED` | `M193` | vigil | M193 review by vigil — REVISE (9.15) |
 
 ## Needs Mike (open gates)
 
